@@ -1,0 +1,27 @@
+:root  > * {
+  --md-primary-fg-color: #464196;
+  --md-primary-bg-color: #FAE9CF;
+
+  --md-typeset-a-color:  #464196;
+  --scrollbar-color: #464196;
+
+  .md-nav__title {
+    display: none;
+  }
+}
+
+[data-md-color-scheme="slate"] {
+  --md-hue: 36; 
+  --sb-hue: 264;
+
+  --md-default-bg-color: hsla(var(--sb-hue),15%,14%,1);
+  --md-code-bg-color: hsla(var(--sb-hue),15%,18%,1);
+  --md-typeset-kbd-border-color: hsla(var(--sb-hue),15%,14%,1);
+  --md-admonition-bg-color: var(--md-default-bg-color);
+  --md-footer-bg-color: hsla(var(--sb-hue),15%,10%,0.87);
+  --md-footer-bg-color--dark: hsla(var(--sb-hue),15%,8%,1);
+
+  --md-primary-bg-color--light: #FAE9CF;
+  --md-accent-bg-color: #FAE9CF;
+  --md-accent-bg-color--light: #FAE9CFb3;
+}

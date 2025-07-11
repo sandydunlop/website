@@ -1,0 +1,54 @@
+site_name: Sandy Dunlop
+site_url: https://sandydunlop.github.io
+theme:
+  logo: assets/penguin.svg
+  name: material
+  font:
+    text: Barlow
+    code: Roboto Mono
+  features:
+    - navigation.indexes 
+  palette: 
+    # Palette toggle for automatic mode
+    # - media: "(prefers-color-scheme)"
+    #   scheme: blueberry-dark
+    #   toggle:
+    #     icon: material/brightness-auto
+    #     name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to system preference
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+
+  social:
+    - icon: fontawesome/brands/github 
+      link: https://github.com/sandydunlop
+    - icon: fontawesome/brands/mastodon 
+      link: https://glasgow.social/@sandy
+    - icon: fontawesome/brands/instagram 
+      link: https://instagram.com/sandydunlop
+    - icon: fontawesome/brands/twitter 
+      link: https://x.com/sandy
+
