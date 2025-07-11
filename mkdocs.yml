@@ -9,6 +9,7 @@ theme:
   features:
     - navigation.indexes 
   palette: 
+    scheme: slate
     # Palette toggle for automatic mode
     # - media: "(prefers-color-scheme)"
     #   scheme: blueberry-dark
@@ -17,18 +18,18 @@ theme:
     #     name: Switch to light mode
 
     # Palette toggle for light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to dark mode
+    # - media: "(prefers-color-scheme: light)"
+    #   scheme: default
+    #   toggle:
+    #     icon: material/weather-sunny
+    #     name: Switch to dark mode
 
     # Palette toggle for dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      toggle:
-        icon: material/weather-night
-        name: Switch to system preference
+    # - media: "(prefers-color-scheme: dark)"
+    #   scheme: slate
+    #   toggle:
+    #     icon: material/weather-night
+    #     name: Switch to system preference
 
 extra_css:
   - stylesheets/extra.css
