@@ -10,197 +10,443 @@ Package [io.github.sandydunlop.markista.doclet](index.md)
 
 ## Field Summary
 
-| Modifier and Type                                                                                                 | Field           | Description |
-|-------------------------------------------------------------------------------------------------------------------|-----------------|-------------|
-| private [Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html)                | writer          |             |
-| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)              | outputDirectory |             |
-| private [TypeNode](../model//TypeNode.md)                                                                         | linkFrom        |             |
-| private [Api](../model//Api.md)                                                                                   | api             |             |
-| private static final [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | NBSP            |             |
-| private static final [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | BR              |             |
+| Modifier and Type                                                                                                 | Field                                             | Description |
+|-------------------------------------------------------------------------------------------------------------------|---------------------------------------------------|-------------|
+| private static final [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [TEXT_CLASS](#text_class)                         |             |
+| private static final [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [TEXT_DESCRIPTION](#text_description)             |             |
+| private static final [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [TEXT_MODIFIER_AND_TYPE](#text_modifier_and_type) |             |
+| private static final [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [BR](#br)                                         |             |
+| private static final [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [NBSP](#nbsp)                                     |             |
+| private boolean                                                                                                   | [squashEmptyDirectories](#squashemptydirectories) |             |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)              | [squashedDirectories](#squasheddirectories)       |             |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)              | [outputDirectory](#outputdirectory)               |             |
+| private [Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html)                | [writer](#writer)                                 |             |
 
 ## Constructor Summary
 
-| Constructor                            | Description                                                              |
-|----------------------------------------|--------------------------------------------------------------------------|
-| MarkdownWriter(String outputDirectory) | Constructor that sets up the locations API documents will be written to. |
+| Constructor                                                                                                                  | Description                                                              |
+|------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
+| MarkdownWriter([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) outputDirectory) | Constructor that sets up the locations API documents will be written to. |
 
 ## Method Summary
 
-| Modifier and Type                                                                                           | Method                                                                                        | Description                                                              |
-|-------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
-| void                                                                                                        | [writeDocs](#writedocs)(Api api)                                                              | Ouput the documentation files for the specified API                      |
-| private char                                                                                                | [pathSeparator](#pathseparator)()                                                             |                                                                          |
-| private void                                                                                                | [outputTypeDoc](#outputtypedoc)(TypeNode typeDoc, String subType)                             |                                                                          |
-| private void                                                                                                | [outputSupertypes](#outputsupertypes)(TypeNode typeDoc)                                       |                                                                          |
-| private void                                                                                                | [outputPackageMembers](#outputpackagemembers)(String title, List members)                     |                                                                          |
-| private void                                                                                                | [outputPackageDoc](#outputpackagedoc)(PackageNode packageDoc)                                 |                                                                          |
-| private void                                                                                                | [outputNestedClassSummary](#outputnestedclasssummary)(List nestedClasses)                     |                                                                          |
-| private void                                                                                                | [outputMethodSummary](#outputmethodsummary)(List methods)                                     |                                                                          |
-| private void                                                                                                | [outputMethodDetails](#outputmethoddetails)(List methods)                                     |                                                                          |
-| private void                                                                                                | [outputImplementedInterfaces](#outputimplementedinterfaces)(TypeNode typeDoc)                 |                                                                          |
-| private void                                                                                                | [outputFieldSummary](#outputfieldsummary)(List fields)                                        |                                                                          |
-| private void                                                                                                | [outputEnclosingClass](#outputenclosingclass)(TypeNode typeDoc)                               |                                                                          |
-| private void                                                                                                | [outputConstructorSummary](#outputconstructorsummary)(List methods)                           |                                                                          |
-| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)        | [mdDocumentLink](#mddocumentlink)(String docName)                                             |                                                                          |
-| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)        | [mdDocumentLink](#mddocumentlink)(String phrase, String docName)                              |                                                                          |
-| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)        | [mdAutoLink](#mdautolink)(String identifier)                                                  |                                                                          |
-| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)        | [mdAutoLink](#mdautolink)(String identifier, boolean qualify)                                 | Create a markdown link, automatically deciding where it needs to link to |
-| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)        | [mdAnchorLink](#mdanchorlink)(String phrase)                                                  |                                                                          |
-| private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [mdAnchor](#mdanchor)(String phrase)                                                          |                                                                          |
-| private boolean                                                                                             | [isNullOrEmpty](#isnullorempty)(String s)                                                     |                                                                          |
-| private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [inOneLine](#inoneline)(String text)                                                          |                                                                          |
-| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)        | [escape](#escape)(String str)                                                                 |                                                                          |
-| private [Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html)          | [createFile](#createfile)(String className, String packageName)                               |                                                                          |
-| private [File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html)              | [buildContainingDirPath](#buildcontainingdirpath)(String outputDirectory, String packageName) | []                                                                       |
+| Modifier and Type                                                                                    | Method                                                                                                                                                                                                                                                                                                | Description                                                |
+|------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------|
+| void                                                                                                 | [setSquashEmptyDirectories](#setsquashemptydirectories)(boolean b)                                                                                                                                                                                                                                    |                                                            |
+| void                                                                                                 | [writeDocs](#writedocs)([Api](../model/Api.md) api)                                                                                                                                                                                                                                                   | Ouput the documentation files for the specified API        |
+| private void                                                                                         | [setSquashedDirectories](#setsquasheddirectories)([Api](../model/Api.md) api)                                                                                                                                                                                                                         |                                                            |
+| private static int                                                                                   | [countDots](#countdots)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str)                                                                                                                                                                             |                                                            |
+| private void                                                                                         | [outputPackageDoc](#outputpackagedoc)([PackageNode](../model/PackageNode.md) packageNode)                                                                                                                                                                                                             |                                                            |
+| private void                                                                                         | [outputPackageMembers](#outputpackagemembers)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) title, [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[PackageMember](../model/PackageMember.md)&gt; members) |                                                            |
+| private void                                                                                         | [outputTypeDoc](#outputtypedoc)([TypeNode](../model/TypeNode.md) typeNode)                                                                                                                                                                                                                            |                                                            |
+| private void                                                                                         | [outputTypeDoc](#outputtypedoc)([TypeNode](../model/TypeNode.md) typeNode, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) typeKind)                                                                                                                     |                                                            |
+| private void                                                                                         | [outputSupertypes](#outputsupertypes)([TypeNode](../model/TypeNode.md) typeDoc)                                                                                                                                                                                                                       |                                                            |
+| private void                                                                                         | [outputImplementedInterfaces](#outputimplementedinterfaces)([TypeNode](../model/TypeNode.md) typeDoc)                                                                                                                                                                                                 |                                                            |
+| private void                                                                                         | [outputEnclosingClass](#outputenclosingclass)([TypeNode](../model/TypeNode.md) typeDoc)                                                                                                                                                                                                               |                                                            |
+| private void                                                                                         | [outputNestedClassSummary](#outputnestedclasssummary)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[PackageMember](../model/PackageMember.md)&gt; nestedClasses)                                                                                       |                                                            |
+| private void                                                                                         | [outputEnumConstantsSummary](#outputenumconstantssummary)([EnumNode](../model/EnumNode.md) enumNode)                                                                                                                                                                                                  |                                                            |
+| private void                                                                                         | [outputFieldSummary](#outputfieldsummary)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[FieldNode](../model/FieldNode.md)&gt; fields)                                                                                                                  |                                                            |
+| private void                                                                                         | [outputConstructorSummary](#outputconstructorsummary)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[MethodNode](../model/MethodNode.md)&gt; methods)                                                                                                   |                                                            |
+| private void                                                                                         | [outputMethodSummary](#outputmethodsummary)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[MethodNode](../model/MethodNode.md)&gt; methods)                                                                                                             | Writes the markdown for a class's method summary table     |
+| private void                                                                                         | [outputEnumConstantDetails](#outputenumconstantdetails)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[FieldNode](../model/FieldNode.md)&gt; constants, [EnumNode](../model/EnumNode.md) enumNode)                                                      |                                                            |
+| private void                                                                                         | [outputDetails](#outputdetails)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[Node](../model/Node.md)&gt; nodes)                                                                                                                                       | Writes the markdown for a class's method or field details. |
+| private void                                                                                         | [outputReferences](#outputreferences)([Node](../model/Node.md) node)                                                                                                                                                                                                                                  |                                                            |
+| private void                                                                                         | [outputMethodDetails](#outputmethoddetails)([MethodNode](../model/MethodNode.md) method)                                                                                                                                                                                                              |                                                            |
+| private void                                                                                         | [outputMethodParams](#outputmethodparams)([MethodNode](../model/MethodNode.md) method)                                                                                                                                                                                                                |                                                            |
+| private void                                                                                         | [outputDeprecation](#outputdeprecation)([Deprecation](../model/Deprecation.md) status, [Text](../model/Text.md) text)                                                                                                                                                                                 |                                                            |
+| private void                                                                                         | [outputConstantValues](#outputconstantvalues)([Api](../model/Api.md) api)                                                                                                                                                                                                                             |                                                            |
+| [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)         | [fullSignature](#fullsignature)([MethodNode](../model/MethodNode.md) method)                                                                                                                                                                                                                          |                                                            |
+| [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)         | [paramsString](#paramsstring)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[ParamNode](../model/ParamNode.md)&gt; params)                                                                                                                              |                                                            |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [formatReference](#formatreference)([Reference](../model/Reference.md) ref)                                                                                                                                                                                                                           |                                                            |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [formatTaggedText](#formattaggedtext)([Text](../model/Text.md) text)                                                                                                                                                                                                                                  |                                                            |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [formatTaggedCode](#formattaggedcode)([DocTree](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.compiler/com/sun/source/doctree/DocTree.html) code)                                                                                                                                            |                                                            |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [formatTaggedLink](#formattaggedlink)([DocTree](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.compiler/com/sun/source/doctree/DocTree.html) link)                                                                                                                                            |                                                            |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [formatTaggedLinkPlain](#formattaggedlinkplain)([DocTree](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.compiler/com/sun/source/doctree/DocTree.html) link)                                                                                                                                  |                                                            |
+| private [File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html)       | [buildContainingDirPath](#buildcontainingdirpath)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) outputDirectory, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) packageName)                             |                                                            |
+| private char                                                                                         | [pathSeparator](#pathseparator)()                                                                                                                                                                                                                                                                     |                                                            |
+| private [Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html)   | [createFile](#createfile)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) className, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) packageName)                                                           |                                                            |
+
+## Field Details
+
+### TEXT_CLASS
+
+
+
+**See Also:**
+
+
+[Constant Field Values](../constant-values.md)
+
+
+### TEXT_DESCRIPTION
+
+
+
+**See Also:**
+
+
+[Constant Field Values](../constant-values.md)
+
+
+### TEXT_MODIFIER_AND_TYPE
+
+
+
+**See Also:**
+
+
+[Constant Field Values](../constant-values.md)
+
+
+### BR
+
+
+
+**See Also:**
+
+
+[Constant Field Values](../constant-values.md)
+
+
+### NBSP
+
+
+
+**See Also:**
+
+
+[Constant Field Values](../constant-values.md)
+
+
+### squashEmptyDirectories
+
+
+
+### squashedDirectories
+
+
+
+### outputDirectory
+
+
+
+### writer
+
+
+
 
 ## Method Details
 
+### setSquashEmptyDirectories
+
+void setSquashEmptyDirectories(boolean b)
+
+
+
 ### writeDocs
 
-`void writeDocs(Api api)`
+void writeDocs([Api](../model/Api.md) api)
+
+Ouput the documentation files for the specified API
+
+**Parameters:**
+
+`api` - The API to output the documentation for
+
+**Throws:**
+
+[IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
+
+### setSquashedDirectories
+
+private void setSquashedDirectories([Api](../model/Api.md) api)
 
 
 
-### pathSeparator
+### countDots
 
-`private char pathSeparator()`
-
-
-
-### outputTypeDoc
-
-`private void outputTypeDoc(TypeNode typeDoc, String subType)`
-
-
-
-### outputSupertypes
-
-`private void outputSupertypes(TypeNode typeDoc)`
-
-
-
-### outputPackageMembers
-
-`private void outputPackageMembers(String title, List members)`
+private static int countDots([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str)
 
 
 
 ### outputPackageDoc
 
-`private void outputPackageDoc(PackageNode packageDoc)`
+private void outputPackageDoc([PackageNode](../model/PackageNode.md) packageNode)
 
 
 
-### outputNestedClassSummary
+**Throws:**
 
-`private void outputNestedClassSummary(List nestedClasses)`
+[IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
 
+### outputPackageMembers
 
-
-### outputMethodSummary
-
-`private void outputMethodSummary(List methods)`
+private void outputPackageMembers([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) title, [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[PackageMember](../model/PackageMember.md)&gt; members)
 
 
 
-### outputMethodDetails
+**Throws:**
 
-`private void outputMethodDetails(List methods)`
+[IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
+
+### outputTypeDoc
+
+private void outputTypeDoc([TypeNode](../model/TypeNode.md) typeNode)
 
 
+
+**Throws:**
+
+[IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
+
+### outputTypeDoc
+
+private void outputTypeDoc([TypeNode](../model/TypeNode.md) typeNode, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) typeKind)
+
+
+
+**Throws:**
+
+[IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
+
+### outputSupertypes
+
+private void outputSupertypes([TypeNode](../model/TypeNode.md) typeDoc)
+
+
+
+**Throws:**
+
+[IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
 
 ### outputImplementedInterfaces
 
-`private void outputImplementedInterfaces(TypeNode typeDoc)`
+private void outputImplementedInterfaces([TypeNode](../model/TypeNode.md) typeDoc)
 
 
 
-### outputFieldSummary
+**Throws:**
 
-`private void outputFieldSummary(List fields)`
-
-
+[IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
 
 ### outputEnclosingClass
 
-`private void outputEnclosingClass(TypeNode typeDoc)`
+private void outputEnclosingClass([TypeNode](../model/TypeNode.md) typeDoc)
 
 
+
+**Throws:**
+
+[IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
+
+### outputNestedClassSummary
+
+private void outputNestedClassSummary([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[PackageMember](../model/PackageMember.md)&gt; nestedClasses)
+
+
+
+**Throws:**
+
+[IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
+
+### outputEnumConstantsSummary
+
+private void outputEnumConstantsSummary([EnumNode](../model/EnumNode.md) enumNode)
+
+
+
+**Throws:**
+
+[IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
+
+### outputFieldSummary
+
+private void outputFieldSummary([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[FieldNode](../model/FieldNode.md)&gt; fields)
+
+
+
+**Throws:**
+
+[IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
 
 ### outputConstructorSummary
 
-`private void outputConstructorSummary(List methods)`
+private void outputConstructorSummary([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[MethodNode](../model/MethodNode.md)&gt; methods)
 
 
 
-### mdDocumentLink
+**Throws:**
 
-`private String mdDocumentLink(String docName)`
+[IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
 
+### outputMethodSummary
 
+private void outputMethodSummary([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[MethodNode](../model/MethodNode.md)&gt; methods)
 
-### mdDocumentLink
+Writes the markdown for a class's method summary table
 
-`private String mdDocumentLink(String phrase, String docName)`
+**Parameters:**
 
+`methods` - The list of methods to include in the summary table
 
+**Throws:**
 
-### mdAutoLink
+[IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
 
-`private String mdAutoLink(String identifier)`
+### outputEnumConstantDetails
 
-
-
-### mdAutoLink
-
-`private String mdAutoLink(String identifier, boolean qualify)`
-
-
-
-Returns:
-
-[markdown text for a link to a document for the specified identifier or an anchor link]
-
-### mdAnchorLink
-
-`private String mdAnchorLink(String phrase)`
+private void outputEnumConstantDetails([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[FieldNode](../model/FieldNode.md)&gt; constants, [EnumNode](../model/EnumNode.md) enumNode)
 
 
 
-### mdAnchor
+**Throws:**
 
-`private static String mdAnchor(String phrase)`
+[IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
+
+### outputDetails
+
+private void outputDetails([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[Node](../model/Node.md)&gt; nodes)
+
+Writes the markdown for a class's method or field details.
+
+**Parameters:**
+
+`nodes` - The list of methods to write the details of
+
+**Throws:**
+
+[IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
+
+**Since:**
+
+0.1.0
+
+**See Also:**
+
+
+[http://example.com](http://example.com)
+
+
+[List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)
+
+
+### outputReferences
+
+private void outputReferences([Node](../model/Node.md) node)
 
 
 
-### isNullOrEmpty
+**Throws:**
 
-`private boolean isNullOrEmpty(String s)`
+[IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
 
+### outputMethodDetails
 
-
-### inOneLine
-
-`private static String inOneLine(String text)`
+private void outputMethodDetails([MethodNode](../model/MethodNode.md) method)
 
 
 
-### escape
+**Throws:**
 
-`private String escape(String str)`
+[IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
+
+### outputMethodParams
+
+private void outputMethodParams([MethodNode](../model/MethodNode.md) method)
 
 
 
-### createFile
+**Throws:**
 
-`private Writer createFile(String className, String packageName)`
+[IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
+
+### outputDeprecation
+
+private void outputDeprecation([Deprecation](../model/Deprecation.md) status, [Text](../model/Text.md) text)
+
+
+
+**Throws:**
+
+[IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
+
+### outputConstantValues
+
+private void outputConstantValues([Api](../model/Api.md) api)
+
+
+
+**Throws:**
+
+[IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
+
+### fullSignature
+
+[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) fullSignature([MethodNode](../model/MethodNode.md) method)
+
+
+
+### paramsString
+
+[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) paramsString([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[ParamNode](../model/ParamNode.md)&gt; params)
+
+
+
+### formatReference
+
+private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) formatReference([Reference](../model/Reference.md) ref)
+
+
+
+### formatTaggedText
+
+private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) formatTaggedText([Text](../model/Text.md) text)
+
+
+
+### formatTaggedCode
+
+private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) formatTaggedCode([DocTree](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.compiler/com/sun/source/doctree/DocTree.html) code)
+
+
+
+### formatTaggedLink
+
+private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) formatTaggedLink([DocTree](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.compiler/com/sun/source/doctree/DocTree.html) link)
+
+
+
+### formatTaggedLinkPlain
+
+private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) formatTaggedLinkPlain([DocTree](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.compiler/com/sun/source/doctree/DocTree.html) link)
 
 
 
 ### buildContainingDirPath
 
-`private File buildContainingDirPath(String outputDirectory, String packageName)`
+private [File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html) buildContainingDirPath([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) outputDirectory, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) packageName)
 
-[]
+
+
+**Parameters:**
+
+`outputDirectory` - output path specified by the `-d` command line parameter
+
+`packageName` - the name of the packageName
+
+### pathSeparator
+
+private char pathSeparator()
+
+
+
+### createFile
+
+private [Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) createFile([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) className, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) packageName)
+
+
+
+**Throws:**
+
+[IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
 

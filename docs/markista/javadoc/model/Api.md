@@ -2,7 +2,9 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 # Class Api
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;io.github.sandydunlop.markista.model.Api<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[io.github.sandydunlop.markista.model.Node](Node.md)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[io.github.sandydunlop.markista.model.AbstractTypeOwner](AbstractTypeOwner.md)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;io.github.sandydunlop.markista.model.Api<br/>
 <br/>
 
 ----
@@ -10,14 +12,10 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 ## Field Summary
 
-| Modifier and Type                  | Field       | Description |
-|------------------------------------|-------------|-------------|
-| private List&lt;PackageNode&gt;    | packages    |             |
-| private List&lt;InterfaceNode&gt;  | interfaces  |             |
-| private List&lt;ExceptionNode&gt;  | exceptions  |             |
-| private List&lt;EnumNode&gt;       | enums       |             |
-| private List&lt;ClassNode&gt;      | classes     |             |
-| private List&lt;AnnotationNode&gt; | annotations |             |
+| Modifier and Type                                                                                                                     | Field                             | Description |
+|---------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------|-------------|
+| private [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[PackageNode](PackageNode.md)&gt; | [packages](#packages)             |             |
+| private [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[FieldNode](FieldNode.md)&gt;     | [constantValues](#constantvalues) |             |
 
 ## Constructor Summary
 
@@ -27,120 +25,82 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 ## Method Summary
 
-| Modifier and Type             | Method                                                     | Description |
-|-------------------------------|------------------------------------------------------------|-------------|
-| void                          | [sort](#sort)()                                            |             |
-| [TypeNode](TypeNode.md)       | [getTypeDoc](#gettypedoc)(String qualifiedName, List docs) |             |
-| List&lt;PackageNode&gt;       | [getPackages](#getpackages)()                              |             |
-| [PackageNode](PackageNode.md) | [getPackageDoc](#getpackagedoc)(String qualifiedName)      |             |
-| List&lt;InterfaceNode&gt;     | [getInterfaces](#getinterfaces)()                          |             |
-| List&lt;ExceptionNode&gt;     | [getExceptions](#getexceptions)()                          |             |
-| List&lt;EnumNode&gt;          | [getEnums](#getenums)()                                    |             |
-| List&lt;ClassNode&gt;         | [getClasses](#getclasses)()                                |             |
-| [ClassNode](ClassNode.md)     | [getClassDoc](#getclassdoc)(TypeElement type)              |             |
-| List&lt;AnnotationNode&gt;    | [getAnnotations](#getannotations)()                        |             |
-| void                          | [addPackage](#addpackage)(PackageNode node)                |             |
-| void                          | [addInterface](#addinterface)(InterfaceNode node)          |             |
-| void                          | [addException](#addexception)(ExceptionNode node)          |             |
-| void                          | [addEnum](#addenum)(EnumNode node)                         |             |
-| void                          | [addClass](#addclass)(ClassNode node)                      |             |
-| void                          | [addAnnotation](#addannotation)(AnnotationNode node)       |             |
+| Modifier and Type                                                                                                             | Method                                                                                                                                                        | Description |
+|-------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------|
+| [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[PackageNode](PackageNode.md)&gt; | [getPackages](#getpackages)()                                                                                                                                 |             |
+| [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[FieldNode](FieldNode.md)&gt;     | [getConstantValues](#getconstantvalues)()                                                                                                                     |             |
+| void                                                                                                                          | [addPackage](#addpackage)([PackageNode](PackageNode.md) node)                                                                                                 |             |
+| [PackageNode](PackageNode.md)                                                                                                 | [getPackageNode](#getpackagenode)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName)                 |             |
+| [ClassNode](ClassNode.md)                                                                                                     | [getClassNode](#getclassnode)([TypeElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/TypeElement.html) type) |             |
+| [TypeNode](TypeNode.md)                                                                                                       | [getTypeNode](#gettypenode)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName)                       |             |
+| [TypeNode](TypeNode.md)                                                                                                       | [getTypeNode](#gettypenode)([TypeElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/TypeElement.html) type)   |             |
+| void                                                                                                                          | [sort](#sort)()                                                                                                                                               |             |
+| [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                  | [getName](#getname)()                                                                                                                                         |             |
+
+## Field Details
+
+### packages
+
+
+
+### constantValues
+
+
+
 
 ## Method Details
 
-### sort
-
-`void sort()`
-
-
-
-### getTypeDoc
-
-`TypeNode getTypeDoc(String qualifiedName, List docs)`
-
-
-
 ### getPackages
 
-`List<PackageNode> getPackages()`
+[List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[PackageNode](PackageNode.md)&gt; getPackages()
 
 
 
-### getPackageDoc
+### getConstantValues
 
-`PackageNode getPackageDoc(String qualifiedName)`
-
-
-
-### getInterfaces
-
-`List<InterfaceNode> getInterfaces()`
-
-
-
-### getExceptions
-
-`List<ExceptionNode> getExceptions()`
-
-
-
-### getEnums
-
-`List<EnumNode> getEnums()`
-
-
-
-### getClasses
-
-`List<ClassNode> getClasses()`
-
-
-
-### getClassDoc
-
-`ClassNode getClassDoc(TypeElement type)`
-
-
-
-### getAnnotations
-
-`List<AnnotationNode> getAnnotations()`
+[List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[FieldNode](FieldNode.md)&gt; getConstantValues()
 
 
 
 ### addPackage
 
-`void addPackage(PackageNode node)`
+void addPackage([PackageNode](PackageNode.md) node)
 
 
 
-### addInterface
+### getPackageNode
 
-`void addInterface(InterfaceNode node)`
-
-
-
-### addException
-
-`void addException(ExceptionNode node)`
+[PackageNode](PackageNode.md) getPackageNode([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName)
 
 
 
-### addEnum
+### getClassNode
 
-`void addEnum(EnumNode node)`
-
-
-
-### addClass
-
-`void addClass(ClassNode node)`
+[ClassNode](ClassNode.md) getClassNode([TypeElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/TypeElement.html) type)
 
 
 
-### addAnnotation
+### getTypeNode
 
-`void addAnnotation(AnnotationNode node)`
+[TypeNode](TypeNode.md) getTypeNode([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName)
+
+
+
+### getTypeNode
+
+[TypeNode](TypeNode.md) getTypeNode([TypeElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/TypeElement.html) type)
+
+
+
+### sort
+
+void sort()
+
+
+
+### getName
+
+[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) getName()
 
 
 

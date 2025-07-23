@@ -10,16 +10,16 @@ Package [io.github.sandydunlop.markista.doclet](index.md)
 
 ## Nested Class Summary
 
-| Modifier and Type | Class                                           | Description |
-|-------------------|-------------------------------------------------|-------------|
-|                   | [MarkdownTable.Column](MarkdownTable.Column.md) |             |
+| Modifier and Type | Class                                           | Description                                                        |
+|-------------------|-------------------------------------------------|--------------------------------------------------------------------|
+|                   | [MarkdownTable.Column](MarkdownTable.Column.md) | A class to represent the name and width of a column within a table |
 
 ## Field Summary
 
-| Modifier and Type                | Field   | Description |
-|----------------------------------|---------|-------------|
-| List&lt;String[]&gt;             | rows    |             |
-| List&lt;MarkdownTable.Column&gt; | columns |             |
+| Modifier and Type                                                                                                                                                                                | Field               | Description |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------|
+| [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[MarkdownTable.Column](MarkdownTable.Column.md)&gt;                                                  | [columns](#columns) |             |
+| [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[String[]](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String[].html)&gt; | [rows](#rows)       |             |
 
 ## Constructor Summary
 
@@ -29,44 +29,71 @@ Package [io.github.sandydunlop.markista.doclet](index.md)
 
 ## Method Summary
 
-| Modifier and Type                 | Method                                       | Description                                                       |
-|-----------------------------------|----------------------------------------------|-------------------------------------------------------------------|
-| void                              | [render](#render)(Writer writer)             | Renders the table as Markdown text without any indentation        |
-| void                              | [render](#render)(Writer writer, int indent) | Renders the table as Markdown text with a given indentation level |
-| [MarkdownTable](MarkdownTable.md) | [addRow](#addrow)(String[] valueStrings)     | Adds a row of data to the table                                   |
-| [MarkdownTable](MarkdownTable.md) | [addColumn](#addcolumn)(String heading)      | Adds a column with the specified heading to the table             |
+| Modifier and Type                 | Method                                                                                                                           | Description                                                       |
+|-----------------------------------|----------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|
+| [MarkdownTable](MarkdownTable.md) | [addColumn](#addcolumn)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) heading)    | Adds a column with the specified heading to the table             |
+| [MarkdownTable](MarkdownTable.md) | [addRow](#addrow)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)\[] valueStrings)  | Adds a row of data to the table                                   |
+| void                              | [render](#render)([Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) writer)             | Renders the table as Markdown text without any indentation        |
+| void                              | [render](#render)([Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) writer, int indent) | Renders the table as Markdown text with a given indentation level |
+
+## Field Details
+
+### columns
+
+
+
+### rows
+
+
+
 
 ## Method Details
 
-### render
+### addColumn
 
-`void render(Writer writer)`
+[MarkdownTable](MarkdownTable.md) addColumn([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) heading)
 
+Adds a column with the specified heading to the table
 
+**Parameters:**
 
-### render
+`heading` - String to be used as the column heading
 
-`void render(Writer writer, int indent)`
+**Returns:**
 
-
+The table
 
 ### addRow
 
-`MarkdownTable addRow(String[] valueStrings)`
+[MarkdownTable](MarkdownTable.md) addRow([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)\[] valueStrings)
 
+Adds a row of data to the table
 
+**Parameters:**
 
-Returns:
+`valueStrings` - one or more strings which represnet the data for this row
 
-[The table]
+**Returns:**
 
-### addColumn
+The table
 
-`MarkdownTable addColumn(String heading)`
+### render
 
+void render([Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) writer)
 
+Renders the table as Markdown text without any indentation
 
-Returns:
+**Throws:**
 
-[The table]
+[IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
+
+### render
+
+void render([Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) writer, int indent)
+
+Renders the table as Markdown text with a given indentation level
+
+**Throws:**
+
+[IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
 

@@ -10,12 +10,16 @@ Package [io.github.sandydunlop.markista.util](index.md)
 
 ## Field Summary
 
-| Modifier and Type                                                                                                           | Field              | Description |
-|-----------------------------------------------------------------------------------------------------------------------------|--------------------|-------------|
-| private static HashMap&lt;String,String&gt;                                                                                 | suffix             |             |
-| private static HashMap&lt;String,String&gt;                                                                                 | nativePackageNames |             |
-| private static final [ModuleLayer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/ModuleLayer.html) | moduleLayer        |             |
-| private static HashSet&lt;String&gt;                                                                                        | localPackageNames  |             |
+| Modifier and Type                                                                                                                                                                                                                                                                                               | Field                                       | Description |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------|-------------|
+| private static final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)&gt;                                                                                               | [primatives](#primatives)                   |             |
+| private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                                                                                                                                     | [location](#location)                       |             |
+| private static [HashMap](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/HashMap.html)&lt;[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html), [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)&gt; | [nativePackageNames](#nativepackagenames)   |             |
+| private static [HashMap](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/HashMap.html)&lt;[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html), [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)&gt; | [suffix](#suffix)                           |             |
+| private static final [ModuleLayer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/ModuleLayer.html)                                                                                                                                                                                     | [moduleLayer](#modulelayer)                 |             |
+| private static [Api](../model/Api.md)                                                                                                                                                                                                                                                                           | [api](#api)                                 |             |
+| private static [Reporter](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Reporter.html)                                                                                                                                                                                      | [reporter](#reporter)                       |             |
+| private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                                                                                                                                     | [squashedDirectories](#squasheddirectories) |             |
 
 ## Constructor Summary
 
@@ -25,43 +29,148 @@ Package [io.github.sandydunlop.markista.util](index.md)
 
 ## Method Summary
 
-| Modifier and Type                                                                                           | Method                                                                           | Description |
-|-------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|-------------|
-| static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)         | [resolve](#resolve)(String from, String to)                                      |             |
-| private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getPackageName](#getpackagename)(String id)                                     |             |
-| private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getClassName](#getclassname)(String id)                                         |             |
-| static void                                                                                                 | [addNativeModule](#addnativemodule)(String moduleName, String baseUrl, String s) |             |
-| static void                                                                                                 | [addLocalPackage](#addlocalpackage)(String identifier)                           |             |
+| Modifier and Type                                                                                           | Method                                                                                                                                                                                                                                                                                                                                             | Description |
+|-------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------|
+| static void                                                                                                 | [setApi](#setapi)([Api](../model/Api.md) a)                                                                                                                                                                                                                                                                                                        |             |
+| static void                                                                                                 | [setSquashedDirectories](#setsquasheddirectories)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) sd)                                                                                                                                                                                                 |             |
+| static void                                                                                                 | [setReporter](#setreporter)([Reporter](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Reporter.html) r)                                                                                                                                                                                                         |             |
+| static void                                                                                                 | [setLocation](#setlocation)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) loc)                                                                                                                                                                                                                      |             |
+| static void                                                                                                 | [addNativeModule](#addnativemodule)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) moduleName, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) baseUrl, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) s) |             |
+| private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getPackageName](#getpackagename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) id)                                                                                                                                                                                                                 |             |
+| private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getClassName](#getclassname)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) id)                                                                                                                                                                                                                     |             |
+| static [Reference](../model/Reference.md)                                                                   | [resolve](#resolve)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) to)                                                                                                                                                                                                                               |             |
+| static [Reference](../model/Reference.md)                                                                   | [resolve](#resolve)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) from, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) to)                                                                                                                            |             |
+| static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)         | [resolveNative](#resolvenative)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) to)                                                                                                                                                                                                                   |             |
+| static boolean                                                                                              | [isQualified](#isqualified)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) from, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) to)                                                                                                                    |             |
+| static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)         | [qualifyClass](#qualifyclass)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) from, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) to)                                                                                                                  |             |
+| static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)         | [qualifyPackage](#qualifypackage)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) from, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) to)                                                                                                              |             |
+| static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)         | [relativize](#relativize)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) to)                                                                                                                                                                                                                         |             |
+| static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)         | [relativize](#relativize)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) from, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) to)                                                                                                                      |             |
+
+## Field Details
+
+### primatives
+
+
+
+### location
+
+
+
+### nativePackageNames
+
+
+
+### suffix
+
+
+
+### moduleLayer
+
+
+
+### api
+
+
+
+### reporter
+
+
+
+### squashedDirectories
+
+
+
 
 ## Method Details
 
-### resolve
+### setApi
 
-`static String resolve(String from, String to)`
-
-
-
-### getPackageName
-
-`private static String getPackageName(String id)`
+static void setApi([Api](../model/Api.md) a)
 
 
 
-### getClassName
+### setSquashedDirectories
 
-`private static String getClassName(String id)`
+static void setSquashedDirectories([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) sd)
+
+
+
+### setReporter
+
+static void setReporter([Reporter](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Reporter.html) r)
+
+
+
+### setLocation
+
+static void setLocation([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) loc)
 
 
 
 ### addNativeModule
 
-`static void addNativeModule(String moduleName, String baseUrl, String s)`
+static void addNativeModule([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) moduleName, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) baseUrl, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) s)
 
 
 
-### addLocalPackage
+### getPackageName
 
-`static void addLocalPackage(String identifier)`
+private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) getPackageName([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) id)
+
+
+
+### getClassName
+
+private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) getClassName([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) id)
+
+
+
+### resolve
+
+static [Reference](../model/Reference.md) resolve([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) to)
+
+
+
+### resolve
+
+static [Reference](../model/Reference.md) resolve([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) from, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) to)
+
+
+
+### resolveNative
+
+static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) resolveNative([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) to)
+
+
+
+### isQualified
+
+static boolean isQualified([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) from, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) to)
+
+
+
+### qualifyClass
+
+static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifyClass([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) from, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) to)
+
+
+
+### qualifyPackage
+
+static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifyPackage([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) from, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) to)
+
+
+
+### relativize
+
+static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) relativize([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) to)
+
+
+
+### relativize
+
+static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) relativize([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) from, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) to)
 
 
 

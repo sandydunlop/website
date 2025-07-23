@@ -13,9 +13,9 @@ Enclosing Class:<br/>
 
 ## Field Summary
 
-| Modifier and Type                         | Field | Description |
-|-------------------------------------------|-------|-------------|
-| private static final List&lt;Modifier&gt; | ORDER |             |
+| Modifier and Type                                                                                                                                                                                                                        | Field           | Description |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------|
+| private static final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[Modifier](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Modifier.html)&gt; | [ORDER](#order) |             |
 
 ## Constructor Summary
 
@@ -25,15 +25,22 @@ Enclosing Class:<br/>
 
 ## Method Summary
 
-| Modifier and Type           | Method                                           | Description |
-|-----------------------------|--------------------------------------------------|-------------|
-| static List&lt;Modifier&gt; | [sortModifiers](#sortmodifiers)(Set modifierSet) |             |
+| Modifier and Type                                                                                                                                                                                                          | Method                                                                                                                                                                                                                                                         | Description |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------|
+| static [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[Modifier](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Modifier.html)&gt; | [sortModifiers](#sortmodifiers)([Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)&lt;[Modifier](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Modifier.html)&gt; modifierSet) |             |
+
+## Field Details
+
+### ORDER
+
+
+
 
 ## Method Details
 
 ### sortModifiers
 
-`static List<Modifier> sortModifiers(Set modifierSet)`
+static [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[Modifier](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Modifier.html)&gt; sortModifiers([Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)&lt;[Modifier](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Modifier.html)&gt; modifierSet)
 
 
 

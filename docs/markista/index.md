@@ -1,11 +1,11 @@
 # Markista
 
-The Markdown Doclet
+Serving Markdown Flavored Documentation
 
 
 ## Introduction
 
-Markist is a [doclet](https://docs.oracle.com/javase/8/docs/technotes/guides/javadoc/doclet/overview.html) that turns your Java documentation comments into Markdown, suitable for use with [Github](https://github.com/), [MkDocs](https://www.mkdocs.org/), etc. 
+Markista is a [doclet](https://docs.oracle.com/javase/8/docs/technotes/guides/javadoc/doclet/overview.html) that turns your Java documentation comments into Markdown, suitable for use with [Github](https://github.com/), [MkDocs](https://www.mkdocs.org/), etc. 
 
 Marklist is under active development and has reached a point where it is becoming useful. There will be features that aren't completely implemented yet.
 
@@ -14,28 +14,52 @@ It was produced with the `--private` parameter which tells Markista to document 
 
 ## Gradle
 
-Markista can be used from a [Gradle](https://gradle.org/) build by adding the following code to your Gradle build file.
-Change `libs/markista-0.1.0.jar` to match wherever you've put the Markista JAR file.
+Markista can be used from a [Gradle](https://gradle.org/) build by following these simple steps:
+
+### Step 1: Define a Configuration for the Doclet
+
+Create a configuration in your build.gradle file to manage the Markista dependency.
+
+```groovy
+configurations {
+    markista
+}
+```
+
+### Step 2: Add the Markista Dependency
+
+Add Markista as a dependency under the configuration you just created.
+Markista is available in the [Maven Central](https://central.sonatype.com/artifact/io.github.sandydunlop/markista) repository.
+
+```groovy
+dependencies {
+    markista("io.github.sandydunlop:markista:0.1.3")
+}
+```
+
+### Step 3: Configure the Javadoc Task
+
+In the Javadoc task, specify the doclet path and the doclet class. This tells Gradle where to find the doclet and which one to use.
 
 ```groovy
 javadoc {
     options {
-        source = sourceSets.main.allJava
-        destinationDir = file("$buildDir/docs/javadoc")
-        options.doclet = 'io.github.sandydunlop.markista.doclet.MarkdownDoclet'
-        options.docletpath = files('libs/markista-0.1.0.jar')
-        options.encoding = 'UTF-8'
-        options.source = null
+        docletpath = configurations.markista.files.asType(List)
+        doclet = 'io.github.sandydunlop.markista.doclet.MarkdownDoclet'
+        source = null
+        addBooleanOption('-squash-empty', true)
+        addBooleanOption('-external-links', true)
     }
 }
 ```
+
 
 ## Command Line
 
 Markista can be used from the command line with the `javadoc` command as follows:
 
 ```bash
-javadoc -docletpath libs/markista-0.1.0.jar -doclet io.github.sandydunlop.markista.doclet.MarkdownDoclet src/main/java/my.package/Hello.java
+javadoc -docletpath libs/markista-0.1.3.jar -doclet io.github.sandydunlop.markista.doclet.MarkdownDoclet src/main/java/my.package/Hello.java
 ```
 
 ### Parameters
@@ -43,7 +67,7 @@ javadoc -docletpath libs/markista-0.1.0.jar -doclet io.github.sandydunlop.markis
 `-d <directory>`
 :   The directory to write the Markdown files to.
 
-`--private`
+`--show-private`
 :   Generate docs for private members. By default only public 
     and abstract members are documented.
 
@@ -51,11 +75,13 @@ javadoc -docletpath libs/markista-0.1.0.jar -doclet io.github.sandydunlop.markis
 :  Create links to classes defined outside of the API being 
    documented (eg. [java.utils.String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html))
 
-!!! note
-    Currently only packages within the java.base module are considered
-    when linking to classes defined in external packages. It is planned that
-    all built in Java packages will be supported, as well as links to other
-    projects' documentation.
+`--squash-empty`
+:  Don't create directories that contain no classes
+
+## Download
+
+JAR files for version 0.1.3 are available to [download here](https://github.com/sandydunlop/markista/releases/tag/r0.1.3).
+
 
 ## Source Code
 
