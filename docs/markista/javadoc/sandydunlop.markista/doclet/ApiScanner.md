@@ -15,13 +15,14 @@ Package [io.github.sandydunlop.markista.doclet](index.md)
 
 ## Field Summary
 
-| Modifier and Type                                                                                                                                                                                                       | Field                                             | Description |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------|-------------|
-| private [Api](../model/Api.md)                                                                                                                                                                                          | [api](#api)                                       |             |
-| private boolean                                                                                                                                                                                                         | [documentPrivateMembers](#documentprivatemembers) |             |
-| private [Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)&lt;[Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html)&gt; | [encounteredSupertypes](#encounteredsupertypes)   |             |
-| private [DocletEnvironment](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/DocletEnvironment.html)                                                                                   | [environment](#environment)                       |             |
-| private [Reporter](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Reporter.html)                                                                                                     | [reporter](#reporter)                             |             |
+| Modifier and Type                                                                                                                                                                                                       | Field                                           | Description |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------|-------------|
+| private [Api](../model/Api.md)                                                                                                                                                                                          | [api](#api)                                     |             |
+| private [Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)&lt;[Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html)&gt; | [encounteredSupertypes](#encounteredsupertypes) |             |
+| private [DocletEnvironment](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/DocletEnvironment.html)                                                                                   | [environment](#environment)                     |             |
+| private [Reporter](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Reporter.html)                                                                                                     | [reporter](#reporter)                           |             |
+| private [ModuleNode](../model/ModuleNode.md)                                                                                                                                                                            | [unnamedModule](#unnamedmodule)                 |             |
+| private [ModuleNode](../model/ModuleNode.md)                                                                                                                                                                            | [currentModule](#currentmodule)                 |             |
 
 ## Constructor Summary
 
@@ -33,9 +34,9 @@ Package [io.github.sandydunlop.markista.doclet](index.md)
 
 | Modifier and Type                                                                                                                          | Method                                                                                                                                                                                                                                                                                                                                                                                                                                            | Description                                                            |
 |--------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------|
-| void                                                                                                                                       | [setDocumentPrivateMembers](#setdocumentprivatemembers)(boolean documentPrivateMembers)                                                                                                                                                                                                                                                                                                                                                           |                                                                        |
 | [Api](../model/Api.md)                                                                                                                     | [scan](#scan)([Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)&lt;? extends [Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html)&gt; elements)                                                                                                                                                                                                 |                                                                        |
 | [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html)                                                   | [scan](#scan)([Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)                                                                                                                                                                                                          |                                                                        |
+| [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html)                                                   | [visitModule](#visitmodule)([ModuleElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ModuleElement.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)                                                                                                                                                                                |                                                                        |
 | [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html)                                                   | [visitPackage](#visitpackage)([PackageElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/PackageElement.html) ee, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)                                                                                                                                                                           |                                                                        |
 | [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html)                                                   | [visitType](#visittype)([TypeElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/TypeElement.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)                                                                                                                                                                                        |                                                                        |
 | [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html)                                                   | [visitExecutable](#visitexecutable)([ExecutableElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ExecutableElement.html) ee, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)                                                                                                                                                               |                                                                        |
@@ -47,6 +48,7 @@ Package [io.github.sandydunlop.markista.doclet](index.md)
 | private [MethodNode](../model/MethodNode.md)                                                                                               | [nodeFromElement](#nodefromelement)([ExecutableElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ExecutableElement.html) element)                                                                                                                                                                                                                                                                |                                                                        |
 | private [FieldNode](../model/FieldNode.md)                                                                                                 | [nodeFromElement](#nodefromelement)([VariableElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/VariableElement.html) element)                                                                                                                                                                                                                                                                    |                                                                        |
 | private [TypeNode](../model/TypeNode.md)                                                                                                   | [createTypeNode](#createtypenode)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) simpleName, [PackageNode](../model/PackageNode.md) packageNode, [ElementKind](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ElementKind.html) elementKind) |                                                                        |
+| private void                                                                                                                               | [setDocumentation](#setdocumentation)([Node](../model/Node.md) node, [Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html) e)                                                                                                                                                                                                                                                         |                                                                        |
 | private void                                                                                                                               | [setTypeOwnership](#settypeownership)([TypeNode](../model/TypeNode.md) typeNode, [TypeElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/TypeElement.html) element)                                                                                                                                                                                                                               |                                                                        |
 | void                                                                                                                                       | [setMethodAnnotations](#setmethodannotations)([MethodNode](../model/MethodNode.md) method, [ExecutableElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ExecutableElement.html) methodElement)                                                                                                                                                                                                   |                                                                        |
 | private void                                                                                                                               | [setSpecifiedBy](#setspecifiedby)([MethodNode](../model/MethodNode.md) methodNode, [ExecutableElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ExecutableElement.html) methodElement)                                                                                                                                                                                                           |                                                                        |
@@ -78,10 +80,6 @@ Package [io.github.sandydunlop.markista.doclet](index.md)
 
 
 
-### documentPrivateMembers
-
-
-
 ### encounteredSupertypes
 
 
@@ -94,14 +92,16 @@ Package [io.github.sandydunlop.markista.doclet](index.md)
 
 
 
+### unnamedModule
+
+
+
+### currentModule
+
+
+
 
 ## Method Details
-
-### setDocumentPrivateMembers
-
-void setDocumentPrivateMembers(boolean documentPrivateMembers)
-
-
 
 ### scan
 
@@ -118,6 +118,16 @@ void setDocumentPrivateMembers(boolean documentPrivateMembers)
 **Overrides:**
 
 [scan](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner6.html#scan) from [ElementScanner6](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner6.html)&lt;[Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html), [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html)&gt;
+
+### visitModule
+
+[Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) visitModule([ModuleElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ModuleElement.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)
+
+
+
+**Overrides:**
+
+[visitModule](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner9.html#visitModule) from [ElementScanner9](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner9.html)&lt;[Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html), [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html)&gt;
 
 ### visitPackage
 
@@ -206,6 +216,12 @@ private [FieldNode](../model/FieldNode.md) nodeFromElement([VariableElement](htt
 ### createTypeNode
 
 private [TypeNode](../model/TypeNode.md) createTypeNode([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) simpleName, [PackageNode](../model/PackageNode.md) packageNode, [ElementKind](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ElementKind.html) elementKind)
+
+
+
+### setDocumentation
+
+private void setDocumentation([Node](../model/Node.md) node, [Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html) e)
 
 
 

@@ -21,15 +21,11 @@ All Implemented Interfaces:<br/>
 
 | Modifier and Type                                                                                                                                             | Field                                                   | Description |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------|-------------|
-| private static final boolean                                                                                                                                  | [OK](#ok)                                               |             |
+| static final boolean                                                                                                                                          | [OK](#ok)                                               |             |
 | private static final boolean                                                                                                                                  | [FAILED](#failed)                                       |             |
 | private static final [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                             | [DOT_HTML](#dot_html)                                   |             |
 | private static final [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                             | [JAVA_24_URL](#java_24_url)                             |             |
 | private [Reporter](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Reporter.html)                                           | [reporter](#reporter)                                   |             |
-| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                          | [outputDirectory](#outputdirectory)                     |             |
-| private boolean                                                                                                                                               | [documentPrivateMembers](#documentprivatemembers)       |             |
-| private boolean                                                                                                                                               | [createExternalLinks](#createexternallinks)             |             |
-| private boolean                                                                                                                                               | [squashEmptyDirectories](#squashemptydirectories)       |             |
 | private static final [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                             | [UNUSED_OPTION_DESCRIPTION](#unused_option_description) |             |
 | private final [Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)&lt;[MarkdownDoclet.Option](MarkdownDoclet.Option.md)&gt; | [options](#options)                                     |             |
 
@@ -94,22 +90,6 @@ All Implemented Interfaces:<br/>
 
 
 ### reporter
-
-
-
-### outputDirectory
-
-
-
-### documentPrivateMembers
-
-
-
-### createExternalLinks
-
-
-
-### squashEmptyDirectories
 
 
 
