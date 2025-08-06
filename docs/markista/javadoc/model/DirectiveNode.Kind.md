@@ -2,14 +2,16 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 # Enum DirectiveNode.Kind
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[java.lang.Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)&lt;[DirectiveNode.Kind](DirectiveNode.Kind.md)&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;io.github.sandydunlop.markista.model.DirectiveNode.Kind<br/>
+        [java.lang.Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)&lt;[DirectiveNode.Kind](DirectiveNode.Kind.md)&gt;<br/>
+                io.github.sandydunlop.markista.model.DirectiveNode.Kind<br/>
 <br/>
 Enclosing Class:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[DirectiveNode](DirectiveNode.md)
+    [DirectiveNode](DirectiveNode.md)
 
 
 ----
+
+Enum representing the various kinds of directives possible in a module declaration.
 
 
 ##Enum Constants

@@ -2,23 +2,25 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 # Enum Reference.Scope
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[java.lang.Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)&lt;[Reference.Scope](Reference.Scope.md)&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;io.github.sandydunlop.markista.model.Reference.Scope<br/>
+        [java.lang.Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)&lt;[Reference.Scope](Reference.Scope.md)&gt;<br/>
+                io.github.sandydunlop.markista.model.Reference.Scope<br/>
 <br/>
 Enclosing Class:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[Reference](Reference.md)
+    [Reference](Reference.md)
 
 
 ----
+
+Enum representing the scope of references.
 
 
 ##Enum Constants
 
 | Enum Constant       | Description |
 |---------------------|-------------|
-| [NONE](#none)       |             |
 | [UNKNOWN](#unknown) |             |
 | [LOCAL](#local)     |             |
+| [SIBLING](#sibling) |             |
 | [NATIVE](#native)   |             |
 | [FOREIGN](#foreign) |             |
 
@@ -37,15 +39,6 @@ Enclosing Class:<br/>
 
 ## Enum Constant Details
 
-### NONE
-
-public static final [Reference.Scope](Reference.Scope.md) NONE
-
-
-
-
----
-
 ### UNKNOWN
 
 public static final [Reference.Scope](Reference.Scope.md) UNKNOWN
@@ -58,6 +51,15 @@ public static final [Reference.Scope](Reference.Scope.md) UNKNOWN
 ### LOCAL
 
 public static final [Reference.Scope](Reference.Scope.md) LOCAL
+
+
+
+
+---
+
+### SIBLING
+
+public static final [Reference.Scope](Reference.Scope.md) SIBLING
 
 
 

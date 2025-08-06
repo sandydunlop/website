@@ -2,10 +2,10 @@ Package [io.github.sandydunlop.markista.doclet](index.md)
 
 # Class MarkdownDoclet
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;io.github.sandydunlop.markista.doclet.MarkdownDoclet<br/>
+        io.github.sandydunlop.markista.doclet.MarkdownDoclet<br/>
 <br/>
 All Implemented Interfaces:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[Doclet](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.html)
+    [jdk.javadoc.doclet.Doclet](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.html)
 
 
 ----
@@ -21,12 +21,15 @@ A doclet that renders javadoc comments as Markdown
 
 ## Field Summary
 
-| Modifier and Type                                                                                                                                             | Field                                                   | Description |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------|-------------|
-| static final boolean                                                                                                                                          | [OK](#ok)                                               |             |
-| private static final boolean                                                                                                                                  | [FAILED](#failed)                                       |             |
-| private static final [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                             | [UNUSED_OPTION_DESCRIPTION](#unused_option_description) |             |
-| private final [Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)&lt;[MarkdownDoclet.Option](MarkdownDoclet.Option.md)&gt; | [options](#options)                                     |             |
+| Modifier and Type                                                                                                                                                                                   | Field                                                   | Description                                                                                                                                                                           |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| private [Context](../util/Context.md)                                                                                                                                                               | [ctx](#ctx)                                             | The Context singleton instance providing access to the current documentation generation context, including configuration, current module/package/type names, and reporting utilities. |
+| static final boolean                                                                                                                                                                                | [OK](#ok)                                               | Indicates success                                                                                                                                                                     |
+| private static final boolean                                                                                                                                                                        | [FAILED](#failed)                                       | Indicates failure                                                                                                                                                                     |
+| static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                                 | [docletArgs](#docletargs)                               |                                                                                                                                                                                       |
+| static [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)&gt; | [javadocArgs](#javadocargs)                             |                                                                                                                                                                                       |
+| private static final [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                   | [UNUSED_OPTION_DESCRIPTION](#unused_option_description) |                                                                                                                                                                                       |
+| private final [Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)&lt;[MarkdownDoclet.Option](MarkdownDoclet.Option.md)&gt;                                       | [options](#options)                                     |                                                                                                                                                                                       |
 
 ## Constructor Summary
 
@@ -38,6 +41,7 @@ A doclet that renders javadoc comments as Markdown
 
 | Modifier and Type                                                                                                                                         | Method                                                                                                                                                                                                                                   | Description                                                                     |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
+| static void                                                                                                                                               | [readJavadocOptions](#readjavadocoptions)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) optionsPath)                                                                                      |                                                                                 |
 | static void                                                                                                                                               | [main](#main)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)\[] args)                                                                                                                      | The starting point of Markista if it is being used without the Javadoc command. |
 | void                                                                                                                                                      | [init](#init)([Locale](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Locale.html) locale, [Reporter](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Reporter.html) reporter) | Initializes the doclet.                                                         |
 | [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                              | [getName](#getname)()                                                                                                                                                                                                                    |                                                                                 |
@@ -47,9 +51,17 @@ A doclet that renders javadoc comments as Markdown
 
 ## Field Details
 
+### ctx
+
+The Context singleton instance providing access to the current documentation generation context,
+including configuration, current module/package/type names, and reporting utilities.
+
+
+---
+
 ### OK
 
-
+Indicates success
 
 **See Also:**
 
@@ -62,12 +74,26 @@ A doclet that renders javadoc comments as Markdown
 
 ### FAILED
 
-
+Indicates failure
 
 **See Also:**
 
 
 [Constant Field Values](../constant-values.md)
+
+
+
+---
+
+### docletArgs
+
+
+
+
+---
+
+### javadocArgs
+
 
 
 
@@ -95,6 +121,15 @@ A doclet that renders javadoc comments as Markdown
 
 
 ## Method Details
+
+### readJavadocOptions
+
+static void readJavadocOptions([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) optionsPath)
+
+
+
+
+---
 
 ### main
 

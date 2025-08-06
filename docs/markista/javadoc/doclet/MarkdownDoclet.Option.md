@@ -2,20 +2,20 @@ Package [io.github.sandydunlop.markista.doclet](index.md)
 
 # Class MarkdownDoclet.Option
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;io.github.sandydunlop.markista.doclet.MarkdownDoclet.Option<br/>
+        io.github.sandydunlop.markista.doclet.MarkdownDoclet.Option<br/>
 <br/>
 All Implemented Interfaces:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[Doclet.Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.html)
+    [jdk.javadoc.doclet.Doclet.Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.html)
 
 Enclosing Class:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[MarkdownDoclet](MarkdownDoclet.md)
+    [MarkdownDoclet](MarkdownDoclet.md)
 
 
 ----
 
 A base class for declaring options.
 Subtypes for specific options should implement
-the [Doclet.Option.process(java.lang.String,java.util.List)](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.html#process(java.lang.String,java.util.List)) method
+the [process](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option#process(java.lang.String,java.util.List).html) method
 to handle instances of the option found on the
 command line.
 

@@ -2,23 +2,25 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 # Interface TypeOwner
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;io.github.sandydunlop.markista.model.TypeOwner<br/>
+        io.github.sandydunlop.markista.model.TypeOwner<br/>
 <br/>
 
 ----
 
+A TypeOwner is a [Node](Node.md) that can be set as the *owner* of another type.
+
 
 ## Method Summary
 
-| Modifier and Type                                                                                                                          | Method                                                | Description |
-|--------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|-------------|
-| abstract void                                                                                                                              | [addType](#addtype)([TypeNode](TypeNode.md) typeNode) |             |
-| abstract [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[TypeNode](TypeNode.md)&gt;           | [getTypes](#gettypes)()                               |             |
-| abstract [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[PackageMember](PackageMember.md)&gt; | [getClasses](#getclasses)()                           |             |
-| abstract [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[PackageMember](PackageMember.md)&gt; | [getInterfaces](#getinterfaces)()                     |             |
-| abstract [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[PackageMember](PackageMember.md)&gt; | [getEnums](#getenums)()                               |             |
-| abstract [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[PackageMember](PackageMember.md)&gt; | [getAnnotations](#getannotations)()                   |             |
-| abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                      | [getName](#getname)()                                 |             |
+| Modifier and Type                                                                                                                          | Method                                                | Description                                           |
+|--------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|-------------------------------------------------------|
+| abstract void                                                                                                                              | [addType](#addtype)([TypeNode](TypeNode.md) typeNode) | Adds a type node to this owner.                       |
+| abstract [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[TypeNode](TypeNode.md)&gt;           | [getTypes](#gettypes)()                               | Returns a list of all type nodes owned by this owner. |
+| abstract [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[PackageMember](PackageMember.md)&gt; | [getClasses](#getclasses)()                           | Returns a list of classes owned by this owner.        |
+| abstract [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[PackageMember](PackageMember.md)&gt; | [getInterfaces](#getinterfaces)()                     | Returns a list of interfaces owned by this owner.     |
+| abstract [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[PackageMember](PackageMember.md)&gt; | [getEnums](#getenums)()                               | Returns a list of enums owned by this owner.          |
+| abstract [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[PackageMember](PackageMember.md)&gt; | [getAnnotations](#getannotations)()                   | Returns a list of annotations owned by this owner.    |
+| abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                      | [getName](#getname)()                                 | Returns the simple name of this owner.                |
 
 ## Method Details
 
@@ -26,7 +28,11 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 abstract void addType([TypeNode](TypeNode.md) typeNode)
 
+Adds a type node to this owner.
 
+**Parameters:**
+
+`typeNode` - the TypeNode to add
 
 
 ---
@@ -35,7 +41,11 @@ abstract void addType([TypeNode](TypeNode.md) typeNode)
 
 abstract [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[TypeNode](TypeNode.md)&gt; getTypes()
 
+Returns a list of all type nodes owned by this owner.
 
+**Returns:**
+
+list of TypeNode objects
 
 
 ---
@@ -44,7 +54,11 @@ abstract [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/jav
 
 abstract [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[PackageMember](PackageMember.md)&gt; getClasses()
 
+Returns a list of classes owned by this owner.
 
+**Returns:**
+
+list of PackageMember objects representing classes
 
 
 ---
@@ -53,7 +67,11 @@ abstract [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/jav
 
 abstract [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[PackageMember](PackageMember.md)&gt; getInterfaces()
 
+Returns a list of interfaces owned by this owner.
 
+**Returns:**
+
+list of PackageMember objects representing interfaces
 
 
 ---
@@ -62,7 +80,11 @@ abstract [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/jav
 
 abstract [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[PackageMember](PackageMember.md)&gt; getEnums()
 
+Returns a list of enums owned by this owner.
 
+**Returns:**
+
+list of PackageMember objects representing enums
 
 
 ---
@@ -71,7 +93,11 @@ abstract [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/jav
 
 abstract [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[PackageMember](PackageMember.md)&gt; getAnnotations()
 
+Returns a list of annotations owned by this owner.
 
+**Returns:**
+
+list of PackageMember objects representing annotations
 
 
 ---
@@ -80,7 +106,11 @@ abstract [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/jav
 
 abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) getName()
 
+Returns the simple name of this owner.
 
+**Returns:**
+
+name as a String
 
 
 ---

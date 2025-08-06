@@ -2,13 +2,14 @@ Package [io.github.sandydunlop.markista.util](index.md)
 
 # Class ModuleDirectives
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;io.github.sandydunlop.markista.util.ModuleDirectives<br/>
+        io.github.sandydunlop.markista.util.ModuleDirectives<br/>
 <br/>
 
 ----
 
 A utility class for creating [DirectiveNode](../model/DirectiveNode.md) objects which encapsulate 
-the information provided by [Directive](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ModuleElement.Directive.html) objects scanned by the [ApiScanner](../doclet/ApiScanner.md).
+the information provided by [Directive](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ModuleElement.Directive.html) 
+objects scanned by the [ApiScanner](ApiScanner.md).
 
 
 ## Field Summary

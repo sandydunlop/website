@@ -2,30 +2,32 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 # Enum Reference.Kind
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[java.lang.Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)&lt;[Reference.Kind](Reference.Kind.md)&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;io.github.sandydunlop.markista.model.Reference.Kind<br/>
+        [java.lang.Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)&lt;[Reference.Kind](Reference.Kind.md)&gt;<br/>
+                io.github.sandydunlop.markista.model.Reference.Kind<br/>
 <br/>
 Enclosing Class:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[Reference](Reference.md)
+    [Reference](Reference.md)
 
 
 ----
 
+Enum representing different kinds/types of references.
+
 
 ##Enum Constants
 
-| Enum Constant           | Description |
-|-------------------------|-------------|
-| [NONE](#none)           |             |
-| [UNKNOWN](#unknown)     |             |
-| [URL](#url)             |             |
-| [PAGE](#page)           |             |
-| [MODULE](#module)       |             |
-| [PACKAGE](#package)     |             |
-| [TYPE](#type)           |             |
-| [METHOD](#method)       |             |
-| [PRIMITIVE](#primitive) |             |
-| [VOID](#void)           |             |
+| Enum Constant               | Description |
+|-----------------------------|-------------|
+| [UNKNOWN](#unknown)         |             |
+| [UNSUPPORTED](#unsupported) |             |
+| [URL](#url)                 |             |
+| [PAGE](#page)               |             |
+| [MODULE](#module)           |             |
+| [PACKAGE](#package)         |             |
+| [TYPE](#type)               |             |
+| [METHOD](#method)           |             |
+| [PRIMITIVE](#primitive)     |             |
+| [VOID](#void)               |             |
 
 ## Constructor Summary
 
@@ -42,18 +44,18 @@ Enclosing Class:<br/>
 
 ## Enum Constant Details
 
-### NONE
+### UNKNOWN
 
-public static final [Reference.Kind](Reference.Kind.md) NONE
+public static final [Reference.Kind](Reference.Kind.md) UNKNOWN
 
 
 
 
 ---
 
-### UNKNOWN
+### UNSUPPORTED
 
-public static final [Reference.Kind](Reference.Kind.md) UNKNOWN
+public static final [Reference.Kind](Reference.Kind.md) UNSUPPORTED
 
 
 

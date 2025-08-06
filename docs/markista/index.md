@@ -32,7 +32,7 @@ Markista is available in the [Maven Central](https://central.sonatype.com/artifa
 
 ```groovy
 dependencies {
-    markista("io.github.sandydunlop:markista:0.1.7")
+    markista("io.github.sandydunlop:markista:0.1.11")
 }
 ```
 
@@ -46,7 +46,7 @@ javadoc {
         docletpath = configurations.markista.files.asType(List)
         doclet = 'io.github.sandydunlop.markista.doclet.MarkdownDoclet'
         source = null
-        addBooleanOption('flatten', true)
+        addBooleanOption('-flatten-packages', true)
         addBooleanOption('external', true)
     }
 }
@@ -57,7 +57,7 @@ javadoc {
 Markista can be used from the command line with the `javadoc` command as follows:
 
 ```bash
-javadoc -docletpath libs/markista-0.1.7.jar -doclet io.github.sandydunlop.markista.doclet.MarkdownDoclet src/main/java/my.package/Hello.java
+javadoc -docletpath libs/markista-0.1.11.jar -doclet io.github.sandydunlop.markista.doclet.MarkdownDoclet src/main/java/my.package/Hello.java
 ```
 
 ### Parameters
@@ -73,15 +73,22 @@ javadoc -docletpath libs/markista-0.1.7.jar -doclet io.github.sandydunlop.markis
 :  Create links to classes defined outside of the API being 
    documented (eg. [java.utils.String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html))
 
-`-flatten`
-:  Don't create directories that contain no classes
+`--flatten-modules`
+:  Don't create individual module directories
+:  This option should be used if you have multiple modules in individual subprojects and want to be able to link between them in the docs
+
+`--flatten-packages`
+:  Don't create package directories that contain no classes
+
+`-tabs`
+:  Display summary tables in content tabs
 
 `-verbose`
 :  Display progress information
 
 ## Download
 
-JAR files for version 0.1.7 are available to [download here](https://github.com/sandydunlop/markista/releases/tag/r0.1.7).
+JAR files for version 0.1.11 are available to [download here](https://github.com/sandydunlop/markista/releases/tag/r0.1.11).
 
 
 ## Source Code

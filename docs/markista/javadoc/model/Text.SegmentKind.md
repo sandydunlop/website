@@ -2,14 +2,16 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 # Enum Text.SegmentKind
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[java.lang.Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)&lt;[Text.SegmentKind](Text.SegmentKind.md)&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;io.github.sandydunlop.markista.model.Text.SegmentKind<br/>
+        [java.lang.Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)&lt;[Text.SegmentKind](Text.SegmentKind.md)&gt;<br/>
+                io.github.sandydunlop.markista.model.Text.SegmentKind<br/>
 <br/>
 Enclosing Class:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[Text](Text.md)
+    [Text](Text.md)
 
 
 ----
+
+Enum class that defines different kinds of segments for Text.
 
 
 ##Enum Constants

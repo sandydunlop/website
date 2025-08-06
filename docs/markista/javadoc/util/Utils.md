@@ -2,7 +2,7 @@ Package [io.github.sandydunlop.markista.util](index.md)
 
 # Class Utils
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;io.github.sandydunlop.markista.util.Utils<br/>
+        io.github.sandydunlop.markista.util.Utils<br/>
 <br/>
 
 ----
@@ -29,6 +29,7 @@ A set of utility methods for changing between qualified and unqualified names.
 | static boolean                                                                                              | [isValidSimpleNameChar](#isvalidsimplenamechar)(char c)                                                                                                                                                        | Checks if the given character is valid in an unqualified name.            |
 | static boolean                                                                                              | [isValidQualifiedNameChar](#isvalidqualifiednamechar)(char c)                                                                                                                                                  | Checks if the given character is valid in a qualified name.               |
 | static boolean                                                                                              | [isNullOrEmpty](#isnullorempty)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str)                                                                              | Checks if a string is null or empty                                       |
+| static boolean                                                                                              | [isNullOrEmpty](#isnullorempty)([Text](../model/Text.md) text)                                                                                                                                                 | Checks if a Text object is null or empty                                  |
 | static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)         | [inOneLine](#inoneline)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str)                                                                                      | Removes new line characters from a string, replacing them with spaces     |
 
 ## Method Details
@@ -157,7 +158,24 @@ Checks if a string is null or empty
 
 **Returns:**
 
-True if the string either null or empty
+True if the string is either null or empty
+
+
+---
+
+### isNullOrEmpty
+
+static boolean isNullOrEmpty([Text](../model/Text.md) text)
+
+Checks if a Text object is null or empty
+
+**Parameters:**
+
+`text` - The Text object
+
+**Returns:**
+
+True if the Text object is either null or empty
 
 
 ---

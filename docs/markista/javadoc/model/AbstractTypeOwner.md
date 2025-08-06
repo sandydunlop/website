@@ -2,50 +2,52 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 # Class AbstractTypeOwner
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Node](Node.md)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;io.github.sandydunlop.markista.model.AbstractTypeOwner<br/>
+        [Node](Node.md)<br/>
+                io.github.sandydunlop.markista.model.AbstractTypeOwner<br/>
 <br/>
 All Implemented Interfaces:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[TypeOwner](TypeOwner.md)
+    [TypeOwner](TypeOwner.md)
 
 
 ----
 
+An abstract class with a set of methods useful to other subclasses of [Node](Node.md)
+that can be owners of types.
+
 
 ## Field Summary
 
-| Modifier and Type                                                                                                                 | Field           | Description |
-|-----------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------|
-| protected [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[TypeNode](TypeNode.md)&gt; | [types](#types) |             |
+| Modifier and Type                                                                                                                 | Field           | Description                              |
+|-----------------------------------------------------------------------------------------------------------------------------------|-----------------|------------------------------------------|
+| protected [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[TypeNode](TypeNode.md)&gt; | [types](#types) | A list of types owned by this type owner |
 
 ## Constructor Summary
 
-| Constructor         | Description |
-|---------------------|-------------|
-| AbstractTypeOwner() |             |
+| Constructor         | Description         |
+|---------------------|---------------------|
+| AbstractTypeOwner() | Default constructor |
 
 ## Method Summary
 
-| Modifier and Type                                                                                                                 | Method                                                                    | Description |
-|-----------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|-------------|
-| void                                                                                                                              | [addType](#addtype)([TypeNode](TypeNode.md) typeNode)                     |             |
-| [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[TypeNode](TypeNode.md)&gt;           | [getTypes](#gettypes)()                                                   |             |
-| [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[PackageMember](PackageMember.md)&gt; | [getClasses](#getclasses)()                                               |             |
-| [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[PackageMember](PackageMember.md)&gt; | [getInterfaces](#getinterfaces)()                                         |             |
-| [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[PackageMember](PackageMember.md)&gt; | [getEnums](#getenums)()                                                   |             |
-| [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[PackageMember](PackageMember.md)&gt; | [getAnnotations](#getannotations)()                                       |             |
-| void                                                                                                                              | [addClass](#addclass)([ClassNode](ClassNode.md) node)                     |             |
-| void                                                                                                                              | [addInterface](#addinterface)([InterfaceNode](InterfaceNode.md) node)     |             |
-| void                                                                                                                              | [addEnum](#addenum)([EnumNode](EnumNode.md) node)                         |             |
-| void                                                                                                                              | [addException](#addexception)([ExceptionNode](ExceptionNode.md) node)     |             |
-| void                                                                                                                              | [addAnnotation](#addannotation)([AnnotationNode](AnnotationNode.md) node) |             |
-| void                                                                                                                              | [sort](#sort)()                                                           |             |
+| Modifier and Type                                                                                                                 | Method                                                                    | Description                                                            |
+|-----------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|------------------------------------------------------------------------|
+| void                                                                                                                              | [addType](#addtype)([TypeNode](TypeNode.md) typeNode)                     | Adds a type to the list of types *owned* by this instance.             |
+| [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[TypeNode](TypeNode.md)&gt;           | [getTypes](#gettypes)()                                                   | Gets the list of types *owned* by this instance.                       |
+| [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[PackageMember](PackageMember.md)&gt; | [getClasses](#getclasses)()                                               | Gets the list of classes *owned* by this instance.                     |
+| [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[PackageMember](PackageMember.md)&gt; | [getInterfaces](#getinterfaces)()                                         | Gets the list of interfaces *owned* by this instance.                  |
+| [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[PackageMember](PackageMember.md)&gt; | [getEnums](#getenums)()                                                   | Gets the list of enums *owned* by this instance.                       |
+| [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[PackageMember](PackageMember.md)&gt; | [getAnnotations](#getannotations)()                                       | Gets the list of annotations *owned* by this instance.                 |
+| void                                                                                                                              | [addClass](#addclass)([ClassNode](ClassNode.md) node)                     | Adds a class to the list of classes *owned* by this instance.          |
+| void                                                                                                                              | [addInterface](#addinterface)([InterfaceNode](InterfaceNode.md) node)     | Adds a interface to the list of interfaces *owned* by this instance.   |
+| void                                                                                                                              | [addEnum](#addenum)([EnumNode](EnumNode.md) node)                         | Adds a enum to the list of enums *owned* by this instance.             |
+| void                                                                                                                              | [addAnnotation](#addannotation)([AnnotationNode](AnnotationNode.md) node) | Adds a annotation to the list of annotations *owned* by this instance. |
+| void                                                                                                                              | [sort](#sort)()                                                           | Sorts the nodes owned by this instance into alphabetical order.        |
 
 ## Field Details
 
 ### types
 
-
+A list of types owned by this type owner
 
 
 ---
@@ -57,7 +59,11 @@ All Implemented Interfaces:<br/>
 
 void addType([TypeNode](TypeNode.md) typeNode)
 
+Adds a type to the list of types *owned* by this instance.
 
+**Parameters:**
+
+`typeNode` - the type to add
 
 **Specified By:**
 
@@ -70,7 +76,7 @@ void addType([TypeNode](TypeNode.md) typeNode)
 
 [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[TypeNode](TypeNode.md)&gt; getTypes()
 
-
+Gets the list of types *owned* by this instance.
 
 **Specified By:**
 
@@ -83,7 +89,7 @@ void addType([TypeNode](TypeNode.md) typeNode)
 
 [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[PackageMember](PackageMember.md)&gt; getClasses()
 
-
+Gets the list of classes *owned* by this instance.
 
 **Specified By:**
 
@@ -96,7 +102,7 @@ void addType([TypeNode](TypeNode.md) typeNode)
 
 [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[PackageMember](PackageMember.md)&gt; getInterfaces()
 
-
+Gets the list of interfaces *owned* by this instance.
 
 **Specified By:**
 
@@ -109,7 +115,7 @@ void addType([TypeNode](TypeNode.md) typeNode)
 
 [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[PackageMember](PackageMember.md)&gt; getEnums()
 
-
+Gets the list of enums *owned* by this instance.
 
 **Specified By:**
 
@@ -122,7 +128,7 @@ void addType([TypeNode](TypeNode.md) typeNode)
 
 [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[PackageMember](PackageMember.md)&gt; getAnnotations()
 
-
+Gets the list of annotations *owned* by this instance.
 
 **Specified By:**
 
@@ -135,7 +141,11 @@ void addType([TypeNode](TypeNode.md) typeNode)
 
 void addClass([ClassNode](ClassNode.md) node)
 
+Adds a class to the list of classes *owned* by this instance.
 
+**Parameters:**
+
+`node` - the class to add
 
 
 ---
@@ -144,7 +154,11 @@ void addClass([ClassNode](ClassNode.md) node)
 
 void addInterface([InterfaceNode](InterfaceNode.md) node)
 
+Adds a interface to the list of interfaces *owned* by this instance.
 
+**Parameters:**
+
+`node` - the interface to add
 
 
 ---
@@ -153,16 +167,11 @@ void addInterface([InterfaceNode](InterfaceNode.md) node)
 
 void addEnum([EnumNode](EnumNode.md) node)
 
+Adds a enum to the list of enums *owned* by this instance.
 
+**Parameters:**
 
-
----
-
-### addException
-
-void addException([ExceptionNode](ExceptionNode.md) node)
-
-
+`node` - the enum to add
 
 
 ---
@@ -171,7 +180,11 @@ void addException([ExceptionNode](ExceptionNode.md) node)
 
 void addAnnotation([AnnotationNode](AnnotationNode.md) node)
 
+Adds a annotation to the list of annotations *owned* by this instance.
 
+**Parameters:**
+
+`node` - the annotation to add
 
 
 ---
@@ -180,7 +193,7 @@ void addAnnotation([AnnotationNode](AnnotationNode.md) node)
 
 void sort()
 
-
+Sorts the nodes owned by this instance into alphabetical order.
 
 
 ---
