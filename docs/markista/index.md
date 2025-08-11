@@ -32,7 +32,7 @@ Markista is available in the [Maven Central](https://central.sonatype.com/artifa
 
 ```groovy
 dependencies {
-    markista("io.github.sandydunlop:markista:0.1.11")
+    markista("io.github.sandydunlop:markista:0.1.12")
 }
 ```
 
@@ -47,7 +47,7 @@ javadoc {
         doclet = 'io.github.sandydunlop.markista.doclet.MarkdownDoclet'
         source = null
         addBooleanOption('-flatten-packages', true)
-        addBooleanOption('external', true)
+        addBooleanOption('link', true)
     }
 }
 ```
@@ -57,7 +57,7 @@ javadoc {
 Markista can be used from the command line with the `javadoc` command as follows:
 
 ```bash
-javadoc -docletpath libs/markista-0.1.11.jar -doclet io.github.sandydunlop.markista.doclet.MarkdownDoclet src/main/java/my.package/Hello.java
+javadoc -docletpath libs/markista-0.1.12.jar -doclet io.github.sandydunlop.markista.doclet.MarkdownDoclet src/main/java/my.package/Hello.java
 ```
 
 ### Parameters
@@ -69,16 +69,19 @@ javadoc -docletpath libs/markista-0.1.11.jar -doclet io.github.sandydunlop.marki
 :   Generate docs for private members. By default only public 
     and abstract members are documented.
 
-`-external`
-:  Create links to classes defined outside of the API being 
-   documented (eg. [java.utils.String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html))
-
 `--flatten-modules`
 :  Don't create individual module directories
 :  This option should be used if you have multiple modules in individual subprojects and want to be able to link between them in the docs
 
 `--flatten-packages`
 :  Don't create package directories that contain no classes
+
+`-link`
+:  Create links to classes defined outside of the API being 
+   documented (eg. [java.utils.String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html))
+
+`--link-modules`
+:  Create links to modules outside of the API that are on the module-path
 
 `-tabs`
 :  Display summary tables in content tabs
@@ -88,7 +91,7 @@ javadoc -docletpath libs/markista-0.1.11.jar -doclet io.github.sandydunlop.marki
 
 ## Download
 
-JAR files for version 0.1.11 are available to [download here](https://github.com/sandydunlop/markista/releases/tag/r0.1.11).
+JAR files for version 0.1.12 are available to [download here](https://github.com/sandydunlop/markista/releases/tag/r0.1.12).
 
 
 ## Source Code

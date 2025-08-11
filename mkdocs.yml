@@ -17,6 +17,8 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+
+
 # nav:
 #   - API: markdown-doclet/javadoc/api
 #   - Markdown: markdown-doclet/javadoc/markdown
@@ -56,7 +58,8 @@ extra_css:
   - stylesheets/extra.css
 extra_javascript:
   - 'javascript/headings.js'
-
+  - 'javascript/mermaid.mjs'
+  - 'javascript/svgcolor.js'
 extra:
   consent:
     title: Cookie consent
