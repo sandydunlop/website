@@ -2,11 +2,11 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 # Enum DirectiveNode.Kind
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
-        [java.lang.Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)&lt;[io.github.sandydunlop.markista.model.DirectiveNode.Kind](DirectiveNode.Kind.md)&gt;<br/>
+        [java.lang.Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)<[io.github.sandydunlop.markista.model.DirectiveNode.Kind](DirectiveNode.Kind.md)><br/>
                 io.github.sandydunlop.markista.model.DirectiveNode.Kind<br/>
 <br/>
 Enclosing Class:<br/>
-    [DirectiveNode](DirectiveNode.md)
+    [io.github.sandydunlop.markista.model.DirectiveNode](DirectiveNode.md)
 
 
 ----
@@ -44,7 +44,7 @@ Enum representing the various kinds of directives possible in a module declarati
 
 ### NONE
 
-public static final [io.github.sandydunlop.markista.model.DirectiveNode.Kind](DirectiveNode.Kind.md) NONE
+public static final NONE NONE
 
 
 
@@ -53,7 +53,7 @@ public static final [io.github.sandydunlop.markista.model.DirectiveNode.Kind](Di
 
 ### REQUIRES
 
-public static final [io.github.sandydunlop.markista.model.DirectiveNode.Kind](DirectiveNode.Kind.md) REQUIRES
+public static final REQUIRES REQUIRES
 
 
 
@@ -62,7 +62,7 @@ public static final [io.github.sandydunlop.markista.model.DirectiveNode.Kind](Di
 
 ### EXPORTS
 
-public static final [io.github.sandydunlop.markista.model.DirectiveNode.Kind](DirectiveNode.Kind.md) EXPORTS
+public static final EXPORTS EXPORTS
 
 
 
@@ -71,7 +71,7 @@ public static final [io.github.sandydunlop.markista.model.DirectiveNode.Kind](Di
 
 ### OPENS
 
-public static final [io.github.sandydunlop.markista.model.DirectiveNode.Kind](DirectiveNode.Kind.md) OPENS
+public static final OPENS OPENS
 
 
 
@@ -80,7 +80,7 @@ public static final [io.github.sandydunlop.markista.model.DirectiveNode.Kind](Di
 
 ### USES
 
-public static final [io.github.sandydunlop.markista.model.DirectiveNode.Kind](DirectiveNode.Kind.md) USES
+public static final USES USES
 
 
 
@@ -89,7 +89,7 @@ public static final [io.github.sandydunlop.markista.model.DirectiveNode.Kind](Di
 
 ### PROVIDES
 
-public static final [io.github.sandydunlop.markista.model.DirectiveNode.Kind](DirectiveNode.Kind.md) PROVIDES
+public static final PROVIDES PROVIDES
 
 
 

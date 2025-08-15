@@ -5,7 +5,7 @@ Package [io.github.sandydunlop.markista.markdown](index.md)
         io.github.sandydunlop.markista.markdown.MarkdownTable.Column<br/>
 <br/>
 Enclosing Class:<br/>
-    [MarkdownTable](MarkdownTable.md)
+    [io.github.sandydunlop.markista.markdown.MarkdownTable](MarkdownTable.md)
 
 
 ----
@@ -24,9 +24,9 @@ A class to represent the name and width of a column within a table.
 
 ## Constructor Summary
 
-| Constructor                                                                                                             | Description                                               |
-|-------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------|
-| MarkdownTable.Column([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) | Constructs a new `Column` object with the specified name. |
+| Constructor                 | Description                                               |
+|-----------------------------|-----------------------------------------------------------|
+| MarkdownTable.Column( name) | Constructs a new `Column` object with the specified name. |
 
 ## Field Details
 

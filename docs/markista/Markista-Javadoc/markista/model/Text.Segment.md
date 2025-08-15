@@ -5,7 +5,7 @@ Package [io.github.sandydunlop.markista.model](index.md)
         io.github.sandydunlop.markista.model.Text.Segment<br/>
 <br/>
 Enclosing Class:<br/>
-    [Text](Text.md)
+    [io.github.sandydunlop.markista.model.Text](Text.md)
 
 
 ----
@@ -21,7 +21,7 @@ Represents a segment of the Text with its kind, content, and optional link.
 |------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------|
 | private [Text.SegmentKind](Text.SegmentKind.md)                                                      | [kind](#kind) | The kind/type of this segment.                        |
 | private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [text](#text) | The textual content of this segment.                  |
-| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [link](#link) | The associated link if the segment represents a link. |
+| private [Reference](Reference.md)                                                                    | [link](#link) | The associated link if the segment represents a link. |
 
 ## Constructor Summary
 
@@ -39,8 +39,8 @@ Represents a segment of the Text with its kind, content, and optional link.
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [toString](#tostring)()                                                                                                | Returns the string representation of this segment. |
 | public [Text.Segment](Text.Segment.md)                                                              | [setText](#settext)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) text) | Sets the text content of this segment.             |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getText](#gettext)()                                                                                                  | Returns the text content of this segment.          |
-| public [Text.Segment](Text.Segment.md)                                                              | [setLink](#setlink)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) link) | Sets the link value of this segment.               |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getLink](#getlink)()                                                                                                  | Returns the link associated with this segment.     |
+| public [Text.Segment](Text.Segment.md)                                                              | [setLink](#setlink)([Reference](Reference.md) link)                                                                    | Sets the link value of this segment.               |
+| public [Reference](Reference.md)                                                                    | [getLink](#getlink)()                                                                                                  | Returns the link associated with this segment.     |
 
 ## Field Details
 
@@ -149,7 +149,7 @@ The text string.
 
 ### setLink
 
-public [Text.Segment](Text.Segment.md) setLink([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) link)
+public [Text.Segment](Text.Segment.md) setLink([Reference](Reference.md) link)
 
 Sets the link value of this segment.
 
@@ -162,13 +162,13 @@ This Segment instance for chaining.
 
 ### getLink
 
-public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) getLink()
+public [Reference](Reference.md) getLink()
 
 Returns the link associated with this segment.
 
 **Returns:**
 
-The link string.
+The link reference.
 
 
 ---

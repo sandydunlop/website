@@ -2,11 +2,11 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 # Enum Reference.Kind
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
-        [java.lang.Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)&lt;[io.github.sandydunlop.markista.model.Reference.Kind](Reference.Kind.md)&gt;<br/>
+        [java.lang.Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)<[io.github.sandydunlop.markista.model.Reference.Kind](Reference.Kind.md)><br/>
                 io.github.sandydunlop.markista.model.Reference.Kind<br/>
 <br/>
 Enclosing Class:<br/>
-    [Reference](Reference.md)
+    [io.github.sandydunlop.markista.model.Reference](Reference.md)
 
 
 ----
@@ -48,7 +48,7 @@ Enum representing different kinds/types of references.
 
 ### UNKNOWN
 
-public static final [io.github.sandydunlop.markista.model.Reference.Kind](Reference.Kind.md) UNKNOWN
+public static final UNKNOWN UNKNOWN
 
 
 
@@ -57,7 +57,7 @@ public static final [io.github.sandydunlop.markista.model.Reference.Kind](Refere
 
 ### UNSUPPORTED
 
-public static final [io.github.sandydunlop.markista.model.Reference.Kind](Reference.Kind.md) UNSUPPORTED
+public static final UNSUPPORTED UNSUPPORTED
 
 
 
@@ -66,7 +66,7 @@ public static final [io.github.sandydunlop.markista.model.Reference.Kind](Refere
 
 ### URL
 
-public static final [io.github.sandydunlop.markista.model.Reference.Kind](Reference.Kind.md) URL
+public static final URL URL
 
 
 
@@ -75,7 +75,7 @@ public static final [io.github.sandydunlop.markista.model.Reference.Kind](Refere
 
 ### PAGE
 
-public static final [io.github.sandydunlop.markista.model.Reference.Kind](Reference.Kind.md) PAGE
+public static final PAGE PAGE
 
 
 
@@ -84,7 +84,7 @@ public static final [io.github.sandydunlop.markista.model.Reference.Kind](Refere
 
 ### MODULE
 
-public static final [io.github.sandydunlop.markista.model.Reference.Kind](Reference.Kind.md) MODULE
+public static final MODULE MODULE
 
 
 
@@ -93,7 +93,7 @@ public static final [io.github.sandydunlop.markista.model.Reference.Kind](Refere
 
 ### PACKAGE
 
-public static final [io.github.sandydunlop.markista.model.Reference.Kind](Reference.Kind.md) PACKAGE
+public static final PACKAGE PACKAGE
 
 
 
@@ -102,7 +102,7 @@ public static final [io.github.sandydunlop.markista.model.Reference.Kind](Refere
 
 ### TYPE
 
-public static final [io.github.sandydunlop.markista.model.Reference.Kind](Reference.Kind.md) TYPE
+public static final TYPE TYPE
 
 
 
@@ -111,7 +111,7 @@ public static final [io.github.sandydunlop.markista.model.Reference.Kind](Refere
 
 ### METHOD
 
-public static final [io.github.sandydunlop.markista.model.Reference.Kind](Reference.Kind.md) METHOD
+public static final METHOD METHOD
 
 
 
@@ -120,7 +120,7 @@ public static final [io.github.sandydunlop.markista.model.Reference.Kind](Refere
 
 ### PRIMITIVE
 
-public static final [io.github.sandydunlop.markista.model.Reference.Kind](Reference.Kind.md) PRIMITIVE
+public static final PRIMITIVE PRIMITIVE
 
 
 
@@ -129,7 +129,7 @@ public static final [io.github.sandydunlop.markista.model.Reference.Kind](Refere
 
 ### VOID
 
-public static final [io.github.sandydunlop.markista.model.Reference.Kind](Reference.Kind.md) VOID
+public static final VOID VOID
 
 
 

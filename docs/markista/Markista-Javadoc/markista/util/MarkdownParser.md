@@ -9,59 +9,59 @@ Package [io.github.sandydunlop.markista.util](index.md)
 
 <span style="font-family: monospace;">public Class __MarkdownParser__</span>
 
-Parses a Markdown string into a sequence of segments representing text and special markup such as brackets and parentheses.
+Parses a Markdown string into a sequence of tokens representing text and special markup such as brackets and parentheses.
 
-This parser is designed to tokenize the Markdown content by identifying textual parts and segments enclosed in brackets `[]` and parentheses `()`.
+This parser is designed to tokenize the Markdown content by identifying textual parts and tokens enclosed in brackets `[]` and parentheses `()`.
 It also handles inline code spans denoted by backticks (`) to avoid parsing markup inside code.
 
-The parsed segments can be iterated in sequence starting from the firstSegment() method.
-Each segment carries its type (kind) which specifies how it should be interpreted or rendered.
+The parsed tokens can be iterated in sequence starting from the firstToken() method.
+Each token carries its type (kind) which specifies how it should be interpreted or rendered.
 
-Segment kinds include TEXT for normal text, BRACKETS_TAG for content inside square brackets,
+Token kinds include TEXT for normal text, BRACKETS_TAG for content inside square brackets,
 PARENS_TAG for content inside parentheses following brackets (typical Markdown link syntax),
 and END indicating the end of the sequence.
 
 
 ## Nested Class Summary
 
-| Modifier and Type | Class                                               | Description                                        |
-|-------------------|-----------------------------------------------------|----------------------------------------------------|
-| public            | [MarkdownParser.Segment](MarkdownParser.Segment.md) | Represents a segment of the parsed Markdown input. |
+| Modifier and Type | Class                                           | Description                                      |
+|-------------------|-------------------------------------------------|--------------------------------------------------|
+| public            | [MarkdownParser.Token](MarkdownParser.Token.md) | Represents a token of the parsed Markdown input. |
 
 ## Field Summary
 
-| Modifier and Type                                                                                                                                                 | Field                                 | Description |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|-------------|
-| private int                                                                                                                                                       | [head](#head)                         |             |
-| private int                                                                                                                                                       | [tail](#tail)                         |             |
-| int                                                                                                                                                               | [openBracket](#openbracket)           |             |
-| int                                                                                                                                                               | [openParenthesis](#openparenthesis)   |             |
-| int                                                                                                                                                               | [closeBracket](#closebracket)         |             |
-| int                                                                                                                                                               | [closeParenthesis](#closeparenthesis) |             |
-| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                              | [markdown](#markdown)                 |             |
-| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[MarkdownParser.Segment](MarkdownParser.Segment.md)&gt; | [segments](#segments)                 |             |
-| private [MarkdownParser.Segment](MarkdownParser.Segment.md)                                                                                                       | [prev](#prev)                         |             |
+| Modifier and Type                                                                                                                                       | Field                                 | Description |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|-------------|
+| private int                                                                                                                                             | [head](#head)                         |             |
+| private int                                                                                                                                             | [tail](#tail)                         |             |
+| int                                                                                                                                                     | [openBracket](#openbracket)           |             |
+| int                                                                                                                                                     | [openParenthesis](#openparenthesis)   |             |
+| int                                                                                                                                                     | [closeBracket](#closebracket)         |             |
+| int                                                                                                                                                     | [closeParenthesis](#closeparenthesis) |             |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                    | [markdown](#markdown)                 |             |
+| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[MarkdownParser.Token](MarkdownParser.Token.md)> | [tokens](#tokens)                     |             |
+| private [MarkdownParser.Token](MarkdownParser.Token.md)                                                                                                 | [prev](#prev)                         |             |
 
 ## Constructor Summary
 
-| Constructor                                                                                                     | Description                                                                       |
-|-----------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
-| MarkdownParser([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) md) | Creates a new MarkdownParser and immediately parses the provided Markdown string. |
+| Constructor         | Description                                                                       |
+|---------------------|-----------------------------------------------------------------------------------|
+| MarkdownParser( md) | Creates a new MarkdownParser and immediately parses the provided Markdown string. |
 
 ## Method Summary
 
-| Modifier and Type                                          | Method                                                                                   | Description                                                                            |
-|------------------------------------------------------------|------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
-| private void                                               | [processCharInGeneral](#processcharingeneral)()                                          | Handles a character encountered when not in code or special markup.                    |
-| private void                                               | [handleOpenBracket](#handleopenbracket)()                                                | Handles the open bracket 'Handles the open bracket '[' encountered in the markdown.    |
-| private boolean                                            | [handleOpenParenthesis](#handleopenparenthesis)(char prevChar)                           | Handles an open parenthesis '(' encountered immediately after closing bracket ''.      |
-| private void                                               | [handleCloseBracket](#handleclosebracket)()                                              | Handles the close bracket '' encountered in the markdown.                              |
-| private boolean                                            | [handleCloseParenthesis](#handlecloseparenthesis)(boolean parensFollowBrackets)          | Handles the close parenthesis ')' encountered.                                         |
-| private void                                               | [saveText](#savetext)()                                                                  | Saves any text from the tail position up to the current head as a TEXT segment.        |
-| private void                                               | [saveBracketsTag](#savebracketstag)()                                                    | Saves the content between the most recent pair of brackets as a BRACKETS_TAG segment.  |
-| private void                                               | [saveParensTag](#saveparenstag)()                                                        | Saves the content between the most recent pair of parentheses as a PARENS_TAG segment. |
-| private void                                               | [saveSegment](#savesegment)([MarkdownParser.Segment](MarkdownParser.Segment.md) segment) | Adds the specified segment to the list and links it to the previously saved segment.   |
-| public [MarkdownParser.Segment](MarkdownParser.Segment.md) | [firstSegment](#firstsegment)()                                                          | Returns the first Segment in the parsed sequence.                                      |
+| Modifier and Type                                      | Method                                                                          | Description                                                                          |
+|--------------------------------------------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
+| private void                                           | [processCharInGeneral](#processcharingeneral)()                                 | Handles a character encountered when not in code or special markup.                  |
+| private void                                           | [handleOpenBracket](#handleopenbracket)()                                       | Handles the open bracket 'Handles the open bracket '[' encountered in the markdown.  |
+| private boolean                                        | [handleOpenParenthesis](#handleopenparenthesis)(char prevChar)                  | Handles an open parenthesis '(' encountered immediately after closing bracket ''.    |
+| private void                                           | [handleCloseBracket](#handleclosebracket)()                                     | Handles the close bracket '' encountered in the markdown.                            |
+| private boolean                                        | [handleCloseParenthesis](#handlecloseparenthesis)(boolean parensFollowBrackets) | Handles the close parenthesis ')' encountered.                                       |
+| private void                                           | [saveText](#savetext)()                                                         | Saves any text from the tail position up to the current head as a TEXT token.        |
+| private void                                           | [saveBracketsTag](#savebracketstag)()                                           | Saves the content between the most recent pair of brackets as a BRACKETS_TAG token.  |
+| private void                                           | [saveParensTag](#saveparenstag)()                                               | Saves the content between the most recent pair of parentheses as a PARENS_TAG token. |
+| private void                                           | [saveToken](#savetoken)([MarkdownParser.Token](MarkdownParser.Token.md) token)  | Adds the specified token to the list and links it to the previously saved token.     |
+| public [MarkdownParser.Token](MarkdownParser.Token.md) | [firstToken](#firsttoken)()                                                     | Returns the first token in the parsed sequence.                                      |
 
 ## Field Details
 
@@ -114,7 +114,7 @@ and END indicating the end of the sequence.
 
 ---
 
-### segments
+### tokens
 
 
 
@@ -146,7 +146,7 @@ Currently a placeholder for any general character processing.
 private void handleOpenBracket()
 
 Handles the open bracket 'Handles the open bracket '[' encountered in the markdown.
-Saves any preceding text segment before marking the position of the open bracket.
+Saves any preceding text token before marking the position of the open bracket.
 
 
 ---
@@ -169,7 +169,7 @@ true if parentheses follow brackets, false otherwise.
 private void handleCloseBracket()
 
 Handles the close bracket '' encountered in the markdown.
-Records the position and saves a bracket-tag segment.
+Records the position and saves a bracket-tag token.
 
 
 ---
@@ -179,7 +179,7 @@ Records the position and saves a bracket-tag segment.
 private boolean handleCloseParenthesis(boolean parensFollowBrackets)
 
 Handles the close parenthesis ')' encountered.
-If parentheses follow brackets, saves a parentheses-tag segment.
+If parentheses follow brackets, saves a parentheses-tag token.
 
 **Returns:**
 
@@ -192,7 +192,7 @@ Always returns false to reset parsing state for parentheses.
 
 private void saveText()
 
-Saves any text from the tail position up to the current head as a TEXT segment.
+Saves any text from the tail position up to the current head as a TEXT token.
 Does nothing if no text is available in that range.
 
 
@@ -202,7 +202,7 @@ Does nothing if no text is available in that range.
 
 private void saveBracketsTag()
 
-Saves the content between the most recent pair of brackets as a BRACKETS_TAG segment.
+Saves the content between the most recent pair of brackets as a BRACKETS_TAG token.
 
 
 ---
@@ -211,30 +211,30 @@ Saves the content between the most recent pair of brackets as a BRACKETS_TAG seg
 
 private void saveParensTag()
 
-Saves the content between the most recent pair of parentheses as a PARENS_TAG segment.
+Saves the content between the most recent pair of parentheses as a PARENS_TAG token.
 
 
 ---
 
-### saveSegment
+### saveToken
 
-private void saveSegment([MarkdownParser.Segment](MarkdownParser.Segment.md) segment)
+private void saveToken([MarkdownParser.Token](MarkdownParser.Token.md) token)
 
-Adds the specified segment to the list and links it to the previously saved segment.
+Adds the specified token to the list and links it to the previously saved token.
 
 
 ---
 
-### firstSegment
+### firstToken
 
-public [MarkdownParser.Segment](MarkdownParser.Segment.md) firstSegment()
+public [MarkdownParser.Token](MarkdownParser.Token.md) firstToken()
 
-Returns the first Segment in the parsed sequence.
-If no segments exist, returns an END kind Segment.
+Returns the first token in the parsed sequence.
+If no tokens exist, returns an END kind token.
 
 **Returns:**
 
-The first Segment or an END Segment if none exist.
+The first token or an END token if none exist.
 
 
 ---

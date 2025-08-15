@@ -2,7 +2,7 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 # Enum Deprecation
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
-        [java.lang.Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)&lt;[io.github.sandydunlop.markista.model.Deprecation](Deprecation.md)&gt;<br/>
+        [java.lang.Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)<[io.github.sandydunlop.markista.model.Deprecation](Deprecation.md)><br/>
                 io.github.sandydunlop.markista.model.Deprecation<br/>
 <br/>
 
@@ -38,7 +38,7 @@ Enum representing the deprecation status of an element
 
 ### NONE
 
-public static final [io.github.sandydunlop.markista.model.Deprecation](Deprecation.md) NONE
+public static final NONE NONE
 
 
 
@@ -47,7 +47,7 @@ public static final [io.github.sandydunlop.markista.model.Deprecation](Deprecati
 
 ### FOR_REMOVAL
 
-public static final [io.github.sandydunlop.markista.model.Deprecation](Deprecation.md) FOR_REMOVAL
+public static final FOR_REMOVAL FOR_REMOVAL
 
 
 
@@ -56,7 +56,7 @@ public static final [io.github.sandydunlop.markista.model.Deprecation](Deprecati
 
 ### DEPRECATED
 
-public static final [io.github.sandydunlop.markista.model.Deprecation](Deprecation.md) DEPRECATED
+public static final DEPRECATED DEPRECATED
 
 
 

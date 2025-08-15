@@ -23,44 +23,48 @@ Package [io.github.sandydunlop.markista.model](index.md)
 | private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [uri](#uri)             |                                      |
 | private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [anchor](#anchor)       |                                      |
 | private boolean                                                                                      | [resolved](#resolved)   |                                      |
+| private boolean                                                                                      | [hasAnchor](#hasanchor) |                                      |
 | private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [origin](#origin)       | The package the link is coming from. |
 | private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [target](#target)       |                                      |
 
 ## Constructor Summary
 
-| Constructor                                                                                                                                                                                                                                                                                           | Description                                                                     |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
-| Reference()                                                                                                                                                                                                                                                                                           | Default constructor creates an empty reference with kind and scope set to NONE. |
-| Reference([Reference.Kind](Reference.Kind.md) kind, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) uri)                                              | Constructs a Reference with given kind, name, and URI.                          |
-| Reference([Reference.Scope](Reference.Scope.md) scope, [Reference.Kind](Reference.Kind.md) kind, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)                                                                                                   | Constructs a Reference with given scope, kind, and name.                        |
-| Reference([Reference.Scope](Reference.Scope.md) scope, [Reference.Kind](Reference.Kind.md) kind, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) uri) | Constructs a Reference with full specification: scope, kind, name, and URI.     |
+| Constructor                       | Description                                                                     |
+|-----------------------------------|---------------------------------------------------------------------------------|
+| Reference()                       | Default constructor creates an empty reference with kind and scope set to NONE. |
+| Reference( kind,  label,  target) | Constructs a Reference with given kind, name, and URI.                          |
 
 ## Method Summary
 
-| Modifier and Type                                                                                   | Method                                                                                                                           | Description                                           |
-|-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|
-| public static [Reference](Reference.md)                                                             | [to](#to)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) target)                   | Sets the target of the reference.                     |
-| public [Reference](Reference.md)                                                                    | [from](#from)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) origin)               | Sets the origin package of the reference.             |
-| public [Reference](Reference.md)                                                                    | [withLabel](#withlabel)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) label)      | Sets the display name of the reference.               |
-| public [Reference](Reference.md)                                                                    | [withKind](#withkind)([Reference.Kind](Reference.Kind.md) kind)                                                                  | Sets the kind/type of the reference.                  |
-| public void                                                                                         | [setKind](#setkind)([Reference.Kind](Reference.Kind.md) kind)                                                                    | Sets the kind/type of the reference.                  |
-| public [Reference.Kind](Reference.Kind.md)                                                          | [getKind](#getkind)()                                                                                                            | Returns the kind/type of the reference.               |
-| public void                                                                                         | [setScope](#setscope)([Reference.Scope](Reference.Scope.md) scope)                                                               | Sets the scope of the reference.                      |
-| public [Reference.Scope](Reference.Scope.md)                                                        | [getScope](#getscope)()                                                                                                          | Returns the scope of the reference.                   |
-| public void                                                                                         | [setLabel](#setlabel)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) label)        | Sets the display name of the reference.               |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getLabel](#getlabel)()                                                                                                          | Returns the display name of the reference.            |
-| public void                                                                                         | [setClassName](#setclassname)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) | Sets the class name associated with the reference.    |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getClassName](#getclassname)()                                                                                                  | Returns the class name associated with the reference. |
-| public void                                                                                         | [setUri](#seturi)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) uri)              | Sets the URI of the reference.                        |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getUri](#geturi)()                                                                                                              | Returns the URI of the reference.                     |
-| public void                                                                                         | [setAnchor](#setanchor)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) anchor)     | Sets the anchor part of the URI.                      |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getAnchor](#getanchor)()                                                                                                        | Returns the anchor part of the URI.                   |
-| public void                                                                                         | [setOrigin](#setorigin)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) origin)     | Sets the origin of this reference.                    |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getOrigin](#getorigin)()                                                                                                        | Gets the origin of this reference.                    |
-| public void                                                                                         | [setTarget](#settarget)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) target)     | Sets the target of this reference.                    |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getTarget](#gettarget)()                                                                                                        | Gets the target of this reference.                    |
-| public void                                                                                         | [setResolved](#setresolved)(boolean b)                                                                                           | Sets the resolved state of this reference.            |
-| public boolean                                                                                      | [isResolved](#isresolved)()                                                                                                      | Gets the resolved status of this reference.           |
+| Modifier and Type                                                                                   | Method                                                                                                                                  | Description                                           |
+|-----------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|
+| public static [Reference](Reference.md)                                                             | [to](#to)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) target)                          | Sets the target of the reference.                     |
+| public [Reference](Reference.md)                                                                    | [from](#from)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) origin)                      | Sets the origin package of the reference.             |
+| public [Reference](Reference.md)                                                                    | [withLabel](#withlabel)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) label)             | Sets the display name of the reference.               |
+| public [Reference](Reference.md)                                                                    | [withClassName](#withclassname)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) className) |                                                       |
+| public [Reference](Reference.md)                                                                    | [withUri](#withuri)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) uri)                   |                                                       |
+| public [Reference](Reference.md)                                                                    | [withKind](#withkind)([Reference.Kind](Reference.Kind.md) kind)                                                                         | Sets the kind/type of the reference.                  |
+| public void                                                                                         | [setKind](#setkind)([Reference.Kind](Reference.Kind.md) kind)                                                                           | Sets the kind/type of the reference.                  |
+| public [Reference.Kind](Reference.Kind.md)                                                          | [getKind](#getkind)()                                                                                                                   | Returns the kind/type of the reference.               |
+| public void                                                                                         | [setScope](#setscope)([Reference.Scope](Reference.Scope.md) scope)                                                                      | Sets the scope of the reference.                      |
+| public [Reference.Scope](Reference.Scope.md)                                                        | [getScope](#getscope)()                                                                                                                 | Returns the scope of the reference.                   |
+| public void                                                                                         | [setLabel](#setlabel)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) label)               | Sets the display name of the reference.               |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getLabel](#getlabel)()                                                                                                                 | Returns the display name of the reference.            |
+| public void                                                                                         | [setClassName](#setclassname)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)        | Sets the class name associated with the reference.    |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getClassName](#getclassname)()                                                                                                         | Returns the class name associated with the reference. |
+| public void                                                                                         | [setUri](#seturi)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) uri)                     | Sets the URI of the reference.                        |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getUri](#geturi)()                                                                                                                     | Returns the URI of the reference.                     |
+| public void                                                                                         | [setAnchor](#setanchor)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) anchor)            | Sets the anchor part of the URI.                      |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getAnchor](#getanchor)()                                                                                                               | Returns the anchor part of the URI.                   |
+| public void                                                                                         | [setOrigin](#setorigin)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) origin)            | Sets the origin of this reference.                    |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getOrigin](#getorigin)()                                                                                                               | Gets the origin of this reference.                    |
+| public void                                                                                         | [setTarget](#settarget)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) target)            | Sets the target of this reference.                    |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getTarget](#gettarget)()                                                                                                               | Gets the target of this reference.                    |
+| public void                                                                                         | [setResolved](#setresolved)(boolean b)                                                                                                  | Sets the resolved state of this reference.            |
+| public boolean                                                                                      | [isResolved](#isresolved)()                                                                                                             | Gets the resolved status of this reference.           |
+| public void                                                                                         | [setHasAnchor](#sethasanchor)(boolean b)                                                                                                | Specifies if this link is to an anchor                |
+| public boolean                                                                                      | [hasAnchor](#hasanchor)()                                                                                                               | Gets the anchor status of this reference.             |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [toString](#tostring)()                                                                                                                 |                                                       |
 
 ## Field Details
 
@@ -107,6 +111,13 @@ Package [io.github.sandydunlop.markista.model](index.md)
 ---
 
 ### resolved
+
+
+
+
+---
+
+### hasAnchor
 
 
 
@@ -165,6 +176,24 @@ Sets the display name of the reference.
 **Returns:**
 
 the reference with label set
+
+
+---
+
+### withClassName
+
+public [Reference](Reference.md) withClassName([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) className)
+
+
+
+
+---
+
+### withUri
+
+public [Reference](Reference.md) withUri([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) uri)
+
+
 
 
 ---
@@ -376,6 +405,37 @@ Gets the resolved status of this reference.
 **Returns:**
 
 True if this reference has been resolved. False otherwise.
+
+
+---
+
+### setHasAnchor
+
+public void setHasAnchor(boolean b)
+
+Specifies if this link is to an anchor
+
+
+---
+
+### hasAnchor
+
+public boolean hasAnchor()
+
+Gets the anchor status of this reference.
+
+**Returns:**
+
+True if this reference is to an anchor. False otherwise.
+
+
+---
+
+### toString
+
+public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) toString()
+
+
 
 
 ---

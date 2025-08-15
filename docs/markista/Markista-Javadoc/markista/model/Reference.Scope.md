@@ -2,11 +2,11 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 # Enum Reference.Scope
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
-        [java.lang.Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)&lt;[io.github.sandydunlop.markista.model.Reference.Scope](Reference.Scope.md)&gt;<br/>
+        [java.lang.Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)<[io.github.sandydunlop.markista.model.Reference.Scope](Reference.Scope.md)><br/>
                 io.github.sandydunlop.markista.model.Reference.Scope<br/>
 <br/>
 Enclosing Class:<br/>
-    [Reference](Reference.md)
+    [io.github.sandydunlop.markista.model.Reference](Reference.md)
 
 
 ----
@@ -43,7 +43,7 @@ Enum representing the scope of references.
 
 ### UNKNOWN
 
-public static final [io.github.sandydunlop.markista.model.Reference.Scope](Reference.Scope.md) UNKNOWN
+public static final UNKNOWN UNKNOWN
 
 
 
@@ -52,7 +52,7 @@ public static final [io.github.sandydunlop.markista.model.Reference.Scope](Refer
 
 ### LOCAL
 
-public static final [io.github.sandydunlop.markista.model.Reference.Scope](Reference.Scope.md) LOCAL
+public static final LOCAL LOCAL
 
 
 
@@ -61,7 +61,7 @@ public static final [io.github.sandydunlop.markista.model.Reference.Scope](Refer
 
 ### SIBLING
 
-public static final [io.github.sandydunlop.markista.model.Reference.Scope](Reference.Scope.md) SIBLING
+public static final SIBLING SIBLING
 
 
 
@@ -70,7 +70,7 @@ public static final [io.github.sandydunlop.markista.model.Reference.Scope](Refer
 
 ### NATIVE
 
-public static final [io.github.sandydunlop.markista.model.Reference.Scope](Reference.Scope.md) NATIVE
+public static final NATIVE NATIVE
 
 
 
@@ -79,7 +79,7 @@ public static final [io.github.sandydunlop.markista.model.Reference.Scope](Refer
 
 ### FOREIGN
 
-public static final [io.github.sandydunlop.markista.model.Reference.Scope](Reference.Scope.md) FOREIGN
+public static final FOREIGN FOREIGN
 
 
 

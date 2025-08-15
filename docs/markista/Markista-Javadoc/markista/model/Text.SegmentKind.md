@@ -2,11 +2,11 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 # Enum Text.SegmentKind
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
-        [java.lang.Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)&lt;[io.github.sandydunlop.markista.model.Text.SegmentKind](Text.SegmentKind.md)&gt;<br/>
+        [java.lang.Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)<[io.github.sandydunlop.markista.model.Text.SegmentKind](Text.SegmentKind.md)><br/>
                 io.github.sandydunlop.markista.model.Text.SegmentKind<br/>
 <br/>
 Enclosing Class:<br/>
-    [Text](Text.md)
+    [io.github.sandydunlop.markista.model.Text](Text.md)
 
 
 ----
@@ -18,15 +18,12 @@ Enum class that defines different kinds of segments for Text.
 
 ##Enum Constants
 
-| Enum Constant         | Description |
-|-----------------------|-------------|
-| [NONE](#none)         |             |
-| [MARKDOWN](#markdown) |             |
-| [TEXT](#text)         |             |
-| [LINK](#link)         |             |
-| [CODE](#code)         |             |
-| [START](#start)       |             |
-| [END](#end)           |             |
+| Enum Constant | Description |
+|---------------|-------------|
+| [NONE](#none) |             |
+| [TEXT](#text) |             |
+| [LINK](#link) |             |
+| [CODE](#code) |             |
 
 ## Constructor Summary
 
@@ -45,16 +42,7 @@ Enum class that defines different kinds of segments for Text.
 
 ### NONE
 
-public static final [io.github.sandydunlop.markista.model.Text.SegmentKind](Text.SegmentKind.md) NONE
-
-
-
-
----
-
-### MARKDOWN
-
-public static final [io.github.sandydunlop.markista.model.Text.SegmentKind](Text.SegmentKind.md) MARKDOWN
+public static final NONE NONE
 
 
 
@@ -63,7 +51,7 @@ public static final [io.github.sandydunlop.markista.model.Text.SegmentKind](Text
 
 ### TEXT
 
-public static final [io.github.sandydunlop.markista.model.Text.SegmentKind](Text.SegmentKind.md) TEXT
+public static final TEXT TEXT
 
 
 
@@ -72,7 +60,7 @@ public static final [io.github.sandydunlop.markista.model.Text.SegmentKind](Text
 
 ### LINK
 
-public static final [io.github.sandydunlop.markista.model.Text.SegmentKind](Text.SegmentKind.md) LINK
+public static final LINK LINK
 
 
 
@@ -81,25 +69,7 @@ public static final [io.github.sandydunlop.markista.model.Text.SegmentKind](Text
 
 ### CODE
 
-public static final [io.github.sandydunlop.markista.model.Text.SegmentKind](Text.SegmentKind.md) CODE
-
-
-
-
----
-
-### START
-
-public static final [io.github.sandydunlop.markista.model.Text.SegmentKind](Text.SegmentKind.md) START
-
-
-
-
----
-
-### END
-
-public static final [io.github.sandydunlop.markista.model.Text.SegmentKind](Text.SegmentKind.md) END
+public static final CODE CODE
 
 
 

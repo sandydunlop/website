@@ -8,7 +8,7 @@ All Implemented Interfaces:<br/>
     [jdk.javadoc.doclet.Doclet.Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.html)
 
 Enclosing Class:<br/>
-    [MarkdownDoclet](MarkdownDoclet.md)
+    [io.github.sandydunlop.markista.doclet.MarkdownDoclet](MarkdownDoclet.md)
 
 
 ----
@@ -33,19 +33,19 @@ command line.
 
 ## Constructor Summary
 
-| Constructor                                                                                                                                                                                                                                                                                                                                                 | Description |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------|
-| MarkdownDoclet.Option([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name, boolean hasArg, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) description, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) parameters) |             |
+| Constructor                                                      | Description |
+|------------------------------------------------------------------|-------------|
+| MarkdownDoclet.Option( name,  hasArg,  description,  parameters) |             |
 
 ## Method Summary
 
-| Modifier and Type                                                                                                                                                                                   | Method                                  | Description |
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------|-------------|
-| public int                                                                                                                                                                                          | [getArgumentCount](#getargumentcount)() |             |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                                 | [getDescription](#getdescription)()     |             |
-| public [Doclet.Option.Kind](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.Kind.html)                                                              | [getKind](#getkind)()                   |             |
-| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)&gt; | [getNames](#getnames)()                 |             |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                                 | [getParameters](#getparameters)()       |             |
+| Modifier and Type                                                                                                                                                                             | Method                                  | Description |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------|-------------|
+| public int                                                                                                                                                                                    | [getArgumentCount](#getargumentcount)() |             |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                           | [getDescription](#getdescription)()     |             |
+| public [Doclet.Option.Kind](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.Kind.html)                                                        | [getKind](#getkind)()                   |             |
+| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)> | [getNames](#getnames)()                 |             |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                           | [getParameters](#getparameters)()       |             |
 
 ## Field Details
 
@@ -86,10 +86,6 @@ public int getArgumentCount()
 
 
 
-**Specified By:**
-
-[Doclet.Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.html)
-
 
 ---
 
@@ -98,10 +94,6 @@ public int getArgumentCount()
 public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) getDescription()
 
 
-
-**Specified By:**
-
-[Doclet.Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.html)
 
 
 ---
@@ -112,22 +104,14 @@ public [Doclet.Option.Kind](https://docs.oracle.com/en/java/javase/24/docs/api/j
 
 
 
-**Specified By:**
-
-[Doclet.Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.html)
-
 
 ---
 
 ### getNames
 
-public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)&gt; getNames()
+public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)> getNames()
 
 
-
-**Specified By:**
-
-[Doclet.Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.html)
 
 
 ---
@@ -137,10 +121,6 @@ public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/
 public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) getParameters()
 
 
-
-**Specified By:**
-
-[Doclet.Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.html)
 
 
 ---

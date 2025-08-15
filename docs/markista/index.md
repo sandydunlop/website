@@ -8,7 +8,7 @@ Markista is a [doclet](https://docs.oracle.com/javase/8/docs/technotes/guides/ja
 
 Markista is under active development and has reached a point where it is becoming useful. There will be features that aren't completely implemented yet.
 
-As a demonstration, the Markdown Javadoc for Markista itself is [available here](https://sandydunlop.github.io/markista/javadoc/doclet/).
+As a demonstration, the Markdown Javadoc for Markista itself is [available here](https://sandydunlop.github.io/markista/Markista-Javadoc/markista/).
 It was produced with the `-private` parameter which tells Markista to document private members of classes. By default only public and protected members are documented.
 
 ## Gradle
@@ -32,7 +32,7 @@ Markista is available in the [Maven Central](https://central.sonatype.com/artifa
 
 ```groovy
 dependencies {
-    markista("io.github.sandydunlop:markista:0.1.12")
+    markista("io.github.sandydunlop:markista:0.1.15")
 }
 ```
 
@@ -57,7 +57,7 @@ javadoc {
 Markista can be used from the command line with the `javadoc` command as follows:
 
 ```bash
-javadoc -docletpath libs/markista-0.1.12.jar -doclet io.github.sandydunlop.markista.doclet.MarkdownDoclet src/main/java/my.package/Hello.java
+javadoc -docletpath libs/markista-0.1.15.jar -doclet io.github.sandydunlop.markista.doclet.MarkdownDoclet src/main/java/my.package/Hello.java
 ```
 
 ### Parameters
@@ -91,7 +91,7 @@ javadoc -docletpath libs/markista-0.1.12.jar -doclet io.github.sandydunlop.marki
 
 ## Download
 
-JAR files for version 0.1.12 are available to [download here](https://github.com/sandydunlop/markista/releases/tag/r0.1.12).
+JAR files for version 0.1.15 are available to [download here](https://github.com/sandydunlop/markista/releases/tag/r0.1.15).
 
 
 ## Source Code

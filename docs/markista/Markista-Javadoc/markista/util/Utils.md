@@ -31,7 +31,6 @@ A set of utility methods for changing between qualified and unqualified names.
 | public static boolean                                                                                       | [isValidSimpleNameChar](#isvalidsimplenamechar)(char c)                                                                                                                                                        | Checks if the given character is valid in an unqualified name.            |
 | public static boolean                                                                                       | [isValidQualifiedNameChar](#isvalidqualifiednamechar)(char c)                                                                                                                                                  | Checks if the given character is valid in a qualified name.               |
 | public static boolean                                                                                       | [isNullOrEmpty](#isnullorempty)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str)                                                                              | Checks if a string is null or empty                                       |
-| public static boolean                                                                                       | [isNullOrEmpty](#isnullorempty)([Text](../model/Text.md) text)                                                                                                                                                 | Checks if a Text object is null or empty                                  |
 | public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)  | [inOneLine](#inoneline)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str)                                                                                      | Removes new line characters from a string, replacing them with spaces     |
 
 ## Method Details
@@ -137,19 +136,6 @@ Checks if a string is null or empty
 **Returns:**
 
 True if the string is either null or empty
-
-
----
-
-### isNullOrEmpty
-
-public static boolean isNullOrEmpty([Text](../model/Text.md) text)
-
-Checks if a Text object is null or empty
-
-**Returns:**
-
-True if the Text object is either null or empty
 
 
 ---

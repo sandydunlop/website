@@ -2,7 +2,7 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 # Enum Modifier
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
-        [java.lang.Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)&lt;[io.github.sandydunlop.markista.model.Modifier](Modifier.md)&gt;<br/>
+        [java.lang.Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)<[io.github.sandydunlop.markista.model.Modifier](Modifier.md)><br/>
                 io.github.sandydunlop.markista.model.Modifier<br/>
 <br/>
 
@@ -39,9 +39,9 @@ representations.
 
 ## Constructor Summary
 
-| Constructor                                                                                              | Description                                                          |
-|----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
-| Modifier([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) s) | Constructs a Modifier enum constant with the specified string value. |
+| Constructor  | Description                                                          |
+|--------------|----------------------------------------------------------------------|
+| Modifier( s) | Constructs a Modifier enum constant with the specified string value. |
 
 ## Method Summary
 
@@ -55,7 +55,7 @@ representations.
 
 ### PUBLIC
 
-public static final [io.github.sandydunlop.markista.model.Modifier](Modifier.md) PUBLIC
+public static final PUBLIC PUBLIC
 
 
 
@@ -64,7 +64,7 @@ public static final [io.github.sandydunlop.markista.model.Modifier](Modifier.md)
 
 ### PROTECTED
 
-public static final [io.github.sandydunlop.markista.model.Modifier](Modifier.md) PROTECTED
+public static final PROTECTED PROTECTED
 
 
 
@@ -73,7 +73,7 @@ public static final [io.github.sandydunlop.markista.model.Modifier](Modifier.md)
 
 ### PRIVATE
 
-public static final [io.github.sandydunlop.markista.model.Modifier](Modifier.md) PRIVATE
+public static final PRIVATE PRIVATE
 
 
 
@@ -82,7 +82,7 @@ public static final [io.github.sandydunlop.markista.model.Modifier](Modifier.md)
 
 ### STATIC
 
-public static final [io.github.sandydunlop.markista.model.Modifier](Modifier.md) STATIC
+public static final STATIC STATIC
 
 
 
@@ -91,7 +91,7 @@ public static final [io.github.sandydunlop.markista.model.Modifier](Modifier.md)
 
 ### FINAL
 
-public static final [io.github.sandydunlop.markista.model.Modifier](Modifier.md) FINAL
+public static final FINAL FINAL
 
 
 
@@ -100,7 +100,7 @@ public static final [io.github.sandydunlop.markista.model.Modifier](Modifier.md)
 
 ### ABSTRACT
 
-public static final [io.github.sandydunlop.markista.model.Modifier](Modifier.md) ABSTRACT
+public static final ABSTRACT ABSTRACT
 
 
 
@@ -109,7 +109,7 @@ public static final [io.github.sandydunlop.markista.model.Modifier](Modifier.md)
 
 ### SYNCHRONIZED
 
-public static final [io.github.sandydunlop.markista.model.Modifier](Modifier.md) SYNCHRONIZED
+public static final SYNCHRONIZED SYNCHRONIZED
 
 
 
@@ -118,7 +118,7 @@ public static final [io.github.sandydunlop.markista.model.Modifier](Modifier.md)
 
 ### TRANSIENT
 
-public static final [io.github.sandydunlop.markista.model.Modifier](Modifier.md) TRANSIENT
+public static final TRANSIENT TRANSIENT
 
 
 
@@ -127,7 +127,7 @@ public static final [io.github.sandydunlop.markista.model.Modifier](Modifier.md)
 
 ### VOLATILE
 
-public static final [io.github.sandydunlop.markista.model.Modifier](Modifier.md) VOLATILE
+public static final VOLATILE VOLATILE
 
 
 
@@ -136,7 +136,7 @@ public static final [io.github.sandydunlop.markista.model.Modifier](Modifier.md)
 
 ### NATIVE
 
-public static final [io.github.sandydunlop.markista.model.Modifier](Modifier.md) NATIVE
+public static final NATIVE NATIVE
 
 
 
@@ -145,7 +145,7 @@ public static final [io.github.sandydunlop.markista.model.Modifier](Modifier.md)
 
 ### STRICTFP
 
-public static final [io.github.sandydunlop.markista.model.Modifier](Modifier.md) STRICTFP
+public static final STRICTFP STRICTFP
 
 
 
@@ -154,7 +154,7 @@ public static final [io.github.sandydunlop.markista.model.Modifier](Modifier.md)
 
 ### DEFAULT
 
-public static final [io.github.sandydunlop.markista.model.Modifier](Modifier.md) DEFAULT
+public static final DEFAULT DEFAULT
 
 
 
@@ -204,7 +204,7 @@ The string name of the modifier.
 
 **Overrides:**
 
-[Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)&lt;[Modifier](Modifier.md)&gt; from [Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)&lt;[Modifier](Modifier.md)&gt;
+[Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)<[Modifier](Modifier.md)>.toString
 
 
 ---

@@ -10,6 +10,7 @@ The types used to store structure and documentation information of the API.
     | [Text](Text.md)                                   | Represents a block of text.                                                                                                                                                                       |
     | [Node](Node.md)                                   | The base class for all types of nodes in the API model.                                                                                                                                           |
     | [AppliedAnnotationNode](AppliedAnnotationNode.md) | An annotation applied to a type                                                                                                                                                                   |
+    | [Pair](Pair.md)                                   |                                                                                                                                                                                                   |
     | [AnnotationTypeNode](AnnotationTypeNode.md)       | A [Node](Node.md) that represents an [Annotation](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/text/Annotation.html) class                                                   |
     | [FieldNode](FieldNode.md)                         | A class to hold information about fields within a class, interface, or enum.                                                                                                                      |
     | [ModuleNode](ModuleNode.md)                       | Represents a module node that contains directives, packages, and constant values.                                                                                                                 |
@@ -19,20 +20,20 @@ The types used to store structure and documentation information of the API.
     | [PackageNode](PackageNode.md)                     | Represents a Java package                                                                                                                                                                         |
     | [InterfaceTypeNode](InterfaceTypeNode.md)         | A node representing a Java interface type                                                                                                                                                         |
     | [ParamNode](ParamNode.md)                         | A class to hold information about method parameters.                                                                                                                                              |
-    | [AbstractTypeOwner](AbstractTypeOwner.md)         | An abstract class with a set of methods useful to other subclasses of [Node](Node.md) that can be owners of types.                                                                                |
     | [Reference](Reference.md)                         | `Reference` encapsulates links to web pages, markdown pages, modules, packages, types, and methods.                                                                                               |
     | [TypeNode](TypeNode.md)                           | Represents a type in the API model, including its kind (class, interface, enum, annotation), supertypes, implemented interfaces, constructors, methods, fields, ownership, and relevant metadata. |
     | [AnnotationElement](AnnotationElement.md)         | An element of an annotation                                                                                                                                                                       |
+    | [PackageOrTypeNode](PackageOrTypeNode.md)         | An abstract class with a set of methods useful to other subclasses of [Node](Node.md) that can be owners of types.                                                                                |
     | [OverriddenMethodNode](OverriddenMethodNode.md)   | Represents a method from another type that is overridden by a method in the type being documented.                                                                                                |
     | [ClassTypeNode](ClassTypeNode.md)                 | Represents a JAva class that extends a type node.                                                                                                                                                 |
     | [Api](Api.md)                                     | Represents the API being documented, encapsulating its modules and packages.                                                                                                                      |
+    | [AbstractPackageMember](AbstractPackageMember.md) |                                                                                                                                                                                                   |
+    | [ModuleMemberNode](ModuleMemberNode.md)           |                                                                                                                                                                                                   |
 === "Interfaces"
 
-    | Class                             | Description                                                                             |
-    |-----------------------------------|-----------------------------------------------------------------------------------------|
-    | [PackageMember](PackageMember.md) | Represents a member belonging to a package, such as a class, interface, or sub-package. |
-    | [PackageOwner](PackageOwner.md)   | Interface representing an owner of packages.                                            |
-    | [TypeOwner](TypeOwner.md)         | A TypeOwner is a [Node](Node.md) that can be set as the *owner* of another type.        |
+    | Class                                             | Description                                  |
+    |---------------------------------------------------|----------------------------------------------|
+    | [PackageOwnerInterface](PackageOwnerInterface.md) | Interface representing an owner of packages. |
 === "Enum Classes"
 
     | Class                         | Description                                                                   |

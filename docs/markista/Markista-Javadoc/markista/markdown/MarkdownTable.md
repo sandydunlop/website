@@ -25,10 +25,10 @@ The table can be rendered as Markdown text to a Writer, optionally with indentat
 
 ## Field Summary
 
-| Modifier and Type                                                                                                                                                                              | Field               | Description |
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------|
-| [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[MarkdownTable.Column](MarkdownTable.Column.md)&gt;                                                | [columns](#columns) |             |
-| [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)[]&gt; | [rows](#rows)       |             |
+| Modifier and Type                                                                                                                                                                        | Field               | Description |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------|
+| [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[MarkdownTable.Column](MarkdownTable.Column.md)>                                                | [columns](#columns) |             |
+| [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)[]> | [rows](#rows)       |             |
 
 ## Constructor Summary
 
@@ -99,7 +99,7 @@ Renders the table as Markdown text without any indentation.
 
 **Throws:**
 
-[IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
+[java.io.IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
 
 
 ---
@@ -112,7 +112,7 @@ Renders the table as Markdown text with a given indentation level (number of spa
 
 **Throws:**
 
-[IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
+[java.io.IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
 
 
 ---

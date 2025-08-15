@@ -43,17 +43,16 @@ A class that outputs a module's API documentation as Markdown.
 
 ## Method Summary
 
-| Modifier and Type                                                                                           | Method                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Description                                                                                                                                                                               |
-|-------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| public void                                                                                                 | [writeDocs](#writedocs)([Api](../model/Api.md) api)                                                                                                                                                                                                                                                                                                                                                                                                                   | Output the documentation files for the specified API                                                                                                                                      |
-| private void                                                                                                | [outputModuleDoc](#outputmoduledoc)([ModuleNode](../model/ModuleNode.md) moduleNode)                                                                                                                                                                                                                                                                                                                                                                                  | Outputs a single module's documentation as a Markdown file.                                                                                                                               |
-| private void                                                                                                | [outputModuleDirectives](#outputmoduledirectives)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) title, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) kind, [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[DirectiveNode](../model/DirectiveNode.md)&gt; directives, [Reference.Kind](../model/Reference.Kind.md) refKind) | Outputs the directives declared in a module's `module-info.java` file.                                                                                                                    |
-| private void                                                                                                | [outputModuleProvidesDirectives](#outputmoduleprovidesdirectives)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[DirectiveNode](../model/DirectiveNode.md)&gt; directives)                                                                                                                                                                                                                                              | Outputs the `provides` directives declared in a module's `module-info.java` file.                                                                                                         |
-| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)        | [multiLink](#multilink)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)&gt; names)                                                                                                                                                                                                                                           | Turns each member of a list of strings into a link to the documentation for the module, package, or type denoted by that list member.                                                     |
-| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)        | [formatDirectivePackageDoc](#formatdirectivepackagedoc)([DirectiveNode](../model/DirectiveNode.md) directive)                                                                                                                                                                                                                                                                                                                                                         | Formats the first sentence of a [DirectiveNode](../model/DirectiveNode.md)'s documentation so that it uses only one line in the markdown output and links and code are rendered properly. |
-| private void                                                                                                | [outputConstantValues](#outputconstantvalues)([ModuleNode](../model/ModuleNode.md) moduleNode)                                                                                                                                                                                                                                                                                                                                                                        | Output the *Constant Field Values* page.                                                                                                                                                  |
-| private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [escape](#escape)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) text)                                                                                                                                                                                                                                                                                                                                                  |                                                                                                                                                                                           |
-| private void                                                                                                | [outputStructureSvg](#outputstructuresvg)([ModuleNode](../model/ModuleNode.md) moduleNode)                                                                                                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                           |
+| Modifier and Type                                                                                           | Method                                                                                                                                                                                                                                                                                                                                                                                                    | Description                                                                                                                                                                               |
+|-------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| public void                                                                                                 | [writeDocs](#writedocs)([Api](../model/Api.md) api)                                                                                                                                                                                                                                                                                                                                                       | Output the documentation files for the specified API                                                                                                                                      |
+| private void                                                                                                | [outputModuleDoc](#outputmoduledoc)([ModuleNode](../model/ModuleNode.md) moduleNode)                                                                                                                                                                                                                                                                                                                      | Outputs a single module's documentation as a Markdown file.                                                                                                                               |
+| private void                                                                                                | [outputModuleDirectives](#outputmoduledirectives)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) title, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) kind, [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DirectiveNode](../model/DirectiveNode.md)> directives) | Outputs the directives declared in a module's `module-info.java` file.                                                                                                                    |
+| private void                                                                                                | [outputModuleProvidesDirectives](#outputmoduleprovidesdirectives)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DirectiveNode](../model/DirectiveNode.md)> directives)                                                                                                                                                                                        | Outputs the `provides` directives declared in a module's `module-info.java` file.                                                                                                         |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)        | [multiLink](#multilink)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Reference](../model/Reference.md)> references)                                                                                                                                                                                                                                          | Turns each member of a list of strings into a link to the documentation for the module, package, or type denoted by that list member.                                                     |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)        | [formatDirectivePackageDoc](#formatdirectivepackagedoc)([DirectiveNode](../model/DirectiveNode.md) directive)                                                                                                                                                                                                                                                                                             | Formats the first sentence of a [DirectiveNode](../model/DirectiveNode.md)'s documentation so that it uses only one line in the markdown output and links and code are rendered properly. |
+| private void                                                                                                | [outputConstantValues](#outputconstantvalues)([ModuleNode](../model/ModuleNode.md) moduleNode)                                                                                                                                                                                                                                                                                                            | Outputs the *Constant Field Values* page.                                                                                                                                                 |
+| private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [escape](#escape)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) text)                                                                                                                                                                                                                                                                                      |                                                                                                                                                                                           |
 
 ## Field Details
 
@@ -289,7 +288,7 @@ Output the documentation files for the specified API
 
 **Throws:**
 
-[IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
+[java.io.IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
 
 
 ---
@@ -304,40 +303,40 @@ are then written.
 
 **Throws:**
 
-[IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
+[java.io.IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
 
 
 ---
 
 ### outputModuleDirectives
 
-private void outputModuleDirectives([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) title, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) kind, [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[DirectiveNode](../model/DirectiveNode.md)&gt; directives, [Reference.Kind](../model/Reference.Kind.md) refKind)
+private void outputModuleDirectives([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) title, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) kind, [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DirectiveNode](../model/DirectiveNode.md)> directives)
 
 Outputs the directives declared in a module's `module-info.java` file.
 
 **Throws:**
 
-[IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
+[java.io.IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
 
 
 ---
 
 ### outputModuleProvidesDirectives
 
-private void outputModuleProvidesDirectives([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[DirectiveNode](../model/DirectiveNode.md)&gt; directives)
+private void outputModuleProvidesDirectives([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DirectiveNode](../model/DirectiveNode.md)> directives)
 
 Outputs the `provides` directives declared in a module's `module-info.java` file.
 
 **Throws:**
 
-[IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
+[java.io.IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
 
 
 ---
 
 ### multiLink
 
-private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) multiLink([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)&lt;[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)&gt; names)
+private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) multiLink([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Reference](../model/Reference.md)> references)
 
 Turns each member of a list of strings into a link to the documentation
 for the module, package, or type denoted by that list member.
@@ -360,11 +359,11 @@ code are rendered properly.
 
 private void outputConstantValues([ModuleNode](../model/ModuleNode.md) moduleNode)
 
-Output the *Constant Field Values* page.
+Outputs the *Constant Field Values* page.
 
 **Throws:**
 
-[IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
+[java.io.IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
 
 
 ---
@@ -374,19 +373,6 @@ Output the *Constant Field Values* page.
 private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) escape([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) text)
 
 
-
-
----
-
-### outputStructureSvg
-
-private void outputStructureSvg([ModuleNode](../model/ModuleNode.md) moduleNode)
-
-
-
-**Throws:**
-
-[IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
 
 
 ---

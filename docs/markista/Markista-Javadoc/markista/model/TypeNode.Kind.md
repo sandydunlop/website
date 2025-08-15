@@ -2,11 +2,11 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 # Enum TypeNode.Kind
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
-        [java.lang.Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)&lt;[io.github.sandydunlop.markista.model.TypeNode.Kind](TypeNode.Kind.md)&gt;<br/>
+        [java.lang.Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)<[io.github.sandydunlop.markista.model.TypeNode.Kind](TypeNode.Kind.md)><br/>
                 io.github.sandydunlop.markista.model.TypeNode.Kind<br/>
 <br/>
 Enclosing Class:<br/>
-    [TypeNode](TypeNode.md)
+    [io.github.sandydunlop.markista.model.TypeNode](TypeNode.md)
 
 
 ----
@@ -34,9 +34,9 @@ Enumeration representing kinds of types: None, Class, Interface, Enum, Annotatio
 
 ## Constructor Summary
 
-| Constructor                                                                                                   | Description                             |
-|---------------------------------------------------------------------------------------------------------------|-----------------------------------------|
-| TypeNode.Kind([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) s) | Constructor assigning the display name. |
+| Constructor       | Description                             |
+|-------------------|-----------------------------------------|
+| TypeNode.Kind( s) | Constructor assigning the display name. |
 
 ## Method Summary
 
@@ -50,7 +50,7 @@ Enumeration representing kinds of types: None, Class, Interface, Enum, Annotatio
 
 ### NONE
 
-public static final [io.github.sandydunlop.markista.model.TypeNode.Kind](TypeNode.Kind.md) NONE
+public static final NONE NONE
 
 
 
@@ -59,7 +59,7 @@ public static final [io.github.sandydunlop.markista.model.TypeNode.Kind](TypeNod
 
 ### CLASS
 
-public static final [io.github.sandydunlop.markista.model.TypeNode.Kind](TypeNode.Kind.md) CLASS
+public static final CLASS CLASS
 
 
 
@@ -68,7 +68,7 @@ public static final [io.github.sandydunlop.markista.model.TypeNode.Kind](TypeNod
 
 ### INTERFACE
 
-public static final [io.github.sandydunlop.markista.model.TypeNode.Kind](TypeNode.Kind.md) INTERFACE
+public static final INTERFACE INTERFACE
 
 
 
@@ -77,7 +77,7 @@ public static final [io.github.sandydunlop.markista.model.TypeNode.Kind](TypeNod
 
 ### ENUM
 
-public static final [io.github.sandydunlop.markista.model.TypeNode.Kind](TypeNode.Kind.md) ENUM
+public static final ENUM ENUM
 
 
 
@@ -86,7 +86,7 @@ public static final [io.github.sandydunlop.markista.model.TypeNode.Kind](TypeNod
 
 ### ANNOTATION
 
-public static final [io.github.sandydunlop.markista.model.TypeNode.Kind](TypeNode.Kind.md) ANNOTATION
+public static final ANNOTATION ANNOTATION
 
 
 
@@ -132,7 +132,7 @@ Returns the display name of the kind.
 
 **Overrides:**
 
-[Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)&lt;[TypeNode.Kind](TypeNode.Kind.md)&gt; from [Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)&lt;[TypeNode.Kind](TypeNode.Kind.md)&gt;
+[Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)<[TypeNode.Kind](TypeNode.Kind.md)>.toString
 
 
 ---

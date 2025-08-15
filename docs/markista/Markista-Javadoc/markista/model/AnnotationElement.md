@@ -3,8 +3,10 @@ Package [io.github.sandydunlop.markista.model](index.md)
 # Class AnnotationElement
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
         [io.github.sandydunlop.markista.model.Node](Node.md)<br/>
-                [io.github.sandydunlop.markista.model.ParamNode](ParamNode.md)<br/>
-                        io.github.sandydunlop.markista.model.AnnotationElement<br/>
+                [io.github.sandydunlop.markista.model.ModuleMemberNode](ModuleMemberNode.md)<br/>
+                        [io.github.sandydunlop.markista.model.AbstractPackageMember](AbstractPackageMember.md)<br/>
+                                [io.github.sandydunlop.markista.model.ParamNode](ParamNode.md)<br/>
+                                        io.github.sandydunlop.markista.model.AnnotationElement<br/>
 <br/>
 
 ----
@@ -22,9 +24,9 @@ An element of an annotation
 
 ## Constructor Summary
 
-| Constructor                                                                                                                                                                                                                                            | Description                      |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|
-| AnnotationElement([TypeNode](TypeNode.md) type, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) value) | Constructs an annotation element |
+| Constructor                             | Description                      |
+|-----------------------------------------|----------------------------------|
+| AnnotationElement( type,  name,  value) | Constructs an annotation element |
 
 ## Method Summary
 
