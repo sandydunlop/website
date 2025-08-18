@@ -21,10 +21,20 @@ supertypes, implemented interfaces, constructors, methods, fields, ownership, an
 
 ## Field Summary
 
-| Modifier and Type                                                                                      | Field                     | Description                                                       |
-|--------------------------------------------------------------------------------------------------------|---------------------------|-------------------------------------------------------------------|
-| protected [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [sourcePath](#sourcepath) |                                                                   |
-| protected [TypeNode.Kind](TypeNode.Kind.md)                                                            | [kind](#kind)             | The kind of this type (e.g., class, interface, enum, annotation). |
+| Modifier and Type                                                                                                                                             | Field                                               | Description                                                                    |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------|--------------------------------------------------------------------------------|
+| protected [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                        | [sourcePath](#sourcepath)                           |                                                                                |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                          | [owner](#owner)                                     | The owner of this type, usually another type or module.                        |
+| private [Reference](Reference.md)                                                                                                                             | [enclosingClassRef](#enclosingclassref)             |                                                                                |
+| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[AppliedAnnotationNode](AppliedAnnotationNode.md)>     | [appliedAnnotations](#appliedannotations)           | List of annotations applied to this type.                                      |
+| private [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Reference](Reference.md)>                                   | [implementedInterfaces](#implementedinterfaces)     | List of qualified names of interfaces implemented by this type.                |
+| private [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Pair](Pair.md)<[Reference](Reference.md), [Text](Text.md)>> | [supertypes](#supertypes)                           | List of qualified names of this type's supertypes.                             |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                          | [arrayBrackets](#arraybrackets)                     | String representation of array brackets if this type is an array (e.g., `[]`). |
+| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[MethodNode](MethodNode.md)>                           | [constructors](#constructors)                       | List of constructor methods belonging to this type.                            |
+| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[MethodNode](MethodNode.md)>                           | [methods](#methods)                                 | List of methods belonging to this type.                                        |
+| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[FieldNode](FieldNode.md)>                             | [fields](#fields)                                   | List of fields belonging to this type.                                         |
+| protected [TypeNode.Kind](TypeNode.Kind.md)                                                                                                                   | [kind](#kind)                                       | The kind of this type (e.g., class, interface, enum, annotation).              |
+| private boolean                                                                                                                                               | [hasDocumentedAnnotation](#hasdocumentedannotation) | Has the `@Documented` annotation applied                                       |
 
 ## Constructor Summary
 
@@ -79,9 +89,79 @@ supertypes, implemented interfaces, constructors, methods, fields, ownership, an
 
 ---
 
+### owner
+
+The owner of this type, usually another type or module.
+
+
+---
+
+### enclosingClassRef
+
+
+
+
+---
+
+### appliedAnnotations
+
+List of annotations applied to this type.
+
+
+---
+
+### implementedInterfaces
+
+List of qualified names of interfaces implemented by this type.
+
+
+---
+
+### supertypes
+
+List of qualified names of this type's supertypes.
+
+
+---
+
+### arrayBrackets
+
+String representation of array brackets if this type is an array (e.g., `[]`).
+
+
+---
+
+### constructors
+
+List of constructor methods belonging to this type.
+
+
+---
+
+### methods
+
+List of methods belonging to this type.
+
+
+---
+
+### fields
+
+List of fields belonging to this type.
+
+
+---
+
 ### kind
 
 The kind of this type (e.g., class, interface, enum, annotation).
+
+
+---
+
+### hasDocumentedAnnotation
+
+Has the `@Documented` annotation applied
 
 
 ---

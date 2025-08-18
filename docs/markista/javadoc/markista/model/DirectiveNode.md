@@ -17,6 +17,19 @@ Tracks the kind of directive, its name, whether it is transitive, associated pac
 implementations, and related interface information.
 
 
+## Field Summary
+
+| Modifier and Type                                                                                                                 | Field                                     | Description                                                  |
+|-----------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|--------------------------------------------------------------|
+| private static final long                                                                                                         | [serialVersionUID](#serialversionuid)     |                                                              |
+| private final [DirectiveNode.Kind](DirectiveNode.Kind.md)                                                                         | [kind](#kind)                             | The kind of this directive (e.g. REQUIRES, EXPORTS).         |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                              | [name](#name)                             | The name associated with this directive.                     |
+| private [Reference](Reference.md)                                                                                                 | [reference](#reference)                   |                                                              |
+| private boolean                                                                                                                   | [transitive](#transitive)                 | Indicates whether this directive is transitive.              |
+| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Reference](Reference.md)> | [packages](#packages)                     | List of package names associated with this directive.        |
+| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Reference](Reference.md)> | [implementations](#implementations)       | List of implementation names associated with this directive. |
+| private [Reference](Reference.md)                                                                                                 | [interfaceReference](#interfacereference) | The interface name associated with this directive, if any.   |
+
 ## Constructor Summary
 
 | Constructor                                   | Description                                                                   |
@@ -39,6 +52,71 @@ implementations, and related interface information.
 | public void                                                                                                                | [setInterface](#setinterface)([Reference](Reference.md) interfaceReference)  | Sets the interface name related to this directive.                      |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                        | [toString](#tostring)()                                                      |                                                                         |
 | public [Reference](Reference.md)                                                                                           | [getInterface](#getinterface)()                                              | Returns the interface name associated with this directive.              |
+
+## Field Details
+
+### serialVersionUID
+
+
+
+**See Also:**
+
+
+[Constant Field Values](../constant-values.md)
+
+
+
+---
+
+### kind
+
+The kind of this directive (e.g. REQUIRES, EXPORTS).
+
+
+---
+
+### name
+
+The name associated with this directive.
+
+
+---
+
+### reference
+
+
+
+
+---
+
+### transitive
+
+Indicates whether this directive is transitive.
+
+
+---
+
+### packages
+
+List of package names associated with this directive.
+
+
+---
+
+### implementations
+
+List of implementation names associated with this directive.
+
+
+---
+
+### interfaceReference
+
+The interface name associated with this directive, if any.
+
+
+---
+
 
 ## Method Details
 

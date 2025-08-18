@@ -31,6 +31,12 @@ Enum representing different kinds/types of references.
 | [PRIMITIVE](#primitive)     |             |
 | [VOID](#void)               |             |
 
+## Constructor Summary
+
+| Constructor      | Description |
+|------------------|-------------|
+| Reference.Kind() |             |
+
 ## Method Summary
 
 | Modifier and Type                                                    | Method                                                                                                                 | Description |

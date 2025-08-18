@@ -14,6 +14,13 @@ Package [io.github.sandydunlop.markista.model](index.md)
 A class to hold information about method parameters.
 
 
+## Field Summary
+
+| Modifier and Type                                                                                    | Field                 | Description                |
+|------------------------------------------------------------------------------------------------------|-----------------------|----------------------------|
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [typeName](#typename) | The type of this parameter |
+| private [Text](Text.md)                                                                              | [typeText](#typetext) |                            |
+
 ## Constructor Summary
 
 | Constructor             | Description                                          |
@@ -28,6 +35,23 @@ A class to hold information about method parameters.
 | public void                                                                                         | [setTypeName](#settypename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) type) | Sets the type of this parameter.         |
 | public [Text](Text.md)                                                                              | [getTypeText](#gettypetext)()                                                                                                  | Returns the type Text of this parameter. |
 | public void                                                                                         | [setTypeText](#settypetext)([Text](Text.md) text)                                                                              | Sets the type Text of this parameter.    |
+
+## Field Details
+
+### typeName
+
+The type of this parameter
+
+
+---
+
+### typeText
+
+
+
+
+---
+
 
 ## Method Details
 

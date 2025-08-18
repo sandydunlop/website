@@ -15,6 +15,13 @@ Package [io.github.sandydunlop.markista.model](index.md)
 A class to hold information about fields within a class, interface, or enum.
 
 
+## Field Summary
+
+| Modifier and Type                                                                                              | Field                                             | Description                                        |
+|----------------------------------------------------------------------------------------------------------------|---------------------------------------------------|----------------------------------------------------|
+| private [Serializable](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Serializable.html) | [constantValue](#constantvalue)                   | The constant value assigned to this field, if any. |
+| private [Reference](Reference.md)                                                                              | [constantValueReference](#constantvaluereference) |                                                    |
+
 ## Constructor Summary
 
 | Constructor             | Description                                          |
@@ -30,6 +37,23 @@ A class to hold information about fields within a class, interface, or enum.
 | public void                                                                                                   | [setConstantValueReference](#setconstantvaluereference)([Reference](Reference.md) ref)                                                                      |                                                                       |
 | public [Reference](Reference.md)                                                                              | [getConstantValueReference](#getconstantvaluereference)()                                                                                                   |                                                                       |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)           | [fullSignature](#fullsignature)()                                                                                                                           | Returns the full signature of the field including modifiers and name. |
+
+## Field Details
+
+### constantValue
+
+The constant value assigned to this field, if any.
+
+
+---
+
+### constantValueReference
+
+
+
+
+---
+
 
 ## Method Details
 

@@ -26,6 +26,12 @@ Enum representing the kind of a Markdown token.
 | [PARENS_TAG](#parens_tag)     |             |
 | [END](#end)                   |             |
 
+## Constructor Summary
+
+| Constructor                | Description |
+|----------------------------|-------------|
+| MarkdownParser.TokenKind() |             |
+
 ## Method Summary
 
 | Modifier and Type                                                             | Method                                                                                                                 | Description |

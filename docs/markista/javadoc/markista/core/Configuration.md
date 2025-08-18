@@ -17,6 +17,28 @@ of the documentation output, such as output directory, verbosity, and which memb
 All configuration fields are static and global and the constructor is hidden to prevent instantiation.
 
 
+## Field Summary
+
+| Modifier and Type                                                                                                                                                                                     | Field                                             | Description                                                                                      |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------|--------------------------------------------------------------------------------------------------|
+| private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                           | [docTitle](#doctitle)                             | The title of the API documentation being generated                                               |
+| private static boolean                                                                                                                                                                                | [createExternalLinks](#createexternallinks)       | If true, links to types defined outside the API being documented will be generated               |
+| private static boolean                                                                                                                                                                                | [documentPrivateMembers](#documentprivatemembers) | If true, private members of packages and types will be included in the generated documentation   |
+| private static boolean                                                                                                                                                                                | [flattenPackages](#flattenpackages)               | If true, empty package directories will not be created, leading to a flatter directory structure |
+| private static boolean                                                                                                                                                                                | [flattenModules](#flattenmodules)                 | If true, module directories will not be created, leading to a flatter directory structure        |
+| private static boolean                                                                                                                                                                                | [useContentTabs](#usecontenttabs)                 | If true, summary tables will be created inside Markdown content tabs.                            |
+| private static boolean                                                                                                                                                                                | [verbose](#verbose)                               | If true, logging will include status information.                                                |
+| private static [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)> | [modulePathList](#modulepathlist)                 | The list of module paths passed in from the Javadoc command line                                 |
+| private static [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)> | [linkExternal](#linkexternal)                     | The list of modules that have local Javadoc that can be linked to                                |
+| private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                           | [projectPath](#projectpath)                       |                                                                                                  |
+| private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                           | [extensionsOrder](#extensionsorder)               |                                                                                                  |
+
+## Constructor Summary
+
+| Constructor     | Description             |
+|-----------------|-------------------------|
+| Configuration() | The default constructor |
+
 ## Method Summary
 
 | Modifier and Type                                                                                                                                                                                    | Method                                                                                                                                        | Description                                                                                       |
@@ -43,6 +65,87 @@ All configuration fields are static and global and the constructor is hidden to 
 | public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                           | [getProjectPath](#getprojectpath)()                                                                                                           |                                                                                                   |
 | public static void                                                                                                                                                                                   | [setExtensionsOrder](#setextensionsorder)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) order) |                                                                                                   |
 | public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                           | [getExtensionsOrder](#getextensionsorder)()                                                                                                   |                                                                                                   |
+
+## Field Details
+
+### docTitle
+
+The title of the API documentation being generated
+
+
+---
+
+### createExternalLinks
+
+If true, links to types defined outside the API being documented will be generated
+
+
+---
+
+### documentPrivateMembers
+
+If true, private members of packages and types will be included in the generated documentation
+
+
+---
+
+### flattenPackages
+
+If true, empty package directories will not be created, leading to a flatter directory structure
+
+
+---
+
+### flattenModules
+
+If true, module directories will not be created, leading to a flatter directory structure
+
+
+---
+
+### useContentTabs
+
+If true, summary tables will be created inside Markdown content tabs.
+See [mkdocs-material](https://squidfunk.github.io/mkdocs-material/reference/content-tabs/) for more information.
+
+
+---
+
+### verbose
+
+If true, logging will include status information.
+
+
+---
+
+### modulePathList
+
+The list of module paths passed in from the Javadoc command line
+
+
+---
+
+### linkExternal
+
+The list of modules that have local Javadoc that can be linked to
+
+
+---
+
+### projectPath
+
+
+
+
+---
+
+### extensionsOrder
+
+
+
+
+---
+
 
 ## Method Details
 

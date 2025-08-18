@@ -16,6 +16,16 @@ Represents the API being documented, encapsulating its modules and packages.
 Provides methods to add and retrieve modules, packages, and types, as well as sorting them.
 
 
+## Field Summary
+
+| Modifier and Type                                                                                                                                         | Field                                     | Description                               |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|-------------------------------------------|
+| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[ModuleNode](ModuleNode.md)>                       | [modules](#modules)                       | List of modules included in the API.      |
+| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[PackageNode](PackageNode.md)>                     | [packages](#packages)                     | List of packages included in the API.     |
+| private final [ModuleNode](ModuleNode.md)                                                                                                                 | [unnamedModule](#unnamedmodule)           | Represents the unnamed module in the API. |
+| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[AppliedAnnotationNode](AppliedAnnotationNode.md)> | [appliedAnnotations](#appliedannotations) | List of applied annotations.              |
+| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Reference](Reference.md)>                         | [links](#links)                           | List of links.                            |
+
 ## Constructor Summary
 
 | Constructor | Description                                           |
@@ -41,6 +51,44 @@ Provides methods to add and retrieve modules, packages, and types, as well as so
 | public [TypeNode](TypeNode.md)                                                                                                                     | [getTypeNode](#gettypenode)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName)       | Retrieves a TypeNode based on its fully qualified name.                                      |
 | public void                                                                                                                                        | [sort](#sort)()                                                                                                                               | Sorts the types in descending order by qualified name and sorts all child types recursively. |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                | [commonBase](#commonbase)()                                                                                                                   | Computes the longest common base package prefix shared by all packages in this API.          |
+
+## Field Details
+
+### modules
+
+List of modules included in the API.
+
+
+---
+
+### packages
+
+List of packages included in the API.
+
+
+---
+
+### unnamedModule
+
+Represents the unnamed module in the API.
+
+
+---
+
+### appliedAnnotations
+
+List of applied annotations.
+
+
+---
+
+### links
+
+List of links.
+
+
+---
+
 
 ## Method Details
 

@@ -23,6 +23,13 @@ The table can be rendered as Markdown text to a Writer, optionally with indentat
 |-------------------|-------------------------------------------------|---------------------------------------------------------------------|
 | public            | [MarkdownTable.Column](MarkdownTable.Column.md) | A class to represent the name and width of a column within a table. |
 
+## Field Summary
+
+| Modifier and Type                                                                                                                                                                        | Field               | Description |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------|
+| [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[MarkdownTable.Column](MarkdownTable.Column.md)>                                                | [columns](#columns) |             |
+| [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)[]> | [rows](#rows)       |             |
+
 ## Constructor Summary
 
 | Constructor     | Description                        |
@@ -37,6 +44,23 @@ The table can be rendered as Markdown text to a Writer, optionally with indentat
 | public [MarkdownTable](MarkdownTable.md) | [addRow](#addrow)([String\](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String\.html)[] valueStrings) | Adds a row of data to the table.                                                      |
 | public void                              | [render](#render)([Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) writer)             | Renders the table as Markdown text without any indentation.                           |
 | public void                              | [render](#render)([Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) writer, int indent) | Renders the table as Markdown text with a given indentation level (number of spaces). |
+
+## Field Details
+
+### columns
+
+
+
+
+---
+
+### rows
+
+
+
+
+---
+
 
 ## Method Details
 

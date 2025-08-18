@@ -26,6 +26,12 @@ Enum representing the scope of references.
 | [NATIVE](#native)   |             |
 | [FOREIGN](#foreign) |             |
 
+## Constructor Summary
+
+| Constructor       | Description |
+|-------------------|-------------|
+| Reference.Scope() |             |
+
 ## Method Summary
 
 | Modifier and Type                                                     | Method                                                                                                                 | Description |

@@ -26,6 +26,20 @@ The class works internally with the Api model for cross-referencing and linking 
 This class is for internal use within the documentation generator and is not thread-safe.
 
 
+## Field Summary
+
+| Modifier and Type                                                                                                                            | Field                       | Description                                                                                                                                                                           |
+|----------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| static [Context](../core/Context.md)                                                                                                         | [ctx](#ctx)                 | The Context singleton instance providing access to the current documentation generation context, including configuration, current module/package/type names, and reporting utilities. |
+| private static [DocletEnvironment](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/DocletEnvironment.html) | [environment](#environment) |                                                                                                                                                                                       |
+| private static [Api](../model/Api.md)                                                                                                        | [api](#api)                 | The Api model representing the entire documented API structure, including modules, packages, types, and members used for cross-referencing and navigation.                            |
+
+## Constructor Summary
+
+| Constructor | Description |
+|-------------|-------------|
+| TypeUtils() |             |
+
 ## Method Summary
 
 | Modifier and Type                                                                                                                             | Method                                                                                                                                                                                                                                                                                                                                                                                                                                            | Description                                                                                                                                                |
@@ -69,10 +83,37 @@ This class is for internal use within the documentation generator and is not thr
 | public static void                                                                                                                            | [setImplementations](#setimplementations)([DirectiveNode](../model/DirectiveNode.md) directiveNode, [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<? extends [TypeElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/TypeElement.html)> implementations)                                                                                                | Adds implementation type names to a DirectiveNode.                                                                                                         |
 | public static [TypeNode](../model/TypeNode.md)                                                                                                | [getFieldType](#getfieldtype)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) className, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) fieldName)                                                                                                                                                                                                     | Gets the field type as a TypeNode for the specified class name and field name.                                                                             |
 | public static [TypeNode](../model/TypeNode.md)                                                                                                | [getParamType](#getparamtype)([ExecutableElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ExecutableElement.html) method, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) fieldName)                                                                                                                                                               | Gets the parameter type as a TypeNode for the specified parameter name in the method.                                                                      |
+| private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                   | [getPackageName](#getpackagename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedTypeName)                                                                                                                                                                                                                                                                                                 | Extracts the package name from a qualified type name.                                                                                                      |
 | public static [PackageElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/PackageElement.html) | [getEnclosingPackageElement](#getenclosingpackageelement)([Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html) element)                                                                                                                                                                                                                                                              | Recursively finds the enclosing PackageElement of a given element.                                                                                         |
 | public static [TypeElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/TypeElement.html)       | [getEnclosingTypeElement](#getenclosingtypeelement)([Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html) element)                                                                                                                                                                                                                                                                    | Recursively finds the enclosing TypeElement (class, interface, enum, annotation) for the given element.                                                    |
 | public static void                                                                                                                            | [setPackageSourcePath](#setpackagesourcepath)([PackageNode](../model/PackageNode.md) pkg, [PackageElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/PackageElement.html) ee)                                                                                                                                                                                                                     |                                                                                                                                                            |
 | public static [File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html)                                          | [getPackageInfoFile](#getpackageinfofile)([PackageElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/PackageElement.html) packageElement)                                                                                                                                                                                                                                                         | Retrieves the `package-info.java` file associated with the specified  .                                                                                    |
+
+## Field Details
+
+### ctx
+
+The Context singleton instance providing access to the current documentation generation context,
+including configuration, current module/package/type names, and reporting utilities.
+
+
+---
+
+### environment
+
+
+
+
+---
+
+### api
+
+The Api model representing the entire documented API structure,
+including modules, packages, types, and members used for cross-referencing and navigation.
+
+
+---
+
 
 ## Method Details
 
@@ -521,6 +562,19 @@ Gets the parameter type as a TypeNode for the specified parameter name in the me
 **Returns:**
 
 A TypeNode for the parameter's type, or null if not found.
+
+
+---
+
+### getPackageName
+
+private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) getPackageName([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedTypeName)
+
+Extracts the package name from a qualified type name.
+
+**Returns:**
+
+The package name portion or null if input null.
 
 
 ---

@@ -17,10 +17,17 @@ The base class for all types of nodes in the API model.
 
 ## Field Summary
 
-| Modifier and Type                                                                                  | Field                           | Description                                     |
-|----------------------------------------------------------------------------------------------------|---------------------------------|-------------------------------------------------|
-| protected [UUID](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/UUID.html) | [uuid](#uuid)                   | A unique identifier                             |
-| protected [Text](Text.md)                                                                          | [firstSentence](#firstsentence) | The first sentence of the Javadoc for this node |
+| Modifier and Type                                                                                                           | Field                                 | Description                                           |
+|-----------------------------------------------------------------------------------------------------------------------------|---------------------------------------|-------------------------------------------------------|
+| private static final long                                                                                                   | [serialVersionUID](#serialversionuid) |                                                       |
+| protected [UUID](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/UUID.html)                          | [uuid](#uuid)                         | A unique identifier                                   |
+| private [Deprecation](Deprecation.md)                                                                                       | [deprecation](#deprecation)           | The deprecation status of the node                    |
+| private [Text](Text.md)                                                                                                     | [deprecationText](#deprecationtext)   | Text describing the deprecation state of the node     |
+| private [Text](Text.md)                                                                                                     | [since](#since)                       | Text showing when this node was added to the API      |
+| protected [Text](Text.md)                                                                                                   | [firstSentence](#firstsentence)       | The first sentence of the Javadoc for this node       |
+| private final [Text](Text.md)                                                                                               | [body](#body)                         | The body text of the Javadoc for this node            |
+| private final [Text](Text.md)                                                                                               | [fullBody](#fullbody)                 | The full text of the Javadoc for this node            |
+| private [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Reference](Reference.md)> | [references](#references)             | A list of references specified in this node's Javadoc |
 
 ## Constructor Summary
 
@@ -50,6 +57,19 @@ The base class for all types of nodes in the API model.
 
 ## Field Details
 
+### serialVersionUID
+
+
+
+**See Also:**
+
+
+[Constant Field Values](../constant-values.md)
+
+
+
+---
+
 ### uuid
 
 A unique identifier
@@ -57,9 +77,51 @@ A unique identifier
 
 ---
 
+### deprecation
+
+The deprecation status of the node
+
+
+---
+
+### deprecationText
+
+Text describing the deprecation state of the node
+
+
+---
+
+### since
+
+Text showing when this node was added to the API
+
+
+---
+
 ### firstSentence
 
 The first sentence of the Javadoc for this node
+
+
+---
+
+### body
+
+The body text of the Javadoc for this node
+
+
+---
+
+### fullBody
+
+The full text of the Javadoc for this node
+
+
+---
+
+### references
+
+A list of references specified in this node's Javadoc
 
 
 ---

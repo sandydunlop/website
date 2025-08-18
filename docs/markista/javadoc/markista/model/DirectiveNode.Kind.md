@@ -27,6 +27,12 @@ Enum representing the various kinds of directives possible in a module declarati
 | [USES](#uses)         |             |
 | [PROVIDES](#provides) |             |
 
+## Constructor Summary
+
+| Constructor          | Description |
+|----------------------|-------------|
+| DirectiveNode.Kind() |             |
+
 ## Method Summary
 
 | Modifier and Type                                                        | Method                                                                                                                 | Description |

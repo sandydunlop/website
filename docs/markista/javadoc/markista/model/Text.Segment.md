@@ -18,6 +18,21 @@ Enclosing Class:<br/>
 Represents a segment of the Text with its kind, content, and optional link.
 
 
+## Field Summary
+
+| Modifier and Type                                                                                    | Field                                 | Description                                           |
+|------------------------------------------------------------------------------------------------------|---------------------------------------|-------------------------------------------------------|
+| private static final long                                                                            | [serialVersionUID](#serialversionuid) |                                                       |
+| private [Text.SegmentKind](Text.SegmentKind.md)                                                      | [kind](#kind)                         | The kind/type of this segment.                        |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [text](#text)                         | The textual content of this segment.                  |
+| private [Reference](Reference.md)                                                                    | [link](#link)                         | The associated link if the segment represents a link. |
+
+## Constructor Summary
+
+| Constructor    | Description                                    |
+|----------------|------------------------------------------------|
+| Text.Segment() | Private constructor to restrict instantiation. |
+
 ## Method Summary
 
 | Modifier and Type                                                                                   | Method                                                                                                                 | Description                                        |
@@ -30,6 +45,43 @@ Represents a segment of the Text with its kind, content, and optional link.
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getText](#gettext)()                                                                                                  | Returns the text content of this segment.          |
 | public [Text.Segment](Text.Segment.md)                                                              | [setLink](#setlink)([Reference](Reference.md) link)                                                                    | Sets the link value of this segment.               |
 | public [Reference](Reference.md)                                                                    | [getLink](#getlink)()                                                                                                  | Returns the link associated with this segment.     |
+
+## Field Details
+
+### serialVersionUID
+
+
+
+**See Also:**
+
+
+[Constant Field Values](../constant-values.md)
+
+
+
+---
+
+### kind
+
+The kind/type of this segment.
+
+
+---
+
+### text
+
+The textual content of this segment.
+
+
+---
+
+### link
+
+The associated link if the segment represents a link.
+
+
+---
+
 
 ## Method Details
 

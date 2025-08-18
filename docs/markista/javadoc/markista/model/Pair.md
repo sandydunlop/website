@@ -13,6 +13,14 @@ All Implemented Interfaces:<br/>
 <span style="font-family: monospace;">public class __Pair__</span>
 
 
+## Field Summary
+
+| Modifier and Type         | Field                                 | Description |
+|---------------------------|---------------------------------------|-------------|
+| private static final long | [serialVersionUID](#serialversionuid) |             |
+| private L                 | [l](#l)                               |             |
+| private R                 | [r](#r)                               |             |
+
 ## Constructor Summary
 
 | Constructor  | Description |
@@ -31,6 +39,36 @@ All Implemented Interfaces:<br/>
 | public boolean                                                                                      | [equals](#equals)([Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html) other) |             |
 | public int                                                                                          | [hashCode](#hashcode)()                                                                                               |             |
 | public static [Pair](Pair.md)<A, B>                                                                 | [of](#of)(A a, B b)                                                                                                   |             |
+
+## Field Details
+
+### serialVersionUID
+
+
+
+**See Also:**
+
+
+[Constant Field Values](../constant-values.md)
+
+
+
+---
+
+### l
+
+
+
+
+---
+
+### r
+
+
+
+
+---
+
 
 ## Method Details
 

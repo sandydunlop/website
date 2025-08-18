@@ -15,8 +15,32 @@ Enclosing Class:<br/>
 A class to represent the name and width of a column within a table.
 
 
+## Field Summary
+
+| Modifier and Type                                                                            | Field           | Description |
+|----------------------------------------------------------------------------------------------|-----------------|-------------|
+| [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [name](#name)   |             |
+| int                                                                                          | [width](#width) |             |
+
 ## Constructor Summary
 
 | Constructor                 | Description                                               |
 |-----------------------------|-----------------------------------------------------------|
 | MarkdownTable.Column( name) | Constructs a new `Column` object with the specified name. |
+
+## Field Details
+
+### name
+
+
+
+
+---
+
+### width
+
+
+
+
+---
+

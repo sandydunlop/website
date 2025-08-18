@@ -25,6 +25,12 @@ Enum class that defines different kinds of segments for Text.
 | [LINK](#link) |             |
 | [CODE](#code) |             |
 
+## Constructor Summary
+
+| Constructor        | Description |
+|--------------------|-------------|
+| Text.SegmentKind() |             |
+
 ## Method Summary
 
 | Modifier and Type                                                      | Method                                                                                                                 | Description |

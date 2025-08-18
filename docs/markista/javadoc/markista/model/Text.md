@@ -22,6 +22,19 @@ can be of kind text, markdown, link, or code for easy retrieval and manipulation
 |-------------------|---------------------------------|-----------------------------------------------------------------------------|
 | public static     | [Text.Segment](Text.Segment.md) | Represents a segment of the Text with its kind, content, and optional link. |
 
+## Field Summary
+
+| Modifier and Type                                                                                                                 | Field                                 | Description                                         |
+|-----------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|-----------------------------------------------------|
+| private static final long                                                                                                         | [serialVersionUID](#serialversionuid) |                                                     |
+| private [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Text.Segment](Text.Segment.md)> | [segments](#segments)                 | List of text segments composing this Text instance. |
+
+## Constructor Summary
+
+| Constructor | Description                                            |
+|-------------|--------------------------------------------------------|
+| Text()      | Private constructor to prevent external instantiation. |
+
 ## Method Summary
 
 | Modifier and Type                                                                                                                | Method                                                                                                               | Description                                                 |
@@ -37,6 +50,29 @@ can be of kind text, markdown, link, or code for easy retrieval and manipulation
 | public [Text](Text.md)                                                                                                           | [append](#append)([Text.Segment](Text.Segment.md) segment)                                                           | Appends a single segment to this Text.                      |
 | public [Text](Text.md)                                                                                                           | [append](#append)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) text) | Appends a single text segment to this Text.                 |
 | public [Text](Text.md)                                                                                                           | [append](#append)([Text](Text.md) text)                                                                              | Appends all segments from another Text instance.            |
+
+## Field Details
+
+### serialVersionUID
+
+
+
+**See Also:**
+
+
+[Constant Field Values](../constant-values.md)
+
+
+
+---
+
+### segments
+
+List of text segments composing this Text instance.
+
+
+---
+
 
 ## Method Details
 

@@ -14,6 +14,19 @@ Package [io.github.sandydunlop.markista.model](index.md)
 Contains information about a method being documented
 
 
+## Field Summary
+
+| Modifier and Type                                                                                                                 | Field                                   | Description                                                         |
+|-----------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------|---------------------------------------------------------------------|
+| private [Text](Text.md)                                                                                                           | [returnDescription](#returndescription) | Description of the method's return value.                           |
+| private [Reference](Reference.md)                                                                                                 | [specifiedBy](#specifiedby)             | Name of the interface or specification this method is specified by. |
+| private final [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                        | [returnTypeName](#returntypename)       | The return type of this method.                                     |
+| private [OverriddenMethodNode](OverriddenMethodNode.md)                                                                           | [overrides](#overrides)                 | Information about the method that this method overrides, if any.    |
+| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[ParamNode](ParamNode.md)> | [params](#params)                       | List of parameters for this method.                                 |
+| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Reference](Reference.md)> | [thrownTypes](#throwntypes)             | List of exception types that this method declares it can throw.     |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                              | [ownerName](#ownername)                 | The type (class/interface) that owns this method.                   |
+| private [Text](Text.md)                                                                                                           | [returnTypeText](#returntypetext)       |                                                                     |
+
 ## Constructor Summary
 
 | Constructor                    | Description                                                             |
@@ -40,6 +53,65 @@ Contains information about a method being documented
 | public [Text](Text.md)                                                                                                     | [getReturnTypeText](#getreturntypetext)()                                                                                         | Returns the type Text of this parameter.                                                       |
 | public void                                                                                                                | [setReturnTypeText](#setreturntypetext)([Text](Text.md) text)                                                                     | Sets the type Text of this parameter.                                                          |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                        | [signature](#signature)()                                                                                                         | Computes and returns the method signature string, including return type, name, and parameters. |
+
+## Field Details
+
+### returnDescription
+
+Description of the method's return value.
+
+
+---
+
+### specifiedBy
+
+Name of the interface or specification this method is specified by.
+
+
+---
+
+### returnTypeName
+
+The return type of this method.
+
+
+---
+
+### overrides
+
+Information about the method that this method overrides, if any.
+
+
+---
+
+### params
+
+List of parameters for this method.
+
+
+---
+
+### thrownTypes
+
+List of exception types that this method declares it can throw.
+
+
+---
+
+### ownerName
+
+The type (class/interface) that owns this method.
+
+
+---
+
+### returnTypeText
+
+
+
+
+---
+
 
 ## Method Details
 

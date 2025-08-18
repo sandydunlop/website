@@ -15,6 +15,12 @@ Package [io.github.sandydunlop.markista.model](index.md)
 An element of an annotation
 
 
+## Field Summary
+
+| Modifier and Type                                                                                          | Field           | Description |
+|------------------------------------------------------------------------------------------------------------|-----------------|-------------|
+| private final [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [value](#value) |             |
+
 ## Constructor Summary
 
 | Constructor                                 | Description                      |
@@ -26,6 +32,16 @@ An element of an annotation
 | Modifier and Type                                                                                   | Method                  | Description                               |
 |-----------------------------------------------------------------------------------------------------|-------------------------|-------------------------------------------|
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getValue](#getvalue)() | Gets the value of this annotation element |
+
+## Field Details
+
+### value
+
+
+
+
+---
+
 
 ## Method Details
 

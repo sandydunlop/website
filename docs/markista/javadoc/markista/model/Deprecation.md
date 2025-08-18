@@ -21,6 +21,12 @@ Enum representing the deprecation status of an element
 | [FOR_REMOVAL](#for_removal) |             |
 | [DEPRECATED](#deprecated)   |             |
 
+## Constructor Summary
+
+| Constructor   | Description |
+|---------------|-------------|
+| Deprecation() |             |
+
 ## Method Summary
 
 | Modifier and Type                                                 | Method                                                                                                                 | Description |

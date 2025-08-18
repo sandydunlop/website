@@ -27,6 +27,28 @@ This class is not thread-safe.
 |-------------------|-----------------------------------------------------|-------------|
 | public            | [Context.NameSimplifier](Context.NameSimplifier.md) |             |
 
+## Field Summary
+
+| Modifier and Type                                                                                                   | Field                                                 | Description                                                                                                                                                |
+|---------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| private static final [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)   | [DEFAULT_OUTPUT_DIRECTORY](#default_output_directory) | The default output directory                                                                                                                               |
+| private static [Context](Context.md)                                                                                | [instance](#instance)                                 | The instance of this class that is returned to callers of getInstance()                                                                                    |
+| private [Reporter](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Reporter.html) | [reporter](#reporter)                                 | The  used for logging messages                                                                                                                             |
+| private [Api](../model/Api.md)                                                                                      | [api](#api)                                           | The Api model representing the entire documented API structure, including modules, packages, types, and members used for cross-referencing and navigation. |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [outputDirectory](#outputdirectory)                   | The directory the documentation is being generated in                                                                                                      |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [flattenedDirectories](#flatteneddirectories)         | The base section of the directory structure that contains no  documentation and can be skipped when creating directories.                                  |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [moduleName](#modulename)                             | The name of the module currently being documented                                                                                                          |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [packageName](#packagename)                           | The name of the package currently being documented                                                                                                         |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [typeName](#typename)                                 | The name of the type currently being documented                                                                                                            |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [methodName](#methodname)                             | The name of the method currently being documented                                                                                                          |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [fieldName](#fieldname)                               | The name of the field currently being documented                                                                                                           |
+
+## Constructor Summary
+
+| Constructor | Description             |
+|-------------|-------------------------|
+| Context()   | The default constructor |
+
 ## Method Summary
 
 | Modifier and Type                                                                                                  | Method                                                                                                                                                  | Description                                                                                                                                       |
@@ -52,9 +74,102 @@ This class is not thread-safe.
 | public void                                                                                                        | [reportInfo](#reportinfo)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) message)                         | Reports an informational message through the reporter.                                                                                            |
 | public void                                                                                                        | [reportWarning](#reportwarning)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) message)                   | Reports a warning message including location information.                                                                                         |
 | public void                                                                                                        | [reportError](#reporterror)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) message)                       | Reports an error message including location information.                                                                                          |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)               | [location](#location)()                                                                                                                                 | Returns a string describing the current location context in module, package, type, method, and field.                                             |
 | public [File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html)                      | [getPackageDirectory](#getpackagedirectory)()                                                                                                           | Constructs a File object representing the directory path corresponding to the current output directory, module, and fully qualified package name. |
 | public [Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html)                  | [createFileInPackage](#createfileinpackage)()                                                                                                           | Creates a Writer for writing a file corresponding to the current context (type name, package, module).                                            |
+| [File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html)                             | [createPackageFilePath](#createpackagefilepath)()                                                                                                       |                                                                                                                                                   |
 | public [Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html)                  | [createFileInModule](#createfileinmodule)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) fileName)        | Creates a Writer for writing a module-level file inside the module's directory.                                                                   |
+| [File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html)                             | [createModuleFilePath](#createmodulefilepath)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) fileName)    |                                                                                                                                                   |
+| private [Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html)                 | [createFileInternal](#createfileinternal)([File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html) file)                  | Helper method that creates a Writer for a file inside the specified directory.                                                                    |
+| private char                                                                                                       | [pathSeparator](#pathseparator)()                                                                                                                       | Returns the character used to separate parts of filesystem paths for output directory construction.                                               |
+
+## Field Details
+
+### DEFAULT_OUTPUT_DIRECTORY
+
+The default output directory
+
+**See Also:**
+
+
+[Constant Field Values](../constant-values.md)
+
+
+
+---
+
+### instance
+
+The instance of this class that is returned to callers of getInstance()
+
+
+---
+
+### reporter
+
+The  used for logging messages
+
+
+---
+
+### api
+
+The Api model representing the entire documented API structure,
+including modules, packages, types, and members used for cross-referencing and navigation.
+
+
+---
+
+### outputDirectory
+
+The directory the documentation is being generated in
+
+
+---
+
+### flattenedDirectories
+
+The base section of the directory structure that contains no 
+documentation and can be skipped when creating directories.
+
+
+---
+
+### moduleName
+
+The name of the module currently being documented
+
+
+---
+
+### packageName
+
+The name of the package currently being documented
+
+
+---
+
+### typeName
+
+The name of the type currently being documented
+
+
+---
+
+### methodName
+
+The name of the method currently being documented
+
+
+---
+
+### fieldName
+
+The name of the field currently being documented
+
+
+---
+
 
 ## Method Details
 
@@ -279,6 +394,20 @@ Reports an error message including location information.
 
 ---
 
+### location
+
+private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) location()
+
+Returns a string describing the current location context in module, package, type, method, and field.
+Used to append context details to diagnostic messages.
+
+**Returns:**
+
+A formatted multi-line string describing the current location, or empty if no location info.
+
+
+---
+
 ### getPackageDirectory
 
 public [File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html) getPackageDirectory()
@@ -312,6 +441,15 @@ A Writer object for writing the file.
 
 ---
 
+### createPackageFilePath
+
+[File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html) createPackageFilePath()
+
+
+
+
+---
+
 ### createFileInModule
 
 public [Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) createFileInModule([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) fileName)
@@ -326,6 +464,46 @@ A Writer object for writing the file.
 **Throws:**
 
 [java.io.IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
+
+
+---
+
+### createModuleFilePath
+
+[File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html) createModuleFilePath([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) fileName)
+
+
+
+
+---
+
+### createFileInternal
+
+private [Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) createFileInternal([File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html) file)
+
+Helper method that creates a Writer for a file inside the specified directory.
+
+**Returns:**
+
+A Writer for the file.
+
+**Throws:**
+
+[java.io.IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
+
+
+---
+
+### pathSeparator
+
+private char pathSeparator()
+
+Returns the character used to separate parts of filesystem paths for output directory construction.
+This method works around a macOS bug where `File.pathSeparatorChar` wrongly returns ':' instead of '/'.
+
+**Returns:**
+
+The platform-appropriate character for separating path components.
 
 
 ---

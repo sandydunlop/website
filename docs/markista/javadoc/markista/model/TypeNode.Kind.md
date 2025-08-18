@@ -26,6 +26,18 @@ Enumeration representing kinds of types: None, Class, Interface, Enum, Annotatio
 | [ENUM](#enum)             |             |
 | [ANNOTATION](#annotation) |             |
 
+## Field Summary
+
+| Modifier and Type                                                                                          | Field         | Description                    |
+|------------------------------------------------------------------------------------------------------------|---------------|--------------------------------|
+| private final [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [name](#name) | The display name for the kind. |
+
+## Constructor Summary
+
+| Constructor       | Description                             |
+|-------------------|-----------------------------------------|
+| TypeNode.Kind( s) | Constructor assigning the display name. |
+
 ## Method Summary
 
 | Modifier and Type                                                                                   | Method                                                                                                                 | Description                           |
@@ -77,6 +89,16 @@ public static final ENUM ENUM
 public static final ANNOTATION ANNOTATION
 
 
+
+
+---
+
+
+## Field Details
+
+### name
+
+The display name for the kind.
 
 
 ---

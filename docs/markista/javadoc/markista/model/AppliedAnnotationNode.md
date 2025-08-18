@@ -13,6 +13,15 @@ Package [io.github.sandydunlop.markista.model](index.md)
 An annotation applied to a type
 
 
+## Field Summary
+
+| Modifier and Type                                                                                                                                 | Field                     | Description |
+|---------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------|-------------|
+| private boolean                                                                                                                                   | [custom](#custom)         |             |
+| private boolean                                                                                                                                   | [documented](#documented) |             |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                              | [typeName](#typename)     |             |
+| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[AnnotationElement](AnnotationElement.md)> | [elements](#elements)     |             |
+
 ## Constructor Summary
 
 | Constructor                  | Description                                             |
@@ -32,6 +41,37 @@ An annotation applied to a type
 | public void                                                                                                                                | [setTypeName](#settypename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) type) | Sets the type of this annotation.                                                                                                            |
 | public void                                                                                                                                | [addElement](#addelement)([AnnotationElement](AnnotationElement.md) element)                                                   | Adds an element to this annotation                                                                                                           |
 | public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[AnnotationElement](AnnotationElement.md)> | [getElements](#getelements)()                                                                                                  | Returns the list of elements of this annotation.                                                                                             |
+
+## Field Details
+
+### custom
+
+
+
+
+---
+
+### documented
+
+
+
+
+---
+
+### typeName
+
+
+
+
+---
+
+### elements
+
+
+
+
+---
+
 
 ## Method Details
 

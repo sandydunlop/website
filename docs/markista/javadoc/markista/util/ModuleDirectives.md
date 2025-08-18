@@ -14,6 +14,18 @@ the information provided by [Directive](https://docs.oracle.com/en/java/javase/2
 objects scanned by the [ApiScanner](ApiScanner.md).
 
 
+## Field Summary
+
+| Modifier and Type                                                                                                                            | Field                       | Description |
+|----------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------|-------------|
+| private static [DocletEnvironment](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/DocletEnvironment.html) | [environment](#environment) |             |
+
+## Constructor Summary
+
+| Constructor        | Description |
+|--------------------|-------------|
+| ModuleDirectives() |             |
+
 ## Method Summary
 
 | Modifier and Type                                        | Method                                                                                                                                                                                                           | Description                                                                                                                                                                                                                                |
@@ -25,6 +37,16 @@ objects scanned by the [ApiScanner](ApiScanner.md).
 | public static [DirectiveNode](../model/DirectiveNode.md) | [createOpensDirective](#createopensdirective)([ModuleElement.Directive](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ModuleElement.Directive.html) directive)       | Creates a DirectiveNode representing an [opens](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/OpensDirective.html) directive.                                                                  |
 | public static [DirectiveNode](../model/DirectiveNode.md) | [createUsesDirective](#createusesdirective)([ModuleElement.Directive](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ModuleElement.Directive.html) directive)         | Creates a DirectiveNode representing a [uses](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/UsesDirective.html) directive.                                                                     |
 | public static [DirectiveNode](../model/DirectiveNode.md) | [createProvidesDirective](#createprovidesdirective)([ModuleElement.Directive](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ModuleElement.Directive.html) directive) | Creates a DirectiveNode representing a [provides](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ProvidesDirective.html) directive.                                                             |
+
+## Field Details
+
+### environment
+
+
+
+
+---
+
 
 ## Method Details
 

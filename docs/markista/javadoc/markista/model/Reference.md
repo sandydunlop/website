@@ -15,6 +15,22 @@ All Implemented Interfaces:<br/>
 `Reference` encapsulates links to web pages, markdown pages, modules, packages, types, and methods.
 
 
+## Field Summary
+
+| Modifier and Type                                                                                    | Field                                 | Description                          |
+|------------------------------------------------------------------------------------------------------|---------------------------------------|--------------------------------------|
+| private static final long                                                                            | [serialVersionUID](#serialversionuid) |                                      |
+| private [Reference.Kind](Reference.Kind.md)                                                          | [kind](#kind)                         |                                      |
+| private [Reference.Scope](Reference.Scope.md)                                                        | [scope](#scope)                       |                                      |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [label](#label)                       |                                      |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [className](#classname)               |                                      |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [uri](#uri)                           |                                      |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [anchor](#anchor)                     |                                      |
+| private boolean                                                                                      | [resolved](#resolved)                 |                                      |
+| private boolean                                                                                      | [hasAnchor](#hasanchor)               |                                      |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [origin](#origin)                     | The package the link is coming from. |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [target](#target)                     |                                      |
+
 ## Constructor Summary
 
 | Constructor                       | Description                                                                     |
@@ -53,6 +69,92 @@ All Implemented Interfaces:<br/>
 | public void                                                                                         | [setHasAnchor](#sethasanchor)(boolean b)                                                                                                | Specifies if this link is to an anchor                |
 | public boolean                                                                                      | [hasAnchor](#hasanchor)()                                                                                                               | Gets the anchor status of this reference.             |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [toString](#tostring)()                                                                                                                 |                                                       |
+
+## Field Details
+
+### serialVersionUID
+
+
+
+**See Also:**
+
+
+[Constant Field Values](../constant-values.md)
+
+
+
+---
+
+### kind
+
+
+
+
+---
+
+### scope
+
+
+
+
+---
+
+### label
+
+
+
+
+---
+
+### className
+
+
+
+
+---
+
+### uri
+
+
+
+
+---
+
+### anchor
+
+
+
+
+---
+
+### resolved
+
+
+
+
+---
+
+### hasAnchor
+
+
+
+
+---
+
+### origin
+
+The package the link is coming from. Empty string means there is no package. Null means it hasn't been set yet.
+
+
+---
+
+### target
+
+
+
+
+---
+
 
 ## Method Details
 

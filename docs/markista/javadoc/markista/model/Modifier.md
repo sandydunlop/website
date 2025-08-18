@@ -31,6 +31,18 @@ representations.
 | [STRICTFP](#strictfp)         |             |
 | [DEFAULT](#default)           |             |
 
+## Field Summary
+
+| Modifier and Type                                                                                          | Field         | Description                                |
+|------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------|
+| private final [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [name](#name) | The string representation of the modifier. |
+
+## Constructor Summary
+
+| Constructor  | Description                                                          |
+|--------------|----------------------------------------------------------------------|
+| Modifier( s) | Constructs a Modifier enum constant with the specified string value. |
+
 ## Method Summary
 
 | Modifier and Type                                                                                   | Method                                                                                                                 | Description                                         |
@@ -145,6 +157,16 @@ public static final STRICTFP STRICTFP
 public static final DEFAULT DEFAULT
 
 
+
+
+---
+
+
+## Field Details
+
+### name
+
+The string representation of the modifier.
 
 
 ---

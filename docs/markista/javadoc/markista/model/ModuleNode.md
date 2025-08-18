@@ -14,6 +14,17 @@ Represents a module node that contains directives, packages, and constant values
 Implements the PackageOwner interface to manage contained packages.
 
 
+## Field Summary
+
+| Modifier and Type                                                                                                                         | Field                             | Description |
+|-------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------|-------------|
+| private final [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                | [name](#name)                     |             |
+| private boolean                                                                                                                           | [hasModuleInfo](#hasmoduleinfo)   |             |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                      | [sourcePath](#sourcepath)         |             |
+| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DirectiveNode](DirectiveNode.md)> | [directives](#directives)         |             |
+| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[PackageNode](PackageNode.md)>     | [packages](#packages)             |             |
+| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[FieldNode](FieldNode.md)>         | [constantValues](#constantvalues) |             |
+
 ## Constructor Summary
 
 | Constructor       | Description                                         |
@@ -40,6 +51,51 @@ Implements the PackageOwner interface to manage contained packages.
 | public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DirectiveNode](DirectiveNode.md)> | [getOpens](#getopens)()                                                                                                            | Returns the list of 'opens' directives in this module.      |
 | public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DirectiveNode](DirectiveNode.md)> | [getUses](#getuses)()                                                                                                              | Returns the list of 'uses' directives in this module.       |
 | public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DirectiveNode](DirectiveNode.md)> | [getProvides](#getprovides)()                                                                                                      | Returns the list of 'provides' directives in this module.   |
+
+## Field Details
+
+### name
+
+
+
+
+---
+
+### hasModuleInfo
+
+
+
+
+---
+
+### sourcePath
+
+
+
+
+---
+
+### directives
+
+
+
+
+---
+
+### packages
+
+
+
+
+---
+
+### constantValues
+
+
+
+
+---
+
 
 ## Method Details
 

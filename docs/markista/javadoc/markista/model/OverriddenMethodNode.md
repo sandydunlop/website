@@ -15,6 +15,16 @@ All Implemented Interfaces:<br/>
 Represents a method from another type that is overridden by a method in the type being documented.
 
 
+## Field Summary
+
+| Modifier and Type                                                                                          | Field                                     | Description                                                            |
+|------------------------------------------------------------------------------------------------------------|-------------------------------------------|------------------------------------------------------------------------|
+| private static final long                                                                                  | [serialVersionUID](#serialversionuid)     |                                                                        |
+| private final [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [qualifiedClassName](#qualifiedclassname) | Fully qualified name of the class that declares the overridden method. |
+| private [Text](Text.md)                                                                                    | [text](#text)                             |                                                                        |
+| private final [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [methodName](#methodname)                 | Name of the overridden method.                                         |
+| private [Reference](Reference.md)                                                                          | [reference](#reference)                   |                                                                        |
+
 ## Constructor Summary
 
 | Constructor                                            | Description                                                                             |
@@ -31,6 +41,50 @@ Represents a method from another type that is overridden by a method in the type
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getMethodName](#getmethodname)()                            | Returns the name of the overridden method.                       |
 | public void                                                                                         | [setText](#settext)([Text](Text.md) text)                    |                                                                  |
 | public [Text](Text.md)                                                                              | [getText](#gettext)()                                        |                                                                  |
+
+## Field Details
+
+### serialVersionUID
+
+
+
+**See Also:**
+
+
+[Constant Field Values](../constant-values.md)
+
+
+
+---
+
+### qualifiedClassName
+
+Fully qualified name of the class that declares the overridden method.
+
+
+---
+
+### text
+
+
+
+
+---
+
+### methodName
+
+Name of the overridden method.
+
+
+---
+
+### reference
+
+
+
+
+---
+
 
 ## Method Details
 

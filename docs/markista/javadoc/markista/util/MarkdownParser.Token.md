@@ -16,6 +16,14 @@ Represents a token of the parsed Markdown input.
 A token has a kind and associated text content, and links to the next token in sequence.
 
 
+## Field Summary
+
+| Modifier and Type                                                                            | Field         | Description |
+|----------------------------------------------------------------------------------------------|---------------|-------------|
+| [MarkdownParser.Token](MarkdownParser.Token.md)                                              | [next](#next) |             |
+| [MarkdownParser.TokenKind](MarkdownParser.TokenKind.md)                                      | [kind](#kind) |             |
+| [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [text](#text) |             |
+
 ## Constructor Summary
 
 | Constructor              | Description                              |
@@ -31,6 +39,30 @@ A token has a kind and associated text content, and links to the next token in s
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getText](#gettext)()                                                                                               | Returns the text content of the token.                  |
 | public void                                                                                         | [setNext](#setnext)([MarkdownParser.Token](MarkdownParser.Token.md) token)                                          | Sets the next token in the sequence.                    |
 | public [MarkdownParser.Token](MarkdownParser.Token.md)                                              | [getNext](#getnext)()                                                                                               | Returns the next token, or an END token if none exists. |
+
+## Field Details
+
+### next
+
+
+
+
+---
+
+### kind
+
+
+
+
+---
+
+### text
+
+
+
+
+---
+
 
 ## Method Details
 

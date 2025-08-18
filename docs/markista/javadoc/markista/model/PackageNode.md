@@ -15,6 +15,15 @@ Package [io.github.sandydunlop.markista.model](index.md)
 Represents a Java package
 
 
+## Field Summary
+
+| Modifier and Type                                                                                                                     | Field                             | Description |
+|---------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------|-------------|
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                  | [moduleName](#modulename)         |             |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                  | [sourcePath](#sourcepath)         |             |
+| private boolean                                                                                                                       | [hasPackageInfo](#haspackageinfo) |             |
+| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[PackageNode](PackageNode.md)> | [packages](#packages)             |             |
+
 ## Constructor Summary
 
 | Constructor        | Description                                                         |
@@ -34,6 +43,37 @@ Represents a Java package
 | public [Text](Text.md)                                                                                                         | [getDescription](#getdescription)()                                                                                                  | Returns the description text for this package, typically the first sentence. |
 | public void                                                                                                                    | [setHasPackageInfo](#sethaspackageinfo)(boolean b)                                                                                   |                                                                              |
 | public boolean                                                                                                                 | [hasPackageInfo](#haspackageinfo)()                                                                                                  |                                                                              |
+
+## Field Details
+
+### moduleName
+
+
+
+
+---
+
+### sourcePath
+
+
+
+
+---
+
+### hasPackageInfo
+
+
+
+
+---
+
+### packages
+
+
+
+
+---
+
 
 ## Method Details
 

@@ -22,6 +22,21 @@ to handle instances of the option found on the
 command line.
 
 
+## Field Summary
+
+| Modifier and Type                                                                                          | Field                       | Description |
+|------------------------------------------------------------------------------------------------------------|-----------------------------|-------------|
+| private final [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [name](#name)               |             |
+| private final boolean                                                                                      | [hasArg](#hasarg)           |             |
+| private final [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [description](#description) |             |
+| private final [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [parameters](#parameters)   |             |
+
+## Constructor Summary
+
+| Constructor                                                      | Description |
+|------------------------------------------------------------------|-------------|
+| MarkdownDoclet.Option( name,  hasArg,  description,  parameters) |             |
+
 ## Method Summary
 
 | Modifier and Type                                                                                                                                                                             | Method                                  | Description |
@@ -31,6 +46,37 @@ command line.
 | public [Doclet.Option.Kind](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.Kind.html)                                                        | [getKind](#getkind)()                   |             |
 | public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)> | [getNames](#getnames)()                 |             |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                           | [getParameters](#getparameters)()       |             |
+
+## Field Details
+
+### name
+
+
+
+
+---
+
+### hasArg
+
+
+
+
+---
+
+### description
+
+
+
+
+---
+
+### parameters
+
+
+
+
+---
+
 
 ## Method Details
 

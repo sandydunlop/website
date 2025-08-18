@@ -19,11 +19,12 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 ## Field Summary
 
-| Modifier and Type                                                                                      | Field                           | Description                                                                  |
-|--------------------------------------------------------------------------------------------------------|---------------------------------|------------------------------------------------------------------------------|
-| protected [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [simpleName](#simplename)       | The simple form of the node's name                                           |
-| protected [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [qualifiedName](#qualifiedname) | The canonical form of the type's name                                        |
-| protected [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [packageName](#packagename)     | A [PackageNode](PackageNode.md) representing the package the node belongs to |
+| Modifier and Type                                                                                                             | Field                           | Description                                                                  |
+|-------------------------------------------------------------------------------------------------------------------------------|---------------------------------|------------------------------------------------------------------------------|
+| private final [Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<[Modifier](Modifier.md)> | [modifiers](#modifiers)         | A list of the modifiers a node has                                           |
+| protected [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                        | [simpleName](#simplename)       | The simple form of the node's name                                           |
+| protected [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                        | [qualifiedName](#qualifiedname) | The canonical form of the type's name                                        |
+| protected [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                        | [packageName](#packagename)     | A [PackageNode](PackageNode.md) representing the package the node belongs to |
 
 ## Constructor Summary
 
@@ -44,6 +45,13 @@ Package [io.github.sandydunlop.markista.model](index.md)
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                    | [getModifiersString](#getmodifiersstring)()                                                                                              | Returns a string representation of modifiers. |
 
 ## Field Details
+
+### modifiers
+
+A list of the modifiers a node has
+
+
+---
 
 ### simpleName
 
