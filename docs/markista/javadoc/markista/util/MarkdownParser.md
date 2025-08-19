@@ -47,6 +47,8 @@ and END indicating the end of the sequence.
 | Constructor         | Description                                                                       |
 |---------------------|-----------------------------------------------------------------------------------|
 | MarkdownParser( md) | Creates a new MarkdownParser and immediately parses the provided Markdown string. |
+| MarkdownParser( md) | Creates a new MarkdownParser and immediately parses the provided Markdown string. |
+| MarkdownParser( md) | Creates a new MarkdownParser and immediately parses the provided Markdown string. |
 
 ## Method Summary
 
@@ -62,6 +64,12 @@ and END indicating the end of the sequence.
 | private void                                           | [saveParensTag](#saveparenstag)()                                               | Saves the content between the most recent pair of parentheses as a PARENS_TAG token. |
 | private void                                           | [saveToken](#savetoken)([MarkdownParser.Token](MarkdownParser.Token.md) token)  | Adds the specified token to the list and links it to the previously saved token.     |
 | public [MarkdownParser.Token](MarkdownParser.Token.md) | [firstToken](#firsttoken)()                                                     | Returns the first token in the parsed sequence.                                      |
+| private boolean                                        | [handleOpenParenthesis](#handleopenparenthesis)(char prevChar)                  | Handles an open parenthesis '(' encountered immediately after closing bracket ''.    |
+| private boolean                                        | [handleCloseParenthesis](#handlecloseparenthesis)(boolean parensFollowBrackets) | Handles the close parenthesis ')' encountered.                                       |
+| private void                                           | [saveToken](#savetoken)([MarkdownParser.Token](MarkdownParser.Token.md) token)  | Adds the specified token to the list and links it to the previously saved token.     |
+| private boolean                                        | [handleOpenParenthesis](#handleopenparenthesis)(char prevChar)                  | Handles an open parenthesis '(' encountered immediately after closing bracket ''.    |
+| private boolean                                        | [handleCloseParenthesis](#handlecloseparenthesis)(boolean parensFollowBrackets) | Handles the close parenthesis ')' encountered.                                       |
+| private void                                           | [saveToken](#savetoken)([MarkdownParser.Token](MarkdownParser.Token.md) token)  | Adds the specified token to the list and links it to the previously saved token.     |
 
 ## Field Details
 
@@ -235,6 +243,78 @@ If no tokens exist, returns an END kind token.
 **Returns:**
 
 The first token or an END token if none exist.
+
+
+---
+
+### handleOpenParenthesis
+
+private boolean handleOpenParenthesis(char prevChar)
+
+Handles an open parenthesis '(' encountered immediately after closing bracket ''.
+
+**Returns:**
+
+true if parentheses follow brackets, false otherwise.
+
+
+---
+
+### handleCloseParenthesis
+
+private boolean handleCloseParenthesis(boolean parensFollowBrackets)
+
+Handles the close parenthesis ')' encountered.
+If parentheses follow brackets, saves a parentheses-tag token.
+
+**Returns:**
+
+Always returns false to reset parsing state for parentheses.
+
+
+---
+
+### saveToken
+
+private void saveToken([MarkdownParser.Token](MarkdownParser.Token.md) token)
+
+Adds the specified token to the list and links it to the previously saved token.
+
+
+---
+
+### handleOpenParenthesis
+
+private boolean handleOpenParenthesis(char prevChar)
+
+Handles an open parenthesis '(' encountered immediately after closing bracket ''.
+
+**Returns:**
+
+true if parentheses follow brackets, false otherwise.
+
+
+---
+
+### handleCloseParenthesis
+
+private boolean handleCloseParenthesis(boolean parensFollowBrackets)
+
+Handles the close parenthesis ')' encountered.
+If parentheses follow brackets, saves a parentheses-tag token.
+
+**Returns:**
+
+Always returns false to reset parsing state for parentheses.
+
+
+---
+
+### saveToken
+
+private void saveToken([MarkdownParser.Token](MarkdownParser.Token.md) token)
+
+Adds the specified token to the list and links it to the previously saved token.
 
 
 ---

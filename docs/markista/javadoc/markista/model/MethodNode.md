@@ -32,6 +32,8 @@ Contains information about a method being documented
 | Constructor                    | Description                                                             |
 |--------------------------------|-------------------------------------------------------------------------|
 | MethodNode( returnType,  name) | Constructs a MethodNode with the specified return type and method name. |
+| MethodNode( returnType,  name) | Constructs a MethodNode with the specified return type and method name. |
+| MethodNode( returnType,  name) | Constructs a MethodNode with the specified return type and method name. |
 
 ## Method Summary
 
@@ -53,6 +55,20 @@ Contains information about a method being documented
 | public [Text](Text.md)                                                                                                     | [getReturnTypeText](#getreturntypetext)()                                                                                         | Returns the type Text of this parameter.                                                       |
 | public void                                                                                                                | [setReturnTypeText](#setreturntypetext)([Text](Text.md) text)                                                                     | Sets the type Text of this parameter.                                                          |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                        | [signature](#signature)()                                                                                                         | Computes and returns the method signature string, including return type, name, and parameters. |
+| public void                                                                                                                | [setOverriddenMethod](#setoverriddenmethod)([OverriddenMethodNode](OverriddenMethodNode.md) overrides)                            | Sets the overridden method information that this method overrides.                             |
+| public void                                                                                                                | [addParam](#addparam)([ParamNode](ParamNode.md) param)                                                                            | Adds a parameter to this method.                                                               |
+| public void                                                                                                                | [addThrownType](#addthrowntype)([Reference](Reference.md) name)                                                                   | Adds an exception type that this method declares it throws.                                    |
+| public void                                                                                                                | [setOwnerName](#setownername)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) owner) | Sets the owning type (class/interface) of this method.                                         |
+| public void                                                                                                                | [setSpecifiedBy](#setspecifiedby)([Reference](Reference.md) interfaceName)                                                        | Sets the interface or specification name this method is specified by.                          |
+| public void                                                                                                                | [setReturnDescription](#setreturndescription)([Text](Text.md) text)                                                               | Sets the description of the method's return value.                                             |
+| public void                                                                                                                | [setReturnTypeText](#setreturntypetext)([Text](Text.md) text)                                                                     | Sets the type Text of this parameter.                                                          |
+| public void                                                                                                                | [setOverriddenMethod](#setoverriddenmethod)([OverriddenMethodNode](OverriddenMethodNode.md) overrides)                            | Sets the overridden method information that this method overrides.                             |
+| public void                                                                                                                | [addParam](#addparam)([ParamNode](ParamNode.md) param)                                                                            | Adds a parameter to this method.                                                               |
+| public void                                                                                                                | [addThrownType](#addthrowntype)([Reference](Reference.md) name)                                                                   | Adds an exception type that this method declares it throws.                                    |
+| public void                                                                                                                | [setOwnerName](#setownername)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) owner) | Sets the owning type (class/interface) of this method.                                         |
+| public void                                                                                                                | [setSpecifiedBy](#setspecifiedby)([Reference](Reference.md) interfaceName)                                                        | Sets the interface or specification name this method is specified by.                          |
+| public void                                                                                                                | [setReturnDescription](#setreturndescription)([Text](Text.md) text)                                                               | Sets the description of the method's return value.                                             |
+| public void                                                                                                                | [setReturnTypeText](#setreturntypetext)([Text](Text.md) text)                                                                     | Sets the type Text of this parameter.                                                          |
 
 ## Field Details
 
@@ -292,6 +308,132 @@ Example format: "java.lang.String methodName(int, java.util.List)"
 **Returns:**
 
 the method signature as a String.
+
+
+---
+
+### setOverriddenMethod
+
+public void setOverriddenMethod([OverriddenMethodNode](OverriddenMethodNode.md) overrides)
+
+Sets the overridden method information that this method overrides.
+
+
+---
+
+### addParam
+
+public void addParam([ParamNode](ParamNode.md) param)
+
+Adds a parameter to this method.
+
+
+---
+
+### addThrownType
+
+public void addThrownType([Reference](Reference.md) name)
+
+Adds an exception type that this method declares it throws.
+
+
+---
+
+### setOwnerName
+
+public void setOwnerName([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) owner)
+
+Sets the owning type (class/interface) of this method.
+
+
+---
+
+### setSpecifiedBy
+
+public void setSpecifiedBy([Reference](Reference.md) interfaceName)
+
+Sets the interface or specification name this method is specified by.
+
+
+---
+
+### setReturnDescription
+
+public void setReturnDescription([Text](Text.md) text)
+
+Sets the description of the method's return value.
+
+
+---
+
+### setReturnTypeText
+
+public void setReturnTypeText([Text](Text.md) text)
+
+Sets the type Text of this parameter.
+
+
+---
+
+### setOverriddenMethod
+
+public void setOverriddenMethod([OverriddenMethodNode](OverriddenMethodNode.md) overrides)
+
+Sets the overridden method information that this method overrides.
+
+
+---
+
+### addParam
+
+public void addParam([ParamNode](ParamNode.md) param)
+
+Adds a parameter to this method.
+
+
+---
+
+### addThrownType
+
+public void addThrownType([Reference](Reference.md) name)
+
+Adds an exception type that this method declares it throws.
+
+
+---
+
+### setOwnerName
+
+public void setOwnerName([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) owner)
+
+Sets the owning type (class/interface) of this method.
+
+
+---
+
+### setSpecifiedBy
+
+public void setSpecifiedBy([Reference](Reference.md) interfaceName)
+
+Sets the interface or specification name this method is specified by.
+
+
+---
+
+### setReturnDescription
+
+public void setReturnDescription([Text](Text.md) text)
+
+Sets the description of the method's return value.
+
+
+---
+
+### setReturnTypeText
+
+public void setReturnTypeText([Text](Text.md) text)
+
+Sets the type Text of this parameter.
 
 
 ---

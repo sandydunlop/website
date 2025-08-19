@@ -29,6 +29,8 @@ Represents a Java package
 | Constructor        | Description                                                         |
 |--------------------|---------------------------------------------------------------------|
 | PackageNode( name) | Constructs a PackageNode with the specified qualified package name. |
+| PackageNode( name) | Constructs a PackageNode with the specified qualified package name. |
+| PackageNode( name) | Constructs a PackageNode with the specified qualified package name. |
 
 ## Method Summary
 
@@ -43,6 +45,14 @@ Represents a Java package
 | public [Text](Text.md)                                                                                                         | [getDescription](#getdescription)()                                                                                                  | Returns the description text for this package, typically the first sentence. |
 | public void                                                                                                                    | [setHasPackageInfo](#sethaspackageinfo)(boolean b)                                                                                   |                                                                              |
 | public boolean                                                                                                                 | [hasPackageInfo](#haspackageinfo)()                                                                                                  |                                                                              |
+| public void                                                                                                                    | [setModuleName](#setmodulename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) module) | Sets the module for this package.                                            |
+| public void                                                                                                                    | [setSourcePath](#setsourcepath)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) path)   |                                                                              |
+| public void                                                                                                                    | [addPackage](#addpackage)([PackageNode](PackageNode.md) packageNode)                                                                 | Adds a subpackage to this package.                                           |
+| public void                                                                                                                    | [setHasPackageInfo](#sethaspackageinfo)(boolean b)                                                                                   |                                                                              |
+| public void                                                                                                                    | [setModuleName](#setmodulename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) module) | Sets the module for this package.                                            |
+| public void                                                                                                                    | [setSourcePath](#setsourcepath)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) path)   |                                                                              |
+| public void                                                                                                                    | [addPackage](#addpackage)([PackageNode](PackageNode.md) packageNode)                                                                 | Adds a subpackage to this package.                                           |
+| public void                                                                                                                    | [setHasPackageInfo](#sethaspackageinfo)(boolean b)                                                                                   |                                                                              |
 
 ## Field Details
 
@@ -164,6 +174,78 @@ public void setHasPackageInfo(boolean b)
 ### hasPackageInfo
 
 public boolean hasPackageInfo()
+
+
+
+
+---
+
+### setModuleName
+
+public void setModuleName([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) module)
+
+Sets the module for this package.
+
+
+---
+
+### setSourcePath
+
+public void setSourcePath([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) path)
+
+
+
+
+---
+
+### addPackage
+
+public void addPackage([PackageNode](PackageNode.md) packageNode)
+
+Adds a subpackage to this package.
+
+
+---
+
+### setHasPackageInfo
+
+public void setHasPackageInfo(boolean b)
+
+
+
+
+---
+
+### setModuleName
+
+public void setModuleName([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) module)
+
+Sets the module for this package.
+
+
+---
+
+### setSourcePath
+
+public void setSourcePath([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) path)
+
+
+
+
+---
+
+### addPackage
+
+public void addPackage([PackageNode](PackageNode.md) packageNode)
+
+Adds a subpackage to this package.
+
+
+---
+
+### setHasPackageInfo
+
+public void setHasPackageInfo(boolean b)
 
 
 

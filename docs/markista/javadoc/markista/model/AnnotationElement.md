@@ -26,6 +26,8 @@ An element of an annotation
 | Constructor                                 | Description                      |
 |---------------------------------------------|----------------------------------|
 | AnnotationElement( typeName,  name,  value) | Constructs an annotation element |
+| AnnotationElement( typeName,  name,  value) | Constructs an annotation element |
+| AnnotationElement( typeName,  name,  value) | Constructs an annotation element |
 
 ## Method Summary
 

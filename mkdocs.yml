@@ -31,6 +31,7 @@ theme:
     text: Barlow
     code: Roboto Mono
   features:
+    - content.code.copy
     - navigation.indexes
   palette:
     # Palette toggle for automatic mode
@@ -68,7 +69,9 @@ extra:
       as to measure the effectiveness of our documentation and whether users
       find what they're searching for. With your consent, you're helping us to
       make our documentation better.
-
+  analytics:
+    provider: google
+    property: G-GMRC7B45YN
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/sandydunlop

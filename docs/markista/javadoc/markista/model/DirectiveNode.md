@@ -36,6 +36,10 @@ implementations, and related interface information.
 |-----------------------------------------------|-------------------------------------------------------------------------------|
 | DirectiveNode( kind,  reference,  transitive) | Constructs a DirectiveNode with the specified kind, name and transitive flag. |
 | DirectiveNode( kind,  reference)              | Constructs a DirectiveNode with the specified kind and name.                  |
+| DirectiveNode( kind,  reference,  transitive) | Constructs a DirectiveNode with the specified kind, name and transitive flag. |
+| DirectiveNode( kind,  reference)              | Constructs a DirectiveNode with the specified kind and name.                  |
+| DirectiveNode( kind,  reference,  transitive) | Constructs a DirectiveNode with the specified kind, name and transitive flag. |
+| DirectiveNode( kind,  reference)              | Constructs a DirectiveNode with the specified kind and name.                  |
 
 ## Method Summary
 
@@ -52,6 +56,12 @@ implementations, and related interface information.
 | public void                                                                                                                | [setInterface](#setinterface)([Reference](Reference.md) interfaceReference)  | Sets the interface name related to this directive.                      |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                        | [toString](#tostring)()                                                      |                                                                         |
 | public [Reference](Reference.md)                                                                                           | [getInterface](#getinterface)()                                              | Returns the interface name associated with this directive.              |
+| public void                                                                                                                | [addPackage](#addpackage)([Reference](Reference.md) reference)               | Adds a package reference to this directive's package list.              |
+| public void                                                                                                                | [addImplementation](#addimplementation)([Reference](Reference.md) reference) | Adds the reference to an implementation associated with this directive. |
+| public void                                                                                                                | [setInterface](#setinterface)([Reference](Reference.md) interfaceReference)  | Sets the interface name related to this directive.                      |
+| public void                                                                                                                | [addPackage](#addpackage)([Reference](Reference.md) reference)               | Adds a package reference to this directive's package list.              |
+| public void                                                                                                                | [addImplementation](#addimplementation)([Reference](Reference.md) reference) | Adds the reference to an implementation associated with this directive. |
+| public void                                                                                                                | [setInterface](#setinterface)([Reference](Reference.md) interfaceReference)  | Sets the interface name related to this directive.                      |
 
 ## Field Details
 
@@ -239,6 +249,60 @@ Returns the interface name associated with this directive.
 **Returns:**
 
 the interface name, or an empty string if none set.
+
+
+---
+
+### addPackage
+
+public void addPackage([Reference](Reference.md) reference)
+
+Adds a package reference to this directive's package list.
+
+
+---
+
+### addImplementation
+
+public void addImplementation([Reference](Reference.md) reference)
+
+Adds the reference to an implementation associated with this directive.
+
+
+---
+
+### setInterface
+
+public void setInterface([Reference](Reference.md) interfaceReference)
+
+Sets the interface name related to this directive.
+
+
+---
+
+### addPackage
+
+public void addPackage([Reference](Reference.md) reference)
+
+Adds a package reference to this directive's package list.
+
+
+---
+
+### addImplementation
+
+public void addImplementation([Reference](Reference.md) reference)
+
+Adds the reference to an implementation associated with this directive.
+
+
+---
+
+### setInterface
+
+public void setInterface([Reference](Reference.md) interfaceReference)
+
+Sets the interface name related to this directive.
 
 
 ---

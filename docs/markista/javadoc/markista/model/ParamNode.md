@@ -26,6 +26,8 @@ A class to hold information about method parameters.
 | Constructor             | Description                                          |
 |-------------------------|------------------------------------------------------|
 | ParamNode( type,  name) | Constructs a ParamNode with the given type and name. |
+| ParamNode( type,  name) | Constructs a ParamNode with the given type and name. |
+| ParamNode( type,  name) | Constructs a ParamNode with the given type and name. |
 
 ## Method Summary
 
@@ -34,6 +36,10 @@ A class to hold information about method parameters.
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getTypeName](#gettypename)()                                                                                                  | Returns the type of this parameter.      |
 | public void                                                                                         | [setTypeName](#settypename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) type) | Sets the type of this parameter.         |
 | public [Text](Text.md)                                                                              | [getTypeText](#gettypetext)()                                                                                                  | Returns the type Text of this parameter. |
+| public void                                                                                         | [setTypeText](#settypetext)([Text](Text.md) text)                                                                              | Sets the type Text of this parameter.    |
+| public void                                                                                         | [setTypeName](#settypename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) type) | Sets the type of this parameter.         |
+| public void                                                                                         | [setTypeText](#settypetext)([Text](Text.md) text)                                                                              | Sets the type Text of this parameter.    |
+| public void                                                                                         | [setTypeName](#settypename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) type) | Sets the type of this parameter.         |
 | public void                                                                                         | [setTypeText](#settypetext)([Text](Text.md) text)                                                                              | Sets the type Text of this parameter.    |
 
 ## Field Details
@@ -86,6 +92,42 @@ Returns the type Text of this parameter.
 **Returns:**
 
 The Text representing the parameter's type.
+
+
+---
+
+### setTypeText
+
+public void setTypeText([Text](Text.md) text)
+
+Sets the type Text of this parameter.
+
+
+---
+
+### setTypeName
+
+public void setTypeName([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) type)
+
+Sets the type of this parameter.
+
+
+---
+
+### setTypeText
+
+public void setTypeText([Text](Text.md) text)
+
+Sets the type Text of this parameter.
+
+
+---
+
+### setTypeName
+
+public void setTypeName([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) type)
+
+Sets the type of this parameter.
 
 
 ---

@@ -26,6 +26,7 @@ Does not reference TypeNode to avoid cycles.
 | public abstract boolean                                                                                      | [isClass](#isclass)()                       |             |
 | public abstract boolean                                                                                      | [isInterface](#isinterface)()               |             |
 | public abstract boolean                                                                                      | [isEnum](#isenum)()                         |             |
+| public abstract boolean                                                                                      | [isRecord](#isrecord)()                     |             |
 | public abstract boolean                                                                                      | [isAnnotation](#isannotation)()             |             |
 
 ## Method Details
@@ -105,6 +106,15 @@ public abstract boolean isInterface()
 ### isEnum
 
 public abstract boolean isEnum()
+
+
+
+
+---
+
+### isRecord
+
+public abstract boolean isRecord()
 
 
 

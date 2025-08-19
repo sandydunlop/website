@@ -44,6 +44,14 @@ The table can be rendered as Markdown text to a Writer, optionally with indentat
 | public [MarkdownTable](MarkdownTable.md) | [addRow](#addrow)([String\](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String\.html)[] valueStrings) | Adds a row of data to the table.                                                      |
 | public void                              | [render](#render)([Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) writer)             | Renders the table as Markdown text without any indentation.                           |
 | public void                              | [render](#render)([Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) writer, int indent) | Renders the table as Markdown text with a given indentation level (number of spaces). |
+| public [MarkdownTable](MarkdownTable.md) | [addColumn](#addcolumn)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) heading)    | Adds a column with the specified heading to the table.                                |
+| public [MarkdownTable](MarkdownTable.md) | [addRow](#addrow)([String\](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String\.html)[] valueStrings) | Adds a row of data to the table.                                                      |
+| public void                              | [render](#render)([Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) writer)             | Renders the table as Markdown text without any indentation.                           |
+| public void                              | [render](#render)([Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) writer, int indent) | Renders the table as Markdown text with a given indentation level (number of spaces). |
+| public [MarkdownTable](MarkdownTable.md) | [addColumn](#addcolumn)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) heading)    | Adds a column with the specified heading to the table.                                |
+| public [MarkdownTable](MarkdownTable.md) | [addRow](#addrow)([String\](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String\.html)[] valueStrings) | Adds a row of data to the table.                                                      |
+| public void                              | [render](#render)([Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) writer)             | Renders the table as Markdown text without any indentation.                           |
+| public void                              | [render](#render)([Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) writer, int indent) | Renders the table as Markdown text with a given indentation level (number of spaces). |
 
 ## Field Details
 
@@ -63,6 +71,112 @@ The table can be rendered as Markdown text to a Writer, optionally with indentat
 
 
 ## Method Details
+
+### addColumn
+
+public [MarkdownTable](MarkdownTable.md) addColumn([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) heading)
+
+Adds a column with the specified heading to the table.
+
+**Returns:**
+
+The table (this) to allow method chaining.
+
+
+---
+
+### addRow
+
+public [MarkdownTable](MarkdownTable.md) addRow([String\](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String\.html)[] valueStrings)
+
+Adds a row of data to the table.
+The number of values should match or be less than the number of columns.
+
+**Returns:**
+
+The table (this) to allow method chaining.
+
+
+---
+
+### render
+
+public void render([Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) writer)
+
+Renders the table as Markdown text without any indentation.
+
+**Throws:**
+
+[java.io.IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
+
+
+---
+
+### render
+
+public void render([Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) writer, int indent)
+
+Renders the table as Markdown text with a given indentation level (number of spaces).
+
+**Throws:**
+
+[java.io.IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
+
+
+---
+
+### addColumn
+
+public [MarkdownTable](MarkdownTable.md) addColumn([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) heading)
+
+Adds a column with the specified heading to the table.
+
+**Returns:**
+
+The table (this) to allow method chaining.
+
+
+---
+
+### addRow
+
+public [MarkdownTable](MarkdownTable.md) addRow([String\](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String\.html)[] valueStrings)
+
+Adds a row of data to the table.
+The number of values should match or be less than the number of columns.
+
+**Returns:**
+
+The table (this) to allow method chaining.
+
+
+---
+
+### render
+
+public void render([Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) writer)
+
+Renders the table as Markdown text without any indentation.
+
+**Throws:**
+
+[java.io.IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
+
+
+---
+
+### render
+
+public void render([Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) writer, int indent)
+
+Renders the table as Markdown text with a given indentation level (number of spaces).
+
+**Throws:**
+
+[java.io.IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
+
+
+---
 
 ### addColumn
 

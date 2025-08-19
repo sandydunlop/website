@@ -54,6 +54,20 @@ The base class for all types of nodes in the API model.
 | public [Text](Text.md)                                                                                                     | [getFullBody](#getfullbody)()                                                                                                                             | Returns the full body documentation text including tags.  |
 | public void                                                                                                                | [setReferences](#setreferences)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Reference](Reference.md)> refs) | Sets the list of references for this node.                |
 | public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Reference](Reference.md)> | [getReferences](#getreferences)()                                                                                                                         | Returns the list of references associated with this node. |
+| public void                                                                                                                | [setDeprecation](#setdeprecation)([Deprecation](Deprecation.md) deprecation)                                                                              | Sets the deprecation status for this node.                |
+| public void                                                                                                                | [setDeprecationText](#setdeprecationtext)([Text](Text.md) text)                                                                                           | Sets the deprecation text.                                |
+| public void                                                                                                                | [setSince](#setsince)([Text](Text.md) text)                                                                                                               | Sets the 'since' documentation text.                      |
+| public void                                                                                                                | [setFirstSentence](#setfirstsentence)([Text](Text.md) text)                                                                                               | Sets the first sentence of the documentation.             |
+| public void                                                                                                                | [setBody](#setbody)([Text](Text.md) text)                                                                                                                 | Sets the main body documentation text.                    |
+| public void                                                                                                                | [setFullBody](#setfullbody)([Text](Text.md) text)                                                                                                         | Sets the full body documentation text including tags.     |
+| public void                                                                                                                | [setReferences](#setreferences)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Reference](Reference.md)> refs) | Sets the list of references for this node.                |
+| public void                                                                                                                | [setDeprecation](#setdeprecation)([Deprecation](Deprecation.md) deprecation)                                                                              | Sets the deprecation status for this node.                |
+| public void                                                                                                                | [setDeprecationText](#setdeprecationtext)([Text](Text.md) text)                                                                                           | Sets the deprecation text.                                |
+| public void                                                                                                                | [setSince](#setsince)([Text](Text.md) text)                                                                                                               | Sets the 'since' documentation text.                      |
+| public void                                                                                                                | [setFirstSentence](#setfirstsentence)([Text](Text.md) text)                                                                                               | Sets the first sentence of the documentation.             |
+| public void                                                                                                                | [setBody](#setbody)([Text](Text.md) text)                                                                                                                 | Sets the main body documentation text.                    |
+| public void                                                                                                                | [setFullBody](#setfullbody)([Text](Text.md) text)                                                                                                         | Sets the full body documentation text including tags.     |
+| public void                                                                                                                | [setReferences](#setreferences)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Reference](Reference.md)> refs) | Sets the list of references for this node.                |
 
 ## Field Details
 
@@ -288,6 +302,132 @@ Returns the list of references associated with this node.
 **Returns:**
 
 List of Reference objects.
+
+
+---
+
+### setDeprecation
+
+public void setDeprecation([Deprecation](Deprecation.md) deprecation)
+
+Sets the deprecation status for this node.
+
+
+---
+
+### setDeprecationText
+
+public void setDeprecationText([Text](Text.md) text)
+
+Sets the deprecation text.
+
+
+---
+
+### setSince
+
+public void setSince([Text](Text.md) text)
+
+Sets the 'since' documentation text.
+
+
+---
+
+### setFirstSentence
+
+public void setFirstSentence([Text](Text.md) text)
+
+Sets the first sentence of the documentation.
+
+
+---
+
+### setBody
+
+public void setBody([Text](Text.md) text)
+
+Sets the main body documentation text.
+
+
+---
+
+### setFullBody
+
+public void setFullBody([Text](Text.md) text)
+
+Sets the full body documentation text including tags.
+
+
+---
+
+### setReferences
+
+public void setReferences([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Reference](Reference.md)> refs)
+
+Sets the list of references for this node.
+
+
+---
+
+### setDeprecation
+
+public void setDeprecation([Deprecation](Deprecation.md) deprecation)
+
+Sets the deprecation status for this node.
+
+
+---
+
+### setDeprecationText
+
+public void setDeprecationText([Text](Text.md) text)
+
+Sets the deprecation text.
+
+
+---
+
+### setSince
+
+public void setSince([Text](Text.md) text)
+
+Sets the 'since' documentation text.
+
+
+---
+
+### setFirstSentence
+
+public void setFirstSentence([Text](Text.md) text)
+
+Sets the first sentence of the documentation.
+
+
+---
+
+### setBody
+
+public void setBody([Text](Text.md) text)
+
+Sets the main body documentation text.
+
+
+---
+
+### setFullBody
+
+public void setFullBody([Text](Text.md) text)
+
+Sets the full body documentation text including tags.
+
+
+---
+
+### setReferences
+
+public void setReferences([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Reference](Reference.md)> refs)
+
+Sets the list of references for this node.
 
 
 ---

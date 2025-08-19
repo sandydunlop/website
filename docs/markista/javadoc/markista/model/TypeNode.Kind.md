@@ -1,6 +1,6 @@
 Package [io.github.sandydunlop.markista.model](index.md)
 
-# Enum TypeNode.Kind
+# Enum Class TypeNode.Kind
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
         [java.lang.Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)<[io.github.sandydunlop.markista.model.TypeNode.Kind](TypeNode.Kind.md)><br/>
                 io.github.sandydunlop.markista.model.TypeNode.Kind<br/>
@@ -11,7 +11,7 @@ Enclosing Class:<br/>
 
 ----
 
-<span style="font-family: monospace;">public static final enum __TypeNode.Kind__</span>
+<span style="font-family: monospace;">public static final enum class __TypeNode.Kind__</span>
 
 Enumeration representing kinds of types: None, Class, Interface, Enum, Annotation.
 
@@ -23,6 +23,7 @@ Enumeration representing kinds of types: None, Class, Interface, Enum, Annotatio
 | [NONE](#none)             |             |
 | [CLASS](#class)           |             |
 | [INTERFACE](#interface)   |             |
+| [RECORD](#record)         |             |
 | [ENUM](#enum)             |             |
 | [ANNOTATION](#annotation) |             |
 
@@ -37,6 +38,9 @@ Enumeration representing kinds of types: None, Class, Interface, Enum, Annotatio
 | Constructor       | Description                             |
 |-------------------|-----------------------------------------|
 | TypeNode.Kind( s) | Constructor assigning the display name. |
+| TypeNode.Kind( s) | Constructor assigning the display name. |
+| TypeNode.Kind( s) | Constructor assigning the display name. |
+| TypeNode.Kind( s) | Constructor assigning the display name. |
 
 ## Method Summary
 
@@ -45,6 +49,9 @@ Enumeration representing kinds of types: None, Class, Interface, Enum, Annotatio
 | public static io.github.sandydunlop.markista.model.TypeNode.Kind\[]                                 | [values](#values)()                                                                                                    |                                       |
 | public static [TypeNode.Kind](TypeNode.Kind.md)                                                     | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |                                       |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [toString](#tostring)()                                                                                                | Returns the display name of the kind. |
+| public static [TypeNode.Kind](TypeNode.Kind.md)                                                     | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |                                       |
+| public static [TypeNode.Kind](TypeNode.Kind.md)                                                     | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |                                       |
+| public static [TypeNode.Kind](TypeNode.Kind.md)                                                     | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |                                       |
 
 ## Enum Constant Details
 
@@ -69,6 +76,15 @@ public static final CLASS CLASS
 ### INTERFACE
 
 public static final INTERFACE INTERFACE
+
+
+
+
+---
+
+### RECORD
+
+public static final RECORD RECORD
 
 
 
@@ -133,6 +149,33 @@ Returns the display name of the kind.
 **Overrides:**
 
 [Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)<[TypeNode.Kind](TypeNode.Kind.md)>.toString
+
+
+---
+
+### valueOf
+
+public static [TypeNode.Kind](TypeNode.Kind.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
+
+
+
+
+---
+
+### valueOf
+
+public static [TypeNode.Kind](TypeNode.Kind.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
+
+
+
+
+---
+
+### valueOf
+
+public static [TypeNode.Kind](TypeNode.Kind.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
+
+
 
 
 ---

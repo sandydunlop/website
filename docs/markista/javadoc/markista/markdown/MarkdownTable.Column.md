@@ -27,6 +27,9 @@ A class to represent the name and width of a column within a table.
 | Constructor                 | Description                                               |
 |-----------------------------|-----------------------------------------------------------|
 | MarkdownTable.Column( name) | Constructs a new `Column` object with the specified name. |
+| MarkdownTable.Column( name) | Constructs a new `Column` object with the specified name. |
+| MarkdownTable.Column( name) | Constructs a new `Column` object with the specified name. |
+| MarkdownTable.Column( name) | Constructs a new `Column` object with the specified name. |
 
 ## Field Details
 

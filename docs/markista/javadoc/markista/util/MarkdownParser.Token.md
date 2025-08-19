@@ -29,6 +29,9 @@ A token has a kind and associated text content, and links to the next token in s
 | Constructor              | Description                              |
 |--------------------------|------------------------------------------|
 | MarkdownParser.Token( k) | Creates a token with the specified kind. |
+| MarkdownParser.Token( k) | Creates a token with the specified kind. |
+| MarkdownParser.Token( k) | Creates a token with the specified kind. |
+| MarkdownParser.Token( k) | Creates a token with the specified kind. |
 
 ## Method Summary
 
@@ -39,6 +42,12 @@ A token has a kind and associated text content, and links to the next token in s
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getText](#gettext)()                                                                                               | Returns the text content of the token.                  |
 | public void                                                                                         | [setNext](#setnext)([MarkdownParser.Token](MarkdownParser.Token.md) token)                                          | Sets the next token in the sequence.                    |
 | public [MarkdownParser.Token](MarkdownParser.Token.md)                                              | [getNext](#getnext)()                                                                                               | Returns the next token, or an END token if none exists. |
+| public void                                                                                         | [setText](#settext)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) t) | Sets the text content of the token.                     |
+| public void                                                                                         | [setNext](#setnext)([MarkdownParser.Token](MarkdownParser.Token.md) token)                                          | Sets the next token in the sequence.                    |
+| public void                                                                                         | [setText](#settext)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) t) | Sets the text content of the token.                     |
+| public void                                                                                         | [setNext](#setnext)([MarkdownParser.Token](MarkdownParser.Token.md) token)                                          | Sets the next token in the sequence.                    |
+| public void                                                                                         | [setText](#settext)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) t) | Sets the text content of the token.                     |
+| public void                                                                                         | [setNext](#setnext)([MarkdownParser.Token](MarkdownParser.Token.md) token)                                          | Sets the next token in the sequence.                    |
 
 ## Field Details
 
@@ -119,6 +128,60 @@ Returns the next token, or an END token if none exists.
 **Returns:**
 
 The next token or an END token.
+
+
+---
+
+### setText
+
+public void setText([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) t)
+
+Sets the text content of the token.
+
+
+---
+
+### setNext
+
+public void setNext([MarkdownParser.Token](MarkdownParser.Token.md) token)
+
+Sets the next token in the sequence.
+
+
+---
+
+### setText
+
+public void setText([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) t)
+
+Sets the text content of the token.
+
+
+---
+
+### setNext
+
+public void setNext([MarkdownParser.Token](MarkdownParser.Token.md) token)
+
+Sets the next token in the sequence.
+
+
+---
+
+### setText
+
+public void setText([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) t)
+
+Sets the text content of the token.
+
+
+---
+
+### setNext
+
+public void setNext([MarkdownParser.Token](MarkdownParser.Token.md) token)
+
+Sets the next token in the sequence.
 
 
 ---

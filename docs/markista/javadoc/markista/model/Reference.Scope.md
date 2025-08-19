@@ -1,6 +1,6 @@
 Package [io.github.sandydunlop.markista.model](index.md)
 
-# Enum Reference.Scope
+# Enum Class Reference.Scope
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
         [java.lang.Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)<[io.github.sandydunlop.markista.model.Reference.Scope](Reference.Scope.md)><br/>
                 io.github.sandydunlop.markista.model.Reference.Scope<br/>
@@ -11,7 +11,7 @@ Enclosing Class:<br/>
 
 ----
 
-<span style="font-family: monospace;">public static final enum __Reference.Scope__</span>
+<span style="font-family: monospace;">public static final enum class __Reference.Scope__</span>
 
 Enum representing the scope of references.
 
@@ -37,6 +37,9 @@ Enum representing the scope of references.
 | Modifier and Type                                                     | Method                                                                                                                 | Description |
 |-----------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|-------------|
 | public static io.github.sandydunlop.markista.model.Reference.Scope\[] | [values](#values)()                                                                                                    |             |
+| public static [Reference.Scope](Reference.Scope.md)                   | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
+| public static [Reference.Scope](Reference.Scope.md)                   | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
+| public static [Reference.Scope](Reference.Scope.md)                   | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
 | public static [Reference.Scope](Reference.Scope.md)                   | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
 
 ## Enum Constant Details
@@ -92,6 +95,33 @@ public static final FOREIGN FOREIGN
 ### values
 
 public static io.github.sandydunlop.markista.model.Reference.Scope\[] values()
+
+
+
+
+---
+
+### valueOf
+
+public static [Reference.Scope](Reference.Scope.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
+
+
+
+
+---
+
+### valueOf
+
+public static [Reference.Scope](Reference.Scope.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
+
+
+
+
+---
+
+### valueOf
+
+public static [Reference.Scope](Reference.Scope.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
 
 
 

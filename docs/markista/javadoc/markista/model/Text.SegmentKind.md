@@ -1,6 +1,6 @@
 Package [io.github.sandydunlop.markista.model](index.md)
 
-# Enum Text.SegmentKind
+# Enum Class Text.SegmentKind
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
         [java.lang.Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)<[io.github.sandydunlop.markista.model.Text.SegmentKind](Text.SegmentKind.md)><br/>
                 io.github.sandydunlop.markista.model.Text.SegmentKind<br/>
@@ -11,7 +11,7 @@ Enclosing Class:<br/>
 
 ----
 
-<span style="font-family: monospace;">public static final enum __Text.SegmentKind__</span>
+<span style="font-family: monospace;">public static final enum class __Text.SegmentKind__</span>
 
 Enum class that defines different kinds of segments for Text.
 
@@ -36,6 +36,9 @@ Enum class that defines different kinds of segments for Text.
 | Modifier and Type                                                      | Method                                                                                                                 | Description |
 |------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|-------------|
 | public static io.github.sandydunlop.markista.model.Text.SegmentKind\[] | [values](#values)()                                                                                                    |             |
+| public static [Text.SegmentKind](Text.SegmentKind.md)                  | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
+| public static [Text.SegmentKind](Text.SegmentKind.md)                  | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
+| public static [Text.SegmentKind](Text.SegmentKind.md)                  | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
 | public static [Text.SegmentKind](Text.SegmentKind.md)                  | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
 
 ## Enum Constant Details
@@ -82,6 +85,33 @@ public static final CODE CODE
 ### values
 
 public static io.github.sandydunlop.markista.model.Text.SegmentKind\[] values()
+
+
+
+
+---
+
+### valueOf
+
+public static [Text.SegmentKind](Text.SegmentKind.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
+
+
+
+
+---
+
+### valueOf
+
+public static [Text.SegmentKind](Text.SegmentKind.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
+
+
+
+
+---
+
+### valueOf
+
+public static [Text.SegmentKind](Text.SegmentKind.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
 
 
 

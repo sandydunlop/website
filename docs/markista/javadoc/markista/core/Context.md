@@ -81,7 +81,34 @@ This class is not thread-safe.
 | public [Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html)                  | [createFileInModule](#createfileinmodule)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) fileName)        | Creates a Writer for writing a module-level file inside the module's directory.                                                                   |
 | [File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html)                             | [createModuleFilePath](#createmodulefilepath)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) fileName)    |                                                                                                                                                   |
 | private [Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html)                 | [createFileInternal](#createfileinternal)([File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html) file)                  | Helper method that creates a Writer for a file inside the specified directory.                                                                    |
-| private char                                                                                                       | [pathSeparator](#pathseparator)()                                                                                                                       | Returns the character used to separate parts of filesystem paths for output directory construction.                                               |
+| public void                                                                                                        | [setApi](#setapi)([Api](../model/Api.md) api)                                                                                                           | Sets the Api model associated with this context, also initializing the flattened directories string.                                              |
+| public void                                                                                                        | [setOutputDirectory](#setoutputdirectory)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) outputDirectory) | Sets the output directory path where documentation files will be written.                                                                         |
+| public void                                                                                                        | [setReporter](#setreporter)([Reporter](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Reporter.html) reporter)       | Sets the reporter used for reporting messages and diagnostics during doc generation.                                                              |
+| public void                                                                                                        | [setModuleName](#setmodulename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)                      | Sets the current module name and resets the package name.                                                                                         |
+| public void                                                                                                        | [setPackageName](#setpackagename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)                    | Sets the current package name and resets the type name.                                                                                           |
+| public void                                                                                                        | [setTypeName](#settypename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)                          | Sets the current type name.                                                                                                                       |
+| public void                                                                                                        | [setMethodName](#setmethodname)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)                      | Sets the current method name.                                                                                                                     |
+| public void                                                                                                        | [setFieldName](#setfieldname)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)                        | Sets the current field name.                                                                                                                      |
+| public void                                                                                                        | [reportInfo](#reportinfo)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) message)                         | Reports an informational message through the reporter.                                                                                            |
+| public void                                                                                                        | [reportWarning](#reportwarning)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) message)                   | Reports a warning message including location information.                                                                                         |
+| public void                                                                                                        | [reportError](#reporterror)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) message)                       | Reports an error message including location information.                                                                                          |
+| public [Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html)                  | [createFileInModule](#createfileinmodule)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) fileName)        | Creates a Writer for writing a module-level file inside the module's directory.                                                                   |
+| [File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html)                             | [createModuleFilePath](#createmodulefilepath)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) fileName)    |                                                                                                                                                   |
+| private [Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html)                 | [createFileInternal](#createfileinternal)([File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html) file)                  | Helper method that creates a Writer for a file inside the specified directory.                                                                    |
+| public void                                                                                                        | [setApi](#setapi)([Api](../model/Api.md) api)                                                                                                           | Sets the Api model associated with this context, also initializing the flattened directories string.                                              |
+| public void                                                                                                        | [setOutputDirectory](#setoutputdirectory)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) outputDirectory) | Sets the output directory path where documentation files will be written.                                                                         |
+| public void                                                                                                        | [setReporter](#setreporter)([Reporter](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Reporter.html) reporter)       | Sets the reporter used for reporting messages and diagnostics during doc generation.                                                              |
+| public void                                                                                                        | [setModuleName](#setmodulename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)                      | Sets the current module name and resets the package name.                                                                                         |
+| public void                                                                                                        | [setPackageName](#setpackagename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)                    | Sets the current package name and resets the type name.                                                                                           |
+| public void                                                                                                        | [setTypeName](#settypename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)                          | Sets the current type name.                                                                                                                       |
+| public void                                                                                                        | [setMethodName](#setmethodname)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)                      | Sets the current method name.                                                                                                                     |
+| public void                                                                                                        | [setFieldName](#setfieldname)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)                        | Sets the current field name.                                                                                                                      |
+| public void                                                                                                        | [reportInfo](#reportinfo)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) message)                         | Reports an informational message through the reporter.                                                                                            |
+| public void                                                                                                        | [reportWarning](#reportwarning)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) message)                   | Reports a warning message including location information.                                                                                         |
+| public void                                                                                                        | [reportError](#reporterror)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) message)                       | Reports an error message including location information.                                                                                          |
+| public [Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html)                  | [createFileInModule](#createfileinmodule)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) fileName)        | Creates a Writer for writing a module-level file inside the module's directory.                                                                   |
+| [File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html)                             | [createModuleFilePath](#createmodulefilepath)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) fileName)    |                                                                                                                                                   |
+| private [Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html)                 | [createFileInternal](#createfileinternal)([File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html) file)                  | Helper method that creates a Writer for a file inside the specified directory.                                                                    |
 
 ## Field Details
 
@@ -463,7 +490,8 @@ A Writer object for writing the file.
 
 **Throws:**
 
-[java.io.IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
+[java.nio.file.InvalidPathException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/InvalidPathException.html)
+, [java.io.IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
 
 
 ---
@@ -473,6 +501,10 @@ A Writer object for writing the file.
 [File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html) createModuleFilePath([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) fileName)
 
 
+
+**Throws:**
+
+[java.nio.file.InvalidPathException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/InvalidPathException.html)
 
 
 ---
@@ -494,16 +526,298 @@ A Writer for the file.
 
 ---
 
-### pathSeparator
+### setApi
 
-private char pathSeparator()
+public void setApi([Api](../model/Api.md) api)
 
-Returns the character used to separate parts of filesystem paths for output directory construction.
-This method works around a macOS bug where `File.pathSeparatorChar` wrongly returns ':' instead of '/'.
+Sets the Api model associated with this context, also initializing the flattened directories string.
+
+
+---
+
+### setOutputDirectory
+
+public void setOutputDirectory([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) outputDirectory)
+
+Sets the output directory path where documentation files will be written.
+
+
+---
+
+### setReporter
+
+public void setReporter([Reporter](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Reporter.html) reporter)
+
+Sets the reporter used for reporting messages and diagnostics during doc generation.
+
+
+---
+
+### setModuleName
+
+public void setModuleName([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
+
+Sets the current module name and resets the package name.
+
+
+---
+
+### setPackageName
+
+public void setPackageName([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
+
+Sets the current package name and resets the type name.
+
+
+---
+
+### setTypeName
+
+public void setTypeName([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
+
+Sets the current type name.
+
+
+---
+
+### setMethodName
+
+public void setMethodName([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
+
+Sets the current method name.
+
+
+---
+
+### setFieldName
+
+public void setFieldName([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
+
+Sets the current field name.
+
+
+---
+
+### reportInfo
+
+public void reportInfo([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) message)
+
+Reports an informational message through the reporter.
+
+
+---
+
+### reportWarning
+
+public void reportWarning([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) message)
+
+Reports a warning message including location information.
+
+
+---
+
+### reportError
+
+public void reportError([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) message)
+
+Reports an error message including location information.
+
+
+---
+
+### createFileInModule
+
+public [Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) createFileInModule([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) fileName)
+
+Creates a Writer for writing a module-level file inside the module's directory.
+Creates directories as necessary. Defaults of output directory are applied if not set.
 
 **Returns:**
 
-The platform-appropriate character for separating path components.
+A Writer object for writing the file.
+
+**Throws:**
+
+[java.nio.file.InvalidPathException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/InvalidPathException.html)
+, [java.io.IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
+
+
+---
+
+### createModuleFilePath
+
+[File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html) createModuleFilePath([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) fileName)
+
+
+
+**Throws:**
+
+[java.nio.file.InvalidPathException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/InvalidPathException.html)
+
+
+---
+
+### createFileInternal
+
+private [Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) createFileInternal([File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html) file)
+
+Helper method that creates a Writer for a file inside the specified directory.
+
+**Returns:**
+
+A Writer for the file.
+
+**Throws:**
+
+[java.io.IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
+
+
+---
+
+### setApi
+
+public void setApi([Api](../model/Api.md) api)
+
+Sets the Api model associated with this context, also initializing the flattened directories string.
+
+
+---
+
+### setOutputDirectory
+
+public void setOutputDirectory([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) outputDirectory)
+
+Sets the output directory path where documentation files will be written.
+
+
+---
+
+### setReporter
+
+public void setReporter([Reporter](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Reporter.html) reporter)
+
+Sets the reporter used for reporting messages and diagnostics during doc generation.
+
+
+---
+
+### setModuleName
+
+public void setModuleName([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
+
+Sets the current module name and resets the package name.
+
+
+---
+
+### setPackageName
+
+public void setPackageName([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
+
+Sets the current package name and resets the type name.
+
+
+---
+
+### setTypeName
+
+public void setTypeName([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
+
+Sets the current type name.
+
+
+---
+
+### setMethodName
+
+public void setMethodName([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
+
+Sets the current method name.
+
+
+---
+
+### setFieldName
+
+public void setFieldName([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
+
+Sets the current field name.
+
+
+---
+
+### reportInfo
+
+public void reportInfo([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) message)
+
+Reports an informational message through the reporter.
+
+
+---
+
+### reportWarning
+
+public void reportWarning([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) message)
+
+Reports a warning message including location information.
+
+
+---
+
+### reportError
+
+public void reportError([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) message)
+
+Reports an error message including location information.
+
+
+---
+
+### createFileInModule
+
+public [Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) createFileInModule([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) fileName)
+
+Creates a Writer for writing a module-level file inside the module's directory.
+Creates directories as necessary. Defaults of output directory are applied if not set.
+
+**Returns:**
+
+A Writer object for writing the file.
+
+**Throws:**
+
+[java.nio.file.InvalidPathException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/InvalidPathException.html)
+, [java.io.IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
+
+
+---
+
+### createModuleFilePath
+
+[File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html) createModuleFilePath([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) fileName)
+
+
+
+**Throws:**
+
+[java.nio.file.InvalidPathException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/InvalidPathException.html)
+
+
+---
+
+### createFileInternal
+
+private [Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) createFileInternal([File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html) file)
+
+Helper method that creates a Writer for a file inside the specified directory.
+
+**Returns:**
+
+A Writer for the file.
+
+**Throws:**
+
+[java.io.IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
 
 
 ---

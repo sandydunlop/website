@@ -30,6 +30,8 @@ Implements the PackageOwner interface to manage contained packages.
 | Constructor       | Description                                         |
 |-------------------|-----------------------------------------------------|
 | ModuleNode( name) | Constructs a ModuleNode with the given module name. |
+| ModuleNode( name) | Constructs a ModuleNode with the given module name. |
+| ModuleNode( name) | Constructs a ModuleNode with the given module name. |
 
 ## Method Summary
 
@@ -51,6 +53,16 @@ Implements the PackageOwner interface to manage contained packages.
 | public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DirectiveNode](DirectiveNode.md)> | [getOpens](#getopens)()                                                                                                            | Returns the list of 'opens' directives in this module.      |
 | public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DirectiveNode](DirectiveNode.md)> | [getUses](#getuses)()                                                                                                              | Returns the list of 'uses' directives in this module.       |
 | public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DirectiveNode](DirectiveNode.md)> | [getProvides](#getprovides)()                                                                                                      | Returns the list of 'provides' directives in this module.   |
+| public void                                                                                                                        | [setSourcePath](#setsourcepath)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) path) |                                                             |
+| public void                                                                                                                        | [setHasModuleInfo](#sethasmoduleinfo)(boolean b)                                                                                   |                                                             |
+| public void                                                                                                                        | [addPackage](#addpackage)([PackageNode](PackageNode.md) packageNode)                                                               | Adds a package to this module.                              |
+| public void                                                                                                                        | [addDirective](#adddirective)([DirectiveNode](DirectiveNode.md) directive)                                                         | Adds a directive to this module.                            |
+| public void                                                                                                                        | [addConstantValue](#addconstantvalue)([FieldNode](FieldNode.md) constant)                                                          | Adds a constant field value to this module.                 |
+| public void                                                                                                                        | [setSourcePath](#setsourcepath)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) path) |                                                             |
+| public void                                                                                                                        | [setHasModuleInfo](#sethasmoduleinfo)(boolean b)                                                                                   |                                                             |
+| public void                                                                                                                        | [addPackage](#addpackage)([PackageNode](PackageNode.md) packageNode)                                                               | Adds a package to this module.                              |
+| public void                                                                                                                        | [addDirective](#adddirective)([DirectiveNode](DirectiveNode.md) directive)                                                         | Adds a directive to this module.                            |
+| public void                                                                                                                        | [addConstantValue](#addconstantvalue)([FieldNode](FieldNode.md) constant)                                                          | Adds a constant field value to this module.                 |
 
 ## Field Details
 
@@ -275,6 +287,96 @@ Returns the list of 'provides' directives in this module.
 **Returns:**
 
 List of DirectiveNode objects filtered by PROVIDES kind.
+
+
+---
+
+### setSourcePath
+
+public void setSourcePath([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) path)
+
+
+
+
+---
+
+### setHasModuleInfo
+
+public void setHasModuleInfo(boolean b)
+
+
+
+
+---
+
+### addPackage
+
+public void addPackage([PackageNode](PackageNode.md) packageNode)
+
+Adds a package to this module.
+
+
+---
+
+### addDirective
+
+public void addDirective([DirectiveNode](DirectiveNode.md) directive)
+
+Adds a directive to this module.
+
+
+---
+
+### addConstantValue
+
+public void addConstantValue([FieldNode](FieldNode.md) constant)
+
+Adds a constant field value to this module.
+
+
+---
+
+### setSourcePath
+
+public void setSourcePath([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) path)
+
+
+
+
+---
+
+### setHasModuleInfo
+
+public void setHasModuleInfo(boolean b)
+
+
+
+
+---
+
+### addPackage
+
+public void addPackage([PackageNode](PackageNode.md) packageNode)
+
+Adds a package to this module.
+
+
+---
+
+### addDirective
+
+public void addDirective([DirectiveNode](DirectiveNode.md) directive)
+
+Adds a directive to this module.
+
+
+---
+
+### addConstantValue
+
+public void addConstantValue([FieldNode](FieldNode.md) constant)
+
+Adds a constant field value to this module.
 
 
 ---

@@ -19,19 +19,19 @@ All configuration fields are static and global and the constructor is hidden to 
 
 ## Field Summary
 
-| Modifier and Type                                                                                                                                                                                     | Field                                             | Description                                                                                      |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------|--------------------------------------------------------------------------------------------------|
-| private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                           | [docTitle](#doctitle)                             | The title of the API documentation being generated                                               |
-| private static boolean                                                                                                                                                                                | [createExternalLinks](#createexternallinks)       | If true, links to types defined outside the API being documented will be generated               |
-| private static boolean                                                                                                                                                                                | [documentPrivateMembers](#documentprivatemembers) | If true, private members of packages and types will be included in the generated documentation   |
-| private static boolean                                                                                                                                                                                | [flattenPackages](#flattenpackages)               | If true, empty package directories will not be created, leading to a flatter directory structure |
-| private static boolean                                                                                                                                                                                | [flattenModules](#flattenmodules)                 | If true, module directories will not be created, leading to a flatter directory structure        |
-| private static boolean                                                                                                                                                                                | [useContentTabs](#usecontenttabs)                 | If true, summary tables will be created inside Markdown content tabs.                            |
-| private static boolean                                                                                                                                                                                | [verbose](#verbose)                               | If true, logging will include status information.                                                |
-| private static [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)> | [modulePathList](#modulepathlist)                 | The list of module paths passed in from the Javadoc command line                                 |
-| private static [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)> | [linkExternal](#linkexternal)                     | The list of modules that have local Javadoc that can be linked to                                |
-| private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                           | [projectPath](#projectpath)                       |                                                                                                  |
-| private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                           | [extensionsOrder](#extensionsorder)               |                                                                                                  |
+| Modifier and Type                                                                                           | Field                                             | Description                                                                                      |
+|-------------------------------------------------------------------------------------------------------------|---------------------------------------------------|--------------------------------------------------------------------------------------------------|
+| private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [docTitle](#doctitle)                             | The title of the API documentation being generated                                               |
+| private static boolean                                                                                      | [createExternalLinks](#createexternallinks)       | If true, links to types defined outside the API being documented will be generated               |
+| private static boolean                                                                                      | [documentPrivateMembers](#documentprivatemembers) | If true, private members of packages and types will be included in the generated documentation   |
+| private static boolean                                                                                      | [flattenPackages](#flattenpackages)               | If true, empty package directories will not be created, leading to a flatter directory structure |
+| private static boolean                                                                                      | [flattenModules](#flattenmodules)                 | If true, module directories will not be created, leading to a flatter directory structure        |
+| private static boolean                                                                                      | [useContentTabs](#usecontenttabs)                 | If true, summary tables will be created inside Markdown content tabs.                            |
+| private static boolean                                                                                      | [verbose](#verbose)                               | If true, logging will include status information.                                                |
+| private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [modulePathList](#modulepathlist)                 | The list of module paths passed in from the Javadoc command line                                 |
+| private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [linkExternal](#linkexternal)                     | The list of modules that have local Javadoc that can be linked to                                |
+| private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [projectPath](#projectpath)                       |                                                                                                  |
+| private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [extensionsOrder](#extensionsorder)               |                                                                                                  |
 
 ## Constructor Summary
 
@@ -41,30 +41,52 @@ All configuration fields are static and global and the constructor is hidden to 
 
 ## Method Summary
 
-| Modifier and Type                                                                                                                                                                                    | Method                                                                                                                                        | Description                                                                                       |
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
-| public static void                                                                                                                                                                                   | [setDocTitle](#setdoctitle)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) title)               | Sets the title used in the generated documentation                                                |
-| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                           | [getDocTitle](#getdoctitle)()                                                                                                                 | Returns the title used in the generated documentation                                             |
-| public static void                                                                                                                                                                                   | [setCreateExternalLinks](#setcreateexternallinks)(boolean b)                                                                                  | Sets whether to generate links to external documentation for referenced types and modules.        |
-| public static boolean                                                                                                                                                                                | [getCreateExternalLinks](#getcreateexternallinks)()                                                                                           | Returns whether the documentation generator creates links to external documentation.              |
-| public static void                                                                                                                                                                                   | [setDocumentPrivateMembers](#setdocumentprivatemembers)(boolean b)                                                                            | Sets whether private members (fields, methods) should be included in the generated documentation. |
-| public static boolean                                                                                                                                                                                | [getDocumentPrivateMembers](#getdocumentprivatemembers)()                                                                                     | Returns whether private members are included in the documentation.                                |
-| public static void                                                                                                                                                                                   | [setFlattenPackages](#setflattenpackages)(boolean b)                                                                                          | Sets whether to flatten package directory structure when generating the documentation output.     |
-| public static boolean                                                                                                                                                                                | [getFlattenPackages](#getflattenpackages)()                                                                                                   | Returns whether the documentation output package directory structure is flattened.                |
-| public static void                                                                                                                                                                                   | [setFlattenModules](#setflattenmodules)(boolean b)                                                                                            | Sets whether to flatten module directory structure when generating the documentation output.      |
-| public static boolean                                                                                                                                                                                | [getFlattenModules](#getflattenmodules)()                                                                                                     | Returns whether the documentation output module directory structure is flattened.                 |
-| public static void                                                                                                                                                                                   | [setUseContentTabs](#setusecontenttabs)(boolean b)                                                                                            | Sets whether to use content tabs in the generated documentation.                                  |
-| public static boolean                                                                                                                                                                                | [getUseContentTabs](#getusecontenttabs)()                                                                                                     | Returns whether content tabs are used in documentation.                                           |
-| public static void                                                                                                                                                                                   | [setVerbose](#setverbose)(boolean b)                                                                                                          | Sets whether verbose logging or output should be enabled during documentation generation.         |
-| public static boolean                                                                                                                                                                                | [getVerbose](#getverbose)()                                                                                                                   | Returns whether verbose output is enabled.                                                        |
-| public static void                                                                                                                                                                                   | [setLinkExternal](#setlinkexternal)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) moduleList)  | Sets the list of sibling modules that can be linked to                                            |
-| public static [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)> | [getListExternal](#getlistexternal)()                                                                                                         | Gets the list of sibling modules that can be linked to                                            |
-| public static void                                                                                                                                                                                   | [setModulePaths](#setmodulepaths)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) modulePaths)   | Sets the directory containing modules.                                                            |
-| public static [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)> | [getModulePaths](#getmodulepaths)()                                                                                                           | Gets the list of modules                                                                          |
-| public static void                                                                                                                                                                                   | [setProjectPath](#setprojectpath)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) path)          |                                                                                                   |
-| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                           | [getProjectPath](#getprojectpath)()                                                                                                           |                                                                                                   |
-| public static void                                                                                                                                                                                   | [setExtensionsOrder](#setextensionsorder)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) order) |                                                                                                   |
-| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                           | [getExtensionsOrder](#getextensionsorder)()                                                                                                   |                                                                                                   |
+| Modifier and Type                                                                                          | Method                                                                                                                                        | Description                                                                                       |
+|------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
+| public static void                                                                                         | [setDocTitle](#setdoctitle)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) title)               | Sets the title used in the generated documentation                                                |
+| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getDocTitle](#getdoctitle)()                                                                                                                 | Returns the title used in the generated documentation                                             |
+| public static void                                                                                         | [setCreateExternalLinks](#setcreateexternallinks)(boolean b)                                                                                  | Sets whether to generate links to external documentation for referenced types and modules.        |
+| public static boolean                                                                                      | [getCreateExternalLinks](#getcreateexternallinks)()                                                                                           | Returns whether the documentation generator creates links to external documentation.              |
+| public static void                                                                                         | [setDocumentPrivateMembers](#setdocumentprivatemembers)(boolean b)                                                                            | Sets whether private members (fields, methods) should be included in the generated documentation. |
+| public static boolean                                                                                      | [getDocumentPrivateMembers](#getdocumentprivatemembers)()                                                                                     | Returns whether private members are included in the documentation.                                |
+| public static void                                                                                         | [setFlattenPackages](#setflattenpackages)(boolean b)                                                                                          | Sets whether to flatten package directory structure when generating the documentation output.     |
+| public static boolean                                                                                      | [getFlattenPackages](#getflattenpackages)()                                                                                                   | Returns whether the documentation output package directory structure is flattened.                |
+| public static void                                                                                         | [setFlattenModules](#setflattenmodules)(boolean b)                                                                                            | Sets whether to flatten module directory structure when generating the documentation output.      |
+| public static boolean                                                                                      | [getFlattenModules](#getflattenmodules)()                                                                                                     | Returns whether the documentation output module directory structure is flattened.                 |
+| public static void                                                                                         | [setUseContentTabs](#setusecontenttabs)(boolean b)                                                                                            | Sets whether to use content tabs in the generated documentation.                                  |
+| public static boolean                                                                                      | [getUseContentTabs](#getusecontenttabs)()                                                                                                     | Returns whether content tabs are used in documentation.                                           |
+| public static void                                                                                         | [setVerbose](#setverbose)(boolean b)                                                                                                          | Sets whether verbose logging or output should be enabled during documentation generation.         |
+| public static boolean                                                                                      | [getVerbose](#getverbose)()                                                                                                                   | Returns whether verbose output is enabled.                                                        |
+| public static void                                                                                         | [setLinkExternal](#setlinkexternal)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) moduleList)  | Sets the list of sibling modules that can be linked to                                            |
+| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getLinkExternal](#getlinkexternal)()                                                                                                         | Gets the list of sibling modules that can be linked to                                            |
+| public static void                                                                                         | [setModulePaths](#setmodulepaths)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) modulePaths)   | Sets the directory containing modules.                                                            |
+| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getModulePaths](#getmodulepaths)()                                                                                                           | Gets the list of modules                                                                          |
+| public static void                                                                                         | [setProjectPath](#setprojectpath)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) path)          |                                                                                                   |
+| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getProjectPath](#getprojectpath)()                                                                                                           |                                                                                                   |
+| public static void                                                                                         | [setExtensionsOrder](#setextensionsorder)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) order) |                                                                                                   |
+| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getExtensionsOrder](#getextensionsorder)()                                                                                                   |                                                                                                   |
+| public static void                                                                                         | [setDocTitle](#setdoctitle)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) title)               | Sets the title used in the generated documentation                                                |
+| public static void                                                                                         | [setCreateExternalLinks](#setcreateexternallinks)(boolean b)                                                                                  | Sets whether to generate links to external documentation for referenced types and modules.        |
+| public static void                                                                                         | [setDocumentPrivateMembers](#setdocumentprivatemembers)(boolean b)                                                                            | Sets whether private members (fields, methods) should be included in the generated documentation. |
+| public static void                                                                                         | [setFlattenPackages](#setflattenpackages)(boolean b)                                                                                          | Sets whether to flatten package directory structure when generating the documentation output.     |
+| public static void                                                                                         | [setFlattenModules](#setflattenmodules)(boolean b)                                                                                            | Sets whether to flatten module directory structure when generating the documentation output.      |
+| public static void                                                                                         | [setUseContentTabs](#setusecontenttabs)(boolean b)                                                                                            | Sets whether to use content tabs in the generated documentation.                                  |
+| public static void                                                                                         | [setVerbose](#setverbose)(boolean b)                                                                                                          | Sets whether verbose logging or output should be enabled during documentation generation.         |
+| public static void                                                                                         | [setLinkExternal](#setlinkexternal)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) moduleList)  | Sets the list of sibling modules that can be linked to                                            |
+| public static void                                                                                         | [setModulePaths](#setmodulepaths)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) modulePaths)   | Sets the directory containing modules.                                                            |
+| public static void                                                                                         | [setProjectPath](#setprojectpath)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) path)          |                                                                                                   |
+| public static void                                                                                         | [setExtensionsOrder](#setextensionsorder)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) order) |                                                                                                   |
+| public static void                                                                                         | [setDocTitle](#setdoctitle)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) title)               | Sets the title used in the generated documentation                                                |
+| public static void                                                                                         | [setCreateExternalLinks](#setcreateexternallinks)(boolean b)                                                                                  | Sets whether to generate links to external documentation for referenced types and modules.        |
+| public static void                                                                                         | [setDocumentPrivateMembers](#setdocumentprivatemembers)(boolean b)                                                                            | Sets whether private members (fields, methods) should be included in the generated documentation. |
+| public static void                                                                                         | [setFlattenPackages](#setflattenpackages)(boolean b)                                                                                          | Sets whether to flatten package directory structure when generating the documentation output.     |
+| public static void                                                                                         | [setFlattenModules](#setflattenmodules)(boolean b)                                                                                            | Sets whether to flatten module directory structure when generating the documentation output.      |
+| public static void                                                                                         | [setUseContentTabs](#setusecontenttabs)(boolean b)                                                                                            | Sets whether to use content tabs in the generated documentation.                                  |
+| public static void                                                                                         | [setVerbose](#setverbose)(boolean b)                                                                                                          | Sets whether verbose logging or output should be enabled during documentation generation.         |
+| public static void                                                                                         | [setLinkExternal](#setlinkexternal)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) moduleList)  | Sets the list of sibling modules that can be linked to                                            |
+| public static void                                                                                         | [setModulePaths](#setmodulepaths)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) modulePaths)   | Sets the directory containing modules.                                                            |
+| public static void                                                                                         | [setProjectPath](#setprojectpath)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) path)          |                                                                                                   |
+| public static void                                                                                         | [setExtensionsOrder](#setextensionsorder)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) order) |                                                                                                   |
 
 ## Field Details
 
@@ -312,9 +334,9 @@ Sets the list of sibling modules that can be linked to
 
 ---
 
-### getListExternal
+### getLinkExternal
 
-public static [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)> getListExternal()
+public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) getLinkExternal()
 
 Gets the list of sibling modules that can be linked to
 
@@ -336,7 +358,7 @@ Sets the directory containing modules.
 
 ### getModulePaths
 
-public static [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)> getModulePaths()
+public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) getModulePaths()
 
 Gets the list of modules
 
@@ -377,6 +399,204 @@ public static void setExtensionsOrder([String](https://docs.oracle.com/en/java/j
 ### getExtensionsOrder
 
 public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) getExtensionsOrder()
+
+
+
+
+---
+
+### setDocTitle
+
+public static void setDocTitle([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) title)
+
+Sets the title used in the generated documentation
+
+
+---
+
+### setCreateExternalLinks
+
+public static void setCreateExternalLinks(boolean b)
+
+Sets whether to generate links to external documentation for referenced types and modules.
+
+
+---
+
+### setDocumentPrivateMembers
+
+public static void setDocumentPrivateMembers(boolean b)
+
+Sets whether private members (fields, methods) should be included in the generated documentation.
+
+
+---
+
+### setFlattenPackages
+
+public static void setFlattenPackages(boolean b)
+
+Sets whether to flatten package directory structure when generating the documentation output.
+
+
+---
+
+### setFlattenModules
+
+public static void setFlattenModules(boolean b)
+
+Sets whether to flatten module directory structure when generating the documentation output.
+
+
+---
+
+### setUseContentTabs
+
+public static void setUseContentTabs(boolean b)
+
+Sets whether to use content tabs in the generated documentation.
+
+
+---
+
+### setVerbose
+
+public static void setVerbose(boolean b)
+
+Sets whether verbose logging or output should be enabled during documentation generation.
+
+
+---
+
+### setLinkExternal
+
+public static void setLinkExternal([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) moduleList)
+
+Sets the list of sibling modules that can be linked to
+
+
+---
+
+### setModulePaths
+
+public static void setModulePaths([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) modulePaths)
+
+Sets the directory containing modules.
+
+
+---
+
+### setProjectPath
+
+public static void setProjectPath([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) path)
+
+
+
+
+---
+
+### setExtensionsOrder
+
+public static void setExtensionsOrder([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) order)
+
+
+
+
+---
+
+### setDocTitle
+
+public static void setDocTitle([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) title)
+
+Sets the title used in the generated documentation
+
+
+---
+
+### setCreateExternalLinks
+
+public static void setCreateExternalLinks(boolean b)
+
+Sets whether to generate links to external documentation for referenced types and modules.
+
+
+---
+
+### setDocumentPrivateMembers
+
+public static void setDocumentPrivateMembers(boolean b)
+
+Sets whether private members (fields, methods) should be included in the generated documentation.
+
+
+---
+
+### setFlattenPackages
+
+public static void setFlattenPackages(boolean b)
+
+Sets whether to flatten package directory structure when generating the documentation output.
+
+
+---
+
+### setFlattenModules
+
+public static void setFlattenModules(boolean b)
+
+Sets whether to flatten module directory structure when generating the documentation output.
+
+
+---
+
+### setUseContentTabs
+
+public static void setUseContentTabs(boolean b)
+
+Sets whether to use content tabs in the generated documentation.
+
+
+---
+
+### setVerbose
+
+public static void setVerbose(boolean b)
+
+Sets whether verbose logging or output should be enabled during documentation generation.
+
+
+---
+
+### setLinkExternal
+
+public static void setLinkExternal([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) moduleList)
+
+Sets the list of sibling modules that can be linked to
+
+
+---
+
+### setModulePaths
+
+public static void setModulePaths([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) modulePaths)
+
+Sets the directory containing modules.
+
+
+---
+
+### setProjectPath
+
+public static void setProjectPath([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) path)
+
+
+
+
+---
+
+### setExtensionsOrder
+
+public static void setExtensionsOrder([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) order)
 
 
 

@@ -41,6 +41,8 @@ supertypes, implemented interfaces, constructors, methods, fields, ownership, an
 | Constructor                                         | Description                                                                        |
 |-----------------------------------------------------|------------------------------------------------------------------------------------|
 | TypeNode( qualifiedName,  simpleName,  packageName) | Constructs a TypeNode with the specified qualified name, simple name, and package. |
+| TypeNode( qualifiedName,  simpleName,  packageName) | Constructs a TypeNode with the specified qualified name, simple name, and package. |
+| TypeNode( qualifiedName,  simpleName,  packageName) | Constructs a TypeNode with the specified qualified name, simple name, and package. |
 
 ## Method Summary
 
@@ -49,6 +51,7 @@ supertypes, implemented interfaces, constructors, methods, fields, ownership, an
 | public boolean                                                                                                                                               | [isClass](#isclass)()                                                                                                                                                                            |                                                                               |
 | public boolean                                                                                                                                               | [isInterface](#isinterface)()                                                                                                                                                                    |                                                                               |
 | public boolean                                                                                                                                               | [isEnum](#isenum)()                                                                                                                                                                              |                                                                               |
+| public boolean                                                                                                                                               | [isRecord](#isrecord)()                                                                                                                                                                          |                                                                               |
 | public boolean                                                                                                                                               | [isAnnotation](#isannotation)()                                                                                                                                                                  |                                                                               |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                          | [getKindName](#getkindname)()                                                                                                                                                                    |                                                                               |
 | public void                                                                                                                                                  | [setSourcePath](#setsourcepath)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) path)                                                               |                                                                               |
@@ -79,6 +82,34 @@ supertypes, implemented interfaces, constructors, methods, fields, ownership, an
 | public [MethodNode](MethodNode.md)                                                                                                                           | [getMethod](#getmethod)([MethodNode](MethodNode.md) method)                                                                                                                                      | Retrieves a method matching the signature of a given MethodNode.              |
 | public [MethodNode](MethodNode.md)                                                                                                                           | [getConstructor](#getconstructor)([MethodNode](MethodNode.md) method)                                                                                                                            | Retrieves a constructor matching the signature of a given MethodNode.         |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                          | [getModifiersString](#getmodifiersstring)()                                                                                                                                                      | Returns a string representation of modifiers.                                 |
+| public void                                                                                                                                                  | [setSourcePath](#setsourcepath)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) path)                                                               |                                                                               |
+| public void                                                                                                                                                  | [setArrayBrackets](#setarraybrackets)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) brackets)                                                     | Sets the array brackets representation for this type.                         |
+| public void                                                                                                                                                  | [addAppliedAnnotation](#addappliedannotation)([AppliedAnnotationNode](AppliedAnnotationNode.md) annotation)                                                                                      | Adds an applied annotation to this type                                       |
+| public void                                                                                                                                                  | [setImplementedInterfaces](#setimplementedinterfaces)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Reference](Reference.md)> implementedInterfaces) | Sets the list of implemented interfaces by qualified names.                   |
+| public void                                                                                                                                                  | [setOwner](#setowner)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) owner)                                                                        | Sets the owner of this type.                                                  |
+| public void                                                                                                                                                  | [setKind](#setkind)([TypeNode.Kind](TypeNode.Kind.md) kind)                                                                                                                                      | Sets the kind (class, interface, enum, annotation) of this type.              |
+| public void                                                                                                                                                  | [addMethod](#addmethod)([MethodNode](MethodNode.md) method)                                                                                                                                      | Adds a method to this type.                                                   |
+| public void                                                                                                                                                  | [addConstructor](#addconstructor)([MethodNode](MethodNode.md) constructor)                                                                                                                       | Adds a constructor method to this type.                                       |
+| public void                                                                                                                                                  | [addField](#addfield)([FieldNode](FieldNode.md) field)                                                                                                                                           | Adds a field to this type.                                                    |
+| public void                                                                                                                                                  | [setHasDocumentedAnnotation](#sethasdocumentedannotation)(boolean b)                                                                                                                             | Sets a flag indicating if this type as having a `@Documented` meta-annotation |
+| public void                                                                                                                                                  | [setEnclosingClassRef](#setenclosingclassref)([Reference](Reference.md) ref)                                                                                                                     |                                                                               |
+| public [FieldNode](FieldNode.md)                                                                                                                             | [getField](#getfield)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) fieldName)                                                                    | Retrieves a field by its simple name.                                         |
+| public [MethodNode](MethodNode.md)                                                                                                                           | [getMethod](#getmethod)([MethodNode](MethodNode.md) method)                                                                                                                                      | Retrieves a method matching the signature of a given MethodNode.              |
+| public [MethodNode](MethodNode.md)                                                                                                                           | [getConstructor](#getconstructor)([MethodNode](MethodNode.md) method)                                                                                                                            | Retrieves a constructor matching the signature of a given MethodNode.         |
+| public void                                                                                                                                                  | [setSourcePath](#setsourcepath)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) path)                                                               |                                                                               |
+| public void                                                                                                                                                  | [setArrayBrackets](#setarraybrackets)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) brackets)                                                     | Sets the array brackets representation for this type.                         |
+| public void                                                                                                                                                  | [addAppliedAnnotation](#addappliedannotation)([AppliedAnnotationNode](AppliedAnnotationNode.md) annotation)                                                                                      | Adds an applied annotation to this type                                       |
+| public void                                                                                                                                                  | [setImplementedInterfaces](#setimplementedinterfaces)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Reference](Reference.md)> implementedInterfaces) | Sets the list of implemented interfaces by qualified names.                   |
+| public void                                                                                                                                                  | [setOwner](#setowner)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) owner)                                                                        | Sets the owner of this type.                                                  |
+| public void                                                                                                                                                  | [setKind](#setkind)([TypeNode.Kind](TypeNode.Kind.md) kind)                                                                                                                                      | Sets the kind (class, interface, enum, annotation) of this type.              |
+| public void                                                                                                                                                  | [addMethod](#addmethod)([MethodNode](MethodNode.md) method)                                                                                                                                      | Adds a method to this type.                                                   |
+| public void                                                                                                                                                  | [addConstructor](#addconstructor)([MethodNode](MethodNode.md) constructor)                                                                                                                       | Adds a constructor method to this type.                                       |
+| public void                                                                                                                                                  | [addField](#addfield)([FieldNode](FieldNode.md) field)                                                                                                                                           | Adds a field to this type.                                                    |
+| public void                                                                                                                                                  | [setHasDocumentedAnnotation](#sethasdocumentedannotation)(boolean b)                                                                                                                             | Sets a flag indicating if this type as having a `@Documented` meta-annotation |
+| public void                                                                                                                                                  | [setEnclosingClassRef](#setenclosingclassref)([Reference](Reference.md) ref)                                                                                                                     |                                                                               |
+| public [FieldNode](FieldNode.md)                                                                                                                             | [getField](#getfield)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) fieldName)                                                                    | Retrieves a field by its simple name.                                         |
+| public [MethodNode](MethodNode.md)                                                                                                                           | [getMethod](#getmethod)([MethodNode](MethodNode.md) method)                                                                                                                                      | Retrieves a method matching the signature of a given MethodNode.              |
+| public [MethodNode](MethodNode.md)                                                                                                                           | [getConstructor](#getconstructor)([MethodNode](MethodNode.md) method)                                                                                                                            | Retrieves a constructor matching the signature of a given MethodNode.         |
 
 ## Field Details
 
@@ -190,6 +221,15 @@ public boolean isInterface()
 ### isEnum
 
 public boolean isEnum()
+
+
+
+
+---
+
+### isRecord
+
+public boolean isRecord()
 
 
 
@@ -527,6 +567,282 @@ A string containing sorted modifiers separated by spaces.
 **Overrides:**
 
 [io.github.sandydunlop.markista.model.AbstractPackageMember.getModifiersString](AbstractPackageMember.md#getmodifiersstring).getModifiersString
+
+
+---
+
+### setSourcePath
+
+public void setSourcePath([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) path)
+
+
+
+
+---
+
+### setArrayBrackets
+
+public void setArrayBrackets([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) brackets)
+
+Sets the array brackets representation for this type.
+
+
+---
+
+### addAppliedAnnotation
+
+public void addAppliedAnnotation([AppliedAnnotationNode](AppliedAnnotationNode.md) annotation)
+
+Adds an applied annotation to this type
+
+
+---
+
+### setImplementedInterfaces
+
+public void setImplementedInterfaces([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Reference](Reference.md)> implementedInterfaces)
+
+Sets the list of implemented interfaces by qualified names.
+
+
+---
+
+### setOwner
+
+public void setOwner([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) owner)
+
+Sets the owner of this type.
+
+
+---
+
+### setKind
+
+public void setKind([TypeNode.Kind](TypeNode.Kind.md) kind)
+
+Sets the kind (class, interface, enum, annotation) of this type.
+
+
+---
+
+### addMethod
+
+public void addMethod([MethodNode](MethodNode.md) method)
+
+Adds a method to this type.
+
+
+---
+
+### addConstructor
+
+public void addConstructor([MethodNode](MethodNode.md) constructor)
+
+Adds a constructor method to this type.
+
+
+---
+
+### addField
+
+public void addField([FieldNode](FieldNode.md) field)
+
+Adds a field to this type.
+
+
+---
+
+### setHasDocumentedAnnotation
+
+public void setHasDocumentedAnnotation(boolean b)
+
+Sets a flag indicating if this type as having a `@Documented` meta-annotation
+
+
+---
+
+### setEnclosingClassRef
+
+public void setEnclosingClassRef([Reference](Reference.md) ref)
+
+
+
+
+---
+
+### getField
+
+public [FieldNode](FieldNode.md) getField([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) fieldName)
+
+Retrieves a field by its simple name.
+
+**Returns:**
+
+the FieldNode if found, otherwise null.
+
+
+---
+
+### getMethod
+
+public [MethodNode](MethodNode.md) getMethod([MethodNode](MethodNode.md) method)
+
+Retrieves a method matching the signature of a given MethodNode.
+
+**Returns:**
+
+the matching MethodNode if found, otherwise null.
+
+
+---
+
+### getConstructor
+
+public [MethodNode](MethodNode.md) getConstructor([MethodNode](MethodNode.md) method)
+
+Retrieves a constructor matching the signature of a given MethodNode.
+
+**Returns:**
+
+the matching constructor MethodNode if found, otherwise null.
+
+
+---
+
+### setSourcePath
+
+public void setSourcePath([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) path)
+
+
+
+
+---
+
+### setArrayBrackets
+
+public void setArrayBrackets([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) brackets)
+
+Sets the array brackets representation for this type.
+
+
+---
+
+### addAppliedAnnotation
+
+public void addAppliedAnnotation([AppliedAnnotationNode](AppliedAnnotationNode.md) annotation)
+
+Adds an applied annotation to this type
+
+
+---
+
+### setImplementedInterfaces
+
+public void setImplementedInterfaces([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Reference](Reference.md)> implementedInterfaces)
+
+Sets the list of implemented interfaces by qualified names.
+
+
+---
+
+### setOwner
+
+public void setOwner([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) owner)
+
+Sets the owner of this type.
+
+
+---
+
+### setKind
+
+public void setKind([TypeNode.Kind](TypeNode.Kind.md) kind)
+
+Sets the kind (class, interface, enum, annotation) of this type.
+
+
+---
+
+### addMethod
+
+public void addMethod([MethodNode](MethodNode.md) method)
+
+Adds a method to this type.
+
+
+---
+
+### addConstructor
+
+public void addConstructor([MethodNode](MethodNode.md) constructor)
+
+Adds a constructor method to this type.
+
+
+---
+
+### addField
+
+public void addField([FieldNode](FieldNode.md) field)
+
+Adds a field to this type.
+
+
+---
+
+### setHasDocumentedAnnotation
+
+public void setHasDocumentedAnnotation(boolean b)
+
+Sets a flag indicating if this type as having a `@Documented` meta-annotation
+
+
+---
+
+### setEnclosingClassRef
+
+public void setEnclosingClassRef([Reference](Reference.md) ref)
+
+
+
+
+---
+
+### getField
+
+public [FieldNode](FieldNode.md) getField([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) fieldName)
+
+Retrieves a field by its simple name.
+
+**Returns:**
+
+the FieldNode if found, otherwise null.
+
+
+---
+
+### getMethod
+
+public [MethodNode](MethodNode.md) getMethod([MethodNode](MethodNode.md) method)
+
+Retrieves a method matching the signature of a given MethodNode.
+
+**Returns:**
+
+the matching MethodNode if found, otherwise null.
+
+
+---
+
+### getConstructor
+
+public [MethodNode](MethodNode.md) getConstructor([MethodNode](MethodNode.md) method)
+
+Retrieves a constructor matching the signature of a given MethodNode.
+
+**Returns:**
+
+the matching constructor MethodNode if found, otherwise null.
 
 
 ---

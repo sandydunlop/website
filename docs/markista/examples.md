@@ -4,11 +4,11 @@
 
 ### Single Module Project
 
-A single module Gradle project: 
+A single module **Gradle** project: 
 [View on GitHub](https://github.com/sandydunlop/example.module.gradle)
 
 
-A single module Maven project: 
+A single module **Maven** project: 
 [View on GitHub](https://github.com/sandydunlop/example.module.maven)
 
 ### Multi-Module Project

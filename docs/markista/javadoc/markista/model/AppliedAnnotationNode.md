@@ -24,10 +24,9 @@ An annotation applied to a type
 
 ## Constructor Summary
 
-| Constructor                  | Description                                             |
-|------------------------------|---------------------------------------------------------|
-| AppliedAnnotationNode()      | Constructs an AppliedAnnotationNode                     |
-| AppliedAnnotationNode( type) | Constructs an AppliedAnnotationNode with the given type |
+| Constructor             | Description                         |
+|-------------------------|-------------------------------------|
+| AppliedAnnotationNode() | Constructs an AppliedAnnotationNode |
 
 ## Method Summary
 
@@ -41,6 +40,14 @@ An annotation applied to a type
 | public void                                                                                                                                | [setTypeName](#settypename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) type) | Sets the type of this annotation.                                                                                                            |
 | public void                                                                                                                                | [addElement](#addelement)([AnnotationElement](AnnotationElement.md) element)                                                   | Adds an element to this annotation                                                                                                           |
 | public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[AnnotationElement](AnnotationElement.md)> | [getElements](#getelements)()                                                                                                  | Returns the list of elements of this annotation.                                                                                             |
+| public void                                                                                                                                | [setCustom](#setcustom)(boolean b)                                                                                             | Specifies if this annotation will be treated as custom or built-in.                                                                          |
+| public void                                                                                                                                | [setDocumented](#setdocumented)(boolean b)                                                                                     | Sets the documented flag, indicating that this annotation should be displayed in the documentation of types or fields that it is applied to. |
+| public void                                                                                                                                | [setTypeName](#settypename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) type) | Sets the type of this annotation.                                                                                                            |
+| public void                                                                                                                                | [addElement](#addelement)([AnnotationElement](AnnotationElement.md) element)                                                   | Adds an element to this annotation                                                                                                           |
+| public void                                                                                                                                | [setCustom](#setcustom)(boolean b)                                                                                             | Specifies if this annotation will be treated as custom or built-in.                                                                          |
+| public void                                                                                                                                | [setDocumented](#setdocumented)(boolean b)                                                                                     | Sets the documented flag, indicating that this annotation should be displayed in the documentation of types or fields that it is applied to. |
+| public void                                                                                                                                | [setTypeName](#settypename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) type) | Sets the type of this annotation.                                                                                                            |
+| public void                                                                                                                                | [addElement](#addelement)([AnnotationElement](AnnotationElement.md) element)                                                   | Adds an element to this annotation                                                                                                           |
 
 ## Field Details
 
@@ -162,6 +169,82 @@ Returns the list of elements of this annotation.
 **Returns:**
 
 list of elements belonging to this annotation.
+
+
+---
+
+### setCustom
+
+public void setCustom(boolean b)
+
+Specifies if this annotation will be treated as custom or built-in.
+
+
+---
+
+### setDocumented
+
+public void setDocumented(boolean b)
+
+Sets the documented flag, indicating that this annotation should
+be displayed in the documentation of types or fields that it is
+applied to.
+
+
+---
+
+### setTypeName
+
+public void setTypeName([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) type)
+
+Sets the type of this annotation.
+
+
+---
+
+### addElement
+
+public void addElement([AnnotationElement](AnnotationElement.md) element)
+
+Adds an element to this annotation
+
+
+---
+
+### setCustom
+
+public void setCustom(boolean b)
+
+Specifies if this annotation will be treated as custom or built-in.
+
+
+---
+
+### setDocumented
+
+public void setDocumented(boolean b)
+
+Sets the documented flag, indicating that this annotation should
+be displayed in the documentation of types or fields that it is
+applied to.
+
+
+---
+
+### setTypeName
+
+public void setTypeName([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) type)
+
+Sets the type of this annotation.
+
+
+---
+
+### addElement
+
+public void addElement([AnnotationElement](AnnotationElement.md) element)
+
+Adds an element to this annotation
 
 
 ---

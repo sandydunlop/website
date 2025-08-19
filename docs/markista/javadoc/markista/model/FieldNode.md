@@ -27,6 +27,8 @@ A class to hold information about fields within a class, interface, or enum.
 | Constructor             | Description                                          |
 |-------------------------|------------------------------------------------------|
 | FieldNode( type,  name) | Constructs a FieldNode with the given type and name. |
+| FieldNode( type,  name) | Constructs a FieldNode with the given type and name. |
+| FieldNode( type,  name) | Constructs a FieldNode with the given type and name. |
 
 ## Method Summary
 
@@ -37,6 +39,10 @@ A class to hold information about fields within a class, interface, or enum.
 | public void                                                                                                   | [setConstantValueReference](#setconstantvaluereference)([Reference](Reference.md) ref)                                                                      |                                                                       |
 | public [Reference](Reference.md)                                                                              | [getConstantValueReference](#getconstantvaluereference)()                                                                                                   |                                                                       |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)           | [fullSignature](#fullsignature)()                                                                                                                           | Returns the full signature of the field including modifiers and name. |
+| public void                                                                                                   | [setConstantValue](#setconstantvalue)([Serializable](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Serializable.html) constantValue) | Sets the constant value of this field.                                |
+| public void                                                                                                   | [setConstantValueReference](#setconstantvaluereference)([Reference](Reference.md) ref)                                                                      |                                                                       |
+| public void                                                                                                   | [setConstantValue](#setconstantvalue)([Serializable](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Serializable.html) constantValue) | Sets the constant value of this field.                                |
+| public void                                                                                                   | [setConstantValueReference](#setconstantvaluereference)([Reference](Reference.md) ref)                                                                      |                                                                       |
 
 ## Field Details
 
@@ -106,6 +112,42 @@ Returns the full signature of the field including modifiers and name.
 **Returns:**
 
 The string representing the full signature.
+
+
+---
+
+### setConstantValue
+
+public void setConstantValue([Serializable](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Serializable.html) constantValue)
+
+Sets the constant value of this field.
+
+
+---
+
+### setConstantValueReference
+
+public void setConstantValueReference([Reference](Reference.md) ref)
+
+
+
+
+---
+
+### setConstantValue
+
+public void setConstantValue([Serializable](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Serializable.html) constantValue)
+
+Sets the constant value of this field.
+
+
+---
+
+### setConstantValueReference
+
+public void setConstantValueReference([Reference](Reference.md) ref)
+
+
 
 
 ---

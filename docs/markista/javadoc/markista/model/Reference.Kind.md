@@ -1,6 +1,6 @@
 Package [io.github.sandydunlop.markista.model](index.md)
 
-# Enum Reference.Kind
+# Enum Class Reference.Kind
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
         [java.lang.Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)<[io.github.sandydunlop.markista.model.Reference.Kind](Reference.Kind.md)><br/>
                 io.github.sandydunlop.markista.model.Reference.Kind<br/>
@@ -11,7 +11,7 @@ Enclosing Class:<br/>
 
 ----
 
-<span style="font-family: monospace;">public static final enum __Reference.Kind__</span>
+<span style="font-family: monospace;">public static final enum class __Reference.Kind__</span>
 
 Enum representing different kinds/types of references.
 
@@ -42,6 +42,9 @@ Enum representing different kinds/types of references.
 | Modifier and Type                                                    | Method                                                                                                                 | Description |
 |----------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|-------------|
 | public static io.github.sandydunlop.markista.model.Reference.Kind\[] | [values](#values)()                                                                                                    |             |
+| public static [Reference.Kind](Reference.Kind.md)                    | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
+| public static [Reference.Kind](Reference.Kind.md)                    | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
+| public static [Reference.Kind](Reference.Kind.md)                    | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
 | public static [Reference.Kind](Reference.Kind.md)                    | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
 
 ## Enum Constant Details
@@ -142,6 +145,33 @@ public static final VOID VOID
 ### values
 
 public static io.github.sandydunlop.markista.model.Reference.Kind\[] values()
+
+
+
+
+---
+
+### valueOf
+
+public static [Reference.Kind](Reference.Kind.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
+
+
+
+
+---
+
+### valueOf
+
+public static [Reference.Kind](Reference.Kind.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
+
+
+
+
+---
+
+### valueOf
+
+public static [Reference.Kind](Reference.Kind.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
 
 
 

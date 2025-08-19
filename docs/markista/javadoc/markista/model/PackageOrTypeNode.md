@@ -33,8 +33,11 @@ Package [io.github.sandydunlop.markista.model](index.md)
 | public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeView](TypeView.md)> | [getClasses](#getclasses)()                           | Gets the list of classes *owned* by this instance.              |
 | public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeView](TypeView.md)> | [getInterfaces](#getinterfaces)()                     | Gets the list of interfaces *owned* by this instance.           |
 | public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeView](TypeView.md)> | [getEnums](#getenums)()                               | Gets the list of enums *owned* by this instance.                |
+| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeView](TypeView.md)> | [getRecords](#getrecords)()                           | Gets the list of records *owned* by this instance.              |
 | public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeView](TypeView.md)> | [getAnnotations](#getannotations)()                   | Gets the list of annotations *owned* by this instance.          |
 | public void                                                                                                              | [sort](#sort)()                                       | Sorts the nodes owned by this instance into alphabetical order. |
+| public void                                                                                                              | [addType](#addtype)([TypeView](TypeView.md) typeNode) |                                                                 |
+| public void                                                                                                              | [addType](#addtype)([TypeView](TypeView.md) typeNode) |                                                                 |
 
 ## Field Details
 
@@ -93,6 +96,15 @@ Gets the list of enums *owned* by this instance.
 
 ---
 
+### getRecords
+
+public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeView](TypeView.md)> getRecords()
+
+Gets the list of records *owned* by this instance.
+
+
+---
+
 ### getAnnotations
 
 public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeView](TypeView.md)> getAnnotations()
@@ -107,6 +119,24 @@ Gets the list of annotations *owned* by this instance.
 public void sort()
 
 Sorts the nodes owned by this instance into alphabetical order.
+
+
+---
+
+### addType
+
+public void addType([TypeView](TypeView.md) typeNode)
+
+
+
+
+---
+
+### addType
+
+public void addType([TypeView](TypeView.md) typeNode)
+
+
 
 
 ---

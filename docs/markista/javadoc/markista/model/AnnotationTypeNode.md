@@ -21,3 +21,5 @@ A [Node](Node.md) that represents an [Annotation](https://docs.oracle.com/en/jav
 | Constructor                                                   | Description                                                                       |
 |---------------------------------------------------------------|-----------------------------------------------------------------------------------|
 | AnnotationTypeNode( qualifiedName,  simpleName,  packageName) | Constructor that sets the minimum required information for an AnnotationTypeNode. |
+| AnnotationTypeNode( qualifiedName,  simpleName,  packageName) | Constructor that sets the minimum required information for an AnnotationTypeNode. |
+| AnnotationTypeNode( qualifiedName,  simpleName,  packageName) | Constructor that sets the minimum required information for an AnnotationTypeNode. |

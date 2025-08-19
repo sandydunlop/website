@@ -44,6 +44,8 @@ maintain and extend the documentation processing capabilities of Markista.
 | public abstract boolean | [replacesDefault](#replacesdefault)()                                          | Returns true if this Docservice replaces the default DocService. |
 | public abstract boolean | [start](#start)([Api](../model/Api.md) api, [Context](../core/Context.md) ctx) | Runs before the main Markdown DocService.                        |
 | public abstract boolean | [finish](#finish)()                                                            | Runs after the main Markdown DocService.                         |
+| public abstract boolean | [start](#start)([Api](../model/Api.md) api, [Context](../core/Context.md) ctx) | Runs before the main Markdown DocService.                        |
+| public abstract boolean | [start](#start)([Api](../model/Api.md) api, [Context](../core/Context.md) ctx) | Runs before the main Markdown DocService.                        |
 
 ## Method Details
 
@@ -79,6 +81,34 @@ true on success, otheriwse false
 public abstract boolean finish()
 
 Runs after the main Markdown DocService.
+
+**Returns:**
+
+true on success, otheriwse false
+
+
+---
+
+### start
+
+public abstract boolean start([Api](../model/Api.md) api, [Context](../core/Context.md) ctx)
+
+Runs before the main Markdown DocService.
+Initializes a DocService with the API model and a Context for file creation and reporting.
+
+**Returns:**
+
+true on success, otheriwse false
+
+
+---
+
+### start
+
+public abstract boolean start([Api](../model/Api.md) api, [Context](../core/Context.md) ctx)
+
+Runs before the main Markdown DocService.
+Initializes a DocService with the API model and a Context for file creation and reporting.
 
 **Returns:**
 

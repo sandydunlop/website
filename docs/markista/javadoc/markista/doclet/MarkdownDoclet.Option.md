@@ -36,6 +36,9 @@ command line.
 | Constructor                                                      | Description |
 |------------------------------------------------------------------|-------------|
 | MarkdownDoclet.Option( name,  hasArg,  description,  parameters) |             |
+| MarkdownDoclet.Option( name,  hasArg,  description,  parameters) |             |
+| MarkdownDoclet.Option( name,  hasArg,  description,  parameters) |             |
+| MarkdownDoclet.Option( name,  hasArg,  description,  parameters) |             |
 
 ## Method Summary
 

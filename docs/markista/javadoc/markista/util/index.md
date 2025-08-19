@@ -1,3 +1,4 @@
+
 # Package io.github.sandydunlop.markista.util
 
 
@@ -15,3 +16,8 @@ This package contains utility methods used by other packages.
     | [LinkFormatter](LinkFormatter.md)       |                                                                                                                                                                                                                                                                                                                         |
     | [ApiScanner](ApiScanner.md)             | A scanner that walks the language model elements provided by the Javadoc doclet  environment and builds an Api model representing the discovered modules, packages, types, and members.                                                                                                                                 |
     | [LinkResolver](LinkResolver.md)         | `LinkResolver` calculates the paths for Markdown documents to link between different packages and to URLs of external packages and their contents.                                                                                                                                                                      |
+=== "Record Classes"
+
+    | Class                       | Description |
+    |-----------------------------|-------------|
+    | [TestREcord](TestREcord.md) |             |

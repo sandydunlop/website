@@ -26,6 +26,8 @@ All Implemented Interfaces:<br/>
 | Constructor  | Description |
 |--------------|-------------|
 | Pair( l,  r) |             |
+| Pair( l,  r) |             |
+| Pair( l,  r) |             |
 
 ## Method Summary
 
@@ -38,6 +40,14 @@ All Implemented Interfaces:<br/>
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [toString](#tostring)()                                                                                               |             |
 | public boolean                                                                                      | [equals](#equals)([Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html) other) |             |
 | public int                                                                                          | [hashCode](#hashcode)()                                                                                               |             |
+| public static [Pair](Pair.md)<A, B>                                                                 | [of](#of)(A a, B b)                                                                                                   |             |
+| public void                                                                                         | [setL](#setl)(L l)                                                                                                    |             |
+| public void                                                                                         | [setR](#setr)(R r)                                                                                                    |             |
+| public boolean                                                                                      | [equals](#equals)([Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html) other) |             |
+| public static [Pair](Pair.md)<A, B>                                                                 | [of](#of)(A a, B b)                                                                                                   |             |
+| public void                                                                                         | [setL](#setl)(L l)                                                                                                    |             |
+| public void                                                                                         | [setR](#setr)(R r)                                                                                                    |             |
+| public boolean                                                                                      | [equals](#equals)([Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html) other) |             |
 | public static [Pair](Pair.md)<A, B>                                                                 | [of](#of)(A a, B b)                                                                                                   |             |
 
 ## Field Details
@@ -129,6 +139,78 @@ public boolean equals([Object](https://docs.oracle.com/en/java/javase/24/docs/ap
 ### hashCode
 
 public int hashCode()
+
+
+
+
+---
+
+### of
+
+public static [Pair](Pair.md)<A, B> of(A a, B b)
+
+
+
+
+---
+
+### setL
+
+public void setL(L l)
+
+
+
+
+---
+
+### setR
+
+public void setR(R r)
+
+
+
+
+---
+
+### equals
+
+public boolean equals([Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html) other)
+
+
+
+
+---
+
+### of
+
+public static [Pair](Pair.md)<A, B> of(A a, B b)
+
+
+
+
+---
+
+### setL
+
+public void setL(L l)
+
+
+
+
+---
+
+### setR
+
+public void setR(R r)
+
+
+
+
+---
+
+### equals
+
+public boolean equals([Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html) other)
 
 
 

@@ -30,6 +30,8 @@ Represents a method from another type that is overridden by a method in the type
 | Constructor                                            | Description                                                                             |
 |--------------------------------------------------------|-----------------------------------------------------------------------------------------|
 | OverriddenMethodNode( qualifiedClassName,  methodName) | Constructs an OverriddenMethodNode with specified qualified class name and method name. |
+| OverriddenMethodNode( qualifiedClassName,  methodName) | Constructs an OverriddenMethodNode with specified qualified class name and method name. |
+| OverriddenMethodNode( qualifiedClassName,  methodName) | Constructs an OverriddenMethodNode with specified qualified class name and method name. |
 
 ## Method Summary
 
@@ -41,6 +43,10 @@ Represents a method from another type that is overridden by a method in the type
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getMethodName](#getmethodname)()                            | Returns the name of the overridden method.                       |
 | public void                                                                                         | [setText](#settext)([Text](Text.md) text)                    |                                                                  |
 | public [Text](Text.md)                                                                              | [getText](#gettext)()                                        |                                                                  |
+| public void                                                                                         | [setReference](#setreference)([Reference](Reference.md) ref) |                                                                  |
+| public void                                                                                         | [setText](#settext)([Text](Text.md) text)                    |                                                                  |
+| public void                                                                                         | [setReference](#setreference)([Reference](Reference.md) ref) |                                                                  |
+| public void                                                                                         | [setText](#settext)([Text](Text.md) text)                    |                                                                  |
 
 ## Field Details
 
@@ -144,6 +150,42 @@ public void setText([Text](Text.md) text)
 ### getText
 
 public [Text](Text.md) getText()
+
+
+
+
+---
+
+### setReference
+
+public void setReference([Reference](Reference.md) ref)
+
+
+
+
+---
+
+### setText
+
+public void setText([Text](Text.md) text)
+
+
+
+
+---
+
+### setReference
+
+public void setReference([Reference](Reference.md) ref)
+
+
+
+
+---
+
+### setText
+
+public void setText([Text](Text.md) text)
 
 
 

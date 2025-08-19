@@ -55,6 +55,24 @@ A doclet that renders javadoc comments as Markdown
 | private [DocService](../spi/DocService.md)                                                                                                                 | [populateExtensionsWithoutOrder](#populateextensionswithoutorder)([ServiceLoader](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/ServiceLoader.html)<[DocService](../spi/DocService.md)> loader, [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DocService](../spi/DocService.md)> orderedExtensions, [DocService](../spi/DocService.md) defaultDocService) |                                                                                 |
 | private void                                                                                                                                               | [addExtensionToMap](#addextensiontomap)([HashMap](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/HashMap.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html), [DocService](../spi/DocService.md)> extensions, [DocService](../spi/DocService.md) extension)                                                                                             |                                                                                 |
 | private [DocService](../spi/DocService.md)                                                                                                                 | [handleExtension](#handleextension)([DocService](../spi/DocService.md) mainDocService, [DocService](../spi/DocService.md) defaultDocService, [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DocService](../spi/DocService.md)> orderedExtensions, [DocService](../spi/DocService.md) extension)                                                                                     |                                                                                 |
+| public static void                                                                                                                                         | [readJavadocOptions](#readjavadocoptions)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) optionsPath)                                                                                                                                                                                                                                                                            | Reads a javadoc.options file containing command line arguments for Javadoc.     |
+| public static void                                                                                                                                         | [main](#main)([String\](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String\.html)[] args)                                                                                                                                                                                                                                                                                                           | The starting point of Markista if it is being used without the Javadoc command. |
+| public void                                                                                                                                                | [init](#init)([Locale](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Locale.html) locale, [Reporter](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Reporter.html) reporter)                                                                                                                                                                                       | Initializes the doclet.                                                         |
+| public boolean                                                                                                                                             | [run](#run)([DocletEnvironment](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/DocletEnvironment.html) environment)                                                                                                                                                                                                                                                                         | The `run` method is called by the Javadoc tool to begin running the doclet.     |
+| [DocService](../spi/DocService.md)                                                                                                                         | [getMainServiceAndExtensions](#getmainserviceandextensions)([ServiceLoader](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/ServiceLoader.html)<[DocService](../spi/DocService.md)> loader, [DocService](../spi/DocService.md) defaultDocService, [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DocService](../spi/DocService.md)> orderedExtensions)       | Populates the list of extensions and determines the main DocService.            |
+| private [DocService](../spi/DocService.md)                                                                                                                 | [populateExtensionsWithOrder](#populateextensionswithorder)([ServiceLoader](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/ServiceLoader.html)<[DocService](../spi/DocService.md)> loader, [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DocService](../spi/DocService.md)> orderedExtensions, [DocService](../spi/DocService.md) defaultDocService)       |                                                                                 |
+| private [DocService](../spi/DocService.md)                                                                                                                 | [populateExtensionsWithoutOrder](#populateextensionswithoutorder)([ServiceLoader](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/ServiceLoader.html)<[DocService](../spi/DocService.md)> loader, [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DocService](../spi/DocService.md)> orderedExtensions, [DocService](../spi/DocService.md) defaultDocService) |                                                                                 |
+| private void                                                                                                                                               | [addExtensionToMap](#addextensiontomap)([HashMap](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/HashMap.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html), [DocService](../spi/DocService.md)> extensions, [DocService](../spi/DocService.md) extension)                                                                                             |                                                                                 |
+| private [DocService](../spi/DocService.md)                                                                                                                 | [handleExtension](#handleextension)([DocService](../spi/DocService.md) mainDocService, [DocService](../spi/DocService.md) defaultDocService, [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DocService](../spi/DocService.md)> orderedExtensions, [DocService](../spi/DocService.md) extension)                                                                                     |                                                                                 |
+| public static void                                                                                                                                         | [readJavadocOptions](#readjavadocoptions)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) optionsPath)                                                                                                                                                                                                                                                                            | Reads a javadoc.options file containing command line arguments for Javadoc.     |
+| public static void                                                                                                                                         | [main](#main)([String\](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String\.html)[] args)                                                                                                                                                                                                                                                                                                           | The starting point of Markista if it is being used without the Javadoc command. |
+| public void                                                                                                                                                | [init](#init)([Locale](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Locale.html) locale, [Reporter](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Reporter.html) reporter)                                                                                                                                                                                       | Initializes the doclet.                                                         |
+| public boolean                                                                                                                                             | [run](#run)([DocletEnvironment](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/DocletEnvironment.html) environment)                                                                                                                                                                                                                                                                         | The `run` method is called by the Javadoc tool to begin running the doclet.     |
+| [DocService](../spi/DocService.md)                                                                                                                         | [getMainServiceAndExtensions](#getmainserviceandextensions)([ServiceLoader](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/ServiceLoader.html)<[DocService](../spi/DocService.md)> loader, [DocService](../spi/DocService.md) defaultDocService, [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DocService](../spi/DocService.md)> orderedExtensions)       | Populates the list of extensions and determines the main DocService.            |
+| private [DocService](../spi/DocService.md)                                                                                                                 | [populateExtensionsWithOrder](#populateextensionswithorder)([ServiceLoader](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/ServiceLoader.html)<[DocService](../spi/DocService.md)> loader, [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DocService](../spi/DocService.md)> orderedExtensions, [DocService](../spi/DocService.md) defaultDocService)       |                                                                                 |
+| private [DocService](../spi/DocService.md)                                                                                                                 | [populateExtensionsWithoutOrder](#populateextensionswithoutorder)([ServiceLoader](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/ServiceLoader.html)<[DocService](../spi/DocService.md)> loader, [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DocService](../spi/DocService.md)> orderedExtensions, [DocService](../spi/DocService.md) defaultDocService) |                                                                                 |
+| private void                                                                                                                                               | [addExtensionToMap](#addextensiontomap)([HashMap](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/HashMap.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html), [DocService](../spi/DocService.md)> extensions, [DocService](../spi/DocService.md) extension)                                                                                             |                                                                                 |
+| private [DocService](../spi/DocService.md)                                                                                                                 | [handleExtension](#handleextension)([DocService](../spi/DocService.md) mainDocService, [DocService](../spi/DocService.md) defaultDocService, [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DocService](../spi/DocService.md)> orderedExtensions, [DocService](../spi/DocService.md) extension)                                                                                     |                                                                                 |
 
 ## Field Details
 
@@ -180,6 +198,186 @@ public [Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/u
 public [SourceVersion](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/SourceVersion.html) getSupportedSourceVersion()
 
 
+
+
+---
+
+### run
+
+public boolean run([DocletEnvironment](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/DocletEnvironment.html) environment)
+
+The `run` method is called by the Javadoc tool to begin running the doclet.
+
+**Returns:**
+
+true if completed without errors, false if errors occurred.
+
+
+---
+
+### getMainServiceAndExtensions
+
+[DocService](../spi/DocService.md) getMainServiceAndExtensions([ServiceLoader](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/ServiceLoader.html)<[DocService](../spi/DocService.md)> loader, [DocService](../spi/DocService.md) defaultDocService, [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DocService](../spi/DocService.md)> orderedExtensions)
+
+Populates the list of extensions and determines the main DocService.
+
+**Returns:**
+
+The DocService that is expected to output the main documentation files. Null if loading extensions failed.
+
+
+---
+
+### populateExtensionsWithOrder
+
+private [DocService](../spi/DocService.md) populateExtensionsWithOrder([ServiceLoader](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/ServiceLoader.html)<[DocService](../spi/DocService.md)> loader, [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DocService](../spi/DocService.md)> orderedExtensions, [DocService](../spi/DocService.md) defaultDocService)
+
+
+
+
+---
+
+### populateExtensionsWithoutOrder
+
+private [DocService](../spi/DocService.md) populateExtensionsWithoutOrder([ServiceLoader](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/ServiceLoader.html)<[DocService](../spi/DocService.md)> loader, [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DocService](../spi/DocService.md)> orderedExtensions, [DocService](../spi/DocService.md) defaultDocService)
+
+
+
+
+---
+
+### addExtensionToMap
+
+private void addExtensionToMap([HashMap](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/HashMap.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html), [DocService](../spi/DocService.md)> extensions, [DocService](../spi/DocService.md) extension)
+
+
+
+
+---
+
+### handleExtension
+
+private [DocService](../spi/DocService.md) handleExtension([DocService](../spi/DocService.md) mainDocService, [DocService](../spi/DocService.md) defaultDocService, [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DocService](../spi/DocService.md)> orderedExtensions, [DocService](../spi/DocService.md) extension)
+
+
+
+
+---
+
+### readJavadocOptions
+
+public static void readJavadocOptions([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) optionsPath)
+
+Reads a javadoc.options file containing command line arguments for Javadoc.
+
+
+---
+
+### main
+
+public static void main([String\](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String\.html)[] args)
+
+The starting point of Markista if it is being used
+without the Javadoc command. This is useful for debugging.
+
+
+---
+
+### init
+
+public void init([Locale](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Locale.html) locale, [Reporter](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Reporter.html) reporter)
+
+Initializes the doclet.
+
+
+---
+
+### run
+
+public boolean run([DocletEnvironment](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/DocletEnvironment.html) environment)
+
+The `run` method is called by the Javadoc tool to begin running the doclet.
+
+**Returns:**
+
+true if completed without errors, false if errors occurred.
+
+
+---
+
+### getMainServiceAndExtensions
+
+[DocService](../spi/DocService.md) getMainServiceAndExtensions([ServiceLoader](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/ServiceLoader.html)<[DocService](../spi/DocService.md)> loader, [DocService](../spi/DocService.md) defaultDocService, [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DocService](../spi/DocService.md)> orderedExtensions)
+
+Populates the list of extensions and determines the main DocService.
+
+**Returns:**
+
+The DocService that is expected to output the main documentation files. Null if loading extensions failed.
+
+
+---
+
+### populateExtensionsWithOrder
+
+private [DocService](../spi/DocService.md) populateExtensionsWithOrder([ServiceLoader](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/ServiceLoader.html)<[DocService](../spi/DocService.md)> loader, [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DocService](../spi/DocService.md)> orderedExtensions, [DocService](../spi/DocService.md) defaultDocService)
+
+
+
+
+---
+
+### populateExtensionsWithoutOrder
+
+private [DocService](../spi/DocService.md) populateExtensionsWithoutOrder([ServiceLoader](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/ServiceLoader.html)<[DocService](../spi/DocService.md)> loader, [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DocService](../spi/DocService.md)> orderedExtensions, [DocService](../spi/DocService.md) defaultDocService)
+
+
+
+
+---
+
+### addExtensionToMap
+
+private void addExtensionToMap([HashMap](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/HashMap.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html), [DocService](../spi/DocService.md)> extensions, [DocService](../spi/DocService.md) extension)
+
+
+
+
+---
+
+### handleExtension
+
+private [DocService](../spi/DocService.md) handleExtension([DocService](../spi/DocService.md) mainDocService, [DocService](../spi/DocService.md) defaultDocService, [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DocService](../spi/DocService.md)> orderedExtensions, [DocService](../spi/DocService.md) extension)
+
+
+
+
+---
+
+### readJavadocOptions
+
+public static void readJavadocOptions([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) optionsPath)
+
+Reads a javadoc.options file containing command line arguments for Javadoc.
+
+
+---
+
+### main
+
+public static void main([String\](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String\.html)[] args)
+
+The starting point of Markista if it is being used
+without the Javadoc command. This is useful for debugging.
+
+
+---
+
+### init
+
+public void init([Locale](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Locale.html) locale, [Reporter](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Reporter.html) reporter)
+
+Initializes the doclet.
 
 
 ---

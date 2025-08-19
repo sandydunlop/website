@@ -43,6 +43,12 @@ Package [io.github.sandydunlop.markista.model](index.md)
 | public void                                                                                                            | [addModifier](#addmodifier)([Modifier](Modifier.md) mod)                                                                                 | Adds a modifier to the set of modifiers.      |
 | public [Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<[Modifier](Modifier.md)> | [getModifiers](#getmodifiers)()                                                                                                          | Returns the set of modifiers for this node.   |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                    | [getModifiersString](#getmodifiersstring)()                                                                                              | Returns a string representation of modifiers. |
+| public void                                                                                                            | [setSimpleName](#setsimplename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)       | Sets the simple name of this type.            |
+| public void                                                                                                            | [setQualifiedName](#setqualifiedname)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) | Sets the qualified name of this type.         |
+| public void                                                                                                            | [addModifier](#addmodifier)([Modifier](Modifier.md) mod)                                                                                 | Adds a modifier to the set of modifiers.      |
+| public void                                                                                                            | [setSimpleName](#setsimplename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)       | Sets the simple name of this type.            |
+| public void                                                                                                            | [setQualifiedName](#setqualifiedname)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) | Sets the qualified name of this type.         |
+| public void                                                                                                            | [addModifier](#addmodifier)([Modifier](Modifier.md) mod)                                                                                 | Adds a modifier to the set of modifiers.      |
 
 ## Field Details
 
@@ -153,6 +159,60 @@ The modifiers are sorted according to a predefined order.
 **Returns:**
 
 A string containing sorted modifiers separated by spaces.
+
+
+---
+
+### setSimpleName
+
+public void setSimpleName([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
+
+Sets the simple name of this type.
+
+
+---
+
+### setQualifiedName
+
+public void setQualifiedName([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
+
+Sets the qualified name of this type.
+
+
+---
+
+### addModifier
+
+public void addModifier([Modifier](Modifier.md) mod)
+
+Adds a modifier to the set of modifiers.
+
+
+---
+
+### setSimpleName
+
+public void setSimpleName([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
+
+Sets the simple name of this type.
+
+
+---
+
+### setQualifiedName
+
+public void setQualifiedName([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
+
+Sets the qualified name of this type.
+
+
+---
+
+### addModifier
+
+public void addModifier([Modifier](Modifier.md) mod)
+
+Adds a modifier to the set of modifiers.
 
 
 ---

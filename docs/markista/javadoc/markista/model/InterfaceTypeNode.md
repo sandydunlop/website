@@ -21,3 +21,5 @@ A node representing a Java interface type
 | Constructor                                                  | Description                                            |
 |--------------------------------------------------------------|--------------------------------------------------------|
 | InterfaceTypeNode( qualifiedName,  simpleName,  packageName) | Create an InterfaceTypeNode with the specified details |
+| InterfaceTypeNode( qualifiedName,  simpleName,  packageName) | Create an InterfaceTypeNode with the specified details |
+| InterfaceTypeNode( qualifiedName,  simpleName,  packageName) | Create an InterfaceTypeNode with the specified details |

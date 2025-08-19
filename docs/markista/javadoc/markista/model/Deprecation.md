@@ -1,6 +1,6 @@
 Package [io.github.sandydunlop.markista.model](index.md)
 
-# Enum Deprecation
+# Enum Class Deprecation
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
         [java.lang.Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)<[io.github.sandydunlop.markista.model.Deprecation](Deprecation.md)><br/>
                 io.github.sandydunlop.markista.model.Deprecation<br/>
@@ -8,7 +8,7 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 ----
 
-<span style="font-family: monospace;">public final enum __Deprecation__</span>
+<span style="font-family: monospace;">public final enum class __Deprecation__</span>
 
 Enum representing the deprecation status of an element
 
@@ -32,6 +32,8 @@ Enum representing the deprecation status of an element
 | Modifier and Type                                                 | Method                                                                                                                 | Description |
 |-------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|-------------|
 | public static io.github.sandydunlop.markista.model.Deprecation\[] | [values](#values)()                                                                                                    |             |
+| public static [Deprecation](Deprecation.md)                       | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
+| public static [Deprecation](Deprecation.md)                       | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
 | public static [Deprecation](Deprecation.md)                       | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
 
 ## Enum Constant Details
@@ -69,6 +71,24 @@ public static final DEPRECATED DEPRECATED
 ### values
 
 public static io.github.sandydunlop.markista.model.Deprecation\[] values()
+
+
+
+
+---
+
+### valueOf
+
+public static [Deprecation](Deprecation.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
+
+
+
+
+---
+
+### valueOf
+
+public static [Deprecation](Deprecation.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
 
 
 

@@ -1,6 +1,6 @@
 Package [io.github.sandydunlop.markista.model](index.md)
 
-# Enum DirectiveNode.Kind
+# Enum Class DirectiveNode.Kind
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
         [java.lang.Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)<[io.github.sandydunlop.markista.model.DirectiveNode.Kind](DirectiveNode.Kind.md)><br/>
                 io.github.sandydunlop.markista.model.DirectiveNode.Kind<br/>
@@ -11,7 +11,7 @@ Enclosing Class:<br/>
 
 ----
 
-<span style="font-family: monospace;">public static final enum __DirectiveNode.Kind__</span>
+<span style="font-family: monospace;">public static final enum class __DirectiveNode.Kind__</span>
 
 Enum representing the various kinds of directives possible in a module declaration.
 
@@ -38,6 +38,9 @@ Enum representing the various kinds of directives possible in a module declarati
 | Modifier and Type                                                        | Method                                                                                                                 | Description |
 |--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|-------------|
 | public static io.github.sandydunlop.markista.model.DirectiveNode.Kind\[] | [values](#values)()                                                                                                    |             |
+| public static [DirectiveNode.Kind](DirectiveNode.Kind.md)                | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
+| public static [DirectiveNode.Kind](DirectiveNode.Kind.md)                | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
+| public static [DirectiveNode.Kind](DirectiveNode.Kind.md)                | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
 | public static [DirectiveNode.Kind](DirectiveNode.Kind.md)                | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
 
 ## Enum Constant Details
@@ -102,6 +105,33 @@ public static final PROVIDES PROVIDES
 ### values
 
 public static io.github.sandydunlop.markista.model.DirectiveNode.Kind\[] values()
+
+
+
+
+---
+
+### valueOf
+
+public static [DirectiveNode.Kind](DirectiveNode.Kind.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
+
+
+
+
+---
+
+### valueOf
+
+public static [DirectiveNode.Kind](DirectiveNode.Kind.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
+
+
+
+
+---
+
+### valueOf
+
+public static [DirectiveNode.Kind](DirectiveNode.Kind.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
 
 
 

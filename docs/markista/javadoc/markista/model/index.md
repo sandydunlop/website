@@ -1,12 +1,19 @@
+
 # Package io.github.sandydunlop.markista.model
 
 
 The types used to store structure and documentation information of the API.
 
+=== "Interfaces"
+
+    | Class                   | Description                                       |
+    |-------------------------|---------------------------------------------------|
+    | [TypeView](TypeView.md) | Minimal view of a type used by PackageOrTypeNode. |
 === "Classes"
 
     | Class                                             | Description                                                                                                                                                                                       |
     |---------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+    | [RecordTypeNode](RecordTypeNode.md)               | Represents a Java record class.                                                                                                                                                                   |
     | [Text](Text.md)                                   | Represents a block of text.                                                                                                                                                                       |
     | [Node](Node.md)                                   | The base class for all types of nodes in the API model.                                                                                                                                           |
     | [AppliedAnnotationNode](AppliedAnnotationNode.md) | An annotation applied to a type                                                                                                                                                                   |
@@ -25,14 +32,9 @@ The types used to store structure and documentation information of the API.
     | [AnnotationElement](AnnotationElement.md)         | An element of an annotation                                                                                                                                                                       |
     | [PackageOrTypeNode](PackageOrTypeNode.md)         |                                                                                                                                                                                                   |
     | [OverriddenMethodNode](OverriddenMethodNode.md)   | Represents a method from another type that is overridden by a method in the type being documented.                                                                                                |
-    | [ClassTypeNode](ClassTypeNode.md)                 | Represents a JAva class that extends a type node.                                                                                                                                                 |
+    | [ClassTypeNode](ClassTypeNode.md)                 | Represents a Java class.                                                                                                                                                                          |
     | [Api](Api.md)                                     | Represents the API being documented, encapsulating its modules and packages.                                                                                                                      |
     | [AbstractPackageMember](AbstractPackageMember.md) |                                                                                                                                                                                                   |
-=== "Interfaces"
-
-    | Class                   | Description                                       |
-    |-------------------------|---------------------------------------------------|
-    | [TypeView](TypeView.md) | Minimal view of a type used by PackageOrTypeNode. |
 === "Enum Classes"
 
     | Class                         | Description                                                                   |
