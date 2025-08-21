@@ -10,7 +10,7 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 ----
 
-<span style="font-family: monospace;">public class __PackageNode__</span>
+<span style="font-family: monospace; font-size: 80%;">public class __PackageNode__</span>
 
 Represents a Java package
 
@@ -26,11 +26,9 @@ Represents a Java package
 
 ## Constructor Summary
 
-| Constructor        | Description                                                         |
-|--------------------|---------------------------------------------------------------------|
-| PackageNode( name) | Constructs a PackageNode with the specified qualified package name. |
-| PackageNode( name) | Constructs a PackageNode with the specified qualified package name. |
-| PackageNode( name) | Constructs a PackageNode with the specified qualified package name. |
+| Constructor                                                                                                    | Description                                                         |
+|----------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------|
+| PackageNode([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) | Constructs a PackageNode with the specified qualified package name. |
 
 ## Method Summary
 
@@ -45,18 +43,12 @@ Represents a Java package
 | public [Text](Text.md)                                                                                                         | [getDescription](#getdescription)()                                                                                                  | Returns the description text for this package, typically the first sentence. |
 | public void                                                                                                                    | [setHasPackageInfo](#sethaspackageinfo)(boolean b)                                                                                   |                                                                              |
 | public boolean                                                                                                                 | [hasPackageInfo](#haspackageinfo)()                                                                                                  |                                                                              |
-| public void                                                                                                                    | [setModuleName](#setmodulename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) module) | Sets the module for this package.                                            |
-| public void                                                                                                                    | [setSourcePath](#setsourcepath)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) path)   |                                                                              |
-| public void                                                                                                                    | [addPackage](#addpackage)([PackageNode](PackageNode.md) packageNode)                                                                 | Adds a subpackage to this package.                                           |
-| public void                                                                                                                    | [setHasPackageInfo](#sethaspackageinfo)(boolean b)                                                                                   |                                                                              |
-| public void                                                                                                                    | [setModuleName](#setmodulename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) module) | Sets the module for this package.                                            |
-| public void                                                                                                                    | [setSourcePath](#setsourcepath)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) path)   |                                                                              |
-| public void                                                                                                                    | [addPackage](#addpackage)([PackageNode](PackageNode.md) packageNode)                                                                 | Adds a subpackage to this package.                                           |
-| public void                                                                                                                    | [setHasPackageInfo](#sethaspackageinfo)(boolean b)                                                                                   |                                                                              |
 
 ## Field Details
 
 ### moduleName
+
+<span style="font-family: monospace; font-size: 80%;">private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __moduleName__</span>
 
 
 
@@ -65,6 +57,8 @@ Represents a Java package
 
 ### sourcePath
 
+<span style="font-family: monospace; font-size: 80%;">private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __sourcePath__</span>
+
 
 
 
@@ -72,12 +66,16 @@ Represents a Java package
 
 ### hasPackageInfo
 
+<span style="font-family: monospace; font-size: 80%;">private boolean __hasPackageInfo__</span>
+
 
 
 
 ---
 
 ### packages
+
+<span style="font-family: monospace; font-size: 80%;">private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[PackageNode](PackageNode.md)> __packages__</span>
 
 
 
@@ -89,7 +87,7 @@ Represents a Java package
 
 ### setModuleName
 
-public void setModuleName([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) module)
+<span style="font-family: monospace; font-size: 80%;">public void __setModuleName__</span>
 
 Sets the module for this package.
 
@@ -98,7 +96,7 @@ Sets the module for this package.
 
 ### getModuleName
 
-public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) getModuleName()
+<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getModuleName__</span>
 
 Returns the module that owns this package.
 
@@ -111,7 +109,7 @@ The ModuleNode instance.
 
 ### setSourcePath
 
-public void setSourcePath([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) path)
+<span style="font-family: monospace; font-size: 80%;">public void __setSourcePath__</span>
 
 
 
@@ -120,7 +118,7 @@ public void setSourcePath([String](https://docs.oracle.com/en/java/javase/24/doc
 
 ### getSourcePath
 
-public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) getSourcePath()
+<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getSourcePath__</span>
 
 
 
@@ -129,7 +127,7 @@ public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/jav
 
 ### getPackages
 
-public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[PackageNode](PackageNode.md)> getPackages()
+<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[PackageNode](PackageNode.md)> __getPackages__</span>
 
 Returns the list of package members owned by this package.
 
@@ -142,7 +140,7 @@ List of PackageNode objects.
 
 ### addPackage
 
-public void addPackage([PackageNode](PackageNode.md) packageNode)
+<span style="font-family: monospace; font-size: 80%;">public void __addPackage__</span>
 
 Adds a subpackage to this package.
 
@@ -151,7 +149,7 @@ Adds a subpackage to this package.
 
 ### getDescription
 
-public [Text](Text.md) getDescription()
+<span style="font-family: monospace; font-size: 80%;">public [Text](Text.md) __getDescription__</span>
 
 Returns the description text for this package, typically the first sentence.
 
@@ -164,7 +162,7 @@ The Text object representing the description.
 
 ### setHasPackageInfo
 
-public void setHasPackageInfo(boolean b)
+<span style="font-family: monospace; font-size: 80%;">public void __setHasPackageInfo__</span>
 
 
 
@@ -173,79 +171,7 @@ public void setHasPackageInfo(boolean b)
 
 ### hasPackageInfo
 
-public boolean hasPackageInfo()
-
-
-
-
----
-
-### setModuleName
-
-public void setModuleName([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) module)
-
-Sets the module for this package.
-
-
----
-
-### setSourcePath
-
-public void setSourcePath([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) path)
-
-
-
-
----
-
-### addPackage
-
-public void addPackage([PackageNode](PackageNode.md) packageNode)
-
-Adds a subpackage to this package.
-
-
----
-
-### setHasPackageInfo
-
-public void setHasPackageInfo(boolean b)
-
-
-
-
----
-
-### setModuleName
-
-public void setModuleName([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) module)
-
-Sets the module for this package.
-
-
----
-
-### setSourcePath
-
-public void setSourcePath([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) path)
-
-
-
-
----
-
-### addPackage
-
-public void addPackage([PackageNode](PackageNode.md) packageNode)
-
-Adds a subpackage to this package.
-
-
----
-
-### setHasPackageInfo
-
-public void setHasPackageInfo(boolean b)
+<span style="font-family: monospace; font-size: 80%;">public boolean __hasPackageInfo__</span>
 
 
 

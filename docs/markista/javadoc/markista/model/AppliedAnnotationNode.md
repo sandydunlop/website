@@ -8,7 +8,7 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 ----
 
-<span style="font-family: monospace;">public class __AppliedAnnotationNode__</span>
+<span style="font-family: monospace; font-size: 80%;">public class __AppliedAnnotationNode__</span>
 
 An annotation applied to a type
 
@@ -24,9 +24,10 @@ An annotation applied to a type
 
 ## Constructor Summary
 
-| Constructor             | Description                         |
-|-------------------------|-------------------------------------|
-| AppliedAnnotationNode() | Constructs an AppliedAnnotationNode |
+| Constructor                                                                                                              | Description                                             |
+|--------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------|
+| AppliedAnnotationNode()                                                                                                  | Constructs an AppliedAnnotationNode                     |
+| AppliedAnnotationNode([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) type) | Constructs an AppliedAnnotationNode with the given type |
 
 ## Method Summary
 
@@ -40,18 +41,12 @@ An annotation applied to a type
 | public void                                                                                                                                | [setTypeName](#settypename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) type) | Sets the type of this annotation.                                                                                                            |
 | public void                                                                                                                                | [addElement](#addelement)([AnnotationElement](AnnotationElement.md) element)                                                   | Adds an element to this annotation                                                                                                           |
 | public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[AnnotationElement](AnnotationElement.md)> | [getElements](#getelements)()                                                                                                  | Returns the list of elements of this annotation.                                                                                             |
-| public void                                                                                                                                | [setCustom](#setcustom)(boolean b)                                                                                             | Specifies if this annotation will be treated as custom or built-in.                                                                          |
-| public void                                                                                                                                | [setDocumented](#setdocumented)(boolean b)                                                                                     | Sets the documented flag, indicating that this annotation should be displayed in the documentation of types or fields that it is applied to. |
-| public void                                                                                                                                | [setTypeName](#settypename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) type) | Sets the type of this annotation.                                                                                                            |
-| public void                                                                                                                                | [addElement](#addelement)([AnnotationElement](AnnotationElement.md) element)                                                   | Adds an element to this annotation                                                                                                           |
-| public void                                                                                                                                | [setCustom](#setcustom)(boolean b)                                                                                             | Specifies if this annotation will be treated as custom or built-in.                                                                          |
-| public void                                                                                                                                | [setDocumented](#setdocumented)(boolean b)                                                                                     | Sets the documented flag, indicating that this annotation should be displayed in the documentation of types or fields that it is applied to. |
-| public void                                                                                                                                | [setTypeName](#settypename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) type) | Sets the type of this annotation.                                                                                                            |
-| public void                                                                                                                                | [addElement](#addelement)([AnnotationElement](AnnotationElement.md) element)                                                   | Adds an element to this annotation                                                                                                           |
 
 ## Field Details
 
 ### custom
+
+<span style="font-family: monospace; font-size: 80%;">private boolean __custom__</span>
 
 
 
@@ -60,6 +55,8 @@ An annotation applied to a type
 
 ### documented
 
+<span style="font-family: monospace; font-size: 80%;">private boolean __documented__</span>
+
 
 
 
@@ -67,12 +64,16 @@ An annotation applied to a type
 
 ### typeName
 
+<span style="font-family: monospace; font-size: 80%;">private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __typeName__</span>
+
 
 
 
 ---
 
 ### elements
+
+<span style="font-family: monospace; font-size: 80%;">private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[AnnotationElement](AnnotationElement.md)> __elements__</span>
 
 
 
@@ -84,7 +85,7 @@ An annotation applied to a type
 
 ### setCustom
 
-public void setCustom(boolean b)
+<span style="font-family: monospace; font-size: 80%;">public void __setCustom__</span>
 
 Specifies if this annotation will be treated as custom or built-in.
 
@@ -93,7 +94,7 @@ Specifies if this annotation will be treated as custom or built-in.
 
 ### isCustom
 
-public boolean isCustom()
+<span style="font-family: monospace; font-size: 80%;">public boolean __isCustom__</span>
 
 Indicates if this is a custom annotation
 
@@ -106,7 +107,7 @@ True if the annotation is a custom one, otherwise false
 
 ### setDocumented
 
-public void setDocumented(boolean b)
+<span style="font-family: monospace; font-size: 80%;">public void __setDocumented__</span>
 
 Sets the documented flag, indicating that this annotation should
 be displayed in the documentation of types or fields that it is
@@ -117,7 +118,7 @@ applied to.
 
 ### isDocumented
 
-public boolean isDocumented()
+<span style="font-family: monospace; font-size: 80%;">public boolean __isDocumented__</span>
 
 Gets the flag the indicates this annotation should appear in
 the documentation of the type or field it is applied to.
@@ -131,7 +132,7 @@ True if this annotation should appear in such documentation.
 
 ### getTypeName
 
-public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) getTypeName()
+<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getTypeName__</span>
 
 Returns the type of this annotation.
 
@@ -144,7 +145,7 @@ The name of the annotation's type.
 
 ### setTypeName
 
-public void setTypeName([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) type)
+<span style="font-family: monospace; font-size: 80%;">public void __setTypeName__</span>
 
 Sets the type of this annotation.
 
@@ -153,7 +154,7 @@ Sets the type of this annotation.
 
 ### addElement
 
-public void addElement([AnnotationElement](AnnotationElement.md) element)
+<span style="font-family: monospace; font-size: 80%;">public void __addElement__</span>
 
 Adds an element to this annotation
 
@@ -162,89 +163,13 @@ Adds an element to this annotation
 
 ### getElements
 
-public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[AnnotationElement](AnnotationElement.md)> getElements()
+<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[AnnotationElement](AnnotationElement.md)> __getElements__</span>
 
 Returns the list of elements of this annotation.
 
 **Returns:**
 
 list of elements belonging to this annotation.
-
-
----
-
-### setCustom
-
-public void setCustom(boolean b)
-
-Specifies if this annotation will be treated as custom or built-in.
-
-
----
-
-### setDocumented
-
-public void setDocumented(boolean b)
-
-Sets the documented flag, indicating that this annotation should
-be displayed in the documentation of types or fields that it is
-applied to.
-
-
----
-
-### setTypeName
-
-public void setTypeName([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) type)
-
-Sets the type of this annotation.
-
-
----
-
-### addElement
-
-public void addElement([AnnotationElement](AnnotationElement.md) element)
-
-Adds an element to this annotation
-
-
----
-
-### setCustom
-
-public void setCustom(boolean b)
-
-Specifies if this annotation will be treated as custom or built-in.
-
-
----
-
-### setDocumented
-
-public void setDocumented(boolean b)
-
-Sets the documented flag, indicating that this annotation should
-be displayed in the documentation of types or fields that it is
-applied to.
-
-
----
-
-### setTypeName
-
-public void setTypeName([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) type)
-
-Sets the type of this annotation.
-
-
----
-
-### addElement
-
-public void addElement([AnnotationElement](AnnotationElement.md) element)
-
-Adds an element to this annotation
 
 
 ---

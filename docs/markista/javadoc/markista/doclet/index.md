@@ -8,6 +8,6 @@ exposing the other packages the doclet depends on.
 
 === "Classes"
 
-    | Class                               | Description                                        |
-    |-------------------------------------|----------------------------------------------------|
-    | [MarkdownDoclet](MarkdownDoclet.md) | A doclet that renders javadoc comments as Markdown |
+    | Class                               | Description                                         |
+    |-------------------------------------|-----------------------------------------------------|
+    | [MarkdownDoclet](MarkdownDoclet.md) | A doclet that renders javadoc comments as Markdown. |

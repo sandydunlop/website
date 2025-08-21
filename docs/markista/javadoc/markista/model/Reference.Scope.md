@@ -11,7 +11,7 @@ Enclosing Class:<br/>
 
 ----
 
-<span style="font-family: monospace;">public static final enum class __Reference.Scope__</span>
+<span style="font-family: monospace; font-size: 80%;">public static final enum class __Reference.Scope__</span>
 
 Enum representing the scope of references.
 
@@ -38,15 +38,12 @@ Enum representing the scope of references.
 |-----------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|-------------|
 | public static io.github.sandydunlop.markista.model.Reference.Scope\[] | [values](#values)()                                                                                                    |             |
 | public static [Reference.Scope](Reference.Scope.md)                   | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
-| public static [Reference.Scope](Reference.Scope.md)                   | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
-| public static [Reference.Scope](Reference.Scope.md)                   | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
-| public static [Reference.Scope](Reference.Scope.md)                   | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
 
 ## Enum Constant Details
 
 ### UNKNOWN
 
-public static final UNKNOWN UNKNOWN
+public static final  UNKNOWN
 
 
 
@@ -55,7 +52,7 @@ public static final UNKNOWN UNKNOWN
 
 ### LOCAL
 
-public static final LOCAL LOCAL
+public static final  LOCAL
 
 
 
@@ -64,7 +61,7 @@ public static final LOCAL LOCAL
 
 ### SIBLING
 
-public static final SIBLING SIBLING
+public static final  SIBLING
 
 
 
@@ -73,7 +70,7 @@ public static final SIBLING SIBLING
 
 ### NATIVE
 
-public static final NATIVE NATIVE
+public static final  NATIVE
 
 
 
@@ -82,7 +79,7 @@ public static final NATIVE NATIVE
 
 ### FOREIGN
 
-public static final FOREIGN FOREIGN
+public static final  FOREIGN
 
 
 
@@ -94,7 +91,7 @@ public static final FOREIGN FOREIGN
 
 ### values
 
-public static io.github.sandydunlop.markista.model.Reference.Scope\[] values()
+<span style="font-family: monospace; font-size: 80%;">public static io.github.sandydunlop.markista.model.Reference.Scope\[] __values__</span>
 
 
 
@@ -103,34 +100,7 @@ public static io.github.sandydunlop.markista.model.Reference.Scope\[] values()
 
 ### valueOf
 
-public static [Reference.Scope](Reference.Scope.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
-
-
-
-
----
-
-### valueOf
-
-public static [Reference.Scope](Reference.Scope.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
-
-
-
-
----
-
-### valueOf
-
-public static [Reference.Scope](Reference.Scope.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
-
-
-
-
----
-
-### valueOf
-
-public static [Reference.Scope](Reference.Scope.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
+<span style="font-family: monospace; font-size: 80%;">public static [Reference.Scope](Reference.Scope.md) __valueOf__</span>
 
 
 

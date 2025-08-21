@@ -10,7 +10,7 @@ Enclosing Class:<br/>
 
 ----
 
-<span style="font-family: monospace;">public static class __AbstractPackageMember.ModifierSorter__</span>
+<span style="font-family: monospace; font-size: 80%;">public static class __AbstractPackageMember.ModifierSorter__</span>
 
 Utility class to sort modifiers according to Java language conventions.
 
@@ -32,13 +32,12 @@ Utility class to sort modifiers according to Java language conventions.
 | Modifier and Type                                                                                                               | Method                                                                                                                                                       | Description                                              |
 |---------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------|
 | public static [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Modifier](Modifier.md)> | [sortModifiers](#sortmodifiers)([Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<[Modifier](Modifier.md)> modifierSet) | Sort the given set of modifiers into the standard order. |
-| public static [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Modifier](Modifier.md)> | [sortModifiers](#sortmodifiers)([Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<[Modifier](Modifier.md)> modifierSet) | Sort the given set of modifiers into the standard order. |
-| public static [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Modifier](Modifier.md)> | [sortModifiers](#sortmodifiers)([Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<[Modifier](Modifier.md)> modifierSet) | Sort the given set of modifiers into the standard order. |
-| public static [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Modifier](Modifier.md)> | [sortModifiers](#sortmodifiers)([Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<[Modifier](Modifier.md)> modifierSet) | Sort the given set of modifiers into the standard order. |
 
 ## Field Details
 
 ### ORDER
+
+<span style="font-family: monospace; font-size: 80%;">private static final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Modifier](Modifier.md)> __ORDER__</span>
 
 The fixed order of modifiers as per Java language specification.
 
@@ -50,46 +49,7 @@ The fixed order of modifiers as per Java language specification.
 
 ### sortModifiers
 
-public static [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Modifier](Modifier.md)> sortModifiers([Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<[Modifier](Modifier.md)> modifierSet)
-
-Sort the given set of modifiers into the standard order.
-
-**Returns:**
-
-List of modifiers sorted in the defined order.
-
-
----
-
-### sortModifiers
-
-public static [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Modifier](Modifier.md)> sortModifiers([Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<[Modifier](Modifier.md)> modifierSet)
-
-Sort the given set of modifiers into the standard order.
-
-**Returns:**
-
-List of modifiers sorted in the defined order.
-
-
----
-
-### sortModifiers
-
-public static [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Modifier](Modifier.md)> sortModifiers([Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<[Modifier](Modifier.md)> modifierSet)
-
-Sort the given set of modifiers into the standard order.
-
-**Returns:**
-
-List of modifiers sorted in the defined order.
-
-
----
-
-### sortModifiers
-
-public static [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Modifier](Modifier.md)> sortModifiers([Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<[Modifier](Modifier.md)> modifierSet)
+<span style="font-family: monospace; font-size: 80%;">public static [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Modifier](Modifier.md)> __sortModifiers__</span>
 
 Sort the given set of modifiers into the standard order.
 

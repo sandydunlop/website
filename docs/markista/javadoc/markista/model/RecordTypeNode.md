@@ -11,7 +11,7 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 ----
 
-<span style="font-family: monospace;">public class __RecordTypeNode__</span>
+<span style="font-family: monospace; font-size: 80%;">public class __RecordTypeNode__</span>
 
 Represents a Java record class.
 This class is intended to model a class within a program's structure.
@@ -20,8 +20,6 @@ It inherits properties from TypeNode and specifies its own kind.
 
 ## Constructor Summary
 
-| Constructor                                               | Description                      |
-|-----------------------------------------------------------|----------------------------------|
-| RecordTypeNode( qualifiedName,  simpleName,  packageName) | Constructs a new RecordTypeNode. |
-| RecordTypeNode( qualifiedName,  simpleName,  packageName) | Constructs a new RecordTypeNode. |
-| RecordTypeNode( qualifiedName,  simpleName,  packageName) | Constructs a new RecordTypeNode. |
+| Constructor                                                                                                                                                                                                                                                                                                                                   | Description                      |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|
+| RecordTypeNode([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) simpleName, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) packageName) | Constructs a new RecordTypeNode. |

@@ -10,7 +10,7 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 ----
 
-<span style="font-family: monospace;">public class __Api__</span>
+<span style="font-family: monospace; font-size: 80%;">public class __Api__</span>
 
 Represents the API being documented, encapsulating its modules and packages.
 Provides methods to add and retrieve modules, packages, and types, as well as sorting them.
@@ -20,6 +20,7 @@ Provides methods to add and retrieve modules, packages, and types, as well as so
 
 | Modifier and Type                                                                                                                                         | Field                                     | Description                               |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|-------------------------------------------|
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                       | [test](#test)                             |                                           |
 | private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[ModuleNode](ModuleNode.md)>                       | [modules](#modules)                       | List of modules included in the API.      |
 | private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[PackageNode](PackageNode.md)>                     | [packages](#packages)                     | List of packages included in the API.     |
 | private final [ModuleNode](ModuleNode.md)                                                                                                                 | [unnamedModule](#unnamedmodule)           | Represents the unnamed module in the API. |
@@ -28,11 +29,9 @@ Provides methods to add and retrieve modules, packages, and types, as well as so
 
 ## Constructor Summary
 
-| Constructor | Description                                           |
-|-------------|-------------------------------------------------------|
-| Api( name)  | Constructs an empty Api instance with the given name. |
-| Api( name)  | Constructs an empty Api instance with the given name. |
-| Api( name)  | Constructs an empty Api instance with the given name. |
+| Constructor                                                                                            | Description                                           |
+|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------|
+| Api([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) | Constructs an empty Api instance with the given name. |
 
 ## Method Summary
 
@@ -53,24 +52,22 @@ Provides methods to add and retrieve modules, packages, and types, as well as so
 | public [TypeNode](TypeNode.md)                                                                                                                     | [getTypeNode](#gettypenode)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName)       | Retrieves a TypeNode based on its fully qualified name.                                      |
 | public void                                                                                                                                        | [sort](#sort)()                                                                                                                               | Sorts the types in descending order by qualified name and sorts all child types recursively. |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                | [commonBase](#commonbase)()                                                                                                                   | Computes the longest common base package prefix shared by all packages in this API.          |
-| public void                                                                                                                                        | [addModule](#addmodule)([ModuleNode](ModuleNode.md) node)                                                                                     | Adds a module to the API.                                                                    |
-| public [ModuleNode](ModuleNode.md)                                                                                                                 | [getModuleNode](#getmodulenode)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName)   | Retrieves a module matching the specified qualified name.                                    |
-| public void                                                                                                                                        | [addPackage](#addpackage)([PackageNode](PackageNode.md) node)                                                                                 | Adds a package to the API.                                                                   |
-| public void                                                                                                                                        | [addAppliedAnnotation](#addappliedannotation)([AppliedAnnotationNode](AppliedAnnotationNode.md) annotation)                                   | Adds an applied annotation                                                                   |
-| public void                                                                                                                                        | [addLink](#addlink)([Reference](Reference.md) link)                                                                                           | Adds a link                                                                                  |
-| public [PackageNode](PackageNode.md)                                                                                                               | [getPackageNode](#getpackagenode)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName) | Retrieves a package matching the specified qualified name.                                   |
-| public [TypeNode](TypeNode.md)                                                                                                                     | [getTypeNode](#gettypenode)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName)       | Retrieves a TypeNode based on its fully qualified name.                                      |
-| public void                                                                                                                                        | [addModule](#addmodule)([ModuleNode](ModuleNode.md) node)                                                                                     | Adds a module to the API.                                                                    |
-| public [ModuleNode](ModuleNode.md)                                                                                                                 | [getModuleNode](#getmodulenode)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName)   | Retrieves a module matching the specified qualified name.                                    |
-| public void                                                                                                                                        | [addPackage](#addpackage)([PackageNode](PackageNode.md) node)                                                                                 | Adds a package to the API.                                                                   |
-| public void                                                                                                                                        | [addAppliedAnnotation](#addappliedannotation)([AppliedAnnotationNode](AppliedAnnotationNode.md) annotation)                                   | Adds an applied annotation                                                                   |
-| public void                                                                                                                                        | [addLink](#addlink)([Reference](Reference.md) link)                                                                                           | Adds a link                                                                                  |
-| public [PackageNode](PackageNode.md)                                                                                                               | [getPackageNode](#getpackagenode)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName) | Retrieves a package matching the specified qualified name.                                   |
-| public [TypeNode](TypeNode.md)                                                                                                                     | [getTypeNode](#gettypenode)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName)       | Retrieves a TypeNode based on its fully qualified name.                                      |
 
 ## Field Details
 
+### test
+
+<span style="font-family: monospace; font-size: 80%;">@JsonElement<br/>
+public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __test__</span>
+
+
+
+
+---
+
 ### modules
+
+<span style="font-family: monospace; font-size: 80%;">private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[ModuleNode](ModuleNode.md)> __modules__</span>
 
 List of modules included in the API.
 
@@ -79,12 +76,16 @@ List of modules included in the API.
 
 ### packages
 
+<span style="font-family: monospace; font-size: 80%;">private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[PackageNode](PackageNode.md)> __packages__</span>
+
 List of packages included in the API.
 
 
 ---
 
 ### unnamedModule
+
+<span style="font-family: monospace; font-size: 80%;">private final [ModuleNode](ModuleNode.md) __unnamedModule__</span>
 
 Represents the unnamed module in the API.
 
@@ -93,12 +94,16 @@ Represents the unnamed module in the API.
 
 ### appliedAnnotations
 
+<span style="font-family: monospace; font-size: 80%;">private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[AppliedAnnotationNode](AppliedAnnotationNode.md)> __appliedAnnotations__</span>
+
 List of applied annotations.
 
 
 ---
 
 ### links
+
+<span style="font-family: monospace; font-size: 80%;">private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Reference](Reference.md)> __links__</span>
 
 List of links.
 
@@ -110,7 +115,7 @@ List of links.
 
 ### getName
 
-public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) getName()
+<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getName__</span>
 
 Returns the name of the API.
 
@@ -123,7 +128,7 @@ The name of the API
 
 ### addModule
 
-public void addModule([ModuleNode](ModuleNode.md) node)
+<span style="font-family: monospace; font-size: 80%;">public void __addModule__</span>
 
 Adds a module to the API.
 
@@ -132,7 +137,7 @@ Adds a module to the API.
 
 ### getModules
 
-public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[ModuleNode](ModuleNode.md)> getModules()
+<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[ModuleNode](ModuleNode.md)> __getModules__</span>
 
 Returns the list of modules in the API.
 
@@ -145,7 +150,7 @@ List of ModuleNode objects representing the modules.
 
 ### getModuleNode
 
-public [ModuleNode](ModuleNode.md) getModuleNode([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName)
+<span style="font-family: monospace; font-size: 80%;">public [ModuleNode](ModuleNode.md) __getModuleNode__</span>
 
 Retrieves a module matching the specified qualified name.
 
@@ -158,7 +163,7 @@ the matching ModuleNode if found, or null otherwise.
 
 ### getUnnamedModuleNode
 
-public [ModuleNode](ModuleNode.md) getUnnamedModuleNode()
+<span style="font-family: monospace; font-size: 80%;">public [ModuleNode](ModuleNode.md) __getUnnamedModuleNode__</span>
 
 Returns the unnamed module of the API.
 
@@ -171,7 +176,7 @@ the unnamed ModuleNode.
 
 ### addPackage
 
-public void addPackage([PackageNode](PackageNode.md) node)
+<span style="font-family: monospace; font-size: 80%;">public void __addPackage__</span>
 
 Adds a package to the API.
 
@@ -180,7 +185,7 @@ Adds a package to the API.
 
 ### getPackages
 
-public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[PackageNode](PackageNode.md)> getPackages()
+<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[PackageNode](PackageNode.md)> __getPackages__</span>
 
 Returns the list of packages in the API.
 
@@ -193,7 +198,7 @@ List of PackageNode objects representing the packages.
 
 ### addAppliedAnnotation
 
-public void addAppliedAnnotation([AppliedAnnotationNode](AppliedAnnotationNode.md) annotation)
+<span style="font-family: monospace; font-size: 80%;">public void __addAppliedAnnotation__</span>
 
 Adds an applied annotation
 
@@ -202,7 +207,7 @@ Adds an applied annotation
 
 ### getAppliedAnnotations
 
-public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[AppliedAnnotationNode](AppliedAnnotationNode.md)> getAppliedAnnotations()
+<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[AppliedAnnotationNode](AppliedAnnotationNode.md)> __getAppliedAnnotations__</span>
 
 Returns the list of applied annotations
 
@@ -215,7 +220,7 @@ list of applied annotations
 
 ### addLink
 
-public void addLink([Reference](Reference.md) link)
+<span style="font-family: monospace; font-size: 80%;">public void __addLink__</span>
 
 Adds a link
 
@@ -224,7 +229,7 @@ Adds a link
 
 ### getLinks
 
-public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Reference](Reference.md)> getLinks()
+<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Reference](Reference.md)> __getLinks__</span>
 
 Returns the list of link.
 
@@ -237,7 +242,7 @@ list of links
 
 ### getPackageNode
 
-public [PackageNode](PackageNode.md) getPackageNode([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName)
+<span style="font-family: monospace; font-size: 80%;">public [PackageNode](PackageNode.md) __getPackageNode__</span>
 
 Retrieves a package matching the specified qualified name.
 
@@ -250,7 +255,7 @@ the matching PackageNode if found, or null otherwise.
 
 ### getTypeNode
 
-public [TypeNode](TypeNode.md) getTypeNode([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName)
+<span style="font-family: monospace; font-size: 80%;">public [TypeNode](TypeNode.md) __getTypeNode__</span>
 
 Retrieves a TypeNode based on its fully qualified name.
 
@@ -263,20 +268,20 @@ the matching TypeNode if found, or null otherwise.
 
 ### sort
 
-public void sort()
+<span style="font-family: monospace; font-size: 80%;">public void __sort__</span>
 
 Sorts the types in descending order by qualified name and sorts all child types recursively.
 
 **Overrides:**
 
-[io.github.sandydunlop.markista.model.PackageOrTypeNode.sort](PackageOrTypeNode.md#sort).sort
+[PackageOrTypeNode.sort](PackageOrTypeNode.md#sort)
 
 
 ---
 
 ### commonBase
 
-public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) commonBase()
+<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __commonBase__</span>
 
 Computes the longest common base package prefix shared by all packages in this API.
 
@@ -286,156 +291,6 @@ truncated at the nearest dot ('.') boundary. If no common base exists, returns a
 **Returns:**
 
 The longest common base package name shared by all packages, or an empty string if none.
-
-
----
-
-### addModule
-
-public void addModule([ModuleNode](ModuleNode.md) node)
-
-Adds a module to the API.
-
-
----
-
-### getModuleNode
-
-public [ModuleNode](ModuleNode.md) getModuleNode([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName)
-
-Retrieves a module matching the specified qualified name.
-
-**Returns:**
-
-the matching ModuleNode if found, or null otherwise.
-
-
----
-
-### addPackage
-
-public void addPackage([PackageNode](PackageNode.md) node)
-
-Adds a package to the API.
-
-
----
-
-### addAppliedAnnotation
-
-public void addAppliedAnnotation([AppliedAnnotationNode](AppliedAnnotationNode.md) annotation)
-
-Adds an applied annotation
-
-
----
-
-### addLink
-
-public void addLink([Reference](Reference.md) link)
-
-Adds a link
-
-
----
-
-### getPackageNode
-
-public [PackageNode](PackageNode.md) getPackageNode([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName)
-
-Retrieves a package matching the specified qualified name.
-
-**Returns:**
-
-the matching PackageNode if found, or null otherwise.
-
-
----
-
-### getTypeNode
-
-public [TypeNode](TypeNode.md) getTypeNode([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName)
-
-Retrieves a TypeNode based on its fully qualified name.
-
-**Returns:**
-
-the matching TypeNode if found, or null otherwise.
-
-
----
-
-### addModule
-
-public void addModule([ModuleNode](ModuleNode.md) node)
-
-Adds a module to the API.
-
-
----
-
-### getModuleNode
-
-public [ModuleNode](ModuleNode.md) getModuleNode([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName)
-
-Retrieves a module matching the specified qualified name.
-
-**Returns:**
-
-the matching ModuleNode if found, or null otherwise.
-
-
----
-
-### addPackage
-
-public void addPackage([PackageNode](PackageNode.md) node)
-
-Adds a package to the API.
-
-
----
-
-### addAppliedAnnotation
-
-public void addAppliedAnnotation([AppliedAnnotationNode](AppliedAnnotationNode.md) annotation)
-
-Adds an applied annotation
-
-
----
-
-### addLink
-
-public void addLink([Reference](Reference.md) link)
-
-Adds a link
-
-
----
-
-### getPackageNode
-
-public [PackageNode](PackageNode.md) getPackageNode([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName)
-
-Retrieves a package matching the specified qualified name.
-
-**Returns:**
-
-the matching PackageNode if found, or null otherwise.
-
-
----
-
-### getTypeNode
-
-public [TypeNode](TypeNode.md) getTypeNode([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName)
-
-Retrieves a TypeNode based on its fully qualified name.
-
-**Returns:**
-
-the matching TypeNode if found, or null otherwise.
 
 
 ---

@@ -10,7 +10,7 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 ----
 
-<span style="font-family: monospace;">public class __FieldNode__</span>
+<span style="font-family: monospace; font-size: 80%;">public class __FieldNode__</span>
 
 A class to hold information about fields within a class, interface, or enum.
 
@@ -24,11 +24,9 @@ A class to hold information about fields within a class, interface, or enum.
 
 ## Constructor Summary
 
-| Constructor             | Description                                          |
-|-------------------------|------------------------------------------------------|
-| FieldNode( type,  name) | Constructs a FieldNode with the given type and name. |
-| FieldNode( type,  name) | Constructs a FieldNode with the given type and name. |
-| FieldNode( type,  name) | Constructs a FieldNode with the given type and name. |
+| Constructor                                                                                                                                                                                                     | Description                                          |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------|
+| FieldNode([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) type, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) | Constructs a FieldNode with the given type and name. |
 
 ## Method Summary
 
@@ -39,14 +37,12 @@ A class to hold information about fields within a class, interface, or enum.
 | public void                                                                                                   | [setConstantValueReference](#setconstantvaluereference)([Reference](Reference.md) ref)                                                                      |                                                                       |
 | public [Reference](Reference.md)                                                                              | [getConstantValueReference](#getconstantvaluereference)()                                                                                                   |                                                                       |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)           | [fullSignature](#fullsignature)()                                                                                                                           | Returns the full signature of the field including modifiers and name. |
-| public void                                                                                                   | [setConstantValue](#setconstantvalue)([Serializable](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Serializable.html) constantValue) | Sets the constant value of this field.                                |
-| public void                                                                                                   | [setConstantValueReference](#setconstantvaluereference)([Reference](Reference.md) ref)                                                                      |                                                                       |
-| public void                                                                                                   | [setConstantValue](#setconstantvalue)([Serializable](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Serializable.html) constantValue) | Sets the constant value of this field.                                |
-| public void                                                                                                   | [setConstantValueReference](#setconstantvaluereference)([Reference](Reference.md) ref)                                                                      |                                                                       |
 
 ## Field Details
 
 ### constantValue
+
+<span style="font-family: monospace; font-size: 80%;">private [Serializable](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Serializable.html) __constantValue__</span>
 
 The constant value assigned to this field, if any.
 
@@ -54,6 +50,8 @@ The constant value assigned to this field, if any.
 ---
 
 ### constantValueReference
+
+<span style="font-family: monospace; font-size: 80%;">private [Reference](Reference.md) __constantValueReference__</span>
 
 
 
@@ -65,7 +63,7 @@ The constant value assigned to this field, if any.
 
 ### getConstantValue
 
-public [Serializable](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Serializable.html) getConstantValue()
+<span style="font-family: monospace; font-size: 80%;">public [Serializable](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Serializable.html) __getConstantValue__</span>
 
 Returns the constant value of this field.
 
@@ -78,7 +76,7 @@ The constant value of the field or null if none.
 
 ### setConstantValue
 
-public void setConstantValue([Serializable](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Serializable.html) constantValue)
+<span style="font-family: monospace; font-size: 80%;">public void __setConstantValue__</span>
 
 Sets the constant value of this field.
 
@@ -87,7 +85,7 @@ Sets the constant value of this field.
 
 ### setConstantValueReference
 
-public void setConstantValueReference([Reference](Reference.md) ref)
+<span style="font-family: monospace; font-size: 80%;">public void __setConstantValueReference__</span>
 
 
 
@@ -96,7 +94,7 @@ public void setConstantValueReference([Reference](Reference.md) ref)
 
 ### getConstantValueReference
 
-public [Reference](Reference.md) getConstantValueReference()
+<span style="font-family: monospace; font-size: 80%;">public [Reference](Reference.md) __getConstantValueReference__</span>
 
 
 
@@ -105,49 +103,13 @@ public [Reference](Reference.md) getConstantValueReference()
 
 ### fullSignature
 
-public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) fullSignature()
+<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __fullSignature__</span>
 
 Returns the full signature of the field including modifiers and name.
 
 **Returns:**
 
 The string representing the full signature.
-
-
----
-
-### setConstantValue
-
-public void setConstantValue([Serializable](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Serializable.html) constantValue)
-
-Sets the constant value of this field.
-
-
----
-
-### setConstantValueReference
-
-public void setConstantValueReference([Reference](Reference.md) ref)
-
-
-
-
----
-
-### setConstantValue
-
-public void setConstantValue([Serializable](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Serializable.html) constantValue)
-
-Sets the constant value of this field.
-
-
----
-
-### setConstantValueReference
-
-public void setConstantValueReference([Reference](Reference.md) ref)
-
-
 
 
 ---

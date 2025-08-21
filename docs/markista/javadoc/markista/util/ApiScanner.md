@@ -12,7 +12,7 @@ Package [io.github.sandydunlop.markista.util](index.md)
 
 ----
 
-<span style="font-family: monospace;">public class __ApiScanner__</span>
+<span style="font-family: monospace; font-size: 80%;">public class __ApiScanner__</span>
 
 A scanner that walks the language model elements provided by the Javadoc doclet 
 environment and builds an Api model representing the discovered modules, packages,
@@ -38,11 +38,9 @@ being populated and updates the Api instance as elements are encountered.
 
 ## Constructor Summary
 
-| Constructor              | Description                                                       |
-|--------------------------|-------------------------------------------------------------------|
-| ApiScanner( environment) | Initializes the ApiScanner with access to the doclet environment. |
-| ApiScanner( environment) | Initializes the ApiScanner with access to the doclet environment. |
-| ApiScanner( environment) | Initializes the ApiScanner with access to the doclet environment. |
+| Constructor                                                                                                                                           | Description                                                       |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|
+| ApiScanner([DocletEnvironment](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/DocletEnvironment.html) environment) | Initializes the ApiScanner with access to the doclet environment. |
 
 ## Method Summary
 
@@ -62,36 +60,12 @@ being populated and updates the Api instance as elements are encountered.
 | public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) | [visitTypeParameter](#visittypeparameter)([TypeParameterElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/TypeParameterElement.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)         | Visit a type parameter.                                                                                                                                                                                                                      |
 | public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) | [visitRecordComponent](#visitrecordcomponent)([RecordComponentElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/RecordComponentElement.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth) | Visit a record component.                                                                                                                                                                                                                    |
 | public [File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html)   | [getModuleInfoFile](#getmoduleinfofile)([ModuleElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ModuleElement.html) moduleElement)                                                                                                                   | Retrieve the module-info.java file for the given ModuleElement if available.                                                                                                                                                                 |
-| public [Api](../model/Api.md)                                                                   | [scan](#scan)([Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<? extends [Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html)> elements)                                                            | Scan the given set of top-level elements and return the built Api model.                                                                                                                                                                     |
-| private void                                                                                    | [processIncludedElements](#processincludedelements)([Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<? extends [Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html)> elements)                      | Populate the includedNames set from the provided element set.                                                                                                                                                                                |
-| boolean                                                                                         | [isIncludedElement](#isincludedelement)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName)                                                                                                                                                    | Check whether an element with the given qualifiedName was explicitly included in the Javadoc invocation (via the elements set passed to the doclet).                                                                                         |
-| boolean                                                                                         | [isIncludedElement](#isincludedelement)([Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html) e)                                                                                                                                           | Determine whether an Element should be treated as included by looking up the enclosing type name and checking the includedNames set.                                                                                                         |
-| public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) | [scan](#scan)([Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)                                                               |                                                                                                                                                                                                                                              |
-| public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) | [visitModule](#visitmodule)([ModuleElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ModuleElement.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)                                     | Visit a module element and create or reuse a ModuleNode for it.                                                                                                                                                                              |
-| public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) | [visitPackage](#visitpackage)([PackageElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/PackageElement.html) ee, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)                                | Visit a package element and, if it was included, create a PackageNode and attach it to the current module and to the Api model.                                                                                                              |
-| public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) | [visitType](#visittype)([TypeElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/TypeElement.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)                                             | Visit a type element (class/interface/enum/annotation) and create a TypeNode representation if the type is included and TypeUtils considers it part of the API.                                                                              |
-| public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) | [visitExecutable](#visitexecutable)([ExecutableElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ExecutableElement.html) ee, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)                    | Visit an executable element (method or constructor), convert it to a MethodNode if included, and populate Javadoc-derived fields such as first sentence, body, return description, references and since information using TypeUtils helpers. |
-| public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) | [visitVariable](#visitvariable)([VariableElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/VariableElement.html) ve, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)                            | Visit a variable element and, if it is a field included in the API, convert it to a FieldNode, record any constant value, and populate documentation and modifiers.                                                                          |
-| public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) | [visitTypeParameter](#visittypeparameter)([TypeParameterElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/TypeParameterElement.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)         | Visit a type parameter.                                                                                                                                                                                                                      |
-| public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) | [visitRecordComponent](#visitrecordcomponent)([RecordComponentElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/RecordComponentElement.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth) | Visit a record component.                                                                                                                                                                                                                    |
-| public [File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html)   | [getModuleInfoFile](#getmoduleinfofile)([ModuleElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ModuleElement.html) moduleElement)                                                                                                                   | Retrieve the module-info.java file for the given ModuleElement if available.                                                                                                                                                                 |
-| public [Api](../model/Api.md)                                                                   | [scan](#scan)([Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<? extends [Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html)> elements)                                                            | Scan the given set of top-level elements and return the built Api model.                                                                                                                                                                     |
-| private void                                                                                    | [processIncludedElements](#processincludedelements)([Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<? extends [Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html)> elements)                      | Populate the includedNames set from the provided element set.                                                                                                                                                                                |
-| boolean                                                                                         | [isIncludedElement](#isincludedelement)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName)                                                                                                                                                    | Check whether an element with the given qualifiedName was explicitly included in the Javadoc invocation (via the elements set passed to the doclet).                                                                                         |
-| boolean                                                                                         | [isIncludedElement](#isincludedelement)([Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html) e)                                                                                                                                           | Determine whether an Element should be treated as included by looking up the enclosing type name and checking the includedNames set.                                                                                                         |
-| public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) | [scan](#scan)([Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)                                                               |                                                                                                                                                                                                                                              |
-| public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) | [visitModule](#visitmodule)([ModuleElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ModuleElement.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)                                     | Visit a module element and create or reuse a ModuleNode for it.                                                                                                                                                                              |
-| public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) | [visitPackage](#visitpackage)([PackageElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/PackageElement.html) ee, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)                                | Visit a package element and, if it was included, create a PackageNode and attach it to the current module and to the Api model.                                                                                                              |
-| public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) | [visitType](#visittype)([TypeElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/TypeElement.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)                                             | Visit a type element (class/interface/enum/annotation) and create a TypeNode representation if the type is included and TypeUtils considers it part of the API.                                                                              |
-| public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) | [visitExecutable](#visitexecutable)([ExecutableElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ExecutableElement.html) ee, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)                    | Visit an executable element (method or constructor), convert it to a MethodNode if included, and populate Javadoc-derived fields such as first sentence, body, return description, references and since information using TypeUtils helpers. |
-| public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) | [visitVariable](#visitvariable)([VariableElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/VariableElement.html) ve, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)                            | Visit a variable element and, if it is a field included in the API, convert it to a FieldNode, record any constant value, and populate documentation and modifiers.                                                                          |
-| public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) | [visitTypeParameter](#visittypeparameter)([TypeParameterElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/TypeParameterElement.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)         | Visit a type parameter.                                                                                                                                                                                                                      |
-| public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) | [visitRecordComponent](#visitrecordcomponent)([RecordComponentElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/RecordComponentElement.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth) | Visit a record component.                                                                                                                                                                                                                    |
-| public [File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html)   | [getModuleInfoFile](#getmoduleinfofile)([ModuleElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ModuleElement.html) moduleElement)                                                                                                                   | Retrieve the module-info.java file for the given ModuleElement if available.                                                                                                                                                                 |
 
 ## Field Details
 
 ### ctx
+
+<span style="font-family: monospace; font-size: 80%;">private final [Context](../core/Context.md) __ctx__</span>
 
 The shared Context singleton providing logging and configuration access.
 
@@ -100,12 +74,16 @@ The shared Context singleton providing logging and configuration access.
 
 ### api
 
+<span style="font-family: monospace; font-size: 80%;">[Api](../model/Api.md) __api__</span>
+
 The Api model being populated by this scanner.
 
 
 ---
 
 ### environment
+
+<span style="font-family: monospace; font-size: 80%;">private final [DocletEnvironment](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/DocletEnvironment.html) __environment__</span>
 
 The doclet environment used to obtain Javadoc doc trees and element utilities.
 
@@ -114,6 +92,8 @@ The doclet environment used to obtain Javadoc doc trees and element utilities.
 
 ### unnamedModule
 
+<span style="font-family: monospace; font-size: 80%;">private final [ModuleNode](../model/ModuleNode.md) __unnamedModule__</span>
+
 The unnamed module node reprsenting package elements not in an explicit module.
 
 
@@ -121,12 +101,16 @@ The unnamed module node reprsenting package elements not in an explicit module.
 
 ### currentModule
 
+<span style="font-family: monospace; font-size: 80%;">private [ModuleNode](../model/ModuleNode.md) __currentModule__</span>
+
 The module node currently being populated during a scan. private ModuleNode currentModule;
 
 
 ---
 
 ### includedNames
+
+<span style="font-family: monospace; font-size: 80%;">[HashSet](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/HashSet.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)> __includedNames__</span>
 
 A set of fully-qualified names (packages and types) included in the scan invocation.
 
@@ -138,7 +122,7 @@ A set of fully-qualified names (packages and types) included in the scan invocat
 
 ### scan
 
-public [Api](../model/Api.md) scan([Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<? extends [Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html)> elements)
+<span style="font-family: monospace; font-size: 80%;">public [Api](../model/Api.md) __scan__</span>
 
 Scan the given set of top-level elements and return the built Api model.
 This method performs setup actions (register included elements, initialize
@@ -155,7 +139,7 @@ the fully-populated Api model
 
 ### processIncludedElements
 
-private void processIncludedElements([Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<? extends [Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html)> elements)
+<span style="font-family: monospace; font-size: 80%;">private void __processIncludedElements__</span>
 
 Populate the includedNames set from the provided element set.
 Only package and type elements contribute names. The set is used by
@@ -166,7 +150,7 @@ isIncludedElement to quickly decide if an element should be processed.
 
 ### isIncludedElement
 
-boolean isIncludedElement([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName)
+<span style="font-family: monospace; font-size: 80%;">boolean __isIncludedElement__</span>
 
 Check whether an element with the given qualifiedName was explicitly included
 in the Javadoc invocation (via the elements set passed to the doclet).
@@ -180,7 +164,7 @@ true if the qualifiedName is present in the includedNames set
 
 ### isIncludedElement
 
-boolean isIncludedElement([Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html) e)
+<span style="font-family: monospace; font-size: 80%;">boolean __isIncludedElement__</span>
 
 Determine whether an Element should be treated as included by looking up
 the enclosing type name and checking the includedNames set.
@@ -196,7 +180,7 @@ true if the element's enclosing type was included in the elements set
 
 ### calculateUnnamedModuleSourcePath
 
-private void calculateUnnamedModuleSourcePath()
+<span style="font-family: monospace; font-size: 80%;">private void __calculateUnnamedModuleSourcePath__</span>
 
 Derive an appropriate source root for the unnamed module by inspecting the
 source path of the first package contained in the unnamed module. If the
@@ -207,20 +191,20 @@ unnamed module contains no packages this is a no-op.
 
 ### scan
 
-public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) scan([Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)
+<span style="font-family: monospace; font-size: 80%;">public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) __scan__</span>
 
 
 
 **Overrides:**
 
-[ElementScanner6](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner6.html)<[Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html), [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html)>.scan
+[ElementScanner6.scan](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner6.html#scan)
 
 
 ---
 
 ### visitModule
 
-public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) visitModule([ModuleElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ModuleElement.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)
+<span style="font-family: monospace; font-size: 80%;">public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) __visitModule__</span>
 
 Visit a module element and create or reuse a ModuleNode for it.
 The module's module-info.java presence and source path are discovered,
@@ -228,14 +212,14 @@ directives are added, and the module is registered with the Api model.
 
 **Overrides:**
 
-[ElementScanner9](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner9.html)<[Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html), [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html)>.visitModule
+[ElementScanner9.visitModule](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner9.html#visitModule)
 
 
 ---
 
 ### visitPackage
 
-public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) visitPackage([PackageElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/PackageElement.html) ee, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)
+<span style="font-family: monospace; font-size: 80%;">public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) __visitPackage__</span>
 
 Visit a package element and, if it was included, create a PackageNode and
 attach it to the current module and to the Api model. Package source path
@@ -243,14 +227,14 @@ and documentation are configured via TypeUtils helpers.
 
 **Overrides:**
 
-[ElementScanner6](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner6.html)<[Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html), [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html)>.visitPackage
+[ElementScanner6.visitPackage](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner6.html#visitPackage)
 
 
 ---
 
 ### visitType
 
-public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) visitType([TypeElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/TypeElement.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)
+<span style="font-family: monospace; font-size: 80%;">public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) __visitType__</span>
 
 Visit a type element (class/interface/enum/annotation) and create a TypeNode
 representation if the type is included and TypeUtils considers it part of the API.
@@ -258,14 +242,14 @@ This also records the source file path when available.
 
 **Overrides:**
 
-[ElementScanner6](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner6.html)<[Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html), [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html)>.visitType
+[ElementScanner6.visitType](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner6.html#visitType)
 
 
 ---
 
 ### visitExecutable
 
-public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) visitExecutable([ExecutableElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ExecutableElement.html) ee, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)
+<span style="font-family: monospace; font-size: 80%;">public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) __visitExecutable__</span>
 
 Visit an executable element (method or constructor), convert it to a MethodNode
 if included, and populate Javadoc-derived fields such as first sentence, body,
@@ -273,429 +257,55 @@ return description, references and since information using TypeUtils helpers.
 
 **Overrides:**
 
-[ElementScanner6](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner6.html)<[Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html), [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html)>.visitExecutable
+[ElementScanner6.visitExecutable](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner6.html#visitExecutable)
 
 
 ---
 
 ### visitVariable
 
-public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) visitVariable([VariableElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/VariableElement.html) ve, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)
+<span style="font-family: monospace; font-size: 80%;">public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) __visitVariable__</span>
 
 Visit a variable element and, if it is a field included in the API, convert it
 to a FieldNode, record any constant value, and populate documentation and modifiers.
 
 **Overrides:**
 
-[ElementScanner7](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner7.html)<[Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html), [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html)>.visitVariable
+[ElementScanner7.visitVariable](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner7.html#visitVariable)
 
 
 ---
 
 ### visitTypeParameter
 
-public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) visitTypeParameter([TypeParameterElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/TypeParameterElement.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)
+<span style="font-family: monospace; font-size: 80%;">public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) __visitTypeParameter__</span>
 
 Visit a type parameter. This method delegates to scanning of enclosed elements
 so that bounds and other nested elements are visited.
 
 **Overrides:**
 
-[ElementScanner6](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner6.html)<[Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html), [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html)>.visitTypeParameter
+[ElementScanner6.visitTypeParameter](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner6.html#visitTypeParameter)
 
 
 ---
 
 ### visitRecordComponent
 
-public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) visitRecordComponent([RecordComponentElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/RecordComponentElement.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)
+<span style="font-family: monospace; font-size: 80%;">public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) __visitRecordComponent__</span>
 
 Visit a record component.
 
 **Overrides:**
 
-[ElementScanner6](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner6.html)<[Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html), [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html)>.visitRecordComponent
+[ElementScanner6.visitRecordComponent](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner6.html#visitRecordComponent)
 
 
 ---
 
 ### getModuleInfoFile
 
-public [File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html) getModuleInfoFile([ModuleElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ModuleElement.html) moduleElement)
-
-Retrieve the module-info.java file for the given ModuleElement if available.
-This helper inspects the JavaFileObject associated with the module and returns
-a File when the file name ends with "module-info.java".
-
-**Returns:**
-
-a File pointing to the module-info.java source or null if none found
-
-
----
-
-### scan
-
-public [Api](../model/Api.md) scan([Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<? extends [Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html)> elements)
-
-Scan the given set of top-level elements and return the built Api model.
-This method performs setup actions (register included elements, initialize
-TypeUtils with the Api and environment), executes the scan, performs some
-post-processing (constant value reference collection, annotation marking),
-computes the unnamed module source path and sorts the final Api model.
-
-**Returns:**
-
-the fully-populated Api model
-
-
----
-
-### processIncludedElements
-
-private void processIncludedElements([Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<? extends [Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html)> elements)
-
-Populate the includedNames set from the provided element set.
-Only package and type elements contribute names. The set is used by
-isIncludedElement to quickly decide if an element should be processed.
-
-
----
-
-### isIncludedElement
-
-boolean isIncludedElement([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName)
-
-Check whether an element with the given qualifiedName was explicitly included
-in the Javadoc invocation (via the elements set passed to the doclet).
-
-**Returns:**
-
-true if the qualifiedName is present in the includedNames set
-
-
----
-
-### isIncludedElement
-
-boolean isIncludedElement([Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html) e)
-
-Determine whether an Element should be treated as included by looking up
-the enclosing type name and checking the includedNames set.
-This overload is used for members whose direct qualified name is not directly
-present in includedNames but whose enclosing type may have been included.
-
-**Returns:**
-
-true if the element's enclosing type was included in the elements set
-
-
----
-
-### scan
-
-public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) scan([Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)
-
-
-
-**Overrides:**
-
-[ElementScanner6](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner6.html)<[Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html), [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html)>.scan
-
-
----
-
-### visitModule
-
-public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) visitModule([ModuleElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ModuleElement.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)
-
-Visit a module element and create or reuse a ModuleNode for it.
-The module's module-info.java presence and source path are discovered,
-directives are added, and the module is registered with the Api model.
-
-**Overrides:**
-
-[ElementScanner9](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner9.html)<[Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html), [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html)>.visitModule
-
-
----
-
-### visitPackage
-
-public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) visitPackage([PackageElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/PackageElement.html) ee, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)
-
-Visit a package element and, if it was included, create a PackageNode and
-attach it to the current module and to the Api model. Package source path
-and documentation are configured via TypeUtils helpers.
-
-**Overrides:**
-
-[ElementScanner6](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner6.html)<[Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html), [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html)>.visitPackage
-
-
----
-
-### visitType
-
-public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) visitType([TypeElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/TypeElement.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)
-
-Visit a type element (class/interface/enum/annotation) and create a TypeNode
-representation if the type is included and TypeUtils considers it part of the API.
-This also records the source file path when available.
-
-**Overrides:**
-
-[ElementScanner6](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner6.html)<[Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html), [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html)>.visitType
-
-
----
-
-### visitExecutable
-
-public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) visitExecutable([ExecutableElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ExecutableElement.html) ee, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)
-
-Visit an executable element (method or constructor), convert it to a MethodNode
-if included, and populate Javadoc-derived fields such as first sentence, body,
-return description, references and since information using TypeUtils helpers.
-
-**Overrides:**
-
-[ElementScanner6](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner6.html)<[Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html), [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html)>.visitExecutable
-
-
----
-
-### visitVariable
-
-public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) visitVariable([VariableElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/VariableElement.html) ve, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)
-
-Visit a variable element and, if it is a field included in the API, convert it
-to a FieldNode, record any constant value, and populate documentation and modifiers.
-
-**Overrides:**
-
-[ElementScanner7](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner7.html)<[Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html), [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html)>.visitVariable
-
-
----
-
-### visitTypeParameter
-
-public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) visitTypeParameter([TypeParameterElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/TypeParameterElement.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)
-
-Visit a type parameter. This method delegates to scanning of enclosed elements
-so that bounds and other nested elements are visited.
-
-**Overrides:**
-
-[ElementScanner6](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner6.html)<[Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html), [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html)>.visitTypeParameter
-
-
----
-
-### visitRecordComponent
-
-public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) visitRecordComponent([RecordComponentElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/RecordComponentElement.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)
-
-Visit a record component.
-
-**Overrides:**
-
-[ElementScanner6](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner6.html)<[Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html), [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html)>.visitRecordComponent
-
-
----
-
-### getModuleInfoFile
-
-public [File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html) getModuleInfoFile([ModuleElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ModuleElement.html) moduleElement)
-
-Retrieve the module-info.java file for the given ModuleElement if available.
-This helper inspects the JavaFileObject associated with the module and returns
-a File when the file name ends with "module-info.java".
-
-**Returns:**
-
-a File pointing to the module-info.java source or null if none found
-
-
----
-
-### scan
-
-public [Api](../model/Api.md) scan([Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<? extends [Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html)> elements)
-
-Scan the given set of top-level elements and return the built Api model.
-This method performs setup actions (register included elements, initialize
-TypeUtils with the Api and environment), executes the scan, performs some
-post-processing (constant value reference collection, annotation marking),
-computes the unnamed module source path and sorts the final Api model.
-
-**Returns:**
-
-the fully-populated Api model
-
-
----
-
-### processIncludedElements
-
-private void processIncludedElements([Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<? extends [Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html)> elements)
-
-Populate the includedNames set from the provided element set.
-Only package and type elements contribute names. The set is used by
-isIncludedElement to quickly decide if an element should be processed.
-
-
----
-
-### isIncludedElement
-
-boolean isIncludedElement([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName)
-
-Check whether an element with the given qualifiedName was explicitly included
-in the Javadoc invocation (via the elements set passed to the doclet).
-
-**Returns:**
-
-true if the qualifiedName is present in the includedNames set
-
-
----
-
-### isIncludedElement
-
-boolean isIncludedElement([Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html) e)
-
-Determine whether an Element should be treated as included by looking up
-the enclosing type name and checking the includedNames set.
-This overload is used for members whose direct qualified name is not directly
-present in includedNames but whose enclosing type may have been included.
-
-**Returns:**
-
-true if the element's enclosing type was included in the elements set
-
-
----
-
-### scan
-
-public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) scan([Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)
-
-
-
-**Overrides:**
-
-[ElementScanner6](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner6.html)<[Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html), [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html)>.scan
-
-
----
-
-### visitModule
-
-public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) visitModule([ModuleElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ModuleElement.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)
-
-Visit a module element and create or reuse a ModuleNode for it.
-The module's module-info.java presence and source path are discovered,
-directives are added, and the module is registered with the Api model.
-
-**Overrides:**
-
-[ElementScanner9](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner9.html)<[Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html), [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html)>.visitModule
-
-
----
-
-### visitPackage
-
-public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) visitPackage([PackageElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/PackageElement.html) ee, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)
-
-Visit a package element and, if it was included, create a PackageNode and
-attach it to the current module and to the Api model. Package source path
-and documentation are configured via TypeUtils helpers.
-
-**Overrides:**
-
-[ElementScanner6](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner6.html)<[Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html), [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html)>.visitPackage
-
-
----
-
-### visitType
-
-public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) visitType([TypeElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/TypeElement.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)
-
-Visit a type element (class/interface/enum/annotation) and create a TypeNode
-representation if the type is included and TypeUtils considers it part of the API.
-This also records the source file path when available.
-
-**Overrides:**
-
-[ElementScanner6](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner6.html)<[Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html), [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html)>.visitType
-
-
----
-
-### visitExecutable
-
-public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) visitExecutable([ExecutableElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ExecutableElement.html) ee, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)
-
-Visit an executable element (method or constructor), convert it to a MethodNode
-if included, and populate Javadoc-derived fields such as first sentence, body,
-return description, references and since information using TypeUtils helpers.
-
-**Overrides:**
-
-[ElementScanner6](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner6.html)<[Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html), [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html)>.visitExecutable
-
-
----
-
-### visitVariable
-
-public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) visitVariable([VariableElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/VariableElement.html) ve, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)
-
-Visit a variable element and, if it is a field included in the API, convert it
-to a FieldNode, record any constant value, and populate documentation and modifiers.
-
-**Overrides:**
-
-[ElementScanner7](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner7.html)<[Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html), [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html)>.visitVariable
-
-
----
-
-### visitTypeParameter
-
-public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) visitTypeParameter([TypeParameterElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/TypeParameterElement.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)
-
-Visit a type parameter. This method delegates to scanning of enclosed elements
-so that bounds and other nested elements are visited.
-
-**Overrides:**
-
-[ElementScanner6](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner6.html)<[Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html), [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html)>.visitTypeParameter
-
-
----
-
-### visitRecordComponent
-
-public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) visitRecordComponent([RecordComponentElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/RecordComponentElement.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)
-
-Visit a record component.
-
-**Overrides:**
-
-[ElementScanner6](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner6.html)<[Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html), [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html)>.visitRecordComponent
-
-
----
-
-### getModuleInfoFile
-
-public [File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html) getModuleInfoFile([ModuleElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ModuleElement.html) moduleElement)
+<span style="font-family: monospace; font-size: 80%;">public [File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html) __getModuleInfoFile__</span>
 
 Retrieve the module-info.java file for the given ModuleElement if available.
 This helper inspects the JavaFileObject associated with the module and returns

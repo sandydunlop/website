@@ -8,7 +8,7 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 ----
 
-<span style="font-family: monospace;">public final enum class __Modifier__</span>
+<span style="font-family: monospace; font-size: 80%;">public final enum class __Modifier__</span>
 
 Enum representing Java language modifiers with their string 
 representations.
@@ -39,11 +39,9 @@ representations.
 
 ## Constructor Summary
 
-| Constructor  | Description                                                          |
-|--------------|----------------------------------------------------------------------|
-| Modifier( s) | Constructs a Modifier enum constant with the specified string value. |
-| Modifier( s) | Constructs a Modifier enum constant with the specified string value. |
-| Modifier( s) | Constructs a Modifier enum constant with the specified string value. |
+| Constructor                                                                                              | Description                                                          |
+|----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
+| Modifier([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) s) | Constructs a Modifier enum constant with the specified string value. |
 
 ## Method Summary
 
@@ -52,14 +50,12 @@ representations.
 | public static io.github.sandydunlop.markista.model.Modifier\[]                                      | [values](#values)()                                                                                                    |                                                     |
 | public static [Modifier](Modifier.md)                                                               | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |                                                     |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [toString](#tostring)()                                                                                                | Returns the string representation of this modifier. |
-| public static [Modifier](Modifier.md)                                                               | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |                                                     |
-| public static [Modifier](Modifier.md)                                                               | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |                                                     |
 
 ## Enum Constant Details
 
 ### PUBLIC
 
-public static final PUBLIC PUBLIC
+public static final  PUBLIC
 
 
 
@@ -68,7 +64,7 @@ public static final PUBLIC PUBLIC
 
 ### PROTECTED
 
-public static final PROTECTED PROTECTED
+public static final  PROTECTED
 
 
 
@@ -77,7 +73,7 @@ public static final PROTECTED PROTECTED
 
 ### PRIVATE
 
-public static final PRIVATE PRIVATE
+public static final  PRIVATE
 
 
 
@@ -86,7 +82,7 @@ public static final PRIVATE PRIVATE
 
 ### STATIC
 
-public static final STATIC STATIC
+public static final  STATIC
 
 
 
@@ -95,7 +91,7 @@ public static final STATIC STATIC
 
 ### FINAL
 
-public static final FINAL FINAL
+public static final  FINAL
 
 
 
@@ -104,7 +100,7 @@ public static final FINAL FINAL
 
 ### ABSTRACT
 
-public static final ABSTRACT ABSTRACT
+public static final  ABSTRACT
 
 
 
@@ -113,7 +109,7 @@ public static final ABSTRACT ABSTRACT
 
 ### SYNCHRONIZED
 
-public static final SYNCHRONIZED SYNCHRONIZED
+public static final  SYNCHRONIZED
 
 
 
@@ -122,7 +118,7 @@ public static final SYNCHRONIZED SYNCHRONIZED
 
 ### TRANSIENT
 
-public static final TRANSIENT TRANSIENT
+public static final  TRANSIENT
 
 
 
@@ -131,7 +127,7 @@ public static final TRANSIENT TRANSIENT
 
 ### VOLATILE
 
-public static final VOLATILE VOLATILE
+public static final  VOLATILE
 
 
 
@@ -140,7 +136,7 @@ public static final VOLATILE VOLATILE
 
 ### NATIVE
 
-public static final NATIVE NATIVE
+public static final  NATIVE
 
 
 
@@ -149,7 +145,7 @@ public static final NATIVE NATIVE
 
 ### STRICTFP
 
-public static final STRICTFP STRICTFP
+public static final  STRICTFP
 
 
 
@@ -158,7 +154,7 @@ public static final STRICTFP STRICTFP
 
 ### DEFAULT
 
-public static final DEFAULT DEFAULT
+public static final  DEFAULT
 
 
 
@@ -170,6 +166,8 @@ public static final DEFAULT DEFAULT
 
 ### name
 
+<span style="font-family: monospace; font-size: 80%;">private final [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __name__</span>
+
 The string representation of the modifier.
 
 
@@ -180,7 +178,7 @@ The string representation of the modifier.
 
 ### values
 
-public static io.github.sandydunlop.markista.model.Modifier\[] values()
+<span style="font-family: monospace; font-size: 80%;">public static io.github.sandydunlop.markista.model.Modifier\[] __values__</span>
 
 
 
@@ -189,7 +187,7 @@ public static io.github.sandydunlop.markista.model.Modifier\[] values()
 
 ### valueOf
 
-public static [Modifier](Modifier.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
+<span style="font-family: monospace; font-size: 80%;">public static [Modifier](Modifier.md) __valueOf__</span>
 
 
 
@@ -198,7 +196,7 @@ public static [Modifier](Modifier.md) valueOf([String](https://docs.oracle.com/e
 
 ### toString
 
-public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) toString()
+<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __toString__</span>
 
 Returns the string representation of this modifier.
 
@@ -208,25 +206,7 @@ The string name of the modifier.
 
 **Overrides:**
 
-[Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)<[Modifier](Modifier.md)>.toString
-
-
----
-
-### valueOf
-
-public static [Modifier](Modifier.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
-
-
-
-
----
-
-### valueOf
-
-public static [Modifier](Modifier.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
-
-
+[Enum.toString](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html#toString)
 
 
 ---

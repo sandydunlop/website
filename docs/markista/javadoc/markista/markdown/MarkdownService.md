@@ -10,7 +10,7 @@ All Implemented Interfaces:<br/>
 
 ----
 
-<span style="font-family: monospace;">public class __MarkdownService__</span>
+<span style="font-family: monospace; font-size: 80%;">public class __MarkdownService__</span>
 
 
 ## Constructor Summary
@@ -26,14 +26,12 @@ All Implemented Interfaces:<br/>
 | public boolean    | [replacesDefault](#replacesdefault)()                                          |             |
 | public boolean    | [start](#start)([Api](../model/Api.md) api, [Context](../core/Context.md) ctx) |             |
 | public boolean    | [finish](#finish)()                                                            |             |
-| public boolean    | [start](#start)([Api](../model/Api.md) api, [Context](../core/Context.md) ctx) |             |
-| public boolean    | [start](#start)([Api](../model/Api.md) api, [Context](../core/Context.md) ctx) |             |
 
 ## Method Details
 
 ### replacesDefault
 
-public boolean replacesDefault()
+<span style="font-family: monospace; font-size: 80%;">public boolean __replacesDefault__</span>
 
 
 
@@ -42,7 +40,7 @@ public boolean replacesDefault()
 
 ### start
 
-public boolean start([Api](../model/Api.md) api, [Context](../core/Context.md) ctx)
+<span style="font-family: monospace; font-size: 80%;">public boolean __start__</span>
 
 
 
@@ -51,25 +49,7 @@ public boolean start([Api](../model/Api.md) api, [Context](../core/Context.md) c
 
 ### finish
 
-public boolean finish()
-
-
-
-
----
-
-### start
-
-public boolean start([Api](../model/Api.md) api, [Context](../core/Context.md) ctx)
-
-
-
-
----
-
-### start
-
-public boolean start([Api](../model/Api.md) api, [Context](../core/Context.md) ctx)
+<span style="font-family: monospace; font-size: 80%;">public boolean __finish__</span>
 
 
 

@@ -10,7 +10,7 @@ All Implemented Interfaces:<br/>
 
 ----
 
-<span style="font-family: monospace;">public class __DirectiveNode__</span>
+<span style="font-family: monospace; font-size: 80%;">public class __DirectiveNode__</span>
 
 Represents a directive within a module declaration, such as requires, exports, or provides.
 Tracks the kind of directive, its name, whether it is transitive, associated packages,
@@ -32,14 +32,10 @@ implementations, and related interface information.
 
 ## Constructor Summary
 
-| Constructor                                   | Description                                                                   |
-|-----------------------------------------------|-------------------------------------------------------------------------------|
-| DirectiveNode( kind,  reference,  transitive) | Constructs a DirectiveNode with the specified kind, name and transitive flag. |
-| DirectiveNode( kind,  reference)              | Constructs a DirectiveNode with the specified kind and name.                  |
-| DirectiveNode( kind,  reference,  transitive) | Constructs a DirectiveNode with the specified kind, name and transitive flag. |
-| DirectiveNode( kind,  reference)              | Constructs a DirectiveNode with the specified kind and name.                  |
-| DirectiveNode( kind,  reference,  transitive) | Constructs a DirectiveNode with the specified kind, name and transitive flag. |
-| DirectiveNode( kind,  reference)              | Constructs a DirectiveNode with the specified kind and name.                  |
+| Constructor                                                                                                              | Description                                                                   |
+|--------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
+| DirectiveNode([DirectiveNode.Kind](DirectiveNode.Kind.md) kind, [Reference](Reference.md) reference, boolean transitive) | Constructs a DirectiveNode with the specified kind, name and transitive flag. |
+| DirectiveNode([DirectiveNode.Kind](DirectiveNode.Kind.md) kind, [Reference](Reference.md) reference)                     | Constructs a DirectiveNode with the specified kind and name.                  |
 
 ## Method Summary
 
@@ -56,16 +52,12 @@ implementations, and related interface information.
 | public void                                                                                                                | [setInterface](#setinterface)([Reference](Reference.md) interfaceReference)  | Sets the interface name related to this directive.                      |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                        | [toString](#tostring)()                                                      |                                                                         |
 | public [Reference](Reference.md)                                                                                           | [getInterface](#getinterface)()                                              | Returns the interface name associated with this directive.              |
-| public void                                                                                                                | [addPackage](#addpackage)([Reference](Reference.md) reference)               | Adds a package reference to this directive's package list.              |
-| public void                                                                                                                | [addImplementation](#addimplementation)([Reference](Reference.md) reference) | Adds the reference to an implementation associated with this directive. |
-| public void                                                                                                                | [setInterface](#setinterface)([Reference](Reference.md) interfaceReference)  | Sets the interface name related to this directive.                      |
-| public void                                                                                                                | [addPackage](#addpackage)([Reference](Reference.md) reference)               | Adds a package reference to this directive's package list.              |
-| public void                                                                                                                | [addImplementation](#addimplementation)([Reference](Reference.md) reference) | Adds the reference to an implementation associated with this directive. |
-| public void                                                                                                                | [setInterface](#setinterface)([Reference](Reference.md) interfaceReference)  | Sets the interface name related to this directive.                      |
 
 ## Field Details
 
 ### serialVersionUID
+
+<span style="font-family: monospace; font-size: 80%;">private static final long __serialVersionUID__</span>
 
 
 
@@ -80,12 +72,16 @@ implementations, and related interface information.
 
 ### kind
 
+<span style="font-family: monospace; font-size: 80%;">private final [DirectiveNode.Kind](DirectiveNode.Kind.md) __kind__</span>
+
 The kind of this directive (e.g. REQUIRES, EXPORTS).
 
 
 ---
 
 ### name
+
+<span style="font-family: monospace; font-size: 80%;">private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __name__</span>
 
 The name associated with this directive.
 
@@ -94,12 +90,16 @@ The name associated with this directive.
 
 ### reference
 
+<span style="font-family: monospace; font-size: 80%;">private [Reference](Reference.md) __reference__</span>
+
 
 
 
 ---
 
 ### transitive
+
+<span style="font-family: monospace; font-size: 80%;">private boolean __transitive__</span>
 
 Indicates whether this directive is transitive.
 
@@ -108,6 +108,8 @@ Indicates whether this directive is transitive.
 
 ### packages
 
+<span style="font-family: monospace; font-size: 80%;">private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Reference](Reference.md)> __packages__</span>
+
 List of package names associated with this directive.
 
 
@@ -115,12 +117,16 @@ List of package names associated with this directive.
 
 ### implementations
 
+<span style="font-family: monospace; font-size: 80%;">private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Reference](Reference.md)> __implementations__</span>
+
 List of implementation names associated with this directive.
 
 
 ---
 
 ### interfaceReference
+
+<span style="font-family: monospace; font-size: 80%;">private [Reference](Reference.md) __interfaceReference__</span>
 
 The interface name associated with this directive, if any.
 
@@ -132,7 +138,7 @@ The interface name associated with this directive, if any.
 
 ### getKind
 
-public [DirectiveNode.Kind](DirectiveNode.Kind.md) getKind()
+<span style="font-family: monospace; font-size: 80%;">public [DirectiveNode.Kind](DirectiveNode.Kind.md) __getKind__</span>
 
 Returns the kind of this directive.
 
@@ -145,7 +151,7 @@ the directive kind.
 
 ### getName
 
-public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) getName()
+<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getName__</span>
 
 Returns the name associated with this directive.
 
@@ -158,7 +164,7 @@ the directive name.
 
 ### getReference
 
-public [Reference](Reference.md) getReference()
+<span style="font-family: monospace; font-size: 80%;">public [Reference](Reference.md) __getReference__</span>
 
 
 
@@ -167,7 +173,7 @@ public [Reference](Reference.md) getReference()
 
 ### isTransitive
 
-public boolean isTransitive()
+<span style="font-family: monospace; font-size: 80%;">public boolean __isTransitive__</span>
 
 Indicates if this directive is transitive.
 
@@ -180,7 +186,7 @@ true if transitive; false otherwise.
 
 ### addPackage
 
-public void addPackage([Reference](Reference.md) reference)
+<span style="font-family: monospace; font-size: 80%;">public void __addPackage__</span>
 
 Adds a package reference to this directive's package list.
 
@@ -189,7 +195,7 @@ Adds a package reference to this directive's package list.
 
 ### getPackages
 
-public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Reference](Reference.md)> getPackages()
+<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Reference](Reference.md)> __getPackages__</span>
 
 Returns the list of package references associated with this directive.
 
@@ -202,7 +208,7 @@ list of package names.
 
 ### addImplementation
 
-public void addImplementation([Reference](Reference.md) reference)
+<span style="font-family: monospace; font-size: 80%;">public void __addImplementation__</span>
 
 Adds the reference to an implementation associated with this directive.
 
@@ -211,7 +217,7 @@ Adds the reference to an implementation associated with this directive.
 
 ### getImplementations
 
-public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Reference](Reference.md)> getImplementations()
+<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Reference](Reference.md)> __getImplementations__</span>
 
 Returns the list of implementations associated with this directive.
 
@@ -224,7 +230,7 @@ list of implementation references.
 
 ### setInterface
 
-public void setInterface([Reference](Reference.md) interfaceReference)
+<span style="font-family: monospace; font-size: 80%;">public void __setInterface__</span>
 
 Sets the interface name related to this directive.
 
@@ -233,7 +239,7 @@ Sets the interface name related to this directive.
 
 ### toString
 
-public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) toString()
+<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __toString__</span>
 
 
 
@@ -242,67 +248,13 @@ public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/jav
 
 ### getInterface
 
-public [Reference](Reference.md) getInterface()
+<span style="font-family: monospace; font-size: 80%;">public [Reference](Reference.md) __getInterface__</span>
 
 Returns the interface name associated with this directive.
 
 **Returns:**
 
 the interface name, or an empty string if none set.
-
-
----
-
-### addPackage
-
-public void addPackage([Reference](Reference.md) reference)
-
-Adds a package reference to this directive's package list.
-
-
----
-
-### addImplementation
-
-public void addImplementation([Reference](Reference.md) reference)
-
-Adds the reference to an implementation associated with this directive.
-
-
----
-
-### setInterface
-
-public void setInterface([Reference](Reference.md) interfaceReference)
-
-Sets the interface name related to this directive.
-
-
----
-
-### addPackage
-
-public void addPackage([Reference](Reference.md) reference)
-
-Adds a package reference to this directive's package list.
-
-
----
-
-### addImplementation
-
-public void addImplementation([Reference](Reference.md) reference)
-
-Adds the reference to an implementation associated with this directive.
-
-
----
-
-### setInterface
-
-public void setInterface([Reference](Reference.md) interfaceReference)
-
-Sets the interface name related to this directive.
 
 
 ---

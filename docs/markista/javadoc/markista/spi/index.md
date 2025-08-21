@@ -2,7 +2,7 @@
 # Package io.github.sandydunlop.markista.spi
 
 
-
+Service interface for extensions
 
 === "Interfaces"
 

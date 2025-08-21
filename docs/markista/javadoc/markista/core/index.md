@@ -2,7 +2,7 @@
 # Package io.github.sandydunlop.markista.core
 
 
-
+A package for classes that are used everywhere, by Markista and its extensions.
 
 === "Classes"
 

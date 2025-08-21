@@ -11,7 +11,7 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 ----
 
-<span style="font-family: monospace;">public class __ClassTypeNode__</span>
+<span style="font-family: monospace; font-size: 80%;">public class __ClassTypeNode__</span>
 
 Represents a Java class.
 This class is intended to model a class within a program's structure.
@@ -20,8 +20,6 @@ It inherits properties from TypeNode and specifies its own kind.
 
 ## Constructor Summary
 
-| Constructor                                              | Description                     |
-|----------------------------------------------------------|---------------------------------|
-| ClassTypeNode( qualifiedName,  simpleName,  packageName) | Constructs a new ClassTypeNode. |
-| ClassTypeNode( qualifiedName,  simpleName,  packageName) | Constructs a new ClassTypeNode. |
-| ClassTypeNode( qualifiedName,  simpleName,  packageName) | Constructs a new ClassTypeNode. |
+| Constructor                                                                                                                                                                                                                                                                                                                                  | Description                     |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------|
+| ClassTypeNode([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) simpleName, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) packageName) | Constructs a new ClassTypeNode. |

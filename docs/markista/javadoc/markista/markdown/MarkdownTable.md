@@ -7,7 +7,7 @@ Package [io.github.sandydunlop.markista.markdown](index.md)
 
 ----
 
-<span style="font-family: monospace;">public class __MarkdownTable__</span>
+<span style="font-family: monospace; font-size: 80%;">public class __MarkdownTable__</span>
 
 A utility class for creating tables in Markdown documents.
 
@@ -44,18 +44,12 @@ The table can be rendered as Markdown text to a Writer, optionally with indentat
 | public [MarkdownTable](MarkdownTable.md) | [addRow](#addrow)([String\](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String\.html)[] valueStrings) | Adds a row of data to the table.                                                      |
 | public void                              | [render](#render)([Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) writer)             | Renders the table as Markdown text without any indentation.                           |
 | public void                              | [render](#render)([Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) writer, int indent) | Renders the table as Markdown text with a given indentation level (number of spaces). |
-| public [MarkdownTable](MarkdownTable.md) | [addColumn](#addcolumn)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) heading)    | Adds a column with the specified heading to the table.                                |
-| public [MarkdownTable](MarkdownTable.md) | [addRow](#addrow)([String\](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String\.html)[] valueStrings) | Adds a row of data to the table.                                                      |
-| public void                              | [render](#render)([Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) writer)             | Renders the table as Markdown text without any indentation.                           |
-| public void                              | [render](#render)([Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) writer, int indent) | Renders the table as Markdown text with a given indentation level (number of spaces). |
-| public [MarkdownTable](MarkdownTable.md) | [addColumn](#addcolumn)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) heading)    | Adds a column with the specified heading to the table.                                |
-| public [MarkdownTable](MarkdownTable.md) | [addRow](#addrow)([String\](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String\.html)[] valueStrings) | Adds a row of data to the table.                                                      |
-| public void                              | [render](#render)([Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) writer)             | Renders the table as Markdown text without any indentation.                           |
-| public void                              | [render](#render)([Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) writer, int indent) | Renders the table as Markdown text with a given indentation level (number of spaces). |
 
 ## Field Details
 
 ### columns
+
+<span style="font-family: monospace; font-size: 80%;">[List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[MarkdownTable.Column](MarkdownTable.Column.md)> __columns__</span>
 
 
 
@@ -63,6 +57,8 @@ The table can be rendered as Markdown text to a Writer, optionally with indentat
 ---
 
 ### rows
+
+<span style="font-family: monospace; font-size: 80%;">[List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)[]> __rows__</span>
 
 
 
@@ -74,7 +70,7 @@ The table can be rendered as Markdown text to a Writer, optionally with indentat
 
 ### addColumn
 
-public [MarkdownTable](MarkdownTable.md) addColumn([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) heading)
+<span style="font-family: monospace; font-size: 80%;">public [MarkdownTable](MarkdownTable.md) __addColumn__</span>
 
 Adds a column with the specified heading to the table.
 
@@ -87,7 +83,7 @@ The table (this) to allow method chaining.
 
 ### addRow
 
-public [MarkdownTable](MarkdownTable.md) addRow([String\](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String\.html)[] valueStrings)
+<span style="font-family: monospace; font-size: 80%;">public [MarkdownTable](MarkdownTable.md) __addRow__</span>
 
 Adds a row of data to the table.
 The number of values should match or be less than the number of columns.
@@ -101,7 +97,7 @@ The table (this) to allow method chaining.
 
 ### render
 
-public void render([Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) writer)
+<span style="font-family: monospace; font-size: 80%;">public void __render__</span>
 
 Renders the table as Markdown text without any indentation.
 
@@ -114,113 +110,7 @@ Renders the table as Markdown text without any indentation.
 
 ### render
 
-public void render([Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) writer, int indent)
-
-Renders the table as Markdown text with a given indentation level (number of spaces).
-
-**Throws:**
-
-[java.io.IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
-
-
----
-
-### addColumn
-
-public [MarkdownTable](MarkdownTable.md) addColumn([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) heading)
-
-Adds a column with the specified heading to the table.
-
-**Returns:**
-
-The table (this) to allow method chaining.
-
-
----
-
-### addRow
-
-public [MarkdownTable](MarkdownTable.md) addRow([String\](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String\.html)[] valueStrings)
-
-Adds a row of data to the table.
-The number of values should match or be less than the number of columns.
-
-**Returns:**
-
-The table (this) to allow method chaining.
-
-
----
-
-### render
-
-public void render([Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) writer)
-
-Renders the table as Markdown text without any indentation.
-
-**Throws:**
-
-[java.io.IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
-
-
----
-
-### render
-
-public void render([Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) writer, int indent)
-
-Renders the table as Markdown text with a given indentation level (number of spaces).
-
-**Throws:**
-
-[java.io.IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
-
-
----
-
-### addColumn
-
-public [MarkdownTable](MarkdownTable.md) addColumn([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) heading)
-
-Adds a column with the specified heading to the table.
-
-**Returns:**
-
-The table (this) to allow method chaining.
-
-
----
-
-### addRow
-
-public [MarkdownTable](MarkdownTable.md) addRow([String\](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String\.html)[] valueStrings)
-
-Adds a row of data to the table.
-The number of values should match or be less than the number of columns.
-
-**Returns:**
-
-The table (this) to allow method chaining.
-
-
----
-
-### render
-
-public void render([Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) writer)
-
-Renders the table as Markdown text without any indentation.
-
-**Throws:**
-
-[java.io.IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
-
-
----
-
-### render
-
-public void render([Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) writer, int indent)
+<span style="font-family: monospace; font-size: 80%;">public void __render__</span>
 
 Renders the table as Markdown text with a given indentation level (number of spaces).
 

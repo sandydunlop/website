@@ -7,7 +7,7 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 ----
 
-<span style="font-family: monospace;">public interface __TypeView__</span>
+<span style="font-family: monospace; font-size: 80%;">public interface __TypeView__</span>
 
 Minimal view of a type used by PackageOrTypeNode.
 Does not reference TypeNode to avoid cycles.
@@ -33,7 +33,7 @@ Does not reference TypeNode to avoid cycles.
 
 ### getQualifiedName
 
-public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) getQualifiedName()
+<span style="font-family: monospace; font-size: 80%;">public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getQualifiedName__</span>
 
 
 
@@ -42,7 +42,7 @@ public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java
 
 ### getSimpleName
 
-public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) getSimpleName()
+<span style="font-family: monospace; font-size: 80%;">public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getSimpleName__</span>
 
 
 
@@ -51,7 +51,7 @@ public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java
 
 ### getModifiersString
 
-public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) getModifiersString()
+<span style="font-family: monospace; font-size: 80%;">public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getModifiersString__</span>
 
 
 
@@ -60,7 +60,7 @@ public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java
 
 ### getKindName
 
-public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) getKindName()
+<span style="font-family: monospace; font-size: 80%;">public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getKindName__</span>
 
 
 
@@ -69,7 +69,7 @@ public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java
 
 ### getFirstSentence
 
-public abstract [Text](Text.md) getFirstSentence()
+<span style="font-family: monospace; font-size: 80%;">public abstract [Text](Text.md) __getFirstSentence__</span>
 
 
 
@@ -78,7 +78,7 @@ public abstract [Text](Text.md) getFirstSentence()
 
 ### sort
 
-public abstract void sort()
+<span style="font-family: monospace; font-size: 80%;">public abstract void __sort__</span>
 
 
 
@@ -87,7 +87,7 @@ public abstract void sort()
 
 ### isClass
 
-public abstract boolean isClass()
+<span style="font-family: monospace; font-size: 80%;">public abstract boolean __isClass__</span>
 
 
 
@@ -96,7 +96,7 @@ public abstract boolean isClass()
 
 ### isInterface
 
-public abstract boolean isInterface()
+<span style="font-family: monospace; font-size: 80%;">public abstract boolean __isInterface__</span>
 
 
 
@@ -105,7 +105,7 @@ public abstract boolean isInterface()
 
 ### isEnum
 
-public abstract boolean isEnum()
+<span style="font-family: monospace; font-size: 80%;">public abstract boolean __isEnum__</span>
 
 
 
@@ -114,7 +114,7 @@ public abstract boolean isEnum()
 
 ### isRecord
 
-public abstract boolean isRecord()
+<span style="font-family: monospace; font-size: 80%;">public abstract boolean __isRecord__</span>
 
 
 
@@ -123,7 +123,7 @@ public abstract boolean isRecord()
 
 ### isAnnotation
 
-public abstract boolean isAnnotation()
+<span style="font-family: monospace; font-size: 80%;">public abstract boolean __isAnnotation__</span>
 
 
 

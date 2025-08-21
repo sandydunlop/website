@@ -10,7 +10,7 @@ Enclosing Class:<br/>
 
 ----
 
-<span style="font-family: monospace;">public class __Context.NameSimplifier__</span>
+<span style="font-family: monospace; font-size: 80%;">public class __Context.NameSimplifier__</span>
 
 
 ## Constructor Summary
@@ -29,30 +29,12 @@ Enclosing Class:<br/>
 | private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [replaceQualifiedWithSimple](#replacequalifiedwithsimple)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) simplified, int qualifiedStart, int simpleStart, int i) |                                                                 |
 | public static boolean                                                                                       | [isValidSimpleNameChar](#isvalidsimplenamechar)(char c)                                                                                                                                                        | Checks if the given character is valid in an unqualified name.  |
 | public static boolean                                                                                       | [isValidQualifiedNameChar](#isvalidqualifiednamechar)(char c)                                                                                                                                                  | Checks if the given character is valid in a qualified name.     |
-| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)  | [simplifyNames](#simplifynames)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str)                                                                              | Changes all qualified names in a string into unqualified names. |
-| private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [simplifyNamesLoop](#simplifynamesloop)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) input)                                                                    |                                                                 |
-| private static boolean                                                                                      | [shouldReplaceQualifiedWithSimple](#shouldreplacequalifiedwithsimple)(int qualifiedStart, int simpleStart, int i, int length, char c)                                                                          |                                                                 |
-| private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [replaceQualifiedWithSimple](#replacequalifiedwithsimple)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) simplified, int qualifiedStart, int simpleStart, int i) |                                                                 |
-| public static boolean                                                                                       | [isValidSimpleNameChar](#isvalidsimplenamechar)(char c)                                                                                                                                                        | Checks if the given character is valid in an unqualified name.  |
-| public static boolean                                                                                       | [isValidQualifiedNameChar](#isvalidqualifiednamechar)(char c)                                                                                                                                                  | Checks if the given character is valid in a qualified name.     |
-| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)  | [simplifyNames](#simplifynames)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str)                                                                              | Changes all qualified names in a string into unqualified names. |
-| private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [simplifyNamesLoop](#simplifynamesloop)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) input)                                                                    |                                                                 |
-| private static boolean                                                                                      | [shouldReplaceQualifiedWithSimple](#shouldreplacequalifiedwithsimple)(int qualifiedStart, int simpleStart, int i, int length, char c)                                                                          |                                                                 |
-| private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [replaceQualifiedWithSimple](#replacequalifiedwithsimple)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) simplified, int qualifiedStart, int simpleStart, int i) |                                                                 |
-| public static boolean                                                                                       | [isValidSimpleNameChar](#isvalidsimplenamechar)(char c)                                                                                                                                                        | Checks if the given character is valid in an unqualified name.  |
-| public static boolean                                                                                       | [isValidQualifiedNameChar](#isvalidqualifiednamechar)(char c)                                                                                                                                                  | Checks if the given character is valid in a qualified name.     |
-| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)  | [simplifyNames](#simplifynames)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str)                                                                              | Changes all qualified names in a string into unqualified names. |
-| private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [simplifyNamesLoop](#simplifynamesloop)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) input)                                                                    |                                                                 |
-| private static boolean                                                                                      | [shouldReplaceQualifiedWithSimple](#shouldreplacequalifiedwithsimple)(int qualifiedStart, int simpleStart, int i, int length, char c)                                                                          |                                                                 |
-| private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [replaceQualifiedWithSimple](#replacequalifiedwithsimple)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) simplified, int qualifiedStart, int simpleStart, int i) |                                                                 |
-| public static boolean                                                                                       | [isValidSimpleNameChar](#isvalidsimplenamechar)(char c)                                                                                                                                                        | Checks if the given character is valid in an unqualified name.  |
-| public static boolean                                                                                       | [isValidQualifiedNameChar](#isvalidqualifiednamechar)(char c)                                                                                                                                                  | Checks if the given character is valid in a qualified name.     |
 
 ## Method Details
 
 ### simplifyNames
 
-public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) simplifyNames([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str)
+<span style="font-family: monospace; font-size: 80%;">public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __simplifyNames__</span>
 
 Changes all qualified names in a string into unqualified names.
 
@@ -65,7 +47,7 @@ The input string, with all qualified names changed to unqualified names.
 
 ### simplifyNamesLoop
 
-private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) simplifyNamesLoop([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) input)
+<span style="font-family: monospace; font-size: 80%;">private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __simplifyNamesLoop__</span>
 
 
 
@@ -74,7 +56,7 @@ private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.
 
 ### shouldReplaceQualifiedWithSimple
 
-private static boolean shouldReplaceQualifiedWithSimple(int qualifiedStart, int simpleStart, int i, int length, char c)
+<span style="font-family: monospace; font-size: 80%;">private static boolean __shouldReplaceQualifiedWithSimple__</span>
 
 
 
@@ -83,7 +65,7 @@ private static boolean shouldReplaceQualifiedWithSimple(int qualifiedStart, int 
 
 ### replaceQualifiedWithSimple
 
-private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) replaceQualifiedWithSimple([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) simplified, int qualifiedStart, int simpleStart, int i)
+<span style="font-family: monospace; font-size: 80%;">private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __replaceQualifiedWithSimple__</span>
 
 
 
@@ -92,7 +74,7 @@ private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.
 
 ### isValidSimpleNameChar
 
-public static boolean isValidSimpleNameChar(char c)
+<span style="font-family: monospace; font-size: 80%;">public static boolean __isValidSimpleNameChar__</span>
 
 Checks if the given character is valid in an unqualified name.
 
@@ -105,205 +87,7 @@ Whether or not the character is valid in an unqualified name.
 
 ### isValidQualifiedNameChar
 
-public static boolean isValidQualifiedNameChar(char c)
-
-Checks if the given character is valid in a qualified name.
-
-**Returns:**
-
-Whether or not the character is valid in a qualified name.
-
-
----
-
-### simplifyNames
-
-public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) simplifyNames([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str)
-
-Changes all qualified names in a string into unqualified names.
-
-**Returns:**
-
-The input string, with all qualified names changed to unqualified names.
-
-
----
-
-### simplifyNamesLoop
-
-private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) simplifyNamesLoop([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) input)
-
-
-
-
----
-
-### shouldReplaceQualifiedWithSimple
-
-private static boolean shouldReplaceQualifiedWithSimple(int qualifiedStart, int simpleStart, int i, int length, char c)
-
-
-
-
----
-
-### replaceQualifiedWithSimple
-
-private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) replaceQualifiedWithSimple([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) simplified, int qualifiedStart, int simpleStart, int i)
-
-
-
-
----
-
-### isValidSimpleNameChar
-
-public static boolean isValidSimpleNameChar(char c)
-
-Checks if the given character is valid in an unqualified name.
-
-**Returns:**
-
-Whether or not the character is valid in an unqualified name.
-
-
----
-
-### isValidQualifiedNameChar
-
-public static boolean isValidQualifiedNameChar(char c)
-
-Checks if the given character is valid in a qualified name.
-
-**Returns:**
-
-Whether or not the character is valid in a qualified name.
-
-
----
-
-### simplifyNames
-
-public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) simplifyNames([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str)
-
-Changes all qualified names in a string into unqualified names.
-
-**Returns:**
-
-The input string, with all qualified names changed to unqualified names.
-
-
----
-
-### simplifyNamesLoop
-
-private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) simplifyNamesLoop([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) input)
-
-
-
-
----
-
-### shouldReplaceQualifiedWithSimple
-
-private static boolean shouldReplaceQualifiedWithSimple(int qualifiedStart, int simpleStart, int i, int length, char c)
-
-
-
-
----
-
-### replaceQualifiedWithSimple
-
-private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) replaceQualifiedWithSimple([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) simplified, int qualifiedStart, int simpleStart, int i)
-
-
-
-
----
-
-### isValidSimpleNameChar
-
-public static boolean isValidSimpleNameChar(char c)
-
-Checks if the given character is valid in an unqualified name.
-
-**Returns:**
-
-Whether or not the character is valid in an unqualified name.
-
-
----
-
-### isValidQualifiedNameChar
-
-public static boolean isValidQualifiedNameChar(char c)
-
-Checks if the given character is valid in a qualified name.
-
-**Returns:**
-
-Whether or not the character is valid in a qualified name.
-
-
----
-
-### simplifyNames
-
-public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) simplifyNames([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str)
-
-Changes all qualified names in a string into unqualified names.
-
-**Returns:**
-
-The input string, with all qualified names changed to unqualified names.
-
-
----
-
-### simplifyNamesLoop
-
-private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) simplifyNamesLoop([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) input)
-
-
-
-
----
-
-### shouldReplaceQualifiedWithSimple
-
-private static boolean shouldReplaceQualifiedWithSimple(int qualifiedStart, int simpleStart, int i, int length, char c)
-
-
-
-
----
-
-### replaceQualifiedWithSimple
-
-private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) replaceQualifiedWithSimple([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) simplified, int qualifiedStart, int simpleStart, int i)
-
-
-
-
----
-
-### isValidSimpleNameChar
-
-public static boolean isValidSimpleNameChar(char c)
-
-Checks if the given character is valid in an unqualified name.
-
-**Returns:**
-
-Whether or not the character is valid in an unqualified name.
-
-
----
-
-### isValidQualifiedNameChar
-
-public static boolean isValidQualifiedNameChar(char c)
+<span style="font-family: monospace; font-size: 80%;">public static boolean __isValidQualifiedNameChar__</span>
 
 Checks if the given character is valid in a qualified name.
 

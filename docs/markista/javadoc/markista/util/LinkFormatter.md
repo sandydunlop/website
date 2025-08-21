@@ -7,7 +7,7 @@ Package [io.github.sandydunlop.markista.util](index.md)
 
 ----
 
-<span style="font-family: monospace;">public class __LinkFormatter__</span>
+<span style="font-family: monospace; font-size: 80%;">public class __LinkFormatter__</span>
 
 
 ## Field Summary
@@ -29,30 +29,9 @@ Package [io.github.sandydunlop.markista.util](index.md)
 |------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
 | public static void                                                                                         | [generateLinkTexts](#generatelinktexts)([Api](../model/Api.md) a, [Context](../core/Context.md) context)                                                                                                                              | Generates [Text](../model/Text.md) objects for links to types and links in Javadoc text.                             |
 | static void                                                                                                | [processTypeNode](#processtypenode)([TypeNode](../model/TypeNode.md) typeNode)                                                                                                                                                        |                                                                                                                      |
-| static void                                                                                                | [processModules](#processmodules)([Api](../model/Api.md) api)                                                                                                                                                                         |                                                                                                                      |
-| static void                                                                                                | [processJavadocComments](#processjavadoccomments)([Api](../model/Api.md) api)                                                                                                                                                         |                                                                                                                      |
-| static void                                                                                                | [generateLinkTextsForParams](#generatelinktextsforparams)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[ParamNode](../model/ParamNode.md)> params)                                        |                                                                                                                      |
-| private static void                                                                                        | [generateLinkTextsForReferences](#generatelinktextsforreferences)([Node](../model/Node.md) node)                                                                                                                                      |                                                                                                                      |
-| public static [Text](../model/Text.md)                                                                     | [link](#link)([Reference](../model/Reference.md) reference, boolean useQualifiedName)                                                                                                                                                 | Create a markdown link, automatically deciding what kind of link to make.                                            |
-| private static void                                                                                        | [setDisplayName](#setdisplayname)([Reference](../model/Reference.md) link, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) displayName, boolean isLocalMethod, boolean useQualifiedName) |                                                                                                                      |
-| private static boolean                                                                                     | [canBeSimplified](#canbesimplified)([Reference](../model/Reference.md) link)                                                                                                                                                          |                                                                                                                      |
-| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [escape](#escape)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str)                                                                                                                   | Escapes HTML `<` and `>` characters in a string with their corresponding HTML character entities, `&lt;` and `&gt;`. |
-| public static [Text](../model/Text.md)                                                                     | [linkGenerics](#linkgenerics)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str, boolean useQualifiedName)                                                                             | Changes qualified generic type names to unqualified generic  type names and adds links to their API documentation.   |
-| public static [Text](../model/Text.md)                                                                     | [splitAndLink](#splitandlink)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) typesString, boolean useQualifiedName)                                                                     | Creates markdown formatted text with links to types from a string.                                                   |
-| public static void                                                                                         | [generateLinkTexts](#generatelinktexts)([Api](../model/Api.md) a, [Context](../core/Context.md) context)                                                                                                                              | Generates [Text](../model/Text.md) objects for links to types and links in Javadoc text.                             |
-| static void                                                                                                | [processTypeNode](#processtypenode)([TypeNode](../model/TypeNode.md) typeNode)                                                                                                                                                        |                                                                                                                      |
-| static void                                                                                                | [processModules](#processmodules)([Api](../model/Api.md) api)                                                                                                                                                                         |                                                                                                                      |
-| static void                                                                                                | [processJavadocComments](#processjavadoccomments)([Api](../model/Api.md) api)                                                                                                                                                         |                                                                                                                      |
-| static void                                                                                                | [generateLinkTextsForParams](#generatelinktextsforparams)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[ParamNode](../model/ParamNode.md)> params)                                        |                                                                                                                      |
-| private static void                                                                                        | [generateLinkTextsForReferences](#generatelinktextsforreferences)([Node](../model/Node.md) node)                                                                                                                                      |                                                                                                                      |
-| public static [Text](../model/Text.md)                                                                     | [link](#link)([Reference](../model/Reference.md) reference, boolean useQualifiedName)                                                                                                                                                 | Create a markdown link, automatically deciding what kind of link to make.                                            |
-| private static void                                                                                        | [setDisplayName](#setdisplayname)([Reference](../model/Reference.md) link, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) displayName, boolean isLocalMethod, boolean useQualifiedName) |                                                                                                                      |
-| private static boolean                                                                                     | [canBeSimplified](#canbesimplified)([Reference](../model/Reference.md) link)                                                                                                                                                          |                                                                                                                      |
-| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [escape](#escape)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str)                                                                                                                   | Escapes HTML `<` and `>` characters in a string with their corresponding HTML character entities, `&lt;` and `&gt;`. |
-| public static [Text](../model/Text.md)                                                                     | [linkGenerics](#linkgenerics)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str, boolean useQualifiedName)                                                                             | Changes qualified generic type names to unqualified generic  type names and adds links to their API documentation.   |
-| public static [Text](../model/Text.md)                                                                     | [splitAndLink](#splitandlink)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) typesString, boolean useQualifiedName)                                                                     | Creates markdown formatted text with links to types from a string.                                                   |
-| public static void                                                                                         | [generateLinkTexts](#generatelinktexts)([Api](../model/Api.md) a, [Context](../core/Context.md) context)                                                                                                                              | Generates [Text](../model/Text.md) objects for links to types and links in Javadoc text.                             |
-| static void                                                                                                | [processTypeNode](#processtypenode)([TypeNode](../model/TypeNode.md) typeNode)                                                                                                                                                        |                                                                                                                      |
+| static void                                                                                                | [processMethod](#processmethod)([MethodNode](../model/MethodNode.md) method)                                                                                                                                                          |                                                                                                                      |
+| static void                                                                                                | [processInheritDocTags](#processinheritdoctags)([Text](../model/Text.md) text)                                                                                                                                                        |                                                                                                                      |
+| static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)        | [baseTypeName](#basetypename)([MethodNode](../model/MethodNode.md) method)                                                                                                                                                            |                                                                                                                      |
 | static void                                                                                                | [processModules](#processmodules)([Api](../model/Api.md) api)                                                                                                                                                                         |                                                                                                                      |
 | static void                                                                                                | [processJavadocComments](#processjavadoccomments)([Api](../model/Api.md) api)                                                                                                                                                         |                                                                                                                      |
 | static void                                                                                                | [generateLinkTextsForParams](#generatelinktextsforparams)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[ParamNode](../model/ParamNode.md)> params)                                        |                                                                                                                      |
@@ -68,12 +47,16 @@ Package [io.github.sandydunlop.markista.util](index.md)
 
 ### ctx
 
+<span style="font-family: monospace; font-size: 80%;">private static [Context](../core/Context.md) __ctx__</span>
+
 
 
 
 ---
 
 ### api
+
+<span style="font-family: monospace; font-size: 80%;">private static [Api](../model/Api.md) __api__</span>
 
 
 
@@ -85,7 +68,7 @@ Package [io.github.sandydunlop.markista.util](index.md)
 
 ### generateLinkTexts
 
-public static void generateLinkTexts([Api](../model/Api.md) a, [Context](../core/Context.md) context)
+<span style="font-family: monospace; font-size: 80%;">public static void __generateLinkTexts__</span>
 
 Generates [Text](../model/Text.md) objects for links to types and links in Javadoc text.
 This is where we decide if the label for those links shows qualified names or simplified names.
@@ -95,7 +78,34 @@ This is where we decide if the label for those links shows qualified names or si
 
 ### processTypeNode
 
-static void processTypeNode([TypeNode](../model/TypeNode.md) typeNode)
+<span style="font-family: monospace; font-size: 80%;">static void __processTypeNode__</span>
+
+
+
+
+---
+
+### processMethod
+
+<span style="font-family: monospace; font-size: 80%;">static void __processMethod__</span>
+
+
+
+
+---
+
+### processInheritDocTags
+
+<span style="font-family: monospace; font-size: 80%;">static void __processInheritDocTags__</span>
+
+
+
+
+---
+
+### baseTypeName
+
+<span style="font-family: monospace; font-size: 80%;">static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __baseTypeName__</span>
 
 
 
@@ -104,7 +114,7 @@ static void processTypeNode([TypeNode](../model/TypeNode.md) typeNode)
 
 ### processModules
 
-static void processModules([Api](../model/Api.md) api)
+<span style="font-family: monospace; font-size: 80%;">static void __processModules__</span>
 
 
 
@@ -113,7 +123,7 @@ static void processModules([Api](../model/Api.md) api)
 
 ### processJavadocComments
 
-static void processJavadocComments([Api](../model/Api.md) api)
+<span style="font-family: monospace; font-size: 80%;">static void __processJavadocComments__</span>
 
 
 
@@ -122,7 +132,7 @@ static void processJavadocComments([Api](../model/Api.md) api)
 
 ### generateLinkTextsForParams
 
-static void generateLinkTextsForParams([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[ParamNode](../model/ParamNode.md)> params)
+<span style="font-family: monospace; font-size: 80%;">static void __generateLinkTextsForParams__</span>
 
 
 
@@ -131,7 +141,7 @@ static void generateLinkTextsForParams([List](https://docs.oracle.com/en/java/ja
 
 ### generateLinkTextsForReferences
 
-private static void generateLinkTextsForReferences([Node](../model/Node.md) node)
+<span style="font-family: monospace; font-size: 80%;">private static void __generateLinkTextsForReferences__</span>
 
 
 
@@ -140,7 +150,7 @@ private static void generateLinkTextsForReferences([Node](../model/Node.md) node
 
 ### link
 
-public static [Text](../model/Text.md) link([Reference](../model/Reference.md) reference, boolean useQualifiedName)
+<span style="font-family: monospace; font-size: 80%;">public static [Text](../model/Text.md) __link__</span>
 
 Create a markdown link, automatically deciding what kind of link to make.
 
@@ -153,7 +163,7 @@ markdown formatted link
 
 ### setDisplayName
 
-private static void setDisplayName([Reference](../model/Reference.md) link, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) displayName, boolean isLocalMethod, boolean useQualifiedName)
+<span style="font-family: monospace; font-size: 80%;">private static void __setDisplayName__</span>
 
 
 
@@ -162,7 +172,7 @@ private static void setDisplayName([Reference](../model/Reference.md) link, [Str
 
 ### canBeSimplified
 
-private static boolean canBeSimplified([Reference](../model/Reference.md) link)
+<span style="font-family: monospace; font-size: 80%;">private static boolean __canBeSimplified__</span>
 
 
 
@@ -171,7 +181,7 @@ private static boolean canBeSimplified([Reference](../model/Reference.md) link)
 
 ### escape
 
-public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) escape([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str)
+<span style="font-family: monospace; font-size: 80%;">public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __escape__</span>
 
 Escapes HTML `<` and `>` characters in a string with their corresponding
 HTML character entities, `&lt;` and `&gt;`.
@@ -185,7 +195,7 @@ The escaped string
 
 ### linkGenerics
 
-public static [Text](../model/Text.md) linkGenerics([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str, boolean useQualifiedName)
+<span style="font-family: monospace; font-size: 80%;">public static [Text](../model/Text.md) __linkGenerics__</span>
 
 Changes qualified generic type names to unqualified generic 
 type names and adds links to their API documentation.
@@ -200,265 +210,7 @@ A Text object with the qualified names changed to unqualified
 
 ### splitAndLink
 
-public static [Text](../model/Text.md) splitAndLink([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) typesString, boolean useQualifiedName)
-
-Creates markdown formatted text with links to types from a string.
-containing one or more types separated by commas.
-
-**Returns:**
-
-a list of links to types formatted as Markdown
-
-
----
-
-### generateLinkTexts
-
-public static void generateLinkTexts([Api](../model/Api.md) a, [Context](../core/Context.md) context)
-
-Generates [Text](../model/Text.md) objects for links to types and links in Javadoc text.
-This is where we decide if the label for those links shows qualified names or simplified names.
-
-
----
-
-### processTypeNode
-
-static void processTypeNode([TypeNode](../model/TypeNode.md) typeNode)
-
-
-
-
----
-
-### processModules
-
-static void processModules([Api](../model/Api.md) api)
-
-
-
-
----
-
-### processJavadocComments
-
-static void processJavadocComments([Api](../model/Api.md) api)
-
-
-
-
----
-
-### generateLinkTextsForParams
-
-static void generateLinkTextsForParams([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[ParamNode](../model/ParamNode.md)> params)
-
-
-
-
----
-
-### generateLinkTextsForReferences
-
-private static void generateLinkTextsForReferences([Node](../model/Node.md) node)
-
-
-
-
----
-
-### link
-
-public static [Text](../model/Text.md) link([Reference](../model/Reference.md) reference, boolean useQualifiedName)
-
-Create a markdown link, automatically deciding what kind of link to make.
-
-**Returns:**
-
-markdown formatted link
-
-
----
-
-### setDisplayName
-
-private static void setDisplayName([Reference](../model/Reference.md) link, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) displayName, boolean isLocalMethod, boolean useQualifiedName)
-
-
-
-
----
-
-### canBeSimplified
-
-private static boolean canBeSimplified([Reference](../model/Reference.md) link)
-
-
-
-
----
-
-### escape
-
-public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) escape([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str)
-
-Escapes HTML `<` and `>` characters in a string with their corresponding
-HTML character entities, `&lt;` and `&gt;`.
-
-**Returns:**
-
-The escaped string
-
-
----
-
-### linkGenerics
-
-public static [Text](../model/Text.md) linkGenerics([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str, boolean useQualifiedName)
-
-Changes qualified generic type names to unqualified generic 
-type names and adds links to their API documentation.
-
-**Returns:**
-
-A Text object with the qualified names changed to unqualified
-           names and links to types added
-
-
----
-
-### splitAndLink
-
-public static [Text](../model/Text.md) splitAndLink([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) typesString, boolean useQualifiedName)
-
-Creates markdown formatted text with links to types from a string.
-containing one or more types separated by commas.
-
-**Returns:**
-
-a list of links to types formatted as Markdown
-
-
----
-
-### generateLinkTexts
-
-public static void generateLinkTexts([Api](../model/Api.md) a, [Context](../core/Context.md) context)
-
-Generates [Text](../model/Text.md) objects for links to types and links in Javadoc text.
-This is where we decide if the label for those links shows qualified names or simplified names.
-
-
----
-
-### processTypeNode
-
-static void processTypeNode([TypeNode](../model/TypeNode.md) typeNode)
-
-
-
-
----
-
-### processModules
-
-static void processModules([Api](../model/Api.md) api)
-
-
-
-
----
-
-### processJavadocComments
-
-static void processJavadocComments([Api](../model/Api.md) api)
-
-
-
-
----
-
-### generateLinkTextsForParams
-
-static void generateLinkTextsForParams([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[ParamNode](../model/ParamNode.md)> params)
-
-
-
-
----
-
-### generateLinkTextsForReferences
-
-private static void generateLinkTextsForReferences([Node](../model/Node.md) node)
-
-
-
-
----
-
-### link
-
-public static [Text](../model/Text.md) link([Reference](../model/Reference.md) reference, boolean useQualifiedName)
-
-Create a markdown link, automatically deciding what kind of link to make.
-
-**Returns:**
-
-markdown formatted link
-
-
----
-
-### setDisplayName
-
-private static void setDisplayName([Reference](../model/Reference.md) link, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) displayName, boolean isLocalMethod, boolean useQualifiedName)
-
-
-
-
----
-
-### canBeSimplified
-
-private static boolean canBeSimplified([Reference](../model/Reference.md) link)
-
-
-
-
----
-
-### escape
-
-public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) escape([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str)
-
-Escapes HTML `<` and `>` characters in a string with their corresponding
-HTML character entities, `&lt;` and `&gt;`.
-
-**Returns:**
-
-The escaped string
-
-
----
-
-### linkGenerics
-
-public static [Text](../model/Text.md) linkGenerics([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str, boolean useQualifiedName)
-
-Changes qualified generic type names to unqualified generic 
-type names and adds links to their API documentation.
-
-**Returns:**
-
-A Text object with the qualified names changed to unqualified
-           names and links to types added
-
-
----
-
-### splitAndLink
-
-public static [Text](../model/Text.md) splitAndLink([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) typesString, boolean useQualifiedName)
+<span style="font-family: monospace; font-size: 80%;">public static [Text](../model/Text.md) __splitAndLink__</span>
 
 Creates markdown formatted text with links to types from a string.
 containing one or more types separated by commas.

@@ -11,15 +11,13 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 ----
 
-<span style="font-family: monospace;">public class __AnnotationTypeNode__</span>
+<span style="font-family: monospace; font-size: 80%;">public class __AnnotationTypeNode__</span>
 
 A [Node](Node.md) that represents an [Annotation](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/text/Annotation.html) class
 
 
 ## Constructor Summary
 
-| Constructor                                                   | Description                                                                       |
-|---------------------------------------------------------------|-----------------------------------------------------------------------------------|
-| AnnotationTypeNode( qualifiedName,  simpleName,  packageName) | Constructor that sets the minimum required information for an AnnotationTypeNode. |
-| AnnotationTypeNode( qualifiedName,  simpleName,  packageName) | Constructor that sets the minimum required information for an AnnotationTypeNode. |
-| AnnotationTypeNode( qualifiedName,  simpleName,  packageName) | Constructor that sets the minimum required information for an AnnotationTypeNode. |
+| Constructor                                                                                                                                                                                                                                                                                                                                       | Description                                                                       |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
+| AnnotationTypeNode([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) simpleName, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) packageName) | Constructor that sets the minimum required information for an AnnotationTypeNode. |

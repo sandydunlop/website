@@ -10,7 +10,7 @@ All Implemented Interfaces:<br/>
 
 ----
 
-<span style="font-family: monospace;">public class __Pair__</span>
+<span style="font-family: monospace; font-size: 80%;">public class __Pair__</span>
 
 
 ## Field Summary
@@ -23,11 +23,9 @@ All Implemented Interfaces:<br/>
 
 ## Constructor Summary
 
-| Constructor  | Description |
-|--------------|-------------|
-| Pair( l,  r) |             |
-| Pair( l,  r) |             |
-| Pair( l,  r) |             |
+| Constructor    | Description |
+|----------------|-------------|
+| Pair(L l, R r) |             |
 
 ## Method Summary
 
@@ -41,18 +39,12 @@ All Implemented Interfaces:<br/>
 | public boolean                                                                                      | [equals](#equals)([Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html) other) |             |
 | public int                                                                                          | [hashCode](#hashcode)()                                                                                               |             |
 | public static [Pair](Pair.md)<A, B>                                                                 | [of](#of)(A a, B b)                                                                                                   |             |
-| public void                                                                                         | [setL](#setl)(L l)                                                                                                    |             |
-| public void                                                                                         | [setR](#setr)(R r)                                                                                                    |             |
-| public boolean                                                                                      | [equals](#equals)([Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html) other) |             |
-| public static [Pair](Pair.md)<A, B>                                                                 | [of](#of)(A a, B b)                                                                                                   |             |
-| public void                                                                                         | [setL](#setl)(L l)                                                                                                    |             |
-| public void                                                                                         | [setR](#setr)(R r)                                                                                                    |             |
-| public boolean                                                                                      | [equals](#equals)([Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html) other) |             |
-| public static [Pair](Pair.md)<A, B>                                                                 | [of](#of)(A a, B b)                                                                                                   |             |
 
 ## Field Details
 
 ### serialVersionUID
+
+<span style="font-family: monospace; font-size: 80%;">private static final long __serialVersionUID__</span>
 
 
 
@@ -67,12 +59,16 @@ All Implemented Interfaces:<br/>
 
 ### l
 
+<span style="font-family: monospace; font-size: 80%;">private L __l__</span>
+
 
 
 
 ---
 
 ### r
+
+<span style="font-family: monospace; font-size: 80%;">private R __r__</span>
 
 
 
@@ -84,7 +80,7 @@ All Implemented Interfaces:<br/>
 
 ### getL
 
-public L getL()
+<span style="font-family: monospace; font-size: 80%;">public L __getL__</span>
 
 
 
@@ -93,7 +89,7 @@ public L getL()
 
 ### getR
 
-public R getR()
+<span style="font-family: monospace; font-size: 80%;">public R __getR__</span>
 
 
 
@@ -102,7 +98,7 @@ public R getR()
 
 ### setL
 
-public void setL(L l)
+<span style="font-family: monospace; font-size: 80%;">public void __setL__</span>
 
 
 
@@ -111,7 +107,7 @@ public void setL(L l)
 
 ### setR
 
-public void setR(R r)
+<span style="font-family: monospace; font-size: 80%;">public void __setR__</span>
 
 
 
@@ -120,7 +116,7 @@ public void setR(R r)
 
 ### toString
 
-public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) toString()
+<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __toString__</span>
 
 
 
@@ -129,7 +125,7 @@ public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/jav
 
 ### equals
 
-public boolean equals([Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html) other)
+<span style="font-family: monospace; font-size: 80%;">public boolean __equals__</span>
 
 
 
@@ -138,7 +134,7 @@ public boolean equals([Object](https://docs.oracle.com/en/java/javase/24/docs/ap
 
 ### hashCode
 
-public int hashCode()
+<span style="font-family: monospace; font-size: 80%;">public int __hashCode__</span>
 
 
 
@@ -147,79 +143,7 @@ public int hashCode()
 
 ### of
 
-public static [Pair](Pair.md)<A, B> of(A a, B b)
-
-
-
-
----
-
-### setL
-
-public void setL(L l)
-
-
-
-
----
-
-### setR
-
-public void setR(R r)
-
-
-
-
----
-
-### equals
-
-public boolean equals([Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html) other)
-
-
-
-
----
-
-### of
-
-public static [Pair](Pair.md)<A, B> of(A a, B b)
-
-
-
-
----
-
-### setL
-
-public void setL(L l)
-
-
-
-
----
-
-### setR
-
-public void setR(R r)
-
-
-
-
----
-
-### equals
-
-public boolean equals([Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html) other)
-
-
-
-
----
-
-### of
-
-public static [Pair](Pair.md)<A, B> of(A a, B b)
+<span style="font-family: monospace; font-size: 80%;">public static [Pair](Pair.md)<A, B> __of__</span>
 
 
 

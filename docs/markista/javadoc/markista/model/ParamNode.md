@@ -9,7 +9,7 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 ----
 
-<span style="font-family: monospace;">public class __ParamNode__</span>
+<span style="font-family: monospace; font-size: 80%;">public class __ParamNode__</span>
 
 A class to hold information about method parameters.
 
@@ -23,11 +23,9 @@ A class to hold information about method parameters.
 
 ## Constructor Summary
 
-| Constructor             | Description                                          |
-|-------------------------|------------------------------------------------------|
-| ParamNode( type,  name) | Constructs a ParamNode with the given type and name. |
-| ParamNode( type,  name) | Constructs a ParamNode with the given type and name. |
-| ParamNode( type,  name) | Constructs a ParamNode with the given type and name. |
+| Constructor                                                                                                                                                                                                     | Description                                          |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------|
+| ParamNode([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) type, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) | Constructs a ParamNode with the given type and name. |
 
 ## Method Summary
 
@@ -37,14 +35,12 @@ A class to hold information about method parameters.
 | public void                                                                                         | [setTypeName](#settypename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) type) | Sets the type of this parameter.         |
 | public [Text](Text.md)                                                                              | [getTypeText](#gettypetext)()                                                                                                  | Returns the type Text of this parameter. |
 | public void                                                                                         | [setTypeText](#settypetext)([Text](Text.md) text)                                                                              | Sets the type Text of this parameter.    |
-| public void                                                                                         | [setTypeName](#settypename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) type) | Sets the type of this parameter.         |
-| public void                                                                                         | [setTypeText](#settypetext)([Text](Text.md) text)                                                                              | Sets the type Text of this parameter.    |
-| public void                                                                                         | [setTypeName](#settypename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) type) | Sets the type of this parameter.         |
-| public void                                                                                         | [setTypeText](#settypetext)([Text](Text.md) text)                                                                              | Sets the type Text of this parameter.    |
 
 ## Field Details
 
 ### typeName
+
+<span style="font-family: monospace; font-size: 80%;">private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __typeName__</span>
 
 The type of this parameter
 
@@ -52,6 +48,8 @@ The type of this parameter
 ---
 
 ### typeText
+
+<span style="font-family: monospace; font-size: 80%;">private [Text](Text.md) __typeText__</span>
 
 
 
@@ -63,7 +61,7 @@ The type of this parameter
 
 ### getTypeName
 
-public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) getTypeName()
+<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getTypeName__</span>
 
 Returns the type of this parameter.
 
@@ -76,7 +74,7 @@ The name of the parameter's type.
 
 ### setTypeName
 
-public void setTypeName([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) type)
+<span style="font-family: monospace; font-size: 80%;">public void __setTypeName__</span>
 
 Sets the type of this parameter.
 
@@ -85,7 +83,7 @@ Sets the type of this parameter.
 
 ### getTypeText
 
-public [Text](Text.md) getTypeText()
+<span style="font-family: monospace; font-size: 80%;">public [Text](Text.md) __getTypeText__</span>
 
 Returns the type Text of this parameter.
 
@@ -98,43 +96,7 @@ The Text representing the parameter's type.
 
 ### setTypeText
 
-public void setTypeText([Text](Text.md) text)
-
-Sets the type Text of this parameter.
-
-
----
-
-### setTypeName
-
-public void setTypeName([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) type)
-
-Sets the type of this parameter.
-
-
----
-
-### setTypeText
-
-public void setTypeText([Text](Text.md) text)
-
-Sets the type Text of this parameter.
-
-
----
-
-### setTypeName
-
-public void setTypeName([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) type)
-
-Sets the type of this parameter.
-
-
----
-
-### setTypeText
-
-public void setTypeText([Text](Text.md) text)
+<span style="font-family: monospace; font-size: 80%;">public void __setTypeText__</span>
 
 Sets the type Text of this parameter.
 

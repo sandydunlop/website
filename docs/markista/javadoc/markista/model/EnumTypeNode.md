@@ -11,7 +11,7 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 ----
 
-<span style="font-family: monospace;">public class __EnumTypeNode__</span>
+<span style="font-family: monospace; font-size: 80%;">public class __EnumTypeNode__</span>
 
 Represents an enum type node with its constants.
 
@@ -24,11 +24,9 @@ Represents an enum type node with its constants.
 
 ## Constructor Summary
 
-| Constructor                                             | Description                                                                         |
-|---------------------------------------------------------|-------------------------------------------------------------------------------------|
-| EnumTypeNode( qualifiedName,  simpleName,  packageName) | Constructs an EnumNode with the specified qualified name, simple name, and package. |
-| EnumTypeNode( qualifiedName,  simpleName,  packageName) | Constructs an EnumNode with the specified qualified name, simple name, and package. |
-| EnumTypeNode( qualifiedName,  simpleName,  packageName) | Constructs an EnumNode with the specified qualified name, simple name, and package. |
+| Constructor                                                                                                                                                                                                                                                                                                                                 | Description                                                                         |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
+| EnumTypeNode([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) simpleName, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) packageName) | Constructs an EnumNode with the specified qualified name, simple name, and package. |
 
 ## Method Summary
 
@@ -36,12 +34,12 @@ Represents an enum type node with its constants.
 |----------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------|-------------------------------------|
 | public void                                                                                                                | [addConstant](#addconstant)([FieldNode](FieldNode.md) constant) | Adds a constant field to this enum. |
 | public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[FieldNode](FieldNode.md)> | [getConstants](#getconstants)()                                 | Returns the list of enum constants. |
-| public void                                                                                                                | [addConstant](#addconstant)([FieldNode](FieldNode.md) constant) | Adds a constant field to this enum. |
-| public void                                                                                                                | [addConstant](#addconstant)([FieldNode](FieldNode.md) constant) | Adds a constant field to this enum. |
 
 ## Field Details
 
 ### constants
+
+<span style="font-family: monospace; font-size: 80%;">private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[FieldNode](FieldNode.md)> __constants__</span>
 
 
 
@@ -53,7 +51,7 @@ Represents an enum type node with its constants.
 
 ### addConstant
 
-public void addConstant([FieldNode](FieldNode.md) constant)
+<span style="font-family: monospace; font-size: 80%;">public void __addConstant__</span>
 
 Adds a constant field to this enum.
 
@@ -62,31 +60,13 @@ Adds a constant field to this enum.
 
 ### getConstants
 
-public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[FieldNode](FieldNode.md)> getConstants()
+<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[FieldNode](FieldNode.md)> __getConstants__</span>
 
 Returns the list of enum constants.
 
 **Returns:**
 
 List of FieldNode constants.
-
-
----
-
-### addConstant
-
-public void addConstant([FieldNode](FieldNode.md) constant)
-
-Adds a constant field to this enum.
-
-
----
-
-### addConstant
-
-public void addConstant([FieldNode](FieldNode.md) constant)
-
-Adds a constant field to this enum.
 
 
 ---

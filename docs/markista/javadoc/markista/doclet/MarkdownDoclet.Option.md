@@ -13,7 +13,7 @@ Enclosing Class:<br/>
 
 ----
 
-<span style="font-family: monospace;">public abstract class __MarkdownDoclet.Option__</span>
+<span style="font-family: monospace; font-size: 80%;">public abstract class __MarkdownDoclet.Option__</span>
 
 A base class for declaring options.
 Subtypes for specific options should implement
@@ -33,12 +33,9 @@ command line.
 
 ## Constructor Summary
 
-| Constructor                                                      | Description |
-|------------------------------------------------------------------|-------------|
-| MarkdownDoclet.Option( name,  hasArg,  description,  parameters) |             |
-| MarkdownDoclet.Option( name,  hasArg,  description,  parameters) |             |
-| MarkdownDoclet.Option( name,  hasArg,  description,  parameters) |             |
-| MarkdownDoclet.Option( name,  hasArg,  description,  parameters) |             |
+| Constructor                                                                                                                                                                                                                                                                                                                                                 | Description |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------|
+| MarkdownDoclet.Option([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name, boolean hasArg, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) description, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) parameters) |             |
 
 ## Method Summary
 
@@ -54,12 +51,16 @@ command line.
 
 ### name
 
+<span style="font-family: monospace; font-size: 80%;">private final [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __name__</span>
+
 
 
 
 ---
 
 ### hasArg
+
+<span style="font-family: monospace; font-size: 80%;">private final boolean __hasArg__</span>
 
 
 
@@ -68,12 +69,16 @@ command line.
 
 ### description
 
+<span style="font-family: monospace; font-size: 80%;">private final [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __description__</span>
+
 
 
 
 ---
 
 ### parameters
+
+<span style="font-family: monospace; font-size: 80%;">private final [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __parameters__</span>
 
 
 
@@ -85,7 +90,7 @@ command line.
 
 ### getArgumentCount
 
-public int getArgumentCount()
+<span style="font-family: monospace; font-size: 80%;">public int __getArgumentCount__</span>
 
 
 
@@ -94,7 +99,7 @@ public int getArgumentCount()
 
 ### getDescription
 
-public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) getDescription()
+<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getDescription__</span>
 
 
 
@@ -103,7 +108,7 @@ public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/jav
 
 ### getKind
 
-public [Doclet.Option.Kind](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.Kind.html) getKind()
+<span style="font-family: monospace; font-size: 80%;">public [Doclet.Option.Kind](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.Kind.html) __getKind__</span>
 
 
 
@@ -112,7 +117,7 @@ public [Doclet.Option.Kind](https://docs.oracle.com/en/java/javase/24/docs/api/j
 
 ### getNames
 
-public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)> getNames()
+<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)> __getNames__</span>
 
 
 
@@ -121,7 +126,7 @@ public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/
 
 ### getParameters
 
-public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) getParameters()
+<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getParameters__</span>
 
 
 

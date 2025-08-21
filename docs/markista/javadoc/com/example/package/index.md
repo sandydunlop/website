@@ -1,5 +1,0 @@
-# Package com.example.package
-
-
-
-

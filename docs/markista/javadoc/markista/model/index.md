@@ -6,9 +6,10 @@ The types used to store structure and documentation information of the API.
 
 === "Interfaces"
 
-    | Class                   | Description                                       |
-    |-------------------------|---------------------------------------------------|
-    | [TypeView](TypeView.md) | Minimal view of a type used by PackageOrTypeNode. |
+    | Class                       | Description                                       |
+    |-----------------------------|---------------------------------------------------|
+    | [TypeView](TypeView.md)     | Minimal view of a type used by PackageOrTypeNode. |
+    | [TypeMember](TypeMember.md) |                                                   |
 === "Classes"
 
     | Class                                             | Description                                                                                                                                                                                       |
@@ -30,8 +31,8 @@ The types used to store structure and documentation information of the API.
     | [Reference](Reference.md)                         | `Reference` encapsulates links to web pages, markdown pages, modules, packages, types, and methods.                                                                                               |
     | [TypeNode](TypeNode.md)                           | Represents a type in the API model, including its kind (class, interface, enum, annotation), supertypes, implemented interfaces, constructors, methods, fields, ownership, and relevant metadata. |
     | [AnnotationElement](AnnotationElement.md)         | An element of an annotation                                                                                                                                                                       |
+    | [InheritedMethodRef](InheritedMethodRef.md)       | Represents a method from another type that is overridden by a method in the type being documented.                                                                                                |
     | [PackageOrTypeNode](PackageOrTypeNode.md)         |                                                                                                                                                                                                   |
-    | [OverriddenMethodNode](OverriddenMethodNode.md)   | Represents a method from another type that is overridden by a method in the type being documented.                                                                                                |
     | [ClassTypeNode](ClassTypeNode.md)                 | Represents a Java class.                                                                                                                                                                          |
     | [Api](Api.md)                                     | Represents the API being documented, encapsulating its modules and packages.                                                                                                                      |
     | [AbstractPackageMember](AbstractPackageMember.md) |                                                                                                                                                                                                   |
@@ -41,3 +42,8 @@ The types used to store structure and documentation information of the API.
     |-------------------------------|-------------------------------------------------------------------------------|
     | [Modifier](Modifier.md)       | Enum representing Java language modifiers with their string  representations. |
     | [Deprecation](Deprecation.md) | Enum representing the deprecation status of an element                        |
+=== "Annotation Interfaces"
+
+    | Class                         | Description |
+    |-------------------------------|-------------|
+    | [JsonElement](JsonElement.md) |             |

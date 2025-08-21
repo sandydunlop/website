@@ -7,7 +7,7 @@ Package [io.github.sandydunlop.markista.spi](index.md)
 
 ----
 
-<span style="font-family: monospace;">public interface __DocService__</span>
+<span style="font-family: monospace; font-size: 80%;">public interface __DocService__</span>
 
 This interface defines a service for processing a project's structure
 and documentation with the 
@@ -44,14 +44,12 @@ maintain and extend the documentation processing capabilities of Markista.
 | public abstract boolean | [replacesDefault](#replacesdefault)()                                          | Returns true if this Docservice replaces the default DocService. |
 | public abstract boolean | [start](#start)([Api](../model/Api.md) api, [Context](../core/Context.md) ctx) | Runs before the main Markdown DocService.                        |
 | public abstract boolean | [finish](#finish)()                                                            | Runs after the main Markdown DocService.                         |
-| public abstract boolean | [start](#start)([Api](../model/Api.md) api, [Context](../core/Context.md) ctx) | Runs before the main Markdown DocService.                        |
-| public abstract boolean | [start](#start)([Api](../model/Api.md) api, [Context](../core/Context.md) ctx) | Runs before the main Markdown DocService.                        |
 
 ## Method Details
 
 ### replacesDefault
 
-public abstract boolean replacesDefault()
+<span style="font-family: monospace; font-size: 80%;">public abstract boolean __replacesDefault__</span>
 
 Returns true if this Docservice replaces the default DocService.
 
@@ -64,7 +62,7 @@ true if this DocService replaces the default Markdown one, false otherwise.
 
 ### start
 
-public abstract boolean start([Api](../model/Api.md) api, [Context](../core/Context.md) ctx)
+<span style="font-family: monospace; font-size: 80%;">public abstract boolean __start__</span>
 
 Runs before the main Markdown DocService.
 Initializes a DocService with the API model and a Context for file creation and reporting.
@@ -78,37 +76,9 @@ true on success, otheriwse false
 
 ### finish
 
-public abstract boolean finish()
+<span style="font-family: monospace; font-size: 80%;">public abstract boolean __finish__</span>
 
 Runs after the main Markdown DocService.
-
-**Returns:**
-
-true on success, otheriwse false
-
-
----
-
-### start
-
-public abstract boolean start([Api](../model/Api.md) api, [Context](../core/Context.md) ctx)
-
-Runs before the main Markdown DocService.
-Initializes a DocService with the API model and a Context for file creation and reporting.
-
-**Returns:**
-
-true on success, otheriwse false
-
-
----
-
-### start
-
-public abstract boolean start([Api](../model/Api.md) api, [Context](../core/Context.md) ctx)
-
-Runs before the main Markdown DocService.
-Initializes a DocService with the API model and a Context for file creation and reporting.
 
 **Returns:**
 

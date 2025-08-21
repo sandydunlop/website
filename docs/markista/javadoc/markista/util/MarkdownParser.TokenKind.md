@@ -11,7 +11,7 @@ Enclosing Class:<br/>
 
 ----
 
-<span style="font-family: monospace;">public static final enum class __MarkdownParser.TokenKind__</span>
+<span style="font-family: monospace; font-size: 80%;">public static final enum class __MarkdownParser.TokenKind__</span>
 
 Enum representing the kind of a Markdown token.
 
@@ -38,15 +38,12 @@ Enum representing the kind of a Markdown token.
 |-------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|-------------|
 | public static io.github.sandydunlop.markista.util.MarkdownParser.TokenKind\[] | [values](#values)()                                                                                                    |             |
 | public static [MarkdownParser.TokenKind](MarkdownParser.TokenKind.md)         | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
-| public static [MarkdownParser.TokenKind](MarkdownParser.TokenKind.md)         | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
-| public static [MarkdownParser.TokenKind](MarkdownParser.TokenKind.md)         | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
-| public static [MarkdownParser.TokenKind](MarkdownParser.TokenKind.md)         | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
 
 ## Enum Constant Details
 
 ### NONE
 
-public static final NONE NONE
+public static final  NONE
 
 
 
@@ -55,7 +52,7 @@ public static final NONE NONE
 
 ### TEXT
 
-public static final TEXT TEXT
+public static final  TEXT
 
 
 
@@ -64,7 +61,7 @@ public static final TEXT TEXT
 
 ### BRACKETS_TAG
 
-public static final BRACKETS_TAG BRACKETS_TAG
+public static final  BRACKETS_TAG
 
 
 
@@ -73,7 +70,7 @@ public static final BRACKETS_TAG BRACKETS_TAG
 
 ### PARENS_TAG
 
-public static final PARENS_TAG PARENS_TAG
+public static final  PARENS_TAG
 
 
 
@@ -82,7 +79,7 @@ public static final PARENS_TAG PARENS_TAG
 
 ### END
 
-public static final END END
+public static final  END
 
 
 
@@ -94,7 +91,7 @@ public static final END END
 
 ### values
 
-public static io.github.sandydunlop.markista.util.MarkdownParser.TokenKind\[] values()
+<span style="font-family: monospace; font-size: 80%;">public static io.github.sandydunlop.markista.util.MarkdownParser.TokenKind\[] __values__</span>
 
 
 
@@ -103,34 +100,7 @@ public static io.github.sandydunlop.markista.util.MarkdownParser.TokenKind\[] va
 
 ### valueOf
 
-public static [MarkdownParser.TokenKind](MarkdownParser.TokenKind.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
-
-
-
-
----
-
-### valueOf
-
-public static [MarkdownParser.TokenKind](MarkdownParser.TokenKind.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
-
-
-
-
----
-
-### valueOf
-
-public static [MarkdownParser.TokenKind](MarkdownParser.TokenKind.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
-
-
-
-
----
-
-### valueOf
-
-public static [MarkdownParser.TokenKind](MarkdownParser.TokenKind.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
+<span style="font-family: monospace; font-size: 80%;">public static [MarkdownParser.TokenKind](MarkdownParser.TokenKind.md) __valueOf__</span>
 
 
 

@@ -11,7 +11,7 @@ Enclosing Class:<br/>
 
 ----
 
-<span style="font-family: monospace;">public static final enum class __Text.SegmentKind__</span>
+<span style="font-family: monospace; font-size: 80%;">public static final enum class __Text.SegmentKind__</span>
 
 Enum class that defines different kinds of segments for Text.
 
@@ -37,15 +37,12 @@ Enum class that defines different kinds of segments for Text.
 |------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|-------------|
 | public static io.github.sandydunlop.markista.model.Text.SegmentKind\[] | [values](#values)()                                                                                                    |             |
 | public static [Text.SegmentKind](Text.SegmentKind.md)                  | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
-| public static [Text.SegmentKind](Text.SegmentKind.md)                  | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
-| public static [Text.SegmentKind](Text.SegmentKind.md)                  | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
-| public static [Text.SegmentKind](Text.SegmentKind.md)                  | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
 
 ## Enum Constant Details
 
 ### NONE
 
-public static final NONE NONE
+public static final  NONE
 
 
 
@@ -54,7 +51,7 @@ public static final NONE NONE
 
 ### TEXT
 
-public static final TEXT TEXT
+public static final  TEXT
 
 
 
@@ -63,7 +60,7 @@ public static final TEXT TEXT
 
 ### LINK
 
-public static final LINK LINK
+public static final  LINK
 
 
 
@@ -72,7 +69,7 @@ public static final LINK LINK
 
 ### CODE
 
-public static final CODE CODE
+public static final  CODE
 
 
 
@@ -84,7 +81,7 @@ public static final CODE CODE
 
 ### values
 
-public static io.github.sandydunlop.markista.model.Text.SegmentKind\[] values()
+<span style="font-family: monospace; font-size: 80%;">public static io.github.sandydunlop.markista.model.Text.SegmentKind\[] __values__</span>
 
 
 
@@ -93,34 +90,7 @@ public static io.github.sandydunlop.markista.model.Text.SegmentKind\[] values()
 
 ### valueOf
 
-public static [Text.SegmentKind](Text.SegmentKind.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
-
-
-
-
----
-
-### valueOf
-
-public static [Text.SegmentKind](Text.SegmentKind.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
-
-
-
-
----
-
-### valueOf
-
-public static [Text.SegmentKind](Text.SegmentKind.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
-
-
-
-
----
-
-### valueOf
-
-public static [Text.SegmentKind](Text.SegmentKind.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
+<span style="font-family: monospace; font-size: 80%;">public static [Text.SegmentKind](Text.SegmentKind.md) __valueOf__</span>
 
 
 

@@ -11,7 +11,7 @@ Enclosing Class:<br/>
 
 ----
 
-<span style="font-family: monospace;">public static final enum class __DirectiveNode.Kind__</span>
+<span style="font-family: monospace; font-size: 80%;">public static final enum class __DirectiveNode.Kind__</span>
 
 Enum representing the various kinds of directives possible in a module declaration.
 
@@ -39,15 +39,12 @@ Enum representing the various kinds of directives possible in a module declarati
 |--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|-------------|
 | public static io.github.sandydunlop.markista.model.DirectiveNode.Kind\[] | [values](#values)()                                                                                                    |             |
 | public static [DirectiveNode.Kind](DirectiveNode.Kind.md)                | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
-| public static [DirectiveNode.Kind](DirectiveNode.Kind.md)                | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
-| public static [DirectiveNode.Kind](DirectiveNode.Kind.md)                | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
-| public static [DirectiveNode.Kind](DirectiveNode.Kind.md)                | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
 
 ## Enum Constant Details
 
 ### NONE
 
-public static final NONE NONE
+public static final  NONE
 
 
 
@@ -56,7 +53,7 @@ public static final NONE NONE
 
 ### REQUIRES
 
-public static final REQUIRES REQUIRES
+public static final  REQUIRES
 
 
 
@@ -65,7 +62,7 @@ public static final REQUIRES REQUIRES
 
 ### EXPORTS
 
-public static final EXPORTS EXPORTS
+public static final  EXPORTS
 
 
 
@@ -74,7 +71,7 @@ public static final EXPORTS EXPORTS
 
 ### OPENS
 
-public static final OPENS OPENS
+public static final  OPENS
 
 
 
@@ -83,7 +80,7 @@ public static final OPENS OPENS
 
 ### USES
 
-public static final USES USES
+public static final  USES
 
 
 
@@ -92,7 +89,7 @@ public static final USES USES
 
 ### PROVIDES
 
-public static final PROVIDES PROVIDES
+public static final  PROVIDES
 
 
 
@@ -104,7 +101,7 @@ public static final PROVIDES PROVIDES
 
 ### values
 
-public static io.github.sandydunlop.markista.model.DirectiveNode.Kind\[] values()
+<span style="font-family: monospace; font-size: 80%;">public static io.github.sandydunlop.markista.model.DirectiveNode.Kind\[] __values__</span>
 
 
 
@@ -113,34 +110,7 @@ public static io.github.sandydunlop.markista.model.DirectiveNode.Kind\[] values(
 
 ### valueOf
 
-public static [DirectiveNode.Kind](DirectiveNode.Kind.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
-
-
-
-
----
-
-### valueOf
-
-public static [DirectiveNode.Kind](DirectiveNode.Kind.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
-
-
-
-
----
-
-### valueOf
-
-public static [DirectiveNode.Kind](DirectiveNode.Kind.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
-
-
-
-
----
-
-### valueOf
-
-public static [DirectiveNode.Kind](DirectiveNode.Kind.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
+<span style="font-family: monospace; font-size: 80%;">public static [DirectiveNode.Kind](DirectiveNode.Kind.md) __valueOf__</span>
 
 
 

@@ -8,7 +8,7 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 ----
 
-<span style="font-family: monospace;">public final enum class __Deprecation__</span>
+<span style="font-family: monospace; font-size: 80%;">public final enum class __Deprecation__</span>
 
 Enum representing the deprecation status of an element
 
@@ -33,14 +33,12 @@ Enum representing the deprecation status of an element
 |-------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|-------------|
 | public static io.github.sandydunlop.markista.model.Deprecation\[] | [values](#values)()                                                                                                    |             |
 | public static [Deprecation](Deprecation.md)                       | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
-| public static [Deprecation](Deprecation.md)                       | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
-| public static [Deprecation](Deprecation.md)                       | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
 
 ## Enum Constant Details
 
 ### NONE
 
-public static final NONE NONE
+public static final  NONE
 
 
 
@@ -49,7 +47,7 @@ public static final NONE NONE
 
 ### FOR_REMOVAL
 
-public static final FOR_REMOVAL FOR_REMOVAL
+public static final  FOR_REMOVAL
 
 
 
@@ -58,7 +56,7 @@ public static final FOR_REMOVAL FOR_REMOVAL
 
 ### DEPRECATED
 
-public static final DEPRECATED DEPRECATED
+public static final  DEPRECATED
 
 
 
@@ -70,7 +68,7 @@ public static final DEPRECATED DEPRECATED
 
 ### values
 
-public static io.github.sandydunlop.markista.model.Deprecation\[] values()
+<span style="font-family: monospace; font-size: 80%;">public static io.github.sandydunlop.markista.model.Deprecation\[] __values__</span>
 
 
 
@@ -79,25 +77,7 @@ public static io.github.sandydunlop.markista.model.Deprecation\[] values()
 
 ### valueOf
 
-public static [Deprecation](Deprecation.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
-
-
-
-
----
-
-### valueOf
-
-public static [Deprecation](Deprecation.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
-
-
-
-
----
-
-### valueOf
-
-public static [Deprecation](Deprecation.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
+<span style="font-family: monospace; font-size: 80%;">public static [Deprecation](Deprecation.md) __valueOf__</span>
 
 
 

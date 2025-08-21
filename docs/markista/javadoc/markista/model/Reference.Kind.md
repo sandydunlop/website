@@ -11,7 +11,7 @@ Enclosing Class:<br/>
 
 ----
 
-<span style="font-family: monospace;">public static final enum class __Reference.Kind__</span>
+<span style="font-family: monospace; font-size: 80%;">public static final enum class __Reference.Kind__</span>
 
 Enum representing different kinds/types of references.
 
@@ -43,15 +43,12 @@ Enum representing different kinds/types of references.
 |----------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|-------------|
 | public static io.github.sandydunlop.markista.model.Reference.Kind\[] | [values](#values)()                                                                                                    |             |
 | public static [Reference.Kind](Reference.Kind.md)                    | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
-| public static [Reference.Kind](Reference.Kind.md)                    | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
-| public static [Reference.Kind](Reference.Kind.md)                    | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
-| public static [Reference.Kind](Reference.Kind.md)                    | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
 
 ## Enum Constant Details
 
 ### UNKNOWN
 
-public static final UNKNOWN UNKNOWN
+public static final  UNKNOWN
 
 
 
@@ -60,7 +57,7 @@ public static final UNKNOWN UNKNOWN
 
 ### UNSUPPORTED
 
-public static final UNSUPPORTED UNSUPPORTED
+public static final  UNSUPPORTED
 
 
 
@@ -69,7 +66,7 @@ public static final UNSUPPORTED UNSUPPORTED
 
 ### URL
 
-public static final URL URL
+public static final  URL
 
 
 
@@ -78,7 +75,7 @@ public static final URL URL
 
 ### PAGE
 
-public static final PAGE PAGE
+public static final  PAGE
 
 
 
@@ -87,7 +84,7 @@ public static final PAGE PAGE
 
 ### MODULE
 
-public static final MODULE MODULE
+public static final  MODULE
 
 
 
@@ -96,7 +93,7 @@ public static final MODULE MODULE
 
 ### PACKAGE
 
-public static final PACKAGE PACKAGE
+public static final  PACKAGE
 
 
 
@@ -105,7 +102,7 @@ public static final PACKAGE PACKAGE
 
 ### TYPE
 
-public static final TYPE TYPE
+public static final  TYPE
 
 
 
@@ -114,7 +111,7 @@ public static final TYPE TYPE
 
 ### METHOD
 
-public static final METHOD METHOD
+public static final  METHOD
 
 
 
@@ -123,7 +120,7 @@ public static final METHOD METHOD
 
 ### PRIMITIVE
 
-public static final PRIMITIVE PRIMITIVE
+public static final  PRIMITIVE
 
 
 
@@ -132,7 +129,7 @@ public static final PRIMITIVE PRIMITIVE
 
 ### VOID
 
-public static final VOID VOID
+public static final  VOID
 
 
 
@@ -144,7 +141,7 @@ public static final VOID VOID
 
 ### values
 
-public static io.github.sandydunlop.markista.model.Reference.Kind\[] values()
+<span style="font-family: monospace; font-size: 80%;">public static io.github.sandydunlop.markista.model.Reference.Kind\[] __values__</span>
 
 
 
@@ -153,34 +150,7 @@ public static io.github.sandydunlop.markista.model.Reference.Kind\[] values()
 
 ### valueOf
 
-public static [Reference.Kind](Reference.Kind.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
-
-
-
-
----
-
-### valueOf
-
-public static [Reference.Kind](Reference.Kind.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
-
-
-
-
----
-
-### valueOf
-
-public static [Reference.Kind](Reference.Kind.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
-
-
-
-
----
-
-### valueOf
-
-public static [Reference.Kind](Reference.Kind.md) valueOf([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)
+<span style="font-family: monospace; font-size: 80%;">public static [Reference.Kind](Reference.Kind.md) __valueOf__</span>
 
 
 
