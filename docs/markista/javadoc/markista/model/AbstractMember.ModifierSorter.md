@@ -1,16 +1,16 @@
 Package [io.github.sandydunlop.markista.model](index.md)
 
-# Class AbstractPackageMember.ModifierSorter
+# Class AbstractMember.ModifierSorter
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
-        io.github.sandydunlop.markista.model.AbstractPackageMember.ModifierSorter<br/>
+        io.github.sandydunlop.markista.model.AbstractMember.ModifierSorter<br/>
 <br/>
 Enclosing Class:<br/>
-    [io.github.sandydunlop.markista.model.AbstractPackageMember](AbstractPackageMember.md)
+    [io.github.sandydunlop.markista.model.AbstractMember](AbstractMember.md)
 
 
 ----
 
-<span style="font-family: monospace; font-size: 80%;">public static class __AbstractPackageMember.ModifierSorter__</span>
+<span style="font-family: monospace; font-size: 80%;">public static class __AbstractMember.ModifierSorter__</span>
 
 Utility class to sort modifiers according to Java language conventions.
 
@@ -23,9 +23,9 @@ Utility class to sort modifiers according to Java language conventions.
 
 ## Constructor Summary
 
-| Constructor                            | Description                                   |
-|----------------------------------------|-----------------------------------------------|
-| AbstractPackageMember.ModifierSorter() | Private constructor to prevent instantiation. |
+| Constructor                     | Description                                   |
+|---------------------------------|-----------------------------------------------|
+| AbstractMember.ModifierSorter() | Private constructor to prevent instantiation. |
 
 ## Method Summary
 

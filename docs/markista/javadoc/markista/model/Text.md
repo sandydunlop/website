@@ -50,6 +50,8 @@ can be of kind text, markdown, link, or code for easy retrieval and manipulation
 | public [Text](Text.md)                                                                                                           | [append](#append)([Text.Segment](Text.Segment.md) segment)                                                           | Appends a single segment to this Text.                      |
 | public [Text](Text.md)                                                                                                           | [append](#append)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) text) | Appends a single text segment to this Text.                 |
 | public [Text](Text.md)                                                                                                           | [append](#append)([Text](Text.md) text)                                                                              | Appends all segments from another Text instance.            |
+| public [Text](Text.md)                                                                                                           | [subtext](#subtext)(int start)                                                                                       |                                                             |
+| public [Text](Text.md)                                                                                                           | [subtext](#subtext)(int start, int end)                                                                              |                                                             |
 
 ## Field Details
 
@@ -211,6 +213,24 @@ Appends all segments from another Text instance.
 **Returns:**
 
 This Text instance for chaining.
+
+
+---
+
+### subtext
+
+<span style="font-family: monospace; font-size: 80%;">public [Text](Text.md) __subtext__</span>
+
+
+
+
+---
+
+### subtext
+
+<span style="font-family: monospace; font-size: 80%;">public [Text](Text.md) __subtext__</span>
+
+
 
 
 ---

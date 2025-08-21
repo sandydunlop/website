@@ -1,13 +1,13 @@
 Package [io.github.sandydunlop.markista.util](index.md)
 
-# Class LinkFormatter
+# Class TextAssembler
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
-        io.github.sandydunlop.markista.util.LinkFormatter<br/>
+        io.github.sandydunlop.markista.util.TextAssembler<br/>
 <br/>
 
 ----
 
-<span style="font-family: monospace; font-size: 80%;">public class __LinkFormatter__</span>
+<span style="font-family: monospace; font-size: 80%;">public class __TextAssembler__</span>
 
 
 ## Field Summary
@@ -21,7 +21,7 @@ Package [io.github.sandydunlop.markista.util](index.md)
 
 | Constructor     | Description |
 |-----------------|-------------|
-| LinkFormatter() |             |
+| TextAssembler() |             |
 
 ## Method Summary
 
@@ -30,7 +30,7 @@ Package [io.github.sandydunlop.markista.util](index.md)
 | public static void                                                                                         | [generateLinkTexts](#generatelinktexts)([Api](../model/Api.md) a, [Context](../core/Context.md) context)                                                                                                                              | Generates [Text](../model/Text.md) objects for links to types and links in Javadoc text.                             |
 | static void                                                                                                | [processTypeNode](#processtypenode)([TypeNode](../model/TypeNode.md) typeNode)                                                                                                                                                        |                                                                                                                      |
 | static void                                                                                                | [processMethod](#processmethod)([MethodNode](../model/MethodNode.md) method)                                                                                                                                                          |                                                                                                                      |
-| static void                                                                                                | [processInheritDocTags](#processinheritdoctags)([Text](../model/Text.md) text)                                                                                                                                                        |                                                                                                                      |
+| static [Text](../model/Text.md)                                                                            | [processInheritDocTags](#processinheritdoctags)([Text](../model/Text.md) baseMethodText, [Text](../model/Text.md) text)                                                                                                               |                                                                                                                      |
 | static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)        | [baseTypeName](#basetypename)([MethodNode](../model/MethodNode.md) method)                                                                                                                                                            |                                                                                                                      |
 | static void                                                                                                | [processModules](#processmodules)([Api](../model/Api.md) api)                                                                                                                                                                         |                                                                                                                      |
 | static void                                                                                                | [processJavadocComments](#processjavadoccomments)([Api](../model/Api.md) api)                                                                                                                                                         |                                                                                                                      |
@@ -96,7 +96,7 @@ This is where we decide if the label for those links shows qualified names or si
 
 ### processInheritDocTags
 
-<span style="font-family: monospace; font-size: 80%;">static void __processInheritDocTags__</span>
+<span style="font-family: monospace; font-size: 80%;">static [Text](../model/Text.md) __processInheritDocTags__</span>
 
 
 

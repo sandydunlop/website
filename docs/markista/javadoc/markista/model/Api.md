@@ -3,9 +3,7 @@ Package [io.github.sandydunlop.markista.model](index.md)
 # Class Api
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
         [io.github.sandydunlop.markista.model.Node](Node.md)<br/>
-                [io.github.sandydunlop.markista.model.AbstractPackageMember](AbstractPackageMember.md)<br/>
-                        [io.github.sandydunlop.markista.model.PackageOrTypeNode](PackageOrTypeNode.md)<br/>
-                                io.github.sandydunlop.markista.model.Api<br/>
+                io.github.sandydunlop.markista.model.Api<br/>
 <br/>
 
 ----
@@ -20,9 +18,10 @@ Provides methods to add and retrieve modules, packages, and types, as well as so
 
 | Modifier and Type                                                                                                                                         | Field                                     | Description                               |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|-------------------------------------------|
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                       | [test](#test)                             |                                           |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                      | [name](#name)                             | The name of the API                       |
 | private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[ModuleNode](ModuleNode.md)>                       | [modules](#modules)                       | List of modules included in the API.      |
 | private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[PackageNode](PackageNode.md)>                     | [packages](#packages)                     | List of packages included in the API.     |
+| protected final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeView](TypeView.md)>                         | [types](#types)                           |                                           |
 | private final [ModuleNode](ModuleNode.md)                                                                                                                 | [unnamedModule](#unnamedmodule)           | Represents the unnamed module in the API. |
 | private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[AppliedAnnotationNode](AppliedAnnotationNode.md)> | [appliedAnnotations](#appliedannotations) | List of applied annotations.              |
 | private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Reference](Reference.md)>                         | [links](#links)                           | List of links.                            |
@@ -48,19 +47,21 @@ Provides methods to add and retrieve modules, packages, and types, as well as so
 | public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[AppliedAnnotationNode](AppliedAnnotationNode.md)> | [getAppliedAnnotations](#getappliedannotations)()                                                                                             | Returns the list of applied annotations                                                      |
 | public void                                                                                                                                        | [addLink](#addlink)([Reference](Reference.md) link)                                                                                           | Adds a link                                                                                  |
 | public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Reference](Reference.md)>                         | [getLinks](#getlinks)()                                                                                                                       | Returns the list of link.                                                                    |
+| public void                                                                                                                                        | [addType](#addtype)([TypeView](TypeView.md) typeNode)                                                                                         |                                                                                              |
+| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeView](TypeView.md)>                           | [getTypes](#gettypes)()                                                                                                                       | Gets the list of types *owned* by this instance.                                             |
 | public [PackageNode](PackageNode.md)                                                                                                               | [getPackageNode](#getpackagenode)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName) | Retrieves a package matching the specified qualified name.                                   |
+| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeView](TypeView.md)>                           | [getRecords](#getrecords)()                                                                                                                   | Gets the list of records *owned* by this instance.                                           |
 | public [TypeNode](TypeNode.md)                                                                                                                     | [getTypeNode](#gettypenode)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName)       | Retrieves a TypeNode based on its fully qualified name.                                      |
 | public void                                                                                                                                        | [sort](#sort)()                                                                                                                               | Sorts the types in descending order by qualified name and sorts all child types recursively. |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                | [commonBase](#commonbase)()                                                                                                                   | Computes the longest common base package prefix shared by all packages in this API.          |
 
 ## Field Details
 
-### test
+### name
 
-<span style="font-family: monospace; font-size: 80%;">@JsonElement<br/>
-public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __test__</span>
+<span style="font-family: monospace; font-size: 80%;">private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __name__</span>
 
-
+The name of the API
 
 
 ---
@@ -79,6 +80,15 @@ List of modules included in the API.
 <span style="font-family: monospace; font-size: 80%;">private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[PackageNode](PackageNode.md)> __packages__</span>
 
 List of packages included in the API.
+
+
+---
+
+### types
+
+<span style="font-family: monospace; font-size: 80%;">protected final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeView](TypeView.md)> __types__</span>
+
+
 
 
 ---
@@ -240,6 +250,24 @@ list of links
 
 ---
 
+### addType
+
+<span style="font-family: monospace; font-size: 80%;">public void __addType__</span>
+
+
+
+
+---
+
+### getTypes
+
+<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeView](TypeView.md)> __getTypes__</span>
+
+Gets the list of types *owned* by this instance.
+
+
+---
+
 ### getPackageNode
 
 <span style="font-family: monospace; font-size: 80%;">public [PackageNode](PackageNode.md) __getPackageNode__</span>
@@ -249,6 +277,15 @@ Retrieves a package matching the specified qualified name.
 **Returns:**
 
 the matching PackageNode if found, or null otherwise.
+
+
+---
+
+### getRecords
+
+<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeView](TypeView.md)> __getRecords__</span>
+
+Gets the list of records *owned* by this instance.
 
 
 ---
@@ -271,10 +308,6 @@ the matching TypeNode if found, or null otherwise.
 <span style="font-family: monospace; font-size: 80%;">public void __sort__</span>
 
 Sorts the types in descending order by qualified name and sorts all child types recursively.
-
-**Overrides:**
-
-[PackageOrTypeNode.sort](PackageOrTypeNode.md#sort)
 
 
 ---

@@ -18,12 +18,13 @@ Enum class that defines different kinds of segments for Text.
 
 ##Enum Constants
 
-| Enum Constant | Description |
-|---------------|-------------|
-| [NONE](#none) |             |
-| [TEXT](#text) |             |
-| [LINK](#link) |             |
-| [CODE](#code) |             |
+| Enum Constant       | Description |
+|---------------------|-------------|
+| [NONE](#none)       |             |
+| [TEXT](#text)       |             |
+| [LINK](#link)       |             |
+| [CODE](#code)       |             |
+| [INHERIT](#inherit) |             |
 
 ## Constructor Summary
 
@@ -70,6 +71,15 @@ public static final  LINK
 ### CODE
 
 public static final  CODE
+
+
+
+
+---
+
+### INHERIT
+
+public static final  INHERIT
 
 
 

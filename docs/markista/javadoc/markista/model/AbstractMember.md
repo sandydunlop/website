@@ -1,24 +1,21 @@
 Package [io.github.sandydunlop.markista.model](index.md)
 
-# Class AbstractPackageMember
+# Class AbstractMember
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
         [io.github.sandydunlop.markista.model.Node](Node.md)<br/>
-                io.github.sandydunlop.markista.model.AbstractPackageMember<br/>
+                io.github.sandydunlop.markista.model.AbstractMember<br/>
 <br/>
-All Implemented Interfaces:<br/>
-    [io.github.sandydunlop.markista.model.TypeMember](TypeMember.md)
-
 
 ----
 
-<span style="font-family: monospace; font-size: 80%;">public abstract class __AbstractPackageMember__</span>
+<span style="font-family: monospace; font-size: 80%;">public abstract class __AbstractMember__</span>
 
 
 ## Nested Class Summary
 
-| Modifier and Type | Class                                                                           | Description                                                             |
-|-------------------|---------------------------------------------------------------------------------|-------------------------------------------------------------------------|
-| public static     | [AbstractPackageMember.ModifierSorter](AbstractPackageMember.ModifierSorter.md) | Utility class to sort modifiers according to Java language conventions. |
+| Modifier and Type | Class                                                             | Description                                                             |
+|-------------------|-------------------------------------------------------------------|-------------------------------------------------------------------------|
+| public static     | [AbstractMember.ModifierSorter](AbstractMember.ModifierSorter.md) | Utility class to sort modifiers according to Java language conventions. |
 
 ## Field Summary
 
@@ -33,9 +30,9 @@ All Implemented Interfaces:<br/>
 
 ## Constructor Summary
 
-| Constructor             | Description |
-|-------------------------|-------------|
-| AbstractPackageMember() |             |
+| Constructor      | Description |
+|------------------|-------------|
+| AbstractMember() |             |
 
 ## Method Summary
 

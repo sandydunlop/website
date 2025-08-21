@@ -3,7 +3,7 @@ Package [io.github.sandydunlop.markista.model](index.md)
 # Class TypeNode
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
         [io.github.sandydunlop.markista.model.Node](Node.md)<br/>
-                [io.github.sandydunlop.markista.model.AbstractPackageMember](AbstractPackageMember.md)<br/>
+                [io.github.sandydunlop.markista.model.AbstractMember](AbstractMember.md)<br/>
                         [io.github.sandydunlop.markista.model.PackageOrTypeNode](PackageOrTypeNode.md)<br/>
                                 io.github.sandydunlop.markista.model.TypeNode<br/>
 <br/>
@@ -525,7 +525,7 @@ A string containing sorted modifiers separated by spaces.
 
 **Overrides:**
 
-[AbstractPackageMember.getModifiersString](AbstractPackageMember.md#getmodifiersstring)
+[AbstractMember.getModifiersString](AbstractMember.md#getmodifiersstring)
 
 
 ---
