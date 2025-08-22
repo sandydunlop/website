@@ -41,15 +41,30 @@ maintain and extend the documentation processing capabilities of Markista.
 
 | Modifier and Type       | Method                                                                         | Description                                                      |
 |-------------------------|--------------------------------------------------------------------------------|------------------------------------------------------------------|
+| public abstract boolean | [finish](#finish)()                                                            | Runs after the main Markdown DocService.                         |
 | public abstract boolean | [replacesDefault](#replacesdefault)()                                          | Returns true if this Docservice replaces the default DocService. |
 | public abstract boolean | [start](#start)([Api](../model/Api.md) api, [Context](../core/Context.md) ctx) | Runs before the main Markdown DocService.                        |
-| public abstract boolean | [finish](#finish)()                                                            | Runs after the main Markdown DocService.                         |
+
+
 
 ## Method Details
 
+### finish
+
+<span style="font-family: monospace; font-size: 80%;">public abstract boolean __finish__()</span>
+
+Runs after the main Markdown DocService.
+
+**Returns:**
+
+true on success, otheriwse false
+
+
+---
+
 ### replacesDefault
 
-<span style="font-family: monospace; font-size: 80%;">public abstract boolean __replacesDefault__</span>
+<span style="font-family: monospace; font-size: 80%;">public abstract boolean __replacesDefault__()</span>
 
 Returns true if this Docservice replaces the default DocService.
 
@@ -62,23 +77,10 @@ true if this DocService replaces the default Markdown one, false otherwise.
 
 ### start
 
-<span style="font-family: monospace; font-size: 80%;">public abstract boolean __start__</span>
+<span style="font-family: monospace; font-size: 80%;">public abstract boolean __start__([Api](../model/Api.md) api, [Context](../core/Context.md) ctx)</span>
 
 Runs before the main Markdown DocService.
 Initializes a DocService with the API model and a Context for file creation and reporting.
-
-**Returns:**
-
-true on success, otheriwse false
-
-
----
-
-### finish
-
-<span style="font-family: monospace; font-size: 80%;">public abstract boolean __finish__</span>
-
-Runs after the main Markdown DocService.
 
 **Returns:**
 

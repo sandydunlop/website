@@ -12,6 +12,11 @@
 | private static final  long                                                                                                   | serialVersionUID            | 1                                                   |
 | private static final  long                                                                                                   | serialVersionUID            | 1                                                   |
 | private static final  long                                                                                                   | serialVersionUID            | 1                                                   |
+| private static final  long                                                                                                   | serialVersionUID            | 1                                                   |
+| private static final  [java.lang.String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | DOT_CLASS                   | .class                                              |
+| private static final  [java.lang.String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | DOT_HTML                    | .html                                               |
+| private static final  [java.lang.String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | JAVA_24_URL                 | https://docs.oracle.com/en/java/javase/24/docs/api/ |
+| private static final  [java.lang.String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | FORMAT_SIMPLE_LINK          | \[%s](%s)                                           |
 | private static final  [java.lang.String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | TEXT_CLASS                  | Class                                               |
 | private static final  [java.lang.String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | TEXT_DESCRIPTION            | Description                                         |
 | private static final  [java.lang.String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | TEXT_MODIFIER_AND_TYPE      | Modifier and Type                                   |
@@ -33,7 +38,5 @@
 | private static final  [java.lang.String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | TITLE_REQUIRES              | Requires                                            |
 | private static final  [java.lang.String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | TITLE_USES                  | Uses                                                |
 | private static final  [java.lang.String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | TITLE_VALUE                 | Value                                               |
-| private static final  [java.lang.String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | FORMAT_SIMPLE_LINK          | \[%s](%s)                                           |
-| private static final  [java.lang.String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | DOT_CLASS                   | .class                                              |
-| private static final  [java.lang.String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | DOT_HTML                    | .html                                               |
-| private static final  [java.lang.String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | JAVA_24_URL                 | https://docs.oracle.com/en/java/javase/24/docs/api/ |
+
+

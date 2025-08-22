@@ -11,7 +11,8 @@ Enclosing Class:<br/>
 
 ----
 
-<span style="font-family: monospace; font-size: 80%;">public static final enum class __Text.SegmentKind__</span>
+<span style="font-family: monospace; font-size: 80%;">public static final enum class __Text.SegmentKind__<br/>extends [Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)<[Text.SegmentKind](Text.SegmentKind.md)>
+</span>
 
 Enum class that defines different kinds of segments for Text.
 
@@ -26,18 +27,24 @@ Enum class that defines different kinds of segments for Text.
 | [CODE](#code)       |             |
 | [INHERIT](#inherit) |             |
 
+
+
 ## Constructor Summary
 
 | Constructor        | Description |
 |--------------------|-------------|
 | Text.SegmentKind() |             |
 
+
+
 ## Method Summary
 
-| Modifier and Type                                                      | Method                                                                                                                 | Description |
-|------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|-------------|
-| public static io.github.sandydunlop.markista.model.Text.SegmentKind\[] | [values](#values)()                                                                                                    |             |
-| public static [Text.SegmentKind](Text.SegmentKind.md)                  | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
+| Modifier and Type                                     | Method                                                                                                                 | Description |
+|-------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|-------------|
+| public static [Text.SegmentKind](Text.SegmentKind.md) | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
+| public static Text.SegmentKind\[]                     | [values](#values)()                                                                                                    |             |
+
+
 
 ## Enum Constant Details
 
@@ -89,18 +96,18 @@ public static final  INHERIT
 
 ## Method Details
 
-### values
+### valueOf
 
-<span style="font-family: monospace; font-size: 80%;">public static io.github.sandydunlop.markista.model.Text.SegmentKind\[] __values__</span>
+<span style="font-family: monospace; font-size: 80%;">public static [Text.SegmentKind](Text.SegmentKind.md) __valueOf__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)</span>
 
 
 
 
 ---
 
-### valueOf
+### values
 
-<span style="font-family: monospace; font-size: 80%;">public static [Text.SegmentKind](Text.SegmentKind.md) __valueOf__</span>
+<span style="font-family: monospace; font-size: 80%;">public static Text.SegmentKind\[] __values__()</span>
 
 
 

@@ -17,41 +17,25 @@ Does not reference TypeNode to avoid cycles.
 
 | Modifier and Type                                                                                            | Method                                      | Description |
 |--------------------------------------------------------------------------------------------------------------|---------------------------------------------|-------------|
+| public abstract [Text](Text.md)                                                                              | [getFirstSentence](#getfirstsentence)()     |             |
+| public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getKindName](#getkindname)()               |             |
+| public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getModifiersString](#getmodifiersstring)() |             |
 | public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getQualifiedName](#getqualifiedname)()     |             |
 | public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getSimpleName](#getsimplename)()           |             |
-| public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getModifiersString](#getmodifiersstring)() |             |
-| public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getKindName](#getkindname)()               |             |
-| public abstract [Text](Text.md)                                                                              | [getFirstSentence](#getfirstsentence)()     |             |
-| public abstract void                                                                                         | [sort](#sort)()                             |             |
-| public abstract boolean                                                                                      | [isClass](#isclass)()                       |             |
-| public abstract boolean                                                                                      | [isInterface](#isinterface)()               |             |
-| public abstract boolean                                                                                      | [isEnum](#isenum)()                         |             |
-| public abstract boolean                                                                                      | [isRecord](#isrecord)()                     |             |
 | public abstract boolean                                                                                      | [isAnnotation](#isannotation)()             |             |
+| public abstract boolean                                                                                      | [isClass](#isclass)()                       |             |
+| public abstract boolean                                                                                      | [isEnum](#isenum)()                         |             |
+| public abstract boolean                                                                                      | [isInterface](#isinterface)()               |             |
+| public abstract boolean                                                                                      | [isRecord](#isrecord)()                     |             |
+| public abstract void                                                                                         | [sort](#sort)()                             |             |
+
+
 
 ## Method Details
 
-### getQualifiedName
+### getFirstSentence
 
-<span style="font-family: monospace; font-size: 80%;">public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getQualifiedName__</span>
-
-
-
-
----
-
-### getSimpleName
-
-<span style="font-family: monospace; font-size: 80%;">public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getSimpleName__</span>
-
-
-
-
----
-
-### getModifiersString
-
-<span style="font-family: monospace; font-size: 80%;">public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getModifiersString__</span>
+<span style="font-family: monospace; font-size: 80%;">public abstract [Text](Text.md) __getFirstSentence__()</span>
 
 
 
@@ -60,61 +44,34 @@ Does not reference TypeNode to avoid cycles.
 
 ### getKindName
 
-<span style="font-family: monospace; font-size: 80%;">public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getKindName__</span>
+<span style="font-family: monospace; font-size: 80%;">public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getKindName__()</span>
 
 
 
 
 ---
 
-### getFirstSentence
+### getModifiersString
 
-<span style="font-family: monospace; font-size: 80%;">public abstract [Text](Text.md) __getFirstSentence__</span>
-
-
-
-
----
-
-### sort
-
-<span style="font-family: monospace; font-size: 80%;">public abstract void __sort__</span>
+<span style="font-family: monospace; font-size: 80%;">public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getModifiersString__()</span>
 
 
 
 
 ---
 
-### isClass
+### getQualifiedName
 
-<span style="font-family: monospace; font-size: 80%;">public abstract boolean __isClass__</span>
-
-
-
-
----
-
-### isInterface
-
-<span style="font-family: monospace; font-size: 80%;">public abstract boolean __isInterface__</span>
+<span style="font-family: monospace; font-size: 80%;">public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getQualifiedName__()</span>
 
 
 
 
 ---
 
-### isEnum
+### getSimpleName
 
-<span style="font-family: monospace; font-size: 80%;">public abstract boolean __isEnum__</span>
-
-
-
-
----
-
-### isRecord
-
-<span style="font-family: monospace; font-size: 80%;">public abstract boolean __isRecord__</span>
+<span style="font-family: monospace; font-size: 80%;">public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getSimpleName__()</span>
 
 
 
@@ -123,7 +80,52 @@ Does not reference TypeNode to avoid cycles.
 
 ### isAnnotation
 
-<span style="font-family: monospace; font-size: 80%;">public abstract boolean __isAnnotation__</span>
+<span style="font-family: monospace; font-size: 80%;">public abstract boolean __isAnnotation__()</span>
+
+
+
+
+---
+
+### isClass
+
+<span style="font-family: monospace; font-size: 80%;">public abstract boolean __isClass__()</span>
+
+
+
+
+---
+
+### isEnum
+
+<span style="font-family: monospace; font-size: 80%;">public abstract boolean __isEnum__()</span>
+
+
+
+
+---
+
+### isInterface
+
+<span style="font-family: monospace; font-size: 80%;">public abstract boolean __isInterface__()</span>
+
+
+
+
+---
+
+### isRecord
+
+<span style="font-family: monospace; font-size: 80%;">public abstract boolean __isRecord__()</span>
+
+
+
+
+---
+
+### sort
+
+<span style="font-family: monospace; font-size: 80%;">public abstract void __sort__()</span>
 
 
 

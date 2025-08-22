@@ -5,7 +5,7 @@ Package [io.github.sandydunlop.markista.model](index.md)
         io.github.sandydunlop.markista.model.Pair<br/>
 <br/>
 All Implemented Interfaces:<br/>
-    [java.io.Serializable](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Serializable.html)
+    [Serializable](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Serializable.html)
 
 
 ----
@@ -17,9 +17,11 @@ All Implemented Interfaces:<br/>
 
 | Modifier and Type         | Field                                 | Description |
 |---------------------------|---------------------------------------|-------------|
-| private static final long | [serialVersionUID](#serialversionuid) |             |
 | private L                 | [l](#l)                               |             |
 | private R                 | [r](#r)                               |             |
+| private static final long | [serialVersionUID](#serialversionuid) |             |
+
+
 
 ## Constructor Summary
 
@@ -27,35 +29,24 @@ All Implemented Interfaces:<br/>
 |----------------|-------------|
 | Pair(L l, R r) |             |
 
+
+
 ## Method Summary
 
 | Modifier and Type                                                                                   | Method                                                                                                                | Description |
 |-----------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|-------------|
+| public boolean                                                                                      | [equals](#equals)([Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html) other) |             |
 | public L                                                                                            | [getL](#getl)()                                                                                                       |             |
 | public R                                                                                            | [getR](#getr)()                                                                                                       |             |
+| public int                                                                                          | [hashCode](#hashcode)()                                                                                               |             |
+| public static [Pair](Pair.md)<A, B>                                                                 | [of](#of)(A a, B b)                                                                                                   |             |
 | public void                                                                                         | [setL](#setl)(L l)                                                                                                    |             |
 | public void                                                                                         | [setR](#setr)(R r)                                                                                                    |             |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [toString](#tostring)()                                                                                               |             |
-| public boolean                                                                                      | [equals](#equals)([Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html) other) |             |
-| public int                                                                                          | [hashCode](#hashcode)()                                                                                               |             |
-| public static [Pair](Pair.md)<A, B>                                                                 | [of](#of)(A a, B b)                                                                                                   |             |
+
+
 
 ## Field Details
-
-### serialVersionUID
-
-<span style="font-family: monospace; font-size: 80%;">private static final long __serialVersionUID__</span>
-
-
-
-**See Also:**
-
-
-[Constant Field Values](../constant-values.md)
-
-
-
----
 
 ### l
 
@@ -75,12 +66,36 @@ All Implemented Interfaces:<br/>
 
 ---
 
+### serialVersionUID
+
+<span style="font-family: monospace; font-size: 80%;">private static final long __serialVersionUID__</span>
+
+
+
+**See Also:**
+
+
+[Constant Field Values](../constant-values.md)
+
+
+
+---
+
 
 ## Method Details
 
+### equals
+
+<span style="font-family: monospace; font-size: 80%;">public boolean __equals__([Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html) other)</span>
+
+
+
+
+---
+
 ### getL
 
-<span style="font-family: monospace; font-size: 80%;">public L __getL__</span>
+<span style="font-family: monospace; font-size: 80%;">public L __getL__()</span>
 
 
 
@@ -89,43 +104,7 @@ All Implemented Interfaces:<br/>
 
 ### getR
 
-<span style="font-family: monospace; font-size: 80%;">public R __getR__</span>
-
-
-
-
----
-
-### setL
-
-<span style="font-family: monospace; font-size: 80%;">public void __setL__</span>
-
-
-
-
----
-
-### setR
-
-<span style="font-family: monospace; font-size: 80%;">public void __setR__</span>
-
-
-
-
----
-
-### toString
-
-<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __toString__</span>
-
-
-
-
----
-
-### equals
-
-<span style="font-family: monospace; font-size: 80%;">public boolean __equals__</span>
+<span style="font-family: monospace; font-size: 80%;">public R __getR__()</span>
 
 
 
@@ -134,7 +113,7 @@ All Implemented Interfaces:<br/>
 
 ### hashCode
 
-<span style="font-family: monospace; font-size: 80%;">public int __hashCode__</span>
+<span style="font-family: monospace; font-size: 80%;">public int __hashCode__()</span>
 
 
 
@@ -143,7 +122,34 @@ All Implemented Interfaces:<br/>
 
 ### of
 
-<span style="font-family: monospace; font-size: 80%;">public static [Pair](Pair.md)<A, B> __of__</span>
+<span style="font-family: monospace; font-size: 80%;">public static [Pair](Pair.md)<A, B> __of__(A a, B b)</span>
+
+
+
+
+---
+
+### setL
+
+<span style="font-family: monospace; font-size: 80%;">public void __setL__(L l)</span>
+
+
+
+
+---
+
+### setR
+
+<span style="font-family: monospace; font-size: 80%;">public void __setR__(R r)</span>
+
+
+
+
+---
+
+### toString
+
+<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __toString__()</span>
 
 
 

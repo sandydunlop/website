@@ -27,21 +27,26 @@ This class is not thread-safe.
 |-------------------|-----------------------------------------------------|-------------|
 | public            | [Context.NameSimplifier](Context.NameSimplifier.md) |             |
 
+
+
 ## Field Summary
 
 | Modifier and Type                                                                                                   | Field                                                 | Description                                                                                                                                                |
 |---------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | private static final [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)   | [DEFAULT_OUTPUT_DIRECTORY](#default_output_directory) | The default output directory                                                                                                                               |
-| private static [Context](Context.md)                                                                                | [instance](#instance)                                 | The instance of this class that is returned to callers of getInstance()                                                                                    |
-| private [Reporter](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Reporter.html) | [reporter](#reporter)                                 | The Reporter used for logging messages                                                                                                                     |
 | private [Api](../model/Api.md)                                                                                      | [api](#api)                                           | The Api model representing the entire documented API structure, including modules, packages, types, and members used for cross-referencing and navigation. |
-| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [outputDirectory](#outputdirectory)                   | The directory the documentation is being generated in                                                                                                      |
-| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [flattenedDirectories](#flatteneddirectories)         | The base section of the directory structure that contains no  documentation and can be skipped when creating directories.                                  |
-| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [moduleName](#modulename)                             | The name of the module currently being documented                                                                                                          |
-| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [packageName](#packagename)                           | The name of the package currently being documented                                                                                                         |
-| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [typeName](#typename)                                 | The name of the type currently being documented                                                                                                            |
-| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [methodName](#methodname)                             | The name of the method currently being documented                                                                                                          |
 | private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [fieldName](#fieldname)                               | The name of the field currently being documented                                                                                                           |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [flattenedDirectories](#flatteneddirectories)         | The base section of the directory structure that contains no  documentation and can be skipped when creating directories.                                  |
+| private static [Context](Context.md)                                                                                | [instance](#instance)                                 | The instance of this class that is returned to callers of getInstance()                                                                                    |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [methodName](#methodname)                             | The name of the method currently being documented                                                                                                          |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [moduleName](#modulename)                             | The name of the module currently being documented                                                                                                          |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [outputDirectory](#outputdirectory)                   | The directory the documentation is being generated in                                                                                                      |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [packageName](#packagename)                           | The name of the package currently being documented                                                                                                         |
+| private [Reporter](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Reporter.html) | [reporter](#reporter)                                 | The  used for logging messages                                                                                                                             |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [typeName](#typename)                                 | The name of the type currently being documented                                                                                                            |
+| private [Context.WriterFactory](Context.WriterFactory.md)                                                           | [writerFactory](#writerfactory)                       |                                                                                                                                                            |
+
+
 
 ## Constructor Summary
 
@@ -49,38 +54,44 @@ This class is not thread-safe.
 |-------------|-------------------------|
 | Context()   | The default constructor |
 
+
+
 ## Method Summary
 
 | Modifier and Type                                                                                                  | Method                                                                                                                                                  | Description                                                                                                                                       |
 |--------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| public [Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html)                  | [createFileInModule](#createfileinmodule)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) fileName)        | Creates a Writer for writing a module-level file inside the module's directory.                                                                   |
+| public [Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html)                  | [createFileInPackage](#createfileinpackage)()                                                                                                           | Creates a Writer for writing a file corresponding to the current context (type name, package, module).                                            |
+| private [Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html)                 | [createFileInternal](#createfileinternal)([File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html) file)                  | Helper method that creates a Writer for a file inside the specified directory.                                                                    |
+| [File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html)                             | [createModuleFilePath](#createmodulefilepath)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) fileName)    |                                                                                                                                                   |
+| [File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html)                             | [createPackageFilePath](#createpackagefilepath)()                                                                                                       |                                                                                                                                                   |
+| public [Api](../model/Api.md)                                                                                      | [getApi](#getapi)()                                                                                                                                     | Returns the Api model associated with this context.                                                                                               |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [getFieldName](#getfieldname)()                                                                                                                         | Returns the current field name.                                                                                                                   |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [getFlattenedDirectories](#getflatteneddirectories)()                                                                                                   |                                                                                                                                                   |
 | public static [Context](Context.md)                                                                                | [getInstance](#getinstance)()                                                                                                                           | Returns the singleton instance of this Context.                                                                                                   |
-| public void                                                                                                        | [setApi](#setapi)([Api](../model/Api.md) api)                                                                                                           | Sets the Api model associated with this context, also initializing the flattened directories string.                                              |
-| public [Api](../model/Api.md)                                                                                      | [getApi](#getapi)()                                                                                                                                     | Returns the Api model associated with this context.                                                                                               |
-| public void                                                                                                        | [setOutputDirectory](#setoutputdirectory)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) outputDirectory) | Sets the output directory path where documentation files will be written.                                                                         |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [getOutputDirectory](#getoutputdirectory)()                                                                                                             |                                                                                                                                                   |
-| public void                                                                                                        | [setReporter](#setreporter)([Reporter](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Reporter.html) reporter)       | Sets the reporter used for reporting messages and diagnostics during doc generation.                                                              |
-| public [Reporter](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Reporter.html) | [getReporter](#getreporter)()                                                                                                                           | Returns the currently set reporter instance.                                                                                                      |
-| public void                                                                                                        | [setModuleName](#setmodulename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)                      | Sets the current module name and resets the package name.                                                                                         |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [getModuleName](#getmodulename)()                                                                                                                       | Returns the current module name.                                                                                                                  |
-| public void                                                                                                        | [setPackageName](#setpackagename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)                    | Sets the current package name and resets the type name.                                                                                           |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [getPackageName](#getpackagename)()                                                                                                                     | Returns the current package name.                                                                                                                 |
-| public void                                                                                                        | [setTypeName](#settypename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)                          | Sets the current type name.                                                                                                                       |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [getTypeName](#gettypename)()                                                                                                                           | Returns the current type name.                                                                                                                    |
-| public void                                                                                                        | [setMethodName](#setmethodname)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)                      | Sets the current method name.                                                                                                                     |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [getMethodName](#getmethodname)()                                                                                                                       | Returns the current method name.                                                                                                                  |
-| public void                                                                                                        | [setFieldName](#setfieldname)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)                        | Sets the current field name.                                                                                                                      |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [getFieldName](#getfieldname)()                                                                                                                         | Returns the current field name.                                                                                                                   |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [getModuleName](#getmodulename)()                                                                                                                       | Returns the current module name.                                                                                                                  |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [getOutputDirectory](#getoutputdirectory)()                                                                                                             |                                                                                                                                                   |
+| public [File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html)                      | [getPackageDirectory](#getpackagedirectory)()                                                                                                           | Constructs a File object representing the directory path corresponding to the current output directory, module, and fully qualified package name. |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [getPackageName](#getpackagename)()                                                                                                                     | Returns the current package name.                                                                                                                 |
+| public [Reporter](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Reporter.html) | [getReporter](#getreporter)()                                                                                                                           | Returns the currently set reporter instance.                                                                                                      |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [getTypeName](#gettypename)()                                                                                                                           | Returns the current type name.                                                                                                                    |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)               | [location](#location)()                                                                                                                                 | Returns a string describing the current location context in module, package, type, method, and field.                                             |
+| public void                                                                                                        | [reportError](#reporterror)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) message)                       | Reports an error message including location information.                                                                                          |
 | public void                                                                                                        | [reportInfo](#reportinfo)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) message)                         | Reports an informational message through the reporter.                                                                                            |
 | public void                                                                                                        | [reportWarning](#reportwarning)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) message)                   | Reports a warning message including location information.                                                                                         |
-| public void                                                                                                        | [reportError](#reporterror)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) message)                       | Reports an error message including location information.                                                                                          |
-| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)               | [location](#location)()                                                                                                                                 | Returns a string describing the current location context in module, package, type, method, and field.                                             |
-| public [File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html)                      | [getPackageDirectory](#getpackagedirectory)()                                                                                                           | Constructs a File object representing the directory path corresponding to the current output directory, module, and fully qualified package name. |
-| public [Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html)                  | [createFileInPackage](#createfileinpackage)()                                                                                                           | Creates a Writer for writing a file corresponding to the current context (type name, package, module).                                            |
-| [File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html)                             | [createPackageFilePath](#createpackagefilepath)()                                                                                                       |                                                                                                                                                   |
-| public [Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html)                  | [createFileInModule](#createfileinmodule)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) fileName)        | Creates a Writer for writing a module-level file inside the module's directory.                                                                   |
-| [File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html)                             | [createModuleFilePath](#createmodulefilepath)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) fileName)    |                                                                                                                                                   |
-| private [Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html)                 | [createFileInternal](#createfileinternal)([File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html) file)                  | Helper method that creates a Writer for a file inside the specified directory.                                                                    |
+| public static void                                                                                                 | [reset](#reset)()                                                                                                                                       |                                                                                                                                                   |
+| public void                                                                                                        | [setApi](#setapi)([Api](../model/Api.md) api)                                                                                                           | Sets the Api model associated with this context, also initializing the flattened directories string.                                              |
+| public void                                                                                                        | [setFieldName](#setfieldname)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)                        | Sets the current field name.                                                                                                                      |
+| public void                                                                                                        | [setMethodName](#setmethodname)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)                      | Sets the current method name.                                                                                                                     |
+| public void                                                                                                        | [setModuleName](#setmodulename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)                      | Sets the current module name and resets the package name.                                                                                         |
+| public void                                                                                                        | [setOutputDirectory](#setoutputdirectory)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) outputDirectory) | Sets the output directory path where documentation files will be written.                                                                         |
+| public void                                                                                                        | [setPackageName](#setpackagename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)                    | Sets the current package name and resets the type name.                                                                                           |
+| public void                                                                                                        | [setReporter](#setreporter)([Reporter](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Reporter.html) reporter)       | Sets the reporter used for reporting messages and diagnostics during doc generation.                                                              |
+| public void                                                                                                        | [setTypeName](#settypename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)                          | Sets the current type name.                                                                                                                       |
+| public void                                                                                                        | [setWriterFactory](#setwriterfactory)([Context.WriterFactory](Context.WriterFactory.md) wf)                                                             |                                                                                                                                                   |
+
+
 
 ## Field Details
 
@@ -99,24 +110,6 @@ The default output directory
 
 ---
 
-### instance
-
-<span style="font-family: monospace; font-size: 80%;">private static [Context](Context.md) __instance__</span>
-
-The instance of this class that is returned to callers of getInstance()
-
-
----
-
-### reporter
-
-<span style="font-family: monospace; font-size: 80%;">private [Reporter](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Reporter.html) __reporter__</span>
-
-The Reporter used for logging messages
-
-
----
-
 ### api
 
 <span style="font-family: monospace; font-size: 80%;">private [Api](../model/Api.md) __api__</span>
@@ -127,11 +120,11 @@ including modules, packages, types, and members used for cross-referencing and n
 
 ---
 
-### outputDirectory
+### fieldName
 
-<span style="font-family: monospace; font-size: 80%;">private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __outputDirectory__</span>
+<span style="font-family: monospace; font-size: 80%;">private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __fieldName__</span>
 
-The directory the documentation is being generated in
+The name of the field currently being documented
 
 
 ---
@@ -146,29 +139,11 @@ documentation and can be skipped when creating directories.
 
 ---
 
-### moduleName
+### instance
 
-<span style="font-family: monospace; font-size: 80%;">private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __moduleName__</span>
+<span style="font-family: monospace; font-size: 80%;">private static [Context](Context.md) __instance__</span>
 
-The name of the module currently being documented
-
-
----
-
-### packageName
-
-<span style="font-family: monospace; font-size: 80%;">private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __packageName__</span>
-
-The name of the package currently being documented
-
-
----
-
-### typeName
-
-<span style="font-family: monospace; font-size: 80%;">private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __typeName__</span>
-
-The name of the type currently being documented
+The instance of this class that is returned to callers of getInstance()
 
 
 ---
@@ -182,11 +157,56 @@ The name of the method currently being documented
 
 ---
 
-### fieldName
+### moduleName
 
-<span style="font-family: monospace; font-size: 80%;">private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __fieldName__</span>
+<span style="font-family: monospace; font-size: 80%;">private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __moduleName__</span>
 
-The name of the field currently being documented
+The name of the module currently being documented
+
+
+---
+
+### outputDirectory
+
+<span style="font-family: monospace; font-size: 80%;">private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __outputDirectory__</span>
+
+The directory the documentation is being generated in
+
+
+---
+
+### packageName
+
+<span style="font-family: monospace; font-size: 80%;">private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __packageName__</span>
+
+The name of the package currently being documented
+
+
+---
+
+### reporter
+
+<span style="font-family: monospace; font-size: 80%;">private [Reporter](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Reporter.html) __reporter__</span>
+
+The  used for logging messages
+
+
+---
+
+### typeName
+
+<span style="font-family: monospace; font-size: 80%;">private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __typeName__</span>
+
+The name of the type currently being documented
+
+
+---
+
+### writerFactory
+
+<span style="font-family: monospace; font-size: 80%;">private [Context.WriterFactory](Context.WriterFactory.md) __writerFactory__</span>
+
+
 
 
 ---
@@ -194,40 +214,85 @@ The name of the field currently being documented
 
 ## Method Details
 
-### getFlattenedDirectories
+### createFileInModule
 
-<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getFlattenedDirectories__</span>
+<span style="font-family: monospace; font-size: 80%;">public [Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) __createFileInModule__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) fileName)</span>
 
-
-
-
----
-
-### getInstance
-
-<span style="font-family: monospace; font-size: 80%;">public static [Context](Context.md) __getInstance__</span>
-
-Returns the singleton instance of this Context.
+Creates a Writer for writing a module-level file inside the module's directory.
+Creates directories as necessary. Defaults of output directory are applied if not set.
 
 **Returns:**
 
-The Context singleton instance.
+A Writer object for writing the file.
+
+**Throws:**
+
+[InvalidPathException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/InvalidPathException.html)
+, [IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
 
 
 ---
 
-### setApi
+### createFileInPackage
 
-<span style="font-family: monospace; font-size: 80%;">public void __setApi__</span>
+<span style="font-family: monospace; font-size: 80%;">public [Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) __createFileInPackage__()</span>
 
-Sets the Api model associated with this context, also initializing the flattened directories string.
+Creates a Writer for writing a file corresponding to the current context (type name, package, module).
+Creates directories as necessary. Defaults of output directory are applied if not set.
+
+**Returns:**
+
+A Writer object for writing the file.
+
+**Throws:**
+
+[IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
+
+
+---
+
+### createFileInternal
+
+<span style="font-family: monospace; font-size: 80%;">private [Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) __createFileInternal__([File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html) file)</span>
+
+Helper method that creates a Writer for a file inside the specified directory.
+
+**Returns:**
+
+A Writer for the file.
+
+**Throws:**
+
+[IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
+
+
+---
+
+### createModuleFilePath
+
+<span style="font-family: monospace; font-size: 80%;">[File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html) __createModuleFilePath__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) fileName)</span>
+
+
+
+**Throws:**
+
+[InvalidPathException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/InvalidPathException.html)
+
+
+---
+
+### createPackageFilePath
+
+<span style="font-family: monospace; font-size: 80%;">[File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html) __createPackageFilePath__()</span>
+
+
 
 
 ---
 
 ### getApi
 
-<span style="font-family: monospace; font-size: 80%;">public [Api](../model/Api.md) __getApi__</span>
+<span style="font-family: monospace; font-size: 80%;">public [Api](../model/Api.md) __getApi__()</span>
 
 Returns the Api model associated with this context.
 
@@ -238,146 +303,9 @@ The current Api model.
 
 ---
 
-### setOutputDirectory
-
-<span style="font-family: monospace; font-size: 80%;">public void __setOutputDirectory__</span>
-
-Sets the output directory path where documentation files will be written.
-
-
----
-
-### getOutputDirectory
-
-<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getOutputDirectory__</span>
-
-
-
-
----
-
-### setReporter
-
-<span style="font-family: monospace; font-size: 80%;">public void __setReporter__</span>
-
-Sets the reporter used for reporting messages and diagnostics during doc generation.
-
-
----
-
-### getReporter
-
-<span style="font-family: monospace; font-size: 80%;">public [Reporter](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Reporter.html) __getReporter__</span>
-
-Returns the currently set reporter instance.
-
-**Returns:**
-
-The Reporter.
-
-
----
-
-### setModuleName
-
-<span style="font-family: monospace; font-size: 80%;">public void __setModuleName__</span>
-
-Sets the current module name and resets the package name.
-
-
----
-
-### getModuleName
-
-<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getModuleName__</span>
-
-Returns the current module name.
-
-**Returns:**
-
-The module name.
-
-
----
-
-### setPackageName
-
-<span style="font-family: monospace; font-size: 80%;">public void __setPackageName__</span>
-
-Sets the current package name and resets the type name.
-
-
----
-
-### getPackageName
-
-<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getPackageName__</span>
-
-Returns the current package name.
-
-**Returns:**
-
-The package name.
-
-
----
-
-### setTypeName
-
-<span style="font-family: monospace; font-size: 80%;">public void __setTypeName__</span>
-
-Sets the current type name.
-
-
----
-
-### getTypeName
-
-<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getTypeName__</span>
-
-Returns the current type name.
-
-**Returns:**
-
-The type name.
-
-
----
-
-### setMethodName
-
-<span style="font-family: monospace; font-size: 80%;">public void __setMethodName__</span>
-
-Sets the current method name.
-
-
----
-
-### getMethodName
-
-<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getMethodName__</span>
-
-Returns the current method name.
-
-**Returns:**
-
-The method name.
-
-
----
-
-### setFieldName
-
-<span style="font-family: monospace; font-size: 80%;">public void __setFieldName__</span>
-
-Sets the current field name.
-
-
----
-
 ### getFieldName
 
-<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getFieldName__</span>
+<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getFieldName__()</span>
 
 Returns the current field name.
 
@@ -388,50 +316,66 @@ The field name.
 
 ---
 
-### reportInfo
+### getFlattenedDirectories
 
-<span style="font-family: monospace; font-size: 80%;">public void __reportInfo__</span>
-
-Reports an informational message through the reporter.
+<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getFlattenedDirectories__()</span>
 
 
----
-
-### reportWarning
-
-<span style="font-family: monospace; font-size: 80%;">public void __reportWarning__</span>
-
-Reports a warning message including location information.
 
 
 ---
 
-### reportError
+### getInstance
 
-<span style="font-family: monospace; font-size: 80%;">public void __reportError__</span>
+<span style="font-family: monospace; font-size: 80%;">public static [Context](Context.md) __getInstance__()</span>
 
-Reports an error message including location information.
-
-
----
-
-### location
-
-<span style="font-family: monospace; font-size: 80%;">private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __location__</span>
-
-Returns a string describing the current location context in module, package, type, method, and field.
-Used to append context details to diagnostic messages.
+Returns the singleton instance of this Context.
 
 **Returns:**
 
-A formatted multi-line string describing the current location, or empty if no location info.
+The Context singleton instance.
+
+
+---
+
+### getMethodName
+
+<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getMethodName__()</span>
+
+Returns the current method name.
+
+**Returns:**
+
+The method name.
+
+
+---
+
+### getModuleName
+
+<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getModuleName__()</span>
+
+Returns the current module name.
+
+**Returns:**
+
+The module name.
+
+
+---
+
+### getOutputDirectory
+
+<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getOutputDirectory__()</span>
+
+
 
 
 ---
 
 ### getPackageDirectory
 
-<span style="font-family: monospace; font-size: 80%;">public [File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html) __getPackageDirectory__</span>
+<span style="font-family: monospace; font-size: 80%;">public [File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html) __getPackageDirectory__()</span>
 
 Constructs a File object representing the directory path corresponding to the current output directory,
 module, and fully qualified package name.
@@ -444,78 +388,172 @@ The File object representing the directory.
 
 ---
 
-### createFileInPackage
+### getPackageName
 
-<span style="font-family: monospace; font-size: 80%;">public [Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) __createFileInPackage__</span>
+<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getPackageName__()</span>
 
-Creates a Writer for writing a file corresponding to the current context (type name, package, module).
-Creates directories as necessary. Defaults of output directory are applied if not set.
-
-**Returns:**
-
-A Writer object for writing the file.
-
-**Throws:**
-
-[java.io.IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
-
-
----
-
-### createPackageFilePath
-
-<span style="font-family: monospace; font-size: 80%;">[File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html) __createPackageFilePath__</span>
-
-
-
-
----
-
-### createFileInModule
-
-<span style="font-family: monospace; font-size: 80%;">public [Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) __createFileInModule__</span>
-
-Creates a Writer for writing a module-level file inside the module's directory.
-Creates directories as necessary. Defaults of output directory are applied if not set.
+Returns the current package name.
 
 **Returns:**
 
-A Writer object for writing the file.
-
-**Throws:**
-
-[java.nio.file.InvalidPathException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/InvalidPathException.html)
-, [java.io.IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
+The package name.
 
 
 ---
 
-### createModuleFilePath
+### getReporter
 
-<span style="font-family: monospace; font-size: 80%;">[File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html) __createModuleFilePath__</span>
+<span style="font-family: monospace; font-size: 80%;">public [Reporter](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Reporter.html) __getReporter__()</span>
 
-
-
-**Throws:**
-
-[java.nio.file.InvalidPathException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/InvalidPathException.html)
-
-
----
-
-### createFileInternal
-
-<span style="font-family: monospace; font-size: 80%;">private [Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) __createFileInternal__</span>
-
-Helper method that creates a Writer for a file inside the specified directory.
+Returns the currently set reporter instance.
 
 **Returns:**
 
-A Writer for the file.
+The Reporter.
 
-**Throws:**
 
-[java.io.IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
+---
+
+### getTypeName
+
+<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getTypeName__()</span>
+
+Returns the current type name.
+
+**Returns:**
+
+The type name.
+
+
+---
+
+### location
+
+<span style="font-family: monospace; font-size: 80%;">private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __location__()</span>
+
+Returns a string describing the current location context in module, package, type, method, and field.
+Used to append context details to diagnostic messages.
+
+**Returns:**
+
+A formatted multi-line string describing the current location, or empty if no location info.
+
+
+---
+
+### reportError
+
+<span style="font-family: monospace; font-size: 80%;">public void __reportError__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) message)</span>
+
+Reports an error message including location information.
+
+
+---
+
+### reportInfo
+
+<span style="font-family: monospace; font-size: 80%;">public void __reportInfo__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) message)</span>
+
+Reports an informational message through the reporter.
+
+
+---
+
+### reportWarning
+
+<span style="font-family: monospace; font-size: 80%;">public void __reportWarning__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) message)</span>
+
+Reports a warning message including location information.
+
+
+---
+
+### reset
+
+<span style="font-family: monospace; font-size: 80%;">public static void __reset__()</span>
+
+
+
+
+---
+
+### setApi
+
+<span style="font-family: monospace; font-size: 80%;">public void __setApi__([Api](../model/Api.md) api)</span>
+
+Sets the Api model associated with this context, also initializing the flattened directories string.
+
+
+---
+
+### setFieldName
+
+<span style="font-family: monospace; font-size: 80%;">public void __setFieldName__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)</span>
+
+Sets the current field name.
+
+
+---
+
+### setMethodName
+
+<span style="font-family: monospace; font-size: 80%;">public void __setMethodName__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)</span>
+
+Sets the current method name.
+
+
+---
+
+### setModuleName
+
+<span style="font-family: monospace; font-size: 80%;">public void __setModuleName__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)</span>
+
+Sets the current module name and resets the package name.
+
+
+---
+
+### setOutputDirectory
+
+<span style="font-family: monospace; font-size: 80%;">public void __setOutputDirectory__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) outputDirectory)</span>
+
+Sets the output directory path where documentation files will be written.
+
+
+---
+
+### setPackageName
+
+<span style="font-family: monospace; font-size: 80%;">public void __setPackageName__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)</span>
+
+Sets the current package name and resets the type name.
+
+
+---
+
+### setReporter
+
+<span style="font-family: monospace; font-size: 80%;">public void __setReporter__([Reporter](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Reporter.html) reporter)</span>
+
+Sets the reporter used for reporting messages and diagnostics during doc generation.
+
+
+---
+
+### setTypeName
+
+<span style="font-family: monospace; font-size: 80%;">public void __setTypeName__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)</span>
+
+Sets the current type name.
+
+
+---
+
+### setWriterFactory
+
+<span style="font-family: monospace; font-size: 80%;">public void __setWriterFactory__([Context.WriterFactory](Context.WriterFactory.md) wf)</span>
+
+
 
 
 ---

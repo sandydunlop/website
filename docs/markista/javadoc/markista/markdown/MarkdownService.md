@@ -5,7 +5,7 @@ Package [io.github.sandydunlop.markista.markdown](index.md)
         io.github.sandydunlop.markista.markdown.MarkdownService<br/>
 <br/>
 All Implemented Interfaces:<br/>
-    [io.github.sandydunlop.markista.spi.DocService](../spi/DocService.md)
+    [DocService](../spi/DocService.md)
 
 
 ----
@@ -19,19 +19,32 @@ All Implemented Interfaces:<br/>
 |-------------------|-------------|
 | MarkdownService() |             |
 
+
+
 ## Method Summary
 
 | Modifier and Type | Method                                                                         | Description |
 |-------------------|--------------------------------------------------------------------------------|-------------|
+| public boolean    | [finish](#finish)()                                                            |             |
 | public boolean    | [replacesDefault](#replacesdefault)()                                          |             |
 | public boolean    | [start](#start)([Api](../model/Api.md) api, [Context](../core/Context.md) ctx) |             |
-| public boolean    | [finish](#finish)()                                                            |             |
+
+
 
 ## Method Details
 
+### finish
+
+<span style="font-family: monospace; font-size: 80%;">public boolean __finish__()</span>
+
+
+
+
+---
+
 ### replacesDefault
 
-<span style="font-family: monospace; font-size: 80%;">public boolean __replacesDefault__</span>
+<span style="font-family: monospace; font-size: 80%;">public boolean __replacesDefault__()</span>
 
 
 
@@ -40,16 +53,7 @@ All Implemented Interfaces:<br/>
 
 ### start
 
-<span style="font-family: monospace; font-size: 80%;">public boolean __start__</span>
-
-
-
-
----
-
-### finish
-
-<span style="font-family: monospace; font-size: 80%;">public boolean __finish__</span>
+<span style="font-family: monospace; font-size: 80%;">public boolean __start__([Api](../model/Api.md) api, [Context](../core/Context.md) ctx)</span>
 
 
 
