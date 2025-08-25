@@ -1,5 +1,5 @@
 
-# Package io.github.sandydunlop.markista.scanner
+# Package io.github.sandydunlop.markista.scanning
 
 
 A scanning visitor of program elements that generates an API model for use with Markista and its extensions.

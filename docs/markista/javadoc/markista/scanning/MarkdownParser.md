@@ -1,8 +1,8 @@
-Package [io.github.sandydunlop.markista.scanner](index.md)
+Package [io.github.sandydunlop.markista.scanning](index.md)
 
 # Class MarkdownParser
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
-        io.github.sandydunlop.markista.scanner.MarkdownParser<br/>
+        io.github.sandydunlop.markista.scanning.MarkdownParser<br/>
 <br/>
 
 ----
@@ -58,16 +58,16 @@ and END indicating the end of the sequence.
 
 | Modifier and Type                                      | Method                                                                          | Description                                                                          |
 |--------------------------------------------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
-| public [MarkdownParser.Token](MarkdownParser.Token.md) | [firstToken](#firsttoken)()                                                     | Returns the first token in the parsed sequence.                                      |
-| private void                                           | [handleCloseBracket](#handleclosebracket)()                                     | Handles the close bracket '' encountered in the markdown.                            |
-| private boolean                                        | [handleCloseParenthesis](#handlecloseparenthesis)(boolean parensFollowBrackets) | Handles the close parenthesis ')' encountered.                                       |
+| private void                                           | [processCharInGeneral](#processcharingeneral)()                                 | Handles a character encountered when not in code or special markup.                  |
 | private void                                           | [handleOpenBracket](#handleopenbracket)()                                       | Handles the open bracket 'Handles the open bracket '[' encountered in the markdown.  |
 | private boolean                                        | [handleOpenParenthesis](#handleopenparenthesis)(char prevChar)                  | Handles an open parenthesis '(' encountered immediately after closing bracket ''.    |
-| private void                                           | [processCharInGeneral](#processcharingeneral)()                                 | Handles a character encountered when not in code or special markup.                  |
+| private void                                           | [handleCloseBracket](#handleclosebracket)()                                     | Handles the close bracket '' encountered in the markdown.                            |
+| private boolean                                        | [handleCloseParenthesis](#handlecloseparenthesis)(boolean parensFollowBrackets) | Handles the close parenthesis ')' encountered.                                       |
+| private void                                           | [saveText](#savetext)()                                                         | Saves any text from the tail position up to the current head as a TEXT token.        |
 | private void                                           | [saveBracketsTag](#savebracketstag)()                                           | Saves the content between the most recent pair of brackets as a BRACKETS_TAG token.  |
 | private void                                           | [saveParensTag](#saveparenstag)()                                               | Saves the content between the most recent pair of parentheses as a PARENS_TAG token. |
-| private void                                           | [saveText](#savetext)()                                                         | Saves any text from the tail position up to the current head as a TEXT token.        |
-| private void                                           | [saveToken](#savetoken)([MarkdownParser.Token](MarkdownParser.Token.md) token)  | Adds the specified token to the list and links it to the previously saved token.     |
+| private void                                           | [saveToken](#savetoken)(Token token)                                            | Adds the specified token to the list and links it to the previously saved token.     |
+| public [MarkdownParser.Token](MarkdownParser.Token.md) | [firstToken](#firsttoken)()                                                     | Returns the first token in the parsed sequence.                                      |
 
 
 
@@ -157,16 +157,35 @@ and END indicating the end of the sequence.
 
 ## Method Details
 
-### firstToken
+### processCharInGeneral
 
-<span style="font-family: monospace; font-size: 80%;">public [MarkdownParser.Token](MarkdownParser.Token.md) __firstToken__()</span>
+<span style="font-family: monospace; font-size: 80%;">private void __processCharInGeneral__()</span>
 
-Returns the first token in the parsed sequence.
-If no tokens exist, returns an END kind token.
+Handles a character encountered when not in code or special markup.
+Currently a placeholder for any general character processing.
+
+
+---
+
+### handleOpenBracket
+
+<span style="font-family: monospace; font-size: 80%;">private void __handleOpenBracket__()</span>
+
+Handles the open bracket 'Handles the open bracket '[' encountered in the markdown.
+Saves any preceding text token before marking the position of the open bracket.
+
+
+---
+
+### handleOpenParenthesis
+
+<span style="font-family: monospace; font-size: 80%;">private boolean __handleOpenParenthesis__(char prevChar)</span>
+
+Handles an open parenthesis '(' encountered immediately after closing bracket ''.
 
 **Returns:**
 
-The first token or an END token if none exist.
+true if parentheses follow brackets, false otherwise.
 
 
 ---
@@ -195,35 +214,12 @@ Always returns false to reset parsing state for parentheses.
 
 ---
 
-### handleOpenBracket
+### saveText
 
-<span style="font-family: monospace; font-size: 80%;">private void __handleOpenBracket__()</span>
+<span style="font-family: monospace; font-size: 80%;">private void __saveText__()</span>
 
-Handles the open bracket 'Handles the open bracket '[' encountered in the markdown.
-Saves any preceding text token before marking the position of the open bracket.
-
-
----
-
-### handleOpenParenthesis
-
-<span style="font-family: monospace; font-size: 80%;">private boolean __handleOpenParenthesis__(char prevChar)</span>
-
-Handles an open parenthesis '(' encountered immediately after closing bracket ''.
-
-**Returns:**
-
-true if parentheses follow brackets, false otherwise.
-
-
----
-
-### processCharInGeneral
-
-<span style="font-family: monospace; font-size: 80%;">private void __processCharInGeneral__()</span>
-
-Handles a character encountered when not in code or special markup.
-Currently a placeholder for any general character processing.
+Saves any text from the tail position up to the current head as a TEXT token.
+Does nothing if no text is available in that range.
 
 
 ---
@@ -246,21 +242,25 @@ Saves the content between the most recent pair of parentheses as a PARENS_TAG to
 
 ---
 
-### saveText
+### saveToken
 
-<span style="font-family: monospace; font-size: 80%;">private void __saveText__()</span>
+<span style="font-family: monospace; font-size: 80%;">private void __saveToken__(Token token)</span>
 
-Saves any text from the tail position up to the current head as a TEXT token.
-Does nothing if no text is available in that range.
+Adds the specified token to the list and links it to the previously saved token.
 
 
 ---
 
-### saveToken
+### firstToken
 
-<span style="font-family: monospace; font-size: 80%;">private void __saveToken__([MarkdownParser.Token](MarkdownParser.Token.md) token)</span>
+<span style="font-family: monospace; font-size: 80%;">public [MarkdownParser.Token](MarkdownParser.Token.md) __firstToken__()</span>
 
-Adds the specified token to the list and links it to the previously saved token.
+Returns the first token in the parsed sequence.
+If no tokens exist, returns an END kind token.
+
+**Returns:**
+
+The first token or an END token if none exist.
 
 
 ---

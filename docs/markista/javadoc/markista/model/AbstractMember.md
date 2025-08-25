@@ -6,7 +6,7 @@ Package [io.github.sandydunlop.markista.model](index.md)
                 io.github.sandydunlop.markista.model.AbstractMember<br/>
 <br/>
 Direct Known Subtypes:<br/>
-    [MethodNode](MethodNode.md), [ParamNode](ParamNode.md), [PackageOrTypeNode](PackageOrTypeNode.md)
+    [MethodNode](MethodNode.md), [ParamNode](ParamNode.md), [TypeNode](TypeNode.md)
 
 
 ----
@@ -47,20 +47,20 @@ Direct Known Subtypes:<br/>
 
 | Modifier and Type                                                                                                                                  | Method                                                                                                                                   | Description                                           |
 |----------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|
-| public void                                                                                                                                        | [addAppliedAnnotation](#addappliedannotation)([AppliedAnnotationNode](AppliedAnnotationNode.md) annotation)                              | Adds an applied annotation to this type               |
-| public void                                                                                                                                        | [addModifier](#addmodifier)([Modifier](Modifier.md) mod)                                                                                 | Adds a modifier to the set of modifiers.              |
-| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[AppliedAnnotationNode](AppliedAnnotationNode.md)> | [getAppliedAnnotations](#getappliedannotations)()                                                                                        | Returns the list of annotations applied to this type. |
-| public [Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<[Modifier](Modifier.md)>                             | [getModifiers](#getmodifiers)()                                                                                                          | Returns the set of modifiers for this node.           |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                | [getModifiersString](#getmodifiersstring)()                                                                                              | Returns a string representation of modifiers.         |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                | [getQualifiedName](#getqualifiedname)()                                                                                                  | Returns the qualified name of this type.              |
+| public void                                                                                                                                        | [setSimpleName](#setsimplename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)       | Sets the simple name of this type.                    |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                | [getSimpleName](#getsimplename)()                                                                                                        | Returns the simple name of this type.                 |
 | public void                                                                                                                                        | [setQualifiedName](#setqualifiedname)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) | Sets the qualified name of this type.                 |
-| public void                                                                                                                                        | [setSimpleName](#setsimplename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)       | Sets the simple name of this type.                    |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                | [getQualifiedName](#getqualifiedname)()                                                                                                  | Returns the qualified name of this type.              |
+| public void                                                                                                                                        | [addModifier](#addmodifier)([Modifier](Modifier.md) mod)                                                                                 | Adds a modifier to the set of modifiers.              |
+| public [Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<[Modifier](Modifier.md)>                             | [getModifiers](#getmodifiers)()                                                                                                          | Returns the set of modifiers for this node.           |
+| public void                                                                                                                                        | [addAppliedAnnotation](#addappliedannotation)([AppliedAnnotationNode](AppliedAnnotationNode.md) annotation)                              | Adds an applied annotation to this type               |
+| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[AppliedAnnotationNode](AppliedAnnotationNode.md)> | [getAppliedAnnotations](#getappliedannotations)()                                                                                        | Returns the list of annotations applied to this type. |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                | [getModifiersString](#getmodifiersstring)()                                                                                              | Returns a string representation of modifiers.         |
 
 
 ### Methods inherited from [io.github.sandydunlop.markista.model.Node](Node.md)
 
-[References](Node.md#getreferences), [Kind](Node.md#getkind), [DeprecationText](Node.md#setdeprecationtext), [Body](Node.md#getbody), [Since](Node.md#getsince), [FullBody](Node.md#setfullbody), [References](Node.md#setreferences), [FirstSentence](Node.md#setfirstsentence), [Kind](Node.md#setkind), [Body](Node.md#setbody), [Since](Node.md#setsince), [Deprecation](Node.md#setdeprecation), [FirstSentence](Node.md#getfirstsentence), [Deprecation](Node.md#getdeprecation), [UUID](Node.md#getuuid), [DeprecationText](Node.md#getdeprecationtext), [FullBody](Node.md#getfullbody)
+[setReferences](Node.md#setreferences), [getReferences](Node.md#getreferences), [getKind](Node.md#getkind), [setDeprecationText](Node.md#setdeprecationtext), [getBody](Node.md#getbody), [getSince](Node.md#getsince), [setFullBody](Node.md#setfullbody), [setFirstSentence](Node.md#setfirstsentence), [setSince](Node.md#setsince), [setBody](Node.md#setbody), [setKind](Node.md#setkind), [setDeprecation](Node.md#setdeprecation), [getFirstSentence](Node.md#getfirstsentence), [getDeprecation](Node.md#getdeprecation), [getUUID](Node.md#getuuid), [getDeprecationText](Node.md#getdeprecationtext), [getFullBody](Node.md#getfullbody)
 
 
 ## Field Details
@@ -113,73 +113,11 @@ The simple form of the name
 
 ## Method Details
 
-### addAppliedAnnotation
+### setSimpleName
 
-<span style="font-family: monospace; font-size: 80%;">public void __addAppliedAnnotation__([AppliedAnnotationNode](AppliedAnnotationNode.md) annotation)</span>
+<span style="font-family: monospace; font-size: 80%;">public void __setSimpleName__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)</span>
 
-Adds an applied annotation to this type
-
-
----
-
-### addModifier
-
-<span style="font-family: monospace; font-size: 80%;">public void __addModifier__([Modifier](Modifier.md) mod)</span>
-
-Adds a modifier to the set of modifiers.
-
-
----
-
-### getAppliedAnnotations
-
-<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[AppliedAnnotationNode](AppliedAnnotationNode.md)> __getAppliedAnnotations__()</span>
-
-Returns the list of annotations applied to this type.
-
-**Returns:**
-
-list of applied annotations
-
-
----
-
-### getModifiers
-
-<span style="font-family: monospace; font-size: 80%;">public [Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<[Modifier](Modifier.md)> __getModifiers__()</span>
-
-Returns the set of modifiers for this node.
-
-**Returns:**
-
-Set of modifiers.
-
-
----
-
-### getModifiersString
-
-<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getModifiersString__()</span>
-
-Returns a string representation of modifiers.
-The modifiers are sorted according to a predefined order.
-
-**Returns:**
-
-A string containing sorted modifiers separated by spaces.
-
-
----
-
-### getQualifiedName
-
-<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getQualifiedName__()</span>
-
-Returns the qualified name of this type.
-
-**Returns:**
-
-the qualified name.
+Sets the simple name of this type.
 
 
 ---
@@ -206,11 +144,73 @@ Sets the qualified name of this type.
 
 ---
 
-### setSimpleName
+### getQualifiedName
 
-<span style="font-family: monospace; font-size: 80%;">public void __setSimpleName__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)</span>
+<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getQualifiedName__()</span>
 
-Sets the simple name of this type.
+Returns the qualified name of this type.
+
+**Returns:**
+
+the qualified name.
+
+
+---
+
+### addModifier
+
+<span style="font-family: monospace; font-size: 80%;">public void __addModifier__([Modifier](Modifier.md) mod)</span>
+
+Adds a modifier to the set of modifiers.
+
+
+---
+
+### getModifiers
+
+<span style="font-family: monospace; font-size: 80%;">public [Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<[Modifier](Modifier.md)> __getModifiers__()</span>
+
+Returns the set of modifiers for this node.
+
+**Returns:**
+
+Set of modifiers.
+
+
+---
+
+### addAppliedAnnotation
+
+<span style="font-family: monospace; font-size: 80%;">public void __addAppliedAnnotation__([AppliedAnnotationNode](AppliedAnnotationNode.md) annotation)</span>
+
+Adds an applied annotation to this type
+
+
+---
+
+### getAppliedAnnotations
+
+<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[AppliedAnnotationNode](AppliedAnnotationNode.md)> __getAppliedAnnotations__()</span>
+
+Returns the list of annotations applied to this type.
+
+**Returns:**
+
+list of applied annotations
+
+
+---
+
+### getModifiersString
+
+<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getModifiersString__()</span>
+
+Returns a string representation of modifiers.
+The modifiers are sorted according to a predefined order.
+
+**Returns:**
+
+A string containing sorted modifiers separated by spaces.
 
 
 ---

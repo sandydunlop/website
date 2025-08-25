@@ -37,24 +37,24 @@ A class to hold information about fields within a class, interface, or enum.
 
 | Modifier and Type                                                                                             | Method                                                                                                                                                      | Description                                                           |
 |---------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)           | [fullSignature](#fullsignature)()                                                                                                                           | Returns the full signature of the field including modifiers and name. |
 | public [Serializable](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Serializable.html) | [getConstantValue](#getconstantvalue)()                                                                                                                     | Returns the constant value of this field.                             |
-| public [Link](Link.md)                                                                                        | [getConstantValueReference](#getconstantvaluereference)()                                                                                                   |                                                                       |
 | public void                                                                                                   | [setConstantValue](#setconstantvalue)([Serializable](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Serializable.html) constantValue) | Sets the constant value of this field.                                |
 | public void                                                                                                   | [setConstantValueReference](#setconstantvaluereference)([Link](Link.md) ref)                                                                                |                                                                       |
+| public [Link](Link.md)                                                                                        | [getConstantValueReference](#getconstantvaluereference)()                                                                                                   |                                                                       |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)           | [fullSignature](#fullsignature)()                                                                                                                           | Returns the full signature of the field including modifiers and name. |
 
 
 ### Methods inherited from [io.github.sandydunlop.markista.model.AbstractMember](AbstractMember.md)
 
-[AppliedAnnotation](AbstractMember.md#addappliedannotation), [Modifier](AbstractMember.md#addmodifier), [QualifiedName](AbstractMember.md#setqualifiedname), [Modifiers](AbstractMember.md#getmodifiers), [AppliedAnnotations](AbstractMember.md#getappliedannotations), [QualifiedName](AbstractMember.md#getqualifiedname), [SimpleName](AbstractMember.md#setsimplename), [SimpleName](AbstractMember.md#getsimplename), [ModifiersString](AbstractMember.md#getmodifiersstring)
+[addAppliedAnnotation](AbstractMember.md#addappliedannotation), [addModifier](AbstractMember.md#addmodifier), [setQualifiedName](AbstractMember.md#setqualifiedname), [getModifiers](AbstractMember.md#getmodifiers), [getAppliedAnnotations](AbstractMember.md#getappliedannotations), [getQualifiedName](AbstractMember.md#getqualifiedname), [setSimpleName](AbstractMember.md#setsimplename), [getSimpleName](AbstractMember.md#getsimplename), [getModifiersString](AbstractMember.md#getmodifiersstring)
 
 ### Methods inherited from [io.github.sandydunlop.markista.model.ParamNode](ParamNode.md)
 
-[TypeName](ParamNode.md#settypename), [TypeName](ParamNode.md#gettypename), [TypeText](ParamNode.md#gettypetext), [TypeText](ParamNode.md#settypetext)
+[setTypeName](ParamNode.md#settypename), [getTypeName](ParamNode.md#gettypename), [getTypeText](ParamNode.md#gettypetext), [setTypeText](ParamNode.md#settypetext)
 
 ### Methods inherited from [io.github.sandydunlop.markista.model.Node](Node.md)
 
-[References](Node.md#getreferences), [DeprecationText](Node.md#setdeprecationtext), [Body](Node.md#getbody), [References](Node.md#setreferences), [FirstSentence](Node.md#setfirstsentence), [Deprecation](Node.md#setdeprecation), [Deprecation](Node.md#getdeprecation), [UUID](Node.md#getuuid), [FullBody](Node.md#getfullbody), [Kind](Node.md#getkind), [Since](Node.md#getsince), [FullBody](Node.md#setfullbody), [Kind](Node.md#setkind), [Body](Node.md#setbody), [Since](Node.md#setsince), [FirstSentence](Node.md#getfirstsentence), [DeprecationText](Node.md#getdeprecationtext)
+[getReferences](Node.md#getreferences), [setDeprecationText](Node.md#setdeprecationtext), [getBody](Node.md#getbody), [setFirstSentence](Node.md#setfirstsentence), [setDeprecation](Node.md#setdeprecation), [getDeprecation](Node.md#getdeprecation), [getUUID](Node.md#getuuid), [getFullBody](Node.md#getfullbody), [setReferences](Node.md#setreferences), [getKind](Node.md#getkind), [getSince](Node.md#getsince), [setFullBody](Node.md#setfullbody), [setSince](Node.md#setsince), [setBody](Node.md#setbody), [setKind](Node.md#setkind), [getFirstSentence](Node.md#getfirstsentence), [getDeprecationText](Node.md#getdeprecationtext)
 
 
 ## Field Details
@@ -80,19 +80,6 @@ The constant value assigned to this field, if any.
 
 ## Method Details
 
-### fullSignature
-
-<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __fullSignature__()</span>
-
-Returns the full signature of the field including modifiers and name.
-
-**Returns:**
-
-The string representing the full signature.
-
-
----
-
 ### getConstantValue
 
 <span style="font-family: monospace; font-size: 80%;">public [Serializable](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Serializable.html) __getConstantValue__()</span>
@@ -102,15 +89,6 @@ Returns the constant value of this field.
 **Returns:**
 
 The constant value of the field or null if none.
-
-
----
-
-### getConstantValueReference
-
-<span style="font-family: monospace; font-size: 80%;">public [Link](Link.md) __getConstantValueReference__()</span>
-
-
 
 
 ---
@@ -129,6 +107,28 @@ Sets the constant value of this field.
 <span style="font-family: monospace; font-size: 80%;">public void __setConstantValueReference__([Link](Link.md) ref)</span>
 
 
+
+
+---
+
+### getConstantValueReference
+
+<span style="font-family: monospace; font-size: 80%;">public [Link](Link.md) __getConstantValueReference__()</span>
+
+
+
+
+---
+
+### fullSignature
+
+<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __fullSignature__()</span>
+
+Returns the full signature of the field including modifiers and name.
+
+**Returns:**
+
+The string representing the full signature.
 
 
 ---

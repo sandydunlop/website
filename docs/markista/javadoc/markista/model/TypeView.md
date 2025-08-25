@@ -4,6 +4,9 @@ Package [io.github.sandydunlop.markista.model](index.md)
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
         io.github.sandydunlop.markista.model.TypeView<br/>
 <br/>
+All Known Implementing Classes:<br/>
+    [TypeNode](TypeNode.md)
+
 
 ----
 
@@ -17,48 +20,21 @@ Does not reference TypeNode to avoid cycles.
 
 | Modifier and Type                                                                                            | Method                                      | Description |
 |--------------------------------------------------------------------------------------------------------------|---------------------------------------------|-------------|
-| public abstract [Text](Text.md)                                                                              | [getFirstSentence](#getfirstsentence)()     |             |
-| public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getKindName](#getkindname)()               |             |
-| public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getModifiersString](#getmodifiersstring)() |             |
 | public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getQualifiedName](#getqualifiedname)()     |             |
 | public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getSimpleName](#getsimplename)()           |             |
-| public abstract boolean                                                                                      | [isAnnotation](#isannotation)()             |             |
-| public abstract boolean                                                                                      | [isClass](#isclass)()                       |             |
-| public abstract boolean                                                                                      | [isEnum](#isenum)()                         |             |
-| public abstract boolean                                                                                      | [isInterface](#isinterface)()               |             |
-| public abstract boolean                                                                                      | [isRecord](#isrecord)()                     |             |
+| public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getModifiersString](#getmodifiersstring)() |             |
+| public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getKindName](#getkindname)()               |             |
+| public abstract [Text](Text.md)                                                                              | [getFirstSentence](#getfirstsentence)()     |             |
 | public abstract void                                                                                         | [sort](#sort)()                             |             |
+| public abstract boolean                                                                                      | [isClass](#isclass)()                       |             |
+| public abstract boolean                                                                                      | [isInterface](#isinterface)()               |             |
+| public abstract boolean                                                                                      | [isEnum](#isenum)()                         |             |
+| public abstract boolean                                                                                      | [isRecord](#isrecord)()                     |             |
+| public abstract boolean                                                                                      | [isAnnotation](#isannotation)()             |             |
 
 
 
 ## Method Details
-
-### getFirstSentence
-
-<span style="font-family: monospace; font-size: 80%;">public abstract [Text](Text.md) __getFirstSentence__()</span>
-
-
-
-
----
-
-### getKindName
-
-<span style="font-family: monospace; font-size: 80%;">public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getKindName__()</span>
-
-
-
-
----
-
-### getModifiersString
-
-<span style="font-family: monospace; font-size: 80%;">public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getModifiersString__()</span>
-
-
-
-
----
 
 ### getQualifiedName
 
@@ -78,9 +54,36 @@ Does not reference TypeNode to avoid cycles.
 
 ---
 
-### isAnnotation
+### getModifiersString
 
-<span style="font-family: monospace; font-size: 80%;">public abstract boolean __isAnnotation__()</span>
+<span style="font-family: monospace; font-size: 80%;">public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getModifiersString__()</span>
+
+
+
+
+---
+
+### getKindName
+
+<span style="font-family: monospace; font-size: 80%;">public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getKindName__()</span>
+
+
+
+
+---
+
+### getFirstSentence
+
+<span style="font-family: monospace; font-size: 80%;">public abstract [Text](Text.md) __getFirstSentence__()</span>
+
+
+
+
+---
+
+### sort
+
+<span style="font-family: monospace; font-size: 80%;">public abstract void __sort__()</span>
 
 
 
@@ -96,18 +99,18 @@ Does not reference TypeNode to avoid cycles.
 
 ---
 
-### isEnum
+### isInterface
 
-<span style="font-family: monospace; font-size: 80%;">public abstract boolean __isEnum__()</span>
+<span style="font-family: monospace; font-size: 80%;">public abstract boolean __isInterface__()</span>
 
 
 
 
 ---
 
-### isInterface
+### isEnum
 
-<span style="font-family: monospace; font-size: 80%;">public abstract boolean __isInterface__()</span>
+<span style="font-family: monospace; font-size: 80%;">public abstract boolean __isEnum__()</span>
 
 
 
@@ -123,9 +126,9 @@ Does not reference TypeNode to avoid cycles.
 
 ---
 
-### sort
+### isAnnotation
 
-<span style="font-family: monospace; font-size: 80%;">public abstract void __sort__()</span>
+<span style="font-family: monospace; font-size: 80%;">public abstract boolean __isAnnotation__()</span>
 
 
 

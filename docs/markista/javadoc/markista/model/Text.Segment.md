@@ -22,7 +22,7 @@ Represents a segment of the Text with its kind, content, and optional link.
 
 | Modifier and Type                                                                                    | Field                                 | Description                                           |
 |------------------------------------------------------------------------------------------------------|---------------------------------------|-------------------------------------------------------|
-| private [Text.SegmentKind](Text.SegmentKind.md)                                                      | [kind](#kind)                         | The kind/type of this segment.                        |
+| private [Text.Segment.Kind](Text.Segment.Kind.md)                                                    | [kind](#kind)                         | The kind/type of this segment.                        |
 | private [Link](Link.md)                                                                              | [link](#link)                         | The associated link if the segment represents a link. |
 | private static final long                                                                            | [serialVersionUID](#serialversionuid) |                                                       |
 | private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [text](#text)                         | The textual content of this segment.                  |
@@ -42,13 +42,13 @@ Represents a segment of the Text with its kind, content, and optional link.
 | Modifier and Type                                                                                   | Method                                                                                                                 | Description                                        |
 |-----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------|
 | public static [Text.Segment](Text.Segment.md)                                                       | [empty](#empty)()                                                                                                      | Creates an empty segment instance.                 |
-| public [Text.SegmentKind](Text.SegmentKind.md)                                                      | [getKind](#getkind)()                                                                                                  | Returns the kind of this segment.                  |
-| public [Link](Link.md)                                                                              | [getLink](#getlink)()                                                                                                  | Returns the link associated with this segment.     |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getText](#gettext)()                                                                                                  | Returns the text content of this segment.          |
-| public [Text.Segment](Text.Segment.md)                                                              | [setKind](#setkind)([Text.SegmentKind](Text.SegmentKind.md) k)                                                         | Sets the kind of this segment.                     |
-| public [Text.Segment](Text.Segment.md)                                                              | [setLink](#setlink)([Link](Link.md) link)                                                                              | Sets the link value of this segment.               |
-| public [Text.Segment](Text.Segment.md)                                                              | [setText](#settext)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) text) | Sets the text content of this segment.             |
+| public [Text.Segment](Text.Segment.md)                                                              | [setKind](#setkind)(Kind k)                                                                                            | Sets the kind of this segment.                     |
+| public [Text.Segment.Kind](Text.Segment.Kind.md)                                                    | [getKind](#getkind)()                                                                                                  | Returns the kind of this segment.                  |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [toString](#tostring)()                                                                                                | Returns the string representation of this segment. |
+| public [Text.Segment](Text.Segment.md)                                                              | [setText](#settext)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) text) | Sets the text content of this segment.             |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getText](#gettext)()                                                                                                  | Returns the text content of this segment.          |
+| public [Text.Segment](Text.Segment.md)                                                              | [setLink](#setlink)([Link](Link.md) link)                                                                              | Sets the link value of this segment.               |
+| public [Link](Link.md)                                                                              | [getLink](#getlink)()                                                                                                  | Returns the link associated with this segment.     |
 
 
 
@@ -56,7 +56,7 @@ Represents a segment of the Text with its kind, content, and optional link.
 
 ### kind
 
-<span style="font-family: monospace; font-size: 80%;">private [Text.SegmentKind](Text.SegmentKind.md) __kind__</span>
+<span style="font-family: monospace; font-size: 80%;">private [Text.Segment.Kind](Text.Segment.Kind.md) __kind__</span>
 
 The kind/type of this segment.
 
@@ -112,48 +112,9 @@ A new empty Segment object.
 
 ---
 
-### getKind
-
-<span style="font-family: monospace; font-size: 80%;">public [Text.SegmentKind](Text.SegmentKind.md) __getKind__()</span>
-
-Returns the kind of this segment.
-
-**Returns:**
-
-The current SegmentKind.
-
-
----
-
-### getLink
-
-<span style="font-family: monospace; font-size: 80%;">public [Link](Link.md) __getLink__()</span>
-
-Returns the link associated with this segment.
-
-**Returns:**
-
-The link reference.
-
-
----
-
-### getText
-
-<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getText__()</span>
-
-Returns the text content of this segment.
-
-**Returns:**
-
-The text string.
-
-
----
-
 ### setKind
 
-<span style="font-family: monospace; font-size: 80%;">public [Text.Segment](Text.Segment.md) __setKind__([Text.SegmentKind](Text.SegmentKind.md) k)</span>
+<span style="font-family: monospace; font-size: 80%;">public [Text.Segment](Text.Segment.md) __setKind__(Kind k)</span>
 
 Sets the kind of this segment.
 
@@ -164,15 +125,29 @@ This Segment instance for chaining.
 
 ---
 
-### setLink
+### getKind
 
-<span style="font-family: monospace; font-size: 80%;">public [Text.Segment](Text.Segment.md) __setLink__([Link](Link.md) link)</span>
+<span style="font-family: monospace; font-size: 80%;">public [Text.Segment.Kind](Text.Segment.Kind.md) __getKind__()</span>
 
-Sets the link value of this segment.
+Returns the kind of this segment.
 
 **Returns:**
 
-This Segment instance for chaining.
+The current Segment.Kind.
+
+
+---
+
+### toString
+
+<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __toString__()</span>
+
+Returns the string representation of this segment.
+If text is null or empty, returns the link value.
+
+**Returns:**
+
+The text or link of this segment.
 
 
 ---
@@ -190,16 +165,41 @@ This Segment instance for chaining.
 
 ---
 
-### toString
+### getText
 
-<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __toString__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getText__()</span>
 
-Returns the string representation of this segment.
-If text is null or empty, returns the link value.
+Returns the text content of this segment.
 
 **Returns:**
 
-The text or link of this segment.
+The text string.
+
+
+---
+
+### setLink
+
+<span style="font-family: monospace; font-size: 80%;">public [Text.Segment](Text.Segment.md) __setLink__([Link](Link.md) link)</span>
+
+Sets the link value of this segment.
+
+**Returns:**
+
+This Segment instance for chaining.
+
+
+---
+
+### getLink
+
+<span style="font-family: monospace; font-size: 80%;">public [Link](Link.md) __getLink__()</span>
+
+Returns the link associated with this segment.
+
+**Returns:**
+
+The link reference.
 
 
 ---

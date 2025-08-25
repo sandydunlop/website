@@ -36,14 +36,14 @@ All Implemented Interfaces:<br/>
 
 | Modifier and Type                                                                                   | Method                                                                                                                                   | Description |
 |-----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|-------------|
-| public [Link](Link.md)                                                                              | [getLink](#getlink)()                                                                                                                    |             |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getQualifiedName](#getqualifiedname)()                                                                                                  |             |
-| public [Text](Text.md)                                                                              | [getText](#gettext)()                                                                                                                    |             |
-| public void                                                                                         | [setLink](#setlink)([Link](Link.md) ref)                                                                                                 |             |
-| public void                                                                                         | [setQualifiedName](#setqualifiedname)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
-| public void                                                                                         | [setText](#settext)([Text](Text.md) text)                                                                                                |             |
 | public static [TypeReference](TypeReference.md)                                                     | [to](#to)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) typeName)                         |             |
 | public static [TypeReference](TypeReference.md)                                                     | [to](#to)([Link](Link.md) r, [Text](Text.md) t)                                                                                          |             |
+| public void                                                                                         | [setLink](#setlink)([Link](Link.md) ref)                                                                                                 |             |
+| public [Link](Link.md)                                                                              | [getLink](#getlink)()                                                                                                                    |             |
+| public void                                                                                         | [setText](#settext)([Text](Text.md) text)                                                                                                |             |
+| public [Text](Text.md)                                                                              | [getText](#gettext)()                                                                                                                    |             |
+| public void                                                                                         | [setQualifiedName](#setqualifiedname)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getQualifiedName](#getqualifiedname)()                                                                                                  |             |
 
 
 
@@ -94,27 +94,18 @@ All Implemented Interfaces:<br/>
 
 ## Method Details
 
-### getLink
+### to
 
-<span style="font-family: monospace; font-size: 80%;">public [Link](Link.md) __getLink__()</span>
-
-
-
-
----
-
-### getQualifiedName
-
-<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getQualifiedName__()</span>
+<span style="font-family: monospace; font-size: 80%;">public static [TypeReference](TypeReference.md) __to__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) typeName)</span>
 
 
 
 
 ---
 
-### getText
+### to
 
-<span style="font-family: monospace; font-size: 80%;">public [Text](Text.md) __getText__()</span>
+<span style="font-family: monospace; font-size: 80%;">public static [TypeReference](TypeReference.md) __to__([Link](Link.md) r, [Text](Text.md) t)</span>
 
 
 
@@ -130,9 +121,9 @@ All Implemented Interfaces:<br/>
 
 ---
 
-### setQualifiedName
+### getLink
 
-<span style="font-family: monospace; font-size: 80%;">public void __setQualifiedName__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)</span>
+<span style="font-family: monospace; font-size: 80%;">public [Link](Link.md) __getLink__()</span>
 
 
 
@@ -148,18 +139,27 @@ All Implemented Interfaces:<br/>
 
 ---
 
-### to
+### getText
 
-<span style="font-family: monospace; font-size: 80%;">public static [TypeReference](TypeReference.md) __to__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) typeName)</span>
+<span style="font-family: monospace; font-size: 80%;">public [Text](Text.md) __getText__()</span>
 
 
 
 
 ---
 
-### to
+### setQualifiedName
 
-<span style="font-family: monospace; font-size: 80%;">public static [TypeReference](TypeReference.md) __to__([Link](Link.md) r, [Text](Text.md) t)</span>
+<span style="font-family: monospace; font-size: 80%;">public void __setQualifiedName__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)</span>
+
+
+
+
+---
+
+### getQualifiedName
+
+<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getQualifiedName__()</span>
 
 
 

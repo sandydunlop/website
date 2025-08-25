@@ -4,6 +4,9 @@ Package [io.github.sandydunlop.markista.spi](index.md)
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
         io.github.sandydunlop.markista.spi.DocService<br/>
 <br/>
+All Known Implementing Classes:<br/>
+    [MarkdownService](../markdown/MarkdownService.md)
+
 
 ----
 
@@ -41,26 +44,13 @@ maintain and extend the documentation processing capabilities of Markista.
 
 | Modifier and Type       | Method                                                                         | Description                                                      |
 |-------------------------|--------------------------------------------------------------------------------|------------------------------------------------------------------|
-| public abstract boolean | [finish](#finish)()                                                            | Runs after the main Markdown DocService.                         |
 | public abstract boolean | [replacesDefault](#replacesdefault)()                                          | Returns true if this Docservice replaces the default DocService. |
 | public abstract boolean | [start](#start)([Api](../model/Api.md) api, [Context](../core/Context.md) ctx) | Runs before the main Markdown DocService.                        |
+| public abstract boolean | [finish](#finish)()                                                            | Runs after the main Markdown DocService.                         |
 
 
 
 ## Method Details
-
-### finish
-
-<span style="font-family: monospace; font-size: 80%;">public abstract boolean __finish__()</span>
-
-Runs after the main Markdown DocService.
-
-**Returns:**
-
-true on success, otheriwse false
-
-
----
 
 ### replacesDefault
 
@@ -81,6 +71,19 @@ true if this DocService replaces the default Markdown one, false otherwise.
 
 Runs before the main Markdown DocService.
 Initializes a DocService with the API model and a Context for file creation and reporting.
+
+**Returns:**
+
+true on success, otheriwse false
+
+
+---
+
+### finish
+
+<span style="font-family: monospace; font-size: 80%;">public abstract boolean __finish__()</span>
+
+Runs after the main Markdown DocService.
 
 **Returns:**
 

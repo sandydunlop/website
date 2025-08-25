@@ -1,5 +1,5 @@
 
-# Package io.github.sandydunlop.markista.assembler
+# Package io.github.sandydunlop.markista.orchestration
 
 
 This package deals with processing text and links in the scanned model

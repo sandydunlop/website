@@ -8,7 +8,7 @@ All Implemented Interfaces:<br/>
     [Serializable](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Serializable.html)
 
 Direct Known Subtypes:<br/>
-    [AppliedAnnotationNode](AppliedAnnotationNode.md), [ModuleNode](ModuleNode.md), [AnnotationElement](AnnotationElement.md), [AbstractMember](AbstractMember.md), [Api](Api.md)
+    [AppliedAnnotationNode](AppliedAnnotationNode.md), [ModuleNode](ModuleNode.md), [PackageNode](PackageNode.md), [AnnotationElement](AnnotationElement.md), [AbstractMember](AbstractMember.md), [Api](Api.md)
 
 
 ----
@@ -27,7 +27,7 @@ The base class for all types of nodes in the API model.
 | private [Text](Text.md)                                                                                           | [deprecationText](#deprecationtext)   | Text describing the deprecation state of the node                 |
 | protected [Text](Text.md)                                                                                         | [firstSentence](#firstsentence)       | The first sentence of the Javadoc for this node                   |
 | private final [Text](Text.md)                                                                                     | [fullBody](#fullbody)                 | The full text of the Javadoc for this node                        |
-| protected [NodeKind](NodeKind.md)                                                                                 | [kind](#kind)                         | The kind of this type (e.g., class, interface, enum, annotation). |
+| protected [Node.Kind](Node.Kind.md)                                                                               | [kind](#kind)                         | The kind of this type (e.g., class, interface, enum, annotation). |
 | private [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Link](Link.md)> | [references](#references)             | A list of references specified in this node's Javadoc             |
 | private static final long                                                                                         | [serialVersionUID](#serialversionuid) |                                                                   |
 | private [Text](Text.md)                                                                                           | [since](#since)                       | Text showing when this node was added to the API                  |
@@ -45,25 +45,25 @@ The base class for all types of nodes in the API model.
 
 ## Method Summary
 
-| Modifier and Type                                                                                                | Method                                                                                                                                          | Description                                                      |
-|------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|
-| public [Text](Text.md)                                                                                           | [getBody](#getbody)()                                                                                                                           | Returns the main body documentation text.                        |
-| public [Deprecation](Deprecation.md)                                                                             | [getDeprecation](#getdeprecation)()                                                                                                             | Retrieves the deprecation status of this node.                   |
-| public [Text](Text.md)                                                                                           | [getDeprecationText](#getdeprecationtext)()                                                                                                     | Returns the deprecation text.                                    |
-| public [Text](Text.md)                                                                                           | [getFirstSentence](#getfirstsentence)()                                                                                                         | Returns the first sentence of the documentation.                 |
-| public [Text](Text.md)                                                                                           | [getFullBody](#getfullbody)()                                                                                                                   | Returns the full body documentation text including tags.         |
-| public [NodeKind](NodeKind.md)                                                                                   | [getKind](#getkind)()                                                                                                                           | Returns the kind of this type.                                   |
-| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Link](Link.md)> | [getReferences](#getreferences)()                                                                                                               | Returns the list of references associated with this node.        |
-| public [Text](Text.md)                                                                                           | [getSince](#getsince)()                                                                                                                         | Returns the 'since' documentation text.                          |
-| public [UUID](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/UUID.html)                  | [getUUID](#getuuid)()                                                                                                                           |                                                                  |
-| public void                                                                                                      | [setBody](#setbody)([Text](Text.md) text)                                                                                                       | Sets the main body documentation text.                           |
-| public void                                                                                                      | [setDeprecation](#setdeprecation)([Deprecation](Deprecation.md) deprecation)                                                                    | Sets the deprecation status for this node.                       |
-| public void                                                                                                      | [setDeprecationText](#setdeprecationtext)([Text](Text.md) text)                                                                                 | Sets the deprecation text.                                       |
-| public void                                                                                                      | [setFirstSentence](#setfirstsentence)([Text](Text.md) text)                                                                                     | Sets the first sentence of the documentation.                    |
-| public void                                                                                                      | [setFullBody](#setfullbody)([Text](Text.md) text)                                                                                               | Sets the full body documentation text including tags.            |
-| public void                                                                                                      | [setKind](#setkind)([NodeKind](NodeKind.md) kind)                                                                                               | Sets the kind (class, interface, enum, annotation) of this type. |
-| public void                                                                                                      | [setReferences](#setreferences)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Link](Link.md)> refs) | Sets the list of references for this node.                       |
-| public void                                                                                                      | [setSince](#setsince)([Text](Text.md) text)                                                                                                     | Sets the 'since' documentation text.                             |
+| Modifier and Type                                                                                                | Method                                                                                                                         | Description                                                      |
+|------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|
+| public [UUID](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/UUID.html)                  | [getUUID](#getuuid)()                                                                                                          |                                                                  |
+| public void                                                                                                      | [setKind](#setkind)(Kind kind)                                                                                                 | Sets the kind (class, interface, enum, annotation) of this type. |
+| public [Node.Kind](Node.Kind.md)                                                                                 | [getKind](#getkind)()                                                                                                          | Returns the kind of this type.                                   |
+| public void                                                                                                      | [setDeprecation](#setdeprecation)([Deprecation](Deprecation.md) deprecation)                                                   | Sets the deprecation status for this node.                       |
+| public [Deprecation](Deprecation.md)                                                                             | [getDeprecation](#getdeprecation)()                                                                                            | Retrieves the deprecation status of this node.                   |
+| public void                                                                                                      | [setDeprecationText](#setdeprecationtext)([Text](Text.md) text)                                                                | Sets the deprecation text.                                       |
+| public [Text](Text.md)                                                                                           | [getDeprecationText](#getdeprecationtext)()                                                                                    | Returns the deprecation text.                                    |
+| public void                                                                                                      | [setSince](#setsince)([Text](Text.md) text)                                                                                    | Sets the 'since' documentation text.                             |
+| public [Text](Text.md)                                                                                           | [getSince](#getsince)()                                                                                                        | Returns the 'since' documentation text.                          |
+| public void                                                                                                      | [setFirstSentence](#setfirstsentence)([Text](Text.md) text)                                                                    | Sets the first sentence of the documentation.                    |
+| public [Text](Text.md)                                                                                           | [getFirstSentence](#getfirstsentence)()                                                                                        | Returns the first sentence of the documentation.                 |
+| public void                                                                                                      | [setBody](#setbody)([Text](Text.md) text)                                                                                      | Sets the main body documentation text.                           |
+| public [Text](Text.md)                                                                                           | [getBody](#getbody)()                                                                                                          | Returns the main body documentation text.                        |
+| public void                                                                                                      | [setFullBody](#setfullbody)([Text](Text.md) text)                                                                              | Sets the full body documentation text including tags.            |
+| public [Text](Text.md)                                                                                           | [getFullBody](#getfullbody)()                                                                                                  | Returns the full body documentation text including tags.         |
+| public void                                                                                                      | [setReferences](#setreferences)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html) refs) | Sets the list of references for this node.                       |
+| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Link](Link.md)> | [getReferences](#getreferences)()                                                                                              | Returns the list of references associated with this node.        |
 
 
 
@@ -116,7 +116,7 @@ The full text of the Javadoc for this node
 
 ### kind
 
-<span style="font-family: monospace; font-size: 80%;">protected [NodeKind](NodeKind.md) __kind__</span>
+<span style="font-family: monospace; font-size: 80%;">protected [Node.Kind](Node.Kind.md) __kind__</span>
 
 The kind of this type (e.g., class, interface, enum, annotation).
 
@@ -168,15 +168,42 @@ A unique identifier
 
 ## Method Details
 
-### getBody
+### getUUID
 
-<span style="font-family: monospace; font-size: 80%;">public [Text](Text.md) __getBody__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [UUID](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/UUID.html) __getUUID__()</span>
 
-Returns the main body documentation text.
+
+
+
+---
+
+### setKind
+
+<span style="font-family: monospace; font-size: 80%;">public void __setKind__(Kind kind)</span>
+
+Sets the kind (class, interface, enum, annotation) of this type.
+
+
+---
+
+### getKind
+
+<span style="font-family: monospace; font-size: 80%;">public [Node.Kind](Node.Kind.md) __getKind__()</span>
+
+Returns the kind of this type.
 
 **Returns:**
 
-The body text.
+the Kind enum value.
+
+
+---
+
+### setDeprecation
+
+<span style="font-family: monospace; font-size: 80%;">public void __setDeprecation__([Deprecation](Deprecation.md) deprecation)</span>
+
+Sets the deprecation status for this node.
 
 
 ---
@@ -194,6 +221,15 @@ The deprecation enum value.
 
 ---
 
+### setDeprecationText
+
+<span style="font-family: monospace; font-size: 80%;">public void __setDeprecationText__([Text](Text.md) text)</span>
+
+Sets the deprecation text.
+
+
+---
+
 ### getDeprecationText
 
 <span style="font-family: monospace; font-size: 80%;">public [Text](Text.md) __getDeprecationText__()</span>
@@ -207,54 +243,11 @@ The deprecation descriptive text.
 
 ---
 
-### getFirstSentence
+### setSince
 
-<span style="font-family: monospace; font-size: 80%;">public [Text](Text.md) __getFirstSentence__()</span>
+<span style="font-family: monospace; font-size: 80%;">public void __setSince__([Text](Text.md) text)</span>
 
-Returns the first sentence of the documentation.
-
-**Returns:**
-
-The first sentence text.
-
-
----
-
-### getFullBody
-
-<span style="font-family: monospace; font-size: 80%;">public [Text](Text.md) __getFullBody__()</span>
-
-Returns the full body documentation text including tags.
-
-**Returns:**
-
-The full body text.
-
-
----
-
-### getKind
-
-<span style="font-family: monospace; font-size: 80%;">public [NodeKind](NodeKind.md) __getKind__()</span>
-
-Returns the kind of this type.
-
-**Returns:**
-
-the Kind enum value.
-
-
----
-
-### getReferences
-
-<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Link](Link.md)> __getReferences__()</span>
-
-Returns the list of references associated with this node.
-
-**Returns:**
-
-List of Reference objects.
+Sets the 'since' documentation text.
 
 
 ---
@@ -272,11 +265,24 @@ The since text.
 
 ---
 
-### getUUID
+### setFirstSentence
 
-<span style="font-family: monospace; font-size: 80%;">public [UUID](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/UUID.html) __getUUID__()</span>
+<span style="font-family: monospace; font-size: 80%;">public void __setFirstSentence__([Text](Text.md) text)</span>
+
+Sets the first sentence of the documentation.
 
 
+---
+
+### getFirstSentence
+
+<span style="font-family: monospace; font-size: 80%;">public [Text](Text.md) __getFirstSentence__()</span>
+
+Returns the first sentence of the documentation.
+
+**Returns:**
+
+The first sentence text.
 
 
 ---
@@ -290,29 +296,15 @@ Sets the main body documentation text.
 
 ---
 
-### setDeprecation
+### getBody
 
-<span style="font-family: monospace; font-size: 80%;">public void __setDeprecation__([Deprecation](Deprecation.md) deprecation)</span>
+<span style="font-family: monospace; font-size: 80%;">public [Text](Text.md) __getBody__()</span>
 
-Sets the deprecation status for this node.
+Returns the main body documentation text.
 
+**Returns:**
 
----
-
-### setDeprecationText
-
-<span style="font-family: monospace; font-size: 80%;">public void __setDeprecationText__([Text](Text.md) text)</span>
-
-Sets the deprecation text.
-
-
----
-
-### setFirstSentence
-
-<span style="font-family: monospace; font-size: 80%;">public void __setFirstSentence__([Text](Text.md) text)</span>
-
-Sets the first sentence of the documentation.
+The body text.
 
 
 ---
@@ -326,29 +318,37 @@ Sets the full body documentation text including tags.
 
 ---
 
-### setKind
+### getFullBody
 
-<span style="font-family: monospace; font-size: 80%;">public void __setKind__([NodeKind](NodeKind.md) kind)</span>
+<span style="font-family: monospace; font-size: 80%;">public [Text](Text.md) __getFullBody__()</span>
 
-Sets the kind (class, interface, enum, annotation) of this type.
+Returns the full body documentation text including tags.
+
+**Returns:**
+
+The full body text.
 
 
 ---
 
 ### setReferences
 
-<span style="font-family: monospace; font-size: 80%;">public void __setReferences__([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Link](Link.md)> refs)</span>
+<span style="font-family: monospace; font-size: 80%;">public void __setReferences__([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html) refs)</span>
 
 Sets the list of references for this node.
 
 
 ---
 
-### setSince
+### getReferences
 
-<span style="font-family: monospace; font-size: 80%;">public void __setSince__([Text](Text.md) text)</span>
+<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Link](Link.md)> __getReferences__()</span>
 
-Sets the 'since' documentation text.
+Returns the list of references associated with this node.
+
+**Returns:**
+
+List of Reference objects.
 
 
 ---

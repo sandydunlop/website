@@ -1,17 +1,18 @@
 Package [io.github.sandydunlop.markista.model](index.md)
 
-# Enum Class NodeKind
+# Enum Class Node.Kind
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
-        [java.lang.Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)<[io.github.sandydunlop.markista.model.NodeKind](NodeKind.md)><br/>
-                io.github.sandydunlop.markista.model.NodeKind<br/>
+        [java.lang.Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)<[io.github.sandydunlop.markista.model.Node.Kind](Node.Kind.md)><br/>
+                io.github.sandydunlop.markista.model.Node.Kind<br/>
 <br/>
+Enclosing Class:<br/>
+    [io.github.sandydunlop.markista.model.Node](Node.md)
+
 
 ----
 
-<span style="font-family: monospace; font-size: 80%;">public final enum class __NodeKind__<br/>extends [Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)<[NodeKind](NodeKind.md)>
+<span style="font-family: monospace; font-size: 80%;">public static final enum class __Node.Kind__<br/>extends [Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)<[Node.Kind](Node.Kind.md)>
 </span>
-
-Enumeration representing kinds of types: None, Class, Interface, Enum, Annotation.
 
 
 ##Enum Constants
@@ -40,9 +41,9 @@ Enumeration representing kinds of types: None, Class, Interface, Enum, Annotatio
 
 ## Constructor Summary
 
-| Constructor                                                                                              | Description                             |
-|----------------------------------------------------------------------------------------------------------|-----------------------------------------|
-| NodeKind([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) s) | Constructor assigning the display name. |
+| Constructor                                                                                               | Description                             |
+|-----------------------------------------------------------------------------------------------------------|-----------------------------------------|
+| Node.Kind([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) s) | Constructor assigning the display name. |
 
 
 
@@ -50,9 +51,9 @@ Enumeration representing kinds of types: None, Class, Interface, Enum, Annotatio
 
 | Modifier and Type                                                                                   | Method                                                                                                                 | Description                           |
 |-----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|---------------------------------------|
+| public static Node.Kind\[]                                                                          | [values](#values)()                                                                                                    |                                       |
+| public static [Node.Kind](Node.Kind.md)                                                             | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |                                       |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [toString](#tostring)()                                                                                                | Returns the display name of the kind. |
-| public static [NodeKind](NodeKind.md)                                                               | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |                                       |
-| public static NodeKind\[]                                                                           | [values](#values)()                                                                                                    |                                       |
 
 
 
@@ -154,29 +155,29 @@ The display name for the kind.
 
 ## Method Details
 
-### toString
+### values
 
-<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __toString__()</span>
+<span style="font-family: monospace; font-size: 80%;">public static Node.Kind\[] __values__()</span>
 
-Returns the display name of the kind.
+
 
 
 ---
 
 ### valueOf
 
-<span style="font-family: monospace; font-size: 80%;">public static [NodeKind](NodeKind.md) __valueOf__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)</span>
+<span style="font-family: monospace; font-size: 80%;">public static [Node.Kind](Node.Kind.md) __valueOf__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)</span>
 
 
 
 
 ---
 
-### values
+### toString
 
-<span style="font-family: monospace; font-size: 80%;">public static NodeKind\[] __values__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __toString__()</span>
 
-
+Returns the display name of the kind.
 
 
 ---

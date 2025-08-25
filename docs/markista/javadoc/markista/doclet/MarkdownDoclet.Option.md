@@ -100,6 +100,10 @@ command line.
 
 
 
+**Specified By:**
+
+[Doclet$Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet$Option.html)
+
 
 ---
 
@@ -108,6 +112,10 @@ command line.
 <span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getDescription__()</span>
 
 
+
+**Specified By:**
+
+[Doclet$Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet$Option.html)
 
 
 ---
@@ -118,6 +126,10 @@ command line.
 
 
 
+**Specified By:**
+
+[Doclet$Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet$Option.html)
+
 
 ---
 
@@ -127,6 +139,10 @@ command line.
 
 
 
+**Specified By:**
+
+[Doclet$Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet$Option.html)
+
 
 ---
 
@@ -135,6 +151,10 @@ command line.
 <span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getParameters__()</span>
 
 
+
+**Specified By:**
+
+[Doclet$Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet$Option.html)
 
 
 ---

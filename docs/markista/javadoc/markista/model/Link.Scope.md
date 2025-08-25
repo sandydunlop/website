@@ -19,13 +19,13 @@ Enum representing the scope of references.
 
 ##Enum Constants
 
-| Enum Constant       | Description |
-|---------------------|-------------|
-| [UNKNOWN](#unknown) |             |
-| [LOCAL](#local)     |             |
-| [SIBLING](#sibling) |             |
-| [NATIVE](#native)   |             |
-| [FOREIGN](#foreign) |             |
+| Enum Constant         | Description |
+|-----------------------|-------------|
+| [UNKNOWN](#unknown)   |             |
+| [LOCAL](#local)       |             |
+| [SIBLING](#sibling)   |             |
+| [STANDARD](#standard) |             |
+| [FOREIGN](#foreign)   |             |
 
 
 
@@ -41,8 +41,8 @@ Enum representing the scope of references.
 
 | Modifier and Type                         | Method                                                                                                                 | Description |
 |-------------------------------------------|------------------------------------------------------------------------------------------------------------------------|-------------|
-| public static [Link.Scope](Link.Scope.md) | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
 | public static Link.Scope\[]               | [values](#values)()                                                                                                    |             |
+| public static [Link.Scope](Link.Scope.md) | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
 
 
 
@@ -75,9 +75,9 @@ public static final  SIBLING
 
 ---
 
-### NATIVE
+### STANDARD
 
-public static final  NATIVE
+public static final  STANDARD
 
 
 
@@ -96,18 +96,18 @@ public static final  FOREIGN
 
 ## Method Details
 
-### valueOf
+### values
 
-<span style="font-family: monospace; font-size: 80%;">public static [Link.Scope](Link.Scope.md) __valueOf__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)</span>
+<span style="font-family: monospace; font-size: 80%;">public static Link.Scope\[] __values__()</span>
 
 
 
 
 ---
 
-### values
+### valueOf
 
-<span style="font-family: monospace; font-size: 80%;">public static Link.Scope\[] __values__()</span>
+<span style="font-family: monospace; font-size: 80%;">public static [Link.Scope](Link.Scope.md) __valueOf__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)</span>
 
 
 

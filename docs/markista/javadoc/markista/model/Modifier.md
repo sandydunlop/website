@@ -54,9 +54,9 @@ representations.
 
 | Modifier and Type                                                                                   | Method                                                                                                                 | Description                                         |
 |-----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------|
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [toString](#tostring)()                                                                                                | Returns the string representation of this modifier. |
-| public static [Modifier](Modifier.md)                                                               | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |                                                     |
 | public static Modifier\[]                                                                           | [values](#values)()                                                                                                    |                                                     |
+| public static [Modifier](Modifier.md)                                                               | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |                                                     |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [toString](#tostring)()                                                                                                | Returns the string representation of this modifier. |
 
 
 
@@ -185,15 +185,11 @@ The string representation of the modifier.
 
 ## Method Details
 
-### toString
+### values
 
-<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __toString__()</span>
+<span style="font-family: monospace; font-size: 80%;">public static Modifier\[] __values__()</span>
 
-Returns the string representation of this modifier.
 
-**Returns:**
-
-The string name of the modifier.
 
 
 ---
@@ -207,11 +203,15 @@ The string name of the modifier.
 
 ---
 
-### values
+### toString
 
-<span style="font-family: monospace; font-size: 80%;">public static Modifier\[] __values__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __toString__()</span>
 
+Returns the string representation of this modifier.
 
+**Returns:**
+
+The string name of the modifier.
 
 
 ---

@@ -36,8 +36,8 @@ Enum representing the deprecation status of an element
 
 | Modifier and Type                           | Method                                                                                                                 | Description |
 |---------------------------------------------|------------------------------------------------------------------------------------------------------------------------|-------------|
-| public static [Deprecation](Deprecation.md) | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
 | public static Deprecation\[]                | [values](#values)()                                                                                                    |             |
+| public static [Deprecation](Deprecation.md) | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
 
 
 
@@ -73,18 +73,18 @@ public static final  DEPRECATED
 
 ## Method Details
 
-### valueOf
+### values
 
-<span style="font-family: monospace; font-size: 80%;">public static [Deprecation](Deprecation.md) __valueOf__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)</span>
+<span style="font-family: monospace; font-size: 80%;">public static Deprecation\[] __values__()</span>
 
 
 
 
 ---
 
-### values
+### valueOf
 
-<span style="font-family: monospace; font-size: 80%;">public static Deprecation\[] __values__()</span>
+<span style="font-family: monospace; font-size: 80%;">public static [Deprecation](Deprecation.md) __valueOf__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)</span>
 
 
 

@@ -33,12 +33,12 @@ A class that outputs API package documentation as Markdown.
 
 ## Method Summary
 
-| Modifier and Type | Method                                                                                                                                                                                                                                                                                                    | Description                                                    |
-|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|
-| void              | [outputPackageDoc](#outputpackagedoc)([PackageNode](../model/PackageNode.md) packageNode)                                                                                                                                                                                                                 | Writes the Javadoc for a package as Markdown                   |
-| private void      | [outputPackageMemberPackages](#outputpackagememberpackages)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) title, [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[PackageNode](../model/PackageNode.md)> members) | Writes the Javadoc for a package's member packages as Markdown |
-| private void      | [outputPackageMemberTypes](#outputpackagemembertypes)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) title, [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeView](../model/TypeView.md)> members)             | Writes the Javadoc for a package's members as Markdown         |
-| public void       | [writeDocs](#writedocs)([ModuleNode](../model/ModuleNode.md) moduleNode)                                                                                                                                                                                                                                  | Output the documentation files for the specified API           |
+| Modifier and Type | Method                                                                                                                                                                                                                                                            | Description                                                    |
+|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|
+| public void       | [writeDocs](#writedocs)([ModuleNode](../model/ModuleNode.md) moduleNode)                                                                                                                                                                                          | Output the documentation files for the specified API           |
+| void              | [outputPackageDoc](#outputpackagedoc)([PackageNode](../model/PackageNode.md) packageNode)                                                                                                                                                                         | Writes the Javadoc for a package as Markdown                   |
+| private void      | [outputPackageMemberPackages](#outputpackagememberpackages)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) title, [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html) members) | Writes the Javadoc for a package's member packages as Markdown |
+| private void      | [outputPackageMemberTypes](#outputpackagemembertypes)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) title, [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html) members)       | Writes the Javadoc for a package's members as Markdown         |
 
 
 
@@ -99,6 +99,20 @@ It handles writing text to the appropriate output file or stream.
 
 ## Method Details
 
+### writeDocs
+
+<span style="font-family: monospace; font-size: 80%;">public void __writeDocs__([ModuleNode](../model/ModuleNode.md) moduleNode)</span>
+
+Output the documentation files for the specified API
+
+**Throws:**
+
+[InvalidPathException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/InvalidPathException.html)
+, [IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
+
+
+---
+
 ### outputPackageDoc
 
 <span style="font-family: monospace; font-size: 80%;">void __outputPackageDoc__([PackageNode](../model/PackageNode.md) packageNode)</span>
@@ -115,7 +129,7 @@ Writes the Javadoc for a package as Markdown
 
 ### outputPackageMemberPackages
 
-<span style="font-family: monospace; font-size: 80%;">private void __outputPackageMemberPackages__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) title, [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[PackageNode](../model/PackageNode.md)> members)</span>
+<span style="font-family: monospace; font-size: 80%;">private void __outputPackageMemberPackages__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) title, [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html) members)</span>
 
 Writes the Javadoc for a package's member packages as Markdown
 
@@ -128,27 +142,13 @@ Writes the Javadoc for a package's member packages as Markdown
 
 ### outputPackageMemberTypes
 
-<span style="font-family: monospace; font-size: 80%;">private void __outputPackageMemberTypes__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) title, [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeView](../model/TypeView.md)> members)</span>
+<span style="font-family: monospace; font-size: 80%;">private void __outputPackageMemberTypes__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) title, [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html) members)</span>
 
 Writes the Javadoc for a package's members as Markdown
 
 **Throws:**
 
 [IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
-
-
----
-
-### writeDocs
-
-<span style="font-family: monospace; font-size: 80%;">public void __writeDocs__([ModuleNode](../model/ModuleNode.md) moduleNode)</span>
-
-Output the documentation files for the specified API
-
-**Throws:**
-
-[InvalidPathException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/InvalidPathException.html)
-, [IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
 
 
 ---

@@ -1,11 +1,11 @@
-Package [io.github.sandydunlop.markista.scanner](index.md)
+Package [io.github.sandydunlop.markista.scanning](index.md)
 
 # Class MarkdownParser.Token
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
-        io.github.sandydunlop.markista.scanner.MarkdownParser.Token<br/>
+        io.github.sandydunlop.markista.scanning.MarkdownParser.Token<br/>
 <br/>
 Enclosing Class:<br/>
-    [io.github.sandydunlop.markista.scanner.MarkdownParser](MarkdownParser.md)
+    [io.github.sandydunlop.markista.scanning.MarkdownParser](MarkdownParser.md)
 
 
 ----
@@ -28,9 +28,9 @@ A token has a kind and associated text content, and links to the next token in s
 
 ## Constructor Summary
 
-| Constructor                                                                     | Description                              |
-|---------------------------------------------------------------------------------|------------------------------------------|
-| MarkdownParser.Token([MarkdownParser.TokenKind](MarkdownParser.TokenKind.md) k) | Creates a token with the specified kind. |
+| Constructor                       | Description                              |
+|-----------------------------------|------------------------------------------|
+| MarkdownParser.Token(TokenKind k) | Creates a token with the specified kind. |
 
 
 
@@ -39,10 +39,10 @@ A token has a kind and associated text content, and links to the next token in s
 | Modifier and Type                                                                                   | Method                                                                                                              | Description                                             |
 |-----------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------|
 | public [MarkdownParser.TokenKind](MarkdownParser.TokenKind.md)                                      | [getKind](#getkind)()                                                                                               | Returns the token kind.                                 |
-| public [MarkdownParser.Token](MarkdownParser.Token.md)                                              | [getNext](#getnext)()                                                                                               | Returns the next token, or an END token if none exists. |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getText](#gettext)()                                                                                               | Returns the text content of the token.                  |
-| public void                                                                                         | [setNext](#setnext)([MarkdownParser.Token](MarkdownParser.Token.md) token)                                          | Sets the next token in the sequence.                    |
 | public void                                                                                         | [setText](#settext)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) t) | Sets the text content of the token.                     |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getText](#gettext)()                                                                                               | Returns the text content of the token.                  |
+| public void                                                                                         | [setNext](#setnext)(Token token)                                                                                    | Sets the next token in the sequence.                    |
+| public [MarkdownParser.Token](MarkdownParser.Token.md)                                              | [getNext](#getnext)()                                                                                               | Returns the next token, or an END token if none exists. |
 
 
 
@@ -91,15 +91,11 @@ The token kind.
 
 ---
 
-### getNext
+### setText
 
-<span style="font-family: monospace; font-size: 80%;">public [MarkdownParser.Token](MarkdownParser.Token.md) __getNext__()</span>
+<span style="font-family: monospace; font-size: 80%;">public void __setText__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) t)</span>
 
-Returns the next token, or an END token if none exists.
-
-**Returns:**
-
-The next token or an END token.
+Sets the text content of the token.
 
 
 ---
@@ -119,18 +115,22 @@ The text string.
 
 ### setNext
 
-<span style="font-family: monospace; font-size: 80%;">public void __setNext__([MarkdownParser.Token](MarkdownParser.Token.md) token)</span>
+<span style="font-family: monospace; font-size: 80%;">public void __setNext__(Token token)</span>
 
 Sets the next token in the sequence.
 
 
 ---
 
-### setText
+### getNext
 
-<span style="font-family: monospace; font-size: 80%;">public void __setText__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) t)</span>
+<span style="font-family: monospace; font-size: 80%;">public [MarkdownParser.Token](MarkdownParser.Token.md) __getNext__()</span>
 
-Sets the text content of the token.
+Returns the next token, or an END token if none exists.
+
+**Returns:**
+
+The next token or an END token.
 
 
 ---
