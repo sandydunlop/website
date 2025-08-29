@@ -14,7 +14,7 @@ All Implemented Interfaces:<br/>
 
 A doclet that renders javadoc comments as Markdown.
 
-For more information, see the Markista homepage.
+For more information, see the [Markista homepage](https://sandydunlop.github.io/markista).
 
 
 ## Nested Class Summary
