@@ -6,15 +6,19 @@
 
 === "All Classes and Interfaces"
 
-    | Class             | Description                                                                    |
-    |-------------------|--------------------------------------------------------------------------------|
-    | [Utils](Utils.md) | A set of utility methods for changing between qualified and unqualified names. |
+    | Class                   | Description                                                                    |
+    |-------------------------|--------------------------------------------------------------------------------|
+    | [JreTools](JreTools.md) |                                                                                |
+    | [Name](Name.md)         |                                                                                |
+    | [Utils](Utils.md)       | A set of utility methods for changing between qualified and unqualified names. |
 
 
 === "Classes"
 
-    | Class             | Description                                                                    |
-    |-------------------|--------------------------------------------------------------------------------|
-    | [Utils](Utils.md) | A set of utility methods for changing between qualified and unqualified names. |
+    | Class                   | Description                                                                    |
+    |-------------------------|--------------------------------------------------------------------------------|
+    | [JreTools](JreTools.md) |                                                                                |
+    | [Name](Name.md)         |                                                                                |
+    | [Utils](Utils.md)       | A set of utility methods for changing between qualified and unqualified names. |
 
 

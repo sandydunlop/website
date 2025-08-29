@@ -59,14 +59,14 @@ and END indicating the end of the sequence.
 | Modifier and Type                                      | Method                                                                          | Description                                                                          |
 |--------------------------------------------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
 | private void                                           | [processCharInGeneral](#processcharingeneral)()                                 | Handles a character encountered when not in code or special markup.                  |
-| private void                                           | [handleOpenBracket](#handleopenbracket)()                                       | Handles the open bracket 'Handles the open bracket '[' encountered in the markdown.  |
-| private boolean                                        | [handleOpenParenthesis](#handleopenparenthesis)(char prevChar)                  | Handles an open parenthesis '(' encountered immediately after closing bracket ''.    |
-| private void                                           | [handleCloseBracket](#handleclosebracket)()                                     | Handles the close bracket '' encountered in the markdown.                            |
-| private boolean                                        | [handleCloseParenthesis](#handlecloseparenthesis)(boolean parensFollowBrackets) | Handles the close parenthesis ')' encountered.                                       |
+| private void                                           | [handleOpenBracket](#handleopenbracket)()                                       | Handles the open bracket `[` encountered in the markdown.                            |
+| private boolean                                        | [handleOpenParenthesis](#handleopenparenthesis)(char prevChar)                  | Handles an open parenthesis `(` encountered immediately after closing bracket `]`.   |
+| private void                                           | [handleCloseBracket](#handleclosebracket)()                                     | Handles the close bracket `]` encountered in the markdown.                           |
+| private boolean                                        | [handleCloseParenthesis](#handlecloseparenthesis)(boolean parensFollowBrackets) | Handles the close parenthesis `)` encountered.                                       |
 | private void                                           | [saveText](#savetext)()                                                         | Saves any text from the tail position up to the current head as a TEXT token.        |
 | private void                                           | [saveBracketsTag](#savebracketstag)()                                           | Saves the content between the most recent pair of brackets as a BRACKETS_TAG token.  |
 | private void                                           | [saveParensTag](#saveparenstag)()                                               | Saves the content between the most recent pair of parentheses as a PARENS_TAG token. |
-| private void                                           | [saveToken](#savetoken)(Token token)                                            | Adds the specified token to the list and links it to the previously saved token.     |
+| private void                                           | [saveToken](#savetoken)([MarkdownParser.Token](MarkdownParser.Token.md) token)  | Adds the specified token to the list and links it to the previously saved token.     |
 | public [MarkdownParser.Token](MarkdownParser.Token.md) | [firstToken](#firsttoken)()                                                     | Returns the first token in the parsed sequence.                                      |
 
 
@@ -171,7 +171,7 @@ Currently a placeholder for any general character processing.
 
 <span style="font-family: monospace; font-size: 80%;">private void __handleOpenBracket__()</span>
 
-Handles the open bracket 'Handles the open bracket '[' encountered in the markdown.
+Handles the open bracket `[` encountered in the markdown.
 Saves any preceding text token before marking the position of the open bracket.
 
 
@@ -181,7 +181,7 @@ Saves any preceding text token before marking the position of the open bracket.
 
 <span style="font-family: monospace; font-size: 80%;">private boolean __handleOpenParenthesis__(char prevChar)</span>
 
-Handles an open parenthesis '(' encountered immediately after closing bracket ''.
+Handles an open parenthesis `(` encountered immediately after closing bracket `]`.
 
 **Returns:**
 
@@ -194,7 +194,7 @@ true if parentheses follow brackets, false otherwise.
 
 <span style="font-family: monospace; font-size: 80%;">private void __handleCloseBracket__()</span>
 
-Handles the close bracket '' encountered in the markdown.
+Handles the close bracket `]` encountered in the markdown.
 Records the position and saves a bracket-tag token.
 
 
@@ -204,7 +204,7 @@ Records the position and saves a bracket-tag token.
 
 <span style="font-family: monospace; font-size: 80%;">private boolean __handleCloseParenthesis__(boolean parensFollowBrackets)</span>
 
-Handles the close parenthesis ')' encountered.
+Handles the close parenthesis `)` encountered.
 If parentheses follow brackets, saves a parentheses-tag token.
 
 **Returns:**
@@ -244,7 +244,7 @@ Saves the content between the most recent pair of parentheses as a PARENS_TAG to
 
 ### saveToken
 
-<span style="font-family: monospace; font-size: 80%;">private void __saveToken__(Token token)</span>
+<span style="font-family: monospace; font-size: 80%;">private void __saveToken__([MarkdownParser.Token](MarkdownParser.Token.md) token)</span>
 
 Adds the specified token to the list and links it to the previously saved token.
 

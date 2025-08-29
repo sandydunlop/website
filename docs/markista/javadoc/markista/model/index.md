@@ -21,12 +21,10 @@ The types used to store structure and documentation information of the API.
     | [InterfaceNode](InterfaceNode.md)                 | A node representing a Java interface type                                                                                                                                                         |
     | [Link](Link.md)                                   | `Reference` encapsulates links to web pages, markdown pages, modules, packages, types, and methods.                                                                                               |
     | [MethodNode](MethodNode.md)                       | Contains information about a method being documented                                                                                                                                              |
-    | [MethodReference](MethodReference.md)             |                                                                                                                                                                                                   |
     | [Modifier](Modifier.md)                           | Enum representing Java language modifiers with their string  representations.                                                                                                                     |
     | [ModuleNode](ModuleNode.md)                       | Represents a module node that contains directives, packages, and constant values.                                                                                                                 |
     | [Node](Node.md)                                   | The base class for all types of nodes in the API model.                                                                                                                                           |
     | [PackageNode](PackageNode.md)                     | Represents a Java package                                                                                                                                                                         |
-    | [PackageOrTypeNode](PackageOrTypeNode.md)         |                                                                                                                                                                                                   |
     | [Pair](Pair.md)                                   |                                                                                                                                                                                                   |
     | [ParamNode](ParamNode.md)                         | A class to hold information about method parameters.                                                                                                                                              |
     | [RecordNode](RecordNode.md)                       | Represents a Java record class.                                                                                                                                                                   |
@@ -38,10 +36,9 @@ The types used to store structure and documentation information of the API.
 
 === "Interfaces"
 
-    | Class                                     | Description                                       |
-    |-------------------------------------------|---------------------------------------------------|
-    | [PackageOrTypeNode](PackageOrTypeNode.md) |                                                   |
-    | [TypeView](TypeView.md)                   | Minimal view of a type used by PackageOrTypeNode. |
+    | Class                   | Description                                       |
+    |-------------------------|---------------------------------------------------|
+    | [TypeView](TypeView.md) | Minimal view of a type used by PackageOrTypeNode. |
 
 
 === "Classes"
@@ -60,7 +57,6 @@ The types used to store structure and documentation information of the API.
     | [InterfaceNode](InterfaceNode.md)                 | A node representing a Java interface type                                                                                                                                                         |
     | [Link](Link.md)                                   | `Reference` encapsulates links to web pages, markdown pages, modules, packages, types, and methods.                                                                                               |
     | [MethodNode](MethodNode.md)                       | Contains information about a method being documented                                                                                                                                              |
-    | [MethodReference](MethodReference.md)             |                                                                                                                                                                                                   |
     | [ModuleNode](ModuleNode.md)                       | Represents a module node that contains directives, packages, and constant values.                                                                                                                 |
     | [Node](Node.md)                                   | The base class for all types of nodes in the API model.                                                                                                                                           |
     | [PackageNode](PackageNode.md)                     | Represents a Java package                                                                                                                                                                         |

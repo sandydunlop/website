@@ -39,10 +39,10 @@ Enum representing the kind of a Markdown token.
 
 ## Method Summary
 
-| Modifier and Type                                                     | Method                                                                                                                 | Description |
-|-----------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|-------------|
-| public static MarkdownParser.TokenKind\[]                             | [values](#values)()                                                                                                    |             |
-| public static [MarkdownParser.TokenKind](MarkdownParser.TokenKind.md) | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
+| Modifier and Type                                                       | Method                                                                                                                 | Description |
+|-------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|-------------|
+| public static [MarkdownParser.TokenKind](MarkdownParser.TokenKind.md)[] | [values](#values)()                                                                                                    |             |
+| public static [MarkdownParser.TokenKind](MarkdownParser.TokenKind.md)   | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
 
 
 
@@ -98,7 +98,7 @@ public static final  END
 
 ### values
 
-<span style="font-family: monospace; font-size: 80%;">public static MarkdownParser.TokenKind\[] __values__()</span>
+<span style="font-family: monospace; font-size: 80%;">public static [MarkdownParser.TokenKind](MarkdownParser.TokenKind.md)[] __values__()</span>
 
 
 

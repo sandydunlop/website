@@ -32,15 +32,15 @@ objects scanned by the [ApiScanner](ApiScanner.md).
 
 ## Method Summary
 
-| Modifier and Type                                        | Method                                                                                                                                                                               | Description                                                                                                                                                                                                                                |
-|----------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| public static void                                       | [setEnvironment](#setenvironment)([DocletEnvironment](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/DocletEnvironment.html) env)                 | Sets the doclet environment where it can get access to  an [Elements](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/Elements.html) implementation to retrieve information about scanned elements. |
-| public static [DirectiveNode](../model/DirectiveNode.md) | [createFrom](#createfrom)([Directive](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Directive.html) directive)                           | Creates a [DirectiveNode](../model/DirectiveNode.md) to encapsulate the information provided by a module directive element.                                                                                                                |
-| public static [DirectiveNode](../model/DirectiveNode.md) | [createRequiresDirective](#createrequiresdirective)([Directive](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Directive.html) directive) | Creates a DirectiveNode representing a [requires](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ModuleElement.RequiresDirective.html) directive.                                               |
-| public static [DirectiveNode](../model/DirectiveNode.md) | [createExportsDirective](#createexportsdirective)([Directive](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Directive.html) directive)   | Creates a DirectiveNode representing an [exports](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ExportsDirective.html) directive.                                                              |
-| public static [DirectiveNode](../model/DirectiveNode.md) | [createOpensDirective](#createopensdirective)([Directive](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Directive.html) directive)       | Creates a DirectiveNode representing an [opens](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/OpensDirective.html) directive.                                                                  |
-| public static [DirectiveNode](../model/DirectiveNode.md) | [createUsesDirective](#createusesdirective)([Directive](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Directive.html) directive)         | Creates a DirectiveNode representing a [uses](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/UsesDirective.html) directive.                                                                     |
-| public static [DirectiveNode](../model/DirectiveNode.md) | [createProvidesDirective](#createprovidesdirective)([Directive](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Directive.html) directive) | Creates a DirectiveNode representing a [provides](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ProvidesDirective.html) directive.                                                             |
+| Modifier and Type                                        | Method                                                                                                                                                                                                           | Description                                                                                                                                                                                                                                |
+|----------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| public static void                                       | [setEnvironment](#setenvironment)([DocletEnvironment](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/DocletEnvironment.html) env)                                             | Sets the doclet environment where it can get access to  an [Elements](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/Elements.html) implementation to retrieve information about scanned elements. |
+| public static [DirectiveNode](../model/DirectiveNode.md) | [createFrom](#createfrom)([ModuleElement.Directive](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ModuleElement.Directive.html) directive)                           | Creates a [DirectiveNode](../model/DirectiveNode.md) to encapsulate the information provided by a module directive element.                                                                                                                |
+| public static [DirectiveNode](../model/DirectiveNode.md) | [createRequiresDirective](#createrequiresdirective)([ModuleElement.Directive](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ModuleElement.Directive.html) directive) | Creates a DirectiveNode representing a [requires](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ModuleElement.RequiresDirective.html) directive.                                               |
+| public static [DirectiveNode](../model/DirectiveNode.md) | [createExportsDirective](#createexportsdirective)([ModuleElement.Directive](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ModuleElement.Directive.html) directive)   | Creates a DirectiveNode representing an [exports](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ExportsDirective.html) directive.                                                              |
+| public static [DirectiveNode](../model/DirectiveNode.md) | [createOpensDirective](#createopensdirective)([ModuleElement.Directive](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ModuleElement.Directive.html) directive)       | Creates a DirectiveNode representing an [opens](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/OpensDirective.html) directive.                                                                  |
+| public static [DirectiveNode](../model/DirectiveNode.md) | [createUsesDirective](#createusesdirective)([ModuleElement.Directive](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ModuleElement.Directive.html) directive)         | Creates a DirectiveNode representing a [uses](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/UsesDirective.html) directive.                                                                     |
+| public static [DirectiveNode](../model/DirectiveNode.md) | [createProvidesDirective](#createprovidesdirective)([ModuleElement.Directive](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ModuleElement.Directive.html) directive) | Creates a DirectiveNode representing a [provides](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ProvidesDirective.html) directive.                                                             |
 
 
 
@@ -71,7 +71,7 @@ to retrieve information about scanned elements.
 
 ### createFrom
 
-<span style="font-family: monospace; font-size: 80%;">public static [DirectiveNode](../model/DirectiveNode.md) __createFrom__([Directive](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Directive.html) directive)</span>
+<span style="font-family: monospace; font-size: 80%;">public static [DirectiveNode](../model/DirectiveNode.md) __createFrom__([ModuleElement.Directive](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ModuleElement.Directive.html) directive)</span>
 
 Creates a [DirectiveNode](../model/DirectiveNode.md) to encapsulate the information provided
 by a module directive element.
@@ -85,7 +85,7 @@ A DirectiveNode representing the scanned directive element.
 
 ### createRequiresDirective
 
-<span style="font-family: monospace; font-size: 80%;">public static [DirectiveNode](../model/DirectiveNode.md) __createRequiresDirective__([Directive](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Directive.html) directive)</span>
+<span style="font-family: monospace; font-size: 80%;">public static [DirectiveNode](../model/DirectiveNode.md) __createRequiresDirective__([ModuleElement.Directive](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ModuleElement.Directive.html) directive)</span>
 
 Creates a DirectiveNode representing a [requires](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ModuleElement.RequiresDirective.html) directive.
 
@@ -98,7 +98,7 @@ A DirectiveNode representing the scanned directive element.
 
 ### createExportsDirective
 
-<span style="font-family: monospace; font-size: 80%;">public static [DirectiveNode](../model/DirectiveNode.md) __createExportsDirective__([Directive](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Directive.html) directive)</span>
+<span style="font-family: monospace; font-size: 80%;">public static [DirectiveNode](../model/DirectiveNode.md) __createExportsDirective__([ModuleElement.Directive](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ModuleElement.Directive.html) directive)</span>
 
 Creates a DirectiveNode representing an [exports](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ExportsDirective.html) directive.
 
@@ -111,7 +111,7 @@ A DirectiveNode representing the scanned directive element.
 
 ### createOpensDirective
 
-<span style="font-family: monospace; font-size: 80%;">public static [DirectiveNode](../model/DirectiveNode.md) __createOpensDirective__([Directive](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Directive.html) directive)</span>
+<span style="font-family: monospace; font-size: 80%;">public static [DirectiveNode](../model/DirectiveNode.md) __createOpensDirective__([ModuleElement.Directive](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ModuleElement.Directive.html) directive)</span>
 
 Creates a DirectiveNode representing an [opens](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/OpensDirective.html) directive.
 
@@ -124,7 +124,7 @@ A DirectiveNode representing the scanned directive element.
 
 ### createUsesDirective
 
-<span style="font-family: monospace; font-size: 80%;">public static [DirectiveNode](../model/DirectiveNode.md) __createUsesDirective__([Directive](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Directive.html) directive)</span>
+<span style="font-family: monospace; font-size: 80%;">public static [DirectiveNode](../model/DirectiveNode.md) __createUsesDirective__([ModuleElement.Directive](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ModuleElement.Directive.html) directive)</span>
 
 Creates a DirectiveNode representing a [uses](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/UsesDirective.html) directive.
 
@@ -137,7 +137,7 @@ A DirectiveNode representing the scanned directive element.
 
 ### createProvidesDirective
 
-<span style="font-family: monospace; font-size: 80%;">public static [DirectiveNode](../model/DirectiveNode.md) __createProvidesDirective__([Directive](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Directive.html) directive)</span>
+<span style="font-family: monospace; font-size: 80%;">public static [DirectiveNode](../model/DirectiveNode.md) __createProvidesDirective__([ModuleElement.Directive](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ModuleElement.Directive.html) directive)</span>
 
 Creates a DirectiveNode representing a [provides](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ProvidesDirective.html) directive.
 

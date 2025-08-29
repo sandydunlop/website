@@ -54,7 +54,7 @@ representations.
 
 | Modifier and Type                                                                                   | Method                                                                                                                 | Description                                         |
 |-----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------|
-| public static Modifier\[]                                                                           | [values](#values)()                                                                                                    |                                                     |
+| public static [Modifier](Modifier.md)[]                                                             | [values](#values)()                                                                                                    |                                                     |
 | public static [Modifier](Modifier.md)                                                               | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |                                                     |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [toString](#tostring)()                                                                                                | Returns the string representation of this modifier. |
 
@@ -187,7 +187,7 @@ The string representation of the modifier.
 
 ### values
 
-<span style="font-family: monospace; font-size: 80%;">public static Modifier\[] __values__()</span>
+<span style="font-family: monospace; font-size: 80%;">public static [Modifier](Modifier.md)[] __values__()</span>
 
 
 
@@ -212,6 +212,10 @@ Returns the string representation of this modifier.
 **Returns:**
 
 The string name of the modifier.
+
+**Overrides:**
+
+[Enum.toString](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html#toString)
 
 
 ---

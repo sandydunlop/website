@@ -47,13 +47,13 @@ can be of kind text, markdown, link, or code for easy retrieval and manipulation
 |----------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
 | public static [Text](Text.md)                                                                                                    | [empty](#empty)()                                                                                                    | Creates an empty Text instance.                             |
 | public static [Text](Text.md)                                                                                                    | [of](#of)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) string)       | Creates a Text object containing the supplied string value  |
-| public static [Text](Text.md)                                                                                                    | [of](#of)(Segment segment)                                                                                           | Creates a Text object containing the supplied segment value |
+| public static [Text](Text.md)                                                                                                    | [of](#of)([Text.Segment](Text.Segment.md) segment)                                                                   | Creates a Text object containing the supplied segment value |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                              | [toString](#tostring)()                                                                                              | Returns the combined string representation of all segments. |
 | public boolean                                                                                                                   | [isEmpty](#isempty)()                                                                                                | Checks whether this Text instance is empty.                 |
 | public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Text.Segment](Text.Segment.md)> | [getSegments](#getsegments)()                                                                                        | Returns the list of segments composing this Text.           |
 | public [Text.Segment](Text.Segment.md)                                                                                           | [getSegment](#getsegment)(int n)                                                                                     |                                                             |
 | public void                                                                                                                      | [set](#set)([Text](Text.md) text)                                                                                    | Sets the segments of this Text to match another Text.       |
-| public [Text](Text.md)                                                                                                           | [append](#append)(Segment segment)                                                                                   | Appends a single segment to this Text.                      |
+| public [Text](Text.md)                                                                                                           | [append](#append)([Text.Segment](Text.Segment.md) segment)                                                           | Appends a single segment to this Text.                      |
 | public [Text](Text.md)                                                                                                           | [append](#append)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) text) | Appends a single text segment to this Text.                 |
 | public [Text](Text.md)                                                                                                           | [append](#append)([Text](Text.md) text)                                                                              | Appends all segments from another Text instance.            |
 | public [Text](Text.md)                                                                                                           | [subtext](#subtext)(int start)                                                                                       |                                                             |
@@ -118,7 +118,7 @@ A Text object representing the string
 
 ### of
 
-<span style="font-family: monospace; font-size: 80%;">public static [Text](Text.md) __of__(Segment segment)</span>
+<span style="font-family: monospace; font-size: 80%;">public static [Text](Text.md) __of__([Text.Segment](Text.Segment.md) segment)</span>
 
 Creates a Text object containing the supplied segment value
 
@@ -188,7 +188,7 @@ Sets the segments of this Text to match another Text.
 
 ### append
 
-<span style="font-family: monospace; font-size: 80%;">public [Text](Text.md) __append__(Segment segment)</span>
+<span style="font-family: monospace; font-size: 80%;">public [Text](Text.md) __append__([Text.Segment](Text.Segment.md) segment)</span>
 
 Appends a single segment to this Text.
 

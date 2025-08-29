@@ -36,29 +36,29 @@ A class that outputs API type documentation as Markdown.
 
 ## Method Summary
 
-| Modifier and Type                                                                                    | Method                                                                                                                                                        | Description                                                     |
-|------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
-| public void                                                                                          | [outputTypeDoc](#outputtypedoc)([TypeNode](../model/TypeNode.md) typeNode)                                                                                    | Writes a Markdown file for the Javadoc of a type                |
-| private void                                                                                         | [outputSupertypes](#outputsupertypes)([TypeNode](../model/TypeNode.md) typeNode)                                                                              | Outputs the hierarchy of supertypes of a class                  |
-| private void                                                                                         | [outputImplementedInterfaces](#outputimplementedinterfaces)([TypeNode](../model/TypeNode.md) typeNode)                                                        | Outputs details of any interfaces that this class implements    |
-| private void                                                                                         | [outputEnclosingClass](#outputenclosingclass)([TypeNode](../model/TypeNode.md) typeNode)                                                                      | Outputs details of the class that encloses this one             |
-| private void                                                                                         | [outputAllKnownImplementingClasses](#outputallknownimplementingclasses)([TypeNode](../model/TypeNode.md) typeNode)                                            |                                                                 |
-| private void                                                                                         | [outputDirectKnownSubtypes](#outputdirectknownsubtypes)([TypeNode](../model/TypeNode.md) typeNode)                                                            |                                                                 |
-| private void                                                                                         | [outputDeclaration](#outputdeclaration)([TypeNode](../model/TypeNode.md) typeNode)                                                                            | Outputs the type declaration                                    |
-| private void                                                                                         | [outputMethodOrFieldDeclaration](#outputmethodorfielddeclaration)([AbstractMember](../model/AbstractMember.md) member)                                        | Outputs the type declaration                                    |
-| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [createAnnotationString](#createannotationstring)([AppliedAnnotationNode](../model/AppliedAnnotationNode.md) annotation)                                      | Creates a string of the elements within an annotation           |
-| private void                                                                                         | [outputNestedClassSummary](#outputnestedclasssummary)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html) nestedClasses) | Outputs a summary of nested classes within this one as Markdown |
-| private void                                                                                         | [outputEnumConstantsSummary](#outputenumconstantssummary)([EnumNode](../model/EnumNode.md) enumNode)                                                          | Outputs as summary of an enum's constants as Markdown           |
-| private void                                                                                         | [outputFieldSummary](#outputfieldsummary)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html) fields)                    | Outputs a summary of this class's fields as Markdown            |
-| private void                                                                                         | [outputConstructorSummary](#outputconstructorsummary)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html) methods)       | Outputs a the summary of this class's constructors as Markdown  |
-| private void                                                                                         | [outputMethodSummary](#outputmethodsummary)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html) methods)                 | Writes the markdown for a class's method summary table          |
-| private void                                                                                         | [outputEnumConstantDetails](#outputenumconstantdetails)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html) constants)   | Outputs enum constant details as Markdown                       |
-| private void                                                                                         | [outputDetails](#outputdetails)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html) nodes)                               | Writes the markdown for a class's method or field details.      |
-| private void                                                                                         | [outputReferences](#outputreferences)([Node](../model/Node.md) node)                                                                                          | Outputs references for a type member                            |
-| private void                                                                                         | [outputMethodDetails](#outputmethoddetails)([MethodNode](../model/MethodNode.md) method)                                                                      | Outputs the Javadoc of a method as Markdown                     |
-| private void                                                                                         | [outputMethodParams](#outputmethodparams)([MethodNode](../model/MethodNode.md) method)                                                                        | Outputs the parameters of a method as Markdown                  |
-| private void                                                                                         | [outputDeprecation](#outputdeprecation)([Deprecation](../model/Deprecation.md) status, [Text](../model/Text.md) text)                                         | Outputs the deprecation status of this type as Markdown         |
-| private void                                                                                         | [outputInheritedMethods](#outputinheritedmethods)([TypeNode](../model/TypeNode.md) typeNode)                                                                  |                                                                 |
+| Modifier and Type                                                                                    | Method                                                                                                                                                                                          | Description                                                     |
+|------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
+| public void                                                                                          | [outputTypeDoc](#outputtypedoc)([TypeNode](../model/TypeNode.md) typeNode)                                                                                                                      | Writes a Markdown file for the Javadoc of a type                |
+| private void                                                                                         | [outputSupertypes](#outputsupertypes)([TypeNode](../model/TypeNode.md) typeNode)                                                                                                                | Outputs the hierarchy of supertypes of a class                  |
+| private void                                                                                         | [outputImplementedInterfaces](#outputimplementedinterfaces)([TypeNode](../model/TypeNode.md) typeNode)                                                                                          | Outputs details of any interfaces that this class implements    |
+| private void                                                                                         | [outputEnclosingClass](#outputenclosingclass)([TypeNode](../model/TypeNode.md) typeNode)                                                                                                        | Outputs details of the class that encloses this one             |
+| private void                                                                                         | [outputAllKnownImplementingClasses](#outputallknownimplementingclasses)([TypeNode](../model/TypeNode.md) typeNode)                                                                              |                                                                 |
+| private void                                                                                         | [outputDirectKnownSubtypes](#outputdirectknownsubtypes)([TypeNode](../model/TypeNode.md) typeNode)                                                                                              |                                                                 |
+| private void                                                                                         | [outputDeclaration](#outputdeclaration)([TypeNode](../model/TypeNode.md) typeNode)                                                                                                              | Outputs the type declaration                                    |
+| private void                                                                                         | [outputMethodOrFieldDeclaration](#outputmethodorfielddeclaration)([AbstractMember](../model/AbstractMember.md) member)                                                                          | Outputs the type declaration                                    |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [createAnnotationString](#createannotationstring)([AppliedAnnotationNode](../model/AppliedAnnotationNode.md) annotation)                                                                        | Creates a string of the elements within an annotation           |
+| private void                                                                                         | [outputNestedClassSummary](#outputnestedclasssummary)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeNode](../model/TypeNode.md)> nestedClasses) | Outputs a summary of nested classes within this one as Markdown |
+| private void                                                                                         | [outputEnumConstantsSummary](#outputenumconstantssummary)([EnumNode](../model/EnumNode.md) enumNode)                                                                                            | Outputs as summary of an enum's constants as Markdown           |
+| private void                                                                                         | [outputFieldSummary](#outputfieldsummary)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[FieldNode](../model/FieldNode.md)> fields)                  | Outputs a summary of this class's fields as Markdown            |
+| private void                                                                                         | [outputConstructorSummary](#outputconstructorsummary)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[MethodNode](../model/MethodNode.md)> methods)   | Outputs a the summary of this class's constructors as Markdown  |
+| private void                                                                                         | [outputMethodSummary](#outputmethodsummary)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[MethodNode](../model/MethodNode.md)> methods)             | Writes the markdown for a class's method summary table          |
+| private void                                                                                         | [outputEnumConstantDetails](#outputenumconstantdetails)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[FieldNode](../model/FieldNode.md)> constants) | Outputs enum constant details as Markdown                       |
+| private void                                                                                         | [outputDetails](#outputdetails)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Node](../model/Node.md)> nodes)                                       | Writes the markdown for a class's method or field details.      |
+| private void                                                                                         | [outputReferences](#outputreferences)([Node](../model/Node.md) node)                                                                                                                            | Outputs references for a type member                            |
+| private void                                                                                         | [outputMethodDetails](#outputmethoddetails)([MethodNode](../model/MethodNode.md) method)                                                                                                        | Outputs the Javadoc of a method as Markdown                     |
+| private void                                                                                         | [outputMethodParams](#outputmethodparams)([MethodNode](../model/MethodNode.md) method)                                                                                                          | Outputs the parameters of a method as Markdown                  |
+| private void                                                                                         | [outputDeprecation](#outputdeprecation)([Deprecation](../model/Deprecation.md) status, [Text](../model/Text.md) text)                                                                           | Outputs the deprecation status of this type as Markdown         |
+| private void                                                                                         | [outputInheritedMethods](#outputinheritedmethods)([TypeNode](../model/TypeNode.md) typeNode)                                                                                                    |                                                                 |
 
 
 
@@ -278,7 +278,7 @@ The string
 
 ### outputNestedClassSummary
 
-<span style="font-family: monospace; font-size: 80%;">private void __outputNestedClassSummary__([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html) nestedClasses)</span>
+<span style="font-family: monospace; font-size: 80%;">private void __outputNestedClassSummary__([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeNode](../model/TypeNode.md)> nestedClasses)</span>
 
 Outputs a summary of nested classes within this one as Markdown
 
@@ -304,7 +304,7 @@ Outputs as summary of an enum's constants as Markdown
 
 ### outputFieldSummary
 
-<span style="font-family: monospace; font-size: 80%;">private void __outputFieldSummary__([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html) fields)</span>
+<span style="font-family: monospace; font-size: 80%;">private void __outputFieldSummary__([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[FieldNode](../model/FieldNode.md)> fields)</span>
 
 Outputs a summary of this class's fields as Markdown
 
@@ -317,7 +317,7 @@ Outputs a summary of this class's fields as Markdown
 
 ### outputConstructorSummary
 
-<span style="font-family: monospace; font-size: 80%;">private void __outputConstructorSummary__([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html) methods)</span>
+<span style="font-family: monospace; font-size: 80%;">private void __outputConstructorSummary__([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[MethodNode](../model/MethodNode.md)> methods)</span>
 
 Outputs a the summary of this class's constructors as Markdown
 
@@ -330,7 +330,7 @@ Outputs a the summary of this class's constructors as Markdown
 
 ### outputMethodSummary
 
-<span style="font-family: monospace; font-size: 80%;">private void __outputMethodSummary__([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html) methods)</span>
+<span style="font-family: monospace; font-size: 80%;">private void __outputMethodSummary__([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[MethodNode](../model/MethodNode.md)> methods)</span>
 
 Writes the markdown for a class's method summary table
 
@@ -343,7 +343,7 @@ Writes the markdown for a class's method summary table
 
 ### outputEnumConstantDetails
 
-<span style="font-family: monospace; font-size: 80%;">private void __outputEnumConstantDetails__([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html) constants)</span>
+<span style="font-family: monospace; font-size: 80%;">private void __outputEnumConstantDetails__([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[FieldNode](../model/FieldNode.md)> constants)</span>
 
 Outputs enum constant details as Markdown
 
@@ -356,7 +356,7 @@ Outputs enum constant details as Markdown
 
 ### outputDetails
 
-<span style="font-family: monospace; font-size: 80%;">private void __outputDetails__([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html) nodes)</span>
+<span style="font-family: monospace; font-size: 80%;">private void __outputDetails__([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Node](../model/Node.md)> nodes)</span>
 
 Writes the markdown for a class's method or field details.
 

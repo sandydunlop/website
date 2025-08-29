@@ -42,7 +42,7 @@ Represents a segment of the Text with its kind, content, and optional link.
 | Modifier and Type                                                                                   | Method                                                                                                                 | Description                                        |
 |-----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------|
 | public static [Text.Segment](Text.Segment.md)                                                       | [empty](#empty)()                                                                                                      | Creates an empty segment instance.                 |
-| public [Text.Segment](Text.Segment.md)                                                              | [setKind](#setkind)(Kind k)                                                                                            | Sets the kind of this segment.                     |
+| public [Text.Segment](Text.Segment.md)                                                              | [setKind](#setkind)([Text.Segment.Kind](Text.Segment.Kind.md) k)                                                       | Sets the kind of this segment.                     |
 | public [Text.Segment.Kind](Text.Segment.Kind.md)                                                    | [getKind](#getkind)()                                                                                                  | Returns the kind of this segment.                  |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [toString](#tostring)()                                                                                                | Returns the string representation of this segment. |
 | public [Text.Segment](Text.Segment.md)                                                              | [setText](#settext)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) text) | Sets the text content of this segment.             |
@@ -114,7 +114,7 @@ A new empty Segment object.
 
 ### setKind
 
-<span style="font-family: monospace; font-size: 80%;">public [Text.Segment](Text.Segment.md) __setKind__(Kind k)</span>
+<span style="font-family: monospace; font-size: 80%;">public [Text.Segment](Text.Segment.md) __setKind__([Text.Segment.Kind](Text.Segment.Kind.md) k)</span>
 
 Sets the kind of this segment.
 

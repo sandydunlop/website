@@ -5,9 +5,6 @@ Package [io.github.sandydunlop.markista.model](index.md)
         [io.github.sandydunlop.markista.model.Node](Node.md)<br/>
                 io.github.sandydunlop.markista.model.PackageNode<br/>
 <br/>
-All Implemented Interfaces:<br/>
-    [PackageOrTypeNode](PackageOrTypeNode.md)
-
 
 ----
 
@@ -26,7 +23,7 @@ Represents a Java package
 | private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                  | [name](#name)                     |             |
 | private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[PackageNode](PackageNode.md)> | [packages](#packages)             |             |
 | private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                  | [sourcePath](#sourcepath)         |             |
-| protected final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeView](TypeView.md)>     | [types](#types)                   |             |
+| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeNode](TypeNode.md)>       | [types](#types)                   |             |
 
 
 
@@ -52,19 +49,19 @@ Represents a Java package
 | public [Text](Text.md)                                                                                                         | [getDescription](#getdescription)()                                                                                                  | Returns the description text for this package, typically the first sentence. |
 | public void                                                                                                                    | [setHasPackageInfo](#sethaspackageinfo)(boolean b)                                                                                   |                                                                              |
 | public boolean                                                                                                                 | [hasPackageInfo](#haspackageinfo)()                                                                                                  |                                                                              |
-| public void                                                                                                                    | [addType](#addtype)([TypeView](TypeView.md) typeNode)                                                                                |                                                                              |
-| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeView](TypeView.md)>       | [getTypes](#gettypes)()                                                                                                              | Gets the list of types *owned* by this instance.                             |
-| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeView](TypeView.md)>       | [getClasses](#getclasses)()                                                                                                          | Gets the list of classes *owned* by this instance.                           |
-| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeView](TypeView.md)>       | [getInterfaces](#getinterfaces)()                                                                                                    | Gets the list of interfaces *owned* by this instance.                        |
-| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeView](TypeView.md)>       | [getEnums](#getenums)()                                                                                                              | Gets the list of enums *owned* by this instance.                             |
-| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeView](TypeView.md)>       | [getRecords](#getrecords)()                                                                                                          | Gets the list of records *owned* by this instance.                           |
-| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeView](TypeView.md)>       | [getAnnotations](#getannotations)()                                                                                                  | Gets the list of annotations *owned* by this instance.                       |
+| public void                                                                                                                    | [addType](#addtype)([TypeNode](TypeNode.md) typeNode)                                                                                |                                                                              |
+| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeNode](TypeNode.md)>       | [getTypes](#gettypes)()                                                                                                              | Gets the list of types *owned* by this instance.                             |
+| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeNode](TypeNode.md)>       | [getClasses](#getclasses)()                                                                                                          | Gets the list of classes *owned* by this instance.                           |
+| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeNode](TypeNode.md)>       | [getInterfaces](#getinterfaces)()                                                                                                    | Gets the list of interfaces *owned* by this instance.                        |
+| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeNode](TypeNode.md)>       | [getEnums](#getenums)()                                                                                                              | Gets the list of enums *owned* by this instance.                             |
+| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeNode](TypeNode.md)>       | [getRecords](#getrecords)()                                                                                                          | Gets the list of records *owned* by this instance.                           |
+| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeNode](TypeNode.md)>       | [getAnnotations](#getannotations)()                                                                                                  | Gets the list of annotations *owned* by this instance.                       |
 | public void                                                                                                                    | [sort](#sort)()                                                                                                                      | Sorts the nodes owned by this instance into alphabetical order.              |
 
 
 ### Methods inherited from [io.github.sandydunlop.markista.model.Node](Node.md)
 
-[setReferences](Node.md#setreferences), [getReferences](Node.md#getreferences), [getKind](Node.md#getkind), [setDeprecationText](Node.md#setdeprecationtext), [getBody](Node.md#getbody), [getSince](Node.md#getsince), [setFullBody](Node.md#setfullbody), [setFirstSentence](Node.md#setfirstsentence), [setSince](Node.md#setsince), [setBody](Node.md#setbody), [setKind](Node.md#setkind), [setDeprecation](Node.md#setdeprecation), [getFirstSentence](Node.md#getfirstsentence), [getDeprecation](Node.md#getdeprecation), [getUUID](Node.md#getuuid), [getDeprecationText](Node.md#getdeprecationtext), [getFullBody](Node.md#getfullbody)
+[Node.setReferences](Node.md#setreferences), [Node.getReferences](Node.md#getreferences), [Node.getKind](Node.md#getkind), [Node.setDeprecationText](Node.md#setdeprecationtext), [Node.getBody](Node.md#getbody), [Node.getSince](Node.md#getsince), [Node.setFullBody](Node.md#setfullbody), [Node.setFirstSentence](Node.md#setfirstsentence), [Node.setSince](Node.md#setsince), [Node.setBody](Node.md#setbody), [Node.setDeprecation](Node.md#setdeprecation), [Node.getFirstSentence](Node.md#getfirstsentence), [Node.setKind](Node.md#setkind), [Node.getDeprecation](Node.md#getdeprecation), [Node.getUUID](Node.md#getuuid), [Node.getDeprecationText](Node.md#getdeprecationtext), [Node.getFullBody](Node.md#getfullbody)
 
 
 ## Field Details
@@ -116,7 +113,7 @@ Represents a Java package
 
 ### types
 
-<span style="font-family: monospace; font-size: 80%;">protected final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeView](TypeView.md)> __types__</span>
+<span style="font-family: monospace; font-size: 80%;">private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeNode](TypeNode.md)> __types__</span>
 
 
 
@@ -230,91 +227,63 @@ The Text object representing the description.
 
 ### addType
 
-<span style="font-family: monospace; font-size: 80%;">public void __addType__([TypeView](TypeView.md) typeNode)</span>
+<span style="font-family: monospace; font-size: 80%;">public void __addType__([TypeNode](TypeNode.md) typeNode)</span>
 
 
-
-**Specified By:**
-
-[PackageOrTypeNode](PackageOrTypeNode.md)
 
 
 ---
 
 ### getTypes
 
-<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeView](TypeView.md)> __getTypes__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeNode](TypeNode.md)> __getTypes__()</span>
 
 Gets the list of types *owned* by this instance.
-
-**Specified By:**
-
-[PackageOrTypeNode](PackageOrTypeNode.md)
 
 
 ---
 
 ### getClasses
 
-<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeView](TypeView.md)> __getClasses__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeNode](TypeNode.md)> __getClasses__()</span>
 
 Gets the list of classes *owned* by this instance.
-
-**Specified By:**
-
-[PackageOrTypeNode](PackageOrTypeNode.md)
 
 
 ---
 
 ### getInterfaces
 
-<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeView](TypeView.md)> __getInterfaces__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeNode](TypeNode.md)> __getInterfaces__()</span>
 
 Gets the list of interfaces *owned* by this instance.
-
-**Specified By:**
-
-[PackageOrTypeNode](PackageOrTypeNode.md)
 
 
 ---
 
 ### getEnums
 
-<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeView](TypeView.md)> __getEnums__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeNode](TypeNode.md)> __getEnums__()</span>
 
 Gets the list of enums *owned* by this instance.
-
-**Specified By:**
-
-[PackageOrTypeNode](PackageOrTypeNode.md)
 
 
 ---
 
 ### getRecords
 
-<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeView](TypeView.md)> __getRecords__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeNode](TypeNode.md)> __getRecords__()</span>
 
 Gets the list of records *owned* by this instance.
-
-**Specified By:**
-
-[PackageOrTypeNode](PackageOrTypeNode.md)
 
 
 ---
 
 ### getAnnotations
 
-<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeView](TypeView.md)> __getAnnotations__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeNode](TypeNode.md)> __getAnnotations__()</span>
 
 Gets the list of annotations *owned* by this instance.
-
-**Specified By:**
-
-[PackageOrTypeNode](PackageOrTypeNode.md)
 
 
 ---
@@ -324,10 +293,6 @@ Gets the list of annotations *owned* by this instance.
 <span style="font-family: monospace; font-size: 80%;">public void __sort__()</span>
 
 Sorts the nodes owned by this instance into alphabetical order.
-
-**Specified By:**
-
-[PackageOrTypeNode](PackageOrTypeNode.md)
 
 
 ---

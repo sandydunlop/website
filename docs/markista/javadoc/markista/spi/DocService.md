@@ -14,9 +14,9 @@ All Known Implementing Classes:<br/>
 
 This interface defines a service for processing a project's structure
 and documentation with the 
-[Markista markdown doclet](https://sandydunlop.github.io/markista/). 
+Markista markdown doclet. 
 The DocService interface is part of the
-[Service Provider Interface](https://docs.oracle.com/javase/tutorial/sound/SPI-intro.html)
+Service Provider Interface
 (SPI) design pattern, which allows
 for the dynamic discovery and loading of service implementations at runtime.
 
@@ -26,7 +26,7 @@ By adhering to this SPI, developers can extend the functionality of Markista
 without modifying its core codebase, promoting a modular and flexible architecture.
 
 Additionally, this interface is designed to work seamlessly with the
-[Java Platform Module System](https://openjdk.org/jeps/261) (JPMS), which 
+Java Platform Module System (JPMS), which 
 enhances the modularity of Java
 applications. JPMS allows for better encapsulation and management of dependencies,
 enabling developers to create well-defined modules that can interact with

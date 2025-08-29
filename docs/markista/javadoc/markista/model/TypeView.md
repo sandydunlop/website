@@ -4,9 +4,6 @@ Package [io.github.sandydunlop.markista.model](index.md)
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
         io.github.sandydunlop.markista.model.TypeView<br/>
 <br/>
-All Known Implementing Classes:<br/>
-    [TypeNode](TypeNode.md)
-
 
 ----
 

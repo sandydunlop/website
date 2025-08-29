@@ -20,12 +20,12 @@ All Implemented Interfaces:<br/>
 | Modifier and Type                                                                                    | Field                                     | Description                          |
 |------------------------------------------------------------------------------------------------------|-------------------------------------------|--------------------------------------|
 | private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [anchor](#anchor)                         |                                      |
-| private boolean                                                                                      | [hasAnchor](#hasanchor)                   |                                      |
 | private [Link.Kind](Link.Kind.md)                                                                    | [kind](#kind)                             |                                      |
 | private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [label](#label)                           |                                      |
 | private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [methodName](#methodname)                 |                                      |
 | private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [methodSignature](#methodsignature)       |                                      |
-| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [origin](#origin)                         | The package the link is coming from. |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [originPackage](#originpackage)           | The package the link is coming from. |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [originType](#origintype)                 |                                      |
 | private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [packageName](#packagename)               |                                      |
 | private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [qualifiedClassName](#qualifiedclassname) |                                      |
 | private boolean                                                                                      | [resolved](#resolved)                     |                                      |
@@ -39,10 +39,10 @@ All Implemented Interfaces:<br/>
 
 ## Constructor Summary
 
-| Constructor                                                                                                                                                                                                              | Description                                                                     |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
-| Link()                                                                                                                                                                                                                   | Default constructor creates an empty reference with kind and scope set to NONE. |
-| Link(Kind kind, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) label, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) target) | Constructs a Reference with given kind, name, and URI.                          |
+| Constructor                                                                                                                                                                                                                                   | Description                                                                     |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
+| Link()                                                                                                                                                                                                                                        | Default constructor creates an empty reference with kind and scope set to NONE. |
+| Link([Link.Kind](Link.Kind.md) kind, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) label, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) target) | Constructs a Reference with given kind, name, and URI.                          |
 
 
 
@@ -53,17 +53,18 @@ All Implemented Interfaces:<br/>
 | public static [Link](Link.md)                                                                       | [to](#to)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) target)                                     | Sets the target of the reference.                               |
 | public static [Link](Link.md)                                                                       | [toMethod](#tomethod)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) signature)                      |                                                                 |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getMethodSignature](#getmethodsignature)()                                                                                                        |                                                                 |
-| public [Link](Link.md)                                                                              | [from](#from)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) origin)                                 | Sets the origin package of the reference.                       |
+| public [Link](Link.md)                                                                              | [fromPackage](#frompackage)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)                     | Sets the origin package of the reference.                       |
+| public [Link](Link.md)                                                                              | [fromType](#fromtype)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)                           |                                                                 |
 | public [Link](Link.md)                                                                              | [withLabel](#withlabel)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) label)                        | Sets the display name of the reference.                         |
 | public [Link](Link.md)                                                                              | [withClassName](#withclassname)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) className)            |                                                                 |
 | public [Link](Link.md)                                                                              | [withUri](#withuri)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) uri)                              |                                                                 |
-| public [Link](Link.md)                                                                              | [withKind](#withkind)(Kind kind)                                                                                                                   | Sets the kind/type of the reference.                            |
+| public [Link](Link.md)                                                                              | [withKind](#withkind)([Link.Kind](Link.Kind.md) kind)                                                                                              | Sets the kind/type of the reference.                            |
 | public [Link](Link.md)                                                                              | [withMethodName](#withmethodname)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) n)                  |                                                                 |
-| public void                                                                                         | [setKind](#setkind)(Kind kind)                                                                                                                     | Sets the kind/type of the reference.                            |
+| public void                                                                                         | [setKind](#setkind)([Link.Kind](Link.Kind.md) kind)                                                                                                | Sets the kind/type of the reference.                            |
 | public [Link.Kind](Link.Kind.md)                                                                    | [getKind](#getkind)()                                                                                                                              | Returns the kind/type of the reference.                         |
 | public [Link](Link.md)                                                                              | [setMethodName](#setmethodname)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)                 | Sets the method name of the reference.                          |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getMethodName](#getmethodname)()                                                                                                                  | Returns the method name of the reference.                       |
-| public void                                                                                         | [setScope](#setscope)(Scope scope)                                                                                                                 | Sets the scope of the reference.                                |
+| public void                                                                                         | [setScope](#setscope)([Link.Scope](Link.Scope.md) scope)                                                                                           | Sets the scope of the reference.                                |
 | public [Link.Scope](Link.Scope.md)                                                                  | [getScope](#getscope)()                                                                                                                            | Returns the scope of the reference.                             |
 | public void                                                                                         | [setLabel](#setlabel)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) label)                          | Sets the display name of the reference.                         |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getLabel](#getlabel)()                                                                                                                            | Returns the display name of the reference.                      |
@@ -77,14 +78,14 @@ All Implemented Interfaces:<br/>
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getUri](#geturi)()                                                                                                                                | Returns the URI of the reference.                               |
 | public void                                                                                         | [setAnchor](#setanchor)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) anchor)                       | Sets the anchor part of the URI.                                |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getAnchor](#getanchor)()                                                                                                                          | Returns the anchor part of the URI.                             |
-| public void                                                                                         | [setOrigin](#setorigin)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) origin)                       | Sets the origin of this reference.                              |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getOrigin](#getorigin)()                                                                                                                          | Gets the origin of this reference.                              |
+| public void                                                                                         | [setOriginPackage](#setoriginpackage)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) origin)         | Sets the origin of this reference.                              |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getOriginPackage](#getoriginpackage)()                                                                                                            | Gets the origin of this reference.                              |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getOriginType](#getorigintype)()                                                                                                                  |                                                                 |
 | public void                                                                                         | [setTarget](#settarget)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) target)                       | Sets the target of this reference.                              |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getTarget](#gettarget)()                                                                                                                          | Gets the target of this reference.                              |
+| public void                                                                                         | [setMethodSignature](#setmethodsignature)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) signature)  |                                                                 |
 | public void                                                                                         | [setResolved](#setresolved)(boolean b)                                                                                                             | Sets the resolved state of this reference.                      |
 | public boolean                                                                                      | [isResolved](#isresolved)()                                                                                                                        | Gets the resolved status of this reference.                     |
-| public void                                                                                         | [setHasAnchor](#sethasanchor)(boolean b)                                                                                                           | Specifies if this link is to an anchor                          |
-| public boolean                                                                                      | [hasAnchor](#hasanchor)()                                                                                                                          | Gets the anchor status of this reference.                       |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [toString](#tostring)()                                                                                                                            |                                                                 |
 
 
@@ -94,15 +95,6 @@ All Implemented Interfaces:<br/>
 ### anchor
 
 <span style="font-family: monospace; font-size: 80%;">private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __anchor__</span>
-
-
-
-
----
-
-### hasAnchor
-
-<span style="font-family: monospace; font-size: 80%;">private boolean __hasAnchor__</span>
 
 
 
@@ -145,11 +137,20 @@ All Implemented Interfaces:<br/>
 
 ---
 
-### origin
+### originPackage
 
-<span style="font-family: monospace; font-size: 80%;">private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __origin__</span>
+<span style="font-family: monospace; font-size: 80%;">private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __originPackage__</span>
 
 The package the link is coming from. Empty string means there is no package. Null means it hasn't been set yet.
+
+
+---
+
+### originType
+
+<span style="font-family: monospace; font-size: 80%;">private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __originType__</span>
+
+
 
 
 ---
@@ -266,15 +267,24 @@ the reference with target set
 
 ---
 
-### from
+### fromPackage
 
-<span style="font-family: monospace; font-size: 80%;">public [Link](Link.md) __from__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) origin)</span>
+<span style="font-family: monospace; font-size: 80%;">public [Link](Link.md) __fromPackage__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)</span>
 
 Sets the origin package of the reference.
 
 **Returns:**
 
 the reference with origin set
+
+
+---
+
+### fromType
+
+<span style="font-family: monospace; font-size: 80%;">public [Link](Link.md) __fromType__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)</span>
+
+
 
 
 ---
@@ -312,7 +322,7 @@ the reference with label set
 
 ### withKind
 
-<span style="font-family: monospace; font-size: 80%;">public [Link](Link.md) __withKind__(Kind kind)</span>
+<span style="font-family: monospace; font-size: 80%;">public [Link](Link.md) __withKind__([Link.Kind](Link.Kind.md) kind)</span>
 
 Sets the kind/type of the reference.
 
@@ -334,7 +344,7 @@ the label with kind set
 
 ### setKind
 
-<span style="font-family: monospace; font-size: 80%;">public void __setKind__(Kind kind)</span>
+<span style="font-family: monospace; font-size: 80%;">public void __setKind__([Link.Kind](Link.Kind.md) kind)</span>
 
 Sets the kind/type of the reference.
 
@@ -378,7 +388,7 @@ The reference method name.
 
 ### setScope
 
-<span style="font-family: monospace; font-size: 80%;">public void __setScope__(Scope scope)</span>
+<span style="font-family: monospace; font-size: 80%;">public void __setScope__([Link.Scope](Link.Scope.md) scope)</span>
 
 Sets the scope of the reference.
 
@@ -526,24 +536,33 @@ The anchor string.
 
 ---
 
-### setOrigin
+### setOriginPackage
 
-<span style="font-family: monospace; font-size: 80%;">public void __setOrigin__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) origin)</span>
+<span style="font-family: monospace; font-size: 80%;">public void __setOriginPackage__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) origin)</span>
 
 Sets the origin of this reference. This is the location that is being linked from.
 
 
 ---
 
-### getOrigin
+### getOriginPackage
 
-<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getOrigin__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getOriginPackage__()</span>
 
 Gets the origin of this reference. This is the location that is being linked from.
 
 **Returns:**
 
 the origin
+
+
+---
+
+### getOriginType
+
+<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getOriginType__()</span>
+
+
 
 
 ---
@@ -570,6 +589,15 @@ the target
 
 ---
 
+### setMethodSignature
+
+<span style="font-family: monospace; font-size: 80%;">public void __setMethodSignature__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) signature)</span>
+
+
+
+
+---
+
 ### setResolved
 
 <span style="font-family: monospace; font-size: 80%;">public void __setResolved__(boolean b)</span>
@@ -588,28 +616,6 @@ Gets the resolved status of this reference.
 **Returns:**
 
 True if this reference has been resolved. False otherwise.
-
-
----
-
-### setHasAnchor
-
-<span style="font-family: monospace; font-size: 80%;">public void __setHasAnchor__(boolean b)</span>
-
-Specifies if this link is to an anchor
-
-
----
-
-### hasAnchor
-
-<span style="font-family: monospace; font-size: 80%;">public boolean __hasAnchor__()</span>
-
-Gets the anchor status of this reference.
-
-**Returns:**
-
-True if this reference is to an anchor. False otherwise.
 
 
 ---

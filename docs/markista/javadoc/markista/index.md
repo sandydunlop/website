@@ -41,8 +41,8 @@ The module-info.java file defines the module and its exports.
 
 === "Uses"
 
-    | Interface                                                          | Description                                                                                                                                                            |
-    |--------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | [io.github.sandydunlop.markista.spi.DocService](spi/DocService.md) | This interface defines a service for processing a project's structure and documentation with the  [Markista markdown doclet](https://sandydunlop.github.io/markista/). |
+    | Interface                                                          | Description                                                                                                                 |
+    |--------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+    | [io.github.sandydunlop.markista.spi.DocService](spi/DocService.md) | This interface defines a service for processing a project's structure and documentation with the  Markista markdown doclet. |
 
 

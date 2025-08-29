@@ -51,7 +51,7 @@ Enclosing Class:<br/>
 
 | Modifier and Type                                                                                   | Method                                                                                                                 | Description                           |
 |-----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|---------------------------------------|
-| public static Node.Kind\[]                                                                          | [values](#values)()                                                                                                    |                                       |
+| public static [Node.Kind](Node.Kind.md)[]                                                           | [values](#values)()                                                                                                    |                                       |
 | public static [Node.Kind](Node.Kind.md)                                                             | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |                                       |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [toString](#tostring)()                                                                                                | Returns the display name of the kind. |
 
@@ -157,7 +157,7 @@ The display name for the kind.
 
 ### values
 
-<span style="font-family: monospace; font-size: 80%;">public static Node.Kind\[] __values__()</span>
+<span style="font-family: monospace; font-size: 80%;">public static [Node.Kind](Node.Kind.md)[] __values__()</span>
 
 
 
@@ -178,6 +178,10 @@ The display name for the kind.
 <span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __toString__()</span>
 
 Returns the display name of the kind.
+
+**Overrides:**
+
+[Enum.toString](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html#toString)
 
 
 ---

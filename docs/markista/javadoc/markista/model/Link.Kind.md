@@ -44,10 +44,10 @@ Enum representing different kinds/types of references.
 
 ## Method Summary
 
-| Modifier and Type                       | Method                                                                                                                 | Description |
-|-----------------------------------------|------------------------------------------------------------------------------------------------------------------------|-------------|
-| public static Link.Kind\[]              | [values](#values)()                                                                                                    |             |
-| public static [Link.Kind](Link.Kind.md) | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
+| Modifier and Type                         | Method                                                                                                                 | Description |
+|-------------------------------------------|------------------------------------------------------------------------------------------------------------------------|-------------|
+| public static [Link.Kind](Link.Kind.md)[] | [values](#values)()                                                                                                    |             |
+| public static [Link.Kind](Link.Kind.md)   | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
 
 
 
@@ -148,7 +148,7 @@ public static final  VOID
 
 ### values
 
-<span style="font-family: monospace; font-size: 80%;">public static Link.Kind\[] __values__()</span>
+<span style="font-family: monospace; font-size: 80%;">public static [Link.Kind](Link.Kind.md)[] __values__()</span>
 
 
 

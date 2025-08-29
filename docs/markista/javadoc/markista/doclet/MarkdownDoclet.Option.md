@@ -17,7 +17,7 @@ Enclosing Class:<br/>
 
 A base class for declaring options.
 Subtypes for specific options should implement
-the [process](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option#process(java.lang.String,java.util.List).html) method
+the [process](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.html#process(java.lang.String,java.util.List)) method
 to handle instances of the option found on the
 command line.
 
@@ -102,7 +102,7 @@ command line.
 
 **Specified By:**
 
-[Doclet$Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet$Option.html)
+[Doclet.Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.html)
 
 
 ---
@@ -115,7 +115,7 @@ command line.
 
 **Specified By:**
 
-[Doclet$Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet$Option.html)
+[Doclet.Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.html)
 
 
 ---
@@ -128,7 +128,7 @@ command line.
 
 **Specified By:**
 
-[Doclet$Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet$Option.html)
+[Doclet.Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.html)
 
 
 ---
@@ -141,7 +141,7 @@ command line.
 
 **Specified By:**
 
-[Doclet$Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet$Option.html)
+[Doclet.Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.html)
 
 
 ---
@@ -154,7 +154,7 @@ command line.
 
 **Specified By:**
 
-[Doclet$Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet$Option.html)
+[Doclet.Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.html)
 
 
 ---

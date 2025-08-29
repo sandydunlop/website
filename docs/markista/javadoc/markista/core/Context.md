@@ -60,7 +60,7 @@ This class is not thread-safe.
 
 | Modifier and Type                                                                                                  | Method                                                                                                                                                  | Description                                                                                                                                       |
 |--------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| public void                                                                                                        | [setWriterFactory](#setwriterfactory)(WriterFactory wf)                                                                                                 |                                                                                                                                                   |
+| public void                                                                                                        | [setWriterFactory](#setwriterfactory)([Context.WriterFactory](Context.WriterFactory.md) wf)                                                             |                                                                                                                                                   |
 | public static void                                                                                                 | [reset](#reset)()                                                                                                                                       |                                                                                                                                                   |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [getFlattenedDirectories](#getflatteneddirectories)()                                                                                                   |                                                                                                                                                   |
 | public static [Context](Context.md)                                                                                | [getInstance](#getinstance)()                                                                                                                           | Returns the singleton instance of this Context.                                                                                                   |
@@ -216,7 +216,7 @@ The name of the type currently being documented
 
 ### setWriterFactory
 
-<span style="font-family: monospace; font-size: 80%;">public void __setWriterFactory__(WriterFactory wf)</span>
+<span style="font-family: monospace; font-size: 80%;">public void __setWriterFactory__([Context.WriterFactory](Context.WriterFactory.md) wf)</span>
 
 
 

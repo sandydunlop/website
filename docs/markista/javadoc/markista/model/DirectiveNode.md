@@ -34,10 +34,10 @@ implementations, and related interface information.
 
 ## Constructor Summary
 
-| Constructor                                                             | Description                                                                   |
-|-------------------------------------------------------------------------|-------------------------------------------------------------------------------|
-| DirectiveNode(Kind kind, [Link](Link.md) reference, boolean transitive) | Constructs a DirectiveNode with the specified kind, name and transitive flag. |
-| DirectiveNode(Kind kind, [Link](Link.md) reference)                     | Constructs a DirectiveNode with the specified kind and name.                  |
+| Constructor                                                                                                    | Description                                                                   |
+|----------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
+| DirectiveNode([DirectiveNode.Kind](DirectiveNode.Kind.md) kind, [Link](Link.md) reference, boolean transitive) | Constructs a DirectiveNode with the specified kind, name and transitive flag. |
+| DirectiveNode([DirectiveNode.Kind](DirectiveNode.Kind.md) kind, [Link](Link.md) reference)                     | Constructs a DirectiveNode with the specified kind and name.                  |
 
 
 

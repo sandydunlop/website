@@ -20,10 +20,9 @@ A class to hold information about method parameters.
 
 ## Field Summary
 
-| Modifier and Type                                                                                    | Field                 | Description                |
-|------------------------------------------------------------------------------------------------------|-----------------------|----------------------------|
-| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [typeName](#typename) | The type of this parameter |
-| private [Text](Text.md)                                                                              | [typeText](#typetext) |                            |
+| Modifier and Type                         | Field         | Description                |
+|-------------------------------------------|---------------|----------------------------|
+| private [TypeReference](TypeReference.md) | [type](#type) | The type of this parameter |
 
 
 
@@ -37,39 +36,28 @@ A class to hold information about method parameters.
 
 ## Method Summary
 
-| Modifier and Type                                                                                   | Method                                                                                                                         | Description                              |
-|-----------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|------------------------------------------|
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getTypeName](#gettypename)()                                                                                                  | Returns the type of this parameter.      |
-| public void                                                                                         | [setTypeName](#settypename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) type) | Sets the type of this parameter.         |
-| public [Text](Text.md)                                                                              | [getTypeText](#gettypetext)()                                                                                                  | Returns the type Text of this parameter. |
-| public void                                                                                         | [setTypeText](#settypetext)([Text](Text.md) text)                                                                              | Sets the type Text of this parameter.    |
+| Modifier and Type                        | Method                                                      | Description                              |
+|------------------------------------------|-------------------------------------------------------------|------------------------------------------|
+| public [TypeReference](TypeReference.md) | [getType](#gettype)()                                       | Returns the type Text of this parameter. |
+| public void                              | [setType](#settype)([TypeReference](TypeReference.md) type) | Sets the type Text of this parameter.    |
 
 
 ### Methods inherited from [io.github.sandydunlop.markista.model.Node](Node.md)
 
-[getReferences](Node.md#getreferences), [setDeprecationText](Node.md#setdeprecationtext), [getBody](Node.md#getbody), [setFirstSentence](Node.md#setfirstsentence), [setDeprecation](Node.md#setdeprecation), [getDeprecation](Node.md#getdeprecation), [getUUID](Node.md#getuuid), [getFullBody](Node.md#getfullbody), [setReferences](Node.md#setreferences), [getKind](Node.md#getkind), [getSince](Node.md#getsince), [setFullBody](Node.md#setfullbody), [setSince](Node.md#setsince), [setBody](Node.md#setbody), [setKind](Node.md#setkind), [getFirstSentence](Node.md#getfirstsentence), [getDeprecationText](Node.md#getdeprecationtext)
+[Node.getReferences](Node.md#getreferences), [Node.setDeprecationText](Node.md#setdeprecationtext), [Node.getBody](Node.md#getbody), [Node.setFirstSentence](Node.md#setfirstsentence), [Node.setDeprecation](Node.md#setdeprecation), [Node.getDeprecation](Node.md#getdeprecation), [Node.getUUID](Node.md#getuuid), [Node.getFullBody](Node.md#getfullbody), [Node.setReferences](Node.md#setreferences), [Node.getKind](Node.md#getkind), [Node.getSince](Node.md#getsince), [Node.setFullBody](Node.md#setfullbody), [Node.setSince](Node.md#setsince), [Node.setBody](Node.md#setbody), [Node.getFirstSentence](Node.md#getfirstsentence), [Node.setKind](Node.md#setkind), [Node.getDeprecationText](Node.md#getdeprecationtext)
 
 ### Methods inherited from [io.github.sandydunlop.markista.model.AbstractMember](AbstractMember.md)
 
-[addAppliedAnnotation](AbstractMember.md#addappliedannotation), [addModifier](AbstractMember.md#addmodifier), [setQualifiedName](AbstractMember.md#setqualifiedname), [getModifiers](AbstractMember.md#getmodifiers), [getAppliedAnnotations](AbstractMember.md#getappliedannotations), [getQualifiedName](AbstractMember.md#getqualifiedname), [setSimpleName](AbstractMember.md#setsimplename), [getSimpleName](AbstractMember.md#getsimplename), [getModifiersString](AbstractMember.md#getmodifiersstring)
+[AbstractMember.addAppliedAnnotation](AbstractMember.md#addappliedannotation), [AbstractMember.addModifier](AbstractMember.md#addmodifier), [AbstractMember.setQualifiedName](AbstractMember.md#setqualifiedname), [AbstractMember.getModifiers](AbstractMember.md#getmodifiers), [AbstractMember.getAppliedAnnotations](AbstractMember.md#getappliedannotations), [AbstractMember.getQualifiedName](AbstractMember.md#getqualifiedname), [AbstractMember.setSimpleName](AbstractMember.md#setsimplename), [AbstractMember.getSimpleName](AbstractMember.md#getsimplename), [AbstractMember.getModifiersString](AbstractMember.md#getmodifiersstring)
 
 
 ## Field Details
 
-### typeName
+### type
 
-<span style="font-family: monospace; font-size: 80%;">private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __typeName__</span>
+<span style="font-family: monospace; font-size: 80%;">private [TypeReference](TypeReference.md) __type__</span>
 
 The type of this parameter
-
-
----
-
-### typeText
-
-<span style="font-family: monospace; font-size: 80%;">private [Text](Text.md) __typeText__</span>
-
-
 
 
 ---
@@ -77,31 +65,9 @@ The type of this parameter
 
 ## Method Details
 
-### getTypeName
+### getType
 
-<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getTypeName__()</span>
-
-Returns the type of this parameter.
-
-**Returns:**
-
-The name of the parameter's type.
-
-
----
-
-### setTypeName
-
-<span style="font-family: monospace; font-size: 80%;">public void __setTypeName__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) type)</span>
-
-Sets the type of this parameter.
-
-
----
-
-### getTypeText
-
-<span style="font-family: monospace; font-size: 80%;">public [Text](Text.md) __getTypeText__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [TypeReference](TypeReference.md) __getType__()</span>
 
 Returns the type Text of this parameter.
 
@@ -112,9 +78,9 @@ The Text representing the parameter's type.
 
 ---
 
-### setTypeText
+### setType
 
-<span style="font-family: monospace; font-size: 80%;">public void __setTypeText__([Text](Text.md) text)</span>
+<span style="font-family: monospace; font-size: 80%;">public void __setType__([TypeReference](TypeReference.md) type)</span>
 
 Sets the type Text of this parameter.
 
