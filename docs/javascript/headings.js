@@ -38,3 +38,32 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 checkCurrentMode();
+
+
+// ========
+
+
+// Helper function to safely get CSS variables
+const getCSSVariable = (variable, fallback) => {
+  if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+    return getComputedStyle(document.documentElement).getPropertyValue(variable).trim() || fallback;
+  }
+  return fallback;
+};
+//
+// mermaid.initialize({
+//   startOnLoad: false,
+//   securityLevel: 'loose', // Allow clicks in the rendered diagram
+//   logLevel: 'error', // Only show errors, not warnings
+//   theme: 'forest', // Set the theme to forest
+//   themeVariables: {
+//     primaryColor: getCSSVariable('--primary', '#BB2528'),
+//     primaryTextColor: getCSSVariable('--primary-foreground', '#fff'),
+//     primaryBorderColor: getCSSVariable('--primary', '#7C0000'),
+//     lineColor: getCSSVariable('--accent', '#F8B229'),
+//     secondaryColor: getCSSVariable('--secondary', '#006100'),
+//     tertiaryColor: getCSSVariable('--background', '#fff'),
+//     edgeLabelBackground: getCSSVariable('--background', '#fff'),
+//     edgeLabelColor: getCSSVariable('--foreground', '#000')
+//   }
+// });
