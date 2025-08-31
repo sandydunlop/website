@@ -29,32 +29,27 @@ Package [io.github.sandydunlop.markista.orchestration](index.md)
 
 ## Method Summary
 
-| Modifier and Type                                                                                                                                                                                                                                                                                                                                    | Method                                                                                                                                                                                                                                                                                                                                                                                            | Description                                                                                                          |
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
-| public static void                                                                                                                                                                                                                                                                                                                                   | [assembleTextAndLinks](#assembletextandlinks)([Api](../model/Api.md) a, [Context](../core/Context.md) c)                                                                                                                                                                                                                                                                                          | Generates [Text](../model/Text.md) objects for links to types and links in Javadoc text.                             |
-| public static void                                                                                                                                                                                                                                                                                                                                   | [addJavadocToRecords](#addjavadoctorecords)([Api](../model/Api.md) api)                                                                                                                                                                                                                                                                                                                           |                                                                                                                      |
-| public static void                                                                                                                                                                                                                                                                                                                                   | [processTypeNode](#processtypenode)([TypeNode](../model/TypeNode.md) typeNode)                                                                                                                                                                                                                                                                                                                    |                                                                                                                      |
-| public static void                                                                                                                                                                                                                                                                                                                                   | [processSubtypes](#processsubtypes)([TypeNode](../model/TypeNode.md) typeNode)                                                                                                                                                                                                                                                                                                                    |                                                                                                                      |
-| public static [Map](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Map.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html), [Pair](../model/Pair.md)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html), [Link](../model/Link.md)>> | [gatherOverriddenMethods](#gatheroverriddenmethods)([TypeNode](../model/TypeNode.md) typeNode)                                                                                                                                                                                                                                                                                                    |                                                                                                                      |
-| public static [Map](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Map.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html), [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Link](../model/Link.md)>>                               | [listBySupertypeName](#listbysupertypename)([Map](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Map.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html), [Pair](../model/Pair.md)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html), [Link](../model/Link.md)>> methodLookup1) |                                                                                                                      |
-| public static void                                                                                                                                                                                                                                                                                                                                   | [processInheritedMethods](#processinheritedmethods)([TypeNode](../model/TypeNode.md) typeNode)                                                                                                                                                                                                                                                                                                    |                                                                                                                      |
-| public static void                                                                                                                                                                                                                                                                                                                                   | [processMethod](#processmethod)([MethodNode](../model/MethodNode.md) method)                                                                                                                                                                                                                                                                                                                      |                                                                                                                      |
-| public static void                                                                                                                                                                                                                                                                                                                                   | [linkBaseMethod](#linkbasemethod)([Link](../model/Link.md) baseMethodLink, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) baseTypeName)                                                                                                                                                                                                             |                                                                                                                      |
-| public static [Text](../model/Text.md)                                                                                                                                                                                                                                                                                                               | [processInheritDocTags](#processinheritdoctags)([Text](../model/Text.md) baseMethodText, [Text](../model/Text.md) text)                                                                                                                                                                                                                                                                           |                                                                                                                      |
-| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                                                                                                                                                                           | [baseTypeName](#basetypename)([MethodNode](../model/MethodNode.md) method)                                                                                                                                                                                                                                                                                                                        |                                                                                                                      |
-| public static boolean                                                                                                                                                                                                                                                                                                                                | [typeHasMethod](#typehasmethod)([TypeNode](../model/TypeNode.md) typeNode, [MethodNode](../model/MethodNode.md) methodNode)                                                                                                                                                                                                                                                                       |                                                                                                                      |
-| public static void                                                                                                                                                                                                                                                                                                                                   | [processModules](#processmodules)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[ModuleNode](../model/ModuleNode.md)> modules)                                                                                                                                                                                                                         |                                                                                                                      |
-| public static void                                                                                                                                                                                                                                                                                                                                   | [associateMethodWithType](#associatemethodwithtype)([MethodNode](../model/MethodNode.md) methodNode)                                                                                                                                                                                                                                                                                              |                                                                                                                      |
-| public static void                                                                                                                                                                                                                                                                                                                                   | [associateMethodsWithImplementedInterfaces](#associatemethodswithimplementedinterfaces)([TypeNode](../model/TypeNode.md) typeNode)                                                                                                                                                                                                                                                                |                                                                                                                      |
-| public static [InterfaceNode](../model/InterfaceNode.md)                                                                                                                                                                                                                                                                                             | [getStandardInterface](#getstandardinterface)([TypeReference](../model/TypeReference.md) interfaceRef)                                                                                                                                                                                                                                                                                            |                                                                                                                      |
-| public static void                                                                                                                                                                                                                                                                                                                                   | [associateClassWithInterface](#associateclasswithinterface)([InterfaceNode](../model/InterfaceNode.md) interfaceNode, [TypeNode](../model/TypeNode.md) typeNode)                                                                                                                                                                                                                                  |                                                                                                                      |
-| public static void                                                                                                                                                                                                                                                                                                                                   | [associateMethodsWithInterface](#associatemethodswithinterface)([InterfaceNode](../model/InterfaceNode.md) interfaceNode, [TypeNode](../model/TypeNode.md) typeNode)                                                                                                                                                                                                                              |                                                                                                                      |
-| public static void                                                                                                                                                                                                                                                                                                                                   | [processJavadocComments](#processjavadoccomments)([Api](../model/Api.md) api)                                                                                                                                                                                                                                                                                                                     |                                                                                                                      |
-| static void                                                                                                                                                                                                                                                                                                                                          | [generateLinkTextsForParams](#generatelinktextsforparams)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[ParamNode](../model/ParamNode.md)> params)                                                                                                                                                                                                    |                                                                                                                      |
-| public static void                                                                                                                                                                                                                                                                                                                                   | [generateLinkTextsForReferences](#generatelinktextsforreferences)([Node](../model/Node.md) node)                                                                                                                                                                                                                                                                                                  |                                                                                                                      |
-| public static void                                                                                                                                                                                                                                                                                                                                   | [resolveTypeRererence](#resolvetyperererence)([TypeReference](../model/TypeReference.md) typeRef)                                                                                                                                                                                                                                                                                                 | Resolve links to types referenced by a [TypeReference](../model/TypeReference.md).                                   |
-| public static void                                                                                                                                                                                                                                                                                                                                   | [resolveLink](#resolvelink)([Link](../model/Link.md) link)                                                                                                                                                                                                                                                                                                                                        |                                                                                                                      |
-| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                                                                                                                                                                           | [escape](#escape)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str)                                                                                                                                                                                                                                                                               | Escapes HTML `<` and `>` characters in a string with their corresponding HTML character entities, `&lt;` and `&gt;`. |
+| Modifier and Type                                                                                                                                                                                                                                                                                                                                    | Method                                                                                                                                                                                                                                                                                                                                                                                            | Description                                                                              |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
+| public static void                                                                                                                                                                                                                                                                                                                                   | [assembleTextAndLinks](#assembletextandlinks)([Api](../model/Api.md) a, [Context](../core/Context.md) c)                                                                                                                                                                                                                                                                                          | Generates [Text](../model/Text.md) objects for links to types and links in Javadoc text. |
+| public static void                                                                                                                                                                                                                                                                                                                                   | [processModules](#processmodules)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[ModuleNode](../model/ModuleNode.md)> modules)                                                                                                                                                                                                                         |                                                                                          |
+| public static void                                                                                                                                                                                                                                                                                                                                   | [processTypeNode](#processtypenode)([TypeNode](../model/TypeNode.md) typeNode)                                                                                                                                                                                                                                                                                                                    |                                                                                          |
+| public static void                                                                                                                                                                                                                                                                                                                                   | [processMethod](#processmethod)([MethodNode](../model/MethodNode.md) method)                                                                                                                                                                                                                                                                                                                      |                                                                                          |
+| public static void                                                                                                                                                                                                                                                                                                                                   | [processSubtypes](#processsubtypes)([TypeNode](../model/TypeNode.md) typeNode)                                                                                                                                                                                                                                                                                                                    |                                                                                          |
+| public static [Map](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Map.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html), [Pair](../model/Pair.md)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html), [Link](../model/Link.md)>> | [gatherOverriddenMethods](#gatheroverriddenmethods)([TypeNode](../model/TypeNode.md) typeNode)                                                                                                                                                                                                                                                                                                    |                                                                                          |
+| public static [Map](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Map.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html), [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Link](../model/Link.md)>>                               | [listBySupertypeName](#listbysupertypename)([Map](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Map.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html), [Pair](../model/Pair.md)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html), [Link](../model/Link.md)>> methodLookup1) |                                                                                          |
+| public static void                                                                                                                                                                                                                                                                                                                                   | [processInheritedMethods](#processinheritedmethods)([TypeNode](../model/TypeNode.md) typeNode)                                                                                                                                                                                                                                                                                                    |                                                                                          |
+| public static void                                                                                                                                                                                                                                                                                                                                   | [linkBaseMethod](#linkbasemethod)([Link](../model/Link.md) baseMethodLink, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) baseTypeName)                                                                                                                                                                                                             |                                                                                          |
+| public static void                                                                                                                                                                                                                                                                                                                                   | [associateMethodWithType](#associatemethodwithtype)([MethodNode](../model/MethodNode.md) methodNode)                                                                                                                                                                                                                                                                                              |                                                                                          |
+| public static void                                                                                                                                                                                                                                                                                                                                   | [associateMethodsWithImplementedInterfaces](#associatemethodswithimplementedinterfaces)([TypeNode](../model/TypeNode.md) typeNode)                                                                                                                                                                                                                                                                |                                                                                          |
+| public static [InterfaceNode](../model/InterfaceNode.md)                                                                                                                                                                                                                                                                                             | [getStandardInterface](#getstandardinterface)([TypeReference](../model/TypeReference.md) interfaceRef)                                                                                                                                                                                                                                                                                            |                                                                                          |
+| public static void                                                                                                                                                                                                                                                                                                                                   | [setImplementingClass](#setimplementingclass)([InterfaceNode](../model/InterfaceNode.md) interfaceNode, [TypeNode](../model/TypeNode.md) typeNode)                                                                                                                                                                                                                                                |                                                                                          |
+| public static void                                                                                                                                                                                                                                                                                                                                   | [setMethodsSpecifier](#setmethodsspecifier)([InterfaceNode](../model/InterfaceNode.md) interfaceNode, [TypeNode](../model/TypeNode.md) typeNode)                                                                                                                                                                                                                                                  |                                                                                          |
+| static void                                                                                                                                                                                                                                                                                                                                          | [resolveLinksForParams](#resolvelinksforparams)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[ParamNode](../model/ParamNode.md)> params)                                                                                                                                                                                                              |                                                                                          |
+| public static void                                                                                                                                                                                                                                                                                                                                   | [resolveLinksForReferences](#resolvelinksforreferences)([Node](../model/Node.md) node)                                                                                                                                                                                                                                                                                                            |                                                                                          |
+| public static [Text](../model/Text.md)                                                                                                                                                                                                                                                                                                               | [processInheritDocTags](#processinheritdoctags)([Text](../model/Text.md) baseMethodText, [Text](../model/Text.md) text)                                                                                                                                                                                                                                                                           |                                                                                          |
+| public static void                                                                                                                                                                                                                                                                                                                                   | [processJavadocComments](#processjavadoccomments)([Api](../model/Api.md) api)                                                                                                                                                                                                                                                                                                                     |                                                                                          |
+| public static void                                                                                                                                                                                                                                                                                                                                   | [addJavadocToRecords](#addjavadoctorecords)([Api](../model/Api.md) api)                                                                                                                                                                                                                                                                                                                           |                                                                                          |
 
 
 
@@ -91,9 +86,9 @@ This is where we decide if the label for those links shows qualified names or si
 
 ---
 
-### addJavadocToRecords
+### processModules
 
-<span style="font-family: monospace; font-size: 80%;">public static void __addJavadocToRecords__([Api](../model/Api.md) api)</span>
+<span style="font-family: monospace; font-size: 80%;">public static void __processModules__([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[ModuleNode](../model/ModuleNode.md)> modules)</span>
 
 
 
@@ -103,6 +98,15 @@ This is where we decide if the label for those links shows qualified names or si
 ### processTypeNode
 
 <span style="font-family: monospace; font-size: 80%;">public static void __processTypeNode__([TypeNode](../model/TypeNode.md) typeNode)</span>
+
+
+
+
+---
+
+### processMethod
+
+<span style="font-family: monospace; font-size: 80%;">public static void __processMethod__([MethodNode](../model/MethodNode.md) method)</span>
 
 
 
@@ -145,54 +149,9 @@ This is where we decide if the label for those links shows qualified names or si
 
 ---
 
-### processMethod
-
-<span style="font-family: monospace; font-size: 80%;">public static void __processMethod__([MethodNode](../model/MethodNode.md) method)</span>
-
-
-
-
----
-
 ### linkBaseMethod
 
 <span style="font-family: monospace; font-size: 80%;">public static void __linkBaseMethod__([Link](../model/Link.md) baseMethodLink, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) baseTypeName)</span>
-
-
-
-
----
-
-### processInheritDocTags
-
-<span style="font-family: monospace; font-size: 80%;">public static [Text](../model/Text.md) __processInheritDocTags__([Text](../model/Text.md) baseMethodText, [Text](../model/Text.md) text)</span>
-
-
-
-
----
-
-### baseTypeName
-
-<span style="font-family: monospace; font-size: 80%;">public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __baseTypeName__([MethodNode](../model/MethodNode.md) method)</span>
-
-
-
-
----
-
-### typeHasMethod
-
-<span style="font-family: monospace; font-size: 80%;">public static boolean __typeHasMethod__([TypeNode](../model/TypeNode.md) typeNode, [MethodNode](../model/MethodNode.md) methodNode)</span>
-
-
-
-
----
-
-### processModules
-
-<span style="font-family: monospace; font-size: 80%;">public static void __processModules__([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[ModuleNode](../model/ModuleNode.md)> modules)</span>
 
 
 
@@ -226,18 +185,45 @@ This is where we decide if the label for those links shows qualified names or si
 
 ---
 
-### associateClassWithInterface
+### setImplementingClass
 
-<span style="font-family: monospace; font-size: 80%;">public static void __associateClassWithInterface__([InterfaceNode](../model/InterfaceNode.md) interfaceNode, [TypeNode](../model/TypeNode.md) typeNode)</span>
+<span style="font-family: monospace; font-size: 80%;">public static void __setImplementingClass__([InterfaceNode](../model/InterfaceNode.md) interfaceNode, [TypeNode](../model/TypeNode.md) typeNode)</span>
 
 
 
 
 ---
 
-### associateMethodsWithInterface
+### setMethodsSpecifier
 
-<span style="font-family: monospace; font-size: 80%;">public static void __associateMethodsWithInterface__([InterfaceNode](../model/InterfaceNode.md) interfaceNode, [TypeNode](../model/TypeNode.md) typeNode)</span>
+<span style="font-family: monospace; font-size: 80%;">public static void __setMethodsSpecifier__([InterfaceNode](../model/InterfaceNode.md) interfaceNode, [TypeNode](../model/TypeNode.md) typeNode)</span>
+
+
+
+
+---
+
+### resolveLinksForParams
+
+<span style="font-family: monospace; font-size: 80%;">static void __resolveLinksForParams__([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[ParamNode](../model/ParamNode.md)> params)</span>
+
+
+
+
+---
+
+### resolveLinksForReferences
+
+<span style="font-family: monospace; font-size: 80%;">public static void __resolveLinksForReferences__([Node](../model/Node.md) node)</span>
+
+
+
+
+---
+
+### processInheritDocTags
+
+<span style="font-family: monospace; font-size: 80%;">public static [Text](../model/Text.md) __processInheritDocTags__([Text](../model/Text.md) baseMethodText, [Text](../model/Text.md) text)</span>
 
 
 
@@ -253,52 +239,11 @@ This is where we decide if the label for those links shows qualified names or si
 
 ---
 
-### generateLinkTextsForParams
+### addJavadocToRecords
 
-<span style="font-family: monospace; font-size: 80%;">static void __generateLinkTextsForParams__([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[ParamNode](../model/ParamNode.md)> params)</span>
-
-
+<span style="font-family: monospace; font-size: 80%;">public static void __addJavadocToRecords__([Api](../model/Api.md) api)</span>
 
 
----
-
-### generateLinkTextsForReferences
-
-<span style="font-family: monospace; font-size: 80%;">public static void __generateLinkTextsForReferences__([Node](../model/Node.md) node)</span>
-
-
-
-
----
-
-### resolveTypeRererence
-
-<span style="font-family: monospace; font-size: 80%;">public static void __resolveTypeRererence__([TypeReference](../model/TypeReference.md) typeRef)</span>
-
-Resolve links to types referenced by a [TypeReference](../model/TypeReference.md).
-
-
----
-
-### resolveLink
-
-<span style="font-family: monospace; font-size: 80%;">public static void __resolveLink__([Link](../model/Link.md) link)</span>
-
-
-
-
----
-
-### escape
-
-<span style="font-family: monospace; font-size: 80%;">public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __escape__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str)</span>
-
-Escapes HTML `<` and `>` characters in a string with their corresponding
-HTML character entities, `&lt;` and `&gt;`.
-
-**Returns:**
-
-The escaped string
 
 
 ---

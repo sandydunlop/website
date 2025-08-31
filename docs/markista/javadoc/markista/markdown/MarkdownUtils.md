@@ -36,7 +36,6 @@ Markdown links to point to the correct file, directory, or web page.
 | Modifier and Type                                                                                          | Method                                                                                                                                                                                                                 | Description                                                                                                          |
 |------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
 | public static void                                                                                         | [setContext](#setcontext)([Context](../core/Context.md) c)                                                                                                                                                             |                                                                                                                      |
-| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [fullSignature](#fullsignature)([MethodNode](../model/MethodNode.md) method)                                                                                                                                           | Formats the signature of a method as markdown.                                                                       |
 | public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [formatParams](#formatparams)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[ParamNode](../model/ParamNode.md)> params)                                                     | Formats a list of `ParamNode` objects as markdown, identifying and linking type names.                               |
 | public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [formatText](#formattext)([Text](../model/Text.md) text)                                                                                                                                                               | Formats text contained in a `Text` object as markdown.                                                               |
 | public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [formatText](#formattext)([Text](../model/Text.md) text, boolean qualifyType, boolean qualifyMember)                                                                                                                   |                                                                                                                      |
@@ -54,7 +53,7 @@ Markdown links to point to the correct file, directory, or web page.
 | public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [mdRefLink](#mdreflink)([Link](../model/Link.md) link)                                                                                                                                                                 | Creates a markdown formatted link from a [Link](../model/Link.md) object.                                            |
 | public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [mdRefLinkMethod](#mdreflinkmethod)([Link](../model/Link.md) link)                                                                                                                                                     | Creates a markdown formatted link from a [Link](../model/Link.md) object.                                            |
 | public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [mdAnchor](#mdanchor)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) phrase)                                                                                             | Converts a string to the format required for use as a Markdown anchor.                                               |
-| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [mdAnchorLink](#mdanchorlink)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) phrase)                                                                                     | Create a markdown formatted link to an anchor within the same markdown page.                                         |
+| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [mdAnchorLink](#mdanchorlink)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) anchor)                                                                                     | Create a markdown formatted link to an anchor within the same markdown page.                                         |
 | public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [mdDocumentLink](#mddocumentlink)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) docName)                                                                                | Creates a Markdown link to another Markdown document                                                                 |
 | public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [escape](#escape)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str)                                                                                                    | Escapes HTML `<` and `>` characters in a string with their corresponding HTML character entities, `&lt;` and `&gt;`. |
 | public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [inOneLine](#inoneline)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str)                                                                                              | Removes new line characters from a string, replacing them with spaces                                                |
@@ -111,19 +110,6 @@ including configuration, current module/package/type names, and reporting utilit
 <span style="font-family: monospace; font-size: 80%;">public static void __setContext__([Context](../core/Context.md) c)</span>
 
 
-
-
----
-
-### fullSignature
-
-<span style="font-family: monospace; font-size: 80%;">public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __fullSignature__([MethodNode](../model/MethodNode.md) method)</span>
-
-Formats the signature of a method as markdown.
-
-**Returns:**
-
-Markdown formatted text representing the method's signature
 
 
 ---
@@ -313,7 +299,7 @@ The string converted to match the format required by Markdown anchor links
 
 ### mdAnchorLink
 
-<span style="font-family: monospace; font-size: 80%;">public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __mdAnchorLink__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) phrase)</span>
+<span style="font-family: monospace; font-size: 80%;">public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __mdAnchorLink__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) anchor)</span>
 
 Create a markdown formatted link to an anchor within the same markdown page.
 

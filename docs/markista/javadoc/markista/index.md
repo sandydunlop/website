@@ -30,7 +30,6 @@ The module-info.java file defines the module and its exports.
     | Package                                                                | Description                                                                                                  |
     |------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
     | [io.github.sandydunlop.markista.orchestration](orchestration/index.md) | This package deals with processing text and links in the scanned model before output is generated.           |
-    | [io.github.sandydunlop.markista.common](common/index.md)               |                                                                                                              |
     | [io.github.sandydunlop.markista.core](core/index.md)                   | A package for classes that are used everywhere, by Markista and its extensions.                              |
     | [io.github.sandydunlop.markista.doclet](doclet/index.md)               | This package contains only the MarkdownDoclet class.                                                         |
     | [io.github.sandydunlop.markista.markdown](markdown/index.md)           | This package contains the classes responsible for writing the Markdown file.                                 |

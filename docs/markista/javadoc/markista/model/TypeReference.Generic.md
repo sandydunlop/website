@@ -3,7 +3,8 @@ Package [io.github.sandydunlop.markista.model](index.md)
 # Class TypeReference.Generic
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
         [io.github.sandydunlop.markista.model.TypeReference](TypeReference.md)<br/>
-                io.github.sandydunlop.markista.model.TypeReference.Generic<br/>
+                [io.github.sandydunlop.markista.model.TypeReference.TypeParameter](TypeReference.TypeParameter.md)<br/>
+                        io.github.sandydunlop.markista.model.TypeReference.Generic<br/>
 <br/>
 Enclosing Class:<br/>
     [io.github.sandydunlop.markista.model.TypeReference](TypeReference.md)
@@ -11,65 +12,47 @@ Enclosing Class:<br/>
 
 ----
 
-<span style="font-family: monospace; font-size: 80%;">public static class __TypeReference.Generic__<br/>extends [TypeReference](TypeReference.md)
+<span style="font-family: monospace; font-size: 80%;">public static class __TypeReference.Generic__<br/>extends [TypeReference.TypeParameter](TypeReference.TypeParameter.md)
 </span>
 
 
 ## Field Summary
 
-| Modifier and Type                         | Field                               | Description |
-|-------------------------------------------|-------------------------------------|-------------|
-| private boolean                           | [extendsWildcard](#extendswildcard) |             |
-| private [TypeReference](TypeReference.md) | [params](#params)                   |             |
-| private boolean                           | [wildcard](#wildcard)               |             |
+| Modifier and Type                                                     | Field             | Description |
+|-----------------------------------------------------------------------|-------------------|-------------|
+| private [TypeReference.TypeParameter](TypeReference.TypeParameter.md) | [params](#params) |             |
 
 
 
 ## Constructor Summary
 
-| Constructor             | Description |
-|-------------------------|-------------|
-| TypeReference.Generic() |             |
+| Constructor                                                                                                                     | Description |
+|---------------------------------------------------------------------------------------------------------------------------------|-------------|
+| TypeReference.Generic([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) rawTypeName) |             |
 
 
 
 ## Method Summary
 
-| Modifier and Type                        | Method                                      | Description |
-|------------------------------------------|---------------------------------------------|-------------|
-| public [TypeReference](TypeReference.md) | [getParams](#getparams)()                   |             |
-| public boolean                           | [hasExtendsWildcard](#hasextendswildcard)() |             |
-| public boolean                           | [hasWildcard](#haswildcard)()               |             |
+| Modifier and Type                                                    | Method                    | Description |
+|----------------------------------------------------------------------|---------------------------|-------------|
+| public [TypeReference.TypeParameter](TypeReference.TypeParameter.md) | [getParams](#getparams)() |             |
 
 
 ### Methods inherited from [io.github.sandydunlop.markista.model.TypeReference](TypeReference.md)
 
-[TypeReference.getTypeString](TypeReference.md#gettypestring), [TypeReference.getQualifiedName](TypeReference.md#getqualifiedname), [TypeReference.getLink](TypeReference.md#getlink), [TypeReference.setLink](TypeReference.md#setlink), [TypeReference.linkGenerics](TypeReference.md#linkgenerics), [TypeReference.asArray](TypeReference.md#asarray), [TypeReference.splitAndLink](TypeReference.md#splitandlink), [TypeReference.setQualifiedName](TypeReference.md#setqualifiedname), [TypeReference.asGeneric](TypeReference.md#asgeneric), [TypeReference.getText](TypeReference.md#gettext), [TypeReference.parse](TypeReference.md#parse), [TypeReference.empty](TypeReference.md#empty), [TypeReference.asSequence](TypeReference.md#assequence), [TypeReference.setText](TypeReference.md#settext), [TypeReference.to](TypeReference.md#to)
+[TypeReference.setFullTypeName](TypeReference.md#setfulltypename), [TypeReference.toString](TypeReference.md#tostring), [TypeReference.arrayDimensions](TypeReference.md#arraydimensions), [TypeReference.getLink](TypeReference.md#getlink), [TypeReference.stringify](TypeReference.md#stringify), [TypeReference.asGeneric](TypeReference.md#asgeneric), [TypeReference.parse](TypeReference.md#parse), [TypeReference.parseSequence](TypeReference.md#parsesequence), [TypeReference.getFullTypeName](TypeReference.md#getfulltypename), [TypeReference.parseGeneric](TypeReference.md#parsegeneric), [TypeReference.isArray](TypeReference.md#isarray), [TypeReference.asSequence](TypeReference.md#assequence), [TypeReference.getRawTypeName](TypeReference.md#getrawtypename), [TypeReference.to](TypeReference.md#to), [TypeReference.parseArray](TypeReference.md#parsearray)
+
+### Methods inherited from [io.github.sandydunlop.markista.model.TypeReference.TypeParameter](TypeReference.TypeParameter.md)
+
+[TypeReference.TypeParameter.hasWildcard](TypeReference.TypeParameter.md#haswildcard), [TypeReference.TypeParameter.hasExtendsWildcard](TypeReference.TypeParameter.md#hasextendswildcard)
 
 
 ## Field Details
 
-### extendsWildcard
-
-<span style="font-family: monospace; font-size: 80%;">private boolean __extendsWildcard__</span>
-
-
-
-
----
-
 ### params
 
-<span style="font-family: monospace; font-size: 80%;">private [TypeReference](TypeReference.md) __params__</span>
-
-
-
-
----
-
-### wildcard
-
-<span style="font-family: monospace; font-size: 80%;">private boolean __wildcard__</span>
+<span style="font-family: monospace; font-size: 80%;">private [TypeReference.TypeParameter](TypeReference.TypeParameter.md) __params__</span>
 
 
 
@@ -81,25 +64,7 @@ Enclosing Class:<br/>
 
 ### getParams
 
-<span style="font-family: monospace; font-size: 80%;">public [TypeReference](TypeReference.md) __getParams__()</span>
-
-
-
-
----
-
-### hasExtendsWildcard
-
-<span style="font-family: monospace; font-size: 80%;">public boolean __hasExtendsWildcard__()</span>
-
-
-
-
----
-
-### hasWildcard
-
-<span style="font-family: monospace; font-size: 80%;">public boolean __hasWildcard__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [TypeReference.TypeParameter](TypeReference.TypeParameter.md) __getParams__()</span>
 
 
 

@@ -27,10 +27,10 @@ The table can be rendered as Markdown text to a Writer, optionally with indentat
 
 ## Field Summary
 
-| Modifier and Type                                                                                                                                                                        | Field               | Description |
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------|
-| [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[MarkdownTable.Column](MarkdownTable.Column.md)>                                                | [columns](#columns) |             |
-| [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)[]> | [rows](#rows)       |             |
+| Modifier and Type                                                                                                                                                                            | Field               | Description |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------|
+| [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[MarkdownTable.Column](MarkdownTable.Column.md)>                                                    | [columns](#columns) |             |
+| [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[String[]](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String[].html)[]> | [rows](#rows)       |             |
 
 
 
@@ -44,12 +44,12 @@ The table can be rendered as Markdown text to a Writer, optionally with indentat
 
 ## Method Summary
 
-| Modifier and Type                        | Method                                                                                                                           | Description                                                                           |
-|------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
-| public [MarkdownTable](MarkdownTable.md) | [addColumn](#addcolumn)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) heading)    | Adds a column with the specified heading to the table.                                |
-| public [MarkdownTable](MarkdownTable.md) | [addRow](#addrow)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)[] valueStrings)   | Adds a row of data to the table.                                                      |
-| public void                              | [render](#render)([Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) writer)             | Renders the table as Markdown text without any indentation.                           |
-| public void                              | [render](#render)([Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) writer, int indent) | Renders the table as Markdown text with a given indentation level (number of spaces). |
+| Modifier and Type                        | Method                                                                                                                             | Description                                                                           |
+|------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
+| public [MarkdownTable](MarkdownTable.md) | [addColumn](#addcolumn)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) heading)      | Adds a column with the specified heading to the table.                                |
+| public [MarkdownTable](MarkdownTable.md) | [addRow](#addrow)([String[]](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String[].html)[] valueStrings) | Adds a row of data to the table.                                                      |
+| public void                              | [render](#render)([Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) writer)               | Renders the table as Markdown text without any indentation.                           |
+| public void                              | [render](#render)([Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) writer, int indent)   | Renders the table as Markdown text with a given indentation level (number of spaces). |
 
 
 
@@ -66,7 +66,7 @@ The table can be rendered as Markdown text to a Writer, optionally with indentat
 
 ### rows
 
-<span style="font-family: monospace; font-size: 80%;">[List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)[]> __rows__</span>
+<span style="font-family: monospace; font-size: 80%;">[List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[String[]](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String[].html)[]> __rows__</span>
 
 
 
@@ -91,7 +91,7 @@ The table (this) to allow method chaining.
 
 ### addRow
 
-<span style="font-family: monospace; font-size: 80%;">public [MarkdownTable](MarkdownTable.md) __addRow__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)[] valueStrings)</span>
+<span style="font-family: monospace; font-size: 80%;">public [MarkdownTable](MarkdownTable.md) __addRow__([String[]](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String[].html)[] valueStrings)</span>
 
 Adds a row of data to the table.
 The number of values should match or be less than the number of columns.

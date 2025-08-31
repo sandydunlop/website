@@ -202,6 +202,10 @@ unnamed module contains no packages this is a no-op.
 
 
 
+**Overrides:**
+
+[ElementScanner9.scan](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner9.html#scan)
+
 
 ---
 
@@ -212,6 +216,10 @@ unnamed module contains no packages this is a no-op.
 Visit a module element and create or reuse a ModuleNode for it.
 The module's module-info.java presence and source path are discovered,
 directives are added, and the module is registered with the Api model.
+
+**Overrides:**
+
+[ElementScanner9.visitModule](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner9.html#visitModule)
 
 
 ---
@@ -224,6 +232,10 @@ Visit a package element and, if it was included, create a PackageNode and
 attach it to the current module and to the Api model. Package source path
 and documentation are configured via TypeUtils helpers.
 
+**Overrides:**
+
+[ElementScanner9.visitPackage](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner9.html#visitPackage)
+
 
 ---
 
@@ -234,6 +246,10 @@ and documentation are configured via TypeUtils helpers.
 Visit a type element (class/interface/enum/annotation) and create a TypeNode
 representation if the type is included and TypeUtils considers it part of the API.
 This also records the source file path when available.
+
+**Overrides:**
+
+[ElementScanner9.visitType](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner9.html#visitType)
 
 
 ---
@@ -246,6 +262,10 @@ Visit an executable element (method or constructor), convert it to a MethodNode
 if included, and populate Javadoc-derived fields such as first sentence, body,
 return description, references and since information using TypeUtils helpers.
 
+**Overrides:**
+
+[ElementScanner9.visitExecutable](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner9.html#visitExecutable)
+
 
 ---
 
@@ -255,6 +275,10 @@ return description, references and since information using TypeUtils helpers.
 
 Visit a variable element and, if it is a field included in the API, convert it
 to a FieldNode, record any constant value, and populate documentation and modifiers.
+
+**Overrides:**
+
+[ElementScanner9.visitVariable](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner9.html#visitVariable)
 
 
 ---
@@ -266,6 +290,10 @@ to a FieldNode, record any constant value, and populate documentation and modifi
 Visit a type parameter. This method delegates to scanning of enclosed elements
 so that bounds and other nested elements are visited.
 
+**Overrides:**
+
+[ElementScanner9.visitTypeParameter](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner9.html#visitTypeParameter)
+
 
 ---
 
@@ -274,6 +302,10 @@ so that bounds and other nested elements are visited.
 <span style="font-family: monospace; font-size: 80%;">public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) __visitRecordComponent__([RecordComponentElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/RecordComponentElement.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)</span>
 
 Visit a record component.
+
+**Overrides:**
+
+[ElementScanner9.visitRecordComponent](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner9.html#visitRecordComponent)
 
 
 ---

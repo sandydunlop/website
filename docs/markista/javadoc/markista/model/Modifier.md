@@ -54,7 +54,7 @@ representations.
 
 | Modifier and Type                                                                                   | Method                                                                                                                 | Description                                         |
 |-----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------|
-| public static [Modifier](Modifier.md)[]                                                             | [values](#values)()                                                                                                    |                                                     |
+| public static io.github.sandydunlop.markista.model.Modifier[][]                                     | [values](#values)()                                                                                                    |                                                     |
 | public static [Modifier](Modifier.md)                                                               | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |                                                     |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [toString](#tostring)()                                                                                                | Returns the string representation of this modifier. |
 
@@ -187,7 +187,7 @@ The string representation of the modifier.
 
 ### values
 
-<span style="font-family: monospace; font-size: 80%;">public static [Modifier](Modifier.md)[] __values__()</span>
+<span style="font-family: monospace; font-size: 80%;">public static io.github.sandydunlop.markista.model.Modifier[][] __values__()</span>
 
 
 

@@ -9,7 +9,10 @@ before output is generated.
 
     | Class                             | Description                                                                                                                                        |
     |-----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+    | [JreUtils](JreUtils.md)           |                                                                                                                                                    |
     | [LinkResolver](LinkResolver.md)   | `LinkResolver` calculates the paths for Markdown documents to link between different packages and to URLs of external packages and their contents. |
+    | [ModelUtils](ModelUtils.md)       |                                                                                                                                                    |
+    | [Name](Name.md)                   |                                                                                                                                                    |
     | [TextAssembler](TextAssembler.md) |                                                                                                                                                    |
 
 
@@ -17,7 +20,10 @@ before output is generated.
 
     | Class                             | Description                                                                                                                                        |
     |-----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+    | [JreUtils](JreUtils.md)           |                                                                                                                                                    |
     | [LinkResolver](LinkResolver.md)   | `LinkResolver` calculates the paths for Markdown documents to link between different packages and to URLs of external packages and their contents. |
+    | [ModelUtils](ModelUtils.md)       |                                                                                                                                                    |
+    | [Name](Name.md)                   |                                                                                                                                                    |
     | [TextAssembler](TextAssembler.md) |                                                                                                                                                    |
 
 

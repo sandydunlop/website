@@ -49,6 +49,7 @@ Contains information about a method being documented
 | public [TypeReference](TypeReference.md)                                                                                   | [getReturnType](#getreturntype)()                                                                                                 | Returns the return type of this method.                                                        |
 | public void                                                                                                                | [addParam](#addparam)([ParamNode](ParamNode.md) param)                                                                            | Adds a parameter to this method.                                                               |
 | public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[ParamNode](ParamNode.md)> | [getParams](#getparams)()                                                                                                         | Returns the list of parameters of this method.                                                 |
+| public io.github.sandydunlop.markista.model.TypeReference[][]                                                              | [getParamTypes](#getparamtypes)()                                                                                                 |                                                                                                |
 | public void                                                                                                                | [addThrownType](#addthrowntype)([Link](Link.md) name)                                                                             | Adds an exception type that this method declares it throws.                                    |
 | public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Link](Link.md)>           | [getThrownTypes](#getthrowntypes)()                                                                                               | Returns the list of exception types declared by this method.                                   |
 | public void                                                                                                                | [setOwnerName](#setownername)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) owner) | Sets the owning type (class/interface) of this method.                                         |
@@ -57,16 +58,16 @@ Contains information about a method being documented
 | public [Link](Link.md)                                                                                                     | [getSpecifiedBy](#getspecifiedby)()                                                                                               | Returns the name of the interface or specification this method is specified by.                |
 | public void                                                                                                                | [setReturnDescription](#setreturndescription)([Text](Text.md) text)                                                               | Sets the description of the method's return value.                                             |
 | public [Text](Text.md)                                                                                                     | [getReturnDescription](#getreturndescription)()                                                                                   | Returns the description of the method's return value.                                          |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                        | [signature](#signature)()                                                                                                         | Computes and returns the method signature string, including return type, name, and parameters. |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                        | [simplifiedSignature](#simplifiedsignature)()                                                                                     | Computes and returns the method signature string, including return type, name, and parameters. |
 
-
-### Methods inherited from [io.github.sandydunlop.markista.model.Node](Node.md)
-
-[Node.getReferences](Node.md#getreferences), [Node.setDeprecationText](Node.md#setdeprecationtext), [Node.getBody](Node.md#getbody), [Node.setFirstSentence](Node.md#setfirstsentence), [Node.setDeprecation](Node.md#setdeprecation), [Node.getDeprecation](Node.md#getdeprecation), [Node.getUUID](Node.md#getuuid), [Node.getFullBody](Node.md#getfullbody), [Node.setReferences](Node.md#setreferences), [Node.getKind](Node.md#getkind), [Node.getSince](Node.md#getsince), [Node.setFullBody](Node.md#setfullbody), [Node.setSince](Node.md#setsince), [Node.setBody](Node.md#setbody), [Node.getFirstSentence](Node.md#getfirstsentence), [Node.setKind](Node.md#setkind), [Node.getDeprecationText](Node.md#getdeprecationtext)
 
 ### Methods inherited from [io.github.sandydunlop.markista.model.AbstractMember](AbstractMember.md)
 
 [AbstractMember.addAppliedAnnotation](AbstractMember.md#addappliedannotation), [AbstractMember.addModifier](AbstractMember.md#addmodifier), [AbstractMember.setQualifiedName](AbstractMember.md#setqualifiedname), [AbstractMember.getModifiers](AbstractMember.md#getmodifiers), [AbstractMember.getAppliedAnnotations](AbstractMember.md#getappliedannotations), [AbstractMember.getQualifiedName](AbstractMember.md#getqualifiedname), [AbstractMember.setSimpleName](AbstractMember.md#setsimplename), [AbstractMember.getSimpleName](AbstractMember.md#getsimplename), [AbstractMember.getModifiersString](AbstractMember.md#getmodifiersstring)
+
+### Methods inherited from [io.github.sandydunlop.markista.model.Node](Node.md)
+
+[Node.getReferences](Node.md#getreferences), [Node.setDeprecationText](Node.md#setdeprecationtext), [Node.getBody](Node.md#getbody), [Node.setFirstSentence](Node.md#setfirstsentence), [Node.setDeprecation](Node.md#setdeprecation), [Node.getDeprecation](Node.md#getdeprecation), [Node.getUUID](Node.md#getuuid), [Node.getFullBody](Node.md#getfullbody), [Node.setReferences](Node.md#setreferences), [Node.getKind](Node.md#getkind), [Node.getSince](Node.md#getsince), [Node.setFullBody](Node.md#setfullbody), [Node.setSince](Node.md#setsince), [Node.setBody](Node.md#setbody), [Node.getFirstSentence](Node.md#getfirstsentence), [Node.setKind](Node.md#setkind), [Node.getDeprecationText](Node.md#getdeprecationtext)
 
 
 ## Field Details
@@ -221,6 +222,15 @@ List of ParamNode objects representing the method parameters.
 
 ---
 
+### getParamTypes
+
+<span style="font-family: monospace; font-size: 80%;">public io.github.sandydunlop.markista.model.TypeReference[][] __getParamTypes__()</span>
+
+
+
+
+---
+
 ### addThrownType
 
 <span style="font-family: monospace; font-size: 80%;">public void __addThrownType__([Link](Link.md) name)</span>
@@ -309,9 +319,9 @@ a Text object containing the return description.
 
 ---
 
-### signature
+### simplifiedSignature
 
-<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __signature__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __simplifiedSignature__()</span>
 
 Computes and returns the method signature string, including return type, name, and parameters.
 Example format: "java.lang.String methodName(int,java.util.List)"

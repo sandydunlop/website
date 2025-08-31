@@ -34,10 +34,10 @@ Enum representing the deprecation status of an element
 
 ## Method Summary
 
-| Modifier and Type                             | Method                                                                                                                 | Description |
-|-----------------------------------------------|------------------------------------------------------------------------------------------------------------------------|-------------|
-| public static [Deprecation](Deprecation.md)[] | [values](#values)()                                                                                                    |             |
-| public static [Deprecation](Deprecation.md)   | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
+| Modifier and Type                                                  | Method                                                                                                                 | Description |
+|--------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|-------------|
+| public static io.github.sandydunlop.markista.model.Deprecation[][] | [values](#values)()                                                                                                    |             |
+| public static [Deprecation](Deprecation.md)                        | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
 
 
 
@@ -75,7 +75,7 @@ public static final  DEPRECATED
 
 ### values
 
-<span style="font-family: monospace; font-size: 80%;">public static [Deprecation](Deprecation.md)[] __values__()</span>
+<span style="font-family: monospace; font-size: 80%;">public static io.github.sandydunlop.markista.model.Deprecation[][] __values__()</span>
 
 
 

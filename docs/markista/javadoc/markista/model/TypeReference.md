@@ -8,7 +8,7 @@ All Implemented Interfaces:<br/>
     [Serializable](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Serializable.html)
 
 Direct Known Subtypes:<br/>
-    [TypeReference.Generic](TypeReference.Generic.md), [TypeReference.Array](TypeReference.Array.md), [TypeReference.Sequence](TypeReference.Sequence.md)
+    [TypeReference.TypeParameter](TypeReference.TypeParameter.md)
 
 
 ----
@@ -18,11 +18,11 @@ Direct Known Subtypes:<br/>
 
 ## Nested Class Summary
 
-| Modifier and Type | Class                                               | Description |
-|-------------------|-----------------------------------------------------|-------------|
-| public static     | [TypeReference.Array](TypeReference.Array.md)       |             |
-| public static     | [TypeReference.Generic](TypeReference.Generic.md)   |             |
-| public static     | [TypeReference.Sequence](TypeReference.Sequence.md) |             |
+| Modifier and Type | Class                                                         | Description |
+|-------------------|---------------------------------------------------------------|-------------|
+| public static     | [TypeReference.Generic](TypeReference.Generic.md)             |             |
+| public static     | [TypeReference.Sequence](TypeReference.Sequence.md)           |             |
+| public static     | [TypeReference.TypeParameter](TypeReference.TypeParameter.md) |             |
 
 
 
@@ -30,11 +30,11 @@ Direct Known Subtypes:<br/>
 
 | Modifier and Type                                                                                      | Field                                 | Description |
 |--------------------------------------------------------------------------------------------------------|---------------------------------------|-------------|
-| private [Link](Link.md)                                                                                | [link](#link)                         |             |
-| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)   | [qualifiedName](#qualifiedname)       |             |
+| protected int                                                                                          | [arrayDimensions](#arraydimensions)   |             |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)   | [fullTypeName](#fulltypename)         |             |
+| protected [Link](Link.md)                                                                              | [link](#link)                         |             |
+| protected [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [rawTypeName](#rawtypename)           |             |
 | private static final long                                                                              | [serialVersionUID](#serialversionuid) |             |
-| private [Text](Text.md)                                                                                | [text](#text)                         |             |
-| protected [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [typeString](#typestring)             |             |
 
 
 
@@ -48,40 +48,58 @@ Direct Known Subtypes:<br/>
 
 ## Method Summary
 
-| Modifier and Type                                                                                   | Method                                                                                                                                   | Description |
-|-----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|-------------|
-| public static [TypeReference](TypeReference.md)                                                     | [to](#to)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) typeName)                         |             |
-| public static [TypeReference](TypeReference.md)                                                     | [empty](#empty)()                                                                                                                        |             |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getTypeString](#gettypestring)()                                                                                                        |             |
-| public void                                                                                         | [setLink](#setlink)([Link](Link.md) ref)                                                                                                 |             |
-| public [Link](Link.md)                                                                              | [getLink](#getlink)()                                                                                                                    |             |
-| public void                                                                                         | [setText](#settext)([Text](Text.md) text)                                                                                                |             |
-| public [Text](Text.md)                                                                              | [getText](#gettext)()                                                                                                                    |             |
-| public void                                                                                         | [setQualifiedName](#setqualifiedname)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getQualifiedName](#getqualifiedname)()                                                                                                  |             |
-| public [TypeReference.Array](TypeReference.Array.md)                                                | [asArray](#asarray)()                                                                                                                    |             |
-| public [TypeReference.Generic](TypeReference.Generic.md)                                            | [asGeneric](#asgeneric)()                                                                                                                |             |
-| public [TypeReference.Sequence](TypeReference.Sequence.md)                                          | [asSequence](#assequence)()                                                                                                              |             |
-| private static [TypeReference](TypeReference.md)                                                    | [parse](#parse)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) targetName)                 |             |
-| private static [TypeReference](TypeReference.md)                                                    | [linkGenerics](#linkgenerics)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str)          |             |
-| public static [TypeReference](TypeReference.md)                                                     | [splitAndLink](#splitandlink)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) typesString)  |             |
+| Modifier and Type                                                                                    | Method                                                                                                                                                                                                    | Description |
+|------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------|
+| public boolean                                                                                       | [isArray](#isarray)()                                                                                                                                                                                     |             |
+| public int                                                                                           | [arrayDimensions](#arraydimensions)()                                                                                                                                                                     |             |
+| public static [TypeReference](TypeReference.md)                                                      | [to](#to)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) fullTypeName)                                                                                      |             |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)  | [getRawTypeName](#getrawtypename)()                                                                                                                                                                       |             |
+| public [Link](Link.md)                                                                               | [getLink](#getlink)()                                                                                                                                                                                     |             |
+| public void                                                                                          | [setFullTypeName](#setfulltypename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)                                                                    |             |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)  | [getFullTypeName](#getfulltypename)()                                                                                                                                                                     |             |
+| public [TypeReference.Generic](TypeReference.Generic.md)                                             | [asGeneric](#asgeneric)()                                                                                                                                                                                 |             |
+| public [TypeReference.Sequence](TypeReference.Sequence.md)                                           | [asSequence](#assequence)()                                                                                                                                                                               |             |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)  | [toString](#tostring)()                                                                                                                                                                                   |             |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [stringify](#stringify)([TypeReference](TypeReference.md) typeReference)                                                                                                                                  |             |
+| private static [TypeReference.TypeParameter](TypeReference.TypeParameter.md)                         | [parse](#parse)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) typeName)                                                                                    |             |
+| private static [TypeReference.TypeParameter](TypeReference.TypeParameter.md)                         | [parseSequence](#parsesequence)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) before, [TypeReference.TypeParameter](TypeReference.TypeParameter.md) inner) |             |
+| private static [TypeReference.TypeParameter](TypeReference.TypeParameter.md)                         | [parseGeneric](#parsegeneric)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str)                                                                           |             |
+| private static void                                                                                  | [parseArray](#parsearray)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str, [TypeReference.TypeParameter](TypeReference.TypeParameter.md) type)           |             |
 
 
 
 ## Field Details
 
-### link
+### arrayDimensions
 
-<span style="font-family: monospace; font-size: 80%;">private [Link](Link.md) __link__</span>
+<span style="font-family: monospace; font-size: 80%;">protected int __arrayDimensions__</span>
 
 
 
 
 ---
 
-### qualifiedName
+### fullTypeName
 
-<span style="font-family: monospace; font-size: 80%;">private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __qualifiedName__</span>
+<span style="font-family: monospace; font-size: 80%;">private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __fullTypeName__</span>
+
+
+
+
+---
+
+### link
+
+<span style="font-family: monospace; font-size: 80%;">protected [Link](Link.md) __link__</span>
+
+
+
+
+---
+
+### rawTypeName
+
+<span style="font-family: monospace; font-size: 80%;">protected [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __rawTypeName__</span>
 
 
 
@@ -103,57 +121,39 @@ Direct Known Subtypes:<br/>
 
 ---
 
-### text
-
-<span style="font-family: monospace; font-size: 80%;">private [Text](Text.md) __text__</span>
-
-
-
-
----
-
-### typeString
-
-<span style="font-family: monospace; font-size: 80%;">protected [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __typeString__</span>
-
-
-
-
----
-
 
 ## Method Details
 
+### isArray
+
+<span style="font-family: monospace; font-size: 80%;">public boolean __isArray__()</span>
+
+
+
+
+---
+
+### arrayDimensions
+
+<span style="font-family: monospace; font-size: 80%;">public int __arrayDimensions__()</span>
+
+
+
+
+---
+
 ### to
 
-<span style="font-family: monospace; font-size: 80%;">public static [TypeReference](TypeReference.md) __to__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) typeName)</span>
+<span style="font-family: monospace; font-size: 80%;">public static [TypeReference](TypeReference.md) __to__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) fullTypeName)</span>
 
 
 
 
 ---
 
-### empty
+### getRawTypeName
 
-<span style="font-family: monospace; font-size: 80%;">public static [TypeReference](TypeReference.md) __empty__()</span>
-
-
-
-
----
-
-### getTypeString
-
-<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getTypeString__()</span>
-
-
-
-
----
-
-### setLink
-
-<span style="font-family: monospace; font-size: 80%;">public void __setLink__([Link](Link.md) ref)</span>
+<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getRawTypeName__()</span>
 
 
 
@@ -169,45 +169,18 @@ Direct Known Subtypes:<br/>
 
 ---
 
-### setText
+### setFullTypeName
 
-<span style="font-family: monospace; font-size: 80%;">public void __setText__([Text](Text.md) text)</span>
-
-
-
-
----
-
-### getText
-
-<span style="font-family: monospace; font-size: 80%;">public [Text](Text.md) __getText__()</span>
+<span style="font-family: monospace; font-size: 80%;">public void __setFullTypeName__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)</span>
 
 
 
 
 ---
 
-### setQualifiedName
+### getFullTypeName
 
-<span style="font-family: monospace; font-size: 80%;">public void __setQualifiedName__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)</span>
-
-
-
-
----
-
-### getQualifiedName
-
-<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getQualifiedName__()</span>
-
-
-
-
----
-
-### asArray
-
-<span style="font-family: monospace; font-size: 80%;">public [TypeReference.Array](TypeReference.Array.md) __asArray__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getFullTypeName__()</span>
 
 
 
@@ -232,27 +205,54 @@ Direct Known Subtypes:<br/>
 
 ---
 
+### toString
+
+<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __toString__()</span>
+
+
+
+
+---
+
+### stringify
+
+<span style="font-family: monospace; font-size: 80%;">private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __stringify__([TypeReference](TypeReference.md) typeReference)</span>
+
+
+
+
+---
+
 ### parse
 
-<span style="font-family: monospace; font-size: 80%;">private static [TypeReference](TypeReference.md) __parse__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) targetName)</span>
+<span style="font-family: monospace; font-size: 80%;">private static [TypeReference.TypeParameter](TypeReference.TypeParameter.md) __parse__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) typeName)</span>
 
 
 
 
 ---
 
-### linkGenerics
+### parseSequence
 
-<span style="font-family: monospace; font-size: 80%;">private static [TypeReference](TypeReference.md) __linkGenerics__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str)</span>
+<span style="font-family: monospace; font-size: 80%;">private static [TypeReference.TypeParameter](TypeReference.TypeParameter.md) __parseSequence__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) before, [TypeReference.TypeParameter](TypeReference.TypeParameter.md) inner)</span>
 
 
 
 
 ---
 
-### splitAndLink
+### parseGeneric
 
-<span style="font-family: monospace; font-size: 80%;">public static [TypeReference](TypeReference.md) __splitAndLink__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) typesString)</span>
+<span style="font-family: monospace; font-size: 80%;">private static [TypeReference.TypeParameter](TypeReference.TypeParameter.md) __parseGeneric__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str)</span>
+
+
+
+
+---
+
+### parseArray
+
+<span style="font-family: monospace; font-size: 80%;">private static void __parseArray__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str, [TypeReference.TypeParameter](TypeReference.TypeParameter.md) type)</span>
 
 
 
