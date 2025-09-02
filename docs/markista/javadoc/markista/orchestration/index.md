@@ -7,23 +7,27 @@ before output is generated.
 
 === "All Classes and Interfaces"
 
-    | Class                             | Description                                                                                                                                        |
-    |-----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-    | [JreUtils](JreUtils.md)           |                                                                                                                                                    |
-    | [LinkResolver](LinkResolver.md)   | `LinkResolver` calculates the paths for Markdown documents to link between different packages and to URLs of external packages and their contents. |
-    | [ModelUtils](ModelUtils.md)       |                                                                                                                                                    |
-    | [Name](Name.md)                   |                                                                                                                                                    |
-    | [TextAssembler](TextAssembler.md) |                                                                                                                                                    |
+    | Class                             | Description                                            |
+    |-----------------------------------|--------------------------------------------------------|
+    | [JreUtils](JreUtils.md)           |                                                        |
+    | [LinkResolver](LinkResolver.md)   |                                                        |
+    | [ModelUtils](ModelUtils.md)       | Utilities for rxtrating information from the API model |
+    | [ModulePath](ModulePath.md)       |                                                        |
+    | [Name](Name.md)                   |                                                        |
+    | [Relativizer](Relativizer.md)     |                                                        |
+    | [TextAssembler](TextAssembler.md) |                                                        |
 
 
 === "Classes"
 
-    | Class                             | Description                                                                                                                                        |
-    |-----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-    | [JreUtils](JreUtils.md)           |                                                                                                                                                    |
-    | [LinkResolver](LinkResolver.md)   | `LinkResolver` calculates the paths for Markdown documents to link between different packages and to URLs of external packages and their contents. |
-    | [ModelUtils](ModelUtils.md)       |                                                                                                                                                    |
-    | [Name](Name.md)                   |                                                                                                                                                    |
-    | [TextAssembler](TextAssembler.md) |                                                                                                                                                    |
+    | Class                             | Description                                            |
+    |-----------------------------------|--------------------------------------------------------|
+    | [JreUtils](JreUtils.md)           |                                                        |
+    | [LinkResolver](LinkResolver.md)   |                                                        |
+    | [ModelUtils](ModelUtils.md)       | Utilities for rxtrating information from the API model |
+    | [ModulePath](ModulePath.md)       |                                                        |
+    | [Name](Name.md)                   |                                                        |
+    | [Relativizer](Relativizer.md)     |                                                        |
+    | [TextAssembler](TextAssembler.md) |                                                        |
 
 

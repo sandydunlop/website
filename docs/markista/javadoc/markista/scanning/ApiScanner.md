@@ -15,7 +15,7 @@ Package [io.github.sandydunlop.markista.scanning](index.md)
 <span style="font-family: monospace; font-size: 80%;">public class __ApiScanner__<br/>extends [ElementScanner9](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/util/ElementScanner9.html)<[Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html), [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html)>
 </span>
 
-A scanner that walks the language model elements provided by the Javadoc doclet 
+A scanner that walks the language model elements provided by the Javadoc doclet
 environment and builds an Api model representing the discovered modules, packages,
 types, and members. The scanner delegates most element-to-model conversion logic
 to TypeUtils, and it records a set of included element names so filtering can be
@@ -33,8 +33,8 @@ being populated and updates the Api instance as elements are encountered.
 | [Api](../model/Api.md)                                                                                                                                                                       | [api](#api)                     | The Api model being populated by this scanner.                                       |
 | private final [Context](../core/Context.md)                                                                                                                                                  | [ctx](#ctx)                     | The shared Context singleton providing logging and configuration access.             |
 | private [ModuleNode](../model/ModuleNode.md)                                                                                                                                                 | [currentModule](#currentmodule) | The module node currently being populated during a scan.                             |
-| private final [DocletEnvironment](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/DocletEnvironment.html)                                                  | [environment](#environment)     | The doclet environment used to obtain Javadoc doc trees and element utilities.       |
 | [HashSet](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/HashSet.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)> | [includedNames](#includednames) | A set of fully-qualified names (packages and types) included in the scan invocation. |
+| private [ElementModeller](../modelling/ElementModeller.md)                                                                                                                                   | [modeller](#modeller)           |                                                                                      |
 | private final [ModuleNode](../model/ModuleNode.md)                                                                                                                                           | [unnamedModule](#unnamedmodule) | The unnamed module node reprsenting package elements not in an explicit module.      |
 
 
@@ -55,7 +55,7 @@ being populated and updates the Api instance as elements are encountered.
 | private void                                                                                    | [processIncludedElements](#processincludedelements)([Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<? extends [Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html)> elements)                      | Populate the includedNames set from the provided element set.                                                                                                                                                                                |
 | boolean                                                                                         | [isIncludedElement](#isincludedelement)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName)                                                                                                                                                    | Check whether an element with the given qualifiedName was explicitly included in the Javadoc invocation (via the elements set passed to the doclet).                                                                                         |
 | boolean                                                                                         | [isIncludedElement](#isincludedelement)([Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html) e)                                                                                                                                           | Determine whether an Element should be treated as included by looking up the enclosing type name and checking the includedNames set.                                                                                                         |
-| private void                                                                                    | [calculateUnnamedModuleSourcePath](#calculateunnamedmodulesourcepath)()                                                                                                                                                                                                                                | Derive an appropriate source root for the unnamed module by inspecting the source path of the first package contained in the unnamed module.                                                                                                 |
+| void                                                                                            | [calculateUnnamedModuleSourcePath](#calculateunnamedmodulesourcepath)()                                                                                                                                                                                                                                | Derive an appropriate source root for the unnamed module by inspecting the source path of the first package contained in the unnamed module.                                                                                                 |
 | public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) | [scan](#scan)([Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)                                                               |                                                                                                                                                                                                                                              |
 | public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) | [visitModule](#visitmodule)([ModuleElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ModuleElement.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)                                     | Visit a module element and create or reuse a ModuleNode for it.                                                                                                                                                                              |
 | public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) | [visitPackage](#visitpackage)([PackageElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/PackageElement.html) ee, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)                                | Visit a package element and, if it was included, create a PackageNode and attach it to the current module and to the Api model.                                                                                                              |
@@ -64,7 +64,9 @@ being populated and updates the Api instance as elements are encountered.
 | public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) | [visitVariable](#visitvariable)([VariableElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/VariableElement.html) ve, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)                            | Visit a variable element and, if it is a field included in the API, convert it to a FieldNode, record any constant value, and populate documentation and modifiers.                                                                          |
 | public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) | [visitTypeParameter](#visittypeparameter)([TypeParameterElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/TypeParameterElement.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)         | Visit a type parameter.                                                                                                                                                                                                                      |
 | public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) | [visitRecordComponent](#visitrecordcomponent)([RecordComponentElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/RecordComponentElement.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth) | Visit a record component.                                                                                                                                                                                                                    |
-| public [File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html)   | [getModuleInfoFile](#getmoduleinfofile)([ModuleElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ModuleElement.html) moduleElement)                                                                                                                   | Retrieve the module-info.java file for the given ModuleElement if available.                                                                                                                                                                 |
+| public void                                                                                     | [addConstantFieldValuesReference](#addconstantfieldvaluesreference)([ModuleNode](../model/ModuleNode.md) moduleNode)                                                                                                                                                                                   | Adds references to constant field values from classes in the API to the provided module node.                                                                                                                                                |
+| public void                                                                                     | [markCustomAnnotations](#markcustomannotations)()                                                                                                                                                                                                                                                      | Iterates over all annotations in the API, identifying ones that are custom and those that have the `@Documented` meta-annotation and marking them as such.                                                                                   |
+| public boolean                                                                                  | [isIncludedInApi](#isincludedinapi)([Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html) e)                                                                                                                                               | Returns true if the element should be included in the public API documentation based on its modifiers and configuration.                                                                                                                     |
 
 
 
@@ -97,20 +99,20 @@ The module node currently being populated during a scan. private ModuleNode curr
 
 ---
 
-### environment
-
-<span style="font-family: monospace; font-size: 80%;">private final [DocletEnvironment](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/DocletEnvironment.html) __environment__</span>
-
-The doclet environment used to obtain Javadoc doc trees and element utilities.
-
-
----
-
 ### includedNames
 
 <span style="font-family: monospace; font-size: 80%;">[HashSet](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/HashSet.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)> __includedNames__</span>
 
 A set of fully-qualified names (packages and types) included in the scan invocation.
+
+
+---
+
+### modeller
+
+<span style="font-family: monospace; font-size: 80%;">private [ElementModeller](../modelling/ElementModeller.md) __modeller__</span>
+
+
 
 
 ---
@@ -187,7 +189,7 @@ true if the element's enclosing type was included in the elements set
 
 ### calculateUnnamedModuleSourcePath
 
-<span style="font-family: monospace; font-size: 80%;">private void __calculateUnnamedModuleSourcePath__()</span>
+<span style="font-family: monospace; font-size: 80%;">void __calculateUnnamedModuleSourcePath__()</span>
 
 Derive an appropriate source root for the unnamed module by inspecting the
 source path of the first package contained in the unnamed module. If the
@@ -310,17 +312,34 @@ Visit a record component.
 
 ---
 
-### getModuleInfoFile
+### addConstantFieldValuesReference
 
-<span style="font-family: monospace; font-size: 80%;">public [File](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/File.html) __getModuleInfoFile__([ModuleElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/ModuleElement.html) moduleElement)</span>
+<span style="font-family: monospace; font-size: 80%;">public void __addConstantFieldValuesReference__([ModuleNode](../model/ModuleNode.md) moduleNode)</span>
 
-Retrieve the module-info.java file for the given ModuleElement if available.
-This helper inspects the JavaFileObject associated with the module and returns
-a File when the file name ends with "module-info.java".
+Adds references to constant field values from classes in the API to the provided module node.
+
+
+---
+
+### markCustomAnnotations
+
+<span style="font-family: monospace; font-size: 80%;">public void __markCustomAnnotations__()</span>
+
+Iterates over all annotations in the API, identifying ones that are custom and
+those that have the `@Documented` meta-annotation and marking them as such.
+
+
+---
+
+### isIncludedInApi
+
+<span style="font-family: monospace; font-size: 80%;">public boolean __isIncludedInApi__([Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html) e)</span>
+
+Returns true if the element should be included in the public API documentation based on its modifiers and configuration.
 
 **Returns:**
 
-a File pointing to the module-info.java source or null if none found
+true if element is public or protected or private member documentation is configured; false otherwise.
 
 
 ---

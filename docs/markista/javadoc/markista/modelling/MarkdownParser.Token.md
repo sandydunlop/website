@@ -1,11 +1,11 @@
-Package [io.github.sandydunlop.markista.scanning](index.md)
+Package [io.github.sandydunlop.markista.modelling](index.md)
 
 # Class MarkdownParser.Token
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
-        io.github.sandydunlop.markista.scanning.MarkdownParser.Token<br/>
+        io.github.sandydunlop.markista.modelling.MarkdownParser.Token<br/>
 <br/>
 Enclosing Class:<br/>
-    [io.github.sandydunlop.markista.scanning.MarkdownParser](MarkdownParser.md)
+    [io.github.sandydunlop.markista.modelling.MarkdownParser](MarkdownParser.md)
 
 
 ----

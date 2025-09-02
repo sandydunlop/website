@@ -1,12 +1,12 @@
-Package [io.github.sandydunlop.markista.scanning](index.md)
+Package [io.github.sandydunlop.markista.modelling](index.md)
 
 # Enum Class MarkdownParser.TokenKind
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
-        [java.lang.Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)<[io.github.sandydunlop.markista.scanning.MarkdownParser.TokenKind](MarkdownParser.TokenKind.md)><br/>
-                io.github.sandydunlop.markista.scanning.MarkdownParser.TokenKind<br/>
+        [java.lang.Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)<[io.github.sandydunlop.markista.modelling.MarkdownParser.TokenKind](MarkdownParser.TokenKind.md)><br/>
+                io.github.sandydunlop.markista.modelling.MarkdownParser.TokenKind<br/>
 <br/>
 Enclosing Class:<br/>
-    [io.github.sandydunlop.markista.scanning.MarkdownParser](MarkdownParser.md)
+    [io.github.sandydunlop.markista.modelling.MarkdownParser](MarkdownParser.md)
 
 
 ----
@@ -39,10 +39,10 @@ Enum representing the kind of a Markdown token.
 
 ## Method Summary
 
-| Modifier and Type                                                                  | Method                                                                                                                 | Description |
-|------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|-------------|
-| public static io.github.sandydunlop.markista.scanning.MarkdownParser.TokenKind[][] | [values](#values)()                                                                                                    |             |
-| public static [MarkdownParser.TokenKind](MarkdownParser.TokenKind.md)              | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
+| Modifier and Type                                                                   | Method                                                                                                                 | Description |
+|-------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|-------------|
+| public static io.github.sandydunlop.markista.modelling.MarkdownParser.TokenKind[][] | [values](#values)()                                                                                                    |             |
+| public static [MarkdownParser.TokenKind](MarkdownParser.TokenKind.md)               | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
 
 
 
@@ -98,7 +98,7 @@ public static final  END
 
 ### values
 
-<span style="font-family: monospace; font-size: 80%;">public static io.github.sandydunlop.markista.scanning.MarkdownParser.TokenKind[][] __values__()</span>
+<span style="font-family: monospace; font-size: 80%;">public static io.github.sandydunlop.markista.modelling.MarkdownParser.TokenKind[][] __values__()</span>
 
 
 

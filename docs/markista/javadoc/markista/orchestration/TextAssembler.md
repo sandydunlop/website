@@ -12,10 +12,11 @@ Package [io.github.sandydunlop.markista.orchestration](index.md)
 
 ## Field Summary
 
-| Modifier and Type                            | Field       | Description |
-|----------------------------------------------|-------------|-------------|
-| private static [Api](../model/Api.md)        | [api](#api) |             |
-| private static [Context](../core/Context.md) | [ctx](#ctx) |             |
+| Modifier and Type                              | Field                 | Description |
+|------------------------------------------------|-----------------------|-------------|
+| private static [Api](../model/Api.md)          | [api](#api)           |             |
+| private static [Context](../core/Context.md)   | [ctx](#ctx)           |             |
+| private static [LinkResolver](LinkResolver.md) | [resolver](#resolver) |             |
 
 
 
@@ -67,6 +68,15 @@ Package [io.github.sandydunlop.markista.orchestration](index.md)
 ### ctx
 
 <span style="font-family: monospace; font-size: 80%;">private static [Context](../core/Context.md) __ctx__</span>
+
+
+
+
+---
+
+### resolver
+
+<span style="font-family: monospace; font-size: 80%;">private static [LinkResolver](LinkResolver.md) __resolver__</span>
 
 
 

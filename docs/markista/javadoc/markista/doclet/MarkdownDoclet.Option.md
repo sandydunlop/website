@@ -5,7 +5,7 @@ Package [io.github.sandydunlop.markista.doclet](index.md)
         io.github.sandydunlop.markista.doclet.MarkdownDoclet.Option<br/>
 <br/>
 All Implemented Interfaces:<br/>
-    [Doclet.Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.html)
+    [Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.html)
 
 Enclosing Class:<br/>
     [io.github.sandydunlop.markista.doclet.MarkdownDoclet](MarkdownDoclet.md)
@@ -47,7 +47,7 @@ command line.
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------|-------------|
 | public int                                                                                                                                                                                    | [getArgumentCount](#getargumentcount)() |             |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                           | [getDescription](#getdescription)()     |             |
-| public [Doclet.Option.Kind](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.Kind.html)                                                        | [getKind](#getkind)()                   |             |
+| public jdk.javadoc.doclet.Doclet.Option.Kind                                                                                                                                                  | [getKind](#getkind)()                   |             |
 | public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)> | [getNames](#getnames)()                 |             |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                           | [getParameters](#getparameters)()       |             |
 
@@ -102,7 +102,7 @@ command line.
 
 **Specified By:**
 
-[Doclet.Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.html)
+[Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.html)
 
 
 ---
@@ -115,20 +115,20 @@ command line.
 
 **Specified By:**
 
-[Doclet.Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.html)
+[Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.html)
 
 
 ---
 
 ### getKind
 
-<span style="font-family: monospace; font-size: 80%;">public [Doclet.Option.Kind](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.Kind.html) __getKind__()</span>
+<span style="font-family: monospace; font-size: 80%;">public jdk.javadoc.doclet.Doclet.Option.Kind __getKind__()</span>
 
 
 
 **Specified By:**
 
-[Doclet.Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.html)
+[Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.html)
 
 
 ---
@@ -141,7 +141,7 @@ command line.
 
 **Specified By:**
 
-[Doclet.Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.html)
+[Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.html)
 
 
 ---
@@ -154,7 +154,7 @@ command line.
 
 **Specified By:**
 
-[Doclet.Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.html)
+[Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.html)
 
 
 ---

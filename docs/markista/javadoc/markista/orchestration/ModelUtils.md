@@ -9,6 +9,8 @@ Package [io.github.sandydunlop.markista.orchestration](index.md)
 
 <span style="font-family: monospace; font-size: 80%;">public class __ModelUtils__</span>
 
+Utilities for rxtrating information from the API model
+
 
 ## Field Summary
 

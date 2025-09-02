@@ -28,13 +28,14 @@ Direct Known Subtypes:<br/>
 
 ## Field Summary
 
-| Modifier and Type                                                                                      | Field                                 | Description |
-|--------------------------------------------------------------------------------------------------------|---------------------------------------|-------------|
-| protected int                                                                                          | [arrayDimensions](#arraydimensions)   |             |
-| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)   | [fullTypeName](#fulltypename)         |             |
-| protected [Link](Link.md)                                                                              | [link](#link)                         |             |
-| protected [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [rawTypeName](#rawtypename)           |             |
-| private static final long                                                                              | [serialVersionUID](#serialversionuid) |             |
+| Modifier and Type                                                                                      | Field                                     | Description |
+|--------------------------------------------------------------------------------------------------------|-------------------------------------------|-------------|
+| protected int                                                                                          | [arrayDimensions](#arraydimensions)       |             |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)   | [fullTypeName](#fulltypename)             |             |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)   | [genericMethodParam](#genericmethodparam) |             |
+| protected [Link](Link.md)                                                                              | [link](#link)                             |             |
+| protected [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [rawTypeName](#rawtypename)               |             |
+| private static final long                                                                              | [serialVersionUID](#serialversionuid)     |             |
 
 
 
@@ -82,6 +83,15 @@ Direct Known Subtypes:<br/>
 ### fullTypeName
 
 <span style="font-family: monospace; font-size: 80%;">private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __fullTypeName__</span>
+
+
+
+
+---
+
+### genericMethodParam
+
+<span style="font-family: monospace; font-size: 80%;">private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __genericMethodParam__</span>
 
 
 

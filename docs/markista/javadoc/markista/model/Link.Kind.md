@@ -14,7 +14,7 @@ Enclosing Class:<br/>
 <span style="font-family: monospace; font-size: 80%;">public static final enum class __Link.Kind__<br/>extends [Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)<[Link.Kind](Link.Kind.md)>
 </span>
 
-Enum representing different kinds/types of references.
+Enum representing different kinds/types of targets.
 
 
 ##Enum Constants

@@ -64,7 +64,6 @@ supertypes, implemented interfaces, constructors, methods, fields, ownership, an
 | public [Map](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Map.html)<[TypeReference](TypeReference.md), [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Link](Link.md)>> | [getInheritedMethods](#getinheritedmethods)()                                                                                      | Returns the list of inherited methods organized by the type they are defined in. |
 | public void                                                                                                                                                                                                                                 | [setOwnerName](#setownername)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) owner)  | Sets the owner of this type.                                                     |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                                                                         | [getOwnerName](#getownername)()                                                                                                    | Returns the owner of this type.                                                  |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                                                                         | [getPackageName](#getpackagename)()                                                                                                | Returns the package name for this type.                                          |
 | public void                                                                                                                                                                                                                                 | [addMethod](#addmethod)([MethodNode](MethodNode.md) method)                                                                        | Adds a method to this type.                                                      |
 | public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[MethodNode](MethodNode.md)>                                                                                                                | [getMethods](#getmethods)()                                                                                                        | Returns the list of methods of this type.                                        |
 | public void                                                                                                                                                                                                                                 | [addConstructor](#addconstructor)([MethodNode](MethodNode.md) constructor)                                                         | Adds a constructor method to this type.                                          |
@@ -91,7 +90,7 @@ supertypes, implemented interfaces, constructors, methods, fields, ownership, an
 
 ### Methods inherited from [io.github.sandydunlop.markista.model.AbstractMember](AbstractMember.md)
 
-[AbstractMember.addAppliedAnnotation](AbstractMember.md#addappliedannotation), [AbstractMember.addModifier](AbstractMember.md#addmodifier), [AbstractMember.setQualifiedName](AbstractMember.md#setqualifiedname), [AbstractMember.getModifiers](AbstractMember.md#getmodifiers), [AbstractMember.getAppliedAnnotations](AbstractMember.md#getappliedannotations), [AbstractMember.getQualifiedName](AbstractMember.md#getqualifiedname), [AbstractMember.setSimpleName](AbstractMember.md#setsimplename), [AbstractMember.getSimpleName](AbstractMember.md#getsimplename)
+[AbstractMember.addAppliedAnnotation](AbstractMember.md#addappliedannotation), [AbstractMember.addModifier](AbstractMember.md#addmodifier), [AbstractMember.setQualifiedName](AbstractMember.md#setqualifiedname), [AbstractMember.getName](AbstractMember.md#getname), [AbstractMember.getModifiers](AbstractMember.md#getmodifiers), [AbstractMember.getAppliedAnnotations](AbstractMember.md#getappliedannotations), [AbstractMember.getPackageName](AbstractMember.md#getpackagename), [AbstractMember.setNestedName](AbstractMember.md#setnestedname), [AbstractMember.setPackageName](AbstractMember.md#setpackagename), [AbstractMember.getQualifiedName](AbstractMember.md#getqualifiedname), [AbstractMember.setSimpleName](AbstractMember.md#setsimplename), [AbstractMember.getSimpleName](AbstractMember.md#getsimplename), [AbstractMember.getNestedName](AbstractMember.md#getnestedname), [AbstractMember.setName](AbstractMember.md#setname)
 
 ### Methods inherited from [io.github.sandydunlop.markista.model.Node](Node.md)
 
@@ -353,19 +352,6 @@ Returns the owner of this type.
 **Returns:**
 
 the TypeOwner that owns this type.
-
-
----
-
-### getPackageName
-
-<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getPackageName__()</span>
-
-Returns the package name for this type.
-
-**Returns:**
-
-qualified package name, or null if no package node.
 
 
 ---
