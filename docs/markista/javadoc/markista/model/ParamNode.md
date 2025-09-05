@@ -7,12 +7,12 @@ Package [io.github.sandydunlop.markista.model](index.md)
                         io.github.sandydunlop.markista.model.ParamNode<br/>
 <br/>
 Direct Known Subtypes:<br/>
-    [](FieldNode.md)
+    [FieldNode](FieldNode.md)
 
 
 ----
 
-<span style="font-family: monospace; font-size: 80%;">public class __ParamNode__<br/>extends [](AbstractMember.md)
+<span style="font-family: monospace; font-size: 80%;">public class __ParamNode__<br/>extends [AbstractMember](AbstractMember.md)
 </span>
 
 A class to hold information about method parameters.
@@ -20,9 +20,9 @@ A class to hold information about method parameters.
 
 ## Field Summary
 
-| Modifier and Type            | Field         | Description                |
-|------------------------------|---------------|----------------------------|
-| private [](TypeReference.md) | [type](#type) | The type of this parameter |
+| Modifier and Type                         | Field         | Description                |
+|-------------------------------------------|---------------|----------------------------|
+| private [TypeReference](TypeReference.md) | [type](#type) | The type of this parameter |
 
 
 
@@ -36,10 +36,10 @@ A class to hold information about method parameters.
 
 ## Method Summary
 
-| Modifier and Type           | Method                                         | Description                              |
-|-----------------------------|------------------------------------------------|------------------------------------------|
-| public [](TypeReference.md) | [getType](#gettype)()                          | Returns the type Text of this parameter. |
-| public void                 | [setType](#settype)([](TypeReference.md) type) | Sets the type Text of this parameter.    |
+| Modifier and Type                        | Method                                                      | Description                              |
+|------------------------------------------|-------------------------------------------------------------|------------------------------------------|
+| public [TypeReference](TypeReference.md) | [getType](#gettype)()                                       | Returns the type Text of this parameter. |
+| public void                              | [setType](#settype)([TypeReference](TypeReference.md) type) | Sets the type Text of this parameter.    |
 
 
 ### Methods inherited from [io.github.sandydunlop.markista.model.AbstractMember](AbstractMember.md)
@@ -55,7 +55,7 @@ A class to hold information about method parameters.
 
 ### type
 
-<span style="font-family: monospace; font-size: 80%;">private [](TypeReference.md) __type__</span>
+<span style="font-family: monospace; font-size: 80%;">private [TypeReference](TypeReference.md) __type__</span>
 
 The type of this parameter
 
@@ -67,7 +67,7 @@ The type of this parameter
 
 ### getType
 
-<span style="font-family: monospace; font-size: 80%;">public [](TypeReference.md) __getType__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [TypeReference](TypeReference.md) __getType__()</span>
 
 Returns the type Text of this parameter.
 
@@ -80,7 +80,7 @@ The Text representing the parameter's type.
 
 ### setType
 
-<span style="font-family: monospace; font-size: 80%;">public void __setType__([](TypeReference.md) type)</span>
+<span style="font-family: monospace; font-size: 80%;">public void __setType__([TypeReference](TypeReference.md) type)</span>
 
 Sets the type Text of this parameter.
 

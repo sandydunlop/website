@@ -17,17 +17,17 @@ Package [io.github.sandydunlop.markista.orchestration](index.md)
 | private static final [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                                                                                                  | [DOT_CLASS](#dot_class)         |             |
 | [Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)>                                                                                               | [classNames](#classnames)       |             |
 | [Map](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Map.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html), [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)> | [classToModule](#classtomodule) |             |
-| [](../core/Context.md)                                                                                                                                                                                                                                                             | [ctx](#ctx)                     |             |
+| [Context](../core/Context.md)                                                                                                                                                                                                                                                      | [ctx](#ctx)                     |             |
 | [Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)>                                                                                               | [moduleNames](#modulenames)     |             |
 
 
 
 ## Constructor Summary
 
-| Constructor                                                                                                                                   | Description |
-|-----------------------------------------------------------------------------------------------------------------------------------------------|-------------|
-| ModulePath()                                                                                                                                  |             |
-| ModulePath([](../core/Context.md) c, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) modulePath) |             |
+| Constructor                                                                                                                                          | Description |
+|------------------------------------------------------------------------------------------------------------------------------------------------------|-------------|
+| ModulePath()                                                                                                                                         |             |
+| ModulePath([Context](../core/Context.md) c, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) modulePath) |             |
 
 
 
@@ -84,7 +84,7 @@ Package [io.github.sandydunlop.markista.orchestration](index.md)
 
 ### ctx
 
-<span style="font-family: monospace; font-size: 80%;">[](../core/Context.md) __ctx__</span>
+<span style="font-family: monospace; font-size: 80%;">[Context](../core/Context.md) __ctx__</span>
 
 
 

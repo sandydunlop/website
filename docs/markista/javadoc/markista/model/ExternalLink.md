@@ -14,8 +14,8 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 | Modifier and Type                                                                                                                                                                                                                                                                  | Field                               | Description |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------|-------------|
-| [](Api.md)                                                                                                                                                                                                                                                                         | [api](#api)                         |             |
-| [](../core/Context.md)                                                                                                                                                                                                                                                             | [ctx](#ctx)                         |             |
+| [Api](Api.md)                                                                                                                                                                                                                                                                      | [api](#api)                         |             |
+| [Context](../core/Context.md)                                                                                                                                                                                                                                                      | [ctx](#ctx)                         |             |
 | boolean                                                                                                                                                                                                                                                                            | [isWebLink](#isweblink)             |             |
 | [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)>                                                                                             | [modules](#modules)                 |             |
 | [Map](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Map.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html), [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)> | [packageToModule](#packagetomodule) |             |
@@ -26,9 +26,9 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 ## Constructor Summary
 
-| Constructor                                                                                                                            | Description |
-|----------------------------------------------------------------------------------------------------------------------------------------|-------------|
-| ExternalLink([](../core/Context.md) c, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) p) |             |
+| Constructor                                                                                                                                   | Description |
+|-----------------------------------------------------------------------------------------------------------------------------------------------|-------------|
+| ExternalLink([Context](../core/Context.md) c, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) p) |             |
 
 
 
@@ -42,7 +42,7 @@ Package [io.github.sandydunlop.markista.model](index.md)
 | public [Map](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Map.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html), [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)> | [getPackageToModule](#getpackagetomodule)()                                                                                      |             |
 | public void                                                                                                                                                                                                                                                                               | [setWebLink](#setweblink)(boolean b)                                                                                             |             |
 | public boolean                                                                                                                                                                                                                                                                            | [isWebLink](#isweblink)()                                                                                                        |             |
-| public [](Api.md)                                                                                                                                                                                                                                                                         | [getApi](#getapi)()                                                                                                              |             |
+| public [Api](Api.md)                                                                                                                                                                                                                                                                      | [getApi](#getapi)()                                                                                                              |             |
 | public void                                                                                                                                                                                                                                                                               | [load](#load)()                                                                                                                  |             |
 | private [URI](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/net/URI.html)                                                                                                                                                                                             | [uriForFile](#uriforfile)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) fileName) |             |
 | private [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)>                                                                                            | [loadFileFromUri](#loadfilefromuri)([URI](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/net/URI.html) uri)   |             |
@@ -53,7 +53,7 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 ### api
 
-<span style="font-family: monospace; font-size: 80%;">[](Api.md) __api__</span>
+<span style="font-family: monospace; font-size: 80%;">[Api](Api.md) __api__</span>
 
 
 
@@ -62,7 +62,7 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 ### ctx
 
-<span style="font-family: monospace; font-size: 80%;">[](../core/Context.md) __ctx__</span>
+<span style="font-family: monospace; font-size: 80%;">[Context](../core/Context.md) __ctx__</span>
 
 
 
@@ -173,7 +173,7 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 ### getApi
 
-<span style="font-family: monospace; font-size: 80%;">public [](Api.md) __getApi__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [Api](Api.md) __getApi__()</span>
 
 
 

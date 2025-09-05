@@ -7,12 +7,12 @@ Package [io.github.sandydunlop.markista.model](index.md)
                         io.github.sandydunlop.markista.model.TypeNode<br/>
 <br/>
 Direct Known Subtypes:<br/>
-    [](RecordNode.md), [](AnnotationNode.md), [](EnumNode.md), [](InterfaceNode.md), [](ClassNode.md)
+    [RecordNode](RecordNode.md), [AnnotationNode](AnnotationNode.md), [EnumNode](EnumNode.md), [InterfaceNode](InterfaceNode.md), [ClassNode](ClassNode.md)
 
 
 ----
 
-<span style="font-family: monospace; font-size: 80%;">public class __TypeNode__<br/>extends [](AbstractMember.md)
+<span style="font-family: monospace; font-size: 80%;">public class __TypeNode__<br/>extends [AbstractMember](AbstractMember.md)
 </span>
 
 Represents a type in the API model, including its kind (class, interface, enum, annotation),
@@ -21,20 +21,20 @@ supertypes, implemented interfaces, constructors, methods, fields, ownership, an
 
 ## Field Summary
 
-| Modifier and Type                                                                                                                                                                                                                   | Field                                               | Description                                                                          |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------|--------------------------------------------------------------------------------------|
-| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](MethodNode.md)>                                                                                                           | [constructors](#constructors)                       | List of constructor methods belonging to this type.                                  |
-| private [](Link.md)                                                                                                                                                                                                                 | [enclosingClassRef](#enclosingclassref)             |                                                                                      |
-| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](FieldNode.md)>                                                                                                            | [fields](#fields)                                   | List of fields belonging to this type.                                               |
-| private boolean                                                                                                                                                                                                                     | [hasDocumentedAnnotation](#hasdocumentedannotation) | Has the `@Documented` annotation applied                                             |
-| private [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](TypeReference.md)>                                                                                                              | [implementedInterfaces](#implementedinterfaces)     | List of references to interfaces implemented by this type and text containing links. |
-| private [HashMap](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/HashMap.html)<[](TypeReference.md), [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](Link.md)>> | [inheritedMethods](#inheritedmethods)               |                                                                                      |
-| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](MethodNode.md)>                                                                                                           | [methods](#methods)                                 | List of methods belonging to this type.                                              |
-| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                                                                | [ownerName](#ownername)                             | The owner of this type \u2014 a type or package.                                     |
-| protected [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                                                              | [sourcePath](#sourcepath)                           |                                                                                      |
-| private [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](TypeReference.md)>                                                                                                              | [subtypes](#subtypes)                               | List of references to this type's subtypes and text containing links.                |
-| private [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](TypeReference.md)>                                                                                                              | [supertypes](#supertypes)                           | List of references to this type's supertypes and text containing links.              |
-| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](TypeNode.md)>                                                                                                             | [types](#types)                                     |                                                                                      |
+| Modifier and Type                                                                                                                                                                                                                                    | Field                                               | Description                                                                          |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------|--------------------------------------------------------------------------------------|
+| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[MethodNode](MethodNode.md)>                                                                                                                  | [constructors](#constructors)                       | List of constructor methods belonging to this type.                                  |
+| private [Link](Link.md)                                                                                                                                                                                                                              | [enclosingClassRef](#enclosingclassref)             |                                                                                      |
+| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[FieldNode](FieldNode.md)>                                                                                                                    | [fields](#fields)                                   | List of fields belonging to this type.                                               |
+| private boolean                                                                                                                                                                                                                                      | [hasDocumentedAnnotation](#hasdocumentedannotation) | Has the `@Documented` annotation applied                                             |
+| private [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeReference](TypeReference.md)>                                                                                                                  | [implementedInterfaces](#implementedinterfaces)     | List of references to interfaces implemented by this type and text containing links. |
+| private [HashMap](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/HashMap.html)<[TypeReference](TypeReference.md), [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Link](Link.md)>> | [inheritedMethods](#inheritedmethods)               |                                                                                      |
+| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[MethodNode](MethodNode.md)>                                                                                                                  | [methods](#methods)                                 | List of methods belonging to this type.                                              |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                                                                                 | [ownerName](#ownername)                             | The owner of this type \u2014 a type or package.                                     |
+| protected [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                                                                               | [sourcePath](#sourcepath)                           |                                                                                      |
+| private [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeReference](TypeReference.md)>                                                                                                                  | [subtypes](#subtypes)                               | List of references to this type's subtypes and text containing links.                |
+| private [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeReference](TypeReference.md)>                                                                                                                  | [supertypes](#supertypes)                           | List of references to this type's supertypes and text containing links.              |
+| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeNode](TypeNode.md)>                                                                                                                      | [types](#types)                                     |                                                                                      |
 
 
 
@@ -48,60 +48,60 @@ supertypes, implemented interfaces, constructors, methods, fields, ownership, an
 
 ## Method Summary
 
-| Modifier and Type                                                                                                                                                                                                          | Method                                                                                                                             | Description                                                                      |
-|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-| public boolean                                                                                                                                                                                                             | [isClass](#isclass)()                                                                                                              |                                                                                  |
-| public boolean                                                                                                                                                                                                             | [isInterface](#isinterface)()                                                                                                      |                                                                                  |
-| public boolean                                                                                                                                                                                                             | [isEnum](#isenum)()                                                                                                                |                                                                                  |
-| public boolean                                                                                                                                                                                                             | [isRecord](#isrecord)()                                                                                                            |                                                                                  |
-| public boolean                                                                                                                                                                                                             | [isAnnotation](#isannotation)()                                                                                                    |                                                                                  |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                                                        | [getKindName](#getkindname)()                                                                                                      |                                                                                  |
-| public void                                                                                                                                                                                                                | [setSourcePath](#setsourcepath)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) path) |                                                                                  |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                                                        | [getSourcePath](#getsourcepath)()                                                                                                  |                                                                                  |
-| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](TypeReference.md)>                                                                                                      | [getImplementedInterfaces](#getimplementedinterfaces)()                                                                            | Returns the list of implemented interfaces by qualified names.                   |
-| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](TypeReference.md)>                                                                                                      | [getSupertypes](#getsupertypes)()                                                                                                  | Returns the list of supertype references and text.                               |
-| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](TypeReference.md)>                                                                                                      | [getSubtypes](#getsubtypes)()                                                                                                      | Returns the list of subtype references and text.                                 |
-| public [Map](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Map.html)<[](TypeReference.md), [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](Link.md)>> | [getInheritedMethods](#getinheritedmethods)()                                                                                      | Returns the list of inherited methods organized by the type they are defined in. |
-| public void                                                                                                                                                                                                                | [setOwnerName](#setownername)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) owner)  | Sets the owner of this type.                                                     |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                                                        | [getOwnerName](#getownername)()                                                                                                    | Returns the owner of this type.                                                  |
-| public void                                                                                                                                                                                                                | [addMethod](#addmethod)([](MethodNode.md) method)                                                                                  | Adds a method to this type.                                                      |
-| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](MethodNode.md)>                                                                                                         | [getMethods](#getmethods)()                                                                                                        | Returns the list of methods of this type.                                        |
-| public void                                                                                                                                                                                                                | [addConstructor](#addconstructor)([](MethodNode.md) constructor)                                                                   | Adds a constructor method to this type.                                          |
-| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](MethodNode.md)>                                                                                                         | [getConstructors](#getconstructors)()                                                                                              | Returns the list of constructors of this type.                                   |
-| public void                                                                                                                                                                                                                | [addField](#addfield)([](FieldNode.md) field)                                                                                      | Adds a field to this type.                                                       |
-| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](FieldNode.md)>                                                                                                          | [getFields](#getfields)()                                                                                                          | Returns the list of fields of this type.                                         |
-| public void                                                                                                                                                                                                                | [setHasDocumentedAnnotation](#sethasdocumentedannotation)(boolean b)                                                               | Sets a flag indicating if this type as having a `@Documented` meta-annotation    |
-| public boolean                                                                                                                                                                                                             | [hasDocumentedAnnotation](#hasdocumentedannotation)()                                                                              | Does this type have a `@Documented` meta-annotation?                             |
-| public void                                                                                                                                                                                                                | [setEnclosingClassRef](#setenclosingclassref)([](Link.md) ref)                                                                     |                                                                                  |
-| public [](Link.md)                                                                                                                                                                                                         | [getEnclosingClassRef](#getenclosingclassref)()                                                                                    |                                                                                  |
-| public void                                                                                                                                                                                                                | [addType](#addtype)([](TypeNode.md) typeNode)                                                                                      |                                                                                  |
-| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](TypeNode.md)>                                                                                                           | [getTypes](#gettypes)()                                                                                                            | Gets the list of types *owned* by this instance.                                 |
-| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](TypeNode.md)>                                                                                                           | [getClasses](#getclasses)()                                                                                                        | Gets the list of classes *owned* by this instance.                               |
-| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](TypeNode.md)>                                                                                                           | [getInterfaces](#getinterfaces)()                                                                                                  | Gets the list of interfaces *owned* by this instance.                            |
-| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](TypeNode.md)>                                                                                                           | [getEnums](#getenums)()                                                                                                            | Gets the list of enums *owned* by this instance.                                 |
-| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](TypeNode.md)>                                                                                                           | [getRecords](#getrecords)()                                                                                                        | Gets the list of records *owned* by this instance.                               |
-| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](TypeNode.md)>                                                                                                           | [getAnnotations](#getannotations)()                                                                                                | Gets the list of annotations *owned* by this instance.                           |
-| public [](FieldNode.md)                                                                                                                                                                                                    | [getField](#getfield)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) fieldName)      | Retrieves a field by its simple name.                                            |
-| public [](MethodNode.md)                                                                                                                                                                                                   | [getMethod](#getmethod)([](MethodNode.md) method)                                                                                  | Retrieves a method matching the signature of a given MethodNode.                 |
-| public [](MethodNode.md)                                                                                                                                                                                                   | [getConstructor](#getconstructor)([](MethodNode.md) method)                                                                        | Retrieves a constructor matching the signature of a given MethodNode.            |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                                                        | [getModifiersString](#getmodifiersstring)()                                                                                        | Returns a string representation of modifiers.                                    |
-| public void                                                                                                                                                                                                                | [sort](#sort)()                                                                                                                    | Sorts the nodes owned by this instance into alphabetical order.                  |
+| Modifier and Type                                                                                                                                                                                                                           | Method                                                                                                                             | Description                                                                      |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
+| public boolean                                                                                                                                                                                                                              | [isClass](#isclass)()                                                                                                              |                                                                                  |
+| public boolean                                                                                                                                                                                                                              | [isInterface](#isinterface)()                                                                                                      |                                                                                  |
+| public boolean                                                                                                                                                                                                                              | [isEnum](#isenum)()                                                                                                                |                                                                                  |
+| public boolean                                                                                                                                                                                                                              | [isRecord](#isrecord)()                                                                                                            |                                                                                  |
+| public boolean                                                                                                                                                                                                                              | [isAnnotation](#isannotation)()                                                                                                    |                                                                                  |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                                                                         | [getKindName](#getkindname)()                                                                                                      |                                                                                  |
+| public void                                                                                                                                                                                                                                 | [setSourcePath](#setsourcepath)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) path) |                                                                                  |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                                                                         | [getSourcePath](#getsourcepath)()                                                                                                  |                                                                                  |
+| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeReference](TypeReference.md)>                                                                                                          | [getImplementedInterfaces](#getimplementedinterfaces)()                                                                            | Returns the list of implemented interfaces by qualified names.                   |
+| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeReference](TypeReference.md)>                                                                                                          | [getSupertypes](#getsupertypes)()                                                                                                  | Returns the list of supertype references and text.                               |
+| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeReference](TypeReference.md)>                                                                                                          | [getSubtypes](#getsubtypes)()                                                                                                      | Returns the list of subtype references and text.                                 |
+| public [Map](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Map.html)<[TypeReference](TypeReference.md), [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Link](Link.md)>> | [getInheritedMethods](#getinheritedmethods)()                                                                                      | Returns the list of inherited methods organized by the type they are defined in. |
+| public void                                                                                                                                                                                                                                 | [setOwnerName](#setownername)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) owner)  | Sets the owner of this type.                                                     |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                                                                         | [getOwnerName](#getownername)()                                                                                                    | Returns the owner of this type.                                                  |
+| public void                                                                                                                                                                                                                                 | [addMethod](#addmethod)([MethodNode](MethodNode.md) method)                                                                        | Adds a method to this type.                                                      |
+| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[MethodNode](MethodNode.md)>                                                                                                                | [getMethods](#getmethods)()                                                                                                        | Returns the list of methods of this type.                                        |
+| public void                                                                                                                                                                                                                                 | [addConstructor](#addconstructor)([MethodNode](MethodNode.md) constructor)                                                         | Adds a constructor method to this type.                                          |
+| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[MethodNode](MethodNode.md)>                                                                                                                | [getConstructors](#getconstructors)()                                                                                              | Returns the list of constructors of this type.                                   |
+| public void                                                                                                                                                                                                                                 | [addField](#addfield)([FieldNode](FieldNode.md) field)                                                                             | Adds a field to this type.                                                       |
+| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[FieldNode](FieldNode.md)>                                                                                                                  | [getFields](#getfields)()                                                                                                          | Returns the list of fields of this type.                                         |
+| public void                                                                                                                                                                                                                                 | [setHasDocumentedAnnotation](#sethasdocumentedannotation)(boolean b)                                                               | Sets a flag indicating if this type as having a `@Documented` meta-annotation    |
+| public boolean                                                                                                                                                                                                                              | [hasDocumentedAnnotation](#hasdocumentedannotation)()                                                                              | Does this type have a `@Documented` meta-annotation?                             |
+| public void                                                                                                                                                                                                                                 | [setEnclosingClassRef](#setenclosingclassref)([Link](Link.md) ref)                                                                 |                                                                                  |
+| public [Link](Link.md)                                                                                                                                                                                                                      | [getEnclosingClassRef](#getenclosingclassref)()                                                                                    |                                                                                  |
+| public void                                                                                                                                                                                                                                 | [addType](#addtype)([TypeNode](TypeNode.md) typeNode)                                                                              |                                                                                  |
+| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeNode](TypeNode.md)>                                                                                                                    | [getTypes](#gettypes)()                                                                                                            | Gets the list of types *owned* by this instance.                                 |
+| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeNode](TypeNode.md)>                                                                                                                    | [getClasses](#getclasses)()                                                                                                        | Gets the list of classes *owned* by this instance.                               |
+| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeNode](TypeNode.md)>                                                                                                                    | [getInterfaces](#getinterfaces)()                                                                                                  | Gets the list of interfaces *owned* by this instance.                            |
+| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeNode](TypeNode.md)>                                                                                                                    | [getEnums](#getenums)()                                                                                                            | Gets the list of enums *owned* by this instance.                                 |
+| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeNode](TypeNode.md)>                                                                                                                    | [getRecords](#getrecords)()                                                                                                        | Gets the list of records *owned* by this instance.                               |
+| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeNode](TypeNode.md)>                                                                                                                    | [getAnnotations](#getannotations)()                                                                                                | Gets the list of annotations *owned* by this instance.                           |
+| public [FieldNode](FieldNode.md)                                                                                                                                                                                                            | [getField](#getfield)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) fieldName)      | Retrieves a field by its simple name.                                            |
+| public [MethodNode](MethodNode.md)                                                                                                                                                                                                          | [getMethod](#getmethod)([MethodNode](MethodNode.md) method)                                                                        | Retrieves a method matching the signature of a given MethodNode.                 |
+| public [MethodNode](MethodNode.md)                                                                                                                                                                                                          | [getConstructor](#getconstructor)([MethodNode](MethodNode.md) method)                                                              | Retrieves a constructor matching the signature of a given MethodNode.            |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                                                                         | [getModifiersString](#getmodifiersstring)()                                                                                        | Returns a string representation of modifiers.                                    |
+| public void                                                                                                                                                                                                                                 | [sort](#sort)()                                                                                                                    | Sorts the nodes owned by this instance into alphabetical order.                  |
 
-
-### Methods inherited from [io.github.sandydunlop.markista.model.AbstractMember](AbstractMember.md)
-
-[AbstractMember.addAppliedAnnotation](AbstractMember.md#addappliedannotation), [AbstractMember.addModifier](AbstractMember.md#addmodifier), [AbstractMember.setQualifiedName](AbstractMember.md#setqualifiedname), [AbstractMember.getName](AbstractMember.md#getname), [AbstractMember.getModifiers](AbstractMember.md#getmodifiers), [AbstractMember.getAppliedAnnotations](AbstractMember.md#getappliedannotations), [AbstractMember.getPackageName](AbstractMember.md#getpackagename), [AbstractMember.setNestedName](AbstractMember.md#setnestedname), [AbstractMember.setPackageName](AbstractMember.md#setpackagename), [AbstractMember.getQualifiedName](AbstractMember.md#getqualifiedname), [AbstractMember.setSimpleName](AbstractMember.md#setsimplename), [AbstractMember.getSimpleName](AbstractMember.md#getsimplename), [AbstractMember.getNestedName](AbstractMember.md#getnestedname), [AbstractMember.setName](AbstractMember.md#setname)
 
 ### Methods inherited from [io.github.sandydunlop.markista.model.Node](Node.md)
 
 [Node.getReferences](Node.md#getreferences), [Node.setDeprecationText](Node.md#setdeprecationtext), [Node.getBody](Node.md#getbody), [Node.setFirstSentence](Node.md#setfirstsentence), [Node.setDeprecation](Node.md#setdeprecation), [Node.getDeprecation](Node.md#getdeprecation), [Node.getUUID](Node.md#getuuid), [Node.getFullBody](Node.md#getfullbody), [Node.setReferences](Node.md#setreferences), [Node.getKind](Node.md#getkind), [Node.getSince](Node.md#getsince), [Node.setFullBody](Node.md#setfullbody), [Node.setSince](Node.md#setsince), [Node.setBody](Node.md#setbody), [Node.getFirstSentence](Node.md#getfirstsentence), [Node.setKind](Node.md#setkind), [Node.getDeprecationText](Node.md#getdeprecationtext)
+
+### Methods inherited from [io.github.sandydunlop.markista.model.AbstractMember](AbstractMember.md)
+
+[AbstractMember.addAppliedAnnotation](AbstractMember.md#addappliedannotation), [AbstractMember.addModifier](AbstractMember.md#addmodifier), [AbstractMember.setQualifiedName](AbstractMember.md#setqualifiedname), [AbstractMember.getName](AbstractMember.md#getname), [AbstractMember.getModifiers](AbstractMember.md#getmodifiers), [AbstractMember.getAppliedAnnotations](AbstractMember.md#getappliedannotations), [AbstractMember.getPackageName](AbstractMember.md#getpackagename), [AbstractMember.setNestedName](AbstractMember.md#setnestedname), [AbstractMember.setPackageName](AbstractMember.md#setpackagename), [AbstractMember.getQualifiedName](AbstractMember.md#getqualifiedname), [AbstractMember.setSimpleName](AbstractMember.md#setsimplename), [AbstractMember.getSimpleName](AbstractMember.md#getsimplename), [AbstractMember.getNestedName](AbstractMember.md#getnestedname), [AbstractMember.setName](AbstractMember.md#setname)
 
 
 ## Field Details
 
 ### constructors
 
-<span style="font-family: monospace; font-size: 80%;">private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](MethodNode.md)> __constructors__</span>
+<span style="font-family: monospace; font-size: 80%;">private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[MethodNode](MethodNode.md)> __constructors__</span>
 
 List of constructor methods belonging to this type.
 
@@ -110,7 +110,7 @@ List of constructor methods belonging to this type.
 
 ### enclosingClassRef
 
-<span style="font-family: monospace; font-size: 80%;">private [](Link.md) __enclosingClassRef__</span>
+<span style="font-family: monospace; font-size: 80%;">private [Link](Link.md) __enclosingClassRef__</span>
 
 
 
@@ -119,7 +119,7 @@ List of constructor methods belonging to this type.
 
 ### fields
 
-<span style="font-family: monospace; font-size: 80%;">private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](FieldNode.md)> __fields__</span>
+<span style="font-family: monospace; font-size: 80%;">private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[FieldNode](FieldNode.md)> __fields__</span>
 
 List of fields belonging to this type.
 
@@ -137,7 +137,7 @@ Has the `@Documented` annotation applied
 
 ### implementedInterfaces
 
-<span style="font-family: monospace; font-size: 80%;">private [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](TypeReference.md)> __implementedInterfaces__</span>
+<span style="font-family: monospace; font-size: 80%;">private [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeReference](TypeReference.md)> __implementedInterfaces__</span>
 
 List of references to interfaces implemented by this type and text containing links.
 
@@ -146,7 +146,7 @@ List of references to interfaces implemented by this type and text containing li
 
 ### inheritedMethods
 
-<span style="font-family: monospace; font-size: 80%;">private [HashMap](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/HashMap.html)<[](TypeReference.md), [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](Link.md)>> __inheritedMethods__</span>
+<span style="font-family: monospace; font-size: 80%;">private [HashMap](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/HashMap.html)<[TypeReference](TypeReference.md), [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Link](Link.md)>> __inheritedMethods__</span>
 
 
 
@@ -155,7 +155,7 @@ List of references to interfaces implemented by this type and text containing li
 
 ### methods
 
-<span style="font-family: monospace; font-size: 80%;">private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](MethodNode.md)> __methods__</span>
+<span style="font-family: monospace; font-size: 80%;">private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[MethodNode](MethodNode.md)> __methods__</span>
 
 List of methods belonging to this type.
 
@@ -182,7 +182,7 @@ The owner of this type \u2014 a type or package.
 
 ### subtypes
 
-<span style="font-family: monospace; font-size: 80%;">private [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](TypeReference.md)> __subtypes__</span>
+<span style="font-family: monospace; font-size: 80%;">private [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeReference](TypeReference.md)> __subtypes__</span>
 
 List of references to this type's subtypes and text containing links.
 
@@ -191,7 +191,7 @@ List of references to this type's subtypes and text containing links.
 
 ### supertypes
 
-<span style="font-family: monospace; font-size: 80%;">private [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](TypeReference.md)> __supertypes__</span>
+<span style="font-family: monospace; font-size: 80%;">private [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeReference](TypeReference.md)> __supertypes__</span>
 
 List of references to this type's supertypes and text containing links.
 
@@ -200,7 +200,7 @@ List of references to this type's supertypes and text containing links.
 
 ### types
 
-<span style="font-family: monospace; font-size: 80%;">private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](TypeNode.md)> __types__</span>
+<span style="font-family: monospace; font-size: 80%;">private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeNode](TypeNode.md)> __types__</span>
 
 
 
@@ -284,7 +284,7 @@ List of references to this type's supertypes and text containing links.
 
 ### getImplementedInterfaces
 
-<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](TypeReference.md)> __getImplementedInterfaces__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeReference](TypeReference.md)> __getImplementedInterfaces__()</span>
 
 Returns the list of implemented interfaces by qualified names.
 
@@ -297,7 +297,7 @@ list of qualified interface names.
 
 ### getSupertypes
 
-<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](TypeReference.md)> __getSupertypes__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeReference](TypeReference.md)> __getSupertypes__()</span>
 
 Returns the list of supertype references and text.
 
@@ -310,7 +310,7 @@ list of supertype references and text.
 
 ### getSubtypes
 
-<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](TypeReference.md)> __getSubtypes__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeReference](TypeReference.md)> __getSubtypes__()</span>
 
 Returns the list of subtype references and text.
 
@@ -323,7 +323,7 @@ list of subtype references and text.
 
 ### getInheritedMethods
 
-<span style="font-family: monospace; font-size: 80%;">public [Map](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Map.html)<[](TypeReference.md), [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](Link.md)>> __getInheritedMethods__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [Map](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Map.html)<[TypeReference](TypeReference.md), [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Link](Link.md)>> __getInheritedMethods__()</span>
 
 Returns the list of inherited methods organized by the type they are defined in.
 
@@ -358,7 +358,7 @@ the TypeOwner that owns this type.
 
 ### addMethod
 
-<span style="font-family: monospace; font-size: 80%;">public void __addMethod__([](MethodNode.md) method)</span>
+<span style="font-family: monospace; font-size: 80%;">public void __addMethod__([MethodNode](MethodNode.md) method)</span>
 
 Adds a method to this type.
 
@@ -367,7 +367,7 @@ Adds a method to this type.
 
 ### getMethods
 
-<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](MethodNode.md)> __getMethods__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[MethodNode](MethodNode.md)> __getMethods__()</span>
 
 Returns the list of methods of this type.
 
@@ -380,7 +380,7 @@ list of MethodNode instances.
 
 ### addConstructor
 
-<span style="font-family: monospace; font-size: 80%;">public void __addConstructor__([](MethodNode.md) constructor)</span>
+<span style="font-family: monospace; font-size: 80%;">public void __addConstructor__([MethodNode](MethodNode.md) constructor)</span>
 
 Adds a constructor method to this type.
 
@@ -389,7 +389,7 @@ Adds a constructor method to this type.
 
 ### getConstructors
 
-<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](MethodNode.md)> __getConstructors__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[MethodNode](MethodNode.md)> __getConstructors__()</span>
 
 Returns the list of constructors of this type.
 
@@ -402,7 +402,7 @@ list of MethodNode constructors.
 
 ### addField
 
-<span style="font-family: monospace; font-size: 80%;">public void __addField__([](FieldNode.md) field)</span>
+<span style="font-family: monospace; font-size: 80%;">public void __addField__([FieldNode](FieldNode.md) field)</span>
 
 Adds a field to this type.
 
@@ -411,7 +411,7 @@ Adds a field to this type.
 
 ### getFields
 
-<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](FieldNode.md)> __getFields__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[FieldNode](FieldNode.md)> __getFields__()</span>
 
 Returns the list of fields of this type.
 
@@ -446,7 +446,7 @@ True if it has a `@Documented` meta-annotation
 
 ### setEnclosingClassRef
 
-<span style="font-family: monospace; font-size: 80%;">public void __setEnclosingClassRef__([](Link.md) ref)</span>
+<span style="font-family: monospace; font-size: 80%;">public void __setEnclosingClassRef__([Link](Link.md) ref)</span>
 
 
 
@@ -455,7 +455,7 @@ True if it has a `@Documented` meta-annotation
 
 ### getEnclosingClassRef
 
-<span style="font-family: monospace; font-size: 80%;">public [](Link.md) __getEnclosingClassRef__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [Link](Link.md) __getEnclosingClassRef__()</span>
 
 
 
@@ -464,7 +464,7 @@ True if it has a `@Documented` meta-annotation
 
 ### addType
 
-<span style="font-family: monospace; font-size: 80%;">public void __addType__([](TypeNode.md) typeNode)</span>
+<span style="font-family: monospace; font-size: 80%;">public void __addType__([TypeNode](TypeNode.md) typeNode)</span>
 
 
 
@@ -473,7 +473,7 @@ True if it has a `@Documented` meta-annotation
 
 ### getTypes
 
-<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](TypeNode.md)> __getTypes__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeNode](TypeNode.md)> __getTypes__()</span>
 
 Gets the list of types *owned* by this instance.
 
@@ -482,7 +482,7 @@ Gets the list of types *owned* by this instance.
 
 ### getClasses
 
-<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](TypeNode.md)> __getClasses__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeNode](TypeNode.md)> __getClasses__()</span>
 
 Gets the list of classes *owned* by this instance.
 
@@ -491,7 +491,7 @@ Gets the list of classes *owned* by this instance.
 
 ### getInterfaces
 
-<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](TypeNode.md)> __getInterfaces__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeNode](TypeNode.md)> __getInterfaces__()</span>
 
 Gets the list of interfaces *owned* by this instance.
 
@@ -500,7 +500,7 @@ Gets the list of interfaces *owned* by this instance.
 
 ### getEnums
 
-<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](TypeNode.md)> __getEnums__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeNode](TypeNode.md)> __getEnums__()</span>
 
 Gets the list of enums *owned* by this instance.
 
@@ -509,7 +509,7 @@ Gets the list of enums *owned* by this instance.
 
 ### getRecords
 
-<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](TypeNode.md)> __getRecords__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeNode](TypeNode.md)> __getRecords__()</span>
 
 Gets the list of records *owned* by this instance.
 
@@ -518,7 +518,7 @@ Gets the list of records *owned* by this instance.
 
 ### getAnnotations
 
-<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](TypeNode.md)> __getAnnotations__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeNode](TypeNode.md)> __getAnnotations__()</span>
 
 Gets the list of annotations *owned* by this instance.
 
@@ -527,7 +527,7 @@ Gets the list of annotations *owned* by this instance.
 
 ### getField
 
-<span style="font-family: monospace; font-size: 80%;">public [](FieldNode.md) __getField__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) fieldName)</span>
+<span style="font-family: monospace; font-size: 80%;">public [FieldNode](FieldNode.md) __getField__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) fieldName)</span>
 
 Retrieves a field by its simple name.
 
@@ -540,7 +540,7 @@ the FieldNode if found, otherwise null.
 
 ### getMethod
 
-<span style="font-family: monospace; font-size: 80%;">public [](MethodNode.md) __getMethod__([](MethodNode.md) method)</span>
+<span style="font-family: monospace; font-size: 80%;">public [MethodNode](MethodNode.md) __getMethod__([MethodNode](MethodNode.md) method)</span>
 
 Retrieves a method matching the signature of a given MethodNode.
 
@@ -553,7 +553,7 @@ the matching MethodNode if found, otherwise null.
 
 ### getConstructor
 
-<span style="font-family: monospace; font-size: 80%;">public [](MethodNode.md) __getConstructor__([](MethodNode.md) method)</span>
+<span style="font-family: monospace; font-size: 80%;">public [MethodNode](MethodNode.md) __getConstructor__([MethodNode](MethodNode.md) method)</span>
 
 Retrieves a constructor matching the signature of a given MethodNode.
 

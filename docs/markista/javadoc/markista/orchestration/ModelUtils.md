@@ -14,10 +14,10 @@ Utilities for rxtrating information from the API model
 
 ## Field Summary
 
-| Modifier and Type             | Field       | Description |
-|-------------------------------|-------------|-------------|
-| static [](../model/Api.md)    | [api](#api) |             |
-| static [](../core/Context.md) | [ctx](#ctx) |             |
+| Modifier and Type                    | Field       | Description |
+|--------------------------------------|-------------|-------------|
+| static [Api](../model/Api.md)        | [api](#api) |             |
+| static [Context](../core/Context.md) | [ctx](#ctx) |             |
 
 
 
@@ -31,15 +31,15 @@ Utilities for rxtrating information from the API model
 
 ## Method Summary
 
-| Modifier and Type                                                                                          | Method                                                                                                                                                                  | Description                          |
-|------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
-| public static void                                                                                         | [init](#init)([](../model/Api.md) a, [](../core/Context.md) c)                                                                                                          |                                      |
-| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [baseTypeName](#basetypename)([](../model/MethodNode.md) methodNode)                                                                                                    |                                      |
-| public static boolean                                                                                      | [typeHasMethod](#typehasmethod)([](../model/TypeNode.md) typeNode, [](../model/MethodNode.md) methodNode)                                                               |                                      |
-| public static boolean                                                                                      | [canOverride](#canoverride)([](../model/MethodNode.md) methodA, [](../model/MethodNode.md) methodB)                                                                     |                                      |
-| public static boolean                                                                                      | [isSubtype](#issubtype)([](../model/TypeReference.md) typeA, [](../model/TypeReference.md) typeB)                                                                       | Check if typeA is a subtype of typeB |
-| public static boolean                                                                                      | [isAssignableFrom](#isassignablefrom)([](../model/TypeReference.md) typeA, [](../model/TypeReference.md) typeB)                                                         | Check if typeA is subtype of typeB   |
-| private static boolean                                                                                     | [parameterizedTypesAreCompatible](#parameterizedtypesarecompatible)([](../model/TypeReference.Generic.md) paramTypeA, [](../model/TypeReference.Generic.md) paramTypeB) |                                      |
+| Modifier and Type                                                                                          | Method                                                                                                                                                                                                            | Description                          |
+|------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
+| public static void                                                                                         | [init](#init)([Api](../model/Api.md) a, [Context](../core/Context.md) c)                                                                                                                                          |                                      |
+| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [baseTypeName](#basetypename)([MethodNode](../model/MethodNode.md) methodNode)                                                                                                                                    |                                      |
+| public static boolean                                                                                      | [typeHasMethod](#typehasmethod)([TypeNode](../model/TypeNode.md) typeNode, [MethodNode](../model/MethodNode.md) methodNode)                                                                                       |                                      |
+| public static boolean                                                                                      | [canOverride](#canoverride)([MethodNode](../model/MethodNode.md) methodA, [MethodNode](../model/MethodNode.md) methodB)                                                                                           |                                      |
+| public static boolean                                                                                      | [isSubtype](#issubtype)([TypeReference](../model/TypeReference.md) typeA, [TypeReference](../model/TypeReference.md) typeB)                                                                                       | Check if typeA is a subtype of typeB |
+| public static boolean                                                                                      | [isAssignableFrom](#isassignablefrom)([TypeReference](../model/TypeReference.md) typeA, [TypeReference](../model/TypeReference.md) typeB)                                                                         | Check if typeA is subtype of typeB   |
+| private static boolean                                                                                     | [parameterizedTypesAreCompatible](#parameterizedtypesarecompatible)([TypeReference.Generic](../model/TypeReference.Generic.md) paramTypeA, [TypeReference.Generic](../model/TypeReference.Generic.md) paramTypeB) |                                      |
 
 
 
@@ -47,7 +47,7 @@ Utilities for rxtrating information from the API model
 
 ### api
 
-<span style="font-family: monospace; font-size: 80%;">static [](../model/Api.md) __api__</span>
+<span style="font-family: monospace; font-size: 80%;">static [Api](../model/Api.md) __api__</span>
 
 
 
@@ -56,7 +56,7 @@ Utilities for rxtrating information from the API model
 
 ### ctx
 
-<span style="font-family: monospace; font-size: 80%;">static [](../core/Context.md) __ctx__</span>
+<span style="font-family: monospace; font-size: 80%;">static [Context](../core/Context.md) __ctx__</span>
 
 
 
@@ -68,7 +68,7 @@ Utilities for rxtrating information from the API model
 
 ### init
 
-<span style="font-family: monospace; font-size: 80%;">public static void __init__([](../model/Api.md) a, [](../core/Context.md) c)</span>
+<span style="font-family: monospace; font-size: 80%;">public static void __init__([Api](../model/Api.md) a, [Context](../core/Context.md) c)</span>
 
 
 
@@ -77,7 +77,7 @@ Utilities for rxtrating information from the API model
 
 ### baseTypeName
 
-<span style="font-family: monospace; font-size: 80%;">public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __baseTypeName__([](../model/MethodNode.md) methodNode)</span>
+<span style="font-family: monospace; font-size: 80%;">public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __baseTypeName__([MethodNode](../model/MethodNode.md) methodNode)</span>
 
 
 
@@ -86,7 +86,7 @@ Utilities for rxtrating information from the API model
 
 ### typeHasMethod
 
-<span style="font-family: monospace; font-size: 80%;">public static boolean __typeHasMethod__([](../model/TypeNode.md) typeNode, [](../model/MethodNode.md) methodNode)</span>
+<span style="font-family: monospace; font-size: 80%;">public static boolean __typeHasMethod__([TypeNode](../model/TypeNode.md) typeNode, [MethodNode](../model/MethodNode.md) methodNode)</span>
 
 
 
@@ -95,7 +95,7 @@ Utilities for rxtrating information from the API model
 
 ### canOverride
 
-<span style="font-family: monospace; font-size: 80%;">public static boolean __canOverride__([](../model/MethodNode.md) methodA, [](../model/MethodNode.md) methodB)</span>
+<span style="font-family: monospace; font-size: 80%;">public static boolean __canOverride__([MethodNode](../model/MethodNode.md) methodA, [MethodNode](../model/MethodNode.md) methodB)</span>
 
 
 
@@ -104,7 +104,7 @@ Utilities for rxtrating information from the API model
 
 ### isSubtype
 
-<span style="font-family: monospace; font-size: 80%;">public static boolean __isSubtype__([](../model/TypeReference.md) typeA, [](../model/TypeReference.md) typeB)</span>
+<span style="font-family: monospace; font-size: 80%;">public static boolean __isSubtype__([TypeReference](../model/TypeReference.md) typeA, [TypeReference](../model/TypeReference.md) typeB)</span>
 
 Check if typeA is a subtype of typeB
 
@@ -113,7 +113,7 @@ Check if typeA is a subtype of typeB
 
 ### isAssignableFrom
 
-<span style="font-family: monospace; font-size: 80%;">public static boolean __isAssignableFrom__([](../model/TypeReference.md) typeA, [](../model/TypeReference.md) typeB)</span>
+<span style="font-family: monospace; font-size: 80%;">public static boolean __isAssignableFrom__([TypeReference](../model/TypeReference.md) typeA, [TypeReference](../model/TypeReference.md) typeB)</span>
 
 Check if typeA is subtype of typeB
 
@@ -122,7 +122,7 @@ Check if typeA is subtype of typeB
 
 ### parameterizedTypesAreCompatible
 
-<span style="font-family: monospace; font-size: 80%;">private static boolean __parameterizedTypesAreCompatible__([](../model/TypeReference.Generic.md) paramTypeA, [](../model/TypeReference.Generic.md) paramTypeB)</span>
+<span style="font-family: monospace; font-size: 80%;">private static boolean __parameterizedTypesAreCompatible__([TypeReference.Generic](../model/TypeReference.Generic.md) paramTypeA, [TypeReference.Generic](../model/TypeReference.Generic.md) paramTypeB)</span>
 
 
 

@@ -16,22 +16,22 @@ Package [io.github.sandydunlop.markista.orchestration](index.md)
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|-------------|
 | private static final [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                                                                                                          | [DOT_HTML](#dot_html)                         |             |
 | private static final [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                                                                                                          | [JAVA_24_URL](#java_24_url)                   |             |
-| [](../model/Api.md)                                                                                                                                                                                                                                                                        | [api](#api)                                   |             |
-| [](../core/Context.md)                                                                                                                                                                                                                                                                     | [ctx](#ctx)                                   |             |
-| [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](../model/ExternalLink.md)>                                                                                                                                                                     | [externalLinks](#externallinks)               |             |
+| [Api](../model/Api.md)                                                                                                                                                                                                                                                                     | [api](#api)                                   |             |
+| [Context](../core/Context.md)                                                                                                                                                                                                                                                              | [ctx](#ctx)                                   |             |
+| [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[ExternalLink](../model/ExternalLink.md)>                                                                                                                                                         | [externalLinks](#externallinks)               |             |
 | private [Map](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Map.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html), [Module](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Module.html)> | [jreNamedModules](#jrenamedmodules)           |             |
 | private [Map](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Map.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html), [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)> | [jrePackagesToModules](#jrepackagestomodules) |             |
-| private [](../modelling/StandardModeller.md)                                                                                                                                                                                                                                               | [modeller](#modeller)                         |             |
+| private [StandardModeller](../modelling/StandardModeller.md)                                                                                                                                                                                                                               | [modeller](#modeller)                         |             |
 | private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)>                                                                                       | [primitives](#primitives)                     |             |
-| private [](ModulePath.md)                                                                                                                                                                                                                                                                  | [siblingModulePath](#siblingmodulepath)       |             |
+| private [ModulePath](ModulePath.md)                                                                                                                                                                                                                                                        | [siblingModulePath](#siblingmodulepath)       |             |
 
 
 
 ## Constructor Summary
 
-| Constructor                                                   | Description |
-|---------------------------------------------------------------|-------------|
-| LinkResolver([](../model/Api.md) a, [](../core/Context.md) c) |             |
+| Constructor                                                             | Description |
+|-------------------------------------------------------------------------|-------------|
+| LinkResolver([Api](../model/Api.md) a, [Context](../core/Context.md) c) |             |
 
 
 
@@ -39,24 +39,24 @@ Package [io.github.sandydunlop.markista.orchestration](index.md)
 
 | Modifier and Type                                                                                    | Method                                                                                                                                                                                                                                                                                                                                                                 | Description                                                                             |
 |------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| public void                                                                                          | [resolveTypeRererence](#resolvetyperererence)([](../model/TypeReference.md) typeRef)                                                                                                                                                                                                                                                                                   | Resolve links to types referenced by a [](../model/TypeReference.md).                   |
-| public void                                                                                          | [resolveLink](#resolvelink)([](../model/Link.md) link)                                                                                                                                                                                                                                                                                                                 |                                                                                         |
-| public boolean                                                                                       | [resolve](#resolve)([](../model/Link.md) link)                                                                                                                                                                                                                                                                                                                         |                                                                                         |
-| boolean                                                                                              | [preResolve](#preresolve)([](../model/Link.md) link)                                                                                                                                                                                                                                                                                                                   |                                                                                         |
-| [](../model/Link.md)                                                                                 | [resolveUnsupported](#resolveunsupported)([](../model/Link.md) link)                                                                                                                                                                                                                                                                                                   | Checks if the target is unsupported by LinkResolver.                                    |
-| boolean                                                                                              | [resolvePrimitiveOrVoid](#resolveprimitiveorvoid)([](../model/Link.md) link)                                                                                                                                                                                                                                                                                           | Checks if the target is a primitive type or void.                                       |
-| boolean                                                                                              | [resolveJreModule](#resolvejremodule)([](../model/Link.md) link)                                                                                                                                                                                                                                                                                                       |                                                                                         |
-| boolean                                                                                              | [resolveLocalModule](#resolvelocalmodule)([](../model/Link.md) link)                                                                                                                                                                                                                                                                                                   |                                                                                         |
-| boolean                                                                                              | [resolveExternalModule](#resolveexternalmodule)([](../model/Link.md) link)                                                                                                                                                                                                                                                                                             |                                                                                         |
-| boolean                                                                                              | [resolveJrePackageOrType](#resolvejrepackageortype)([](../model/Link.md) link)                                                                                                                                                                                                                                                                                         | Resolves a standard Java package or type to an external documentation URL.              |
-| boolean                                                                                              | [resolveLocalPackageOrType](#resolvelocalpackageortype)([](../model/Link.md) link)                                                                                                                                                                                                                                                                                     |                                                                                         |
-| boolean                                                                                              | [resolveExternalPackageOrType](#resolveexternalpackageortype)([](../model/Link.md) link)                                                                                                                                                                                                                                                                               |                                                                                         |
-| private void                                                                                         | [resolvedModule](#resolvedmodule)([](../model/Link.md) link, [](../model/Link.Scope.md) scope)                                                                                                                                                                                                                                                                         |                                                                                         |
-| private void                                                                                         | [resolvedPackage](#resolvedpackage)([](../model/Link.md) link, [](../model/Link.Scope.md) scope)                                                                                                                                                                                                                                                                       |                                                                                         |
-| private void                                                                                         | [resolvedType](#resolvedtype)([](../model/Link.md) link, [](../model/TypeNode.md) type, [](../model/Link.Scope.md) scope)                                                                                                                                                                                                                                              |                                                                                         |
-| private void                                                                                         | [resolvedExternal](#resolvedexternal)([](../model/Link.md) link, [](../model/ExternalLink.md) extLink, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) packageName, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) typeName)                                                |                                                                                         |
-| private void                                                                                         | [setModule](#setmodule)([](../model/Link.md) link)                                                                                                                                                                                                                                                                                                                     |                                                                                         |
-| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [moduleName](#modulename)([](../model/Link.md) link)                                                                                                                                                                                                                                                                                                                   |                                                                                         |
+| public void                                                                                          | [resolveTypeRererence](#resolvetyperererence)([TypeReference](../model/TypeReference.md) typeRef)                                                                                                                                                                                                                                                                      | Resolve links to types referenced by a [TypeReference](../model/TypeReference.md).      |
+| public void                                                                                          | [resolveLink](#resolvelink)([Link](../model/Link.md) link)                                                                                                                                                                                                                                                                                                             |                                                                                         |
+| public boolean                                                                                       | [resolve](#resolve)([Link](../model/Link.md) link)                                                                                                                                                                                                                                                                                                                     |                                                                                         |
+| boolean                                                                                              | [preResolve](#preresolve)([Link](../model/Link.md) link)                                                                                                                                                                                                                                                                                                               |                                                                                         |
+| [Link](../model/Link.md)                                                                             | [resolveUnsupported](#resolveunsupported)([Link](../model/Link.md) link)                                                                                                                                                                                                                                                                                               | Checks if the target is unsupported by LinkResolver.                                    |
+| boolean                                                                                              | [resolvePrimitiveOrVoid](#resolveprimitiveorvoid)([Link](../model/Link.md) link)                                                                                                                                                                                                                                                                                       | Checks if the target is a primitive type or void.                                       |
+| boolean                                                                                              | [resolveJreModule](#resolvejremodule)([Link](../model/Link.md) link)                                                                                                                                                                                                                                                                                                   |                                                                                         |
+| boolean                                                                                              | [resolveLocalModule](#resolvelocalmodule)([Link](../model/Link.md) link)                                                                                                                                                                                                                                                                                               |                                                                                         |
+| boolean                                                                                              | [resolveExternalModule](#resolveexternalmodule)([Link](../model/Link.md) link)                                                                                                                                                                                                                                                                                         |                                                                                         |
+| boolean                                                                                              | [resolveJrePackageOrType](#resolvejrepackageortype)([Link](../model/Link.md) link)                                                                                                                                                                                                                                                                                     | Resolves a standard Java package or type to an external documentation URL.              |
+| boolean                                                                                              | [resolveLocalPackageOrType](#resolvelocalpackageortype)([Link](../model/Link.md) link)                                                                                                                                                                                                                                                                                 |                                                                                         |
+| boolean                                                                                              | [resolveExternalPackageOrType](#resolveexternalpackageortype)([Link](../model/Link.md) link)                                                                                                                                                                                                                                                                           |                                                                                         |
+| private void                                                                                         | [resolvedModule](#resolvedmodule)([Link](../model/Link.md) link, [Link.Scope](../model/Link.Scope.md) scope)                                                                                                                                                                                                                                                           |                                                                                         |
+| private void                                                                                         | [resolvedPackage](#resolvedpackage)([Link](../model/Link.md) link, [Link.Scope](../model/Link.Scope.md) scope)                                                                                                                                                                                                                                                         |                                                                                         |
+| private void                                                                                         | [resolvedType](#resolvedtype)([Link](../model/Link.md) link, [TypeNode](../model/TypeNode.md) type, [Link.Scope](../model/Link.Scope.md) scope)                                                                                                                                                                                                                        |                                                                                         |
+| private void                                                                                         | [resolvedExternal](#resolvedexternal)([Link](../model/Link.md) link, [ExternalLink](../model/ExternalLink.md) extLink, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) packageName, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) typeName)                                |                                                                                         |
+| private void                                                                                         | [setModule](#setmodule)([Link](../model/Link.md) link)                                                                                                                                                                                                                                                                                                                 |                                                                                         |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [moduleName](#modulename)([Link](../model/Link.md) link)                                                                                                                                                                                                                                                                                                               |                                                                                         |
 | [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)         | [relativizeWithModules](#relativizewithmodules)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) from, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) to)                                                                                                                    | Produces a relative path considering modules between two packages.                      |
 | static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)  | [relativizeWithSiblingModule](#relativizewithsiblingmodule)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) from, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) to, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) toModule) | Computes a relative path from the current package context, considering sibling modules. |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)  | [removeParentheses](#removeparentheses)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) expression)                                                                                                                                                                                                                       | Removes parentheses and what they contain from an expression                            |
@@ -99,7 +99,7 @@ Package [io.github.sandydunlop.markista.orchestration](index.md)
 
 ### api
 
-<span style="font-family: monospace; font-size: 80%;">[](../model/Api.md) __api__</span>
+<span style="font-family: monospace; font-size: 80%;">[Api](../model/Api.md) __api__</span>
 
 
 
@@ -108,7 +108,7 @@ Package [io.github.sandydunlop.markista.orchestration](index.md)
 
 ### ctx
 
-<span style="font-family: monospace; font-size: 80%;">[](../core/Context.md) __ctx__</span>
+<span style="font-family: monospace; font-size: 80%;">[Context](../core/Context.md) __ctx__</span>
 
 
 
@@ -117,7 +117,7 @@ Package [io.github.sandydunlop.markista.orchestration](index.md)
 
 ### externalLinks
 
-<span style="font-family: monospace; font-size: 80%;">[List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](../model/ExternalLink.md)> __externalLinks__</span>
+<span style="font-family: monospace; font-size: 80%;">[List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[ExternalLink](../model/ExternalLink.md)> __externalLinks__</span>
 
 
 
@@ -144,7 +144,7 @@ Package [io.github.sandydunlop.markista.orchestration](index.md)
 
 ### modeller
 
-<span style="font-family: monospace; font-size: 80%;">private [](../modelling/StandardModeller.md) __modeller__</span>
+<span style="font-family: monospace; font-size: 80%;">private [StandardModeller](../modelling/StandardModeller.md) __modeller__</span>
 
 
 
@@ -162,7 +162,7 @@ Package [io.github.sandydunlop.markista.orchestration](index.md)
 
 ### siblingModulePath
 
-<span style="font-family: monospace; font-size: 80%;">private [](ModulePath.md) __siblingModulePath__</span>
+<span style="font-family: monospace; font-size: 80%;">private [ModulePath](ModulePath.md) __siblingModulePath__</span>
 
 
 
@@ -174,16 +174,16 @@ Package [io.github.sandydunlop.markista.orchestration](index.md)
 
 ### resolveTypeRererence
 
-<span style="font-family: monospace; font-size: 80%;">public void __resolveTypeRererence__([](../model/TypeReference.md) typeRef)</span>
+<span style="font-family: monospace; font-size: 80%;">public void __resolveTypeRererence__([TypeReference](../model/TypeReference.md) typeRef)</span>
 
-Resolve links to types referenced by a [](../model/TypeReference.md).
+Resolve links to types referenced by a [TypeReference](../model/TypeReference.md).
 
 
 ---
 
 ### resolveLink
 
-<span style="font-family: monospace; font-size: 80%;">public void __resolveLink__([](../model/Link.md) link)</span>
+<span style="font-family: monospace; font-size: 80%;">public void __resolveLink__([Link](../model/Link.md) link)</span>
 
 
 
@@ -192,7 +192,7 @@ Resolve links to types referenced by a [](../model/TypeReference.md).
 
 ### resolve
 
-<span style="font-family: monospace; font-size: 80%;">public boolean __resolve__([](../model/Link.md) link)</span>
+<span style="font-family: monospace; font-size: 80%;">public boolean __resolve__([Link](../model/Link.md) link)</span>
 
 
 
@@ -201,7 +201,7 @@ Resolve links to types referenced by a [](../model/TypeReference.md).
 
 ### preResolve
 
-<span style="font-family: monospace; font-size: 80%;">boolean __preResolve__([](../model/Link.md) link)</span>
+<span style="font-family: monospace; font-size: 80%;">boolean __preResolve__([Link](../model/Link.md) link)</span>
 
 
 
@@ -210,20 +210,20 @@ Resolve links to types referenced by a [](../model/TypeReference.md).
 
 ### resolveUnsupported
 
-<span style="font-family: monospace; font-size: 80%;">[](../model/Link.md) __resolveUnsupported__([](../model/Link.md) link)</span>
+<span style="font-family: monospace; font-size: 80%;">[Link](../model/Link.md) __resolveUnsupported__([Link](../model/Link.md) link)</span>
 
 Checks if the target is unsupported by LinkResolver.
 
 **Returns:**
 
-A [](../model/Link.md) with `Link.Kind.UNKNOWN` if unsupported, else `Link.Kind.NONE`.
+A [Link](../model/Link.md) with `Link.Kind.UNKNOWN` if unsupported, else `Link.Kind.NONE`.
 
 
 ---
 
 ### resolvePrimitiveOrVoid
 
-<span style="font-family: monospace; font-size: 80%;">boolean __resolvePrimitiveOrVoid__([](../model/Link.md) link)</span>
+<span style="font-family: monospace; font-size: 80%;">boolean __resolvePrimitiveOrVoid__([Link](../model/Link.md) link)</span>
 
 Checks if the target is a primitive type or void.
 
@@ -236,7 +236,7 @@ True if the reference resolved to primitive or void, else false.
 
 ### resolveJreModule
 
-<span style="font-family: monospace; font-size: 80%;">boolean __resolveJreModule__([](../model/Link.md) link)</span>
+<span style="font-family: monospace; font-size: 80%;">boolean __resolveJreModule__([Link](../model/Link.md) link)</span>
 
 
 
@@ -245,7 +245,7 @@ True if the reference resolved to primitive or void, else false.
 
 ### resolveLocalModule
 
-<span style="font-family: monospace; font-size: 80%;">boolean __resolveLocalModule__([](../model/Link.md) link)</span>
+<span style="font-family: monospace; font-size: 80%;">boolean __resolveLocalModule__([Link](../model/Link.md) link)</span>
 
 
 
@@ -254,7 +254,7 @@ True if the reference resolved to primitive or void, else false.
 
 ### resolveExternalModule
 
-<span style="font-family: monospace; font-size: 80%;">boolean __resolveExternalModule__([](../model/Link.md) link)</span>
+<span style="font-family: monospace; font-size: 80%;">boolean __resolveExternalModule__([Link](../model/Link.md) link)</span>
 
 
 
@@ -263,7 +263,7 @@ True if the reference resolved to primitive or void, else false.
 
 ### resolveJrePackageOrType
 
-<span style="font-family: monospace; font-size: 80%;">boolean __resolveJrePackageOrType__([](../model/Link.md) link)</span>
+<span style="font-family: monospace; font-size: 80%;">boolean __resolveJrePackageOrType__([Link](../model/Link.md) link)</span>
 
 Resolves a standard Java package or type to an external documentation URL.
 
@@ -276,7 +276,7 @@ True if the reference resolved to a standard package or type.
 
 ### resolveLocalPackageOrType
 
-<span style="font-family: monospace; font-size: 80%;">boolean __resolveLocalPackageOrType__([](../model/Link.md) link)</span>
+<span style="font-family: monospace; font-size: 80%;">boolean __resolveLocalPackageOrType__([Link](../model/Link.md) link)</span>
 
 
 
@@ -285,7 +285,7 @@ True if the reference resolved to a standard package or type.
 
 ### resolveExternalPackageOrType
 
-<span style="font-family: monospace; font-size: 80%;">boolean __resolveExternalPackageOrType__([](../model/Link.md) link)</span>
+<span style="font-family: monospace; font-size: 80%;">boolean __resolveExternalPackageOrType__([Link](../model/Link.md) link)</span>
 
 
 
@@ -294,7 +294,7 @@ True if the reference resolved to a standard package or type.
 
 ### resolvedModule
 
-<span style="font-family: monospace; font-size: 80%;">private void __resolvedModule__([](../model/Link.md) link, [](../model/Link.Scope.md) scope)</span>
+<span style="font-family: monospace; font-size: 80%;">private void __resolvedModule__([Link](../model/Link.md) link, [Link.Scope](../model/Link.Scope.md) scope)</span>
 
 
 
@@ -303,7 +303,7 @@ True if the reference resolved to a standard package or type.
 
 ### resolvedPackage
 
-<span style="font-family: monospace; font-size: 80%;">private void __resolvedPackage__([](../model/Link.md) link, [](../model/Link.Scope.md) scope)</span>
+<span style="font-family: monospace; font-size: 80%;">private void __resolvedPackage__([Link](../model/Link.md) link, [Link.Scope](../model/Link.Scope.md) scope)</span>
 
 
 
@@ -312,7 +312,7 @@ True if the reference resolved to a standard package or type.
 
 ### resolvedType
 
-<span style="font-family: monospace; font-size: 80%;">private void __resolvedType__([](../model/Link.md) link, [](../model/TypeNode.md) type, [](../model/Link.Scope.md) scope)</span>
+<span style="font-family: monospace; font-size: 80%;">private void __resolvedType__([Link](../model/Link.md) link, [TypeNode](../model/TypeNode.md) type, [Link.Scope](../model/Link.Scope.md) scope)</span>
 
 
 
@@ -321,7 +321,7 @@ True if the reference resolved to a standard package or type.
 
 ### resolvedExternal
 
-<span style="font-family: monospace; font-size: 80%;">private void __resolvedExternal__([](../model/Link.md) link, [](../model/ExternalLink.md) extLink, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) packageName, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) typeName)</span>
+<span style="font-family: monospace; font-size: 80%;">private void __resolvedExternal__([Link](../model/Link.md) link, [ExternalLink](../model/ExternalLink.md) extLink, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) packageName, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) typeName)</span>
 
 
 
@@ -330,7 +330,7 @@ True if the reference resolved to a standard package or type.
 
 ### setModule
 
-<span style="font-family: monospace; font-size: 80%;">private void __setModule__([](../model/Link.md) link)</span>
+<span style="font-family: monospace; font-size: 80%;">private void __setModule__([Link](../model/Link.md) link)</span>
 
 
 
@@ -339,7 +339,7 @@ True if the reference resolved to a standard package or type.
 
 ### moduleName
 
-<span style="font-family: monospace; font-size: 80%;">private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __moduleName__([](../model/Link.md) link)</span>
+<span style="font-family: monospace; font-size: 80%;">private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __moduleName__([Link](../model/Link.md) link)</span>
 
 
 

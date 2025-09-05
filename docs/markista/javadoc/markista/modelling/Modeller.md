@@ -5,7 +5,7 @@ Package [io.github.sandydunlop.markista.modelling](index.md)
         io.github.sandydunlop.markista.modelling.Modeller<br/>
 <br/>
 All Known Implementing Classes:<br/>
-    [](ElementModeller.md), [](StandardModeller.md)
+    [ElementModeller](ElementModeller.md), [StandardModeller](StandardModeller.md)
 
 
 ----
@@ -15,15 +15,15 @@ All Known Implementing Classes:<br/>
 
 ## Method Summary
 
-| Modifier and Type                           | Method                             | Description |
-|---------------------------------------------|------------------------------------|-------------|
-| public abstract [](../model/ModuleNode.md)  | [modelModule](#modelmodule)(A m)   |             |
-| public abstract [](../model/PackageNode.md) | [modelPackage](#modelpackage)(B p) |             |
-| public abstract [](../model/TypeNode.md)    | [modelType](#modeltype)(C t)       |             |
-| public abstract [](../model/ClassNode.md)   | [modelClass](#modelclass)(C t)     |             |
-| public abstract [](../model/FieldNode.md)   | [modelField](#modelfield)(F f)     |             |
-| public abstract [](../model/MethodNode.md)  | [modelMethod](#modelmethod)(M m)   |             |
-| public abstract [](../model/ParamNode.md)   | [modelParam](#modelparam)(P p)     |             |
+| Modifier and Type                                      | Method                             | Description |
+|--------------------------------------------------------|------------------------------------|-------------|
+| public abstract [ModuleNode](../model/ModuleNode.md)   | [modelModule](#modelmodule)(A m)   |             |
+| public abstract [PackageNode](../model/PackageNode.md) | [modelPackage](#modelpackage)(B p) |             |
+| public abstract [TypeNode](../model/TypeNode.md)       | [modelType](#modeltype)(C t)       |             |
+| public abstract [ClassNode](../model/ClassNode.md)     | [modelClass](#modelclass)(C t)     |             |
+| public abstract [FieldNode](../model/FieldNode.md)     | [modelField](#modelfield)(F f)     |             |
+| public abstract [MethodNode](../model/MethodNode.md)   | [modelMethod](#modelmethod)(M m)   |             |
+| public abstract [ParamNode](../model/ParamNode.md)     | [modelParam](#modelparam)(P p)     |             |
 
 
 
@@ -31,7 +31,7 @@ All Known Implementing Classes:<br/>
 
 ### modelModule
 
-<span style="font-family: monospace; font-size: 80%;">public abstract [](../model/ModuleNode.md) __modelModule__(A m)</span>
+<span style="font-family: monospace; font-size: 80%;">public abstract [ModuleNode](../model/ModuleNode.md) __modelModule__(A m)</span>
 
 
 
@@ -40,7 +40,7 @@ All Known Implementing Classes:<br/>
 
 ### modelPackage
 
-<span style="font-family: monospace; font-size: 80%;">public abstract [](../model/PackageNode.md) __modelPackage__(B p)</span>
+<span style="font-family: monospace; font-size: 80%;">public abstract [PackageNode](../model/PackageNode.md) __modelPackage__(B p)</span>
 
 
 
@@ -49,7 +49,7 @@ All Known Implementing Classes:<br/>
 
 ### modelType
 
-<span style="font-family: monospace; font-size: 80%;">public abstract [](../model/TypeNode.md) __modelType__(C t)</span>
+<span style="font-family: monospace; font-size: 80%;">public abstract [TypeNode](../model/TypeNode.md) __modelType__(C t)</span>
 
 
 
@@ -58,7 +58,7 @@ All Known Implementing Classes:<br/>
 
 ### modelClass
 
-<span style="font-family: monospace; font-size: 80%;">public abstract [](../model/ClassNode.md) __modelClass__(C t)</span>
+<span style="font-family: monospace; font-size: 80%;">public abstract [ClassNode](../model/ClassNode.md) __modelClass__(C t)</span>
 
 
 
@@ -67,7 +67,7 @@ All Known Implementing Classes:<br/>
 
 ### modelField
 
-<span style="font-family: monospace; font-size: 80%;">public abstract [](../model/FieldNode.md) __modelField__(F f)</span>
+<span style="font-family: monospace; font-size: 80%;">public abstract [FieldNode](../model/FieldNode.md) __modelField__(F f)</span>
 
 
 
@@ -76,7 +76,7 @@ All Known Implementing Classes:<br/>
 
 ### modelMethod
 
-<span style="font-family: monospace; font-size: 80%;">public abstract [](../model/MethodNode.md) __modelMethod__(M m)</span>
+<span style="font-family: monospace; font-size: 80%;">public abstract [MethodNode](../model/MethodNode.md) __modelMethod__(M m)</span>
 
 
 
@@ -85,7 +85,7 @@ All Known Implementing Classes:<br/>
 
 ### modelParam
 
-<span style="font-family: monospace; font-size: 80%;">public abstract [](../model/ParamNode.md) __modelParam__(P p)</span>
+<span style="font-family: monospace; font-size: 80%;">public abstract [ParamNode](../model/ParamNode.md) __modelParam__(P p)</span>
 
 
 

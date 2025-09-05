@@ -10,7 +10,7 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 ----
 
-<span style="font-family: monospace; font-size: 80%;">public class __FieldNode__<br/>extends [](ParamNode.md)
+<span style="font-family: monospace; font-size: 80%;">public class __FieldNode__<br/>extends [ParamNode](ParamNode.md)
 </span>
 
 A class to hold information about fields within a class, interface, or enum.
@@ -21,7 +21,7 @@ A class to hold information about fields within a class, interface, or enum.
 | Modifier and Type                                                                                              | Field                                             | Description                                        |
 |----------------------------------------------------------------------------------------------------------------|---------------------------------------------------|----------------------------------------------------|
 | private [Serializable](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Serializable.html) | [constantValue](#constantvalue)                   | The constant value assigned to this field, if any. |
-| private [](TypeReference.md)                                                                                   | [constantValueReference](#constantvaluereference) |                                                    |
+| private [TypeReference](TypeReference.md)                                                                      | [constantValueReference](#constantvaluereference) |                                                    |
 
 
 
@@ -39,8 +39,8 @@ A class to hold information about fields within a class, interface, or enum.
 |---------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|
 | public [Serializable](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Serializable.html) | [getConstantValue](#getconstantvalue)()                                                                                                                     | Returns the constant value of this field.                             |
 | public void                                                                                                   | [setConstantValue](#setconstantvalue)([Serializable](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Serializable.html) constantValue) | Sets the constant value of this field.                                |
-| public void                                                                                                   | [setConstantValueReference](#setconstantvaluereference)([](TypeReference.md) ref)                                                                           |                                                                       |
-| public [](TypeReference.md)                                                                                   | [getConstantValueReference](#getconstantvaluereference)()                                                                                                   |                                                                       |
+| public void                                                                                                   | [setConstantValueReference](#setconstantvaluereference)([TypeReference](TypeReference.md) ref)                                                              |                                                                       |
+| public [TypeReference](TypeReference.md)                                                                      | [getConstantValueReference](#getconstantvaluereference)()                                                                                                   |                                                                       |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)           | [fullSignature](#fullsignature)()                                                                                                                           | Returns the full signature of the field including modifiers and name. |
 
 
@@ -48,13 +48,13 @@ A class to hold information about fields within a class, interface, or enum.
 
 [ParamNode.getType](ParamNode.md#gettype), [ParamNode.setType](ParamNode.md#settype)
 
-### Methods inherited from [io.github.sandydunlop.markista.model.AbstractMember](AbstractMember.md)
-
-[AbstractMember.addAppliedAnnotation](AbstractMember.md#addappliedannotation), [AbstractMember.addModifier](AbstractMember.md#addmodifier), [AbstractMember.setQualifiedName](AbstractMember.md#setqualifiedname), [AbstractMember.getName](AbstractMember.md#getname), [AbstractMember.getModifiers](AbstractMember.md#getmodifiers), [AbstractMember.getAppliedAnnotations](AbstractMember.md#getappliedannotations), [AbstractMember.getPackageName](AbstractMember.md#getpackagename), [AbstractMember.setNestedName](AbstractMember.md#setnestedname), [AbstractMember.setPackageName](AbstractMember.md#setpackagename), [AbstractMember.getQualifiedName](AbstractMember.md#getqualifiedname), [AbstractMember.setSimpleName](AbstractMember.md#setsimplename), [AbstractMember.getSimpleName](AbstractMember.md#getsimplename), [AbstractMember.getModifiersString](AbstractMember.md#getmodifiersstring), [AbstractMember.getNestedName](AbstractMember.md#getnestedname), [AbstractMember.setName](AbstractMember.md#setname)
-
 ### Methods inherited from [io.github.sandydunlop.markista.model.Node](Node.md)
 
 [Node.getReferences](Node.md#getreferences), [Node.setDeprecationText](Node.md#setdeprecationtext), [Node.getBody](Node.md#getbody), [Node.setFirstSentence](Node.md#setfirstsentence), [Node.setDeprecation](Node.md#setdeprecation), [Node.getDeprecation](Node.md#getdeprecation), [Node.getUUID](Node.md#getuuid), [Node.getFullBody](Node.md#getfullbody), [Node.setReferences](Node.md#setreferences), [Node.getKind](Node.md#getkind), [Node.getSince](Node.md#getsince), [Node.setFullBody](Node.md#setfullbody), [Node.setSince](Node.md#setsince), [Node.setBody](Node.md#setbody), [Node.getFirstSentence](Node.md#getfirstsentence), [Node.setKind](Node.md#setkind), [Node.getDeprecationText](Node.md#getdeprecationtext)
+
+### Methods inherited from [io.github.sandydunlop.markista.model.AbstractMember](AbstractMember.md)
+
+[AbstractMember.addAppliedAnnotation](AbstractMember.md#addappliedannotation), [AbstractMember.addModifier](AbstractMember.md#addmodifier), [AbstractMember.setQualifiedName](AbstractMember.md#setqualifiedname), [AbstractMember.getName](AbstractMember.md#getname), [AbstractMember.getModifiers](AbstractMember.md#getmodifiers), [AbstractMember.getAppliedAnnotations](AbstractMember.md#getappliedannotations), [AbstractMember.getPackageName](AbstractMember.md#getpackagename), [AbstractMember.setNestedName](AbstractMember.md#setnestedname), [AbstractMember.setPackageName](AbstractMember.md#setpackagename), [AbstractMember.getQualifiedName](AbstractMember.md#getqualifiedname), [AbstractMember.setSimpleName](AbstractMember.md#setsimplename), [AbstractMember.getSimpleName](AbstractMember.md#getsimplename), [AbstractMember.getModifiersString](AbstractMember.md#getmodifiersstring), [AbstractMember.getNestedName](AbstractMember.md#getnestedname), [AbstractMember.setName](AbstractMember.md#setname)
 
 
 ## Field Details
@@ -70,7 +70,7 @@ The constant value assigned to this field, if any.
 
 ### constantValueReference
 
-<span style="font-family: monospace; font-size: 80%;">private [](TypeReference.md) __constantValueReference__</span>
+<span style="font-family: monospace; font-size: 80%;">private [TypeReference](TypeReference.md) __constantValueReference__</span>
 
 
 
@@ -104,7 +104,7 @@ Sets the constant value of this field.
 
 ### setConstantValueReference
 
-<span style="font-family: monospace; font-size: 80%;">public void __setConstantValueReference__([](TypeReference.md) ref)</span>
+<span style="font-family: monospace; font-size: 80%;">public void __setConstantValueReference__([TypeReference](TypeReference.md) ref)</span>
 
 
 
@@ -113,7 +113,7 @@ Sets the constant value of this field.
 
 ### getConstantValueReference
 
-<span style="font-family: monospace; font-size: 80%;">public [](TypeReference.md) __getConstantValueReference__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [TypeReference](TypeReference.md) __getConstantValueReference__()</span>
 
 
 

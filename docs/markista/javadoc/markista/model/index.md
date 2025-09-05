@@ -10,7 +10,7 @@ The types used to store structure and documentation information of the API.
     |---------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | [AbstractMember](AbstractMember.md)               |                                                                                                                                                                                                   |
     | [AnnotationElement](AnnotationElement.md)         | An element of an annotation                                                                                                                                                                       |
-    | [AnnotationNode](AnnotationNode.md)               | A [](Node.md) that represents an [Annotation](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/text/Annotation.html) class                                                       |
+    | [AnnotationNode](AnnotationNode.md)               | A [Node](Node.md) that represents an [Annotation](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/text/Annotation.html) class                                                   |
     | [Api](Api.md)                                     | Represents the API being documented, encapsulating its modules and packages.                                                                                                                      |
     | [AppliedAnnotationNode](AppliedAnnotationNode.md) | An annotation applied to a type                                                                                                                                                                   |
     | [ClassNode](ClassNode.md)                         | Represents a Java class.                                                                                                                                                                          |
@@ -32,14 +32,6 @@ The types used to store structure and documentation information of the API.
     | [Text](Text.md)                                   | Represents a block of text.                                                                                                                                                                       |
     | [TypeNode](TypeNode.md)                           | Represents a type in the API model, including its kind (class, interface, enum, annotation), supertypes, implemented interfaces, constructors, methods, fields, ownership, and relevant metadata. |
     | [TypeReference](TypeReference.md)                 |                                                                                                                                                                                                   |
-    | [TypeView](TypeView.md)                           | Minimal view of a type used by PackageOrTypeNode.                                                                                                                                                 |
-
-
-=== "Interfaces"
-
-    | Class                   | Description                                       |
-    |-------------------------|---------------------------------------------------|
-    | [TypeView](TypeView.md) | Minimal view of a type used by PackageOrTypeNode. |
 
 
 === "Classes"
@@ -48,7 +40,7 @@ The types used to store structure and documentation information of the API.
     |---------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | [AbstractMember](AbstractMember.md)               |                                                                                                                                                                                                   |
     | [AnnotationElement](AnnotationElement.md)         | An element of an annotation                                                                                                                                                                       |
-    | [AnnotationNode](AnnotationNode.md)               | A [](Node.md) that represents an [Annotation](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/text/Annotation.html) class                                                       |
+    | [AnnotationNode](AnnotationNode.md)               | A [Node](Node.md) that represents an [Annotation](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/text/Annotation.html) class                                                   |
     | [Api](Api.md)                                     | Represents the API being documented, encapsulating its modules and packages.                                                                                                                      |
     | [AppliedAnnotationNode](AppliedAnnotationNode.md) | An annotation applied to a type                                                                                                                                                                   |
     | [ClassNode](ClassNode.md)                         | Represents a Java class.                                                                                                                                                                          |

@@ -5,7 +5,7 @@ Package [io.github.sandydunlop.markista.spi](index.md)
         io.github.sandydunlop.markista.spi.DocService<br/>
 <br/>
 All Known Implementing Classes:<br/>
-    [](../markdown/MarkdownService.md)
+    [MarkdownService](../markdown/MarkdownService.md)
 
 
 ----
@@ -42,11 +42,11 @@ maintain and extend the documentation processing capabilities of Markista.
 
 ## Method Summary
 
-| Modifier and Type       | Method                                                               | Description                                                      |
-|-------------------------|----------------------------------------------------------------------|------------------------------------------------------------------|
-| public abstract boolean | [replacesDefault](#replacesdefault)()                                | Returns true if this Docservice replaces the default DocService. |
-| public abstract boolean | [start](#start)([](../model/Api.md) api, [](../core/Context.md) ctx) | Runs before the main Markdown DocService.                        |
-| public abstract boolean | [finish](#finish)()                                                  | Runs after the main Markdown DocService.                         |
+| Modifier and Type       | Method                                                                         | Description                                                      |
+|-------------------------|--------------------------------------------------------------------------------|------------------------------------------------------------------|
+| public abstract boolean | [replacesDefault](#replacesdefault)()                                          | Returns true if this Docservice replaces the default DocService. |
+| public abstract boolean | [start](#start)([Api](../model/Api.md) api, [Context](../core/Context.md) ctx) | Runs before the main Markdown DocService.                        |
+| public abstract boolean | [finish](#finish)()                                                            | Runs after the main Markdown DocService.                         |
 
 
 
@@ -67,7 +67,7 @@ true if this DocService replaces the default Markdown one, false otherwise.
 
 ### start
 
-<span style="font-family: monospace; font-size: 80%;">public abstract boolean __start__([](../model/Api.md) api, [](../core/Context.md) ctx)</span>
+<span style="font-family: monospace; font-size: 80%;">public abstract boolean __start__([Api](../model/Api.md) api, [Context](../core/Context.md) ctx)</span>
 
 Runs before the main Markdown DocService.
 Initializes a DocService with the API model and a Context for file creation and reporting.
