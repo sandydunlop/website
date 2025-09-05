@@ -9,12 +9,12 @@ Enclosing Class:<br/>
     [io.github.sandydunlop.markista.model.TypeReference](TypeReference.md)
 
 Direct Known Subtypes:<br/>
-    [TypeReference.Generic](TypeReference.Generic.md), [TypeReference.Sequence](TypeReference.Sequence.md)
+    [](TypeReference.Generic.md), [](TypeReference.Sequence.md)
 
 
 ----
 
-<span style="font-family: monospace; font-size: 80%;">public static class __TypeReference.TypeParameter__<br/>extends [TypeReference](TypeReference.md)
+<span style="font-family: monospace; font-size: 80%;">public static class __TypeReference.TypeParameter__<br/>extends [](TypeReference.md)
 </span>
 
 

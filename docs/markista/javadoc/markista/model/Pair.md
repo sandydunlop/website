@@ -42,7 +42,7 @@ All Implemented Interfaces:<br/>
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [toString](#tostring)()                                                                                               |             |
 | public boolean                                                                                      | [equals](#equals)([Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html) other) |             |
 | public int                                                                                          | [hashCode](#hashcode)()                                                                                               |             |
-| public static [Pair](Pair.md)<A, B>                                                                 | [of](#of)(A a, B b)                                                                                                   |             |
+| public static [](Pair.md)<A, B>                                                                     | [of](#of)(A a, B b)                                                                                                   |             |
 
 
 
@@ -149,7 +149,7 @@ All Implemented Interfaces:<br/>
 
 ### of
 
-<span style="font-family: monospace; font-size: 80%;">public static [Pair](Pair.md)<A, B> __of__(A a, B b)</span>
+<span style="font-family: monospace; font-size: 80%;">public static [](Pair.md)<A, B> __of__(A a, B b)</span>
 
 
 

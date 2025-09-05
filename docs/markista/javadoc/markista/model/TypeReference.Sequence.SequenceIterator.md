@@ -5,7 +5,7 @@ Package [io.github.sandydunlop.markista.model](index.md)
         io.github.sandydunlop.markista.model.TypeReference.Sequence.SequenceIterator<br/>
 <br/>
 All Implemented Interfaces:<br/>
-    [Iterator](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Iterator.html)<[TypeReference.TypeParameter](TypeReference.TypeParameter.md)>
+    [Iterator](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Iterator.html)<[](TypeReference.TypeParameter.md)>
 
 Enclosing Class:<br/>
     [io.github.sandydunlop.markista.model.TypeReference.Sequence](TypeReference.Sequence.md)
@@ -34,10 +34,10 @@ Enclosing Class:<br/>
 
 ## Method Summary
 
-| Modifier and Type                                                    | Method                | Description |
-|----------------------------------------------------------------------|-----------------------|-------------|
-| public boolean                                                       | [hasNext](#hasnext)() |             |
-| public [TypeReference.TypeParameter](TypeReference.TypeParameter.md) | [next](#next)()       |             |
+| Modifier and Type                         | Method                | Description |
+|-------------------------------------------|-----------------------|-------------|
+| public boolean                            | [hasNext](#hasnext)() |             |
+| public [](TypeReference.TypeParameter.md) | [next](#next)()       |             |
 
 
 
@@ -70,7 +70,7 @@ Enclosing Class:<br/>
 
 ### next
 
-<span style="font-family: monospace; font-size: 80%;">public [TypeReference.TypeParameter](TypeReference.TypeParameter.md) __next__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [](TypeReference.TypeParameter.md) __next__()</span>
 
 
 

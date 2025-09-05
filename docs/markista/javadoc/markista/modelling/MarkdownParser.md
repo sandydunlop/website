@@ -32,17 +32,17 @@ and END indicating the end of the sequence.
 
 ## Field Summary
 
-| Modifier and Type                                                                                                                                       | Field                                 | Description |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|-------------|
-| int                                                                                                                                                     | [closeBracket](#closebracket)         |             |
-| int                                                                                                                                                     | [closeParenthesis](#closeparenthesis) |             |
-| private int                                                                                                                                             | [head](#head)                         |             |
-| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                    | [markdown](#markdown)                 |             |
-| int                                                                                                                                                     | [openBracket](#openbracket)           |             |
-| int                                                                                                                                                     | [openParenthesis](#openparenthesis)   |             |
-| private [MarkdownParser.Token](MarkdownParser.Token.md)                                                                                                 | [prev](#prev)                         |             |
-| private int                                                                                                                                             | [tail](#tail)                         |             |
-| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[MarkdownParser.Token](MarkdownParser.Token.md)> | [tokens](#tokens)                     |             |
+| Modifier and Type                                                                                                                   | Field                                 | Description |
+|-------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|-------------|
+| int                                                                                                                                 | [closeBracket](#closebracket)         |             |
+| int                                                                                                                                 | [closeParenthesis](#closeparenthesis) |             |
+| private int                                                                                                                         | [head](#head)                         |             |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                | [markdown](#markdown)                 |             |
+| int                                                                                                                                 | [openBracket](#openbracket)           |             |
+| int                                                                                                                                 | [openParenthesis](#openparenthesis)   |             |
+| private [](MarkdownParser.Token.md)                                                                                                 | [prev](#prev)                         |             |
+| private int                                                                                                                         | [tail](#tail)                         |             |
+| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](MarkdownParser.Token.md)> | [tokens](#tokens)                     |             |
 
 
 
@@ -56,18 +56,18 @@ and END indicating the end of the sequence.
 
 ## Method Summary
 
-| Modifier and Type                                      | Method                                                                          | Description                                                                          |
-|--------------------------------------------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
-| private void                                           | [processCharInGeneral](#processcharingeneral)()                                 | Handles a character encountered when not in code or special markup.                  |
-| private void                                           | [handleOpenBracket](#handleopenbracket)()                                       | Handles the open bracket `[` encountered in the markdown.                            |
-| private boolean                                        | [handleOpenParenthesis](#handleopenparenthesis)(char prevChar)                  | Handles an open parenthesis `(` encountered immediately after closing bracket `]`.   |
-| private void                                           | [handleCloseBracket](#handleclosebracket)()                                     | Handles the close bracket `]` encountered in the markdown.                           |
-| private boolean                                        | [handleCloseParenthesis](#handlecloseparenthesis)(boolean parensFollowBrackets) | Handles the close parenthesis `)` encountered.                                       |
-| private void                                           | [saveText](#savetext)()                                                         | Saves any text from the tail position up to the current head as a TEXT token.        |
-| private void                                           | [saveBracketsTag](#savebracketstag)()                                           | Saves the content between the most recent pair of brackets as a BRACKETS_TAG token.  |
-| private void                                           | [saveParensTag](#saveparenstag)()                                               | Saves the content between the most recent pair of parentheses as a PARENS_TAG token. |
-| private void                                           | [saveToken](#savetoken)([MarkdownParser.Token](MarkdownParser.Token.md) token)  | Adds the specified token to the list and links it to the previously saved token.     |
-| public [MarkdownParser.Token](MarkdownParser.Token.md) | [firstToken](#firsttoken)()                                                     | Returns the first token in the parsed sequence.                                      |
+| Modifier and Type                  | Method                                                                          | Description                                                                          |
+|------------------------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
+| private void                       | [processCharInGeneral](#processcharingeneral)()                                 | Handles a character encountered when not in code or special markup.                  |
+| private void                       | [handleOpenBracket](#handleopenbracket)()                                       | Handles the open bracket `[` encountered in the markdown.                            |
+| private boolean                    | [handleOpenParenthesis](#handleopenparenthesis)(char prevChar)                  | Handles an open parenthesis `(` encountered immediately after closing bracket `]`.   |
+| private void                       | [handleCloseBracket](#handleclosebracket)()                                     | Handles the close bracket `]` encountered in the markdown.                           |
+| private boolean                    | [handleCloseParenthesis](#handlecloseparenthesis)(boolean parensFollowBrackets) | Handles the close parenthesis `)` encountered.                                       |
+| private void                       | [saveText](#savetext)()                                                         | Saves any text from the tail position up to the current head as a TEXT token.        |
+| private void                       | [saveBracketsTag](#savebracketstag)()                                           | Saves the content between the most recent pair of brackets as a BRACKETS_TAG token.  |
+| private void                       | [saveParensTag](#saveparenstag)()                                               | Saves the content between the most recent pair of parentheses as a PARENS_TAG token. |
+| private void                       | [saveToken](#savetoken)([](MarkdownParser.Token.md) token)                      | Adds the specified token to the list and links it to the previously saved token.     |
+| public [](MarkdownParser.Token.md) | [firstToken](#firsttoken)()                                                     | Returns the first token in the parsed sequence.                                      |
 
 
 
@@ -129,7 +129,7 @@ and END indicating the end of the sequence.
 
 ### prev
 
-<span style="font-family: monospace; font-size: 80%;">private [MarkdownParser.Token](MarkdownParser.Token.md) __prev__</span>
+<span style="font-family: monospace; font-size: 80%;">private [](MarkdownParser.Token.md) __prev__</span>
 
 
 
@@ -147,7 +147,7 @@ and END indicating the end of the sequence.
 
 ### tokens
 
-<span style="font-family: monospace; font-size: 80%;">private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[MarkdownParser.Token](MarkdownParser.Token.md)> __tokens__</span>
+<span style="font-family: monospace; font-size: 80%;">private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](MarkdownParser.Token.md)> __tokens__</span>
 
 
 
@@ -244,7 +244,7 @@ Saves the content between the most recent pair of parentheses as a PARENS_TAG to
 
 ### saveToken
 
-<span style="font-family: monospace; font-size: 80%;">private void __saveToken__([MarkdownParser.Token](MarkdownParser.Token.md) token)</span>
+<span style="font-family: monospace; font-size: 80%;">private void __saveToken__([](MarkdownParser.Token.md) token)</span>
 
 Adds the specified token to the list and links it to the previously saved token.
 
@@ -253,7 +253,7 @@ Adds the specified token to the list and links it to the previously saved token.
 
 ### firstToken
 
-<span style="font-family: monospace; font-size: 80%;">public [MarkdownParser.Token](MarkdownParser.Token.md) __firstToken__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [](MarkdownParser.Token.md) __firstToken__()</span>
 
 Returns the first token in the parsed sequence.
 If no tokens exist, returns an END kind token.

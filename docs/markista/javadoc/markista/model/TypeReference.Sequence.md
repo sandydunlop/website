@@ -7,7 +7,7 @@ Package [io.github.sandydunlop.markista.model](index.md)
                         io.github.sandydunlop.markista.model.TypeReference.Sequence<br/>
 <br/>
 All Implemented Interfaces:<br/>
-    [Iterable](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Iterable.html)<[TypeReference.TypeParameter](TypeReference.TypeParameter.md)>
+    [Iterable](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Iterable.html)<[](TypeReference.TypeParameter.md)>
 
 Enclosing Class:<br/>
     [io.github.sandydunlop.markista.model.TypeReference](TypeReference.md)
@@ -15,7 +15,7 @@ Enclosing Class:<br/>
 
 ----
 
-<span style="font-family: monospace; font-size: 80%;">public static class __TypeReference.Sequence__<br/>extends [TypeReference.TypeParameter](TypeReference.TypeParameter.md)
+<span style="font-family: monospace; font-size: 80%;">public static class __TypeReference.Sequence__<br/>extends [](TypeReference.TypeParameter.md)
 </span>
 
 
@@ -29,11 +29,11 @@ Enclosing Class:<br/>
 
 ## Field Summary
 
-| Modifier and Type                                                            | Field                                 | Description |
-|------------------------------------------------------------------------------|---------------------------------------|-------------|
-| private static final int                                                     | [INITIAL_CAPACITY](#initial_capacity) |             |
-| private io.github.sandydunlop.markista.model.TypeReference.TypeParameter[][] | [elements](#elements)                 |             |
-| private int                                                                  | [size](#size)                         |             |
+| Modifier and Type                            | Field                                 | Description |
+|----------------------------------------------|---------------------------------------|-------------|
+| private static final int                     | [INITIAL_CAPACITY](#initial_capacity) |             |
+| private [](TypeReference.TypeParameter.md)[] | [elements](#elements)                 |             |
+| private int                                  | [size](#size)                         |             |
 
 
 
@@ -47,15 +47,15 @@ Enclosing Class:<br/>
 
 ## Method Summary
 
-| Modifier and Type                                                                                                                                                      | Method                                                                                   | Description |
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|-------------|
-| private void                                                                                                                                                           | [resize](#resize)()                                                                      |             |
-| public int                                                                                                                                                             | [size](#size)()                                                                          |             |
-| public void                                                                                                                                                            | [append](#append)([TypeReference.TypeParameter](TypeReference.TypeParameter.md) element) |             |
-| public [TypeReference.TypeParameter](TypeReference.TypeParameter.md)                                                                                                   | [get](#get)(int index)                                                                   |             |
-| public [TypeReference.TypeParameter](TypeReference.TypeParameter.md)                                                                                                   | [getFirst](#getfirst)()                                                                  |             |
-| public [TypeReference.TypeParameter](TypeReference.TypeParameter.md)                                                                                                   | [getLast](#getlast)()                                                                    |             |
-| public [Iterator](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Iterator.html)<[TypeReference.TypeParameter](TypeReference.TypeParameter.md)> | [iterator](#iterator)()                                                                  |             |
+| Modifier and Type                                                                                                                           | Method                                                        | Description |
+|---------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------|-------------|
+| private void                                                                                                                                | [resize](#resize)()                                           |             |
+| public int                                                                                                                                  | [size](#size)()                                               |             |
+| public void                                                                                                                                 | [append](#append)([](TypeReference.TypeParameter.md) element) |             |
+| public [](TypeReference.TypeParameter.md)                                                                                                   | [get](#get)(int index)                                        |             |
+| public [](TypeReference.TypeParameter.md)                                                                                                   | [getFirst](#getfirst)()                                       |             |
+| public [](TypeReference.TypeParameter.md)                                                                                                   | [getLast](#getlast)()                                         |             |
+| public [Iterator](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Iterator.html)<[](TypeReference.TypeParameter.md)> | [iterator](#iterator)()                                       |             |
 
 
 ### Methods inherited from [io.github.sandydunlop.markista.model.TypeReference](TypeReference.md)
@@ -86,7 +86,7 @@ Enclosing Class:<br/>
 
 ### elements
 
-<span style="font-family: monospace; font-size: 80%;">private io.github.sandydunlop.markista.model.TypeReference.TypeParameter[][] __elements__</span>
+<span style="font-family: monospace; font-size: 80%;">private [](TypeReference.TypeParameter.md)[] __elements__</span>
 
 
 
@@ -125,7 +125,7 @@ Enclosing Class:<br/>
 
 ### append
 
-<span style="font-family: monospace; font-size: 80%;">public void __append__([TypeReference.TypeParameter](TypeReference.TypeParameter.md) element)</span>
+<span style="font-family: monospace; font-size: 80%;">public void __append__([](TypeReference.TypeParameter.md) element)</span>
 
 
 
@@ -134,7 +134,7 @@ Enclosing Class:<br/>
 
 ### get
 
-<span style="font-family: monospace; font-size: 80%;">public [TypeReference.TypeParameter](TypeReference.TypeParameter.md) __get__(int index)</span>
+<span style="font-family: monospace; font-size: 80%;">public [](TypeReference.TypeParameter.md) __get__(int index)</span>
 
 
 
@@ -143,7 +143,7 @@ Enclosing Class:<br/>
 
 ### getFirst
 
-<span style="font-family: monospace; font-size: 80%;">public [TypeReference.TypeParameter](TypeReference.TypeParameter.md) __getFirst__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [](TypeReference.TypeParameter.md) __getFirst__()</span>
 
 
 
@@ -152,7 +152,7 @@ Enclosing Class:<br/>
 
 ### getLast
 
-<span style="font-family: monospace; font-size: 80%;">public [TypeReference.TypeParameter](TypeReference.TypeParameter.md) __getLast__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [](TypeReference.TypeParameter.md) __getLast__()</span>
 
 
 
@@ -161,7 +161,7 @@ Enclosing Class:<br/>
 
 ### iterator
 
-<span style="font-family: monospace; font-size: 80%;">public [Iterator](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Iterator.html)<[TypeReference.TypeParameter](TypeReference.TypeParameter.md)> __iterator__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [Iterator](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Iterator.html)<[](TypeReference.TypeParameter.md)> __iterator__()</span>
 
 
 

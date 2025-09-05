@@ -30,12 +30,12 @@ being populated and updates the Api instance as elements are encountered.
 
 | Modifier and Type                                                                                                                                                                            | Field                           | Description                                                                          |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------|--------------------------------------------------------------------------------------|
-| [Api](../model/Api.md)                                                                                                                                                                       | [api](#api)                     | The Api model being populated by this scanner.                                       |
-| private final [Context](../core/Context.md)                                                                                                                                                  | [ctx](#ctx)                     | The shared Context singleton providing logging and configuration access.             |
-| private [ModuleNode](../model/ModuleNode.md)                                                                                                                                                 | [currentModule](#currentmodule) | The module node currently being populated during a scan.                             |
+| [](../model/Api.md)                                                                                                                                                                          | [api](#api)                     | The Api model being populated by this scanner.                                       |
+| private final [](../core/Context.md)                                                                                                                                                         | [ctx](#ctx)                     | The shared Context singleton providing logging and configuration access.             |
+| private [](../model/ModuleNode.md)                                                                                                                                                           | [currentModule](#currentmodule) | The module node currently being populated during a scan.                             |
 | [HashSet](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/HashSet.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)> | [includedNames](#includednames) | A set of fully-qualified names (packages and types) included in the scan invocation. |
-| private [ElementModeller](../modelling/ElementModeller.md)                                                                                                                                   | [modeller](#modeller)           |                                                                                      |
-| private final [ModuleNode](../model/ModuleNode.md)                                                                                                                                           | [unnamedModule](#unnamedmodule) | The unnamed module node reprsenting package elements not in an explicit module.      |
+| private [](../modelling/ElementModeller.md)                                                                                                                                                  | [modeller](#modeller)           |                                                                                      |
+| private final [](../model/ModuleNode.md)                                                                                                                                                     | [unnamedModule](#unnamedmodule) | The unnamed module node reprsenting package elements not in an explicit module.      |
 
 
 
@@ -51,7 +51,7 @@ being populated and updates the Api instance as elements are encountered.
 
 | Modifier and Type                                                                               | Method                                                                                                                                                                                                                                                                                                 | Description                                                                                                                                                                                                                                  |
 |-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| public [Api](../model/Api.md)                                                                   | [scan](#scan)([Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<? extends [Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html)> elements)                                                            | Scan the given set of top-level elements and return the built Api model.                                                                                                                                                                     |
+| public [](../model/Api.md)                                                                      | [scan](#scan)([Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<? extends [Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html)> elements)                                                            | Scan the given set of top-level elements and return the built Api model.                                                                                                                                                                     |
 | private void                                                                                    | [processIncludedElements](#processincludedelements)([Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<? extends [Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html)> elements)                      | Populate the includedNames set from the provided element set.                                                                                                                                                                                |
 | boolean                                                                                         | [isIncludedElement](#isincludedelement)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName)                                                                                                                                                    | Check whether an element with the given qualifiedName was explicitly included in the Javadoc invocation (via the elements set passed to the doclet).                                                                                         |
 | boolean                                                                                         | [isIncludedElement](#isincludedelement)([Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html) e)                                                                                                                                           | Determine whether an Element should be treated as included by looking up the enclosing type name and checking the includedNames set.                                                                                                         |
@@ -64,7 +64,7 @@ being populated and updates the Api instance as elements are encountered.
 | public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) | [visitVariable](#visitvariable)([VariableElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/VariableElement.html) ve, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)                            | Visit a variable element and, if it is a field included in the API, convert it to a FieldNode, record any constant value, and populate documentation and modifiers.                                                                          |
 | public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) | [visitTypeParameter](#visittypeparameter)([TypeParameterElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/TypeParameterElement.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth)         | Visit a type parameter.                                                                                                                                                                                                                      |
 | public [Void](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Void.html) | [visitRecordComponent](#visitrecordcomponent)([RecordComponentElement](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/RecordComponentElement.html) e, [Integer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html) depth) | Visit a record component.                                                                                                                                                                                                                    |
-| public void                                                                                     | [addConstantFieldValuesReference](#addconstantfieldvaluesreference)([ModuleNode](../model/ModuleNode.md) moduleNode)                                                                                                                                                                                   | Adds references to constant field values from classes in the API to the provided module node.                                                                                                                                                |
+| public void                                                                                     | [addConstantFieldValuesReference](#addconstantfieldvaluesreference)([](../model/ModuleNode.md) moduleNode)                                                                                                                                                                                             | Adds references to constant field values from classes in the API to the provided module node.                                                                                                                                                |
 | public void                                                                                     | [markCustomAnnotations](#markcustomannotations)()                                                                                                                                                                                                                                                      | Iterates over all annotations in the API, identifying ones that are custom and those that have the `@Documented` meta-annotation and marking them as such.                                                                                   |
 | public boolean                                                                                  | [isIncludedInApi](#isincludedinapi)([Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html) e)                                                                                                                                               | Returns true if the element should be included in the public API documentation based on its modifiers and configuration.                                                                                                                     |
 
@@ -74,7 +74,7 @@ being populated and updates the Api instance as elements are encountered.
 
 ### api
 
-<span style="font-family: monospace; font-size: 80%;">[Api](../model/Api.md) __api__</span>
+<span style="font-family: monospace; font-size: 80%;">[](../model/Api.md) __api__</span>
 
 The Api model being populated by this scanner.
 
@@ -83,7 +83,7 @@ The Api model being populated by this scanner.
 
 ### ctx
 
-<span style="font-family: monospace; font-size: 80%;">private final [Context](../core/Context.md) __ctx__</span>
+<span style="font-family: monospace; font-size: 80%;">private final [](../core/Context.md) __ctx__</span>
 
 The shared Context singleton providing logging and configuration access.
 
@@ -92,7 +92,7 @@ The shared Context singleton providing logging and configuration access.
 
 ### currentModule
 
-<span style="font-family: monospace; font-size: 80%;">private [ModuleNode](../model/ModuleNode.md) __currentModule__</span>
+<span style="font-family: monospace; font-size: 80%;">private [](../model/ModuleNode.md) __currentModule__</span>
 
 The module node currently being populated during a scan. private ModuleNode currentModule;
 
@@ -110,7 +110,7 @@ A set of fully-qualified names (packages and types) included in the scan invocat
 
 ### modeller
 
-<span style="font-family: monospace; font-size: 80%;">private [ElementModeller](../modelling/ElementModeller.md) __modeller__</span>
+<span style="font-family: monospace; font-size: 80%;">private [](../modelling/ElementModeller.md) __modeller__</span>
 
 
 
@@ -119,7 +119,7 @@ A set of fully-qualified names (packages and types) included in the scan invocat
 
 ### unnamedModule
 
-<span style="font-family: monospace; font-size: 80%;">private final [ModuleNode](../model/ModuleNode.md) __unnamedModule__</span>
+<span style="font-family: monospace; font-size: 80%;">private final [](../model/ModuleNode.md) __unnamedModule__</span>
 
 The unnamed module node reprsenting package elements not in an explicit module.
 
@@ -131,7 +131,7 @@ The unnamed module node reprsenting package elements not in an explicit module.
 
 ### scan
 
-<span style="font-family: monospace; font-size: 80%;">public [Api](../model/Api.md) __scan__([Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<? extends [Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html)> elements)</span>
+<span style="font-family: monospace; font-size: 80%;">public [](../model/Api.md) __scan__([Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<? extends [Element](https://docs.oracle.com/en/java/javase/24/docs/api/java.compiler/javax/lang/model/element/Element.html)> elements)</span>
 
 Scan the given set of top-level elements and return the built Api model.
 This method performs setup actions (register included elements, initialize
@@ -314,7 +314,7 @@ Visit a record component.
 
 ### addConstantFieldValuesReference
 
-<span style="font-family: monospace; font-size: 80%;">public void __addConstantFieldValuesReference__([ModuleNode](../model/ModuleNode.md) moduleNode)</span>
+<span style="font-family: monospace; font-size: 80%;">public void __addConstantFieldValuesReference__([](../model/ModuleNode.md) moduleNode)</span>
 
 Adds references to constant field values from classes in the API to the provided module node.
 

@@ -12,9 +12,9 @@ Package [io.github.sandydunlop.markista.orchestration](index.md)
 
 ## Field Summary
 
-| Modifier and Type                    | Field       | Description |
-|--------------------------------------|-------------|-------------|
-| static [Context](../core/Context.md) | [ctx](#ctx) |             |
+| Modifier and Type             | Field       | Description |
+|-------------------------------|-------------|-------------|
+| static [](../core/Context.md) | [ctx](#ctx) |             |
 
 
 
@@ -32,7 +32,7 @@ Package [io.github.sandydunlop.markista.orchestration](index.md)
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|-------------|
 | public static [Class](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Class.html)<?>                                                                                                    | [loadClass](#loadclass)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName)       |             |
 | private static [Optional](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Optional.html)<[Class](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Class.html)<?>> | [tryLoadClass](#tryloadclass)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName) |             |
-| public static io.github.sandydunlop.markista.model.MethodNode[][]                                                                                                                                              | [getMethods](#getmethods)([Class](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Class.html)<?> jreClass)         |             |
+| public static [](../model/MethodNode.md)[]                                                                                                                                                                     | [getMethods](#getmethods)([Class](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Class.html)<?> jreClass)         |             |
 
 
 
@@ -40,7 +40,7 @@ Package [io.github.sandydunlop.markista.orchestration](index.md)
 
 ### ctx
 
-<span style="font-family: monospace; font-size: 80%;">static [Context](../core/Context.md) __ctx__</span>
+<span style="font-family: monospace; font-size: 80%;">static [](../core/Context.md) __ctx__</span>
 
 
 
@@ -70,7 +70,7 @@ Package [io.github.sandydunlop.markista.orchestration](index.md)
 
 ### getMethods
 
-<span style="font-family: monospace; font-size: 80%;">public static io.github.sandydunlop.markista.model.MethodNode[][] __getMethods__([Class](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Class.html)<?> jreClass)</span>
+<span style="font-family: monospace; font-size: 80%;">public static [](../model/MethodNode.md)[] __getMethods__([Class](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Class.html)<?> jreClass)</span>
 
 
 

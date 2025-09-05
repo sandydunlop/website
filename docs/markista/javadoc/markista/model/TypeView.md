@@ -21,7 +21,7 @@ Does not reference TypeNode to avoid cycles.
 | public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getSimpleName](#getsimplename)()           |             |
 | public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getModifiersString](#getmodifiersstring)() |             |
 | public abstract [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getKindName](#getkindname)()               |             |
-| public abstract [Text](Text.md)                                                                              | [getFirstSentence](#getfirstsentence)()     |             |
+| public abstract [](Text.md)                                                                                  | [getFirstSentence](#getfirstsentence)()     |             |
 | public abstract void                                                                                         | [sort](#sort)()                             |             |
 | public abstract boolean                                                                                      | [isClass](#isclass)()                       |             |
 | public abstract boolean                                                                                      | [isInterface](#isinterface)()               |             |
@@ -71,7 +71,7 @@ Does not reference TypeNode to avoid cycles.
 
 ### getFirstSentence
 
-<span style="font-family: monospace; font-size: 80%;">public abstract [Text](Text.md) __getFirstSentence__()</span>
+<span style="font-family: monospace; font-size: 80%;">public abstract [](Text.md) __getFirstSentence__()</span>
 
 
 

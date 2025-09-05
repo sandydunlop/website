@@ -5,7 +5,7 @@ Package [io.github.sandydunlop.markista.markdown](index.md)
         io.github.sandydunlop.markista.markdown.MarkdownService<br/>
 <br/>
 All Implemented Interfaces:<br/>
-    [DocService](../spi/DocService.md)
+    [](../spi/DocService.md)
 
 
 ----
@@ -23,11 +23,11 @@ All Implemented Interfaces:<br/>
 
 ## Method Summary
 
-| Modifier and Type | Method                                                                         | Description |
-|-------------------|--------------------------------------------------------------------------------|-------------|
-| public boolean    | [replacesDefault](#replacesdefault)()                                          |             |
-| public boolean    | [start](#start)([Api](../model/Api.md) api, [Context](../core/Context.md) ctx) |             |
-| public boolean    | [finish](#finish)()                                                            |             |
+| Modifier and Type | Method                                                               | Description |
+|-------------------|----------------------------------------------------------------------|-------------|
+| public boolean    | [replacesDefault](#replacesdefault)()                                |             |
+| public boolean    | [start](#start)([](../model/Api.md) api, [](../core/Context.md) ctx) |             |
+| public boolean    | [finish](#finish)()                                                  |             |
 
 
 
@@ -41,20 +41,20 @@ All Implemented Interfaces:<br/>
 
 **Specified By:**
 
-[DocService](../spi/DocService.md)
+[](../spi/DocService.md)
 
 
 ---
 
 ### start
 
-<span style="font-family: monospace; font-size: 80%;">public boolean __start__([Api](../model/Api.md) api, [Context](../core/Context.md) ctx)</span>
+<span style="font-family: monospace; font-size: 80%;">public boolean __start__([](../model/Api.md) api, [](../core/Context.md) ctx)</span>
 
 
 
 **Specified By:**
 
-[DocService](../spi/DocService.md)
+[](../spi/DocService.md)
 
 
 ---
@@ -67,7 +67,7 @@ All Implemented Interfaces:<br/>
 
 **Specified By:**
 
-[DocService](../spi/DocService.md)
+[](../spi/DocService.md)
 
 
 ---

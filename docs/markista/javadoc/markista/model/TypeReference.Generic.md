@@ -12,15 +12,15 @@ Enclosing Class:<br/>
 
 ----
 
-<span style="font-family: monospace; font-size: 80%;">public static class __TypeReference.Generic__<br/>extends [TypeReference.TypeParameter](TypeReference.TypeParameter.md)
+<span style="font-family: monospace; font-size: 80%;">public static class __TypeReference.Generic__<br/>extends [](TypeReference.TypeParameter.md)
 </span>
 
 
 ## Field Summary
 
-| Modifier and Type                                                     | Field             | Description |
-|-----------------------------------------------------------------------|-------------------|-------------|
-| private [TypeReference.TypeParameter](TypeReference.TypeParameter.md) | [params](#params) |             |
+| Modifier and Type                          | Field             | Description |
+|--------------------------------------------|-------------------|-------------|
+| private [](TypeReference.TypeParameter.md) | [params](#params) |             |
 
 
 
@@ -34,9 +34,9 @@ Enclosing Class:<br/>
 
 ## Method Summary
 
-| Modifier and Type                                                    | Method                    | Description |
-|----------------------------------------------------------------------|---------------------------|-------------|
-| public [TypeReference.TypeParameter](TypeReference.TypeParameter.md) | [getParams](#getparams)() |             |
+| Modifier and Type                         | Method                    | Description |
+|-------------------------------------------|---------------------------|-------------|
+| public [](TypeReference.TypeParameter.md) | [getParams](#getparams)() |             |
 
 
 ### Methods inherited from [io.github.sandydunlop.markista.model.TypeReference.TypeParameter](TypeReference.TypeParameter.md)
@@ -52,7 +52,7 @@ Enclosing Class:<br/>
 
 ### params
 
-<span style="font-family: monospace; font-size: 80%;">private [TypeReference.TypeParameter](TypeReference.TypeParameter.md) __params__</span>
+<span style="font-family: monospace; font-size: 80%;">private [](TypeReference.TypeParameter.md) __params__</span>
 
 
 
@@ -64,7 +64,7 @@ Enclosing Class:<br/>
 
 ### getParams
 
-<span style="font-family: monospace; font-size: 80%;">public [TypeReference.TypeParameter](TypeReference.TypeParameter.md) __getParams__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [](TypeReference.TypeParameter.md) __getParams__()</span>
 
 
 

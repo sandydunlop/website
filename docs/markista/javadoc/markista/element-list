@@ -1,0 +1,9 @@
+module:markista
+io.github.sandydunlop.markista.core
+io.github.sandydunlop.markista.doclet
+io.github.sandydunlop.markista.model
+io.github.sandydunlop.markista.spi
+io.github.sandydunlop.markista.markdown
+io.github.sandydunlop.markista.modelling
+io.github.sandydunlop.markista.orchestration
+io.github.sandydunlop.markista.scanning

@@ -12,9 +12,9 @@ Package [io.github.sandydunlop.markista.orchestration](index.md)
 
 ## Field Summary
 
-| Modifier and Type    | Field                     | Description |
-|----------------------|---------------------------|-------------|
-| java.lang.String[][] | [components](#components) |             |
+| Modifier and Type                                                                              | Field                     | Description |
+|------------------------------------------------------------------------------------------------|---------------------------|-------------|
+| [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)[] | [components](#components) |             |
 
 
 
@@ -28,12 +28,12 @@ Package [io.github.sandydunlop.markista.orchestration](index.md)
 
 ## Method Summary
 
-| Modifier and Type                                                                                   | Method                      | Description |
-|-----------------------------------------------------------------------------------------------------|-----------------------------|-------------|
-| public java.lang.String[][]                                                                         | [components](#components)() |             |
-| public int                                                                                          | [size](#size)()             |             |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [first](#first)(int n)      |             |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [last](#last)(int n)        |             |
+| Modifier and Type                                                                                     | Method                      | Description |
+|-------------------------------------------------------------------------------------------------------|-----------------------------|-------------|
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)[] | [components](#components)() |             |
+| public int                                                                                            | [size](#size)()             |             |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)   | [first](#first)(int n)      |             |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)   | [last](#last)(int n)        |             |
 
 
 
@@ -41,7 +41,7 @@ Package [io.github.sandydunlop.markista.orchestration](index.md)
 
 ### components
 
-<span style="font-family: monospace; font-size: 80%;">java.lang.String[][] __components__</span>
+<span style="font-family: monospace; font-size: 80%;">[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)[] __components__</span>
 
 
 
@@ -53,7 +53,7 @@ Package [io.github.sandydunlop.markista.orchestration](index.md)
 
 ### components
 
-<span style="font-family: monospace; font-size: 80%;">public java.lang.String[][] __components__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)[] __components__()</span>
 
 
 

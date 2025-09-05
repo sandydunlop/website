@@ -34,17 +34,17 @@ This class is not thread-safe.
 | Modifier and Type                                                                                                   | Field                                                 | Description                                                                                                                                                |
 |---------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | private static final [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)   | [DEFAULT_OUTPUT_DIRECTORY](#default_output_directory) | The default output directory                                                                                                                               |
-| private [Api](../model/Api.md)                                                                                      | [api](#api)                                           | The Api model representing the entire documented API structure, including modules, packages, types, and members used for cross-referencing and navigation. |
+| private [](../model/Api.md)                                                                                         | [api](#api)                                           | The Api model representing the entire documented API structure, including modules, packages, types, and members used for cross-referencing and navigation. |
 | private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [fieldName](#fieldname)                               | The name of the field currently being documented                                                                                                           |
 | private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [flattenedDirectories](#flatteneddirectories)         | The base section of the directory structure that contains no  documentation and can be skipped when creating directories.                                  |
-| private static [Context](Context.md)                                                                                | [instance](#instance)                                 | The instance of this class that is returned to callers of getInstance()                                                                                    |
+| private static [](Context.md)                                                                                       | [instance](#instance)                                 | The instance of this class that is returned to callers of getInstance()                                                                                    |
 | private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [methodName](#methodname)                             | The name of the method currently being documented                                                                                                          |
 | private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [moduleName](#modulename)                             | The name of the module currently being documented                                                                                                          |
 | private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [outputDirectory](#outputdirectory)                   | The directory the documentation is being generated in                                                                                                      |
 | private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [packageName](#packagename)                           | The name of the package currently being documented                                                                                                         |
 | private [Reporter](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Reporter.html) | [reporter](#reporter)                                 | The Reporter used for logging messages                                                                                                                     |
 | private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [typeName](#typename)                                 | The name of the type currently being documented                                                                                                            |
-| private [Context.WriterFactory](Context.WriterFactory.md)                                                           | [writerFactory](#writerfactory)                       |                                                                                                                                                            |
+| private [](Context.WriterFactory.md)                                                                                | [writerFactory](#writerfactory)                       |                                                                                                                                                            |
 
 
 
@@ -60,12 +60,12 @@ This class is not thread-safe.
 
 | Modifier and Type                                                                                                  | Method                                                                                                                                                  | Description                                                                                                                                       |
 |--------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| public void                                                                                                        | [setWriterFactory](#setwriterfactory)([Context.WriterFactory](Context.WriterFactory.md) wf)                                                             |                                                                                                                                                   |
+| public void                                                                                                        | [setWriterFactory](#setwriterfactory)([](Context.WriterFactory.md) wf)                                                                                  |                                                                                                                                                   |
 | public static void                                                                                                 | [reset](#reset)()                                                                                                                                       |                                                                                                                                                   |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [getFlattenedDirectories](#getflatteneddirectories)()                                                                                                   |                                                                                                                                                   |
-| public static [Context](Context.md)                                                                                | [getInstance](#getinstance)()                                                                                                                           | Returns the singleton instance of this Context.                                                                                                   |
-| public void                                                                                                        | [setApi](#setapi)([Api](../model/Api.md) api)                                                                                                           | Sets the Api model associated with this context, also initializing the flattened directories string.                                              |
-| public [Api](../model/Api.md)                                                                                      | [getApi](#getapi)()                                                                                                                                     | Returns the Api model associated with this context.                                                                                               |
+| public static [](Context.md)                                                                                       | [getInstance](#getinstance)()                                                                                                                           | Returns the singleton instance of this Context.                                                                                                   |
+| public void                                                                                                        | [setApi](#setapi)([](../model/Api.md) api)                                                                                                              | Sets the Api model associated with this context, also initializing the flattened directories string.                                              |
+| public [](../model/Api.md)                                                                                         | [getApi](#getapi)()                                                                                                                                     | Returns the Api model associated with this context.                                                                                               |
 | public void                                                                                                        | [setOutputDirectory](#setoutputdirectory)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) outputDirectory) | Sets the output directory path where documentation files will be written.                                                                         |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                | [getOutputDirectory](#getoutputdirectory)()                                                                                                             |                                                                                                                                                   |
 | public void                                                                                                        | [setReporter](#setreporter)([Reporter](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Reporter.html) reporter)       | Sets the reporter used for reporting messages and diagnostics during doc generation.                                                              |
@@ -112,7 +112,7 @@ The default output directory
 
 ### api
 
-<span style="font-family: monospace; font-size: 80%;">private [Api](../model/Api.md) __api__</span>
+<span style="font-family: monospace; font-size: 80%;">private [](../model/Api.md) __api__</span>
 
 The Api model representing the entire documented API structure,
 including modules, packages, types, and members used for cross-referencing and navigation.
@@ -141,7 +141,7 @@ documentation and can be skipped when creating directories.
 
 ### instance
 
-<span style="font-family: monospace; font-size: 80%;">private static [Context](Context.md) __instance__</span>
+<span style="font-family: monospace; font-size: 80%;">private static [](Context.md) __instance__</span>
 
 The instance of this class that is returned to callers of getInstance()
 
@@ -204,7 +204,7 @@ The name of the type currently being documented
 
 ### writerFactory
 
-<span style="font-family: monospace; font-size: 80%;">private [Context.WriterFactory](Context.WriterFactory.md) __writerFactory__</span>
+<span style="font-family: monospace; font-size: 80%;">private [](Context.WriterFactory.md) __writerFactory__</span>
 
 
 
@@ -216,7 +216,7 @@ The name of the type currently being documented
 
 ### setWriterFactory
 
-<span style="font-family: monospace; font-size: 80%;">public void __setWriterFactory__([Context.WriterFactory](Context.WriterFactory.md) wf)</span>
+<span style="font-family: monospace; font-size: 80%;">public void __setWriterFactory__([](Context.WriterFactory.md) wf)</span>
 
 
 
@@ -243,7 +243,7 @@ The name of the type currently being documented
 
 ### getInstance
 
-<span style="font-family: monospace; font-size: 80%;">public static [Context](Context.md) __getInstance__()</span>
+<span style="font-family: monospace; font-size: 80%;">public static [](Context.md) __getInstance__()</span>
 
 Returns the singleton instance of this Context.
 
@@ -256,7 +256,7 @@ The Context singleton instance.
 
 ### setApi
 
-<span style="font-family: monospace; font-size: 80%;">public void __setApi__([Api](../model/Api.md) api)</span>
+<span style="font-family: monospace; font-size: 80%;">public void __setApi__([](../model/Api.md) api)</span>
 
 Sets the Api model associated with this context, also initializing the flattened directories string.
 
@@ -265,7 +265,7 @@ Sets the Api model associated with this context, also initializing the flattened
 
 ### getApi
 
-<span style="font-family: monospace; font-size: 80%;">public [Api](../model/Api.md) __getApi__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [](../model/Api.md) __getApi__()</span>
 
 Returns the Api model associated with this context.
 

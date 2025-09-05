@@ -8,7 +8,7 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 ----
 
-<span style="font-family: monospace; font-size: 80%;">public class __AnnotationElement__<br/>extends [Node](Node.md)
+<span style="font-family: monospace; font-size: 80%;">public class __AnnotationElement__<br/>extends [](Node.md)
 </span>
 
 An element of an annotation

@@ -6,12 +6,12 @@ Package [io.github.sandydunlop.markista.model](index.md)
                 io.github.sandydunlop.markista.model.AbstractMember<br/>
 <br/>
 Direct Known Subtypes:<br/>
-    [MethodNode](MethodNode.md), [ParamNode](ParamNode.md), [TypeNode](TypeNode.md)
+    [](MethodNode.md), [](ParamNode.md), [](TypeNode.md)
 
 
 ----
 
-<span style="font-family: monospace; font-size: 80%;">public abstract class __AbstractMember__<br/>extends [Node](Node.md)
+<span style="font-family: monospace; font-size: 80%;">public abstract class __AbstractMember__<br/>extends [](Node.md)
 </span>
 
 
@@ -25,15 +25,15 @@ Direct Known Subtypes:<br/>
 
 ## Field Summary
 
-| Modifier and Type                                                                                                                                         | Field                                     | Description                                                                  |
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|------------------------------------------------------------------------------|
-| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[AppliedAnnotationNode](AppliedAnnotationNode.md)> | [appliedAnnotations](#appliedannotations) | List of annotations applied to this type.                                    |
-| private final [Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<[Modifier](Modifier.md)>                             | [modifiers](#modifiers)                   | A list of the modifiers a node has                                           |
-| protected [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                    | [name](#name)                             | The simple form of the name                                                  |
-| protected [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                    | [nestedName](#nestedname)                 | The simple form of the name                                                  |
-| protected [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                    | [packageName](#packagename)               | A [PackageNode](PackageNode.md) representing the package the node belongs to |
-| protected [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                    | [qualifiedName](#qualifiedname)           | The qualified form of the name                                               |
-| protected [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                    | [simpleName](#simplename)                 | The simple form of the name                                                  |
+| Modifier and Type                                                                                                                    | Field                                     | Description                                                       |
+|--------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|-------------------------------------------------------------------|
+| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](AppliedAnnotationNode.md)> | [appliedAnnotations](#appliedannotations) | List of annotations applied to this type.                         |
+| private final [Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<[](Modifier.md)>                | [modifiers](#modifiers)                   | A list of the modifiers a node has                                |
+| protected [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                               | [name](#name)                             | The simple form of the name                                       |
+| protected [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                               | [nestedName](#nestedname)                 | The simple form of the name                                       |
+| protected [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                               | [packageName](#packagename)               | A [](PackageNode.md) representing the package the node belongs to |
+| protected [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                               | [qualifiedName](#qualifiedname)           | The qualified form of the name                                    |
+| protected [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                               | [simpleName](#simplename)                 | The simple form of the name                                       |
 
 
 
@@ -47,23 +47,23 @@ Direct Known Subtypes:<br/>
 
 ## Method Summary
 
-| Modifier and Type                                                                                                                                  | Method                                                                                                                                   | Description                                           |
-|----------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|
-| public void                                                                                                                                        | [setPackageName](#setpackagename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)     | Sets the package name of this type.                   |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                | [getPackageName](#getpackagename)()                                                                                                      | Returns the package name of this type.                |
-| public void                                                                                                                                        | [setName](#setname)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)                   | Sets the name of this type.                           |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                | [getName](#getname)()                                                                                                                    | Returns the name of this type.                        |
-| public void                                                                                                                                        | [setQualifiedName](#setqualifiedname)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) | Sets the qualified name of this type.                 |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                | [getQualifiedName](#getqualifiedname)()                                                                                                  | Returns the qualified name of this type.              |
-| public void                                                                                                                                        | [setSimpleName](#setsimplename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)       | Sets the simple name of this type.                    |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                | [getSimpleName](#getsimplename)()                                                                                                        | Returns the simple name of this type.                 |
-| public void                                                                                                                                        | [setNestedName](#setnestedname)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)       | Sets the nested name of this type.                    |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                | [getNestedName](#getnestedname)()                                                                                                        | Returns the nested name of this type.                 |
-| public void                                                                                                                                        | [addModifier](#addmodifier)([Modifier](Modifier.md) mod)                                                                                 | Adds a modifier to the set of modifiers.              |
-| public [Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<[Modifier](Modifier.md)>                             | [getModifiers](#getmodifiers)()                                                                                                          | Returns the set of modifiers for this node.           |
-| public void                                                                                                                                        | [addAppliedAnnotation](#addappliedannotation)([AppliedAnnotationNode](AppliedAnnotationNode.md) annotation)                              | Adds an applied annotation to this type               |
-| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[AppliedAnnotationNode](AppliedAnnotationNode.md)> | [getAppliedAnnotations](#getappliedannotations)()                                                                                        | Returns the list of annotations applied to this type. |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                | [getModifiersString](#getmodifiersstring)()                                                                                              | Returns a string representation of modifiers.         |
+| Modifier and Type                                                                                                             | Method                                                                                                                                   | Description                                           |
+|-------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|
+| public void                                                                                                                   | [setPackageName](#setpackagename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)     | Sets the package name of this type.                   |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                           | [getPackageName](#getpackagename)()                                                                                                      | Returns the package name of this type.                |
+| public void                                                                                                                   | [setName](#setname)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)                   | Sets the name of this type.                           |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                           | [getName](#getname)()                                                                                                                    | Returns the name of this type.                        |
+| public void                                                                                                                   | [setQualifiedName](#setqualifiedname)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) | Sets the qualified name of this type.                 |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                           | [getQualifiedName](#getqualifiedname)()                                                                                                  | Returns the qualified name of this type.              |
+| public void                                                                                                                   | [setSimpleName](#setsimplename)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)       | Sets the simple name of this type.                    |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                           | [getSimpleName](#getsimplename)()                                                                                                        | Returns the simple name of this type.                 |
+| public void                                                                                                                   | [setNestedName](#setnestedname)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)       | Sets the nested name of this type.                    |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                           | [getNestedName](#getnestedname)()                                                                                                        | Returns the nested name of this type.                 |
+| public void                                                                                                                   | [addModifier](#addmodifier)([](Modifier.md) mod)                                                                                         | Adds a modifier to the set of modifiers.              |
+| public [Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<[](Modifier.md)>                | [getModifiers](#getmodifiers)()                                                                                                          | Returns the set of modifiers for this node.           |
+| public void                                                                                                                   | [addAppliedAnnotation](#addappliedannotation)([](AppliedAnnotationNode.md) annotation)                                                   | Adds an applied annotation to this type               |
+| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](AppliedAnnotationNode.md)> | [getAppliedAnnotations](#getappliedannotations)()                                                                                        | Returns the list of annotations applied to this type. |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                           | [getModifiersString](#getmodifiersstring)()                                                                                              | Returns a string representation of modifiers.         |
 
 
 ### Methods inherited from [io.github.sandydunlop.markista.model.Node](Node.md)
@@ -75,7 +75,7 @@ Direct Known Subtypes:<br/>
 
 ### appliedAnnotations
 
-<span style="font-family: monospace; font-size: 80%;">private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[AppliedAnnotationNode](AppliedAnnotationNode.md)> __appliedAnnotations__</span>
+<span style="font-family: monospace; font-size: 80%;">private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](AppliedAnnotationNode.md)> __appliedAnnotations__</span>
 
 List of annotations applied to this type.
 
@@ -84,7 +84,7 @@ List of annotations applied to this type.
 
 ### modifiers
 
-<span style="font-family: monospace; font-size: 80%;">private final [Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<[Modifier](Modifier.md)> __modifiers__</span>
+<span style="font-family: monospace; font-size: 80%;">private final [Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<[](Modifier.md)> __modifiers__</span>
 
 A list of the modifiers a node has
 
@@ -113,7 +113,7 @@ The simple form of the name
 
 <span style="font-family: monospace; font-size: 80%;">protected [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __packageName__</span>
 
-A [PackageNode](PackageNode.md) representing the package the node belongs to
+A [](PackageNode.md) representing the package the node belongs to
 
 
 ---
@@ -251,7 +251,7 @@ the nested name.
 
 ### addModifier
 
-<span style="font-family: monospace; font-size: 80%;">public void __addModifier__([Modifier](Modifier.md) mod)</span>
+<span style="font-family: monospace; font-size: 80%;">public void __addModifier__([](Modifier.md) mod)</span>
 
 Adds a modifier to the set of modifiers.
 
@@ -260,7 +260,7 @@ Adds a modifier to the set of modifiers.
 
 ### getModifiers
 
-<span style="font-family: monospace; font-size: 80%;">public [Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<[Modifier](Modifier.md)> __getModifiers__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<[](Modifier.md)> __getModifiers__()</span>
 
 Returns the set of modifiers for this node.
 
@@ -273,7 +273,7 @@ Set of modifiers.
 
 ### addAppliedAnnotation
 
-<span style="font-family: monospace; font-size: 80%;">public void __addAppliedAnnotation__([AppliedAnnotationNode](AppliedAnnotationNode.md) annotation)</span>
+<span style="font-family: monospace; font-size: 80%;">public void __addAppliedAnnotation__([](AppliedAnnotationNode.md) annotation)</span>
 
 Adds an applied annotation to this type
 
@@ -282,7 +282,7 @@ Adds an applied annotation to this type
 
 ### getAppliedAnnotations
 
-<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[AppliedAnnotationNode](AppliedAnnotationNode.md)> __getAppliedAnnotations__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[](AppliedAnnotationNode.md)> __getAppliedAnnotations__()</span>
 
 Returns the list of annotations applied to this type.
 

@@ -42,7 +42,7 @@ Markista is available in the [Maven Central](https://central.sonatype.com/artifa
 
 ```groovy
 dependencies {
-    markista("io.github.sandydunlop:markista:0.2.0")
+    markista("io.github.sandydunlop:markista:0.2.2")
 }
 ```
 
@@ -99,7 +99,7 @@ pom.xml:
         <dependency>
             <groupId>io.github.sandydunlop</groupId>
             <artifactId>markista</artifactId>
-            <version>0.2.0</version>
+            <version>0.2.2</version>
         </dependency>
     </dependencies>
 
@@ -139,10 +139,13 @@ pom.xml:
 Markista can be used from the command line with the `javadoc` command as follows:
 
 ```bash
-javadoc -docletpath libs/markista-0.2.0.jar -doclet io.github.sandydunlop.markista.doclet.MarkdownDoclet src/main/java/my.package/Hello.java
+javadoc -docletpath libs/markista-0.2.2.jar -doclet io.github.sandydunlop.markista.doclet.MarkdownDoclet src/main/java/my.package/Hello.java
 ```
 
 ### Parameters
+
+`-add-modules`
+:  Create links to modules outside of the API that are on the module-path.
 
 `-d <directory>`
 :  The directory where documentation will be written to.
@@ -161,11 +164,8 @@ javadoc -docletpath libs/markista-0.2.0.jar -doclet io.github.sandydunlop.markis
 :  Don't create package directories that contain no classes.
 
 `-link`
-:  Create links to classes defined outside of the API being
-   documented (eg. [java.utils.String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)).
-
-`--link-modules`
-:  Create links to modules outside of the API that are on the module-path.
+:  Creates links to existing Javadoc-generated documentation of externally referenced classes.
+   (eg. [java.utils.String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)).
 
 `--module-path`
 :  Colon-separated list that specifies where to find application modules.
@@ -182,7 +182,7 @@ javadoc -docletpath libs/markista-0.2.0.jar -doclet io.github.sandydunlop.markis
 
 ## Download
 
-JAR files for version 0.2.0 are available to [download here](https://github.com/sandydunlop/markista/releases/tag/r0.2.0).
+JAR files for version 0.2.2 are available to [download here](https://github.com/sandydunlop/markista/releases/tag/r0.2.2).
 
 
 ## Source Code
