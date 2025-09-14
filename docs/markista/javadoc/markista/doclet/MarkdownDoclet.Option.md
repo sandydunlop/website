@@ -1,11 +1,11 @@
 Package [io.github.sandydunlop.markista.doclet](index.md)
 
-# Class MarkdownDoclet.Option
+# Class Option
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
         io.github.sandydunlop.markista.doclet.MarkdownDoclet.Option<br/>
 <br/>
 All Implemented Interfaces:<br/>
-    [Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.html)
+    [jdk.javadoc.doclet.Doclet.Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Option.html)
 
 Enclosing Class:<br/>
     [io.github.sandydunlop.markista.doclet.MarkdownDoclet](MarkdownDoclet.md)
@@ -13,11 +13,10 @@ Enclosing Class:<br/>
 
 ----
 
-<span style="font-family: monospace; font-size: 80%;">public abstract class __MarkdownDoclet.Option__</span>
+<span style="font-family: monospace; font-size: 80%;">public abstract class __Option__</span>
 
-A base class for declaring options.
-Subtypes for specific options should implement
-the [process](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.html#process(java.lang.String,java.util.List)) method
+A base class for declaring options.Subtypes for specific options should implement
+the [process](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Option.html#process) method
 to handle instances of the option found on the
 command line.
 
@@ -35,9 +34,9 @@ command line.
 
 ## Constructor Summary
 
-| Constructor                                                                                                                                                                                                                                                                                                                                                 | Description |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------|
-| MarkdownDoclet.Option([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name, boolean hasArg, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) description, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) parameters) |             |
+| Constructor                                                                                                                                                                                                                                                                                                                                  | Description |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------|
+| Option([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name, boolean hasArg, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) description, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) parameters) |             |
 
 
 
@@ -47,7 +46,7 @@ command line.
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------|-------------|
 | public int                                                                                                                                                                                    | [getArgumentCount](#getargumentcount)() |             |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                           | [getDescription](#getdescription)()     |             |
-| public jdk.javadoc.doclet.Doclet.Option.Kind                                                                                                                                                  | [getKind](#getkind)()                   |             |
+| public [Kind](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Kind.html)                                                                                    | [getKind](#getkind)()                   |             |
 | public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)> | [getNames](#getnames)()                 |             |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                           | [getParameters](#getparameters)()       |             |
 
@@ -102,7 +101,7 @@ command line.
 
 **Specified By:**
 
-[Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.html)
+[Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Option.html)
 
 
 ---
@@ -115,20 +114,20 @@ command line.
 
 **Specified By:**
 
-[Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.html)
+[Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Option.html)
 
 
 ---
 
 ### getKind
 
-<span style="font-family: monospace; font-size: 80%;">public jdk.javadoc.doclet.Doclet.Option.Kind __getKind__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [Kind](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Kind.html) __getKind__()</span>
 
 
 
 **Specified By:**
 
-[Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.html)
+[Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Option.html)
 
 
 ---
@@ -141,7 +140,7 @@ command line.
 
 **Specified By:**
 
-[Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.html)
+[Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Option.html)
 
 
 ---
@@ -154,7 +153,7 @@ command line.
 
 **Specified By:**
 
-[Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.Option.html)
+[Option](https://docs.oracle.com/en/java/javase/24/docs/api/jdk.javadoc/jdk/javadoc/doclet/Option.html)
 
 
 ---

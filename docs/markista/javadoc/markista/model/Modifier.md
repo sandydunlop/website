@@ -215,7 +215,7 @@ The string name of the modifier.
 
 **Overrides:**
 
-[Enum.toString](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html#toString)
+[Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html#tostring)
 
 
 ---

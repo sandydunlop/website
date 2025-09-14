@@ -11,8 +11,7 @@ Package [io.github.sandydunlop.markista.model](index.md)
 <span style="font-family: monospace; font-size: 80%;">public class __Api__<br/>extends [Node](Node.md)
 </span>
 
-Represents the API being documented, encapsulating its modules and packages.
-Provides methods to add and retrieve modules, packages, and types, as well as sorting them.
+Represents the API being documented, encapsulating its modules and packages.Provides methods to add and retrieve modules, packages, and types, as well as sorting them.
 
 
 ## Field Summary
@@ -58,15 +57,17 @@ Provides methods to add and retrieve modules, packages, and types, as well as so
 | public void                                                                                                                                        | [addType](#addtype)([TypeNode](TypeNode.md) typeNode)                                                                                         |                                                                                              |
 | public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeNode](TypeNode.md)>                           | [getTypes](#gettypes)()                                                                                                                       | Gets the list of types *owned* by this instance.                                             |
 | public [PackageNode](PackageNode.md)                                                                                                               | [getPackageNode](#getpackagenode)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName) | Retrieves a package matching the specified qualified name.                                   |
+| public [PackageNode](PackageNode.md)                                                                                                               | [getPackageNode](#getpackagenode)([Name](Name.md) name)                                                                                       | Retrieves a package matching the specified qualified name.                                   |
 | public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeNode](TypeNode.md)>                           | [getRecords](#getrecords)()                                                                                                                   | Gets the list of records *owned* by this instance.                                           |
 | public [TypeNode](TypeNode.md)                                                                                                                     | [getTypeNode](#gettypenode)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName)       | Retrieves a TypeNode based on its fully qualified name.                                      |
+| public [TypeNode](TypeNode.md)                                                                                                                     | [getTypeNode](#gettypenode)([Name](Name.md) name)                                                                                             | Retrieves a TypeNode based on its fully qualified name.                                      |
 | public void                                                                                                                                        | [sort](#sort)()                                                                                                                               | Sorts the types in descending order by qualified name and sorts all child types recursively. |
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                | [commonBase](#commonbase)()                                                                                                                   | Computes the longest common base package prefix shared by all packages in this API.          |
 
 
-### Methods inherited from [io.github.sandydunlop.markista.model.Node](Node.md)
+### Methods inherited from [Node](Node.md)
 
-[Node.setReferences](Node.md#setreferences), [Node.getReferences](Node.md#getreferences), [Node.getKind](Node.md#getkind), [Node.setDeprecationText](Node.md#setdeprecationtext), [Node.getBody](Node.md#getbody), [Node.getSince](Node.md#getsince), [Node.setFullBody](Node.md#setfullbody), [Node.setFirstSentence](Node.md#setfirstsentence), [Node.setSince](Node.md#setsince), [Node.setBody](Node.md#setbody), [Node.setDeprecation](Node.md#setdeprecation), [Node.getFirstSentence](Node.md#getfirstsentence), [Node.setKind](Node.md#setkind), [Node.getDeprecation](Node.md#getdeprecation), [Node.getUUID](Node.md#getuuid), [Node.getDeprecationText](Node.md#getdeprecationtext), [Node.getFullBody](Node.md#getfullbody)
+[setReferences](Node.md#setreferences), [getReferences](Node.md#getreferences), [getKind](Node.md#getkind), [setDeprecationText](Node.md#setdeprecationtext), [getBody](Node.md#getbody), [getSince](Node.md#getsince), [setFirstSentence](Node.md#setfirstsentence), [setSince](Node.md#setsince), [setBody](Node.md#setbody), [setDeprecation](Node.md#setdeprecation), [getFirstSentence](Node.md#getfirstsentence), [setKind](Node.md#setkind), [getDeprecation](Node.md#getdeprecation), [getUUID](Node.md#getuuid), [getDeprecationText](Node.md#getdeprecationtext), [getFullBody](Node.md#getfullbody)
 
 
 ## Field Details
@@ -165,6 +166,10 @@ The name of the API
 
 Adds a module to the API.
 
+**Parameters:**
+
+`node` - the ModuleNode instance to add.
+
 
 ---
 
@@ -187,6 +192,10 @@ List of ModuleNode objects representing the modules.
 
 Adds a method to the API.
 
+**Parameters:**
+
+`node` - the MethodNode instance to add.
+
 
 ---
 
@@ -208,6 +217,10 @@ List of MethodNode objects representing the methods.
 <span style="font-family: monospace; font-size: 80%;">public [ModuleNode](ModuleNode.md) __getModuleNode__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) qualifiedName)</span>
 
 Retrieves a module matching the specified qualified name.
+
+**Parameters:**
+
+`qualifiedName` - the fully qualified name of the module.
 
 **Returns:**
 
@@ -235,6 +248,10 @@ the unnamed ModuleNode.
 
 Adds a package to the API.
 
+**Parameters:**
+
+`node` - the PackageNode instance to add.
+
 
 ---
 
@@ -257,6 +274,10 @@ List of PackageNode objects representing the packages.
 
 Adds an applied annotation
 
+**Parameters:**
+
+`annotation` - the annotation
+
 
 ---
 
@@ -278,6 +299,10 @@ list of applied annotations
 <span style="font-family: monospace; font-size: 80%;">public void __addLink__([Link](Link.md) link)</span>
 
 Adds a link
+
+**Parameters:**
+
+`link` - the link to add
 
 
 ---
@@ -319,6 +344,27 @@ Gets the list of types *owned* by this instance.
 
 Retrieves a package matching the specified qualified name.
 
+**Parameters:**
+
+`qualifiedName` - the fully qualified name of the package.
+
+**Returns:**
+
+the matching PackageNode if found, or null otherwise.
+
+
+---
+
+### getPackageNode
+
+<span style="font-family: monospace; font-size: 80%;">public [PackageNode](PackageNode.md) __getPackageNode__([Name](Name.md) name)</span>
+
+Retrieves a package matching the specified qualified name.
+
+**Parameters:**
+
+`name` - the fully qualified name of the package.
+
 **Returns:**
 
 the matching PackageNode if found, or null otherwise.
@@ -341,6 +387,27 @@ Gets the list of records *owned* by this instance.
 
 Retrieves a TypeNode based on its fully qualified name.
 
+**Parameters:**
+
+`qualifiedName` - the fully qualified name of the type.
+
+**Returns:**
+
+the matching TypeNode if found, or null otherwise.
+
+
+---
+
+### getTypeNode
+
+<span style="font-family: monospace; font-size: 80%;">public [TypeNode](TypeNode.md) __getTypeNode__([Name](Name.md) name)</span>
+
+Retrieves a TypeNode based on its fully qualified name.
+
+**Parameters:**
+
+`name` - the fully qualified name of the type.
+
 **Returns:**
 
 the matching TypeNode if found, or null otherwise.
@@ -361,9 +428,7 @@ Sorts the types in descending order by qualified name and sorts all child types 
 
 <span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __commonBase__()</span>
 
-Computes the longest common base package prefix shared by all packages in this API.
-
-This method iterates through the list of packages and determines the common package name prefix,
+Computes the longest common base package prefix shared by all packages in this API.This method iterates through the list of packages and determines the common package name prefix,
 truncated at the nearest dot ('.') boundary. If no common base exists, returns an empty string.
 
 **Returns:**

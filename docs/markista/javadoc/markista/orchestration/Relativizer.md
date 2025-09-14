@@ -59,6 +59,10 @@ Package [io.github.sandydunlop.markista.orchestration](index.md)
 
 Sets the string used to adjust flattened directories in relative path calculations.
 
+**Parameters:**
+
+`fd` - The string representing flattened directories.
+
 
 ---
 
@@ -66,8 +70,13 @@ Sets the string used to adjust flattened directories in relative path calculatio
 
 <span style="font-family: monospace; font-size: 80%;">public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __relativize__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) from, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) to)</span>
 
-Produces a relative path string from one package to another by splitting and comparing components.
-Supports flattened directories if set.
+Produces a relative path string from one package to another by splitting and comparing components.Supports flattened directories if set.
+
+**Parameters:**
+
+`from` - The source package name.
+
+`to` - The target package name.
 
 **Returns:**
 
@@ -82,6 +91,10 @@ The relative path string.
 
 Removes prefix directories from a path if flattenedDirectories is set and matches.
 
+**Parameters:**
+
+`path` - The package name or path to flatten.
+
 **Returns:**
 
 The adjusted path or original if no flattening applies.
@@ -94,6 +107,12 @@ The adjusted path or original if no flattening applies.
 <span style="font-family: monospace; font-size: 80%;">static int __findCommonIndex__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)[] fromParts, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)[] toParts)</span>
 
 Finds the common prefix index between two string arrays.
+
+**Parameters:**
+
+`fromParts` - Array of strings for source path.
+
+`toParts` - Array of strings for target path.
 
 **Returns:**
 
@@ -108,6 +127,12 @@ The number of common leading segments.
 
 Appends parent directory segments `..` to the relative path string builder.
 
+**Parameters:**
+
+`rel` - The StringBuilder accumulating the path.
+
+`count` - The number of parent directory segments to append.
+
 
 ---
 
@@ -116,6 +141,14 @@ Appends parent directory segments `..` to the relative path string builder.
 <span style="font-family: monospace; font-size: 80%;">static void __appendTargetDirs__([StringBuilder](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/StringBuilder.html) rel, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)[] toParts, int start)</span>
 
 Appends target directory segments to the relative path string builder starting at index start.
+
+**Parameters:**
+
+`rel` - The StringBuilder accumulating the path.
+
+`toParts` - Array of target path segments.
+
+`start` - The start index for appending segments.
 
 
 ---

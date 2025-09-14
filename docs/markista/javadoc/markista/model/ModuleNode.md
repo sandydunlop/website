@@ -11,8 +11,7 @@ Package [io.github.sandydunlop.markista.model](index.md)
 <span style="font-family: monospace; font-size: 80%;">public class __ModuleNode__<br/>extends [Node](Node.md)
 </span>
 
-Represents a module node that contains directives, packages, and constant values. 
-Implements the PackageOwner interface to manage contained packages.
+Represents a module node that contains directives, packages, and constant values.Implements the PackageOwner interface to manage contained packages.
 
 
 ## Field Summary
@@ -58,9 +57,9 @@ Implements the PackageOwner interface to manage contained packages.
 | public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DirectiveNode](DirectiveNode.md)> | [getProvides](#getprovides)()                                                                                                      | Returns the list of 'provides' directives in this module.   |
 
 
-### Methods inherited from [io.github.sandydunlop.markista.model.Node](Node.md)
+### Methods inherited from [Node](Node.md)
 
-[Node.setReferences](Node.md#setreferences), [Node.getReferences](Node.md#getreferences), [Node.getKind](Node.md#getkind), [Node.setDeprecationText](Node.md#setdeprecationtext), [Node.getBody](Node.md#getbody), [Node.getSince](Node.md#getsince), [Node.setFullBody](Node.md#setfullbody), [Node.setFirstSentence](Node.md#setfirstsentence), [Node.setSince](Node.md#setsince), [Node.setBody](Node.md#setbody), [Node.setDeprecation](Node.md#setdeprecation), [Node.getFirstSentence](Node.md#getfirstsentence), [Node.setKind](Node.md#setkind), [Node.getDeprecation](Node.md#getdeprecation), [Node.getUUID](Node.md#getuuid), [Node.getDeprecationText](Node.md#getdeprecationtext), [Node.getFullBody](Node.md#getfullbody)
+[setReferences](Node.md#setreferences), [getReferences](Node.md#getreferences), [getKind](Node.md#getkind), [setDeprecationText](Node.md#setdeprecationtext), [getBody](Node.md#getbody), [getSince](Node.md#getsince), [setFirstSentence](Node.md#setfirstsentence), [setSince](Node.md#setsince), [setBody](Node.md#setbody), [setDeprecation](Node.md#setdeprecation), [getFirstSentence](Node.md#getfirstsentence), [setKind](Node.md#setkind), [getDeprecation](Node.md#getdeprecation), [getUUID](Node.md#getuuid), [getDeprecationText](Node.md#getdeprecationtext), [getFullBody](Node.md#getfullbody)
 
 
 ## Field Details
@@ -190,6 +189,10 @@ List of PackageMember objects.
 
 Adds a package to this module.
 
+**Parameters:**
+
+`packageNode` - The PackageNode to add.
+
 
 ---
 
@@ -198,6 +201,10 @@ Adds a package to this module.
 <span style="font-family: monospace; font-size: 80%;">public void __addDirective__([DirectiveNode](DirectiveNode.md) directive)</span>
 
 Adds a directive to this module.
+
+**Parameters:**
+
+`directive` - The DirectiveNode to add.
 
 
 ---
@@ -220,6 +227,10 @@ List of DirectiveNode objects.
 <span style="font-family: monospace; font-size: 80%;">public void __addConstantValue__([FieldNode](FieldNode.md) constant)</span>
 
 Adds a constant field value to this module.
+
+**Parameters:**
+
+`constant` - The FieldNode representing the constant.
 
 
 ---

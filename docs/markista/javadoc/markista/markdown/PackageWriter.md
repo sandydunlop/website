@@ -79,8 +79,7 @@ A class that outputs API package documentation as Markdown.
 <span style="font-family: monospace; font-size: 80%;">private [Context](../core/Context.md) __ctx__</span>
 
 The Context singleton instance providing access to the current documentation generation context,
-including configuration, current module/package/type names, and reporting utilities.
-> **Warning**<br/>
+including configuration, current module/package/type names, and reporting utilities.> **Warning**<br/>
 Do not make this `final`. It will break tests with mocked [Context](../core/Context.md).
 
 
@@ -90,8 +89,7 @@ Do not make this `final`. It will break tests with mocked [Context](../core/Cont
 
 <span style="font-family: monospace; font-size: 80%;">private [Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) __writer__</span>
 
-The Writer used to output the generated markdown content for the current document.
-It handles writing text to the appropriate output file or stream.
+The Writer used to output the generated markdown content for the current document.It handles writing text to the appropriate output file or stream.
 
 
 ---
@@ -104,6 +102,10 @@ It handles writing text to the appropriate output file or stream.
 <span style="font-family: monospace; font-size: 80%;">public void __writeDocs__([ModuleNode](../model/ModuleNode.md) moduleNode)</span>
 
 Output the documentation files for the specified API
+
+**Parameters:**
+
+`moduleNode` - The module containing the packages to output the documentation for
 
 **Throws:**
 
@@ -119,6 +121,10 @@ Output the documentation files for the specified API
 
 Writes the Javadoc for a package as Markdown
 
+**Parameters:**
+
+`packageNode` - the package
+
 **Throws:**
 
 [InvalidPathException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/InvalidPathException.html)
@@ -133,6 +139,12 @@ Writes the Javadoc for a package as Markdown
 
 Writes the Javadoc for a package's member packages as Markdown
 
+**Parameters:**
+
+`title` - The title of this section in the Markdown document
+
+`members` - The list of members of this package
+
 **Throws:**
 
 [IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
@@ -145,6 +157,12 @@ Writes the Javadoc for a package's member packages as Markdown
 <span style="font-family: monospace; font-size: 80%;">private void __outputPackageMemberTypes__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) title, [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeNode](../model/TypeNode.md)> members)</span>
 
 Writes the Javadoc for a package's members as Markdown
+
+**Parameters:**
+
+`title` - The title of this section in the Markdown document
+
+`members` - The list of members of this package
 
 **Throws:**
 

@@ -303,8 +303,7 @@ including modules, packages, types, and members used for cross-referencing and n
 <span style="font-family: monospace; font-size: 80%;">private [Context](../core/Context.md) __ctx__</span>
 
 The Context singleton instance providing access to the current documentation generation context,
-including configuration, current module/package/type names, and reporting utilities.
-> **Warning**<br/>
+including configuration, current module/package/type names, and reporting utilities.> **Warning**<br/>
 Do not make this `final`. It will break tests with mocked [Context](../core/Context.md).
 
 
@@ -314,8 +313,7 @@ Do not make this `final`. It will break tests with mocked [Context](../core/Cont
 
 <span style="font-family: monospace; font-size: 80%;">private [Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) __writer__</span>
 
-The Writer used to output the generated markdown content for the current document.
-It handles writing text to the appropriate output file or stream.
+The Writer used to output the generated markdown content for the current document.It handles writing text to the appropriate output file or stream.
 
 
 ---
@@ -329,6 +327,10 @@ It handles writing text to the appropriate output file or stream.
 
 Output the documentation files for the specified API
 
+**Parameters:**
+
+`api` - The API to output the documentation for
+
 **Throws:**
 
 [InvalidPathException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/InvalidPathException.html)
@@ -341,9 +343,12 @@ Output the documentation files for the specified API
 
 <span style="font-family: monospace; font-size: 80%;">private void __outputModuleDoc__([ModuleNode](../model/ModuleNode.md) moduleNode)</span>
 
-Outputs a single module's documentation as a Markdown file.
-For each module, the documentation for each [package](../model/PackageNode.md) it contains
+Outputs a single module's documentation as a Markdown file.For each module, the documentation for each [PackageNode](../model/PackageNode.md) it contains
 are then written.
+
+**Parameters:**
+
+`moduleNode` - The module to write documentation for
 
 **Throws:**
 
@@ -359,6 +364,14 @@ are then written.
 
 Outputs the directives declared in a module's `module-info.java` file.
 
+**Parameters:**
+
+`title` - The title to be used in this section of the markdown page.
+
+`kind` - The kind of directive being described
+
+`directives` - The list of directives belonging to the module.
+
 **Throws:**
 
 [IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
@@ -371,6 +384,10 @@ Outputs the directives declared in a module's `module-info.java` file.
 <span style="font-family: monospace; font-size: 80%;">private void __outputModuleProvidesDirectives__([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DirectiveNode](../model/DirectiveNode.md)> directives)</span>
 
 Outputs the `provides` directives declared in a module's `module-info.java` file.
+
+**Parameters:**
+
+`directives` - The list of `provides` directives belonging to the module.
 
 **Throws:**
 
@@ -405,6 +422,10 @@ code are rendered properly.
 <span style="font-family: monospace; font-size: 80%;">private void __outputConstantValues__([ModuleNode](../model/ModuleNode.md) moduleNode)</span>
 
 Outputs the *Constant Field Values* page.
+
+**Parameters:**
+
+`moduleNode` - The API tree node representing a module.
 
 **Throws:**
 

@@ -9,9 +9,7 @@ Package [io.github.sandydunlop.markista.markdown](index.md)
 
 <span style="font-family: monospace; font-size: 80%;">public class __MarkdownTable__</span>
 
-A utility class for creating tables in Markdown documents.
-
-This class allows adding columns with headings and rows with data.
+A utility class for creating tables in Markdown documents.This class allows adding columns with headings and rows with data.
 It automatically calculates column widths to align the table content.
 
 The table can be rendered as Markdown text to a Writer, optionally with indentation for nested formatting.
@@ -29,7 +27,7 @@ The table can be rendered as Markdown text to a Writer, optionally with indentat
 
 | Modifier and Type                                                                                                                                                                        | Field               | Description |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------|
-| [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[MarkdownTable.Column](MarkdownTable.Column.md)>                                                | [columns](#columns) |             |
+| [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Column](MarkdownTable.Column.md)>                                                              | [columns](#columns) |             |
 | [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)[]> | [rows](#rows)       |             |
 
 
@@ -57,7 +55,7 @@ The table can be rendered as Markdown text to a Writer, optionally with indentat
 
 ### columns
 
-<span style="font-family: monospace; font-size: 80%;">[List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[MarkdownTable.Column](MarkdownTable.Column.md)> __columns__</span>
+<span style="font-family: monospace; font-size: 80%;">[List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Column](MarkdownTable.Column.md)> __columns__</span>
 
 
 
@@ -82,6 +80,10 @@ The table can be rendered as Markdown text to a Writer, optionally with indentat
 
 Adds a column with the specified heading to the table.
 
+**Parameters:**
+
+`heading` - String to be used as the column heading.
+
 **Returns:**
 
 The table (this) to allow method chaining.
@@ -93,8 +95,11 @@ The table (this) to allow method chaining.
 
 <span style="font-family: monospace; font-size: 80%;">public [MarkdownTable](MarkdownTable.md) __addRow__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)[] valueStrings)</span>
 
-Adds a row of data to the table.
-The number of values should match or be less than the number of columns.
+Adds a row of data to the table.The number of values should match or be less than the number of columns.
+
+**Parameters:**
+
+`valueStrings` - One or more strings representing the data for this row.
 
 **Returns:**
 
@@ -109,6 +114,10 @@ The table (this) to allow method chaining.
 
 Renders the table as Markdown text without any indentation.
 
+**Parameters:**
+
+`writer` - The Writer to output Markdown text to.
+
 **Throws:**
 
 [IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
@@ -121,6 +130,12 @@ Renders the table as Markdown text without any indentation.
 <span style="font-family: monospace; font-size: 80%;">public void __render__([Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) writer, int indent)</span>
 
 Renders the table as Markdown text with a given indentation level (number of spaces).
+
+**Parameters:**
+
+`writer` - The Writer to output Markdown text to.
+
+`indent` - The number of spaces to indent each line.
 
 **Throws:**
 

@@ -21,10 +21,10 @@ Contains information about a method being documented
 |-----------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------|---------------------------------------------------------------------|
 | private [Link](Link.md)                                                                                                           | [baseMethod](#basemethod)               | Information about the method that this method overrides, if any.    |
 | private boolean                                                                                                                   | [isConstructor](#isconstructor)         |                                                                     |
-| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                              | [ownerName](#ownername)                 | The type (class/interface) that owns this method.                   |
+| private [Name](Name.md)                                                                                                           | [ownerName](#ownername)                 | The type (class/interface) that owns this method.                   |
 | private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[ParamNode](ParamNode.md)> | [params](#params)                       | List of parameters for this method.                                 |
 | private [Text](Text.md)                                                                                                           | [returnDescription](#returndescription) | Description of the method's return value.                           |
-| private [TypeReference](TypeReference.md)                                                                                         | [returnType](#returntype)               | The return type of this method.                                     |
+| private [VariableType](VariableType.md)                                                                                           | [returnType](#returntype)               | The return type of this method.                                     |
 | private [Link](Link.md)                                                                                                           | [specifiedBy](#specifiedby)             | Name of the interface or specification this method is specified by. |
 | private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Link](Link.md)>           | [thrownTypes](#throwntypes)             | List of exception types that this method declares it can throw.     |
 
@@ -32,42 +32,42 @@ Contains information about a method being documented
 
 ## Constructor Summary
 
-| Constructor                                                                                                                                                                                                            | Description                                                             |
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
-| MethodNode([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) returnType, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) | Constructs a MethodNode with the specified return type and method name. |
+| Constructor                                                                                                                               | Description                                                             |
+|-------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
+| MethodNode([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) returnType, [Name](Name.md) name) | Constructs a MethodNode with the specified return type and method name. |
 
 
 
 ## Method Summary
 
-| Modifier and Type                                                                                                          | Method                                                                                                                            | Description                                                                                    |
-|----------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
-| public void                                                                                                                | [setConstructor](#setconstructor)(boolean b)                                                                                      |                                                                                                |
-| public boolean                                                                                                             | [isConstructor](#isconstructor)()                                                                                                 |                                                                                                |
-| public void                                                                                                                | [setBaseMethod](#setbasemethod)([Link](Link.md) baseMethod)                                                                       | Sets the base method information that this method overrides.                                   |
-| public [Link](Link.md)                                                                                                     | [getBaseMethod](#getbasemethod)()                                                                                                 | Returns the base method information, if any.                                                   |
-| public [TypeReference](TypeReference.md)                                                                                   | [getReturnType](#getreturntype)()                                                                                                 | Returns the return type of this method.                                                        |
-| public void                                                                                                                | [addParam](#addparam)([ParamNode](ParamNode.md) param)                                                                            | Adds a parameter to this method.                                                               |
-| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[ParamNode](ParamNode.md)> | [getParams](#getparams)()                                                                                                         | Returns the list of parameters of this method.                                                 |
-| public [TypeReference](TypeReference.md)[]                                                                                 | [getParamTypes](#getparamtypes)()                                                                                                 |                                                                                                |
-| public void                                                                                                                | [addThrownType](#addthrowntype)([Link](Link.md) name)                                                                             | Adds an exception type that this method declares it throws.                                    |
-| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Link](Link.md)>           | [getThrownTypes](#getthrowntypes)()                                                                                               | Returns the list of exception types declared by this method.                                   |
-| public void                                                                                                                | [setOwnerName](#setownername)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) owner) | Sets the owning type (class/interface) of this method.                                         |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                        | [getOwnerName](#getownername)()                                                                                                   | Returns the owning type of this method.                                                        |
-| public void                                                                                                                | [setSpecifiedBy](#setspecifiedby)([Link](Link.md) interfaceName)                                                                  | Sets the interface or specification name this method is specified by.                          |
-| public [Link](Link.md)                                                                                                     | [getSpecifiedBy](#getspecifiedby)()                                                                                               | Returns the name of the interface or specification this method is specified by.                |
-| public void                                                                                                                | [setReturnDescription](#setreturndescription)([Text](Text.md) text)                                                               | Sets the description of the method's return value.                                             |
-| public [Text](Text.md)                                                                                                     | [getReturnDescription](#getreturndescription)()                                                                                   | Returns the description of the method's return value.                                          |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                        | [simplifiedSignature](#simplifiedsignature)()                                                                                     | Computes and returns the method signature string, including return type, name, and parameters. |
+| Modifier and Type                                                                                                          | Method                                                              | Description                                                                                    |
+|----------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
+| public void                                                                                                                | [setConstructor](#setconstructor)(boolean b)                        |                                                                                                |
+| public boolean                                                                                                             | [isConstructor](#isconstructor)()                                   |                                                                                                |
+| public void                                                                                                                | [setBaseMethod](#setbasemethod)([Link](Link.md) baseMethod)         | Sets the base method information that this method overrides.                                   |
+| public [Link](Link.md)                                                                                                     | [getBaseMethod](#getbasemethod)()                                   | Returns the base method information, if any.                                                   |
+| public [VariableType](VariableType.md)                                                                                     | [getReturnType](#getreturntype)()                                   | Returns the return type of this method.                                                        |
+| public void                                                                                                                | [addParam](#addparam)([ParamNode](ParamNode.md) param)              | Adds a parameter to this method.                                                               |
+| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[ParamNode](ParamNode.md)> | [getParams](#getparams)()                                           | Returns the list of parameters of this method.                                                 |
+| public [VariableType](VariableType.md)[]                                                                                   | [getParamTypes](#getparamtypes)()                                   |                                                                                                |
+| public void                                                                                                                | [addThrownType](#addthrowntype)([Link](Link.md) name)               | Adds an exception type that this method declares it throws.                                    |
+| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Link](Link.md)>           | [getThrownTypes](#getthrowntypes)()                                 | Returns the list of exception types declared by this method.                                   |
+| public void                                                                                                                | [setOwnerName](#setownername)([Name](Name.md) owner)                | Sets the owning type (class/interface) of this method.                                         |
+| public [Name](Name.md)                                                                                                     | [getOwnerName](#getownername)()                                     | Returns the owning type of this method.                                                        |
+| public void                                                                                                                | [setSpecifiedBy](#setspecifiedby)([Link](Link.md) interfaceName)    | Sets the interface or specification name this method is specified by.                          |
+| public [Link](Link.md)                                                                                                     | [getSpecifiedBy](#getspecifiedby)()                                 | Returns the name of the interface or specification this method is specified by.                |
+| public void                                                                                                                | [setReturnDescription](#setreturndescription)([Text](Text.md) text) | Sets the description of the method's return value.                                             |
+| public [Text](Text.md)                                                                                                     | [getReturnDescription](#getreturndescription)()                     | Returns the description of the method's return value.                                          |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                        | [simplifiedSignature](#simplifiedsignature)()                       | Computes and returns the method signature string, including return type, name, and parameters. |
 
 
-### Methods inherited from [io.github.sandydunlop.markista.model.Node](Node.md)
+### Methods inherited from [Node](Node.md)
 
-[Node.getReferences](Node.md#getreferences), [Node.setDeprecationText](Node.md#setdeprecationtext), [Node.getBody](Node.md#getbody), [Node.setFirstSentence](Node.md#setfirstsentence), [Node.setDeprecation](Node.md#setdeprecation), [Node.getDeprecation](Node.md#getdeprecation), [Node.getUUID](Node.md#getuuid), [Node.getFullBody](Node.md#getfullbody), [Node.setReferences](Node.md#setreferences), [Node.getKind](Node.md#getkind), [Node.getSince](Node.md#getsince), [Node.setFullBody](Node.md#setfullbody), [Node.setSince](Node.md#setsince), [Node.setBody](Node.md#setbody), [Node.getFirstSentence](Node.md#getfirstsentence), [Node.setKind](Node.md#setkind), [Node.getDeprecationText](Node.md#getdeprecationtext)
+[getReferences](Node.md#getreferences), [setDeprecationText](Node.md#setdeprecationtext), [getBody](Node.md#getbody), [setFirstSentence](Node.md#setfirstsentence), [setDeprecation](Node.md#setdeprecation), [getDeprecation](Node.md#getdeprecation), [getUUID](Node.md#getuuid), [getFullBody](Node.md#getfullbody), [setReferences](Node.md#setreferences), [getKind](Node.md#getkind), [getSince](Node.md#getsince), [setSince](Node.md#setsince), [setBody](Node.md#setbody), [getFirstSentence](Node.md#getfirstsentence), [setKind](Node.md#setkind), [getDeprecationText](Node.md#getdeprecationtext)
 
-### Methods inherited from [io.github.sandydunlop.markista.model.AbstractMember](AbstractMember.md)
+### Methods inherited from [AbstractMember](AbstractMember.md)
 
-[AbstractMember.addAppliedAnnotation](AbstractMember.md#addappliedannotation), [AbstractMember.addModifier](AbstractMember.md#addmodifier), [AbstractMember.setQualifiedName](AbstractMember.md#setqualifiedname), [AbstractMember.getName](AbstractMember.md#getname), [AbstractMember.getModifiers](AbstractMember.md#getmodifiers), [AbstractMember.getAppliedAnnotations](AbstractMember.md#getappliedannotations), [AbstractMember.getPackageName](AbstractMember.md#getpackagename), [AbstractMember.setNestedName](AbstractMember.md#setnestedname), [AbstractMember.setPackageName](AbstractMember.md#setpackagename), [AbstractMember.getQualifiedName](AbstractMember.md#getqualifiedname), [AbstractMember.setSimpleName](AbstractMember.md#setsimplename), [AbstractMember.getSimpleName](AbstractMember.md#getsimplename), [AbstractMember.getModifiersString](AbstractMember.md#getmodifiersstring), [AbstractMember.getNestedName](AbstractMember.md#getnestedname), [AbstractMember.setName](AbstractMember.md#setname)
+[addAppliedAnnotation](AbstractMember.md#addappliedannotation), [setName](AbstractMember.md#setname), [addModifier](AbstractMember.md#addmodifier), [getName](AbstractMember.md#getname), [getModifiers](AbstractMember.md#getmodifiers), [getAppliedAnnotations](AbstractMember.md#getappliedannotations), [getPackageName](AbstractMember.md#getpackagename), [setPackageName](AbstractMember.md#setpackagename), [getModifiersString](AbstractMember.md#getmodifiersstring)
 
 
 ## Field Details
@@ -92,7 +92,7 @@ Information about the method that this method overrides, if any.
 
 ### ownerName
 
-<span style="font-family: monospace; font-size: 80%;">private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __ownerName__</span>
+<span style="font-family: monospace; font-size: 80%;">private [Name](Name.md) __ownerName__</span>
 
 The type (class/interface) that owns this method.
 
@@ -119,7 +119,7 @@ Description of the method's return value.
 
 ### returnType
 
-<span style="font-family: monospace; font-size: 80%;">private [TypeReference](TypeReference.md) __returnType__</span>
+<span style="font-family: monospace; font-size: 80%;">private [VariableType](VariableType.md) __returnType__</span>
 
 The return type of this method.
 
@@ -171,6 +171,10 @@ List of exception types that this method declares it can throw.
 
 Sets the base method information that this method overrides.
 
+**Parameters:**
+
+`baseMethod` - a reference to the base method and the text representing it
+
 
 ---
 
@@ -189,7 +193,7 @@ the a reference to the base method and the text representing it, or null if none
 
 ### getReturnType
 
-<span style="font-family: monospace; font-size: 80%;">public [TypeReference](TypeReference.md) __getReturnType__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [VariableType](VariableType.md) __getReturnType__()</span>
 
 Returns the return type of this method.
 
@@ -205,6 +209,10 @@ the TypeNode representing the return type.
 <span style="font-family: monospace; font-size: 80%;">public void __addParam__([ParamNode](ParamNode.md) param)</span>
 
 Adds a parameter to this method.
+
+**Parameters:**
+
+`param` - a ParamNode representing the parameter to add.
 
 
 ---
@@ -224,7 +232,7 @@ List of ParamNode objects representing the method parameters.
 
 ### getParamTypes
 
-<span style="font-family: monospace; font-size: 80%;">public [TypeReference](TypeReference.md)[] __getParamTypes__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [VariableType](VariableType.md)[] __getParamTypes__()</span>
 
 
 
@@ -236,6 +244,10 @@ List of ParamNode objects representing the method parameters.
 <span style="font-family: monospace; font-size: 80%;">public void __addThrownType__([Link](Link.md) name)</span>
 
 Adds an exception type that this method declares it throws.
+
+**Parameters:**
+
+`name` - the fully qualified name of the exception type.
 
 
 ---
@@ -255,16 +267,20 @@ List of exception type names as Strings.
 
 ### setOwnerName
 
-<span style="font-family: monospace; font-size: 80%;">public void __setOwnerName__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) owner)</span>
+<span style="font-family: monospace; font-size: 80%;">public void __setOwnerName__([Name](Name.md) owner)</span>
 
 Sets the owning type (class/interface) of this method.
+
+**Parameters:**
+
+`owner` - the name of the TypeNode representing the owner.
 
 
 ---
 
 ### getOwnerName
 
-<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getOwnerName__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [Name](Name.md) __getOwnerName__()</span>
 
 Returns the owning type of this method.
 
@@ -280,6 +296,10 @@ the name of the TypeNode representing the owner.
 <span style="font-family: monospace; font-size: 80%;">public void __setSpecifiedBy__([Link](Link.md) interfaceName)</span>
 
 Sets the interface or specification name this method is specified by.
+
+**Parameters:**
+
+`interfaceName` - the name of the specifying interface or specification.
 
 
 ---
@@ -303,6 +323,10 @@ the specifying interface or specification name.
 
 Sets the description of the method's return value.
 
+**Parameters:**
+
+`text` - a Text object describing the return value.
+
 
 ---
 
@@ -323,8 +347,7 @@ a Text object containing the return description.
 
 <span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __simplifiedSignature__()</span>
 
-Computes and returns the method signature string, including return type, name, and parameters.
-Example format: "java.lang.String methodName(int,java.util.List)"
+Computes and returns the method signature string, including return type, name, and parameters.Example format: "java.lang.String methodName(int,java.util.List)"
 
 **Returns:**
 

@@ -14,8 +14,7 @@ All Known Implementing Classes:<br/>
 
 This interface defines a service for processing a project's structure
 and documentation with the 
-[Markista markdown doclet](https://sandydunlop.github.io/markista/). 
-The DocService interface is part of the
+[Markista markdown doclet](https://sandydunlop.github.io/markista/).The DocService interface is part of the
 [Service Provider Interface](https://docs.oracle.com/javase/tutorial/sound/SPI-intro.html)
 (SPI) design pattern, which allows
 for the dynamic discovery and loading of service implementations at runtime.
@@ -69,8 +68,13 @@ true if this DocService replaces the default Markdown one, false otherwise.
 
 <span style="font-family: monospace; font-size: 80%;">public abstract boolean __start__([Api](../model/Api.md) api, [Context](../core/Context.md) ctx)</span>
 
-Runs before the main Markdown DocService.
-Initializes a DocService with the API model and a Context for file creation and reporting.
+Runs before the main Markdown DocService.Initializes a DocService with the API model and a Context for file creation and reporting.
+
+**Parameters:**
+
+`api` - the Api object representing the project's structure
+
+`ctx` - the Context object providing additional information for processing
 
 **Returns:**
 

@@ -138,8 +138,7 @@ A class that outputs API type documentation as Markdown.
 <span style="font-family: monospace; font-size: 80%;">private [Context](../core/Context.md) __ctx__</span>
 
 The Context singleton instance providing access to the current documentation generation context,
-including configuration, current module/package/type names, and reporting utilities.
-> **Warning**<br/>
+including configuration, current module/package/type names, and reporting utilities.> **Warning**<br/>
 Do not make this `final`. It will break tests with mocked [Context](../core/Context.md).
 
 
@@ -149,8 +148,7 @@ Do not make this `final`. It will break tests with mocked [Context](../core/Cont
 
 <span style="font-family: monospace; font-size: 80%;">private [Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html) __writer__</span>
 
-The Writer used to output the generated markdown content for the current document.
-It handles writing text to the appropriate output file or stream.
+The Writer used to output the generated markdown content for the current document.It handles writing text to the appropriate output file or stream.
 
 
 ---
@@ -163,6 +161,10 @@ It handles writing text to the appropriate output file or stream.
 <span style="font-family: monospace; font-size: 80%;">public void __outputTypeDoc__([TypeNode](../model/TypeNode.md) typeNode)</span>
 
 Writes a Markdown file for the Javadoc of a type
+
+**Parameters:**
+
+`typeNode` - the type
 
 **Throws:**
 
@@ -178,6 +180,10 @@ Writes a Markdown file for the Javadoc of a type
 
 Outputs the hierarchy of supertypes of a class
 
+**Parameters:**
+
+`typeNode` - the class
+
 **Throws:**
 
 [IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
@@ -191,6 +197,10 @@ Outputs the hierarchy of supertypes of a class
 
 Outputs details of any interfaces that this class implements
 
+**Parameters:**
+
+`typeNode` - a TypeNode representing a class, interface, enum, or annotation
+
 **Throws:**
 
 [IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
@@ -203,6 +213,10 @@ Outputs details of any interfaces that this class implements
 <span style="font-family: monospace; font-size: 80%;">private void __outputEnclosingClass__([TypeNode](../model/TypeNode.md) typeNode)</span>
 
 Outputs details of the class that encloses this one
+
+**Parameters:**
+
+`typeNode` - a TypeNode representing the enclosing class
 
 **Throws:**
 
@@ -243,6 +257,10 @@ Outputs details of the class that encloses this one
 
 Outputs the type declaration
 
+**Parameters:**
+
+`typeNode` - the type being documented
+
 **Throws:**
 
 [IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
@@ -269,6 +287,10 @@ Outputs the type declaration
 
 Creates a string of the elements within an annotation
 
+**Parameters:**
+
+`annotation` - the annotation
+
 **Returns:**
 
 The string
@@ -281,6 +303,10 @@ The string
 <span style="font-family: monospace; font-size: 80%;">private void __outputNestedClassSummary__([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[TypeNode](../model/TypeNode.md)> nestedClasses)</span>
 
 Outputs a summary of nested classes within this one as Markdown
+
+**Parameters:**
+
+`nestedClasses` - a list of the nested classes
 
 **Throws:**
 
@@ -295,6 +321,10 @@ Outputs a summary of nested classes within this one as Markdown
 
 Outputs as summary of an enum's constants as Markdown
 
+**Parameters:**
+
+`enumNode` - the enum
+
 **Throws:**
 
 [IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
@@ -307,6 +337,10 @@ Outputs as summary of an enum's constants as Markdown
 <span style="font-family: monospace; font-size: 80%;">private void __outputFieldSummary__([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[FieldNode](../model/FieldNode.md)> fields)</span>
 
 Outputs a summary of this class's fields as Markdown
+
+**Parameters:**
+
+`fields` - A list of fields belonging to this class
 
 **Throws:**
 
@@ -321,6 +355,10 @@ Outputs a summary of this class's fields as Markdown
 
 Outputs a the summary of this class's constructors as Markdown
 
+**Parameters:**
+
+`methods` - A list of the constructor methods
+
 **Throws:**
 
 [IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
@@ -333,6 +371,10 @@ Outputs a the summary of this class's constructors as Markdown
 <span style="font-family: monospace; font-size: 80%;">private void __outputMethodSummary__([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[MethodNode](../model/MethodNode.md)> methods)</span>
 
 Writes the markdown for a class's method summary table
+
+**Parameters:**
+
+`methods` - The list of methods to include in the summary table
 
 **Throws:**
 
@@ -347,6 +389,10 @@ Writes the markdown for a class's method summary table
 
 Outputs enum constant details as Markdown
 
+**Parameters:**
+
+`constants` - a list of enum constants
+
 **Throws:**
 
 [IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
@@ -360,6 +406,10 @@ Outputs enum constant details as Markdown
 
 Writes the markdown for a class's method or field details.
 
+**Parameters:**
+
+`nodes` - The list of methods to write the details of
+
 **Throws:**
 
 [IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
@@ -371,7 +421,7 @@ Writes the markdown for a class's method or field details.
 **See Also:**
 
 
-[](http://example.com)
+[http://example.com](http://example.com)
 
 
 [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)
@@ -386,6 +436,10 @@ Writes the markdown for a class's method or field details.
 
 Outputs references for a type member
 
+**Parameters:**
+
+`node` - The type
+
 **Throws:**
 
 [IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
@@ -398,6 +452,10 @@ Outputs references for a type member
 <span style="font-family: monospace; font-size: 80%;">private void __outputMethodDetails__([MethodNode](../model/MethodNode.md) method)</span>
 
 Outputs the Javadoc of a method as Markdown
+
+**Parameters:**
+
+`method` - the method
 
 **Throws:**
 
@@ -412,6 +470,10 @@ Outputs the Javadoc of a method as Markdown
 
 Outputs the parameters of a method as Markdown
 
+**Parameters:**
+
+`method` - the method
+
 **Throws:**
 
 [IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)
@@ -424,6 +486,12 @@ Outputs the parameters of a method as Markdown
 <span style="font-family: monospace; font-size: 80%;">private void __outputDeprecation__([Deprecation](../model/Deprecation.md) status, [Text](../model/Text.md) text)</span>
 
 Outputs the deprecation status of this type as Markdown
+
+**Parameters:**
+
+`status` - The deprecation status
+
+`text` - A textual description of the deprecation status
 
 **Throws:**
 

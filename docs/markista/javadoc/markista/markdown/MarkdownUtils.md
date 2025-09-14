@@ -33,30 +33,28 @@ Markdown links to point to the correct file, directory, or web page.
 
 ## Method Summary
 
-| Modifier and Type                                                                                          | Method                                                                                                                                                                                                                 | Description                                                                                                          |
-|------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
-| public static void                                                                                         | [setContext](#setcontext)([Context](../core/Context.md) c)                                                                                                                                                             |                                                                                                                      |
-| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [formatParams](#formatparams)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[ParamNode](../model/ParamNode.md)> params)                                                     | Formats a list of `ParamNode` objects as markdown, identifying and linking type names.                               |
-| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [formatText](#formattext)([Text](../model/Text.md) text)                                                                                                                                                               | Formats text contained in a `Text` object as markdown.                                                               |
-| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [formatText](#formattext)([Text](../model/Text.md) text, boolean qualifyType, boolean qualifyMember)                                                                                                                   |                                                                                                                      |
-| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [formatTypeRef](#formattyperef)([TypeReference](../model/TypeReference.md) typeRef)                                                                                                                                    |                                                                                                                      |
-| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [formatTypeRef](#formattyperef)([TypeReference](../model/TypeReference.md) typeRef, boolean useQualifiedName)                                                                                                          |                                                                                                                      |
-| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [formatLink](#formatlink)([Text.Segment](../model/Text.Segment.md) segment, boolean qualifyType, boolean qualifyMember)                                                                                                | Formats links contained in a text segment as markdown.                                                               |
-| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [link](#link)([Link](../model/Link.md) reference, boolean useQualifiedName)                                                                                                                                            | Create a markdown formatted link                                                                                     |
-| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [link](#link)([Link](../model/Link.md) reference, boolean useQualifiedName, boolean qualifyMember)                                                                                                                     |                                                                                                                      |
-| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [link](#link)([Link](../model/Link.md) link, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) label, boolean qualifyType, boolean qualifyMember)                           |                                                                                                                      |
-| private static void                                                                                        | [setLabelForType](#setlabelfortype)([Link](../model/Link.md) link, boolean qualifyType)                                                                                                                                |                                                                                                                      |
-| private static void                                                                                        | [setLabelForMethod](#setlabelformethod)([Link](../model/Link.md) link, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) label, boolean qualifyType, boolean qualifyMember) |                                                                                                                      |
-| private static void                                                                                        | [setLabelForUrl](#setlabelforurl)([Link](../model/Link.md) link, boolean qualifyType, boolean qualifyMember)                                                                                                           |                                                                                                                      |
-| private static void                                                                                        | [setLabelForUrlWithMethod](#setlabelforurlwithmethod)([Link](../model/Link.md) link, boolean qualifyType)                                                                                                              |                                                                                                                      |
-| private static boolean                                                                                     | [canBeSimplified](#canbesimplified)([Link](../model/Link.md) link)                                                                                                                                                     |                                                                                                                      |
-| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [mdRefLink](#mdreflink)([Link](../model/Link.md) link)                                                                                                                                                                 | Creates a markdown formatted link from a [Link](../model/Link.md) object.                                            |
-| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [mdRefLinkMethod](#mdreflinkmethod)([Link](../model/Link.md) link)                                                                                                                                                     | Creates a markdown formatted link from a [Link](../model/Link.md) object.                                            |
-| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [mdAnchor](#mdanchor)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) phrase)                                                                                             | Converts a string to the format required for use as a Markdown anchor.                                               |
-| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [mdAnchorLink](#mdanchorlink)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) anchor)                                                                                     | Create a markdown formatted link to an anchor within the same markdown page.                                         |
-| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [mdDocumentLink](#mddocumentlink)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) docName)                                                                                | Creates a Markdown link to another Markdown document                                                                 |
-| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [escape](#escape)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str)                                                                                                    | Escapes HTML `<` and `>` characters in a string with their corresponding HTML character entities, `&lt;` and `&gt;`. |
-| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [inOneLine](#inoneline)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str)                                                                                              | Removes new line characters from a string, replacing them with spaces                                                |
+| Modifier and Type                                                                                           | Method                                                                                                                                                                             | Description                                                                                                          |
+|-------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
+| public static void                                                                                          | [setContext](#setcontext)([Context](../core/Context.md) c)                                                                                                                         |                                                                                                                      |
+| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)  | [link](#link)([Link](../model/Link.md) link, boolean useQualifiedName)                                                                                                             | Create a markdown formatted link                                                                                     |
+| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)  | [formatParams](#formatparams)([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[ParamNode](../model/ParamNode.md)> params)                 | Formats a list of `ParamNode` objects as markdown, identifying and linking type names.                               |
+| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)  | [formatText](#formattext)([Text](../model/Text.md) text)                                                                                                                           | Formats text contained in a `Text` object as markdown.                                                               |
+| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)  | [formatText](#formattext)([Text](../model/Text.md) text, boolean qualifyType, boolean qualifyMember)                                                                               |                                                                                                                      |
+| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)  | [formatVariableType](#formatvariabletype)([VariableType](../model/VariableType.md) typeRef)                                                                                        |                                                                                                                      |
+| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)  | [formatVariableType](#formatvariabletype)([VariableType](../model/VariableType.md) variableType, boolean useQualifiedName)                                                         |                                                                                                                      |
+| private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [boundingConstraint](#boundingconstraint)([TypeParameter](../model/VariableType.TypeParameter.md) type)                                                                            |                                                                                                                      |
+| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)  | [formatVariableTypeLink](#formatvariabletypelink)([VariableType](../model/VariableType.md) variableType, boolean useQualifiedName)                                                 |                                                                                                                      |
+| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)  | [formatLink](#formatlink)([Link](../model/Link.md) link, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) label)                       | Formats links as markdown.                                                                                           |
+| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)  | [formatLocalLink](#formatlocallink)([Link](../model/Link.md) link, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) label)             |                                                                                                                      |
+| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)  | [formatLocalMethodLink](#formatlocalmethodlink)([Link](../model/Link.md) link, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) label) | Creates a markdown formatted link from a [Link](../model/Link.md) object.                                            |
+| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)  | [formatLinkLabel](#formatlinklabel)([Segment](../model/Text.Segment.md) segment, boolean qualifyType, boolean qualifyMember)                                                       | Formats links contained in a text segment as markdown.                                                               |
+| private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getLabelForType](#getlabelfortype)([Link](../model/Link.md) link, boolean qualifyType)                                                                                            |                                                                                                                      |
+| private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getLabelForMethod](#getlabelformethod)([Link](../model/Link.md) link, boolean qualifyMember)                                                                                      |                                                                                                                      |
+| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)  | [mdAnchor](#mdanchor)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) phrase)                                                         | Converts a string to the format required for use as a Markdown anchor.                                               |
+| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)  | [mdAnchorLink](#mdanchorlink)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) anchor)                                                 | Create a markdown formatted link to an anchor within the same markdown page.                                         |
+| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)  | [formatFileLink](#formatfilelink)([FileLink](../model/FileLink.md) link)                                                                                                           | Creates a Markdown link to another Markdown document                                                                 |
+| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)  | [escape](#escape)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str)                                                                | Escapes HTML `<` and `>` characters in a string with their corresponding HTML character entities, `&lt;` and `&gt;`. |
+| public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)  | [inOneLine](#inoneline)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str)                                                          | Removes new line characters from a string, replacing them with spaces                                                |
 
 
 
@@ -114,11 +112,34 @@ including configuration, current module/package/type names, and reporting utilit
 
 ---
 
+### link
+
+<span style="font-family: monospace; font-size: 80%;">public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __link__([Link](../model/Link.md) link, boolean useQualifiedName)</span>
+
+Create a markdown formatted link
+
+**Parameters:**
+
+`link` - a Link object describing the link
+
+`useQualifiedName` - If true, qualified names will be used in the link label
+
+**Returns:**
+
+markdown formatted link
+
+
+---
+
 ### formatParams
 
 <span style="font-family: monospace; font-size: 80%;">public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __formatParams__([List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[ParamNode](../model/ParamNode.md)> params)</span>
 
 Formats a list of `ParamNode` objects as markdown, identifying and linking type names.
+
+**Parameters:**
+
+`params` - a `Reference` object specifying a link
 
 **Returns:**
 
@@ -132,6 +153,10 @@ Markdown formatted text containing a link
 <span style="font-family: monospace; font-size: 80%;">public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __formatText__([Text](../model/Text.md) text)</span>
 
 Formats text contained in a `Text` object as markdown.
+
+**Parameters:**
+
+`text` - A `Text` object to be formatted
 
 **Returns:**
 
@@ -149,18 +174,36 @@ Markdown formatted text
 
 ---
 
-### formatTypeRef
+### formatVariableType
 
-<span style="font-family: monospace; font-size: 80%;">public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __formatTypeRef__([TypeReference](../model/TypeReference.md) typeRef)</span>
+<span style="font-family: monospace; font-size: 80%;">public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __formatVariableType__([VariableType](../model/VariableType.md) typeRef)</span>
 
 
 
 
 ---
 
-### formatTypeRef
+### formatVariableType
 
-<span style="font-family: monospace; font-size: 80%;">public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __formatTypeRef__([TypeReference](../model/TypeReference.md) typeRef, boolean useQualifiedName)</span>
+<span style="font-family: monospace; font-size: 80%;">public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __formatVariableType__([VariableType](../model/VariableType.md) variableType, boolean useQualifiedName)</span>
+
+
+
+
+---
+
+### boundingConstraint
+
+<span style="font-family: monospace; font-size: 80%;">private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __boundingConstraint__([TypeParameter](../model/VariableType.TypeParameter.md) type)</span>
+
+
+
+
+---
+
+### formatVariableTypeLink
+
+<span style="font-family: monospace; font-size: 80%;">public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __formatVariableTypeLink__([VariableType](../model/VariableType.md) variableType, boolean useQualifiedName)</span>
 
 
 
@@ -169,9 +212,15 @@ Markdown formatted text
 
 ### formatLink
 
-<span style="font-family: monospace; font-size: 80%;">public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __formatLink__([Text.Segment](../model/Text.Segment.md) segment, boolean qualifyType, boolean qualifyMember)</span>
+<span style="font-family: monospace; font-size: 80%;">public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __formatLink__([Link](../model/Link.md) link, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) label)</span>
 
-Formats links contained in a text segment as markdown.
+Formats links as markdown.
+
+**Parameters:**
+
+`link` - The link object containing information about the link
+
+`label` - The text that will be displayed for the link
 
 **Returns:**
 
@@ -180,87 +229,24 @@ Markdown formatted text with a resolved link
 
 ---
 
-### link
+### formatLocalLink
 
-<span style="font-family: monospace; font-size: 80%;">public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __link__([Link](../model/Link.md) reference, boolean useQualifiedName)</span>
-
-Create a markdown formatted link
-
-**Returns:**
-
-markdown formatted link
-
-
----
-
-### link
-
-<span style="font-family: monospace; font-size: 80%;">public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __link__([Link](../model/Link.md) reference, boolean useQualifiedName, boolean qualifyMember)</span>
+<span style="font-family: monospace; font-size: 80%;">public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __formatLocalLink__([Link](../model/Link.md) link, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) label)</span>
 
 
 
 
 ---
 
-### link
+### formatLocalMethodLink
 
-<span style="font-family: monospace; font-size: 80%;">public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __link__([Link](../model/Link.md) link, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) label, boolean qualifyType, boolean qualifyMember)</span>
+<span style="font-family: monospace; font-size: 80%;">public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __formatLocalMethodLink__([Link](../model/Link.md) link, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) label)</span>
 
+Creates a markdown formatted link from a [Link](../model/Link.md) object.with the option of simplifying qualified type names.
 
+**Parameters:**
 
-
----
-
-### setLabelForType
-
-<span style="font-family: monospace; font-size: 80%;">private static void __setLabelForType__([Link](../model/Link.md) link, boolean qualifyType)</span>
-
-
-
-
----
-
-### setLabelForMethod
-
-<span style="font-family: monospace; font-size: 80%;">private static void __setLabelForMethod__([Link](../model/Link.md) link, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) label, boolean qualifyType, boolean qualifyMember)</span>
-
-
-
-
----
-
-### setLabelForUrl
-
-<span style="font-family: monospace; font-size: 80%;">private static void __setLabelForUrl__([Link](../model/Link.md) link, boolean qualifyType, boolean qualifyMember)</span>
-
-
-
-
----
-
-### setLabelForUrlWithMethod
-
-<span style="font-family: monospace; font-size: 80%;">private static void __setLabelForUrlWithMethod__([Link](../model/Link.md) link, boolean qualifyType)</span>
-
-
-
-
----
-
-### canBeSimplified
-
-<span style="font-family: monospace; font-size: 80%;">private static boolean __canBeSimplified__([Link](../model/Link.md) link)</span>
-
-
-
-
----
-
-### mdRefLink
-
-<span style="font-family: monospace; font-size: 80%;">public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __mdRefLink__([Link](../model/Link.md) link)</span>
-
-Creates a markdown formatted link from a [Link](../model/Link.md) object.
+`link` - The reference object
 
 **Returns:**
 
@@ -269,16 +255,37 @@ a markdown formatted link
 
 ---
 
-### mdRefLinkMethod
+### formatLinkLabel
 
-<span style="font-family: monospace; font-size: 80%;">public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __mdRefLinkMethod__([Link](../model/Link.md) link)</span>
+<span style="font-family: monospace; font-size: 80%;">public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __formatLinkLabel__([Segment](../model/Text.Segment.md) segment, boolean qualifyType, boolean qualifyMember)</span>
 
-Creates a markdown formatted link from a [Link](../model/Link.md) object.
-with the option of simplifying qualified type names.
+Formats links contained in a text segment as markdown.
+
+**Parameters:**
+
+`segment` - A text segment
 
 **Returns:**
 
-a markdown formatted link
+Markdown formatted text with a resolved link
+
+
+---
+
+### getLabelForType
+
+<span style="font-family: monospace; font-size: 80%;">private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getLabelForType__([Link](../model/Link.md) link, boolean qualifyType)</span>
+
+
+
+
+---
+
+### getLabelForMethod
+
+<span style="font-family: monospace; font-size: 80%;">private static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getLabelForMethod__([Link](../model/Link.md) link, boolean qualifyMember)</span>
+
+
 
 
 ---
@@ -287,8 +294,11 @@ a markdown formatted link
 
 <span style="font-family: monospace; font-size: 80%;">public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __mdAnchor__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) phrase)</span>
 
-Converts a string to the format required for use as a Markdown anchor.
-Converted strings will be lowercase and contain no spaces.
+Converts a string to the format required for use as a Markdown anchor.Converted strings will be lowercase and contain no spaces.
+
+**Parameters:**
+
+`phrase` - A string to be used in an anchor link
 
 **Returns:**
 
@@ -303,6 +313,10 @@ The string converted to match the format required by Markdown anchor links
 
 Create a markdown formatted link to an anchor within the same markdown page.
 
+**Parameters:**
+
+`anchor` - A string to be used in an anchor link
+
 **Returns:**
 
 Markdown formatted text containing a correctly formatted anchor link
@@ -310,11 +324,15 @@ Markdown formatted text containing a correctly formatted anchor link
 
 ---
 
-### mdDocumentLink
+### formatFileLink
 
-<span style="font-family: monospace; font-size: 80%;">public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __mdDocumentLink__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) docName)</span>
+<span style="font-family: monospace; font-size: 80%;">public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __formatFileLink__([FileLink](../model/FileLink.md) link)</span>
 
 Creates a Markdown link to another Markdown document
+
+**Parameters:**
+
+`link` - MarkdownLink object
 
 **Returns:**
 
@@ -330,6 +348,10 @@ The Markdown formatted link
 Escapes HTML `<` and `>` characters in a string with their corresponding
 HTML character entities, `&lt;` and `&gt;`.
 
+**Parameters:**
+
+`str` - A string to be escaped
+
 **Returns:**
 
 The escaped string
@@ -342,6 +364,10 @@ The escaped string
 <span style="font-family: monospace; font-size: 80%;">public static [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __inOneLine__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) str)</span>
 
 Removes new line characters from a string, replacing them with spaces
+
+**Parameters:**
+
+`str` - The string
 
 **Returns:**
 

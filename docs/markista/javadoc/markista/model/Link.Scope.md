@@ -1,6 +1,6 @@
 Package [io.github.sandydunlop.markista.model](index.md)
 
-# Enum Class Link.Scope
+# Enum Class Scope
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
         [java.lang.Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)<[io.github.sandydunlop.markista.model.Link.Scope](Link.Scope.md)><br/>
                 io.github.sandydunlop.markista.model.Link.Scope<br/>
@@ -11,7 +11,7 @@ Enclosing Class:<br/>
 
 ----
 
-<span style="font-family: monospace; font-size: 80%;">public static final enum class __Link.Scope__<br/>extends [Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)<[Link.Scope](Link.Scope.md)>
+<span style="font-family: monospace; font-size: 80%;">public static final enum class __Scope__<br/>extends [Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)<[Scope](Link.Scope.md)>
 </span>
 
 Enum representing the scope of targets.
@@ -31,18 +31,18 @@ Enum representing the scope of targets.
 
 ## Constructor Summary
 
-| Constructor  | Description |
-|--------------|-------------|
-| Link.Scope() |             |
+| Constructor | Description |
+|-------------|-------------|
+| Scope()     |             |
 
 
 
 ## Method Summary
 
-| Modifier and Type                           | Method                                                                                                                 | Description |
-|---------------------------------------------|------------------------------------------------------------------------------------------------------------------------|-------------|
-| public static [Link.Scope](Link.Scope.md)[] | [values](#values)()                                                                                                    |             |
-| public static [Link.Scope](Link.Scope.md)   | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
+| Modifier and Type                      | Method                                                                                                                 | Description |
+|----------------------------------------|------------------------------------------------------------------------------------------------------------------------|-------------|
+| public static [Scope](Link.Scope.md)[] | [values](#values)()                                                                                                    |             |
+| public static [Scope](Link.Scope.md)   | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
 
 
 
@@ -98,7 +98,7 @@ public static final  EXTERNAL
 
 ### values
 
-<span style="font-family: monospace; font-size: 80%;">public static [Link.Scope](Link.Scope.md)[] __values__()</span>
+<span style="font-family: monospace; font-size: 80%;">public static [Scope](Link.Scope.md)[] __values__()</span>
 
 
 
@@ -107,7 +107,7 @@ public static final  EXTERNAL
 
 ### valueOf
 
-<span style="font-family: monospace; font-size: 80%;">public static [Link.Scope](Link.Scope.md) __valueOf__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)</span>
+<span style="font-family: monospace; font-size: 80%;">public static [Scope](Link.Scope.md) __valueOf__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)</span>
 
 
 

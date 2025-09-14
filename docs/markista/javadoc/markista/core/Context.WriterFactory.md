@@ -1,6 +1,6 @@
 Package [io.github.sandydunlop.markista.core](index.md)
 
-# Interface Context.WriterFactory
+# Interface WriterFactory
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
         io.github.sandydunlop.markista.core.Context.WriterFactory<br/>
 <br/>
@@ -10,7 +10,7 @@ Enclosing Class:<br/>
 
 ----
 
-<span style="font-family: monospace; font-size: 80%;">public static interface __Context.WriterFactory__</span>
+<span style="font-family: monospace; font-size: 80%;">public static interface __WriterFactory__</span>
 
 
 ## Method Summary

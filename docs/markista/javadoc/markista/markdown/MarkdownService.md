@@ -5,7 +5,7 @@ Package [io.github.sandydunlop.markista.markdown](index.md)
         io.github.sandydunlop.markista.markdown.MarkdownService<br/>
 <br/>
 All Implemented Interfaces:<br/>
-    [DocService](../spi/DocService.md)
+    [io.github.sandydunlop.markista.spi.DocService](../spi/DocService.md)
 
 
 ----

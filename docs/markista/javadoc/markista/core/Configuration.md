@@ -9,9 +9,7 @@ Package [io.github.sandydunlop.markista.core](index.md)
 
 <span style="font-family: monospace; font-size: 80%;">public class __Configuration__</span>
 
-Utility class holding global configuration settings for the documentation generator.
-
-This class provides static getter and setter methods for various options that control the behavior
+Utility class holding global configuration settings for the documentation generator.This class provides static getter and setter methods for various options that control the behavior
 of the documentation output, such as output directory, verbosity, and which members to include.
 
 All configuration fields are static and global and the constructor is hidden to prevent instantiation.
@@ -158,8 +156,7 @@ The list of module paths passed in from the Javadoc command line
 
 <span style="font-family: monospace; font-size: 80%;">private static boolean __useContentTabs__</span>
 
-If true, summary tables will be created inside Markdown content tabs.
-See [mkdocs-material](https://squidfunk.github.io/mkdocs-material/reference/content-tabs/) for more information.
+If true, summary tables will be created inside Markdown content tabs.See [mkdocs-material](https://squidfunk.github.io/mkdocs-material/reference/content-tabs/) for more information.
 
 
 ---
@@ -181,6 +178,10 @@ If true, logging will include status information.
 <span style="font-family: monospace; font-size: 80%;">public static void __setAddModules__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) moduleList)</span>
 
 Sets the list of sibling modules that can be linked to
+
+**Parameters:**
+
+`moduleList` - a comma-separated string of module names
 
 
 ---
@@ -204,6 +205,10 @@ a list of sibling modules that can be linked to
 
 Sets the title used in the generated documentation
 
+**Parameters:**
+
+`title` - the title to use
+
 
 ---
 
@@ -225,6 +230,10 @@ The title to be used
 <span style="font-family: monospace; font-size: 80%;">public static void __setDocumentPrivateMembers__(boolean b)</span>
 
 Sets whether private members (fields, methods) should be included in the generated documentation.
+
+**Parameters:**
+
+`b` - true to include private members, false otherwise.
 
 
 ---
@@ -248,6 +257,10 @@ true if private members are included, false otherwise.
 
 Sets whether to flatten package directory structure when generating the documentation output.
 
+**Parameters:**
+
+`b` - true to flatten package directories, false otherwise.
+
 
 ---
 
@@ -269,6 +282,10 @@ true if package directories are flattened, false otherwise.
 <span style="font-family: monospace; font-size: 80%;">public static void __setFlattenModules__(boolean b)</span>
 
 Sets whether to flatten module directory structure when generating the documentation output.
+
+**Parameters:**
+
+`b` - true to flatten module directories, false otherwise.
 
 
 ---
@@ -301,6 +318,10 @@ true if module directories are flattened, false otherwise.
 
 Sets whether to use content tabs in the generated documentation.
 
+**Parameters:**
+
+`b` - true to use content tabs, false otherwise.
+
 
 ---
 
@@ -323,6 +344,10 @@ true if content tabs are enabled, false otherwise.
 
 Sets whether verbose logging or output should be enabled during documentation generation.
 
+**Parameters:**
+
+`b` - true to enable verbose output, false otherwise.
+
 
 ---
 
@@ -344,6 +369,10 @@ true if verbose output is enabled, false otherwise.
 <span style="font-family: monospace; font-size: 80%;">public static void __setModulePaths__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) modulePaths)</span>
 
 Sets the directory containing modules.
+
+**Parameters:**
+
+`modulePaths` - A colon-separated list of paths.
 
 
 ---

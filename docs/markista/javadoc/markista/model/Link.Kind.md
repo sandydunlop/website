@@ -1,6 +1,6 @@
 Package [io.github.sandydunlop.markista.model](index.md)
 
-# Enum Class Link.Kind
+# Enum Class Kind
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
         [java.lang.Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)<[io.github.sandydunlop.markista.model.Link.Kind](Link.Kind.md)><br/>
                 io.github.sandydunlop.markista.model.Link.Kind<br/>
@@ -11,7 +11,7 @@ Enclosing Class:<br/>
 
 ----
 
-<span style="font-family: monospace; font-size: 80%;">public static final enum class __Link.Kind__<br/>extends [Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)<[Link.Kind](Link.Kind.md)>
+<span style="font-family: monospace; font-size: 80%;">public static final enum class __Kind__<br/>extends [Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)<[Kind](Link.Kind.md)>
 </span>
 
 Enum representing different kinds/types of targets.
@@ -21,10 +21,10 @@ Enum representing different kinds/types of targets.
 
 | Enum Constant               | Description |
 |-----------------------------|-------------|
-| [UNKNOWN](#unknown)         |             |
+| [UNRESOLVED](#unresolved)   |             |
 | [UNSUPPORTED](#unsupported) |             |
-| [URL](#url)                 |             |
-| [PAGE](#page)               |             |
+| [WEB](#web)                 |             |
+| [FILE](#file)               |             |
 | [MODULE](#module)           |             |
 | [PACKAGE](#package)         |             |
 | [TYPE](#type)               |             |
@@ -38,24 +38,24 @@ Enum representing different kinds/types of targets.
 
 | Constructor | Description |
 |-------------|-------------|
-| Link.Kind() |             |
+| Kind()      |             |
 
 
 
 ## Method Summary
 
-| Modifier and Type                         | Method                                                                                                                 | Description |
-|-------------------------------------------|------------------------------------------------------------------------------------------------------------------------|-------------|
-| public static [Link.Kind](Link.Kind.md)[] | [values](#values)()                                                                                                    |             |
-| public static [Link.Kind](Link.Kind.md)   | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
+| Modifier and Type                    | Method                                                                                                                 | Description |
+|--------------------------------------|------------------------------------------------------------------------------------------------------------------------|-------------|
+| public static [Kind](Link.Kind.md)[] | [values](#values)()                                                                                                    |             |
+| public static [Kind](Link.Kind.md)   | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
 
 
 
 ## Enum Constant Details
 
-### UNKNOWN
+### UNRESOLVED
 
-public static final  UNKNOWN
+public static final  UNRESOLVED
 
 
 
@@ -71,18 +71,18 @@ public static final  UNSUPPORTED
 
 ---
 
-### URL
+### WEB
 
-public static final  URL
+public static final  WEB
 
 
 
 
 ---
 
-### PAGE
+### FILE
 
-public static final  PAGE
+public static final  FILE
 
 
 
@@ -148,7 +148,7 @@ public static final  VOID
 
 ### values
 
-<span style="font-family: monospace; font-size: 80%;">public static [Link.Kind](Link.Kind.md)[] __values__()</span>
+<span style="font-family: monospace; font-size: 80%;">public static [Kind](Link.Kind.md)[] __values__()</span>
 
 
 
@@ -157,7 +157,7 @@ public static final  VOID
 
 ### valueOf
 
-<span style="font-family: monospace; font-size: 80%;">public static [Link.Kind](Link.Kind.md) __valueOf__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)</span>
+<span style="font-family: monospace; font-size: 80%;">public static [Kind](Link.Kind.md) __valueOf__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)</span>
 
 
 

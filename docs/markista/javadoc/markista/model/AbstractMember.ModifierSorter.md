@@ -1,6 +1,6 @@
 Package [io.github.sandydunlop.markista.model](index.md)
 
-# Class AbstractMember.ModifierSorter
+# Class ModifierSorter
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
         io.github.sandydunlop.markista.model.AbstractMember.ModifierSorter<br/>
 <br/>
@@ -10,7 +10,7 @@ Enclosing Class:<br/>
 
 ----
 
-<span style="font-family: monospace; font-size: 80%;">public static class __AbstractMember.ModifierSorter__</span>
+<span style="font-family: monospace; font-size: 80%;">public static class __ModifierSorter__</span>
 
 Utility class to sort modifiers according to Java language conventions.
 
@@ -25,9 +25,9 @@ Utility class to sort modifiers according to Java language conventions.
 
 ## Constructor Summary
 
-| Constructor                     | Description                                   |
-|---------------------------------|-----------------------------------------------|
-| AbstractMember.ModifierSorter() | Private constructor to prevent instantiation. |
+| Constructor      | Description                                   |
+|------------------|-----------------------------------------------|
+| ModifierSorter() | Private constructor to prevent instantiation. |
 
 
 
@@ -58,6 +58,10 @@ The fixed order of modifiers as per Java language specification.
 <span style="font-family: monospace; font-size: 80%;">public static [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[Modifier](Modifier.md)> __sortModifiers__([Set](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Set.html)<[Modifier](Modifier.md)> modifierSet)</span>
 
 Sort the given set of modifiers into the standard order.
+
+**Parameters:**
+
+`modifierSet` - The set of modifiers to sort.
 
 **Returns:**
 

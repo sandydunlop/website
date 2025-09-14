@@ -5,7 +5,7 @@ Package [io.github.sandydunlop.markista.model](index.md)
         io.github.sandydunlop.markista.model.Pair<br/>
 <br/>
 All Implemented Interfaces:<br/>
-    [Serializable](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Serializable.html)
+    [java.io.Serializable](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Serializable.html)
 
 
 ----

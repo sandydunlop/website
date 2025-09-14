@@ -16,19 +16,18 @@ Package [io.github.sandydunlop.markista.model](index.md)
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------|-------------|
 | [Api](Api.md)                                                                                                                                                                                                                                                                      | [api](#api)                         |             |
 | [Context](../core/Context.md)                                                                                                                                                                                                                                                      | [ctx](#ctx)                         |             |
-| boolean                                                                                                                                                                                                                                                                            | [isWebLink](#isweblink)             |             |
 | [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)>                                                                                             | [modules](#modules)                 |             |
 | [Map](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Map.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html), [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)> | [packageToModule](#packagetomodule) |             |
 | [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)>                                                                                             | [packages](#packages)               |             |
-| [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                                                                                                                       | [path](#path)                       |             |
+| [URI](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/net/URI.html)                                                                                                                                                                                              | [uri](#uri)                         |             |
 
 
 
 ## Constructor Summary
 
-| Constructor                                                                                                                                   | Description |
-|-----------------------------------------------------------------------------------------------------------------------------------------------|-------------|
-| ExternalLink([Context](../core/Context.md) c, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) p) |             |
+| Constructor                                                                                                                            | Description |
+|----------------------------------------------------------------------------------------------------------------------------------------|-------------|
+| ExternalLink([Context](../core/Context.md) c, [URI](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/net/URI.html) u) |             |
 
 
 
@@ -36,11 +35,10 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 | Modifier and Type                                                                                                                                                                                                                                                                         | Method                                                                                                                           | Description |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|-------------|
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                                                                                                                                                                       | [getPath](#getpath)()                                                                                                            |             |
+| public [URI](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/net/URI.html)                                                                                                                                                                                              | [getUri](#geturi)()                                                                                                              |             |
 | public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)>                                                                                             | [getModules](#getmodules)()                                                                                                      |             |
 | public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)>                                                                                             | [getPackages](#getpackages)()                                                                                                    |             |
 | public [Map](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Map.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html), [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)> | [getPackageToModule](#getpackagetomodule)()                                                                                      |             |
-| public void                                                                                                                                                                                                                                                                               | [setWebLink](#setweblink)(boolean b)                                                                                             |             |
 | public boolean                                                                                                                                                                                                                                                                            | [isWebLink](#isweblink)()                                                                                                        |             |
 | public [Api](Api.md)                                                                                                                                                                                                                                                                      | [getApi](#getapi)()                                                                                                              |             |
 | public void                                                                                                                                                                                                                                                                               | [load](#load)()                                                                                                                  |             |
@@ -63,15 +61,6 @@ Package [io.github.sandydunlop.markista.model](index.md)
 ### ctx
 
 <span style="font-family: monospace; font-size: 80%;">[Context](../core/Context.md) __ctx__</span>
-
-
-
-
----
-
-### isWebLink
-
-<span style="font-family: monospace; font-size: 80%;">boolean __isWebLink__</span>
 
 
 
@@ -105,9 +94,9 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 ---
 
-### path
+### uri
 
-<span style="font-family: monospace; font-size: 80%;">[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __path__</span>
+<span style="font-family: monospace; font-size: 80%;">[URI](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/net/URI.html) __uri__</span>
 
 
 
@@ -117,9 +106,9 @@ Package [io.github.sandydunlop.markista.model](index.md)
 
 ## Method Details
 
-### getPath
+### getUri
 
-<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getPath__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [URI](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/net/URI.html) __getUri__()</span>
 
 
 
@@ -147,15 +136,6 @@ Package [io.github.sandydunlop.markista.model](index.md)
 ### getPackageToModule
 
 <span style="font-family: monospace; font-size: 80%;">public [Map](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Map.html)<[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html), [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)> __getPackageToModule__()</span>
-
-
-
-
----
-
-### setWebLink
-
-<span style="font-family: monospace; font-size: 80%;">public void __setWebLink__(boolean b)</span>
 
 
 

@@ -1,6 +1,6 @@
 Package [io.github.sandydunlop.markista.model](index.md)
 
-# Enum Class DirectiveNode.Kind
+# Enum Class Kind
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
         [java.lang.Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)<[io.github.sandydunlop.markista.model.DirectiveNode.Kind](DirectiveNode.Kind.md)><br/>
                 io.github.sandydunlop.markista.model.DirectiveNode.Kind<br/>
@@ -11,7 +11,7 @@ Enclosing Class:<br/>
 
 ----
 
-<span style="font-family: monospace; font-size: 80%;">public static final enum class __DirectiveNode.Kind__<br/>extends [Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)<[DirectiveNode.Kind](DirectiveNode.Kind.md)>
+<span style="font-family: monospace; font-size: 80%;">public static final enum class __Kind__<br/>extends [Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)<[Kind](DirectiveNode.Kind.md)>
 </span>
 
 Enum representing the various kinds of directives possible in a module declaration.
@@ -32,18 +32,18 @@ Enum representing the various kinds of directives possible in a module declarati
 
 ## Constructor Summary
 
-| Constructor          | Description |
-|----------------------|-------------|
-| DirectiveNode.Kind() |             |
+| Constructor | Description |
+|-------------|-------------|
+| Kind()      |             |
 
 
 
 ## Method Summary
 
-| Modifier and Type                                           | Method                                                                                                                 | Description |
-|-------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|-------------|
-| public static [DirectiveNode.Kind](DirectiveNode.Kind.md)[] | [values](#values)()                                                                                                    |             |
-| public static [DirectiveNode.Kind](DirectiveNode.Kind.md)   | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
+| Modifier and Type                             | Method                                                                                                                 | Description |
+|-----------------------------------------------|------------------------------------------------------------------------------------------------------------------------|-------------|
+| public static [Kind](DirectiveNode.Kind.md)[] | [values](#values)()                                                                                                    |             |
+| public static [Kind](DirectiveNode.Kind.md)   | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
 
 
 
@@ -108,7 +108,7 @@ public static final  PROVIDES
 
 ### values
 
-<span style="font-family: monospace; font-size: 80%;">public static [DirectiveNode.Kind](DirectiveNode.Kind.md)[] __values__()</span>
+<span style="font-family: monospace; font-size: 80%;">public static [Kind](DirectiveNode.Kind.md)[] __values__()</span>
 
 
 
@@ -117,7 +117,7 @@ public static final  PROVIDES
 
 ### valueOf
 
-<span style="font-family: monospace; font-size: 80%;">public static [DirectiveNode.Kind](DirectiveNode.Kind.md) __valueOf__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)</span>
+<span style="font-family: monospace; font-size: 80%;">public static [Kind](DirectiveNode.Kind.md) __valueOf__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)</span>
 
 
 

@@ -185,6 +185,10 @@ Package [io.github.sandydunlop.markista.orchestration](index.md)
 
 Processes a JAR file to extract module and package information relevant for sibling module linking.
 
+**Parameters:**
+
+`jarFile` - The file path to the JAR file.
+
 **Throws:**
 
 [IOException](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/IOException.html)

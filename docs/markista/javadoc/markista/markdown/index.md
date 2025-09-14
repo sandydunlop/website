@@ -2,12 +2,11 @@
 # Package io.github.sandydunlop.markista.markdown
 
 
-This package contains the classes responsible for writing the Markdown file.
-[ModuleWriter](ModuleWriter.md) handles the top-level module documentation including constant
+This package contains the classes responsible for writing the Markdown file.[ModuleWriter](ModuleWriter.md) handles the top-level module documentation including constant
 field values for the module. It uses [PackageWriter](PackageWriter.md) to output the Markdown
-files for each [package](../model/PackageNode.md) 
+files for each [PackageNode](../model/PackageNode.md) 
 contained within, which in turn uses [TypeWriter](TypeWriter.md) to output the Markdown 
-files for each [type](../model/TypeNode.md) 
+files for each [TypeNode](../model/TypeNode.md) 
 contained within.
 
 === "All Classes and Interfaces"

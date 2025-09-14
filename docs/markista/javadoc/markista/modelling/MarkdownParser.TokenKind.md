@@ -1,6 +1,6 @@
 Package [io.github.sandydunlop.markista.modelling](index.md)
 
-# Enum Class MarkdownParser.TokenKind
+# Enum Class TokenKind
 [java.lang.Object](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html)<br/>
         [java.lang.Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)<[io.github.sandydunlop.markista.modelling.MarkdownParser.TokenKind](MarkdownParser.TokenKind.md)><br/>
                 io.github.sandydunlop.markista.modelling.MarkdownParser.TokenKind<br/>
@@ -11,7 +11,7 @@ Enclosing Class:<br/>
 
 ----
 
-<span style="font-family: monospace; font-size: 80%;">public static final enum class __MarkdownParser.TokenKind__<br/>extends [Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)<[MarkdownParser.TokenKind](MarkdownParser.TokenKind.md)>
+<span style="font-family: monospace; font-size: 80%;">public static final enum class __TokenKind__<br/>extends [Enum](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html)<[TokenKind](MarkdownParser.TokenKind.md)>
 </span>
 
 Enum representing the kind of a Markdown token.
@@ -31,18 +31,18 @@ Enum representing the kind of a Markdown token.
 
 ## Constructor Summary
 
-| Constructor                | Description |
-|----------------------------|-------------|
-| MarkdownParser.TokenKind() |             |
+| Constructor | Description |
+|-------------|-------------|
+| TokenKind() |             |
 
 
 
 ## Method Summary
 
-| Modifier and Type                                                       | Method                                                                                                                 | Description |
-|-------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|-------------|
-| public static [MarkdownParser.TokenKind](MarkdownParser.TokenKind.md)[] | [values](#values)()                                                                                                    |             |
-| public static [MarkdownParser.TokenKind](MarkdownParser.TokenKind.md)   | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
+| Modifier and Type                                        | Method                                                                                                                 | Description |
+|----------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|-------------|
+| public static [TokenKind](MarkdownParser.TokenKind.md)[] | [values](#values)()                                                                                                    |             |
+| public static [TokenKind](MarkdownParser.TokenKind.md)   | [valueOf](#valueof)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) |             |
 
 
 
@@ -98,7 +98,7 @@ public static final  END
 
 ### values
 
-<span style="font-family: monospace; font-size: 80%;">public static [MarkdownParser.TokenKind](MarkdownParser.TokenKind.md)[] __values__()</span>
+<span style="font-family: monospace; font-size: 80%;">public static [TokenKind](MarkdownParser.TokenKind.md)[] __values__()</span>
 
 
 
@@ -107,7 +107,7 @@ public static final  END
 
 ### valueOf
 
-<span style="font-family: monospace; font-size: 80%;">public static [MarkdownParser.TokenKind](MarkdownParser.TokenKind.md) __valueOf__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)</span>
+<span style="font-family: monospace; font-size: 80%;">public static [TokenKind](MarkdownParser.TokenKind.md) __valueOf__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name)</span>
 
 
 

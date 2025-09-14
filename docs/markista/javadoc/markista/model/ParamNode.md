@@ -20,42 +20,42 @@ A class to hold information about method parameters.
 
 ## Field Summary
 
-| Modifier and Type                         | Field         | Description                |
-|-------------------------------------------|---------------|----------------------------|
-| private [TypeReference](TypeReference.md) | [type](#type) | The type of this parameter |
+| Modifier and Type                       | Field         | Description                |
+|-----------------------------------------|---------------|----------------------------|
+| private [VariableType](VariableType.md) | [type](#type) | The type of this parameter |
 
 
 
 ## Constructor Summary
 
-| Constructor                                                                                                                                                                                                     | Description                                          |
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------|
-| ParamNode([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) type, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) name) | Constructs a ParamNode with the given type and name. |
+| Constructor                                                                                                                                                                                                           | Description                                          |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------|
+| ParamNode([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) type, [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) simpleName) | Constructs a ParamNode with the given type and name. |
 
 
 
 ## Method Summary
 
-| Modifier and Type                        | Method                                                      | Description                              |
-|------------------------------------------|-------------------------------------------------------------|------------------------------------------|
-| public [TypeReference](TypeReference.md) | [getType](#gettype)()                                       | Returns the type Text of this parameter. |
-| public void                              | [setType](#settype)([TypeReference](TypeReference.md) type) | Sets the type Text of this parameter.    |
+| Modifier and Type                      | Method                                                    | Description                              |
+|----------------------------------------|-----------------------------------------------------------|------------------------------------------|
+| public [VariableType](VariableType.md) | [getType](#gettype)()                                     | Returns the type Text of this parameter. |
+| public void                            | [setType](#settype)([VariableType](VariableType.md) type) | Sets the type Text of this parameter.    |
 
 
-### Methods inherited from [io.github.sandydunlop.markista.model.AbstractMember](AbstractMember.md)
+### Methods inherited from [AbstractMember](AbstractMember.md)
 
-[AbstractMember.addAppliedAnnotation](AbstractMember.md#addappliedannotation), [AbstractMember.addModifier](AbstractMember.md#addmodifier), [AbstractMember.setQualifiedName](AbstractMember.md#setqualifiedname), [AbstractMember.getName](AbstractMember.md#getname), [AbstractMember.getModifiers](AbstractMember.md#getmodifiers), [AbstractMember.getAppliedAnnotations](AbstractMember.md#getappliedannotations), [AbstractMember.getPackageName](AbstractMember.md#getpackagename), [AbstractMember.setNestedName](AbstractMember.md#setnestedname), [AbstractMember.setPackageName](AbstractMember.md#setpackagename), [AbstractMember.getQualifiedName](AbstractMember.md#getqualifiedname), [AbstractMember.setSimpleName](AbstractMember.md#setsimplename), [AbstractMember.getSimpleName](AbstractMember.md#getsimplename), [AbstractMember.getModifiersString](AbstractMember.md#getmodifiersstring), [AbstractMember.getNestedName](AbstractMember.md#getnestedname), [AbstractMember.setName](AbstractMember.md#setname)
+[addAppliedAnnotation](AbstractMember.md#addappliedannotation), [setName](AbstractMember.md#setname), [addModifier](AbstractMember.md#addmodifier), [getName](AbstractMember.md#getname), [getModifiers](AbstractMember.md#getmodifiers), [getAppliedAnnotations](AbstractMember.md#getappliedannotations), [getPackageName](AbstractMember.md#getpackagename), [setPackageName](AbstractMember.md#setpackagename), [getModifiersString](AbstractMember.md#getmodifiersstring)
 
-### Methods inherited from [io.github.sandydunlop.markista.model.Node](Node.md)
+### Methods inherited from [Node](Node.md)
 
-[Node.getReferences](Node.md#getreferences), [Node.setDeprecationText](Node.md#setdeprecationtext), [Node.getBody](Node.md#getbody), [Node.setFirstSentence](Node.md#setfirstsentence), [Node.setDeprecation](Node.md#setdeprecation), [Node.getDeprecation](Node.md#getdeprecation), [Node.getUUID](Node.md#getuuid), [Node.getFullBody](Node.md#getfullbody), [Node.setReferences](Node.md#setreferences), [Node.getKind](Node.md#getkind), [Node.getSince](Node.md#getsince), [Node.setFullBody](Node.md#setfullbody), [Node.setSince](Node.md#setsince), [Node.setBody](Node.md#setbody), [Node.getFirstSentence](Node.md#getfirstsentence), [Node.setKind](Node.md#setkind), [Node.getDeprecationText](Node.md#getdeprecationtext)
+[getReferences](Node.md#getreferences), [setDeprecationText](Node.md#setdeprecationtext), [getBody](Node.md#getbody), [setFirstSentence](Node.md#setfirstsentence), [setDeprecation](Node.md#setdeprecation), [getDeprecation](Node.md#getdeprecation), [getUUID](Node.md#getuuid), [getFullBody](Node.md#getfullbody), [setReferences](Node.md#setreferences), [getKind](Node.md#getkind), [getSince](Node.md#getsince), [setSince](Node.md#setsince), [setBody](Node.md#setbody), [getFirstSentence](Node.md#getfirstsentence), [setKind](Node.md#setkind), [getDeprecationText](Node.md#getdeprecationtext)
 
 
 ## Field Details
 
 ### type
 
-<span style="font-family: monospace; font-size: 80%;">private [TypeReference](TypeReference.md) __type__</span>
+<span style="font-family: monospace; font-size: 80%;">private [VariableType](VariableType.md) __type__</span>
 
 The type of this parameter
 
@@ -67,7 +67,7 @@ The type of this parameter
 
 ### getType
 
-<span style="font-family: monospace; font-size: 80%;">public [TypeReference](TypeReference.md) __getType__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [VariableType](VariableType.md) __getType__()</span>
 
 Returns the type Text of this parameter.
 
@@ -80,9 +80,13 @@ The Text representing the parameter's type.
 
 ### setType
 
-<span style="font-family: monospace; font-size: 80%;">public void __setType__([TypeReference](TypeReference.md) type)</span>
+<span style="font-family: monospace; font-size: 80%;">public void __setType__([VariableType](VariableType.md) type)</span>
 
 Sets the type Text of this parameter.
+
+**Parameters:**
+
+`type` - The Text to set as this parameter's type Text.
 
 
 ---

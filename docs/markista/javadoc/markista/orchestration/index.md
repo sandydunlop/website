@@ -13,7 +13,6 @@ before output is generated.
     | [LinkResolver](LinkResolver.md)   |                                                        |
     | [ModelUtils](ModelUtils.md)       | Utilities for rxtrating information from the API model |
     | [ModulePath](ModulePath.md)       |                                                        |
-    | [Name](Name.md)                   |                                                        |
     | [Relativizer](Relativizer.md)     |                                                        |
     | [TextAssembler](TextAssembler.md) |                                                        |
 
@@ -26,7 +25,6 @@ before output is generated.
     | [LinkResolver](LinkResolver.md)   |                                                        |
     | [ModelUtils](ModelUtils.md)       | Utilities for rxtrating information from the API model |
     | [ModulePath](ModulePath.md)       |                                                        |
-    | [Name](Name.md)                   |                                                        |
     | [Relativizer](Relativizer.md)     |                                                        |
     | [TextAssembler](TextAssembler.md) |                                                        |
 
