@@ -1,6 +1,6 @@
-site_name: Sandy Dunlop
-site_url: https://sandydunlop.github.io
-site_description: Sandy Dunlop's homepage
+site_name: Cascara
+site_url: https://qishr.github.io
+site_description: The Project Cascara Ecosystem
 
 markdown_extensions:
   - admonition
@@ -17,15 +17,16 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-
+  # - toc:
+  #     toc_depth: 0
 
 # nav:
 #   - API: markdown-doclet/javadoc/api
 #   - Markdown: markdown-doclet/javadoc/markdown
 
 theme:
-  logo: assets/penguin.svg
-  favicon: assets/penguin.svg
+  logo: assets/logo.png
+  # favicon: assets/penguin.svg
   name: material
   font:
     text: Barlow
@@ -74,10 +75,10 @@ extra:
     property: G-GMRC7B45YN
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/sandydunlop
-    - icon: fontawesome/brands/mastodon
-      link: https://glasgow.social/@sandy
-    - icon: fontawesome/brands/instagram
-      link: https://instagram.com/sandydunlop
-    - icon: fontawesome/brands/twitter
-      link: https://x.com/sandy
+      link: https://github.com/qishr
+    # - icon: fontawesome/brands/mastodon
+    #   link: https://glasgow.social/@sandy
+    # - icon: fontawesome/brands/instagram
+    #   link: https://instagram.com/sandydunlop
+    # - icon: fontawesome/brands/twitter
+    #   link: https://x.com/sandy
