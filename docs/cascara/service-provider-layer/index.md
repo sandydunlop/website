@@ -54,28 +54,37 @@ When a class in `cascara.module.organizer` needs a `ScalarRenderer`, the followi
   - It then goes down any other public branches it sees, doing the same.
 
 
+## Service Provider Properties
 
+The `ServiceProvider` interface specifies a `getServiceProperties` method:
 
-
-```java
-    public Parser<?, ?> createParser(String contentType) throws ServiceException {
-        return createServiceProvider(
-            Parser.class,
-            CapabilityQueries.hasExactValue("contentType", contentType)
-        );
-    }
+```
+public interface ServiceProvider {
+    Properties getServiceProperties();
+}
 ```
 
+The `Properties` returned by this method allow the ServiceProviderLayer to select service providers based on capabilities and properties they declare.
+
+## ServiceProviderFactory
+
+The `ServiceProviderFactory` class provides convenient methods to insantiate providers of services that are defined in `cascara.common`.
+
+Example usage:
 
 ```java
-    protected <T extends ServiceProvider> T createServiceProvider(Class<T> serviceType, Predicate<Properties> capabilityPredicate) {
-        ServiceMetadata metadata = layer.findProvider(
-            serviceType,
-            capabilityPredicate
-        );
-        if (metadata != null) {
-            return ServiceProviderLayer.loadProvider(serviceType, metadata);
+public class Importer {
+    public void importData(String text) {
+
+        ServiceProviderFactory spf = new ServiceProviderFactory();
+
+        Parser<?,?> parser = spf.createParser("text/yaml");
+
+        if (parser.parse(text) instanceof SequenceAstNode seq) {
+            for (AstNode node : seq.getChildren()) {
+                System.out.println(node.toString());
+            }
         }
-        return null;
     }
+}
 ```

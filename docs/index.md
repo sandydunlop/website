@@ -1,10 +1,19 @@
+---
+hide:
+  - navigation
+  - toc
+---
+
 # Cascara
 
-- [Theme Engine](features/theme-engine/)
+This is work in progress.
+
+The following components are currently available:
+
+- [Theme Engine](cascara/ui/theme-engine/)
 - Renderer
-- [Language Processors](features/language-processor)
-- [Localizable Menus](features/localizable-menus)
-- [Service Provider Layer](features/service-provider-layer)
+- [Language Processors Collection](cascara/language-processors/)
+- [Localizable Menus](cascara/ui/localizable-menus)
+- [Service Provider Layer](cascara/service-provider-layer/)
 - Language-Agnostic JSON Schema
-- Schema-Driven Controls
-- Schema-Driven Forms
+- [Schema-Driven Controls](cascara/ui/schema-driven-controls)

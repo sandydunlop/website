@@ -1,4 +1,4 @@
-# Cascara Language Processors
+# Cascara Language Processors Collection
 
 The Cascara language processors collection is a set of modules that provide:
 
@@ -12,9 +12,28 @@ Currently supported languages are:
 
 - [JSON](json.md)
 - [XML](json.md)
-- [YAML](yaml.md)
+- [YAML](yaml)
 
-## Tokenizers
+## Gradle
+
+*Cascara Language Processors* and *Cascara Common* are available in the [Maven Central](https://mvnrepository.com/artifact/io.github.qishr) repository.
+
+To use them in a Gradle project, add the following dependencies:
+
+```groovy
+dependencies {
+    implementation "io.github.qishr:cascara-common:1.1.3"
+    implementation "io.github.qishr:cascara-lang-json:0.3.0"
+    implementation "io.github.qishr:cascara-lang-xml:0.3.0"
+    implementation "io.github.qishr:cascara-lang-yaml:0.3.0"
+}
+```
+
+## Examples
+
+The examples shown here are available in the [cascara-docs-examples](https://github.com/qishr/cascara-docs-examples) Github repository.
+
+### Tokenizers
 
 [javadoc](https://qishr.github.io/javadoc/cascara.common/lang/processor/Tokenizer)
 
@@ -63,11 +82,48 @@ Currently supported languages are:
     }
     ```
 
+### Parsers
 
-## Serializers
+[javadoc](https://qishr.github.io/javadoc/cascara.common/lang/processor/Parserer)
+
+=== "JSON"
+    ```java
+        public static void main(String args[]) {
+            InputStream is = ParseSimple.class.getResourceAsStream("subject.json");
+            JsonParser parser = new JsonParser();
+            JsonNode yaml = parser.parse(is);
+            if (yaml instanceof JsonMapNode map) {
+                System.out.println(map.getString("name"));
+                System.out.println(map.getString("age"));
+            }
+        }
+    ```
+=== "YAML"
+    ```java
+        public static void main(String args[]) {
+            InputStream is = ParseSimple.class.getResourceAsStream("subject.yaml");
+            YamlParser parser = new YamlParser();
+            YamlNode yaml = parser.parse(is);
+            if (yaml instanceof YamlMapNode map) {
+                System.out.println(map.getString("name"));
+                System.out.println(map.getString("age"));
+            }
+        }
+    ```
+    
+### Serializers
 
 [javadoc](https://qishr.github.io/javadoc/cascara.common/lang/processor/Serializer)
 
+=== "JSON"
+    ```java
+        public static void main(String args[]) {
+            Person person = new Person("Dave", 31);
+            JsonSerializer serializer = new JsonSerializer();
+            String text = serializer.toText(person);
+            System.out.println("Serialized JSON:\n" + text);
+        }    
+    ```
 === "YAML"
     ```java
         public static void main(String args[]) {

@@ -1,4 +1,4 @@
-# Cascara Theme Engine
+# Cascara UI
 
 Theme support for JavaFX.
 
@@ -47,15 +47,15 @@ To use it in a Gradle project, add the following dependencies:
 
 ```groovy
 dependencies {
-    implementation "io.github.qishr:cascara-ui:0.2.3"
+    implementation "io.github.qishr:cascara-ui:0.2.5"
 
     // Transitive dependencies of cascara.ui...
-    implementation "io.github.qishr:cascara-common:1.1.1"
-    implementation "io.github.qishr:cascara-common-io:0.2.1"
-    implementation "io.github.qishr:cascara-lang-json:0.2.2"
-    implementation "io.github.qishr:cascara-lang-xml:0.2.2"
-    implementation "io.github.qishr:cascara-lang-yaml:0.2.2"
-    implementation "io.github.qishr:cascara-schema:0.2.2"
+    implementation "io.github.qishr:cascara-common:1.1.3"
+    implementation "io.github.qishr:cascara-common-io:0.3.0"
+    implementation "io.github.qishr:cascara-lang-json:0.3.0"
+    implementation "io.github.qishr:cascara-lang-xml:0.3.0"
+    implementation "io.github.qishr:cascara-lang-yaml:0.3.0"
+    implementation "io.github.qishr:cascara-schema:0.3.0"
 }
 ```
 
