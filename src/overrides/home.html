@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block tabs %}
+  {{ super() }}
+{% endblock %}
+
+{% block content %}
+<div class="home-hero">
+  <div class="home-hero__inner">
+    <h1 class="home-hero__title">Cascara</h1>
+    <p class="home-hero__subtitle">
+        A Java platform ecosystem for working with structured data — from parsing and
+        validation to schema-driven UIs. Use the language processors, schema engine,
+        and service infrastructure anywhere Java runs, or bring in Cascara UI to build
+        fully themed, internationalized desktop applications.
+      </p>
+    </div>
+</div>
+
+<div class="home-features">
+
+  <div class="home-feature">
+    <div class="home-feature__icon">⚙️</div>
+    <div class="home-feature__body">
+      <h2>Language Processors</h2>
+      <p>Full-pipeline processors for YAML, JSON, and XML, implemented from scratch
+      with a stream-centric architecture that keeps cold-start overhead low and
+      throughput high — even on complex, anchor-heavy documents.</p>
+    </div>
+  </div>
+
+  <div class="home-feature">
+    <div class="home-feature__icon">📐</div>
+    <div class="home-feature__body">
+      <h2>Schema System</h2>
+      <p>Validation, type analysis, and schema compilation, with localization support
+      for JSON Schemas and compatibility with standards like OpenAPI.</p>
+    </div>
+  </div>
+
+  <div class="home-feature">
+    <div class="home-feature__icon">🔌</div>
+    <div class="home-feature__body">
+      <h2>Modular Service Architecture</h2>
+      <p>Built on the Java Platform Module System, with runtime loading and unloading
+      of modules, layered security, and fine-grained capability-based service discovery via the
+      <a href="cascara/service-provider-layer">Service Provider Layer</a>.</p>
+    </div>
+  </div>
+
+  <div class="home-feature">
+    <div class="home-feature__icon">🎨</div>
+    <div class="home-feature__body">
+      <h2>Cascara UI <span class="home-feature__tag">Desktop</span></h2>
+      <p>A JavaFX UI framework with a theming engine that loads VS Code .vsix themes,
+      observable data bindings, and schema-driven form rendering — all styled
+      consistently across themes.</p>
+      <p>
+        <br/>
+        <video width="640" height="480" autoplay loop muted playsinline><source src="/cascara/ui/theme-engine/cascara-ui-theme.mp4" type="video/mp4"></video>
+      </p>
+    </div>
+  </div>
+
+  <div class="home-feature">
+    <div class="home-feature__icon">🌍</div>
+    <div class="home-feature__body">
+      <h2>Internationalization</h2>
+      <p>Languages and themes switch at runtime without restarting. Full RTL support
+      with automatic layout mirroring, localized menus, translated enum values, and
+      locale-aware formatting — built for the world, not just one corner of it.</p>
+    </div>
+  </div>
+
+</div>
+{% endblock %}
