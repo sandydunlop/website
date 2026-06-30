@@ -24,7 +24,8 @@ jobs:
         with:
           python-version: 3.9
       - run: pip install \
-            mkdocs-material
+            mkdocs-material \
+            mkdocs-literate-nav
       - run: mkdocs gh-deploy --config-file src/mkdocs.yml --force
 
   deploy_mkdocs:
