@@ -1,6 +1,6 @@
-site_name: Sandy Dunlop
-site_url: https://sandydunlop.github.io
-site_description: Sandy Dunlop's homepage
+site_name: Cascara
+site_url: https://qishr.github.io
+site_description: The Cascara Ecosystem
 
 markdown_extensions:
   - admonition
@@ -11,26 +11,23 @@ markdown_extensions:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
-  #- pymdownx.inlinehilite
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
 
-
-# nav:
-#   - API: markdown-doclet/javadoc/api
-#   - Markdown: markdown-doclet/javadoc/markdown
-
 theme:
-  logo: assets/penguin.svg
-  favicon: assets/penguin.svg
+  logo: assets/logo.png
+  # favicon: assets/penguin.svg
   name: material
+  custom_dir: overrides
   font:
     text: Barlow
     code: Roboto Mono
   features:
+    - navigation.tabs
+    - navigation.sections
     - content.code.copy
     - navigation.indexes
   palette:
@@ -74,10 +71,25 @@ extra:
     property: G-GMRC7B45YN
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/sandydunlop
-    - icon: fontawesome/brands/mastodon
-      link: https://glasgow.social/@sandy
-    - icon: fontawesome/brands/instagram
-      link: https://instagram.com/sandydunlop
-    - icon: fontawesome/brands/twitter
-      link: https://x.com/sandy
+      link: https://github.com/qishr
+
+plugins:
+  - search
+  - literate-nav:
+      nav_file: SUMMARY.md
+
+nav:
+  - Home: index.md
+  - Language Processors Collection:
+      - Overview: cascara/language-processors/index.md
+      - Cascara YAML:
+          - Overview: cascara/language-processors/yaml/index.md
+          - Performance Comparison: cascara/language-processors/yaml/performance-comparison.md
+      - Cascara JSON: cascara/language-processors/json/index.md
+  - Cascara Schema: cascara/schema/index.md
+  - Cascara UI:
+      - Overview: cascara/ui/index.md
+      - Theme Engine: cascara/ui/theme-engine/index.md
+      - Localizable Menus: cascara/ui/localizable-menus/index.md
+      - Schema-Driven Controls: cascara/ui/schema-driven-controls/index.md
+  - Javadoc: javadoc/

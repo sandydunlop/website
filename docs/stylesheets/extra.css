@@ -1,5 +1,5 @@
 :root  > * {
-  --md-primary-fg-color: #464196;
+  --md-primary-fg-color: #3b3680;
   --md-primary-bg-color: #FAE9CF;
 
   --md-typeset-a-color:  #464196;
@@ -12,7 +12,7 @@
 }
 
 [data-md-color-scheme="slate"] {
-  --md-hue: 36; 
+  --md-hue: 36;
   --sb-hue: 264;
 
   --md-default-bg-color: hsla(var(--sb-hue),15%,14%,1);
@@ -32,10 +32,10 @@
   .md-typeset a:hover {
     color: #7B75DA;
   }
-  
-  .md-nav__title {
+
+/*  .md-nav__title {
     display: none;
-  }
+  }*/
   .md-nav__link:hover {
     color: #7B75DA;
   }
