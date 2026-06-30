@@ -8,7 +8,7 @@ All Implemented Interfaces:<br/>
     [java.io.Serializable](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Serializable.html)
 
 Direct Known Subtypes:<br/>
-    [AppliedAnnotationNode](AppliedAnnotationNode.md), [ModuleNode](ModuleNode.md), [PackageNode](PackageNode.md), [AnnotationElement](AnnotationElement.md), [AbstractMember](AbstractMember.md), [Api](Api.md)
+    [AppliedAnnotationNode](AppliedAnnotationNode.md), [ModuleNode](ModuleNode.md), [PackageNode](PackageNode.md), [AnnotationElement](AnnotationElement.md), [PackageReference](PackageReference.md), [AbstractMember](AbstractMember.md), [Api](Api.md)
 
 
 ----

@@ -44,17 +44,17 @@ A class to hold information about fields within a class, interface, or enum.
 | public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)           | [fullSignature](#fullsignature)()                                                                                                                           | Returns the full signature of the field including modifiers and name. |
 
 
-### Methods inherited from [Node](Node.md)
+### Methods inherited from [AbstractMember](AbstractMember.md)
 
-[getReferences](Node.md#getreferences), [setDeprecationText](Node.md#setdeprecationtext), [getBody](Node.md#getbody), [setFirstSentence](Node.md#setfirstsentence), [setDeprecation](Node.md#setdeprecation), [getDeprecation](Node.md#getdeprecation), [getUUID](Node.md#getuuid), [getFullBody](Node.md#getfullbody), [setReferences](Node.md#setreferences), [getKind](Node.md#getkind), [getSince](Node.md#getsince), [setSince](Node.md#setsince), [setBody](Node.md#setbody), [getFirstSentence](Node.md#getfirstsentence), [setKind](Node.md#setkind), [getDeprecationText](Node.md#getdeprecationtext)
+[addAppliedAnnotation](AbstractMember.md#addappliedannotation), [setName](AbstractMember.md#setname), [addModifier](AbstractMember.md#addmodifier), [getName](AbstractMember.md#getname), [getModifiers](AbstractMember.md#getmodifiers), [getAppliedAnnotations](AbstractMember.md#getappliedannotations), [getPackageName](AbstractMember.md#getpackagename), [setPackageName](AbstractMember.md#setpackagename), [getModifiersString](AbstractMember.md#getmodifiersstring)
 
 ### Methods inherited from [ParamNode](ParamNode.md)
 
 [getType](ParamNode.md#gettype), [setType](ParamNode.md#settype)
 
-### Methods inherited from [AbstractMember](AbstractMember.md)
+### Methods inherited from [Node](Node.md)
 
-[addAppliedAnnotation](AbstractMember.md#addappliedannotation), [setName](AbstractMember.md#setname), [addModifier](AbstractMember.md#addmodifier), [getName](AbstractMember.md#getname), [getModifiers](AbstractMember.md#getmodifiers), [getAppliedAnnotations](AbstractMember.md#getappliedannotations), [getPackageName](AbstractMember.md#getpackagename), [setPackageName](AbstractMember.md#setpackagename), [getModifiersString](AbstractMember.md#getmodifiersstring)
+[getReferences](Node.md#getreferences), [setDeprecationText](Node.md#setdeprecationtext), [getBody](Node.md#getbody), [setFirstSentence](Node.md#setfirstsentence), [setDeprecation](Node.md#setdeprecation), [getDeprecation](Node.md#getdeprecation), [getUUID](Node.md#getuuid), [getFullBody](Node.md#getfullbody), [setReferences](Node.md#setreferences), [getKind](Node.md#getkind), [getSince](Node.md#getsince), [setSince](Node.md#setsince), [setBody](Node.md#setbody), [getFirstSentence](Node.md#getfirstsentence), [setKind](Node.md#setkind), [getDeprecationText](Node.md#getdeprecationtext)
 
 
 ## Field Details

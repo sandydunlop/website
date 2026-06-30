@@ -16,14 +16,14 @@ Represents a module node that contains directives, packages, and constant values
 
 ## Field Summary
 
-| Modifier and Type                                                                                                                         | Field                             | Description |
-|-------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------|-------------|
-| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[FieldNode](FieldNode.md)>         | [constantValues](#constantvalues) |             |
-| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DirectiveNode](DirectiveNode.md)> | [directives](#directives)         |             |
-| private boolean                                                                                                                           | [hasModuleInfo](#hasmoduleinfo)   |             |
-| private final [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                | [name](#name)                     |             |
-| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[PackageNode](PackageNode.md)>     | [packages](#packages)             |             |
-| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                      | [sourcePath](#sourcepath)         |             |
+| Modifier and Type                                                                                                                               | Field                             | Description |
+|-------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------|-------------|
+| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[FieldNode](FieldNode.md)>               | [constantValues](#constantvalues) |             |
+| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DirectiveNode](DirectiveNode.md)>       | [directives](#directives)         |             |
+| private boolean                                                                                                                                 | [hasModuleInfo](#hasmoduleinfo)   |             |
+| private final [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                      | [name](#name)                     |             |
+| private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[PackageReference](PackageReference.md)> | [packages](#packages)             |             |
+| private [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                            | [sourcePath](#sourcepath)         |             |
 
 
 
@@ -37,24 +37,24 @@ Represents a module node that contains directives, packages, and constant values
 
 ## Method Summary
 
-| Modifier and Type                                                                                                                  | Method                                                                                                                             | Description                                                 |
-|------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                | [getName](#getname)()                                                                                                              | Returns the name (qualified name) of this module.           |
-| public void                                                                                                                        | [setSourcePath](#setsourcepath)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) path) |                                                             |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                | [getSourcePath](#getsourcepath)()                                                                                                  |                                                             |
-| public void                                                                                                                        | [setHasModuleInfo](#sethasmoduleinfo)(boolean b)                                                                                   |                                                             |
-| public boolean                                                                                                                     | [hasModuleInfo](#hasmoduleinfo)()                                                                                                  |                                                             |
-| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[PackageNode](PackageNode.md)>     | [getPackages](#getpackages)()                                                                                                      | Returns the list of packages contained in this module.      |
-| public void                                                                                                                        | [addPackage](#addpackage)([PackageNode](PackageNode.md) packageNode)                                                               | Adds a package to this module.                              |
-| public void                                                                                                                        | [addDirective](#adddirective)([DirectiveNode](DirectiveNode.md) directive)                                                         | Adds a directive to this module.                            |
-| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DirectiveNode](DirectiveNode.md)> | [getDirectives](#getdirectives)()                                                                                                  | Returns the list of directives declared in this module.     |
-| public void                                                                                                                        | [addConstantValue](#addconstantvalue)([FieldNode](FieldNode.md) constant)                                                          | Adds a constant field value to this module.                 |
-| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[FieldNode](FieldNode.md)>         | [getConstantValues](#getconstantvalues)()                                                                                          | Returns the list of constant values defined in this module. |
-| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DirectiveNode](DirectiveNode.md)> | [getExports](#getexports)()                                                                                                        | Returns the list of 'exports' directives in this module.    |
-| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DirectiveNode](DirectiveNode.md)> | [getRequires](#getrequires)()                                                                                                      | Returns the list of 'requires' directives in this module.   |
-| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DirectiveNode](DirectiveNode.md)> | [getOpens](#getopens)()                                                                                                            | Returns the list of 'opens' directives in this module.      |
-| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DirectiveNode](DirectiveNode.md)> | [getUses](#getuses)()                                                                                                              | Returns the list of 'uses' directives in this module.       |
-| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DirectiveNode](DirectiveNode.md)> | [getProvides](#getprovides)()                                                                                                      | Returns the list of 'provides' directives in this module.   |
+| Modifier and Type                                                                                                                        | Method                                                                                                                             | Description                                                 |
+|------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                      | [getName](#getname)()                                                                                                              | Returns the name (qualified name) of this module.           |
+| public void                                                                                                                              | [setSourcePath](#setsourcepath)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) path) |                                                             |
+| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)                                      | [getSourcePath](#getsourcepath)()                                                                                                  |                                                             |
+| public void                                                                                                                              | [setHasModuleInfo](#sethasmoduleinfo)(boolean b)                                                                                   |                                                             |
+| public boolean                                                                                                                           | [hasModuleInfo](#hasmoduleinfo)()                                                                                                  |                                                             |
+| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[PackageReference](PackageReference.md)> | [getPackages](#getpackages)()                                                                                                      | Returns the list of packages contained in this module.      |
+| public void                                                                                                                              | [addPackage](#addpackage)([PackageReference](PackageReference.md) packageNode)                                                     | Adds a package to this module.                              |
+| public void                                                                                                                              | [addDirective](#adddirective)([DirectiveNode](DirectiveNode.md) directive)                                                         | Adds a directive to this module.                            |
+| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DirectiveNode](DirectiveNode.md)>       | [getDirectives](#getdirectives)()                                                                                                  | Returns the list of directives declared in this module.     |
+| public void                                                                                                                              | [addConstantValue](#addconstantvalue)([FieldNode](FieldNode.md) constant)                                                          | Adds a constant field value to this module.                 |
+| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[FieldNode](FieldNode.md)>               | [getConstantValues](#getconstantvalues)()                                                                                          | Returns the list of constant values defined in this module. |
+| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DirectiveNode](DirectiveNode.md)>       | [getExports](#getexports)()                                                                                                        | Returns the list of 'exports' directives in this module.    |
+| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DirectiveNode](DirectiveNode.md)>       | [getRequires](#getrequires)()                                                                                                      | Returns the list of 'requires' directives in this module.   |
+| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DirectiveNode](DirectiveNode.md)>       | [getOpens](#getopens)()                                                                                                            | Returns the list of 'opens' directives in this module.      |
+| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DirectiveNode](DirectiveNode.md)>       | [getUses](#getuses)()                                                                                                              | Returns the list of 'uses' directives in this module.       |
+| public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[DirectiveNode](DirectiveNode.md)>       | [getProvides](#getprovides)()                                                                                                      | Returns the list of 'provides' directives in this module.   |
 
 
 ### Methods inherited from [Node](Node.md)
@@ -102,7 +102,7 @@ Represents a module node that contains directives, packages, and constant values
 
 ### packages
 
-<span style="font-family: monospace; font-size: 80%;">private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[PackageNode](PackageNode.md)> __packages__</span>
+<span style="font-family: monospace; font-size: 80%;">private final [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[PackageReference](PackageReference.md)> __packages__</span>
 
 
 
@@ -172,7 +172,7 @@ The module name.
 
 ### getPackages
 
-<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[PackageNode](PackageNode.md)> __getPackages__()</span>
+<span style="font-family: monospace; font-size: 80%;">public [List](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html)<[PackageReference](PackageReference.md)> __getPackages__()</span>
 
 Returns the list of packages contained in this module.
 
@@ -185,13 +185,13 @@ List of PackageMember objects.
 
 ### addPackage
 
-<span style="font-family: monospace; font-size: 80%;">public void __addPackage__([PackageNode](PackageNode.md) packageNode)</span>
+<span style="font-family: monospace; font-size: 80%;">public void __addPackage__([PackageReference](PackageReference.md) packageNode)</span>
 
 Adds a package to this module.
 
 **Parameters:**
 
-`packageNode` - The PackageNode to add.
+`packageNode` - The PackageReference to add.
 
 
 ---

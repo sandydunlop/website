@@ -18,6 +18,7 @@ A class that outputs API package documentation as Markdown.
 |-------------------------------------------------------------------------------------------------------------------|---------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | private static final [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [TEXT_CLASS](#text_class)             |                                                                                                                                                                                       |
 | private static final [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [TEXT_DESCRIPTION](#text_description) |                                                                                                                                                                                       |
+| private [Api](../model/Api.md)                                                                                    | [api](#api)                           |                                                                                                                                                                                       |
 | private [Context](../core/Context.md)                                                                             | [ctx](#ctx)                           | The Context singleton instance providing access to the current documentation generation context, including configuration, current module/package/type names, and reporting utilities. |
 | private [Writer](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/io/Writer.html)                | [writer](#writer)                     | The Writer used to output the generated markdown content for the current document.                                                                                                    |
 
@@ -25,9 +26,9 @@ A class that outputs API package documentation as Markdown.
 
 ## Constructor Summary
 
-| Constructor                                          | Description                                                              |
-|------------------------------------------------------|--------------------------------------------------------------------------|
-| PackageWriter([Context](../core/Context.md) context) | Constructor that sets up the locations API documents will be written to. |
+| Constructor                                                                      | Description                                                              |
+|----------------------------------------------------------------------------------|--------------------------------------------------------------------------|
+| PackageWriter([Api](../model/Api.md) api, [Context](../core/Context.md) context) | Constructor that sets up the locations API documents will be written to. |
 
 
 
@@ -69,6 +70,15 @@ A class that outputs API package documentation as Markdown.
 
 
 [Constant Field Values](../constant-values.md)
+
+
+
+---
+
+### api
+
+<span style="font-family: monospace; font-size: 80%;">private [Api](../model/Api.md) __api__</span>
+
 
 
 

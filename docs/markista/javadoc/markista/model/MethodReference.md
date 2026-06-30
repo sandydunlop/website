@@ -15,10 +15,9 @@ All Implemented Interfaces:<br/>
 
 ## Field Summary
 
-| Modifier and Type                                                                            | Field                   | Description |
-|----------------------------------------------------------------------------------------------|-------------------------|-------------|
-| [Link](Link.md)                                                                              | [link](#link)           |             |
-| [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [signature](#signature) |             |
+| Modifier and Type | Field         | Description |
+|-------------------|---------------|-------------|
+| [Link](Link.md)   | [link](#link) |             |
 
 
 
@@ -32,12 +31,10 @@ All Implemented Interfaces:<br/>
 
 ## Method Summary
 
-| Modifier and Type                                                                                   | Method                                                                                                                        | Description |
-|-----------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|-------------|
-| public void                                                                                         | [setSignature](#setsignature)([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) s) |             |
-| public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) | [getSignature](#getsignature)()                                                                                               |             |
-| public void                                                                                         | [setLink](#setlink)([Link](Link.md) l)                                                                                        |             |
-| public [Link](Link.md)                                                                              | [getLink](#getlink)()                                                                                                         |             |
+| Modifier and Type      | Method                                 | Description |
+|------------------------|----------------------------------------|-------------|
+| public void            | [setLink](#setlink)([Link](Link.md) l) |             |
+| public [Link](Link.md) | [getLink](#getlink)()                  |             |
 
 
 
@@ -52,35 +49,8 @@ All Implemented Interfaces:<br/>
 
 ---
 
-### signature
-
-<span style="font-family: monospace; font-size: 80%;">[String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __signature__</span>
-
-
-
-
----
-
 
 ## Method Details
-
-### setSignature
-
-<span style="font-family: monospace; font-size: 80%;">public void __setSignature__([String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) s)</span>
-
-
-
-
----
-
-### getSignature
-
-<span style="font-family: monospace; font-size: 80%;">public [String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html) __getSignature__()</span>
-
-
-
-
----
 
 ### setLink
 
